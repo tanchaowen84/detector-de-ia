@@ -1,13 +1,4 @@
-import { AiCapabilitiesSection } from '@/components/blocks/ai-capabilities';
-import CallToActionSection from '@/components/blocks/calltoaction/calltoaction';
-import { ComparisonSection } from '@/components/blocks/comparison';
-import { DemoSection } from '@/components/blocks/demo';
-import FaqSection from '@/components/blocks/faqs/faqs';
-import FeaturesSection from '@/components/blocks/features/features';
-import HeroSection from '@/components/blocks/hero/hero';
-import { HowItWorksSection } from '@/components/blocks/how-it-works';
-import PricingSection from '@/components/blocks/pricing/pricing';
-import { UseCasesSection } from '@/components/blocks/use-cases';
+import { AiDetectorSection } from '@/components/detector/ai-detector-section';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
 import type { Metadata } from 'next';
@@ -44,25 +35,7 @@ export default async function HomePage(props: HomePageProps) {
   return (
     <>
       <div className="flex flex-col">
-        <HeroSection />
-
-        <DemoSection />
-
-        <UseCasesSection />
-
-        <FeaturesSection />
-
-        <HowItWorksSection />
-
-        <AiCapabilitiesSection />
-
-        <ComparisonSection />
-
-        <PricingSection />
-
-        <FaqSection />
-
-        <CallToActionSection />
+        <AiDetectorSection />
       </div>
     </>
   );
