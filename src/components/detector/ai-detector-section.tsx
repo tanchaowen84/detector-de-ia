@@ -11,13 +11,13 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import type { DetectAIContentResult } from '@/lib/winston';
 import { Loader2Icon, SparklesIcon } from 'lucide-react';
-import { useState, useTransition } from 'react';
+import type { UIEvent } from 'react';
+import { useMemo, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 
 const MIN_CHARS = 300;
@@ -69,6 +69,7 @@ export function AiDetectorSection() {
   const [result, setResult] = useState<DetectAIContentResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
+  const [scrollState, setScrollState] = useState({ top: 0, left: 0 });
 
   const charCount = text.length;
   const isTooShort = text.trim().length > 0 && text.trim().length < MIN_CHARS;
@@ -110,6 +111,58 @@ export function AiDetectorSection() {
     : null;
   const evaluation =
     typeof aiScore === 'number' ? getEvaluation(aiScore) : null;
+  const highlightedSegments = useMemo(() => {
+    if (!result?.sentences?.length) {
+      return [{ text, tone: null, key: 'full-text' }];
+    }
+
+    const segments: { text: string; tone: string | null; key: string }[] = [];
+    let cursor = 0;
+
+    result.sentences.forEach((sentence, index) => {
+      const sentenceText = sentence.text.trim();
+      if (!sentenceText) {
+        return;
+      }
+
+      const matchIndex = text.indexOf(sentenceText, cursor);
+      if (matchIndex === -1) {
+        return;
+      }
+
+      if (matchIndex > cursor) {
+        segments.push({
+          text: text.slice(cursor, matchIndex),
+          tone: null,
+          key: `plain-${cursor}-${matchIndex}`,
+        });
+      }
+
+      const sentenceAIScore = Math.max(0, Math.min(100, 100 - sentence.score));
+      segments.push({
+        text: sentence.text,
+        tone: sentenceTone(sentenceAIScore),
+        key: `sentence-${index}-${matchIndex}`,
+      });
+
+      cursor = matchIndex + sentence.text.length;
+    });
+
+    if (cursor < text.length) {
+      segments.push({
+        text: text.slice(cursor),
+        tone: null,
+        key: `plain-${cursor}-${text.length}`,
+      });
+    }
+
+    return segments.length ? segments : [{ text, tone: null, key: 'fallback' }];
+  }, [result, text]);
+
+  const handleTextareaScroll = (event: UIEvent<HTMLTextAreaElement>) => {
+    const { scrollTop, scrollLeft } = event.currentTarget;
+    setScrollState({ top: scrollTop, left: scrollLeft });
+  };
 
   return (
     <section className="py-16">
@@ -138,13 +191,47 @@ export function AiDetectorSection() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <Textarea
-                value={text}
-                onChange={(event) => setText(event.target.value)}
-                rows={12}
-                placeholder="Pega aquí tu ensayo o artículo en español..."
-                maxLength={MAX_CHARS}
-              />
+              <div className="relative rounded-md focus-within:ring-2 focus-within:ring-primary/30">
+                <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-md border border-input">
+                  <div
+                    className="whitespace-pre-wrap break-words px-3 py-2 text-base leading-6 text-foreground [font:inherit]"
+                    style={{
+                      transform: `translate(${-scrollState.left}px, ${-scrollState.top}px)`,
+                    }}
+                    aria-hidden
+                  >
+                    {highlightedSegments.map((segment) => (
+                      <span
+                        key={segment.key}
+                        className={cn(
+                          'rounded-sm px-0.5',
+                          segment.tone ?? 'bg-transparent'
+                        )}
+                      >
+                        {segment.text}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <Textarea
+                  value={text}
+                  onChange={(event) => {
+                    setText(event.target.value);
+                    if (result) {
+                      setResult(null);
+                    }
+                    if (error) {
+                      setError(null);
+                    }
+                  }}
+                  rows={12}
+                  placeholder="Pega aquí tu ensayo o artículo en español..."
+                  maxLength={MAX_CHARS}
+                  className="relative border border-transparent bg-transparent text-transparent caret-primary focus-visible:ring-0 focus-visible:ring-offset-0"
+                  style={{ WebkitTextFillColor: 'transparent' }}
+                  onScroll={handleTextareaScroll}
+                />
+              </div>
               <div className="flex items-center justify-between text-sm text-muted-foreground">
                 <span>
                   {charCount.toLocaleString()} / {MAX_CHARS.toLocaleString()}{' '}
@@ -196,8 +283,9 @@ export function AiDetectorSection() {
             <CardHeader>
               <CardTitle>Resultado</CardTitle>
               <CardDescription>
-                Mostramos la probabilidad estimada de IA y los detalles por
-                oración.
+                Mostramos la probabilidad estimada de IA y resumimos el estado
+                general. Las oraciones ya se pintan directamente sobre tu texto
+                original.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -288,41 +376,9 @@ export function AiDetectorSection() {
                     )}
                   </div>
 
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium">Detalle por oración</p>
-                    {result.sentences.length === 0 ? (
-                      <p className="text-sm text-muted-foreground">
-                        No recibimos detalle por oración para este texto.
-                      </p>
-                    ) : (
-                      <ScrollArea className="h-64">
-                        <div className="space-y-3 pr-2">
-                          {result.sentences.map((sentence, index) => {
-                            const sentenceAIScore = Math.max(
-                              0,
-                              Math.min(100, 100 - sentence.score)
-                            );
-                            return (
-                              <div
-                                key={`${sentence.text}-${index}`}
-                                className={cn(
-                                  'rounded-lg border p-3 text-sm shadow-xs transition-colors',
-                                  sentenceTone(sentenceAIScore)
-                                )}
-                              >
-                                <div className="mb-2 flex items-center justify-between gap-2 text-xs font-medium uppercase tracking-wide">
-                                  <span>Oración {index + 1}</span>
-                                  <span>{sentenceAIScore.toFixed(0)}% AI</span>
-                                </div>
-                                <p className="text-sm leading-relaxed text-foreground">
-                                  {sentence.text}
-                                </p>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </ScrollArea>
-                    )}
+                  <div className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">
+                    Si editas el texto necesitamos volver a ejecutar el detector
+                    para recalcular los colores.
                   </div>
                 </div>
               ) : (
