@@ -10,18 +10,75 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Separator } from '@/components/ui/separator';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import type { DetectAIContentResult } from '@/lib/winston';
-import { Loader2Icon, SparklesIcon } from 'lucide-react';
+import {
+  CheckCircle2Icon,
+  FileTextIcon,
+  HeadphonesIcon,
+  Link2Icon,
+  Loader2Icon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  UploadCloudIcon,
+  Wand2Icon,
+  ZapIcon,
+} from 'lucide-react';
 import type { UIEvent } from 'react';
 import { useMemo, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 
 const MIN_CHARS = 300;
 const MAX_CHARS = 150000;
+
+const samplePresets = [
+  {
+    value: 'ia-ensayo',
+    label: 'Ensayo generado por IA',
+    text: 'Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como "por otro lado" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector frente a un texto claramente sintético y verificar la visualización de colores por oración.',
+  },
+  {
+    value: 'humano-articulo',
+    label: 'Artículo escrito a mano',
+    text: 'Este artículo fue redactado por una editora humana que toma notas en entrevistas reales y luego las incorpora en párrafos de longitud media. Cada sección se centra en ejemplos específicos, menciona nombres propios y cita fechas o cifras concretas. El estilo introduce frases más cortas para subrayar ideas clave y alterna preguntas retóricas con observaciones personales. Esa mezcla de ritmo da al texto un tono auténtico que suele obtener una probabilidad baja de IA.',
+  },
+  {
+    value: 'correo-mixto',
+    label: 'Correo con partes mezcladas',
+    text: 'Hola equipo, adjunto el informe que preparé esta mañana. Reorganicé las tablas según la retroalimentación de ayer y agregué dos secciones que redacté con IA para ahorrar tiempo; en ellas notarás un lenguaje más formal y redondo. El resto del mensaje lo escribí manualmente para mantener nuestra voz cercana. Avísenme si prefieren que reemplace los fragmentos automatizados antes de enviarlo al cliente.',
+  },
+];
+
+const featureHighlights = [
+  { label: 'Modelos precisos', icon: SparklesIcon },
+  { label: 'Textos extensos', icon: FileTextIcon },
+  { label: 'Soporte humano', icon: HeadphonesIcon },
+  { label: 'Escaneos veloces', icon: ZapIcon },
+];
+
+const trustIndicators = [
+  {
+    label: 'Encriptado',
+    description:
+      'Ciframos tu contenido al vuelo y lo eliminamos tras el escaneo.',
+  },
+  {
+    label: 'Nunca compartido',
+    description: 'No vendemos ni entrenamos modelos con tus documentos.',
+  },
+  {
+    label: 'Cumplimos GDPR',
+    description: 'Hospedamos la data en la UE y firmamos acuerdos DPA.',
+  },
+];
 
 const evaluationCopy = [
   {
@@ -64,15 +121,63 @@ function sentenceTone(aiScore: number) {
   return 'border-emerald-200/70 bg-emerald-50 text-emerald-900 dark:border-emerald-500/20 dark:bg-emerald-500/10';
 }
 
+function GaugeArc({ value }: { value: number | null }) {
+  const safeValue = Math.max(0, Math.min(100, value ?? 0));
+  const radius = 80;
+  const arcLength = Math.PI * radius;
+  const dashOffset = arcLength - (safeValue / 100) * arcLength;
+
+  return (
+    <svg viewBox="0 0 200 120" className="h-44 w-full">
+      <defs>
+        <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#f97316" />
+          <stop offset="50%" stopColor="#a855f7" />
+          <stop offset="100%" stopColor="#38bdf8" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M20 100 A80 80 0 0 1 180 100"
+        fill="none"
+        stroke="rgba(148, 163, 184, 0.35)"
+        strokeWidth={18}
+        strokeLinecap="round"
+      />
+      <path
+        d="M20 100 A80 80 0 0 1 180 100"
+        fill="none"
+        stroke="url(#gaugeGradient)"
+        strokeWidth={18}
+        strokeLinecap="round"
+        strokeDasharray={arcLength}
+        strokeDashoffset={dashOffset}
+      />
+      <circle cx={20} cy={100} r={9} fill="rgba(148,163,184,0.25)" />
+      <circle cx={180} cy={100} r={9} fill="rgba(148,163,184,0.25)" />
+    </svg>
+  );
+}
+
 export function AiDetectorSection() {
   const [text, setText] = useState('');
   const [result, setResult] = useState<DetectAIContentResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
   const [scrollState, setScrollState] = useState({ top: 0, left: 0 });
+  const [selectedSample, setSelectedSample] = useState<string | null>(null);
 
   const charCount = text.length;
   const isTooShort = text.trim().length > 0 && text.trim().length < MIN_CHARS;
+
+  const handleSampleSelect = (value: string) => {
+    setSelectedSample(value);
+    const preset = samplePresets.find((sample) => sample.value === value);
+    if (preset) {
+      setText(preset.text);
+      setResult(null);
+      setError(null);
+    }
+  };
 
   const handleDetect = () => {
     if (!text.trim()) {
@@ -165,52 +270,134 @@ export function AiDetectorSection() {
   };
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto max-w-5xl px-4">
-        <div className="mb-8 flex flex-col gap-2 text-center">
-          <Badge variant="outline" className="mx-auto">
-            MVP · Detector de IA
+    <section className="relative isolate overflow-hidden bg-[#140b3c] py-20 text-white">
+      <div className="pointer-events-none absolute inset-0 opacity-60">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.04)_1px,_transparent_1px)] bg-[length:20px_20px]" />
+      </div>
+      <div className="container relative z-10 mx-auto max-w-6xl px-4">
+        <div className="mb-12 flex flex-col items-center gap-6 text-center">
+          <Badge className="border-white/30 bg-white/10 text-xs uppercase tracking-[0.2em] text-white">
+            Detecta contenido de IA con 99% de exactitud
           </Badge>
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Pega tu texto y detecta IA en segundos
-          </h2>
-          <p className="text-muted-foreground">
-            Usamos Winston AI API para estimar qué tan probable es que tu
-            contenido haya sido generado por IA.
-          </p>
+          <div className="space-y-4">
+            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              El detector de IA más exacto
+            </h2>
+            <p className="max-w-3xl text-base text-white/80 sm:text-lg">
+              Disponible gratis en esta página para evaluar textos de ChatGPT,
+              GPT-4o, Gemini, Claude y otros modelos populares. Analiza ensayos,
+              artículos web o correos sin salir de tu navegador.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Button className="rounded-full bg-white px-6 py-2 text-base font-semibold text-indigo-700 hover:bg-white/90">
+              Comenzar gratis
+            </Button>
+            <Button
+              variant="outline"
+              className="rounded-full border-white/40 bg-white/10 px-6 py-2 text-base text-white hover:bg-white/20"
+            >
+              Ver demo en vivo
+            </Button>
+          </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <Card className="h-full">
-            <CardHeader>
-              <CardTitle>Texto a analizar</CardTitle>
-              <CardDescription>
-                Soporta entre {MIN_CHARS.toLocaleString()} y{' '}
-                {MAX_CHARS.toLocaleString()} caracteres. Sólo pegamos texto
-                plano por ahora.
-              </CardDescription>
+        <div className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
+          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_30px_120px_rgba(15,23,42,0.28)]">
+            <CardHeader className="border-b border-slate-100 pb-5">
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p className="text-sm font-semibold text-slate-500">
+                      Escribe el texto u oración
+                    </p>
+                    <p className="text-xs text-slate-400">
+                      Soporta entre {MIN_CHARS.toLocaleString()} y{' '}
+                      {MAX_CHARS.toLocaleString()} caracteres.
+                    </p>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    className="h-8 rounded-full px-3 text-xs text-slate-500 hover:bg-slate-100"
+                  >
+                    Historial de escaneos
+                  </Button>
+                </div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="h-9 rounded-full border-amber-200/80 bg-amber-50/70 text-amber-900 hover:bg-amber-100"
+                  >
+                    <UploadCloudIcon className="size-4" /> Subir archivo
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="h-9 rounded-full border-amber-200/80 bg-amber-50/70 text-amber-900 hover:bg-amber-100"
+                  >
+                    <Link2Icon className="size-4" /> Pegar URL
+                  </Button>
+                  <Select
+                    value={selectedSample ?? undefined}
+                    onValueChange={handleSampleSelect}
+                  >
+                    <SelectTrigger className="h-9 rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
+                      <SelectValue placeholder="Probar muestras" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {samplePresets.map((sample) => (
+                        <SelectItem key={sample.value} value={sample.value}>
+                          {sample.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    className="ml-auto hidden h-9 rounded-full border border-dashed border-slate-200 text-xs text-slate-500 hover:bg-slate-100 lg:flex"
+                  >
+                    <Wand2Icon className="size-4" /> Plantillas pronto
+                  </Button>
+                </div>
+              </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="relative rounded-md focus-within:ring-2 focus-within:ring-primary/30">
-                <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-md border border-input">
+            <CardContent className="space-y-6 pt-6">
+              <div className="relative rounded-3xl border border-dashed border-slate-200 bg-gradient-to-b from-white via-white to-slate-50 shadow-inner">
+                <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
                   <div
-                    className="whitespace-pre-wrap break-words px-3 py-2 text-base leading-6 text-foreground [font:inherit]"
+                    className="whitespace-pre-wrap break-words px-5 py-6 text-base leading-7 text-slate-900 [font:inherit]"
                     style={{
                       transform: `translate(${-scrollState.left}px, ${-scrollState.top}px)`,
                     }}
                     aria-hidden
                   >
-                    {highlightedSegments.map((segment) => (
-                      <span
-                        key={segment.key}
-                        className={cn(
-                          'rounded-sm px-0.5',
-                          segment.tone ?? 'bg-transparent'
-                        )}
-                      >
-                        {segment.text}
-                      </span>
-                    ))}
+                    {text ? (
+                      highlightedSegments.map((segment) => (
+                        <span
+                          key={segment.key}
+                          className={cn(
+                            'rounded-sm px-0.5',
+                            segment.tone ?? 'bg-transparent'
+                          )}
+                        >
+                          {segment.text}
+                        </span>
+                      ))
+                    ) : (
+                      <div className="flex flex-col items-center justify-center gap-2 text-center text-slate-400">
+                        <UploadCloudIcon className="size-8 text-slate-300" />
+                        <p className="text-base font-semibold text-slate-500">
+                          Arrastra tu archivo o pega el contenido aquí
+                        </p>
+                        <p className="text-sm text-slate-400">
+                          Aceptamos .txt, .docx y texto plano. Los colores
+                          aparecerán por cada oración analizada.
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <Textarea
@@ -224,169 +411,178 @@ export function AiDetectorSection() {
                       setError(null);
                     }
                   }}
-                  rows={12}
+                  rows={13}
                   placeholder="Pega aquí tu ensayo o artículo en español..."
                   maxLength={MAX_CHARS}
-                  className="relative border border-transparent bg-transparent text-transparent caret-primary focus-visible:ring-0 focus-visible:ring-offset-0"
+                  className="relative h-80 resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
                   style={{ WebkitTextFillColor: 'transparent' }}
                   onScroll={handleTextareaScroll}
                 />
               </div>
-              <div className="flex items-center justify-between text-sm text-muted-foreground">
-                <span>
-                  {charCount.toLocaleString()} / {MAX_CHARS.toLocaleString()}{' '}
-                  caracteres
-                </span>
-                {isTooShort && (
-                  <span className="text-destructive">
-                    Necesitas al menos {MIN_CHARS} caracteres para un resultado
-                    confiable.
+
+              <div className="flex flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-3">
+                  <span>
+                    {charCount.toLocaleString()} / {MAX_CHARS.toLocaleString()}{' '}
+                    caracteres
                   </span>
-                )}
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <Button
-                  onClick={handleDetect}
-                  disabled={isPending || text.trim().length < MIN_CHARS}
-                >
-                  {isPending ? (
-                    <>
-                      <Loader2Icon className="mr-2 size-4 animate-spin" />{' '}
-                      Analizando...
-                    </>
-                  ) : (
-                    <>
-                      <SparklesIcon className="mr-2 size-4" /> Detectar ahora
-                    </>
+                  {isTooShort && (
+                    <span className="text-amber-600">
+                      Necesitas al menos {MIN_CHARS} caracteres para un
+                      resultado confiable.
+                    </span>
                   )}
-                </Button>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  onClick={() => {
-                    setText('');
-                    setResult(null);
-                    setError(null);
-                  }}
-                  disabled={isPending || (!text && !result)}
-                >
-                  Limpiar
-                </Button>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    onClick={() => {
+                      setText('');
+                      setResult(null);
+                      setError(null);
+                      setSelectedSample(null);
+                    }}
+                    disabled={isPending || (!text && !result)}
+                    className="text-slate-500 hover:bg-slate-100"
+                  >
+                    Limpiar
+                  </Button>
+                  <Button
+                    onClick={handleDetect}
+                    disabled={isPending || text.trim().length < MIN_CHARS}
+                    className="rounded-full bg-indigo-600 px-6 text-white hover:bg-indigo-500"
+                  >
+                    {isPending ? (
+                      <>
+                        <Loader2Icon className="mr-2 size-4 animate-spin" />{' '}
+                        Analizando...
+                      </>
+                    ) : (
+                      <>
+                        <SparklesIcon className="mr-2 size-4" /> Detectar ahora
+                      </>
+                    )}
+                  </Button>
+                </div>
               </div>
 
-              {error && <p className="text-sm text-destructive">{error}</p>}
+              {error && <p className="text-sm text-rose-500">{error}</p>}
+
+              <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5">
+                <p className="mb-4 text-sm font-semibold text-slate-600">
+                  Diseñado para equipos exigentes
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {featureHighlights.map((item) => (
+                    <div
+                      key={item.label}
+                      className="flex items-center gap-3 text-sm text-slate-600"
+                    >
+                      <item.icon className="size-5 text-indigo-500" />
+                      <span>{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 flex flex-col gap-2 rounded-2xl bg-white/80 p-4 shadow-inner sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-slate-500">
+                    Accede a reportes descargables, API y más funciones premium.
+                  </p>
+                  <div className="flex flex-col gap-1 sm:items-end">
+                    <Button className="rounded-full bg-[#4c2ff4] px-6 text-white hover:bg-[#4126cc]">
+                      Crea una cuenta para desbloquear todo
+                    </Button>
+                    <span className="text-xs text-slate-400">
+                      Requiere tarjeta al registrarte.
+                    </span>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
-          <Card className="h-full">
-            <CardHeader>
-              <CardTitle>Resultado</CardTitle>
-              <CardDescription>
-                Mostramos la probabilidad estimada de IA y resumimos el estado
-                general. Las oraciones ya se pintan directamente sobre tu texto
-                original.
-              </CardDescription>
+          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_30px_120px_rgba(15,23,42,0.28)]">
+            <CardHeader className="border-b border-slate-100 pb-5">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+                    Originality report
+                  </p>
+                  <CardDescription className="mt-1 text-sm text-slate-500">
+                    Observa la probabilidad de IA en un vistazo.
+                  </CardDescription>
+                </div>
+                <Badge
+                  variant="outline"
+                  className="border-indigo-100 bg-indigo-50 text-indigo-700"
+                >
+                  Tiempo real
+                </Badge>
+              </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              {result ? (
-                <div className="space-y-4">
-                  {evaluation && (
-                    <div className="space-y-3 rounded-xl border p-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm text-muted-foreground">
-                            AI Score
-                          </p>
-                          <p className="text-3xl font-semibold">
-                            {aiScore?.toFixed(0)}%
-                          </p>
-                        </div>
-                        <Badge variant={evaluation.variant}>
-                          {evaluation.label}
-                        </Badge>
-                      </div>
-                      <Progress value={aiScore ?? 0} className="h-3" />
-                      <p className="text-sm text-muted-foreground">
-                        {evaluation.explanation}
+            <CardContent className="space-y-6 pt-6">
+              <div className="rounded-3xl border border-slate-100 bg-gradient-to-b from-slate-50 to-white p-6 text-center shadow-inner">
+                <GaugeArc value={aiScore} />
+                <p className="mt-4 text-4xl font-semibold text-slate-900">
+                  {result ? `${aiScore?.toFixed(0)}%` : '-- %'}
+                </p>
+                <p className="text-sm text-slate-500">
+                  {result
+                    ? (evaluation?.label ?? 'Resultado mixto')
+                    : 'Tu Score aparecerá aquí'}
+                </p>
+                {evaluation && result && (
+                  <p className="mt-2 text-xs text-slate-400">
+                    {evaluation.explanation}
+                  </p>
+                )}
+              </div>
+
+              <div className="space-y-3">
+                {trustIndicators.map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3"
+                  >
+                    <CheckCircle2Icon className="mt-0.5 size-5 text-emerald-500" />
+                    <div>
+                      <p className="text-sm font-semibold text-slate-700">
+                        {item.label}
+                      </p>
+                      <p className="text-sm text-slate-500">
+                        {item.description}
                       </p>
                     </div>
-                  )}
-
-                  <div className="grid gap-3 rounded-xl border p-4 text-sm">
-                    <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">
-                        Lecturabilidad
-                      </span>
-                      <span className="font-medium">
-                        {result.readability_score ?? '—'}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">
-                        Idioma detectado
-                      </span>
-                      <span className="font-medium uppercase">
-                        {result.language ?? 'auto'}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">
-                        Versión del modelo
-                      </span>
-                      <span className="font-medium">
-                        {result.version ?? 'latest'}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">
-                        Créditos restantes
-                      </span>
-                      <span className="font-medium">
-                        {result.credits_remaining ?? '—'}
-                      </span>
-                    </div>
-                    {result.attack_detected && (
-                      <div className="space-y-1">
-                        <Separator />
-                        <p className="text-muted-foreground">
-                          Ataques detectados
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          {Object.entries(result.attack_detected)
-                            .filter(([, value]) => value)
-                            .map(([key]) => (
-                              <Badge
-                                key={key}
-                                variant="outline"
-                                className="capitalize"
-                              >
-                                {key.replaceAll('_', ' ')}
-                              </Badge>
-                            ))}
-                          {Object.values(result.attack_detected).every(
-                            (flag) => !flag
-                          ) && (
-                            <span className="text-sm text-muted-foreground">
-                              Sin señales.
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    )}
                   </div>
+                ))}
+              </div>
 
-                  <div className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">
-                    Si editas el texto necesitamos volver a ejecutar el detector
-                    para recalcular los colores.
-                  </div>
-                </div>
-              ) : (
-                <div className="rounded-xl border border-dashed p-6 text-center text-sm text-muted-foreground">
-                  Los resultados aparecerán aquí después de ejecutar la
-                  detección.
-                </div>
-              )}
+              <div className="rounded-2xl border border-dashed border-slate-200 p-4 text-sm text-slate-500">
+                <p>
+                  {result
+                    ? 'Comparte un enlace o descarga el PDF del reporte completo.'
+                    : 'Tu texto es seguro: no lo usamos para entrenar modelos ni lo almacenamos.'}
+                </p>
+                {result?.attack_detected && (
+                  <p className="mt-3 text-xs text-slate-400">
+                    Ataques detectados:{' '}
+                    {Object.entries(result.attack_detected)
+                      .filter(([, value]) => value)
+                      .map(([key]) => key.replaceAll('_', ' '))
+                      .join(', ') || 'sin señales'}
+                  </p>
+                )}
+              </div>
+
+              <div className="space-y-2">
+                <Button className="w-full rounded-full bg-indigo-600 text-white hover:bg-indigo-500">
+                  Explorar planes y API
+                </Button>
+                <p className="text-center text-xs text-slate-400">
+                  Al continuar aceptas nuestros Términos y Política de
+                  Privacidad.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
