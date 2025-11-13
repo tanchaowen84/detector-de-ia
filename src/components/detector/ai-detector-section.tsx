@@ -278,7 +278,7 @@ export function AiDetectorSection() {
         <div className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
           <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
             <CardHeader className="pb-1">
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:flex-nowrap">
                 <Button
                   type="button"
                   variant="outline"
@@ -297,7 +297,7 @@ export function AiDetectorSection() {
                   value={selectedSample ?? undefined}
                   onValueChange={handleSampleSelect}
                 >
-                  <SelectTrigger className="h-10 rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
+                  <SelectTrigger className="h-10 min-w-[180px] rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
                     <SelectValue placeholder="Probar muestras" />
                   </SelectTrigger>
                   <SelectContent>
