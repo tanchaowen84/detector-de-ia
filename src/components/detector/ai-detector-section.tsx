@@ -27,7 +27,7 @@ import {
   SparklesIcon,
   UploadCloudIcon,
 } from 'lucide-react';
-import type { UIEvent } from 'react';
+import type { CSSProperties, UIEvent } from 'react';
 import { useMemo, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 
@@ -318,11 +318,26 @@ export function AiDetectorSection() {
             </CardHeader>
             <CardContent className="px-6 pb-4 pt-2 sm:px-8">
               <div className="mb-4 h-px w-full bg-slate-100" />
-              <div className="relative min-h-[240px] rounded-3xl border border-slate-200 bg-white/90">
+              <div
+                className="relative min-h-[240px] rounded-3xl border border-slate-200 bg-white/90"
+                style={
+                  {
+                    '--detector-pad-x': '1.25rem',
+                    '--detector-pad-top': '2rem',
+                    '--detector-pad-bottom': '1.5rem',
+                    '--detector-font-size': '1rem',
+                    '--detector-line-height': '1.75rem',
+                  } as CSSProperties
+                }
+              >
                 <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
                   <div
-                    className="whitespace-pre-wrap break-words px-5 pb-6 pt-8 text-base leading-7 text-slate-900 [font:inherit]"
+                    className="whitespace-pre-wrap break-words text-slate-900 [font:inherit]"
                     style={{
+                      padding:
+                        'var(--detector-pad-top) var(--detector-pad-x) var(--detector-pad-bottom)',
+                      fontSize: 'var(--detector-font-size)',
+                      lineHeight: 'var(--detector-line-height)',
                       transform: `translate(${-scrollState.left}px, ${-scrollState.top}px)`,
                     }}
                     aria-hidden
@@ -382,7 +397,13 @@ export function AiDetectorSection() {
                   placeholder="Pega aquí tu ensayo o artículo en español..."
                   maxLength={MAX_CHARS}
                   className="relative h-[240px] resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
-                  style={{ WebkitTextFillColor: 'transparent' }}
+                  style={{
+                    WebkitTextFillColor: 'transparent',
+                    padding:
+                      'var(--detector-pad-top) var(--detector-pad-x) var(--detector-pad-bottom)',
+                    fontSize: 'var(--detector-font-size)',
+                    lineHeight: 'var(--detector-line-height)',
+                  }}
                   onScroll={handleTextareaScroll}
                 />
               </div>
