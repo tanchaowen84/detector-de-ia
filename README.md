@@ -37,5 +37,26 @@ detector de ia 产品MVP文档
 	•	detector de contenido generado por ia
 
 你现在可以：
-	•	功能段拿去当 MVP 说明 / PRD；
+ 	•	功能段拿去当 MVP 说明 / PRD；
 	•	关键词整段丢进 Ahrefs / Semrush 看量和难度，然后再拆词做后续页面。
+
+⸻
+
+### Esquema actual del hero (ASCII)
+
+```
+┌──────────────────────────────────────────────┐     
+│                                              │
+│ [Subir archivo] [Pegar URL] [Probar muestras]│
+│                                 [Historial]  │
+│-──────────────────────────────────────────———│
+│  Arrastra tu archivo...                      │
+│   Aceptamos .txt...                          │
+│                                              │
+│        [Pegar]      [Subir]                  │
+│                                              │
+│——─────────────────────────────────────────———│
+│ 0 / 120,0 caracteres ·                       │
+│ [Limpiar]                      [Detectar]    │
+└──────────────────────────────────────────────┘
+```

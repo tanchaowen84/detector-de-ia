@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -25,7 +26,6 @@ import {
   Loader2Icon,
   SparklesIcon,
   UploadCloudIcon,
-  Wand2Icon,
 } from 'lucide-react';
 import type { UIEvent } from 'react';
 import { useMemo, useState, useTransition } from 'react';
@@ -276,71 +276,52 @@ export function AiDetectorSection() {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
-          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_30px_120px_rgba(15,23,42,0.28)]">
-            <CardHeader className="border-b border-slate-100 pb-5">
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-semibold text-slate-500">
-                      Escribe el texto u oración
-                    </p>
-                    <p className="text-xs text-slate-400">
-                      Soporta entre {MIN_CHARS.toLocaleString()} y{' '}
-                      {MAX_CHARS.toLocaleString()} caracteres.
-                    </p>
-                  </div>
-                  <Button
-                    variant="ghost"
-                    className="h-8 rounded-full px-3 text-xs text-slate-500 hover:bg-slate-100"
-                  >
-                    Historial de escaneos
-                  </Button>
-                </div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <Button
-                    type="button"
-                    variant="outline"
-                    className="h-9 rounded-full border-amber-200/80 bg-amber-50/70 text-amber-900 hover:bg-amber-100"
-                  >
-                    <UploadCloudIcon className="size-4" /> Subir archivo
-                  </Button>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    className="h-9 rounded-full border-amber-200/80 bg-amber-50/70 text-amber-900 hover:bg-amber-100"
-                  >
-                    <Link2Icon className="size-4" /> Pegar URL
-                  </Button>
-                  <Select
-                    value={selectedSample ?? undefined}
-                    onValueChange={handleSampleSelect}
-                  >
-                    <SelectTrigger className="h-9 rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
-                      <SelectValue placeholder="Probar muestras" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {samplePresets.map((sample) => (
-                        <SelectItem key={sample.value} value={sample.value}>
-                          {sample.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    className="ml-auto hidden h-9 rounded-full border border-dashed border-slate-200 text-xs text-slate-500 hover:bg-slate-100 lg:flex"
-                  >
-                    <Wand2Icon className="size-4" /> Plantillas pronto
-                  </Button>
-                </div>
+          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
+            <CardHeader className="pb-1">
+              <div className="flex flex-wrap items-center gap-3">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
+                >
+                  <UploadCloudIcon className="size-4" /> Subir archivo
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
+                >
+                  <Link2Icon className="size-4" /> Pegar URL
+                </Button>
+                <Select
+                  value={selectedSample ?? undefined}
+                  onValueChange={handleSampleSelect}
+                >
+                  <SelectTrigger className="h-10 rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
+                    <SelectValue placeholder="Probar muestras" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {samplePresets.map((sample) => (
+                      <SelectItem key={sample.value} value={sample.value}>
+                        {sample.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Button
+                  variant="ghost"
+                  className="ml-auto h-10 rounded-full px-3 text-xs text-slate-500 hover:bg-slate-100"
+                >
+                  Historial de escaneos
+                </Button>
               </div>
             </CardHeader>
-            <CardContent className="space-y-6 pt-6">
-              <div className="relative rounded-3xl border border-dashed border-slate-200 bg-gradient-to-b from-white via-white to-slate-50 shadow-inner">
+            <CardContent className="px-6 pb-4 pt-2 sm:px-8">
+              <div className="mb-4 h-px w-full bg-slate-100" />
+              <div className="relative min-h-[240px] rounded-3xl border border-slate-200 bg-white/90">
                 <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
                   <div
-                    className="whitespace-pre-wrap break-words px-5 py-6 text-base leading-7 text-slate-900 [font:inherit]"
+                    className="whitespace-pre-wrap break-words px-5 pb-6 pt-8 text-base leading-7 text-slate-900 [font:inherit]"
                     style={{
                       transform: `translate(${-scrollState.left}px, ${-scrollState.top}px)`,
                     }}
@@ -359,15 +340,29 @@ export function AiDetectorSection() {
                         </span>
                       ))
                     ) : (
-                      <div className="flex flex-col items-center justify-center gap-2 text-center text-slate-400">
-                        <UploadCloudIcon className="size-8 text-slate-300" />
-                        <p className="text-base font-semibold text-slate-500">
-                          Arrastra tu archivo o pega el contenido aquí
-                        </p>
-                        <p className="text-sm text-slate-400">
-                          Aceptamos .txt, .docx y texto plano. Los colores
-                          aparecerán por cada oración analizada.
-                        </p>
+                      <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
+                        <div>
+                          <p className="text-base font-semibold text-slate-500">
+                            Arrastra tu archivo o pega el contenido aquí
+                          </p>
+                          <p className="text-sm text-slate-400">
+                            Aceptamos .txt, .docx y texto plano. Los colores
+                            aparecerán por oración.
+                          </p>
+                        </div>
+                        <div className="flex gap-4">
+                          <Button className="h-16 w-24 flex-col rounded-2xl bg-[#6b4de6] text-white hover:bg-[#5b3fd3]">
+                            <UploadCloudIcon className="size-5" />
+                            Pegar
+                          </Button>
+                          <Button
+                            variant="outline"
+                            className="h-16 w-24 flex-col rounded-2xl border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
+                          >
+                            <UploadCloudIcon className="size-5" />
+                            Subir
+                          </Button>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -386,26 +381,28 @@ export function AiDetectorSection() {
                   rows={13}
                   placeholder="Pega aquí tu ensayo o artículo en español..."
                   maxLength={MAX_CHARS}
-                  className="relative h-80 resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
+                  className="relative h-[240px] resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
                   style={{ WebkitTextFillColor: 'transparent' }}
                   onScroll={handleTextareaScroll}
                 />
               </div>
-
-              <div className="flex flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-3">
+              <div className="mt-4 h-px w-full bg-slate-100" />
+              {error && <p className="mt-4 text-sm text-rose-500">{error}</p>}
+            </CardContent>
+            <CardFooter className="py-4">
+              <div className="flex w-full flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-wrap items-center gap-3">
                   <span>
                     {charCount.toLocaleString()} / {MAX_CHARS.toLocaleString()}{' '}
-                    caracteres
+                    caracteres · mínimo {MIN_CHARS}
                   </span>
                   {isTooShort && (
                     <span className="text-amber-600">
-                      Necesitas al menos {MIN_CHARS} caracteres para un
-                      resultado confiable.
+                      Añade más texto para un resultado confiable.
                     </span>
                   )}
                 </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex items-center gap-3">
                   <Button
                     type="button"
                     variant="ghost"
@@ -438,9 +435,7 @@ export function AiDetectorSection() {
                   </Button>
                 </div>
               </div>
-
-              {error && <p className="text-sm text-rose-500">{error}</p>}
-            </CardContent>
+            </CardFooter>
           </Card>
 
           <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_30px_120px_rgba(15,23,42,0.28)]">
