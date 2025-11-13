@@ -21,16 +21,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import type { DetectAIContentResult } from '@/lib/winston';
 import {
-  CheckCircle2Icon,
-  FileTextIcon,
-  HeadphonesIcon,
   Link2Icon,
   Loader2Icon,
-  ShieldCheckIcon,
   SparklesIcon,
   UploadCloudIcon,
   Wand2Icon,
-  ZapIcon,
 } from 'lucide-react';
 import type { UIEvent } from 'react';
 import { useMemo, useState, useTransition } from 'react';
@@ -54,29 +49,6 @@ const samplePresets = [
     value: 'correo-mixto',
     label: 'Correo con partes mezcladas',
     text: 'Hola equipo, adjunto el informe que preparé esta mañana. Reorganicé las tablas según la retroalimentación de ayer y agregué dos secciones que redacté con IA para ahorrar tiempo; en ellas notarás un lenguaje más formal y redondo. El resto del mensaje lo escribí manualmente para mantener nuestra voz cercana. Avísenme si prefieren que reemplace los fragmentos automatizados antes de enviarlo al cliente.',
-  },
-];
-
-const featureHighlights = [
-  { label: 'Modelos precisos', icon: SparklesIcon },
-  { label: 'Textos extensos', icon: FileTextIcon },
-  { label: 'Soporte humano', icon: HeadphonesIcon },
-  { label: 'Escaneos veloces', icon: ZapIcon },
-];
-
-const trustIndicators = [
-  {
-    label: 'Encriptado',
-    description:
-      'Ciframos tu contenido al vuelo y lo eliminamos tras el escaneo.',
-  },
-  {
-    label: 'Nunca compartido',
-    description: 'No vendemos ni entrenamos modelos con tus documentos.',
-  },
-  {
-    label: 'Cumplimos GDPR',
-    description: 'Hospedamos la data en la UE y firmamos acuerdos DPA.',
   },
 ];
 
@@ -468,36 +440,6 @@ export function AiDetectorSection() {
               </div>
 
               {error && <p className="text-sm text-rose-500">{error}</p>}
-
-              <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5">
-                <p className="mb-4 text-sm font-semibold text-slate-600">
-                  Diseñado para equipos exigentes
-                </p>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                  {featureHighlights.map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center gap-3 text-sm text-slate-600"
-                    >
-                      <item.icon className="size-5 text-indigo-500" />
-                      <span>{item.label}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 flex flex-col gap-2 rounded-2xl bg-white/80 p-4 shadow-inner sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm text-slate-500">
-                    Accede a reportes descargables, API y más funciones premium.
-                  </p>
-                  <div className="flex flex-col gap-1 sm:items-end">
-                    <Button className="rounded-full bg-[#4c2ff4] px-6 text-white hover:bg-[#4126cc]">
-                      Crea una cuenta para desbloquear todo
-                    </Button>
-                    <span className="text-xs text-slate-400">
-                      Requiere tarjeta al registrarte.
-                    </span>
-                  </div>
-                </div>
-              </div>
             </CardContent>
           </Card>
 
@@ -538,51 +480,17 @@ export function AiDetectorSection() {
                 )}
               </div>
 
-              <div className="space-y-3">
-                {trustIndicators.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3"
-                  >
-                    <CheckCircle2Icon className="mt-0.5 size-5 text-emerald-500" />
-                    <div>
-                      <p className="text-sm font-semibold text-slate-700">
-                        {item.label}
-                      </p>
-                      <p className="text-sm text-slate-500">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="rounded-2xl border border-dashed border-slate-200 p-4 text-sm text-slate-500">
-                <p>
-                  {result
-                    ? 'Comparte un enlace o descarga el PDF del reporte completo.'
-                    : 'Tu texto es seguro: no lo usamos para entrenar modelos ni lo almacenamos.'}
-                </p>
-                {result?.attack_detected && (
-                  <p className="mt-3 text-xs text-slate-400">
-                    Ataques detectados:{' '}
+              {result?.attack_detected && (
+                <div className="rounded-2xl border border-dashed border-slate-200 p-4 text-xs text-slate-500">
+                  <p className="text-slate-400">Ataques detectados:</p>
+                  <p className="mt-1 font-semibold text-slate-600">
                     {Object.entries(result.attack_detected)
                       .filter(([, value]) => value)
                       .map(([key]) => key.replaceAll('_', ' '))
                       .join(', ') || 'sin señales'}
                   </p>
-                )}
-              </div>
-
-              <div className="space-y-2">
-                <Button className="w-full rounded-full bg-indigo-600 text-white hover:bg-indigo-500">
-                  Explorar planes y API
-                </Button>
-                <p className="text-center text-xs text-slate-400">
-                  Al continuar aceptas nuestros Términos y Política de
-                  Privacidad.
-                </p>
-              </div>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
