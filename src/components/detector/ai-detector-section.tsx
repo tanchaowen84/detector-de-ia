@@ -373,7 +373,7 @@ export function AiDetectorSection() {
             <CardContent className="px-6 pb-4 pt-2 sm:px-8">
               <div className="mb-4 h-px w-full bg-slate-100" />
               <div
-                className="relative min-h-[240px] rounded-3xl border border-slate-200 bg-white/90"
+                className="relative min-h-[360px] rounded-3xl border border-slate-200 bg-white/90"
                 style={
                   {
                     '--detector-pad-x': '1.25rem',
@@ -450,7 +450,7 @@ export function AiDetectorSection() {
                   rows={13}
                   placeholder="Pega aquí tu ensayo o artículo en español..."
                   maxLength={MAX_CHARS}
-                  className="relative h-[240px] resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
+                  className="relative h-[360px] resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     padding:
