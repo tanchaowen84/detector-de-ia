@@ -423,7 +423,10 @@ export function AiDetectorSection() {
                   )}
                 >
                   <div
-                    className="flex h-full min-h-full w-full max-w-full flex-col overflow-hidden whitespace-pre-wrap break-words text-slate-900 [font:inherit]"
+                    className={cn(
+                      'w-full max-w-full whitespace-pre-wrap break-words text-slate-900 [font:inherit]',
+                      text ? 'min-h-full' : 'flex h-full flex-col items-center justify-center gap-5 text-center'
+                    )}
                     style={{
                       padding:
                         'var(--detector-pad-top) var(--detector-pad-x) var(--detector-pad-bottom)',
@@ -432,11 +435,6 @@ export function AiDetectorSection() {
                       transform: text
                         ? `translate(${-scrollState.left}px, ${-scrollState.top}px)`
                         : 'none',
-                      width: '100%',
-                      display: text ? 'block' : 'flex',
-                      alignItems: text ? undefined : 'center',
-                      justifyContent: text ? undefined : 'center',
-                      height: '100%',
                     }}
                     aria-hidden
                   >
@@ -453,7 +451,7 @@ export function AiDetectorSection() {
                         </span>
                       ))
                     ) : (
-                      <div className="flex flex-col items-center justify-center gap-5 text-center">
+                      <>
                         <div>
                           <p className="text-base font-semibold text-slate-500">
                             Arrastra tu archivo o pega el contenido aquí
@@ -482,7 +480,7 @@ export function AiDetectorSection() {
                             Subir
                           </Button>
                         </div>
-                      </div>
+                      </>
                     )}
                   </div>
                 </div>
@@ -500,7 +498,7 @@ export function AiDetectorSection() {
                   rows={13}
                   placeholder="Pega aquí tu ensayo o artículo en español..."
                   maxLength={MAX_CHARS}
-                  className="relative h-[360px] w-full min-w-0 resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
+                  className="relative h-[360px] w-full min-w-0 resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-2 focus-visible:ring-indigo-200 focus-visible:ring-offset-0"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     padding:
