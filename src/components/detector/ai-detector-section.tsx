@@ -30,7 +30,7 @@ import {
   UploadCloudIcon,
 } from 'lucide-react';
 import type { CSSProperties, UIEvent } from 'react';
-import { useMemo, useState, useTransition } from 'react';
+import { useMemo, useRef, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 
 const MIN_CHARS = 300;
@@ -208,6 +208,7 @@ export function AiDetectorSection() {
   const [isPending, startTransition] = useTransition();
   const [scrollState, setScrollState] = useState({ top: 0, left: 0 });
   const [selectedSample, setSelectedSample] = useState<string | null>(null);
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   const charCount = text.length;
   const isTooShort = text.trim().length > 0 && text.trim().length < MIN_CHARS;
@@ -336,6 +337,9 @@ export function AiDetectorSection() {
     const { scrollTop, scrollLeft } = event.currentTarget;
     setScrollState({ top: scrollTop, left: scrollLeft });
   };
+  const handlePlaceholderClick = () => {
+    textareaRef.current?.focus();
+  };
 
   return (
     <section className="relative isolate overflow-hidden bg-[#140b3c] py-20 text-white">
@@ -421,6 +425,7 @@ export function AiDetectorSection() {
                     'absolute inset-0 z-10 w-full max-w-full overflow-hidden rounded-3xl',
                     text ? 'pointer-events-none' : 'pointer-events-auto'
                   )}
+                  onClick={!text ? handlePlaceholderClick : undefined}
                 >
                   <div
                     className={cn(
@@ -462,29 +467,36 @@ export function AiDetectorSection() {
                           </p>
                         </div>
                         <div className="flex gap-4">
-                          <Button
-                            type="button"
-                            onClick={handlePasteFromClipboard}
-                            disabled={isPending}
-                            className="h-16 w-28 flex-col rounded-2xl bg-[#6b4de6] text-white transition hover:bg-[#5b3fd3] disabled:opacity-60"
-                          >
-                            <ClipboardPasteIcon className="size-5" />
-                            Pegar
-                          </Button>
-                          <Button
-                            type="button"
-                            variant="outline"
-                            className="h-16 w-28 flex-col rounded-2xl border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
-                          >
-                            <UploadCloudIcon className="size-5" />
-                            Subir
-                          </Button>
+                        <Button
+                          type="button"
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            handlePasteFromClipboard();
+                          }}
+                          disabled={isPending}
+                          className="h-16 w-28 flex-col rounded-2xl bg-[#6b4de6] text-white transition hover:bg-[#5b3fd3] disabled:opacity-60"
+                        >
+                          <ClipboardPasteIcon className="size-5" />
+                          Pegar
+                        </Button>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={(event) => {
+                            event.stopPropagation();
+                          }}
+                          className="h-16 w-28 flex-col rounded-2xl border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
+                        >
+                          <UploadCloudIcon className="size-5" />
+                          Subir
+                        </Button>
                         </div>
                       </>
                     )}
                   </div>
                 </div>
                 <Textarea
+                  ref={textareaRef}
                   value={text}
                   onChange={(event) => {
                     setText(event.target.value);
