@@ -362,7 +362,7 @@ export function AiDetectorSection() {
         </div>
 
         <div className="grid gap-6 pt-0 lg:grid-cols-[1.4fr_0.8fr]">
-          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
+          <Card className="min-w-0 rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
             <CardHeader className="pb-0">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:flex-nowrap">
                 <Button
@@ -402,10 +402,10 @@ export function AiDetectorSection() {
                 </Button>
               </div>
             </CardHeader>
-            <CardContent className="px-6 pb-4 pt-1 sm:px-8">
+            <CardContent className="min-w-0 px-6 pb-4 pt-1 sm:px-8">
               <div className="mb-2 h-px w-full bg-slate-100" />
               <div
-                className="relative flex min-h-[360px] items-center justify-center rounded-3xl border border-slate-200 bg-white/90"
+                className="relative flex min-h-[360px] min-w-0 items-center justify-center rounded-3xl border border-slate-200 bg-white/90"
                 style={
                   {
                     '--detector-pad-x': '1.25rem',
@@ -418,12 +418,12 @@ export function AiDetectorSection() {
               >
                 <div
                   className={cn(
-                    'absolute inset-0 z-10 overflow-hidden rounded-3xl',
+                    'absolute inset-0 z-10 w-full max-w-full overflow-hidden rounded-3xl',
                     text ? 'pointer-events-none' : 'pointer-events-auto'
                   )}
                 >
                   <div
-                    className="whitespace-pre-wrap break-words text-slate-900 [font:inherit]"
+                    className="flex h-full min-h-full w-full max-w-full flex-col overflow-hidden whitespace-pre-wrap break-words text-slate-900 [font:inherit]"
                     style={{
                       padding:
                         'var(--detector-pad-top) var(--detector-pad-x) var(--detector-pad-bottom)',
@@ -432,6 +432,7 @@ export function AiDetectorSection() {
                       transform: text
                         ? `translate(${-scrollState.left}px, ${-scrollState.top}px)`
                         : 'none',
+                      width: '100%',
                       display: text ? 'block' : 'flex',
                       alignItems: text ? undefined : 'center',
                       justifyContent: text ? undefined : 'center',
@@ -499,7 +500,7 @@ export function AiDetectorSection() {
                   rows={13}
                   placeholder="Pega aquí tu ensayo o artículo en español..."
                   maxLength={MAX_CHARS}
-                  className="relative h-[360px] resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
+                  className="relative h-[360px] w-full min-w-0 resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-0 focus-visible:ring-offset-0"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     padding:
@@ -562,7 +563,7 @@ export function AiDetectorSection() {
             </CardFooter>
           </Card>
 
-          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_60px_rgba(15,23,42,0.15)] gap-1">
+          <Card className="min-w-0 rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_60px_rgba(15,23,42,0.15)] gap-1">
             <CardHeader className="pb-1">
               <div className="flex items-center justify-between gap-3">
                 <div>
