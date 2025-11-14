@@ -22,6 +22,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import type { DetectAIContentResult } from '@/lib/winston';
 import {
+  ClipboardPasteIcon,
   FingerprintIcon,
   Link2Icon,
   Loader2Icon,
@@ -211,6 +212,31 @@ export function AiDetectorSection() {
   const charCount = text.length;
   const isTooShort = text.trim().length > 0 && text.trim().length < MIN_CHARS;
 
+  const handlePasteFromClipboard = async () => {
+    if (isPending) {
+      return;
+    }
+    if (!navigator?.clipboard?.readText) {
+      toast.error('Tu navegador no permite leer el portapapeles.');
+      return;
+    }
+    try {
+      const clipboardText = await navigator.clipboard.readText();
+      if (!clipboardText) {
+        toast.info('El portapapeles está vacío.');
+        return;
+      }
+      setText(clipboardText);
+      setResult(null);
+      setError(null);
+      setSelectedSample(null);
+      toast.success('Texto pegado desde el portapapeles.');
+    } catch (clipError) {
+      console.error('Clipboard read failed:', clipError);
+      toast.error('No pudimos leer tu portapapeles.');
+    }
+  };
+
   const handleSampleSelect = (value: string) => {
     setSelectedSample(value);
     const preset = samplePresets.find((sample) => sample.value === value);
@@ -390,7 +416,12 @@ export function AiDetectorSection() {
                   } as CSSProperties
                 }
               >
-                <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
+                <div
+                  className={cn(
+                    'absolute inset-0 z-10 overflow-hidden rounded-3xl',
+                    text ? 'pointer-events-none' : 'pointer-events-auto'
+                  )}
+                >
                   <div
                     className="whitespace-pre-wrap break-words text-slate-900 [font:inherit]"
                     style={{
@@ -432,13 +463,19 @@ export function AiDetectorSection() {
                           </p>
                         </div>
                         <div className="flex gap-4">
-                          <Button className="h-16 w-24 flex-col rounded-2xl bg-[#6b4de6] text-white hover:bg-[#5b3fd3]">
-                            <UploadCloudIcon className="size-5" />
+                          <Button
+                            type="button"
+                            onClick={handlePasteFromClipboard}
+                            disabled={isPending}
+                            className="h-16 w-28 flex-col rounded-2xl bg-[#6b4de6] text-white transition hover:bg-[#5b3fd3] disabled:opacity-60"
+                          >
+                            <ClipboardPasteIcon className="size-5" />
                             Pegar
                           </Button>
                           <Button
+                            type="button"
                             variant="outline"
-                            className="h-16 w-24 flex-col rounded-2xl border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
+                            className="h-16 w-28 flex-col rounded-2xl border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
                           >
                             <UploadCloudIcon className="size-5" />
                             Subir
