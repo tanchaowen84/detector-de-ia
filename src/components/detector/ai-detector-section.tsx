@@ -373,7 +373,7 @@ export function AiDetectorSection() {
             <CardContent className="px-6 pb-4 pt-2 sm:px-8">
               <div className="mb-4 h-px w-full bg-slate-100" />
               <div
-                className="relative min-h-[360px] rounded-3xl border border-slate-200 bg-white/90"
+                className="relative flex min-h-[360px] items-center justify-center rounded-3xl border border-slate-200 bg-white/90"
                 style={
                   {
                     '--detector-pad-x': '1.25rem',
@@ -392,7 +392,13 @@ export function AiDetectorSection() {
                         'var(--detector-pad-top) var(--detector-pad-x) var(--detector-pad-bottom)',
                       fontSize: 'var(--detector-font-size)',
                       lineHeight: 'var(--detector-line-height)',
-                      transform: `translate(${-scrollState.left}px, ${-scrollState.top}px)`,
+                      transform: text
+                        ? `translate(${-scrollState.left}px, ${-scrollState.top}px)`
+                        : 'none',
+                      display: text ? 'block' : 'flex',
+                      alignItems: text ? undefined : 'center',
+                      justifyContent: text ? undefined : 'center',
+                      height: '100%',
                     }}
                     aria-hidden
                   >
@@ -409,7 +415,7 @@ export function AiDetectorSection() {
                         </span>
                       ))
                     ) : (
-                      <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
+                      <div className="flex flex-col items-center justify-center gap-5 text-center">
                         <div>
                           <p className="text-base font-semibold text-slate-500">
                             Arrastra tu archivo o pega el contenido aquí
