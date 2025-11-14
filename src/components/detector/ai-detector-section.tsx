@@ -370,8 +370,8 @@ export function AiDetectorSection() {
                 </Button>
               </div>
             </CardHeader>
-            <CardContent className="px-6 pb-4 pt-2 sm:px-8">
-              <div className="mb-4 h-px w-full bg-slate-100" />
+            <CardContent className="px-6 pb-4 pt-1 sm:px-8">
+              <div className="mb-2 h-px w-full bg-slate-100" />
               <div
                 className="relative flex min-h-[360px] items-center justify-center rounded-3xl border border-slate-200 bg-white/90"
                 style={
@@ -467,7 +467,7 @@ export function AiDetectorSection() {
                   onScroll={handleTextareaScroll}
                 />
               </div>
-              <div className="mt-4 h-px w-full bg-slate-100" />
+              <div className="mt-2 h-px w-full bg-slate-100" />
               {error && <p className="mt-4 text-sm text-rose-500">{error}</p>}
             </CardContent>
             <CardFooter className="py-4">
