@@ -24,7 +24,6 @@ import type { DetectAIContentResult } from '@/lib/winston';
 import {
   Link2Icon,
   Loader2Icon,
-  ShieldIcon,
   SparklesIcon,
   UploadCloudIcon,
 } from 'lucide-react';
@@ -158,14 +157,6 @@ function GaugeArc({ value }: { value: number | null }) {
         strokeDasharray={arcLength}
         strokeDashoffset={dashOffset}
       />
-      <g transform="translate(130 100)">
-        <circle
-          r="20"
-          fill="rgba(99,102,241,0.12)"
-          stroke="rgba(99,102,241,0.3)"
-        />
-        <ShieldIcon className="text-indigo-600" size={18} />
-      </g>
       <circle
         cx={pointerX}
         cy={pointerY}
@@ -302,7 +293,7 @@ export function AiDetectorSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.04)_1px,_transparent_1px)] bg-[length:20px_20px]" />
       </div>
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
-        <div className="mb-4 flex flex-col items-center gap-4 text-center">
+        <div className="mb-0 flex flex-col items-center gap-4 text-center">
           <Badge className="border-white/30 bg-white/10 text-xs uppercase tracking-[0.2em] text-white">
             Detecta contenido de IA con 99% de exactitud
           </Badge>
@@ -319,7 +310,7 @@ export function AiDetectorSection() {
           <div className="flex flex-wrap items-center justify-center gap-3" />
         </div>
 
-        <div className="grid gap-6 pb-4 pt-2 lg:grid-cols-[1.4fr_0.8fr]">
+        <div className="grid gap-6 pt-0 lg:grid-cols-[1.4fr_0.8fr]">
           <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
             <CardHeader className="pb-0">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:flex-nowrap">
