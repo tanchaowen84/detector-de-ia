@@ -60,3 +60,22 @@ detector de ia 产品MVP文档
 │ [Limpiar]                      [Detectar]    │
 └──────────────────────────────────────────────┘
 ```
+
+### Propuesta columna derecha (ASCII)
+
+```
+┌─────────────────────────────┐
+│ Originality report    [Tiempo] │
+│ Low        ◡        High    │
+│         Gauge 75%          │
+│ --% Confident that's AI    │
+├─────────────────────────────┤
+│ Your text is secure…        │
+│ [✓] Encrypted               │
+│ [✓] Never Shared            │
+│ [✓] Not used to train AI    │
+│                             │
+│ By continuing you agree…    │
+│ (Terms) + legal copy        │
+└─────────────────────────────┘
+```

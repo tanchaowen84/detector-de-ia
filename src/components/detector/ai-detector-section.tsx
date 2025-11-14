@@ -24,6 +24,7 @@ import type { DetectAIContentResult } from '@/lib/winston';
 import {
   Link2Icon,
   Loader2Icon,
+  ShieldIcon,
   SparklesIcon,
   UploadCloudIcon,
 } from 'lucide-react';
@@ -76,6 +77,18 @@ const evaluationCopy = [
   },
 ];
 
+const trustIndicators = [
+  {
+    label: 'Encriptado',
+  },
+  {
+    label: 'Nunca compartido',
+  },
+  {
+    label: 'No entrena modelos',
+  },
+];
+
 function getEvaluation(aiScore: number) {
   return (
     evaluationCopy.find((item) => aiScore >= item.threshold) ??
@@ -95,28 +108,49 @@ function sentenceTone(aiScore: number) {
 
 function GaugeArc({ value }: { value: number | null }) {
   const safeValue = Math.max(0, Math.min(100, value ?? 0));
-  const radius = 80;
+  const radius = 92;
   const arcLength = Math.PI * radius;
   const dashOffset = arcLength - (safeValue / 100) * arcLength;
+  const pointerAngle = Math.PI * (safeValue / 100);
+  const pointerX = 130 + radius * Math.cos(Math.PI - pointerAngle);
+  const pointerY = 150 - radius * Math.sin(Math.PI - pointerAngle);
 
   return (
-    <svg viewBox="0 0 200 120" className="h-44 w-full">
+    <svg viewBox="0 0 260 200" className="h-48 w-full">
       <defs>
         <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#f97316" />
-          <stop offset="50%" stopColor="#a855f7" />
-          <stop offset="100%" stopColor="#38bdf8" />
+          <stop offset="0%" stopColor="#fda4af" />
+          <stop offset="50%" stopColor="#c084fc" />
+          <stop offset="100%" stopColor="#7dd3fc" />
         </linearGradient>
       </defs>
+      <line
+        x1="130"
+        y1="20"
+        x2="130"
+        y2="160"
+        stroke="rgba(148,163,184,0.3)"
+        strokeDasharray="6 6"
+        strokeWidth={1}
+      />
+      <line
+        x1="30"
+        y1="150"
+        x2="230"
+        y2="150"
+        stroke="rgba(148,163,184,0.25)"
+        strokeDasharray="6 6"
+        strokeWidth={1}
+      />
       <path
-        d="M20 100 A80 80 0 0 1 180 100"
+        d="M38 148 A92 92 0 0 1 222 148"
         fill="none"
-        stroke="rgba(148, 163, 184, 0.35)"
+        stroke="rgba(148,163,184,0.2)"
         strokeWidth={18}
         strokeLinecap="round"
       />
       <path
-        d="M20 100 A80 80 0 0 1 180 100"
+        d="M38 148 A92 92 0 0 1 222 148"
         fill="none"
         stroke="url(#gaugeGradient)"
         strokeWidth={18}
@@ -124,8 +158,28 @@ function GaugeArc({ value }: { value: number | null }) {
         strokeDasharray={arcLength}
         strokeDashoffset={dashOffset}
       />
-      <circle cx={20} cy={100} r={9} fill="rgba(148,163,184,0.25)" />
-      <circle cx={180} cy={100} r={9} fill="rgba(148,163,184,0.25)" />
+      <g transform="translate(130 100)">
+        <circle
+          r="20"
+          fill="rgba(99,102,241,0.12)"
+          stroke="rgba(99,102,241,0.3)"
+        />
+        <ShieldIcon className="text-indigo-600" size={18} />
+      </g>
+      <circle
+        cx={pointerX}
+        cy={pointerY}
+        r={8}
+        fill="#7c3aed"
+        stroke="white"
+        strokeWidth={3}
+      />
+      <text x="36" y="168" fontSize="12" fill="#94a3b8">
+        Low
+      </text>
+      <text x="224" y="168" fontSize="12" fill="#94a3b8" textAnchor="end">
+        High
+      </text>
     </svg>
   );
 }
@@ -277,7 +331,7 @@ export function AiDetectorSection() {
 
         <div className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
           <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
-            <CardHeader className="pb-1">
+            <CardHeader className="pb-0">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:flex-nowrap">
                 <Button
                   type="button"
@@ -459,16 +513,16 @@ export function AiDetectorSection() {
             </CardFooter>
           </Card>
 
-          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_30px_120px_rgba(15,23,42,0.28)]">
-            <CardHeader className="border-b border-slate-100 pb-5">
-              <div className="flex items-start justify-between gap-4">
+          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_60px_rgba(15,23,42,0.15)]">
+            <CardHeader className="pb-1">
+              <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
                     Originality report
                   </p>
-                  <CardDescription className="mt-1 text-sm text-slate-500">
+                  <p className="text-xs text-slate-400">
                     Observa la probabilidad de IA en un vistazo.
-                  </CardDescription>
+                  </p>
                 </div>
                 <Badge
                   variant="outline"
@@ -478,35 +532,42 @@ export function AiDetectorSection() {
                 </Badge>
               </div>
             </CardHeader>
-            <CardContent className="space-y-6 pt-6">
-              <div className="rounded-3xl border border-slate-100 bg-gradient-to-b from-slate-50 to-white p-6 text-center shadow-inner">
+            <CardContent className="space-y-4 pt-0">
+              <div className="flex flex-col items-center gap-0.5 text-center">
                 <GaugeArc value={aiScore} />
-                <p className="mt-4 text-4xl font-semibold text-slate-900">
-                  {result ? `${aiScore?.toFixed(0)}%` : '-- %'}
-                </p>
                 <p className="text-sm text-slate-500">
                   {result
-                    ? (evaluation?.label ?? 'Resultado mixto')
-                    : 'Tu Score aparecerá aquí'}
+                    ? `${evaluation?.label ?? 'Resultado mixto'} · Confianza estimada`
+                    : '--% Confident that’s AI'}
                 </p>
                 {evaluation && result && (
-                  <p className="mt-2 text-xs text-slate-400">
+                  <p className="mt-1 text-xs text-slate-400">
                     {evaluation.explanation}
                   </p>
                 )}
               </div>
 
-              {result?.attack_detected && (
-                <div className="rounded-2xl border border-dashed border-slate-200 p-4 text-xs text-slate-500">
-                  <p className="text-slate-400">Ataques detectados:</p>
-                  <p className="mt-1 font-semibold text-slate-600">
-                    {Object.entries(result.attack_detected)
-                      .filter(([, value]) => value)
-                      .map(([key]) => key.replaceAll('_', ' '))
-                      .join(', ') || 'sin señales'}
-                  </p>
+              <div className="space-y-3 text-center">
+                <p className="text-sm font-semibold text-slate-600">
+                  Tu texto está seguro…
+                </p>
+                <div className="space-y-2">
+                  {trustIndicators.map((item) => (
+                    <div
+                      key={item.label}
+                      className="flex items-center gap-3 rounded-2xl bg-[#ede8ff] px-4 py-3 text-sm text-slate-700"
+                    >
+                      <span className="text-emerald-500">✅</span>
+                      <p className="font-semibold">{item.label}</p>
+                    </div>
+                  ))}
                 </div>
-              )}
+                <p className="text-xs text-slate-400">
+                  Al continuar aceptas nuestros{' '}
+                  <span className="underline">Términos</span> y{' '}
+                  <span className="underline">Política de Privacidad</span>.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>
