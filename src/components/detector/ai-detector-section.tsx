@@ -513,7 +513,7 @@ export function AiDetectorSection() {
             </CardFooter>
           </Card>
 
-          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_60px_rgba(15,23,42,0.15)]">
+          <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_60px_rgba(15,23,42,0.15)] gap-1">
             <CardHeader className="pb-1">
               <div className="flex items-center justify-between gap-3">
                 <div>
