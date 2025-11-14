@@ -22,6 +22,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import type { DetectAIContentResult } from '@/lib/winston';
 import {
+  FingerprintIcon,
   Link2Icon,
   Loader2Icon,
   SparklesIcon,
@@ -156,6 +157,30 @@ function GaugeArc({ value }: { value: number | null }) {
         strokeLinecap="round"
         strokeDasharray={arcLength}
         strokeDashoffset={dashOffset}
+      />
+      <circle
+        cx="130"
+        cy="150"
+        r="17"
+        fill="rgba(255,255,255,0.85)"
+        stroke="rgba(148,163,184,0.3)"
+        strokeWidth={1}
+      />
+      <circle
+        cx="130"
+        cy="150"
+        r="15"
+        fill="none"
+        stroke="rgba(148,163,184,0.25)"
+        strokeWidth={1}
+        strokeDasharray="4 4"
+      />
+      <FingerprintIcon
+        x={120}
+        y={140}
+        size={20}
+        strokeWidth={1.1}
+        color="rgba(124,58,237,0.7)"
       />
       <circle
         cx={pointerX}
