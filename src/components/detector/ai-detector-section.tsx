@@ -302,34 +302,24 @@ export function AiDetectorSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.04)_1px,_transparent_1px)] bg-[length:20px_20px]" />
       </div>
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
-        <div className="mb-12 flex flex-col items-center gap-6 text-center">
+        <div className="mb-4 flex flex-col items-center gap-4 text-center">
           <Badge className="border-white/30 bg-white/10 text-xs uppercase tracking-[0.2em] text-white">
             Detecta contenido de IA con 99% de exactitud
           </Badge>
           <div className="space-y-4">
-            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            <h2 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
               El detector de IA más exacto
             </h2>
-            <p className="max-w-3xl text-base text-white/80 sm:text-lg">
+            <p className="max-w-4xl text-base text-white/80 sm:text-lg">
               Disponible gratis en esta página para evaluar textos de ChatGPT,
-              GPT-4o, Gemini, Claude y otros modelos populares. Analiza ensayos,
-              artículos web o correos sin salir de tu navegador.
+              GPT-4o, Gemini, Claude y otros modelos populares. Analiza ensayos
+              o correos sin salir de tu navegador y obtén claridad inmediata.
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <Button className="rounded-full bg-white px-6 py-2 text-base font-semibold text-indigo-700 hover:bg-white/90">
-              Comenzar gratis
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full border-white/40 bg-white/10 px-6 py-2 text-base text-white hover:bg-white/20"
-            >
-              Ver demo en vivo
-            </Button>
-          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3" />
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
+        <div className="grid gap-6 pb-4 pt-2 lg:grid-cols-[1.4fr_0.8fr]">
           <Card className="rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
             <CardHeader className="pb-0">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:flex-nowrap">
