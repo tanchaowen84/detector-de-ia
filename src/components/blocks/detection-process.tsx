@@ -24,14 +24,14 @@ export default function DetectionProcessSection() {
         />
 
         {/* 横向三工具布局 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
           {/* 工具 1 - 抄袭检测器 */}
-          <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 mb-6 group-hover:scale-110 transition-transform">
+          <div className="text-center">
+            <div className="flex flex-col items-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mb-6">
                 <SearchIcon className="size-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 {t('tools.plagiarism.title')}
               </h3>
               <p className="text-slate-600 leading-relaxed mb-6">
@@ -40,11 +40,11 @@ export default function DetectionProcessSection() {
               <Button
                 variant="outline"
                 size="sm"
-                className="gap-2 border-blue-200 text-blue-600 hover:bg-blue-50 hover:border-blue-300 rounded-full"
+                className="gap-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-300 rounded-full"
                 asChild
               >
                 <LocaleLink href="/plagiarism-detector">
-                  {t('tools.tryNow')}
+                  {t('tryNow')}
                   <ChevronRight className="!size-4" />
                 </LocaleLink>
               </Button>
@@ -52,12 +52,12 @@ export default function DetectionProcessSection() {
           </div>
 
           {/* 工具 2 - 文本摘要器 */}
-          <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-green-500 to-green-600 mb-6 group-hover:scale-110 transition-transform">
+          <div className="text-center">
+            <div className="flex flex-col items-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mb-6">
                 <FileTextIcon className="size-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 {t('tools.summarizer.title')}
               </h3>
               <p className="text-slate-600 leading-relaxed mb-6">
@@ -66,11 +66,11 @@ export default function DetectionProcessSection() {
               <Button
                 variant="outline"
                 size="sm"
-                className="gap-2 border-green-200 text-green-600 hover:bg-green-50 hover:border-green-300 rounded-full"
+                className="gap-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-300 rounded-full"
                 asChild
               >
                 <LocaleLink href="/text-summarizer">
-                  {t('tools.tryNow')}
+                  {t('tryNow')}
                   <ChevronRight className="!size-4" />
                 </LocaleLink>
               </Button>
@@ -78,12 +78,12 @@ export default function DetectionProcessSection() {
           </div>
 
           {/* 工具 3 - AI人性化器 */}
-          <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-white/80 to-white/40 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 mb-6 group-hover:scale-110 transition-transform">
+          <div className="text-center">
+            <div className="flex flex-col items-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mb-6">
                 <SparklesIcon className="size-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 {t('tools.humanizer.title')}
               </h3>
               <p className="text-slate-600 leading-relaxed mb-6">
@@ -92,11 +92,11 @@ export default function DetectionProcessSection() {
               <Button
                 variant="outline"
                 size="sm"
-                className="gap-2 border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 rounded-full"
+                className="gap-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-300 rounded-full"
                 asChild
               >
                 <LocaleLink href="/ai-humanizer">
-                  {t('tools.tryNow')}
+                  {t('tryNow')}
                   <ChevronRight className="!size-4" />
                 </LocaleLink>
               </Button>
