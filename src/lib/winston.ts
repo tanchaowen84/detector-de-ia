@@ -51,11 +51,20 @@ function normalizeSentences(
     return sentences;
   }
 
-  if ('text' in sentences && 'score' in sentences) {
-    return [sentences];
+  // 如果是单个对象且符合格式
+  if (
+    typeof sentences === 'object' &&
+    sentences !== null &&
+    'text' in sentences &&
+    'score' in sentences &&
+    typeof (sentences as any).text === 'string' &&
+    typeof (sentences as any).score === 'number'
+  ) {
+    return [sentences as WinstonSentence];
   }
 
-  return Object.values(sentences);
+  // 否则作为 Record 处理
+  return Object.values(sentences as Record<string, WinstonSentence>);
 }
 
 export async function detectAIContent({

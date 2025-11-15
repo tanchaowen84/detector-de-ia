@@ -269,7 +269,7 @@ export function AiDetectorSection() {
           return;
         }
 
-        setResult(response.data.result);
+        setResult(response.data.result ?? null);
         toast.success('Análisis completado');
       } catch (err) {
         console.error('AiDetectorSection error:', err);
