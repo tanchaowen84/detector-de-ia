@@ -596,406 +596,76 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "Make AI SaaS in days, simply and effortlessly",
-    "hero": {
-      "title": "Create Beautiful Flowcharts with FlowChart AI",
-      "description": "FlowChart AI helps you transform ideas into detailed, professional flowcharts instantly. Use natural language to design, edit, and collaborate on diagrams—no design skills required.",
-      "introduction": "Introducing FlowChart AI",
-      "primary": "Start Creating",
-      "secondary": "See Demo"
-    },
-    "logocloud": {
-      "title": "Your favorite companies are our partners"
-    },
-    "useCases": {
-      "title": "Use Cases",
-      "subtitle": "Let AI Handle the Heavy Lifting",
-      "description": "FlowChart AI helps you map out complex processes, brainstorm ideas, and build professional diagrams—faster and easier than ever before.",
-      "tryNow": "Start with FlowChart AI",
-      "items": {
-        "item-1": {
-          "title": "Product Management",
-          "description": "Transform product ideas into actionable roadmaps. Create detailed user journey maps, feature prioritization matrices, and sprint planning workflows. AI helps you visualize complex product ecosystems and stakeholder relationships with precision."
-        },
-        "item-2": {
-          "title": "Software Development",
-          "description": "Architect robust systems with confidence. Design microservices architectures, API integration flows, database relationships, and deployment pipelines. Perfect for technical documentation and system design reviews."
-        },
-        "item-3": {
-          "title": "Business Analysis",
-          "description": "Unlock insights through visual process mapping. Create comprehensive business process flows, decision trees, risk assessment matrices, and operational optimization diagrams that drive strategic decisions."
-        },
-        "item-4": {
-          "title": "Education & Training",
-          "description": "Enhance learning through visual storytelling. Build interactive curriculum maps, concept relationship diagrams, assessment workflows, and training progression paths that engage students and improve comprehension."
-        },
-        "item-5": {
-          "title": "Startup Planning",
-          "description": "Turn startup vision into executable strategy. Visualize business model canvases, funding pipelines, go-to-market strategies, and operational workflows. Essential for pitch decks and investor presentations."
-        },
-        "item-6": {
-          "title": "Project Management",
-          "description": "Orchestrate complex projects with clarity. Design project timelines, resource allocation flows, risk mitigation processes, and team collaboration workflows. Keep stakeholders aligned and projects on track."
-        }
+    "aiDetector": {
+      "badge": "Detect AI content with 99% accuracy",
+      "title": "The most accurate AI detector",
+      "description": "Available for free on this page to evaluate texts from ChatGPT, GPT-4o, Gemini, Claude and other popular models. Analyze essays or emails without leaving your browser and get immediate clarity.",
+      "uploadFile": "Upload file",
+      "pasteUrl": "Paste URL",
+      "trySamples": "Try samples",
+      "scanHistory": "Scan history",
+      "placeholder": {
+        "title": "Drag your file or paste content here",
+        "subtitle": "We accept .txt, .docx and plain text. Colors will appear by sentence.",
+        "textareaPlaceholder": "Paste your essay or article in Spanish here..."
       },
-      "cases": {
-        "students": {
-          "title": "Students",
-          "description": "Verify originality of essays and assignments before submission to ensure academic integrity"
-        },
-        "teachers": {
-          "title": "Teachers",
-          "description": "Quickly identify AI-generated content in student work and provide appropriate feedback"
-        },
-        "content": {
-          "title": "Content Creators",
-          "description": "Ensure your content is original and human-written to maintain authenticity and audience trust"
-        },
-        "seo": {
-          "title": "SEO Specialists",
-          "description": "Optimize content quality and avoid AI-generated penalties from search engines"
-        }
-      }
-    },
-    "demo": {
-      "title": "See FlowChart AI in Action",
-      "subtitle": "From Idea to Flowchart in Seconds",
-      "description": "Watch how FlowChart AI turns natural language prompts into precise, presentation-ready flowcharts — no design skills or manual effort needed.",
-      "tryItNow": "Use FlowChart AI Now",
-      "features": {
-        "feature-1": {
-          "title": "Natural Language Input",
-          "description": "Simply describe your process in Language you like — no shapes, templates, or special tools required"
-        },
-        "feature-2": {
-          "title": "AI-Powered Generation",
-          "description": "FlowChart AI Automatically generates clean, logical diagrams based on your input"
-        },
-        "feature-3": {
-          "title": "Instant Editing",
-          "description": "Customize and refine your diagram, Easily adjust elements, add details, and make it your own"
-        }
-      }
-    },
-    "howItWorks": {
-      "title": "Start in 3 Easy Steps",
-      "subtitle": "No Experience Needed",
-      "description": "FlowChart AI makes creating flowcharts as simple as typing your thoughts. Whether you're a beginner or a pro, you can go from messy ideas to structured diagrams in minutes—without any design tools.",
-      "steps": {
-        "step-1": {
-          "title": "Just Type What You Need",
-          "description": "Start by describing your process, structure, or system in natural language. FlowChart AI understands what you mean—even if it's not perfectly written.",
-          "details": [
-            "Describe your workflow in plain English—FlowChart AI handles the diagram generation",
-            "FlowChart AI supports business logic, software systems, and educational use cases",
-            "AI-powered understanding of both concise and complex process descriptions"
-          ]
-        },
-        "step-2": {
-          "title": "FlowChart AI Builds Your Diagram",
-          "description": "FlowChart AI transforms your input into a clean, structured flowchart using intelligent shape detection and layout optimization.",
-          "details": [
-            "Automatically generates accurate diagrams with FlowChart AI’s layout engine",
-            "Optimized visual structure for readability and presentation",
-            "No need to manually draw—FlowChart AI does it all for you"
-          ]
-        },
-        "step-3": {
-          "title": "Edit, Manage & Save",
-          "description": "Make adjustments using FlowChart AI’s intuitive editor. Save diagrams to your personal workspace, manage your flowcharts, and return to refine or export when needed.",
-          "details": [
-            "Edit using FlowChart AI’s drag-and-drop canvas—fast and intuitive",
-            "Organize all your diagrams in a personal FlowChart AI workspace",
-            "Export in Excalidraw format; PNG, SVG, and PDF exports coming soon"
-          ]
-        }
+      "paste": "Paste",
+      "upload": "Upload",
+      "clear": "Clear",
+      "detect": "Detect now",
+      "analyzing": "Analyzing...",
+      "samples": {
+        "iaEssay": "AI-generated essay",
+        "humanArticle": "Handwritten article",
+        "mixedEmail": "Mixed content email"
       },
-      "getStarted": "Using FlowChart AI Now"
-    },
-    "aiCapabilities": {
-      "title": "FlowChart AI Capabilities",
-      "subtitle": "Smarter Diagrams Powered by Advanced AI",
-      "description": "FlowChart AI uses state-of-the-art language models and layout engines to turn your ideas into perfect, presentation-ready flowcharts—fast, accurate, and effortless.",
-      "capability-1": "Natural Language Processing – FlowChart AI understands messy or vague input and translates it into structured diagrams",
-      "capability-2": "Smart Layout Engine – Automatically arranges elements logically and visually for maximum clarity",
-      "capability-3": "AI-Powered Edits – Update and expand existing flowcharts without starting over",
-      "capability-4": "Multi-language Input – Describe your flowcharts in any language you’re comfortable with",
-      "capability-5": "Context-Aware Suggestions – FlowChart AI intelligently recommends diagram elements and connections based on your intent"
-    },
-    "comparison": {
-      "title": "Why Choose FlowChart AI?",
-      "subtitle": "See the Difference",
-      "description": "Compare FlowChart AI with traditional flowchart tools and see why professionals choose us.",
-      "traditional": {
-        "title": "Traditional Tools",
-        "subtitle": "Time-consuming and complex",
-        "item-1": "Hours of manual drawing and positioning",
-        "item-2": "Steep learning curve for complex software",
-        "item-3": "Difficult collaboration and sharing",
-        "item-4": "Manual updates when changes are needed",
-        "item-5": "Limited template and shape libraries",
-        "item-6": "Version control and backup challenges",
-        "item-7": "Expensive licensing and subscription fees",
-        "item-8": "Platform-specific compatibility issues"
+      "sampleTexts": {
+        "iaEssay": "Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como \"por otro lado\" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector frente a un texto claramente sintético y verificar la visualización de colores por oración.",
+        "humanArticle": "Este artículo fue redactado por una editora humana que toma notas en entrevistas reales y luego las incorpora en párrafos de longitud media. Cada sección se centra en ejemplos específicos, menciona nombres propios y cita fechas o cifras concretas. El estilo introduce frases más cortas para subrayar ideas clave y alterna preguntas retóricas con observaciones personales. Esa mezcla de ritmo da al texto un tono auténtico que suele obtener una probabilidad baja de IA.",
+        "mixedEmail": "Hola equipo, adjunto el informe que preparé esta mañana. Reorganicé las tablas según la retroalimentación de ayer y agregué dos secciones que redacté con IA para ahorrar tiempo; en ellas notarás un lenguaje más formal y redondo. El resto del mensaje lo escribí manualmente para mantener nuestra voz cercana. Avísenme si prefieren que reemplace los fragmentos automatizados antes de enviarlo al cliente."
       },
-      "flowchartAi": {
-        "title": "FlowChart AI",
-        "subtitle": "Fast, intelligent, and intuitive",
-        "item-1": "Generate flowcharts in seconds with AI",
-        "item-2": "Natural language input - no training needed",
-        "item-3": "Built-in collaboration and real-time sharing",
-        "item-4": "AI-assisted modifications and updates",
-        "item-5": "Unlimited templates and smart suggestions",
-        "item-6": "Automatic version history and cloud backup",
-        "item-7": "Affordable pricing with generous free tier",
-        "item-8": "Works seamlessly across all devices and browsers"
+      "report": {
+        "title": "Originality report",
+        "subtitle": "See the probability of AI at a glance.",
+        "realTime": "Real time",
+        "confidence": "Estimated confidence",
+        "secureText": "Your text is secure…",
+        "trustIndicators": {
+          "encrypted": "Encrypted",
+          "notShared": "Never shared",
+          "noTraining": "Does not train models"
+        },
+        "terms": "By continuing you accept our {terms} and {privacy}.",
+        "termsLink": "Terms",
+        "privacyLink": "Privacy Policy"
+      },
+      "evaluation": {
+        "aiLikely": "More likely AI",
+        "mixedContent": "Mixed content",
+        "humanLikely": "More likely human",
+        "aiExplanation": "Style is highly repetitive and similar to typical AI-generated text.",
+        "mixedExplanation": "Signals are mixed. Manual review recommended to confirm authorship.",
+        "humanExplanation": "Structure and variation look closer to human-written content."
+      },
+      "characterCount": "{count} / {max} characters · minimum {min}",
+      "addMoreText": "Add more text for a reliable result.",
+      "defaultConfidence": "--% Confident that's AI",
+      "gauge": {
+        "low": "Low",
+        "high": "High"
+      },
+      "errors": {
+        "clipboardNotSupported": "Your browser does not allow reading the clipboard.",
+        "clipboardEmpty": "The clipboard is empty.",
+        "clipboardReadFailed": "We could not read your clipboard.",
+        "pasteSuccess": "Text pasted from clipboard.",
+        "emptyText": "Please paste a Spanish text.",
+        "addTextWarning": "Add text before analyzing.",
+        "analysisFailed": "We could not analyze the text.",
+        "analysisComplete": "Analysis complete",
+        "unexpectedError": "An unexpected error occurred."
       }
     },
-    "integration": {
-      "title": "Integrations",
-      "subtitle": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
-      "learnMore": "Learn More",
-      "items": {
-        "item-1": {
-          "title": "Google Gemini",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-2": {
-          "title": "Replit",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-3": {
-          "title": "MagicUI",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-4": {
-          "title": "VSCodium",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-5": {
-          "title": "MediaWiki",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-6": {
-          "title": "Google PaLM",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        }
-      }
-    },
-    "integration2": {
-      "title": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
-      "primaryButton": "Get Started",
-      "secondaryButton": "See Demo"
-    },
-    "features": {
-      "title": "Features",
-      "subtitle": "AI-Powered Flowchart Creation",
-      "description": "FlowChart AI offers a comprehensive set of features designed to make diagramming effortless, intelligent, and collaborative.",
-      "items": {
-        "item-1": {
-          "title": "Natural Language to Diagram",
-          "description": "Describe your process or idea in plain language, and let AI instantly turn it into a professional flowchart. No design skills or technical jargon required—just explain your workflow and see it visualized."
-        },
-        "item-2": {
-          "title": "Personal Workspace & Diagram Library",
-          "description": "Keep all your diagrams organized in one place. Our platform provides a personal workspace where you can access, manage, and continue editing your saved diagrams with ease."
-        },
-        "item-3": {
-          "title": "Intuitive Drag-and-Drop Editor",
-          "description": "Easily refine and customize your diagram with a user-friendly canvas. Move elements, adjust connections, and apply styles with simple drag-and-drop—no learning curve."
-        },
-        "item-4": {
-          "title": "Export & Integrate Anywhere",
-          "description": "Export your diagrams in Excalidraw format for editing or backup. Support for PNG, SVG, and PDF exports is coming soon to broaden your sharing and presentation options."
-        }
-      }
-    },
-    "features2": {
-      "title": "Features2",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
-      "feature-1": "Product Feature One",
-      "feature-2": "Product Feature Two",
-      "feature-3": "Product Feature Three",
-      "feature-4": "Product Feature Four"
-    },
-        "pricing": {
-      "title": "Pricing Plans",
-      "subtitle": "Choose the perfect plan for you",
-      "description": "From free analysis to enterprise solutions, we have the right plan for your needs."
-    },
-    "faqs": {
-      "title": "Frequently Asked Questions",
-      "subtitle": "Find answers to common questions",
-      "items": {
-        "item-1": {
-          "question": "Is there a free version of the AI Detector?",
-          "answer": "Yes. We offer a free plan with limited analyses so you can test our service. We also have paid plans for more intensive needs."
-        },
-        "item-2": {
-          "question": "What types of content can the system detect?",
-          "answer": "Our system can detect content generated by GPT-3, GPT-4, Claude, Gemini, and other advanced language models. We analyze linguistic, structural, and semantic patterns to identify text origins."
-        },
-        "item-3": {
-          "question": "How accurate is the detection?",
-          "answer": "Our detector has over 95% accuracy in most cases. Accuracy may vary based on text quality and length, as well as the AI model used."
-        },
-        "item-4": {
-          "question": "Can I use the detector for multiple documents?",
-          "answer": "Yes. We offer batch analysis in our professional and enterprise plans. You can analyze multiple documents simultaneously to save time."
-        },
-        "item-5": {
-          "question": "How fast is the analysis?",
-          "answer": "Most analyses complete within seconds. Exact time depends on text length and current system load, but typically under 30 seconds for standard texts."
-        },
-        "item-6": {
-          "question": "Is my content secure?",
-          "answer": "Absolutely. All analyzed content is encrypted and not permanently stored. We respect your privacy and confidentiality at all times."
-        },
-        "item-7": {
-          "question": "How do the pricing plans work?",
-          "answer": "We offer flexible plans based on your needs. The free plan includes limited analyses, professional plans offer more capacity, and enterprise plans provide unlimited access and additional features."
-        },
-        "item-8": {
-          "question": "Can I cancel my subscription anytime?",
-          "answer": "Yes. You can cancel your subscription anytime from your account. There are no penalties or minimum commitment periods."
-        },
-        "item-9": {
-          "question": "What languages does the detector support?",
-          "answer": "Currently we support Spanish, English, Portuguese, French, German, Italian and other major languages. We're constantly adding support for new languages."
-        }
-      }
-    },
-    "testimonials": {
-      "title": "Testimonials",
-      "subtitle": "What our customers are saying",
-      "items": {
-        "item-1": {
-          "name": "Jonathan Yombo",
-          "role": "Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/1.jpg",
-          "quote": "MkSaaS is really extraordinary and very practical, no need to break your head. A real gold mine."
-        },
-        "item-2": {
-          "name": "Yves Kalume",
-          "role": "GDE - Android",
-          "image": "https://randomuser.me/api/portraits/men/6.jpg",
-          "quote": "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to MkSaaS."
-        },
-        "item-3": {
-          "name": "Yucel Faruksahan",
-          "role": "Tailkits Creator",
-          "image": "https://randomuser.me/api/portraits/men/7.jpg",
-          "quote": "Great work on MkSaaS template. This is one of the best personal website that I have seen so far :)"
-        },
-        "item-4": {
-          "name": "Anonymous author",
-          "role": "Product Manager",
-          "image": "https://randomuser.me/api/portraits/men/8.jpg",
-          "quote": "I downloaded the one of MkSaaS template which is very clear to understand at the start and you could modify the codes/blocks to fit perfectly on your purpose of the page."
-        },
-        "item-5": {
-          "name": "Shekinah Tshiokufila",
-          "role": "Senior Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/4.jpg",
-          "quote": "MkSaaS is redefining the standard of web design, with these blocks it provides an easy and efficient way for those who love beauty but may lack the time to implement it."
-        },
-        "item-6": {
-          "name": "Oketa Fred",
-          "role": "Fullstack Developer",
-          "image": "https://randomuser.me/api/portraits/men/2.jpg",
-          "quote": "I absolutely love MkSaaS! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze."
-        },
-        "item-7": {
-          "name": "Zeki",
-          "role": "Founder of ChatExtend",
-          "image": "https://randomuser.me/api/portraits/men/5.jpg",
-          "quote": "MkSaaS is the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly."
-        },
-        "item-8": {
-          "name": "Joseph Kitheka",
-          "role": "Fullstack Developer",
-          "image": "https://randomuser.me/api/portraits/men/9.jpg",
-          "quote": "MkSaaS has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow."
-        },
-        "item-9": {
-          "name": "Khatab Wedaa",
-          "role": "MerakiUI Creator",
-          "image": "https://randomuser.me/api/portraits/men/10.jpg",
-          "quote": "MkSaaS is an elegant, clean, and responsive tailwind css components it's very helpful to start fast with your project."
-        },
-        "item-10": {
-          "name": "Rodrigo Aguilar",
-          "role": "TailwindAwesome Creator",
-          "image": "https://randomuser.me/api/portraits/men/11.jpg",
-          "quote": "I love MkSaaS ❤️. The component blocks are well-structured, simple to use, and beautifully designed. It makes it really easy to have a good-looking website in no time."
-        },
-        "item-11": {
-          "name": "Eric Ampire",
-          "role": "@GoogleDevExpert for Android",
-          "image": "https://randomuser.me/api/portraits/men/12.jpg",
-          "quote": "MkSaaS templates are the perfect solution for anyone who wants to create a beautiful and functional website without any web design experience."
-        },
-        "item-12": {
-          "name": "Roland Tubonge",
-          "role": "Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/13.jpg",
-          "quote": "MkSaaS is so well designed that even with a very poor knowledge of web design you can do miracles. Let yourself be seduced!"
-        }
-      }
-    },
-    "stats": {
-      "title": "Stats",
-      "subtitle": "MkSaaS in numbers",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-      "items": {
-        "item-1": {
-          "title": "Stars on GitHub"
-        },
-        "item-2": {
-          "title": "Active Users"
-        },
-        "item-3": {
-          "title": "Powered Apps"
-        }
-      }
-    },
-    "calltoaction": {
-      "title": "Start Detecting AI Content Now",
-      "description": "Verify the authenticity of your texts in seconds with our cutting-edge technology",
-      "primaryButton": "Start Detecting",
-      "secondaryButton": "See Use Cases"
-    }
-  },
-  "AITextPage": {
-    "title": "AI Text",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "AIImagePage": {
-    "title": "AI Image",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "AIVideoPage": {
-    "title": "AI Video",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "AIAudioPage": {
-    "title": "AI Audio",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "CanvasPage": {
-    "title": "Canvas",
-    "description": "Create beautiful flowcharts with AI assistance - draw, edit, and collaborate on your diagrams",
-    "subtitle": "AI-Powered Flowchart Editor"
-  },
-  "HomePage": {
     "aiDetectorFeatures": {
       "title": "Powerful AI Detection Technology",
       "subtitle": "Advanced Detection Features",

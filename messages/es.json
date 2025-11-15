@@ -596,6 +596,76 @@
     }
   },
   "HomePage": {
+    "aiDetector": {
+      "badge": "Detecta contenido de IA con 99% de exactitud",
+      "title": "El detector de IA más exacto",
+      "description": "Disponible gratis en esta página para evaluar textos de ChatGPT, GPT-4o, Gemini, Claude y otros modelos populares. Analiza ensayos o correos sin salir de tu navegador y obtén claridad inmediata.",
+      "uploadFile": "Subir archivo",
+      "pasteUrl": "Pegar URL",
+      "trySamples": "Probar muestras",
+      "scanHistory": "Historial de escaneos",
+      "placeholder": {
+        "title": "Arrastra tu archivo o pega el contenido aquí",
+        "subtitle": "Aceptamos .txt, .docx y texto plano. Los colores aparecerán por oración.",
+        "textareaPlaceholder": "Pega aquí tu ensayo o artículo en español..."
+      },
+      "paste": "Pegar",
+      "upload": "Subir",
+      "clear": "Limpiar",
+      "detect": "Detectar ahora",
+      "analyzing": "Analizando...",
+      "samples": {
+        "iaEssay": "Ensayo generado por IA",
+        "humanArticle": "Artículo escrito a mano",
+        "mixedEmail": "Correo con partes mezcladas"
+      },
+      "sampleTexts": {
+        "iaEssay": "Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como \"por otro lado\" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector frente a un texto claramente sintético y verificar la visualización de colores por oración.",
+        "humanArticle": "Este artículo fue redactado por una editora humana que toma notas en entrevistas reales y luego las incorpora en párrafos de longitud media. Cada sección se centra en ejemplos específicos, menciona nombres propios y cita fechas o cifras concretas. El estilo introduce frases más cortas para subrayar ideas clave y alterna preguntas retóricas con observaciones personales. Esa mezcla de ritmo da al texto un tono auténtico que suele obtener una probabilidad baja de IA.",
+        "mixedEmail": "Hola equipo, adjunto el informe que preparé esta mañana. Reorganicé las tablas según la retroalimentación de ayer y agregué dos secciones que redacté con IA para ahorrar tiempo; en ellas notarás un lenguaje más formal y redondo. El resto del mensaje lo escribí manualmente para mantener nuestra voz cercana. Avísenme si prefieren que reemplace los fragmentos automatizados antes de enviarlo al cliente."
+      },
+      "report": {
+        "title": "Originality report",
+        "subtitle": "Observa la probabilidad de IA en un vistazo.",
+        "realTime": "Tiempo real",
+        "confidence": "Confianza estimada",
+        "secureText": "Tu texto está seguro…",
+        "trustIndicators": {
+          "encrypted": "Encriptado",
+          "notShared": "Nunca compartido",
+          "noTraining": "No entrena modelos"
+        },
+        "terms": "Al continuar aceptas nuestros {terms} y {privacy}.",
+        "termsLink": "Términos",
+        "privacyLink": "Política de Privacidad"
+      },
+      "evaluation": {
+        "aiLikely": "Más probable IA",
+        "mixedContent": "Contenido mixto",
+        "humanLikely": "Más probable humano",
+        "aiExplanation": "Style is highly repetitive and similar to typical AI-generated text.",
+        "mixedExplanation": "Signals are mixed. Manual review recommended to confirm authorship.",
+        "humanExplanation": "Structure and variation look closer to human-written content."
+      },
+      "characterCount": "{count} / {max} caracteres · mínimo {min}",
+      "addMoreText": "Añade más texto para un resultado confiable.",
+      "defaultConfidence": "--% Confident that's AI",
+      "gauge": {
+        "low": "Low",
+        "high": "High"
+      },
+      "errors": {
+        "clipboardNotSupported": "Tu navegador no permite leer el portapapeles.",
+        "clipboardEmpty": "El portapapeles está vacío.",
+        "clipboardReadFailed": "No pudimos leer tu portapapeles.",
+        "pasteSuccess": "Texto pegado desde el portapapeles.",
+        "emptyText": "Por favor pega un texto en español.",
+        "addTextWarning": "Añade un texto antes de analizar.",
+        "analysisFailed": "No pudimos analizar el texto.",
+        "analysisComplete": "Análisis completado",
+        "unexpectedError": "Ocurrió un error inesperado."
+      }
+    },
     "aiDetectorFeatures": {
       "title": "Tecnología Potente de Detección IA",
       "subtitle": "Características Avanzadas de Detección",
@@ -703,6 +773,15 @@
       "description": "Verifica la originalidad de tus textos en segundos con nuestra tecnología de vanguardia",
       "primaryButton": "Comenzar a Detectar",
       "secondaryButton": "Ver Casos de Uso"
+    },
+    "aiCapabilities": {
+      "title": "Capacidades de IA Avanzadas",
+      "subtitle": "Potenciado por Inteligencia Artificial",
+      "description": "Nuestra tecnología de IA utiliza algoritmos de vanguardia para analizar y detectar contenido generado por IA con una precisión sin igual.",
+      "capability-1": "Análisis semántico profundo",
+      "capability-2": "Procesamiento ultrarrápido",
+      "capability-3": "Aprendizaje continuo",
+      "capability-4": "Soporte multiidioma"
     },
     "faqs": {
       "title": "Preguntas Frecuentes",

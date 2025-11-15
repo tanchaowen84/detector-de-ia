@@ -32,6 +32,7 @@ import {
 import type { CSSProperties, UIEvent } from 'react';
 import { useMemo, useRef, useState, useTransition } from 'react';
 import { toast } from 'sonner';
+import { useTranslations } from 'next-intl';
 
 const MIN_CHARS = 300;
 const MAX_CHARS = 150000;
@@ -39,62 +40,63 @@ const MAX_CHARS = 150000;
 const samplePresets = [
   {
     value: 'ia-ensayo',
-    label: 'Ensayo generado por IA',
-    text: 'Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como "por otro lado" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector frente a un texto claramente sintético y verificar la visualización de colores por oración.',
+    labelKey: 'samples.iaEssay',
+    textKey: 'sampleTexts.iaEssay',
   },
   {
     value: 'humano-articulo',
-    label: 'Artículo escrito a mano',
-    text: 'Este artículo fue redactado por una editora humana que toma notas en entrevistas reales y luego las incorpora en párrafos de longitud media. Cada sección se centra en ejemplos específicos, menciona nombres propios y cita fechas o cifras concretas. El estilo introduce frases más cortas para subrayar ideas clave y alterna preguntas retóricas con observaciones personales. Esa mezcla de ritmo da al texto un tono auténtico que suele obtener una probabilidad baja de IA.',
+    labelKey: 'samples.humanArticle',
+    textKey: 'sampleTexts.humanArticle',
   },
   {
     value: 'correo-mixto',
-    label: 'Correo con partes mezcladas',
-    text: 'Hola equipo, adjunto el informe que preparé esta mañana. Reorganicé las tablas según la retroalimentación de ayer y agregué dos secciones que redacté con IA para ahorrar tiempo; en ellas notarás un lenguaje más formal y redondo. El resto del mensaje lo escribí manualmente para mantener nuestra voz cercana. Avísenme si prefieren que reemplace los fragmentos automatizados antes de enviarlo al cliente.',
+    labelKey: 'samples.mixedEmail',
+    textKey: 'sampleTexts.mixedEmail',
   },
 ];
 
 const evaluationCopy = [
   {
     threshold: 75,
-    label: 'Más probable IA',
+    labelKey: 'evaluation.aiLikely',
     variant: 'destructive' as const,
-    explanation:
-      'Style is highly repetitive and similar to typical AI-generated text.',
+    explanationKey: 'evaluation.aiExplanation',
   },
   {
     threshold: 40,
-    label: 'Contenido mixto',
+    labelKey: 'evaluation.mixedContent',
     variant: 'secondary' as const,
-    explanation:
-      'Signals are mixed. Manual review recommended to confirm authorship.',
+    explanationKey: 'evaluation.mixedExplanation',
   },
   {
     threshold: 0,
-    label: 'Más probable humano',
+    labelKey: 'evaluation.humanLikely',
     variant: 'default' as const,
-    explanation:
-      'Structure and variation look closer to human-written content.',
+    explanationKey: 'evaluation.humanExplanation',
   },
 ];
 
 const trustIndicators = [
   {
-    label: 'Encriptado',
+    labelKey: 'report.trustIndicators.encrypted',
   },
   {
-    label: 'Nunca compartido',
+    labelKey: 'report.trustIndicators.notShared',
   },
   {
-    label: 'No entrena modelos',
+    labelKey: 'report.trustIndicators.noTraining',
   },
 ];
 
-function getEvaluation(aiScore: number) {
-  return (
-    evaluationCopy.find((item) => aiScore >= item.threshold) ??
-    evaluationCopy.at(-1)!
-  );
+function getEvaluation(aiScore: number, t: (key: string) => string) {
+  const evaluation = evaluationCopy.find((item) => aiScore >= item.threshold) ??
+    evaluationCopy.at(-1)!;
+
+  return {
+    ...evaluation,
+    label: t(evaluation.labelKey),
+    explanation: t(evaluation.explanationKey),
+  };
 }
 
 function sentenceTone(aiScore: number) {
@@ -107,7 +109,7 @@ function sentenceTone(aiScore: number) {
   return 'border-emerald-200/70 bg-emerald-50 text-emerald-900 dark:border-emerald-500/20 dark:bg-emerald-500/10';
 }
 
-function GaugeArc({ value }: { value: number | null }) {
+function GaugeArc({ value, t }: { value: number | null; t: (key: string) => string }) {
   const safeValue = Math.max(0, Math.min(100, value ?? 0));
   const radius = 92;
   const arcLength = Math.PI * radius;
@@ -192,16 +194,17 @@ function GaugeArc({ value }: { value: number | null }) {
         strokeWidth={3}
       />
       <text x="36" y="168" fontSize="12" fill="#94a3b8">
-        Low
+        {t('gauge.low')}
       </text>
       <text x="224" y="168" fontSize="12" fill="#94a3b8" textAnchor="end">
-        High
+        {t('gauge.high')}
       </text>
     </svg>
   );
 }
 
 export function AiDetectorSection() {
+  const t = useTranslations('HomePage.aiDetector');
   const [text, setText] = useState('');
   const [result, setResult] = useState<DetectAIContentResult | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -218,23 +221,23 @@ export function AiDetectorSection() {
       return;
     }
     if (!navigator?.clipboard?.readText) {
-      toast.error('Tu navegador no permite leer el portapapeles.');
+      toast.error(t('errors.clipboardNotSupported'));
       return;
     }
     try {
       const clipboardText = await navigator.clipboard.readText();
       if (!clipboardText) {
-        toast.info('El portapapeles está vacío.');
+        toast.info(t('errors.clipboardEmpty'));
         return;
       }
       setText(clipboardText);
       setResult(null);
       setError(null);
       setSelectedSample(null);
-      toast.success('Texto pegado desde el portapapeles.');
+      toast.success(t('errors.pasteSuccess'));
     } catch (clipError) {
       console.error('Clipboard read failed:', clipError);
-      toast.error('No pudimos leer tu portapapeles.');
+      toast.error(t('errors.clipboardReadFailed'));
     }
   };
 
@@ -242,7 +245,7 @@ export function AiDetectorSection() {
     setSelectedSample(value);
     const preset = samplePresets.find((sample) => sample.value === value);
     if (preset) {
-      setText(preset.text);
+      setText(t(preset.textKey));
       setResult(null);
       setError(null);
     }
@@ -250,8 +253,8 @@ export function AiDetectorSection() {
 
   const handleDetect = () => {
     if (!text.trim()) {
-      setError('Por favor pega un texto en español.');
-      toast.warning('Añade un texto antes de analizar.');
+      setError(t('errors.emptyText'));
+      toast.warning(t('errors.addTextWarning'));
       return;
     }
 
@@ -263,17 +266,17 @@ export function AiDetectorSection() {
 
         if (!response?.data?.success) {
           const message =
-            response?.data?.error ?? 'No pudimos analizar el texto.';
+            response?.data?.error ?? t('errors.analysisFailed');
           setError(message);
           toast.error(message);
           return;
         }
 
         setResult(response.data.result ?? null);
-        toast.success('Análisis completado');
+        toast.success(t('errors.analysisComplete'));
       } catch (err) {
         console.error('AiDetectorSection error:', err);
-        const message = 'Ocurrió un error inesperado.';
+        const message = t('errors.unexpectedError');
         setError(message);
         toast.error(message);
       }
@@ -284,7 +287,7 @@ export function AiDetectorSection() {
     ? Math.max(0, Math.min(100, 100 - result.score))
     : null;
   const evaluation =
-    typeof aiScore === 'number' ? getEvaluation(aiScore) : null;
+    typeof aiScore === 'number' ? getEvaluation(aiScore, t) : null;
   const highlightedSegments = useMemo(() => {
     if (!result?.sentences?.length) {
       return [{ text, tone: null, key: 'full-text' }];
@@ -350,16 +353,14 @@ export function AiDetectorSection() {
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <div className="mb-0 flex flex-col items-center gap-4 text-center">
           <Badge className="border-white/30 bg-white/10 text-xs uppercase tracking-[0.2em] text-white">
-            Detecta contenido de IA con 99% de exactitud
+            {t('badge')}
           </Badge>
           <div className="space-y-4">
             <h2 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-              El detector de IA más exacto
+              {t('title')}
             </h2>
             <p className="max-w-4xl text-base text-white/80 sm:text-lg">
-              Disponible gratis en esta página para evaluar textos de ChatGPT,
-              GPT-4o, Gemini, Claude y otros modelos populares. Analiza ensayos
-              o correos sin salir de tu navegador y obtén claridad inmediata.
+              {t('description')}
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3" />
@@ -374,26 +375,26 @@ export function AiDetectorSection() {
                   variant="outline"
                   className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
                 >
-                  <UploadCloudIcon className="size-4" /> Subir archivo
+                  <UploadCloudIcon className="size-4" /> {t('uploadFile')}
                 </Button>
                 <Button
                   type="button"
                   variant="outline"
                   className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
                 >
-                  <Link2Icon className="size-4" /> Pegar URL
+                  <Link2Icon className="size-4" /> {t('pasteUrl')}
                 </Button>
                 <Select
                   value={selectedSample ?? undefined}
                   onValueChange={handleSampleSelect}
                 >
                   <SelectTrigger className="h-10 min-w-[180px] rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
-                    <SelectValue placeholder="Probar muestras" />
+                    <SelectValue placeholder={t('trySamples')} />
                   </SelectTrigger>
                   <SelectContent>
                     {samplePresets.map((sample) => (
                       <SelectItem key={sample.value} value={sample.value}>
-                        {sample.label}
+                        {t(sample.labelKey)}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -402,7 +403,7 @@ export function AiDetectorSection() {
                   variant="ghost"
                   className="ml-auto h-10 rounded-full px-3 text-xs text-slate-500 hover:bg-slate-100"
                 >
-                  Historial de escaneos
+                  {t('scanHistory')}
                 </Button>
               </div>
             </CardHeader>
@@ -459,11 +460,10 @@ export function AiDetectorSection() {
                       <>
                         <div>
                           <p className="text-base font-semibold text-slate-500">
-                            Arrastra tu archivo o pega el contenido aquí
+                            {t('placeholder.title')}
                           </p>
                           <p className="text-sm text-slate-400">
-                            Aceptamos .txt, .docx y texto plano. Los colores
-                            aparecerán por oración.
+                            {t('placeholder.subtitle')}
                           </p>
                         </div>
                         <div className="flex gap-4">
@@ -477,7 +477,7 @@ export function AiDetectorSection() {
                           className="h-16 w-28 flex-col rounded-2xl bg-[#6b4de6] text-white transition hover:bg-[#5b3fd3] disabled:opacity-60"
                         >
                           <ClipboardPasteIcon className="size-5" />
-                          Pegar
+                          {t('paste')}
                         </Button>
                         <Button
                           type="button"
@@ -488,7 +488,7 @@ export function AiDetectorSection() {
                           className="h-16 w-28 flex-col rounded-2xl border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
                         >
                           <UploadCloudIcon className="size-5" />
-                          Subir
+                          {t('upload')}
                         </Button>
                         </div>
                       </>
@@ -508,7 +508,7 @@ export function AiDetectorSection() {
                     }
                   }}
                   rows={13}
-                  placeholder="Pega aquí tu ensayo o artículo en español..."
+                  placeholder={t('placeholder.textareaPlaceholder')}
                   maxLength={MAX_CHARS}
                   className="relative h-[360px] w-full min-w-0 resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-2 focus-visible:ring-indigo-200 focus-visible:ring-offset-0"
                   style={{
@@ -528,12 +528,15 @@ export function AiDetectorSection() {
               <div className="flex w-full flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex flex-wrap items-center gap-3">
                   <span>
-                    {charCount.toLocaleString()} / {MAX_CHARS.toLocaleString()}{' '}
-                    caracteres · mínimo {MIN_CHARS}
+                    {t('characterCount', {
+                      count: charCount.toLocaleString(),
+                      max: MAX_CHARS.toLocaleString(),
+                      min: MIN_CHARS
+                    })}
                   </span>
                   {isTooShort && (
                     <span className="text-amber-600">
-                      Añade más texto para un resultado confiable.
+                      {t('addMoreText')}
                     </span>
                   )}
                 </div>
@@ -550,7 +553,7 @@ export function AiDetectorSection() {
                     disabled={isPending || (!text && !result)}
                     className="text-slate-500 hover:bg-slate-100"
                   >
-                    Limpiar
+                    {t('clear')}
                   </Button>
                   <Button
                     onClick={handleDetect}
@@ -560,11 +563,11 @@ export function AiDetectorSection() {
                     {isPending ? (
                       <>
                         <Loader2Icon className="mr-2 size-4 animate-spin" />{' '}
-                        Analizando...
+                        {t('analyzing')}
                       </>
                     ) : (
                       <>
-                        <SparklesIcon className="mr-2 size-4" /> Detectar ahora
+                        <SparklesIcon className="mr-2 size-4" /> {t('detect')}
                       </>
                     )}
                   </Button>
@@ -578,27 +581,27 @@ export function AiDetectorSection() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
-                    Originality report
+                    {t('report.title')}
                   </p>
                   <p className="text-xs text-slate-400">
-                    Observa la probabilidad de IA en un vistazo.
+                    {t('report.subtitle')}
                   </p>
                 </div>
                 <Badge
                   variant="outline"
                   className="border-indigo-100 bg-indigo-50 text-indigo-700"
                 >
-                  Tiempo real
+                  {t('report.realTime')}
                 </Badge>
               </div>
             </CardHeader>
             <CardContent className="space-y-4 pt-0">
               <div className="flex flex-col items-center gap-0.5 text-center">
-                <GaugeArc value={aiScore} />
+                <GaugeArc value={aiScore} t={t} />
                 <p className="text-sm text-slate-500">
                   {result
-                    ? `${evaluation?.label ?? 'Resultado mixto'} · Confianza estimada`
-                    : '--% Confident that’s AI'}
+                    ? `${evaluation?.label ?? t('evaluation.mixedContent')} · ${t('report.confidence')}`
+                    : t('defaultConfidence')}
                 </p>
                 {evaluation && result && (
                   <p className="mt-1 text-xs text-slate-400">
@@ -609,23 +612,24 @@ export function AiDetectorSection() {
 
               <div className="space-y-3 text-center">
                 <p className="text-sm font-semibold text-slate-600">
-                  Tu texto está seguro…
+                  {t('report.secureText')}
                 </p>
                 <div className="space-y-2">
-                  {trustIndicators.map((item) => (
+                  {trustIndicators.map((item, index) => (
                     <div
-                      key={item.label}
+                      key={index}
                       className="flex items-center gap-3 rounded-2xl bg-[#ede8ff] px-4 py-3 text-sm text-slate-700"
                     >
                       <span className="text-emerald-500">✅</span>
-                      <p className="font-semibold">{item.label}</p>
+                      <p className="font-semibold">{t(item.labelKey)}</p>
                     </div>
                   ))}
                 </div>
                 <p className="text-xs text-slate-400">
-                  Al continuar aceptas nuestros{' '}
-                  <span className="underline">Términos</span> y{' '}
-                  <span className="underline">Política de Privacidad</span>.
+                  {t.rich('report.terms', {
+                    terms: (children) => <span className="underline">{children}</span>,
+                    privacy: (children) => <span className="underline">{children}</span>,
+                  })}
                 </p>
               </div>
             </CardContent>
