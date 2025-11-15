@@ -361,9 +361,9 @@ export function AiDetectorSection() {
             {t('badge')}
           </Badge>
           <div className="space-y-4">
-            <h2 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-6xl text-slate-800 drop-shadow-sm">
+            <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-6xl text-slate-800 drop-shadow-sm">
               {t('title')}
-            </h2>
+            </h1>
             <p className="max-w-4xl text-base text-slate-600 sm:text-lg">
               {t('description')}
             </p>
