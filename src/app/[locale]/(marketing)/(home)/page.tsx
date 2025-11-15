@@ -2,6 +2,9 @@ import { AiDetectorSection } from '@/components/detector/ai-detector-section';
 import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
 import Features3Section from '@/components/blocks/features/features3';
 import DetectionProcessSection from '@/components/blocks/detection-process';
+import PricingSection from '@/components/blocks/pricing/pricing';
+import FaqSection from '@/components/blocks/faqs/faqs';
+import CallToActionSection from '@/components/blocks/calltoaction/calltoaction';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
 import type { Metadata } from 'next';
@@ -49,6 +52,15 @@ export default async function HomePage(props: HomePageProps) {
 
         {/* 4. 工作流程板块 - 左图右文，展示3步检测过程 */}
         <DetectionProcessSection />
+
+        {/* 5. 价格方案板块 - 展示不同层级的服务 */}
+        <PricingSection />
+
+        {/* 6. 常见问题板块 - 解答用户疑虑 */}
+        <FaqSection />
+
+        {/* 7. 行动召唤板块 - 最终转化引导 */}
+        <CallToActionSection />
       </div>
     </>
   );

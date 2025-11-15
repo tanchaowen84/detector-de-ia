@@ -56,52 +56,52 @@
   },
   "PricePlans": {
     "free": {
-      "name": "Free",
-      "description": "Start exploring AI-powered flowchart generation — for free, forever.",
+      "name": "Gratis",
+      "description": "Prueba nuestro detector de IA con análisis básicos y gratuitos.",
       "features": {
-        "feature-1": "1 AI request per day",
-        "feature-2": "AI-assisted generation and editing",
-        "feature-3": "Unlimited diagram storage",
-        "feature-4": "Text and image input supported",
-        "feature-5": "Community support"
+        "feature-1": "5 análisis de IA por día",
+        "feature-2": "Detección de contenido IA básica",
+        "feature-3": "Resultados con puntuación de probabilidad",
+        "feature-4": "Soporte para español e inglés",
+        "feature-5": "Resultados guardados temporalmente"
       },
       "limits": {
-        "limit-1": "1 AI request per day",
-        "limit-2": "No technical support",
-        "limit-3": "Standard processing speed"
+        "limit-1": "Máximo 5 análisis diarios",
+        "limit-2": "Sin soporte técnico prioritario",
+        "limit-3": "Procesamiento estándar"
       }
     },
     "hobby": {
-      "name": "Hobby",
-      "description": "Great for individuals who need more AI requests and light technical assistance.",
+      "name": "Estudiante",
+      "description": "Perfecto para estudiantes que necesitan análisis frecuentes para trabajos académicos.",
       "features": {
-        "feature-1": "500 AI requests per month",
-        "feature-2": "Full access to AI agent for generation and editing",
-        "feature-3": "Unlimited diagram storage",
-        "feature-4": "Text and image input supported",
-        "feature-5": "Email support (24–48h response, max 7 days)",
-        "feature-6": "All generated content belongs to the user"
+        "feature-1": "25 análisis de IA por día",
+        "feature-2": "Detección avanzada con resaltado",
+        "feature-3": "Análisis por oraciones detallado",
+        "feature-4": "Hasta 5,000 caracteres por análisis",
+        "feature-5": "Soporte por email (24-48h)",
+        "feature-6": "Historial de análisis guardado"
       },
       "limits": {
-        "limit-1": "No priority support",
-        "limit-2": "Standard processing speed"
+        "limit-1": "Límite de caracteres 5,000",
+        "limit-2": "Soporte estándar"
       }
     },
     "professional": {
-      "name": "Professional",
-      "description": "Perfect for power users and professionals who want faster response and priority support.",
+      "name": "Profesional",
+      "description": "Ideal para creadores de contenido y profesionales que necesitan análisis ilimitados.",
       "features": {
-        "feature-1": "1000 AI requests per month",
-        "feature-2": "Priority AI processing",
-        "feature-3": "Unlimited diagram storage",
-        "feature-4": "Real-time AI-assisted editing",
-        "feature-5": "Email & technical support (under 24h, max 48h)",
-        "feature-6": "Text and image input supported",
-        "feature-7": "All generated content belongs to the user"
+        "feature-1": "Análisis de IA ilimitados",
+        "feature-2": "Hasta 50,000 caracteres por análisis",
+        "feature-3": "Detección multi-modelo (ChatGPT, Gemini, Claude)",
+        "feature-4": "Informes detallados con resaltado",
+        "feature-5": "Soporte prioritario (24h)",
+        "feature-6": "API básica incluida",
+        "feature-7": "Historial completo de análisis"
       },
       "limits": {
-        "limit-1": "For advanced or customized service needs, please contact our team directly",
-        "limit-2": "Does not include API access or enterprise features"
+        "limit-1": "Límite de caracteres 50,000",
+        "limit-2": "API rate limits estándar"
       }
     },
     "pro": {
@@ -596,388 +596,6 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "Make AI SaaS in days, simply and effortlessly",
-    "hero": {
-      "title": "Create Beautiful Flowcharts with FlowChart AI",
-      "description": "FlowChart AI helps you transform ideas into detailed, professional flowcharts instantly. Use natural language to design, edit, and collaborate on diagrams—no design skills required.",
-      "introduction": "Introducing FlowChart AI",
-      "primary": "Start Creating",
-      "secondary": "See Demo"
-    },
-    "logocloud": {
-      "title": "Your favorite companies are our partners"
-    },
-    "useCases": {
-      "title": "Use Cases",
-      "subtitle": "Let AI Handle the Heavy Lifting",
-      "description": "FlowChart AI helps you map out complex processes, brainstorm ideas, and build professional diagrams—faster and easier than ever before.",
-      "tryNow": "Start with FlowChart AI",
-      "items": {
-        "item-1": {
-          "title": "Product Management",
-          "description": "Transform product ideas into actionable roadmaps. Create detailed user journey maps, feature prioritization matrices, and sprint planning workflows. AI helps you visualize complex product ecosystems and stakeholder relationships with precision."
-        },
-        "item-2": {
-          "title": "Software Development",
-          "description": "Architect robust systems with confidence. Design microservices architectures, API integration flows, database relationships, and deployment pipelines. Perfect for technical documentation and system design reviews."
-        },
-        "item-3": {
-          "title": "Business Analysis",
-          "description": "Unlock insights through visual process mapping. Create comprehensive business process flows, decision trees, risk assessment matrices, and operational optimization diagrams that drive strategic decisions."
-        },
-        "item-4": {
-          "title": "Education & Training",
-          "description": "Enhance learning through visual storytelling. Build interactive curriculum maps, concept relationship diagrams, assessment workflows, and training progression paths that engage students and improve comprehension."
-        },
-        "item-5": {
-          "title": "Startup Planning",
-          "description": "Turn startup vision into executable strategy. Visualize business model canvases, funding pipelines, go-to-market strategies, and operational workflows. Essential for pitch decks and investor presentations."
-        },
-        "item-6": {
-          "title": "Project Management",
-          "description": "Orchestrate complex projects with clarity. Design project timelines, resource allocation flows, risk mitigation processes, and team collaboration workflows. Keep stakeholders aligned and projects on track."
-        }
-      }
-    },
-    "demo": {
-      "title": "See FlowChart AI in Action",
-      "subtitle": "From Idea to Flowchart in Seconds",
-      "description": "Watch how FlowChart AI turns natural language prompts into precise, presentation-ready flowcharts — no design skills or manual effort needed.",
-      "tryItNow": "Use FlowChart AI Now",
-      "features": {
-        "feature-1": {
-          "title": "Natural Language Input",
-          "description": "Simply describe your process in Language you like — no shapes, templates, or special tools required"
-        },
-        "feature-2": {
-          "title": "AI-Powered Generation",
-          "description": "FlowChart AI Automatically generates clean, logical diagrams based on your input"
-        },
-        "feature-3": {
-          "title": "Instant Editing",
-          "description": "Customize and refine your diagram, Easily adjust elements, add details, and make it your own"
-        }
-      }
-    },
-    "howItWorks": {
-      "title": "Start in 3 Easy Steps",
-      "subtitle": "No Experience Needed",
-      "description": "FlowChart AI makes creating flowcharts as simple as typing your thoughts. Whether you're a beginner or a pro, you can go from messy ideas to structured diagrams in minutes—without any design tools.",
-      "steps": {
-        "step-1": {
-          "title": "Just Type What You Need",
-          "description": "Start by describing your process, structure, or system in natural language. FlowChart AI understands what you mean—even if it's not perfectly written.",
-          "details": [
-            "Describe your workflow in plain English—FlowChart AI handles the diagram generation",
-            "FlowChart AI supports business logic, software systems, and educational use cases",
-            "AI-powered understanding of both concise and complex process descriptions"
-          ]
-        },
-        "step-2": {
-          "title": "FlowChart AI Builds Your Diagram",
-          "description": "FlowChart AI transforms your input into a clean, structured flowchart using intelligent shape detection and layout optimization.",
-          "details": [
-            "Automatically generates accurate diagrams with FlowChart AI’s layout engine",
-            "Optimized visual structure for readability and presentation",
-            "No need to manually draw—FlowChart AI does it all for you"
-          ]
-        },
-        "step-3": {
-          "title": "Edit, Manage & Save",
-          "description": "Make adjustments using FlowChart AI’s intuitive editor. Save diagrams to your personal workspace, manage your flowcharts, and return to refine or export when needed.",
-          "details": [
-            "Edit using FlowChart AI’s drag-and-drop canvas—fast and intuitive",
-            "Organize all your diagrams in a personal FlowChart AI workspace",
-            "Export in Excalidraw format; PNG, SVG, and PDF exports coming soon"
-          ]
-        }
-      },
-      "getStarted": "Using FlowChart AI Now"
-    },
-    "aiCapabilities": {
-      "title": "FlowChart AI Capabilities",
-      "subtitle": "Smarter Diagrams Powered by Advanced AI",
-      "description": "FlowChart AI uses state-of-the-art language models and layout engines to turn your ideas into perfect, presentation-ready flowcharts—fast, accurate, and effortless.",
-      "capability-1": "Natural Language Processing – FlowChart AI understands messy or vague input and translates it into structured diagrams",
-      "capability-2": "Smart Layout Engine – Automatically arranges elements logically and visually for maximum clarity",
-      "capability-3": "AI-Powered Edits – Update and expand existing flowcharts without starting over",
-      "capability-4": "Multi-language Input – Describe your flowcharts in any language you’re comfortable with",
-      "capability-5": "Context-Aware Suggestions – FlowChart AI intelligently recommends diagram elements and connections based on your intent"
-    },
-    "comparison": {
-      "title": "Why Choose FlowChart AI?",
-      "subtitle": "See the Difference",
-      "description": "Compare FlowChart AI with traditional flowchart tools and see why professionals choose us.",
-      "traditional": {
-        "title": "Traditional Tools",
-        "subtitle": "Time-consuming and complex",
-        "item-1": "Hours of manual drawing and positioning",
-        "item-2": "Steep learning curve for complex software",
-        "item-3": "Difficult collaboration and sharing",
-        "item-4": "Manual updates when changes are needed",
-        "item-5": "Limited template and shape libraries",
-        "item-6": "Version control and backup challenges",
-        "item-7": "Expensive licensing and subscription fees",
-        "item-8": "Platform-specific compatibility issues"
-      },
-      "flowchartAi": {
-        "title": "FlowChart AI",
-        "subtitle": "Fast, intelligent, and intuitive",
-        "item-1": "Generate flowcharts in seconds with AI",
-        "item-2": "Natural language input - no training needed",
-        "item-3": "Built-in collaboration and real-time sharing",
-        "item-4": "AI-assisted modifications and updates",
-        "item-5": "Unlimited templates and smart suggestions",
-        "item-6": "Automatic version history and cloud backup",
-        "item-7": "Affordable pricing with generous free tier",
-        "item-8": "Works seamlessly across all devices and browsers"
-      }
-    },
-    "integration": {
-      "title": "Integrations",
-      "subtitle": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
-      "learnMore": "Learn More",
-      "items": {
-        "item-1": {
-          "title": "Google Gemini",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-2": {
-          "title": "Replit",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-3": {
-          "title": "MagicUI",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-4": {
-          "title": "VSCodium",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-5": {
-          "title": "MediaWiki",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        },
-        "item-6": {
-          "title": "Google PaLM",
-          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
-        }
-      }
-    },
-    "integration2": {
-      "title": "Integrate with your favorite tools",
-      "description": "Connect seamlessly with popular platforms and services to enhance your workflow.",
-      "primaryButton": "Get Started",
-      "secondaryButton": "See Demo"
-    },
-    "features": {
-      "title": "Features",
-      "subtitle": "AI-Powered Flowchart Creation",
-      "description": "FlowChart AI offers a comprehensive set of features designed to make diagramming effortless, intelligent, and collaborative.",
-      "items": {
-        "item-1": {
-          "title": "Natural Language to Diagram",
-          "description": "Describe your process or idea in plain language, and let AI instantly turn it into a professional flowchart. No design skills or technical jargon required—just explain your workflow and see it visualized."
-        },
-        "item-2": {
-          "title": "Personal Workspace & Diagram Library",
-          "description": "Keep all your diagrams organized in one place. Our platform provides a personal workspace where you can access, manage, and continue editing your saved diagrams with ease."
-        },
-        "item-3": {
-          "title": "Intuitive Drag-and-Drop Editor",
-          "description": "Easily refine and customize your diagram with a user-friendly canvas. Move elements, adjust connections, and apply styles with simple drag-and-drop—no learning curve."
-        },
-        "item-4": {
-          "title": "Export & Integrate Anywhere",
-          "description": "Export your diagrams in Excalidraw format for editing or backup. Support for PNG, SVG, and PDF exports is coming soon to broaden your sharing and presentation options."
-        }
-      }
-    },
-    "features2": {
-      "title": "Features2",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
-      "feature-1": "Product Feature One",
-      "feature-2": "Product Feature Two",
-      "feature-3": "Product Feature Three",
-      "feature-4": "Product Feature Four"
-    },
-        "pricing": {
-      "title": "Pricing",
-      "subtitle": "Pricing",
-      "description": "Choose the plan that works best for you"
-    },
-    "faqs": {
-      "title": "FAQ",
-      "subtitle": "Frequently Asked Questions",
-      "items": {
-        "item-1": {
-          "question": "Is there a free version of FlowChart AI?",
-          "answer": "Yes. FlowChart AI is open-sourced under the MIT License and available on GitHub. You can self-host and modify it freely. We also offer a free tier — every registered user can generate one AI flowchart per day for free."
-        },
-        "item-2": {
-          "question": "What formats can I export my diagrams to?",
-          "answer": "Currently, we support exporting flowcharts in Excalidraw format only. In future updates, we plan to add support for PDF, PNG, and SVG formats."
-        },
-        "item-3": {
-          "question": "Can I manage my flowcharts and access them later?",
-          "answer": "Yes. FlowChart AI provides a personal workspace where you can save, manage, and edit your flowcharts anytime, from anywhere."
-        },
-        "item-4": {
-          "question": "What AI capabilities does FlowChart AI offer?",
-          "answer": "FlowChart AI allows users to describe their processes or workflows in natural language. The AI interprets the input, handles intelligent layout and diagram structure, and generates editable flowcharts accordingly."
-        },
-        "item-5": {
-          "question": "How can I upgrade or change my plan?",
-          "answer": "Yes. You can freely upgrade, downgrade, or cancel your plan through your account's billing settings."
-        },
-        "item-6": {
-          "question": "How complex of a flowchart can FlowChart AI generate?",
-          "answer": "There is no strict limit on the complexity of flowcharts. The actual capability depends on the content and structure of your input."
-        },
-        "item-7": {
-          "question": "How do I write effective prompts?",
-          "answer": "Use clear natural language and structured steps. You may optionally upload reference images to aid AI understanding. FlowChart AI will then convert your input into a structured diagram."
-        },
-        "item-8": {
-          "question": "Can teams collaborate on flowcharts?",
-          "answer": "Currently, FlowChart AI is built for individual use. Team collaboration and shared workspaces are part of our future roadmap."
-        },
-        "item-9": {
-          "question": "Can I generate diagrams from uploaded documents?",
-          "answer": "At the moment, FlowChart AI supports text and image inputs only. Support for document uploads including PDF, Markdown, and other formats is under active development."
-        }
-      }
-    },
-    "testimonials": {
-      "title": "Testimonials",
-      "subtitle": "What our customers are saying",
-      "items": {
-        "item-1": {
-          "name": "Jonathan Yombo",
-          "role": "Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/1.jpg",
-          "quote": "MkSaaS is really extraordinary and very practical, no need to break your head. A real gold mine."
-        },
-        "item-2": {
-          "name": "Yves Kalume",
-          "role": "GDE - Android",
-          "image": "https://randomuser.me/api/portraits/men/6.jpg",
-          "quote": "With no experience in webdesign I just redesigned my entire website in a few minutes with tailwindcss thanks to MkSaaS."
-        },
-        "item-3": {
-          "name": "Yucel Faruksahan",
-          "role": "Tailkits Creator",
-          "image": "https://randomuser.me/api/portraits/men/7.jpg",
-          "quote": "Great work on MkSaaS template. This is one of the best personal website that I have seen so far :)"
-        },
-        "item-4": {
-          "name": "Anonymous author",
-          "role": "Product Manager",
-          "image": "https://randomuser.me/api/portraits/men/8.jpg",
-          "quote": "I downloaded the one of MkSaaS template which is very clear to understand at the start and you could modify the codes/blocks to fit perfectly on your purpose of the page."
-        },
-        "item-5": {
-          "name": "Shekinah Tshiokufila",
-          "role": "Senior Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/4.jpg",
-          "quote": "MkSaaS is redefining the standard of web design, with these blocks it provides an easy and efficient way for those who love beauty but may lack the time to implement it."
-        },
-        "item-6": {
-          "name": "Oketa Fred",
-          "role": "Fullstack Developer",
-          "image": "https://randomuser.me/api/portraits/men/2.jpg",
-          "quote": "I absolutely love MkSaaS! The component blocks are beautifully designed and easy to use, which makes creating a great-looking website a breeze."
-        },
-        "item-7": {
-          "name": "Zeki",
-          "role": "Founder of ChatExtend",
-          "image": "https://randomuser.me/api/portraits/men/5.jpg",
-          "quote": "MkSaaS is the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly."
-        },
-        "item-8": {
-          "name": "Joseph Kitheka",
-          "role": "Fullstack Developer",
-          "image": "https://randomuser.me/api/portraits/men/9.jpg",
-          "quote": "MkSaaS has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow."
-        },
-        "item-9": {
-          "name": "Khatab Wedaa",
-          "role": "MerakiUI Creator",
-          "image": "https://randomuser.me/api/portraits/men/10.jpg",
-          "quote": "MkSaaS is an elegant, clean, and responsive tailwind css components it's very helpful to start fast with your project."
-        },
-        "item-10": {
-          "name": "Rodrigo Aguilar",
-          "role": "TailwindAwesome Creator",
-          "image": "https://randomuser.me/api/portraits/men/11.jpg",
-          "quote": "I love MkSaaS ❤️. The component blocks are well-structured, simple to use, and beautifully designed. It makes it really easy to have a good-looking website in no time."
-        },
-        "item-11": {
-          "name": "Eric Ampire",
-          "role": "@GoogleDevExpert for Android",
-          "image": "https://randomuser.me/api/portraits/men/12.jpg",
-          "quote": "MkSaaS templates are the perfect solution for anyone who wants to create a beautiful and functional website without any web design experience."
-        },
-        "item-12": {
-          "name": "Roland Tubonge",
-          "role": "Software Engineer",
-          "image": "https://randomuser.me/api/portraits/men/13.jpg",
-          "quote": "MkSaaS is so well designed that even with a very poor knowledge of web design you can do miracles. Let yourself be seduced!"
-        }
-      }
-    },
-    "stats": {
-      "title": "Stats",
-      "subtitle": "MkSaaS in numbers",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-      "items": {
-        "item-1": {
-          "title": "Stars on GitHub"
-        },
-        "item-2": {
-          "title": "Active Users"
-        },
-        "item-3": {
-          "title": "Powered Apps"
-        }
-      }
-    },
-    "calltoaction": {
-      "title": "Ready to Create Amazing Flowcharts?",
-      "description": "Join thousands of users who are already creating professional diagrams with FlowChart AI",
-      "primaryButton": "Start Creating",
-      "secondaryButton": "Learn More"
-    }
-  },
-  "AITextPage": {
-    "title": "AI Text",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "AIImagePage": {
-    "title": "AI Image",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "AIVideoPage": {
-    "title": "AI Video",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "AIAudioPage": {
-    "title": "AI Audio",
-    "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-    "content": "Working in progress"
-  },
-  "CanvasPage": {
-    "title": "Canvas",
-    "description": "Create beautiful flowcharts with AI assistance - draw, edit, and collaborate on your diagrams",
-    "subtitle": "AI-Powered Flowchart Editor"
-  },
-  "HomePage": {
     "aiDetectorFeatures": {
       "title": "Tecnología Potente de Detección IA",
       "subtitle": "Características Avanzadas de Detección",
@@ -1072,6 +690,59 @@
         "item-6": {
           "title": "Agencias de Marketing",
           "description": "Garantiza que el contenido para clientes sea original y cumpla con las pautas de plataformas de anuncios y políticas de calidad."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Planes de Precios",
+      "subtitle": "Elige el plan perfecto para ti",
+      "description": "Desde análisis gratuitos hasta soluciones empresariales, tenemos el plan adecuado para tus necesidades."
+    },
+    "calltoaction": {
+      "title": "Comienza a Detectar Contenido IA Ahora",
+      "description": "Verifica la originalidad de tus textos en segundos con nuestra tecnología de vanguardia",
+      "primaryButton": "Comenzar a Detectar",
+      "secondaryButton": "Ver Casos de Uso"
+    },
+    "faqs": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Respuestas a tus dudas",
+      "items": {
+        "item-1": {
+          "question": "¿Hay una versión gratuita del Detector de IA?",
+          "answer": "Sí. Ofrecemos un plan gratuito con análisis limitados para que puedas probar nuestro servicio. También tenemos planes de pago para necesidades más intensivas."
+        },
+        "item-2": {
+          "question": "¿Qué tipos de contenido puede detectar el sistema?",
+          "answer": "Nuestro sistema puede detectar contenido generado por GPT-3, GPT-4, Claude, Gemini y otros modelos de lenguaje avanzados. Analizamos patrones lingüísticos, estructurales y semánticos para identificar el origen del texto."
+        },
+        "item-3": {
+          "question": "¿Qué tan precisa es la detección?",
+          "answer": "Nuestro detector tiene una precisión superior al 95% en la mayoría de los casos. La precisión puede variar según la calidad y longitud del texto, así como el modelo de IA utilizado."
+        },
+        "item-4": {
+          "question": "¿Puedo usar el detector para múltiples documentos?",
+          "answer": "Sí. Ofrecemos análisis por lotes en nuestros planes profesionales y empresariales. Puedes analizar múltiples documentos simultáneamente para ahorrar tiempo."
+        },
+        "item-5": {
+          "question": "¿Qué tan rápido es el análisis?",
+          "answer": "La mayoría de los análisis se completan en segundos. El tiempo exacto depende de la longitud del texto y la carga actual del sistema, pero generalmente menos de 30 segundos para textos estándar."
+        },
+        "item-6": {
+          "question": "¿Es seguro mi contenido?",
+          "answer": "Absolutamente. Todo el contenido analizado se encripta y no se almacena permanentemente. Respetamos tu privacidad y confidencialidad en todo momento."
+        },
+        "item-7": {
+          "question": "¿Cómo funcionan los planes de precios?",
+          "answer": "Ofrecemos planes flexibles según tus necesidades. El plan gratuito incluye análisis limitados, los planes profesionales ofrecen más capacidad, y los planes empresariales proporcionan acceso ilimitado y funciones adicionales."
+        },
+        "item-8": {
+          "question": "¿Puedo cancelar mi suscripción en cualquier momento?",
+          "answer": "Sí. Puedes cancelar tu suscripción en cualquier momento desde tu cuenta. No hay penalizidades ni periodos de permanencia mínima."
+        },
+        "item-9": {
+          "question": "¿Qué idiomas soporta el detector?",
+          "answer": "Actualmente soportamos español, inglés, portugués, francés, alemán, italiano y otros idiomas principales. Estamos constantemente añadiendo soporte para nuevos idiomas."
         }
       }
     }
