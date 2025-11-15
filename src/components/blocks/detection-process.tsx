@@ -109,7 +109,7 @@ export default function DetectionProcessSection() {
           <Button
             asChild
             size="lg"
-            className="gap-2 bg-gradient-to-r from-purple-300 to-amber-300 text-slate-900 hover:from-purple-400 hover:to-amber-400 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="gap-2 bg-gradient-to-r from-indigo-400 to-purple-400 text-white hover:from-indigo-500 hover:to-purple-500 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <LocaleLink href="#detector">
               {t('exploreAll')}
