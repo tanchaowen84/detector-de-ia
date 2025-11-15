@@ -43,7 +43,7 @@ export function HeaderSection({
       {title ? (
         <TitleComponent
           className={cn(
-            'uppercase tracking-wider text-gradient_indigo-purple font-semibold font-mono',
+            'uppercase tracking-wider bg-gradient-to-r from-purple-300 to-amber-300 bg-clip-text text-transparent font-semibold font-mono',
             titleClassName
           )}
         >

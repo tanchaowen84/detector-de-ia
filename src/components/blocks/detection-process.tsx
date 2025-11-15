@@ -38,8 +38,8 @@ export default function DetectionProcessSection() {
                 <div className="w-full h-full bg-gradient-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="text-4xl mb-4">🔄</div>
-                    <div className="text-white text-sm font-medium">Proceso de Detección IA</div>
-                    <div className="text-white/80 text-xs mt-2">3 pasos: Texto → Análisis → Resultados</div>
+                    <div className="text-slate-900 text-sm font-medium">Proceso de Detección IA</div>
+                    <div className="text-slate-600 text-xs mt-2">3 pasos: Texto → Análisis → Resultados</div>
                   </div>
                 </div>
 
@@ -52,21 +52,21 @@ export default function DetectionProcessSection() {
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 text-white text-sm font-bold">
                       1
                     </div>
-                    <span className="text-sm font-medium text-slate-900">Pegar texto</span>
+                    <span className="text-sm font-medium text-slate-800">Pegar texto</span>
                   </div>
 
                   <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg ml-8">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-purple-600 text-white text-sm font-bold">
                       2
                     </div>
-                    <span className="text-sm font-medium text-slate-900">Análisis IA</span>
+                    <span className="text-sm font-medium text-slate-800">Análisis IA</span>
                   </div>
 
                   <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg ml-16">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-green-600 text-white text-sm font-bold">
                       3
                     </div>
-                    <span className="text-sm font-medium text-slate-900">Resultados</span>
+                    <span className="text-sm font-medium text-slate-800">Resultados</span>
                   </div>
                 </div>
 
@@ -92,26 +92,26 @@ export default function DetectionProcessSection() {
                   <ClipboardPasteIcon className="size-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-xl text-white mb-3 flex items-center gap-3">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-bold">
+                  <h3 className="font-bold text-xl text-slate-900 mb-3 flex items-center gap-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-indigo-600 text-sm font-bold">
                       1
                     </span>
                     {t('steps.step-1.title')}
                   </h3>
-                  <p className="text-white/80 leading-relaxed mb-4">
+                  <p className="text-slate-600 leading-relaxed mb-4">
                     {t('steps.step-1.description')}
                   </p>
-                  <div className="space-y-2 text-sm text-white/60">
+                  <div className="space-y-2 text-sm text-slate-500">
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Pega tu texto en español</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Mínimo 300 caracteres</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>O sube un archivo .txt/.docx</span>
                     </div>
                   </div>
@@ -123,26 +123,26 @@ export default function DetectionProcessSection() {
                   <BrainCircuitIcon className="size-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-xl text-white mb-3 flex items-center gap-3">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-bold">
+                  <h3 className="font-bold text-xl text-slate-900 mb-3 flex items-center gap-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-indigo-600 text-sm font-bold">
                       2
                     </span>
                     {t('steps.step-2.title')}
                   </h3>
-                  <p className="text-white/80 leading-relaxed mb-4">
+                  <p className="text-slate-600 leading-relaxed mb-4">
                     {t('steps.step-2.description')}
                   </p>
-                  <div className="space-y-2 text-sm text-white/60">
+                  <div className="space-y-2 text-sm text-slate-500">
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Análisis con Winston AI</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Detección por oraciones</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Procesamiento en tiempo real</span>
                     </div>
                   </div>
@@ -154,26 +154,26 @@ export default function DetectionProcessSection() {
                   <FileCheckIcon className="size-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-xl text-white mb-3 flex items-center gap-3">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-bold">
+                  <h3 className="font-bold text-xl text-slate-900 mb-3 flex items-center gap-3">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-indigo-600 text-sm font-bold">
                       3
                     </span>
                     {t('steps.step-3.title')}
                   </h3>
-                  <p className="text-white/80 leading-relaxed mb-4">
+                  <p className="text-slate-600 leading-relaxed mb-4">
                     {t('steps.step-3.description')}
                   </p>
-                  <div className="space-y-2 text-sm text-white/60">
+                  <div className="space-y-2 text-sm text-slate-500">
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Puntuación de IA 0-100%</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Oraciones resaltadas por colores</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[#d9b061]">▸</span>
+                      <span className="text-indigo-500">▸</span>
                       <span>Informe de originalidad detallado</span>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function DetectionProcessSection() {
           <Button
             asChild
             size="lg"
-            className="gap-2 bg-white text-[#140b3c] hover:bg-white/90 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="gap-2 bg-gradient-to-r from-purple-300 to-amber-300 text-slate-900 hover:from-purple-400 hover:to-amber-400 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <LocaleLink href="#detector">
               {t('getStarted')}
