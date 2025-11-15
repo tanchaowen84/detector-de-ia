@@ -54,16 +54,16 @@ export const websiteConfig: WebsiteConfig = {
     enableGithubLogin: true,
   },
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'es',
     locales: {
+      es: {
+        flag: '🇪🇸',
+        name: 'Español',
+      },
       en: {
         flag: '🇺🇸',
         name: 'English',
       },
-      // zh: {
-      //   flag: '🇨🇳',
-      //   name: '中文',
-      // },
     },
   },
   blog: {

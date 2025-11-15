@@ -638,24 +638,6 @@
           "title": "Project Management",
           "description": "Orchestrate complex projects with clarity. Design project timelines, resource allocation flows, risk mitigation processes, and team collaboration workflows. Keep stakeholders aligned and projects on track."
         }
-      },
-      "cases": {
-        "students": {
-          "title": "Students",
-          "description": "Verify originality of essays and assignments before submission to ensure academic integrity"
-        },
-        "teachers": {
-          "title": "Teachers",
-          "description": "Quickly identify AI-generated content in student work and provide appropriate feedback"
-        },
-        "content": {
-          "title": "Content Creators",
-          "description": "Ensure your content is original and human-written to maintain authenticity and audience trust"
-        },
-        "seo": {
-          "title": "SEO Specialists",
-          "description": "Optimize content quality and avoid AI-generated penalties from search engines"
-        }
       }
     },
     "demo": {

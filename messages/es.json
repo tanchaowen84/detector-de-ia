@@ -638,24 +638,6 @@
           "title": "Project Management",
           "description": "Orchestrate complex projects with clarity. Design project timelines, resource allocation flows, risk mitigation processes, and team collaboration workflows. Keep stakeholders aligned and projects on track."
         }
-      },
-      "cases": {
-        "students": {
-          "title": "Students",
-          "description": "Verify originality of essays and assignments before submission to ensure academic integrity"
-        },
-        "teachers": {
-          "title": "Teachers",
-          "description": "Quickly identify AI-generated content in student work and provide appropriate feedback"
-        },
-        "content": {
-          "title": "Content Creators",
-          "description": "Ensure your content is original and human-written to maintain authenticity and audience trust"
-        },
-        "seo": {
-          "title": "SEO Specialists",
-          "description": "Optimize content quality and avoid AI-generated penalties from search engines"
-        }
       }
     },
     "demo": {
@@ -1028,68 +1010,68 @@
   },
   "HomePage": {
     "aiDetectorFeatures": {
-      "title": "Powerful AI Detection Technology",
-      "subtitle": "Advanced Detection Features",
-      "description": "Our AI detector uses cutting-edge technology to identify AI-generated content with unmatched accuracy and reliability.",
+      "title": "Tecnología Potente de Detección IA",
+      "subtitle": "Características Avanzadas de Detección",
+      "description": "Nuestro detector de IA utiliza tecnología de vanguardia para identificar contenido generado por IA con precisión y fiabilidad inigualables.",
       "features": {
         "accuracy": {
-          "title": "99% Accuracy",
-          "description": "Industry-leading precision in detecting AI-generated content across all major models"
+          "title": "99% de Precisión",
+          "description": "Precisión líder en la industria para detectar contenido generado por IA en todos los modelos principales"
         },
         "models": {
-          "title": "Multiple AI Models",
-          "description": "Supports ChatGPT, GPT-4o, Gemini, Claude, and other popular AI language models"
+          "title": "Múltiples Modelos IA",
+          "description": "Compatible con ChatGPT, GPT-4o, Gemini, Claude y otros populares modelos de lenguaje IA"
         },
         "highlights": {
-          "title": "Sentence-Level Analysis",
-          "description": "Color-coded highlighting shows exactly which parts of your text may be AI-generated"
+          "title": "Análisis por Oraciones",
+          "description": "Resaltado codificado por colores muestra exactamente qué partes de tu texto pueden ser generadas por IA"
         },
         "realtime": {
-          "title": "Real-Time Results",
-          "description": "Get instant analysis with detailed reports and confidence scores"
+          "title": "Resultados en Tiempo Real",
+          "description": "Obtén análisis instantáneos con informes detallados y puntuaciones de confianza"
         }
       }
     },
     "useCases": {
-      "title": "Perfect for All Professionals",
-      "subtitle": "Versatile Applications",
-      "description": "Whether you're a student, educator, content creator, or SEO specialist, our AI detector adapts to your specific needs.",
+      "title": "Perfecto para Todos los Profesionales",
+      "subtitle": "Aplicaciones Versátiles",
+      "description": "Ya seas estudiante, educador, creador de contenido o especialista SEO, nuestro detector IA se adapta a tus necesidades específicas.",
       "cases": {
         "students": {
-          "title": "Students",
-          "description": "Verify originality of essays and assignments before submission to ensure academic integrity"
+          "title": "Estudiantes",
+          "description": "Verifica la originalidad de ensayos y tareas antes de la entrega para garantizar la integridad académica"
         },
         "teachers": {
-          "title": "Teachers",
-          "description": "Quickly identify AI-generated content in student work and provide appropriate feedback"
+          "title": "Profesores",
+          "description": "Identifica rápidamente contenido generado por IA en trabajos estudiantiles y proporciona retroalimentación adecuada"
         },
         "content": {
-          "title": "Content Creators",
-          "description": "Ensure your content is original and human-written to maintain authenticity and audience trust"
+          "title": "Creadores de Contenido",
+          "description": "Asegúrate de que tu contenido sea original y escrito por humanos para mantener la autenticidad y confianza de la audiencia"
         },
         "seo": {
-          "title": "SEO Specialists",
-          "description": "Optimize content quality and avoid AI-generated penalties from search engines"
+          "title": "Especialistas SEO",
+          "description": "Optimiza la calidad del contenido y evita penalizaciones por contenido generado por IA en motores de búsqueda"
         }
       }
     },
     "detectionProcess": {
-      "title": "Simple 3-Step Process",
-      "subtitle": "Get Results in Seconds",
-      "description": "Our streamlined process makes AI detection incredibly simple and fast.",
-      "getStarted": "Try AI Detector Now",
+      "title": "Proceso Simple de 3 Pasos",
+      "subtitle": "Obtén Resultados en Segundos",
+      "description": "Nuestro proceso simplificado hace que la detección de IA sea increíblemente simple y rápida.",
+      "getStarted": "Probar Detector IA Ahora",
       "steps": {
         "step-1": {
-          "title": "Paste Your Text",
-          "description": "Simply paste your Spanish text or upload a file to begin the analysis."
+          "title": "Pega tu Texto",
+          "description": "Simplemente pega tu texto en español o sube un archivo para comenzar el análisis."
         },
         "step-2": {
-          "title": "AI Analysis",
-          "description": "Our advanced AI algorithms analyze your text sentence by sentence for authenticity."
+          "title": "Análisis IA",
+          "description": "Nuestros algoritmos avanzados de IA analizan tu texto oración por oración para verificar autenticidad."
         },
         "step-3": {
-          "title": "Get Detailed Results",
-          "description": "Receive comprehensive reports with AI probability scores and highlighted sections."
+          "title": "Obtén Resultados Detallados",
+          "description": "Recibe informes completos con puntuaciones de probabilidad de IA y secciones resaltadas."
         }
       }
     }
