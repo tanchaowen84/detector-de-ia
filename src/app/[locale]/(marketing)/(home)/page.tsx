@@ -1,6 +1,6 @@
 import { AiDetectorSection } from '@/components/detector/ai-detector-section';
 import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
-import UseCasesSection from '@/components/blocks/use-cases/use-cases';
+import Features3Section from '@/components/blocks/features/features3';
 import DetectionProcessSection from '@/components/blocks/detection-process';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
@@ -44,8 +44,8 @@ export default async function HomePage(props: HomePageProps) {
         {/* 2. 功能特性板块 - 左文右图，展示核心技术 */}
         <AiDetectorFeaturesSection />
 
-        {/* 3. 应用场景板块 - 左文右图，展示目标用户 */}
-        <UseCasesSection />
+        {/* 3. 使用场景板块 - 6个板块并列两行，展示AI检测器的应用场景 */}
+        <Features3Section />
 
         {/* 4. 工作流程板块 - 左图右文，展示3步检测过程 */}
         <DetectionProcessSection />

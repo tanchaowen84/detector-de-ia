@@ -822,38 +822,7 @@
       "feature-3": "Product Feature Three",
       "feature-4": "Product Feature Four"
     },
-    "features3": {
-      "title": "Features3",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
-      "items": {
-        "item-1": {
-          "title": "Product Feature One",
-          "description": "Please write the detailed description of feature one here"
-        },
-        "item-2": {
-          "title": "Product Feature Two",
-          "description": "Please write the detailed description of feature two here"
-        },
-        "item-3": {
-          "title": "Product Feature Three",
-          "description": "Please write the detailed description of feature three here"
-        },
-        "item-4": {
-          "title": "Product Feature Four",
-          "description": "Please write the detailed description of feature four here"
-        },
-        "item-5": {
-          "title": "Product Feature Five",
-          "description": "Please write the detailed description of feature five here"
-        },
-        "item-6": {
-          "title": "Product Feature Six",
-          "description": "Please write the detailed description of feature six here"
-        }
-      }
-    },
-    "pricing": {
+        "pricing": {
       "title": "Pricing",
       "subtitle": "Pricing",
       "description": "Choose the plan that works best for you"
@@ -1090,6 +1059,37 @@
         "step-3": {
           "title": "Get Detailed Results",
           "description": "Receive comprehensive reports with AI probability scores and highlighted sections."
+        }
+      }
+    },
+    "features3": {
+      "title": "AI Detector Use Cases",
+      "subtitle": "Who This Tool Is For",
+      "description": "Whether you're a student, educator, content creator, or SEO specialist, our AI detector adapts perfectly to your professional needs.",
+      "items": {
+        "item-1": {
+          "title": "University Students",
+          "description": "Verify the originality of essays and academic assignments before submission to ensure academic integrity and avoid plagiarism issues."
+        },
+        "item-2": {
+          "title": "Teachers & Educators",
+          "description": "Quickly identify AI-generated content in student work and provide appropriate feedback to improve academic quality."
+        },
+        "item-3": {
+          "title": "Content Creators",
+          "description": "Ensure your content is original and human-written to maintain authenticity, audience trust, and organic SEO performance."
+        },
+        "item-4": {
+          "title": "SEO Specialists",
+          "description": "Optimize content quality and avoid search engine penalties for mass-generated AI content that may harm rankings."
+        },
+        "item-5": {
+          "title": "Journalists & Editors",
+          "description": "Verify source authenticity and content to maintain the highest standards of journalistic integrity and professional ethics."
+        },
+        "item-6": {
+          "title": "Marketing Agencies",
+          "description": "Ensure client content is original and complies with advertising platform guidelines and quality policies for campaign success."
         }
       }
     }
