@@ -354,12 +354,7 @@ export function AiDetectorSection() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-purple-100 via-purple-50 to-amber-100 py-20 text-slate-900">
-      {/* 装饰性背景 */}
-      <div className="pointer-events-none absolute inset-0 opacity-40">
-        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.25),_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(139,92,246,0.06)_1px,_transparent_1px)] bg-[length:20px_20px]" />
-      </div>
+    <section className="relative py-20 text-slate-900">
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <div className="mb-0 flex flex-col items-center gap-4 text-center">
           <Badge className="border-purple-200 bg-purple-50 text-xs uppercase tracking-[0.2em] text-purple-700">

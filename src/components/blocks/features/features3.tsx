@@ -17,12 +17,7 @@ export default function Features3Section() {
   const t = useTranslations('HomePage.features3');
 
   return (
-    <section className="relative isolate overflow-hidden bg-white py-20 text-slate-900">
-      {/* 装饰性背景 */}
-      <div className="pointer-events-none absolute inset-0 opacity-30">
-        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.08),_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(139,92,246,0.02)_1px,_transparent_1px)] bg-[length:20px_20px]" />
-      </div>
+    <section className="relative py-20 text-slate-900">
 
       <div className="relative z-10 mx-auto max-w-6xl px-4">
         <HeaderSection

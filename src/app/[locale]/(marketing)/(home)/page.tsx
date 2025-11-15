@@ -40,7 +40,18 @@ export default async function HomePage(props: HomePageProps) {
 
   return (
     <>
-      <div className="flex flex-col">
+      {/* 整体页面背景 - 从上到下的自然渐变 */}
+      <div className="fixed inset-0 bg-gradient-to-b from-purple-100 via-purple-50 to-amber-50" />
+
+      {/* 装饰性背景纹理 */}
+      <div className="fixed inset-0 opacity-20">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_30%_20%,_rgba(139,92,246,0.1),_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(251,191,36,0.1),_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(139,92,246,0.02)_1px,_transparent_1px)] bg-[length:30px_30px]" />
+      </div>
+
+      {/* 内容容器 */}
+      <div className="relative z-10 flex flex-col">
         {/* 1. 英雄板块 - AI 检测器主界面 */}
         <AiDetectorSection />
 
