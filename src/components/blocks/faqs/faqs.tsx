@@ -79,34 +79,39 @@ export default function FaqSection() {
   ];
 
   return (
-    <section id="faqs" className="px-4 py-16">
-      <div className="mx-auto max-w-4xl">
+    <section className="relative isolate overflow-hidden bg-white py-20 text-slate-900">
+      {/* 装饰性背景 */}
+      <div className="pointer-events-none absolute inset-0 opacity-30">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.08),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(139,92,246,0.02)_1px,_transparent_1px)] bg-[length:20px_20px]" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-4xl px-4">
         <HeaderSection
           title={t('title')}
           titleAs="h2"
           subtitle={t('subtitle')}
           subtitleAs="p"
+          className="text-center mb-16"
         />
 
-        <div className="mx-auto max-w-4xl mt-12">
+        <div className="mx-auto max-w-4xl">
           <Accordion
             type="single"
             collapsible
-            className="ring-muted w-full rounded-2xl border px-8 py-3 shadow-sm ring-4 dark:ring-0"
+            className="w-full divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-sm"
           >
             {faqItems.map((item) => (
               <AccordionItem
                 key={item.id}
                 value={item.id}
-                className="border-dashed"
+                className="border-slate-100 last:border-b-0"
               >
-                <AccordionTrigger className="cursor-pointer text-base hover:no-underline">
+                <AccordionTrigger className="cursor-pointer px-8 py-6 text-left text-base font-medium text-slate-900 hover:no-underline hover:text-indigo-600 data-[state=open]:text-indigo-600">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-base text-muted-foreground">
-                    {item.answer}
-                  </p>
+                <AccordionContent className="px-8 pb-6 text-base text-slate-600">
+                  {item.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}

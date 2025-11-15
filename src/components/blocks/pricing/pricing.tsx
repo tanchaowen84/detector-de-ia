@@ -6,11 +6,11 @@ export default function PricingSection() {
   const t = useTranslations('HomePage.pricing');
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-50 py-20 text-slate-900">
+    <section className="relative isolate overflow-hidden bg-white py-20 text-slate-900">
       {/* 装饰性背景 */}
-      <div className="pointer-events-none absolute inset-0 opacity-40">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(99,102,241,0.08),_transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-30">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.08),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(139,92,246,0.02)_1px,_transparent_1px)] bg-[length:20px_20px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4">

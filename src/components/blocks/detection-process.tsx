@@ -13,11 +13,11 @@ export default function DetectionProcessSection() {
   const t = useTranslations('HomePage.detectionProcess');
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#140b3c] py-20 text-white">
+    <section className="relative isolate overflow-hidden bg-white py-20 text-slate-900">
       {/* 装饰性背景 */}
-      <div className="pointer-events-none absolute inset-0 opacity-60">
-        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.03)_1px,_transparent_1px)] bg-[length:20px_20px]" />
+      <div className="pointer-events-none absolute inset-0 opacity-30">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.08),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(139,92,246,0.02)_1px,_transparent_1px)] bg-[length:20px_20px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4">
@@ -76,16 +76,14 @@ export default function DetectionProcessSection() {
             </div>
 
             {/* 装饰性元素 */}
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#d9b061]/20 rounded-full blur-xl" />
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#6b4de6]/15 rounded-full blur-2xl" />
+            <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#d9b061]/15 rounded-full blur-xl" />
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#8b5cf6]/20 rounded-full blur-2xl" />
           </div>
 
           {/* 右侧文字内容 */}
           <div className="lg:col-span-2">
             <div className="lg:pl-8">
-              <h2 className="text-4xl font-bold text-white leading-tight mb-6">
-                {t('title')}
-              </h2>
+              {/* 标题已经在HeaderSection中显示，这里只显示内容 */}
             </div>
 
             <div className="space-y-8">

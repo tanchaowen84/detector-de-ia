@@ -354,21 +354,22 @@ export function AiDetectorSection() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#140b3c] py-20 text-white">
-      <div className="pointer-events-none absolute inset-0 opacity-60">
-        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_transparent_55%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.04)_1px,_transparent_1px)] bg-[length:20px_20px]" />
+    <section className="relative isolate overflow-hidden bg-white py-20 text-slate-900">
+      {/* 装饰性背景 */}
+      <div className="pointer-events-none absolute inset-0 opacity-30">
+        <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(139,92,246,0.08),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(139,92,246,0.02)_1px,_transparent_1px)] bg-[length:20px_20px]" />
       </div>
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <div className="mb-0 flex flex-col items-center gap-4 text-center">
-          <Badge className="border-white/30 bg-white/10 text-xs uppercase tracking-[0.2em] text-white">
+          <Badge className="border-indigo-200 bg-indigo-50 text-xs uppercase tracking-[0.2em] text-indigo-700">
             {t('badge')}
           </Badge>
           <div className="space-y-4">
-            <h2 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+            <h2 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               {t('title')}
             </h2>
-            <p className="max-w-4xl text-base text-white/80 sm:text-lg">
+            <p className="max-w-4xl text-base text-slate-600 sm:text-lg">
               {t('description')}
             </p>
           </div>
