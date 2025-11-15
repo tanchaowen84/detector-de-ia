@@ -666,26 +666,22 @@
         "unexpectedError": "Ocurrió un error inesperado."
       }
     },
-    "aiDetectorFeatures": {
-      "title": "Tecnología Potente de Detección IA",
-      "subtitle": "Características Avanzadas de Detección",
-      "description": "Nuestro detector de IA utiliza tecnología de vanguardia para identificar contenido generado por IA con precisión y fiabilidad inigualables.",
-      "features": {
-        "accuracy": {
-          "title": "99% de Precisión",
-          "description": "Precisión líder en la industria para detectar contenido generado por IA en todos los modelos principales"
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "subtitle": "Proceso Simple de 3 Pasos",
+      "description": "Detecta contenido generado por IA en segundos con nuestro proceso simplificado de tres pasos.",
+      "steps": {
+        "step-1": {
+          "title": "Pega tu Texto",
+          "description": "Simplemente pega tu texto en español en el campo de texto para comenzar el análisis."
         },
-        "models": {
-          "title": "Múltiples Modelos IA",
-          "description": "Compatible con ChatGPT, GPT-4o, Gemini, Claude y otros populares modelos de lenguaje IA"
+        "step-2": {
+          "title": "Análisis IA",
+          "description": "Nuestros avanzados algoritmos de IA analizan tu texto para determinar si fue generado por IA."
         },
-        "highlights": {
-          "title": "Análisis por Oraciones",
-          "description": "Resaltado codificado por colores muestra exactamente qué partes de tu texto pueden ser generadas por IA"
-        },
-        "realtime": {
-          "title": "Resultados en Tiempo Real",
-          "description": "Obtén análisis instantáneos con informes detallados y puntuaciones de confianza"
+        "step-3": {
+          "title": "Obtén Resultados Detallados",
+          "description": "Recibe un informe completo con puntuaciones de IA y análisis detallado por oraciones."
         }
       }
     },
@@ -814,41 +810,6 @@
       "feature-2": "Procesamiento por lotes para análisis masivo eficiente",
       "feature-3": "Integración API para flujos de trabajo personalizados",
       "feature-4": "Panel de control con análisis detallados y métricas"
-    },
-    "howItWorks": {
-      "title": "Cómo Funciona",
-      "subtitle": "Proceso Sencillo en 3 Pasos",
-      "description": "Nuestra tecnología de detección de IA es fácil de usar y proporciona resultados precisos en minutos. Sigue estos simples pasos para verificar la autenticidad de tu contenido.",
-      "steps": {
-        "step-1": {
-          "title": "Ingresa tu Texto",
-          "description": "Pega o escribe el contenido que quieres analizar. Aceptamos múltiples formatos incluyendo texto plano, documentos y correos electrónicos.",
-          "details": [
-            "Mínimo 300 caracteres para análisis preciso",
-            "Soporta archivos .txt y .docx",
-            "Pega directamente desde tu portapapeles"
-          ]
-        },
-        "step-2": {
-          "title": "Análisis de IA",
-          "description": "Nuestro algoritmo avanzado analiza patrones lingüísticos, estructurales y semánticos para identificar contenido generado por IA.",
-          "details": [
-            "Análisis de múltiples modelos de IA simultáneamente",
-            "Evaluación de patrones de escritura y estilo",
-            "Comparación con base de datos de contenido IA conocido"
-          ]
-        },
-        "step-3": {
-          "title": "Obtén Resultados",
-          "description": "Recibe un informe detallado con puntuaciones de confianza y análisis por oración para tomar decisiones informadas.",
-          "details": [
-            "Informe completo con porcentaje de probabilidad de IA",
-            "Resaltado por oración del contenido potencial",
-            "Recomendaciones para mejorar la autenticidad"
-          ]
-        }
-      },
-      "getStarted": "Comenzar Ahora"
     },
     "faqs": {
       "title": "Preguntas Frecuentes",
