@@ -708,25 +708,26 @@
         }
       }
     },
-    "detectionProcess": {
-      "title": "Proceso Simple de 3 Pasos",
-      "subtitle": "Obtén Resultados en Segundos",
-      "description": "Nuestro proceso simplificado hace que la detección de IA sea increíblemente simple y rápida.",
-      "getStarted": "Probar Detector IA Ahora",
-      "steps": {
-        "step-1": {
-          "title": "Pega tu Texto",
-          "description": "Simplemente pega tu texto en español o sube un archivo para comenzar el análisis."
+    "relatedTools": {
+      "title": "Herramientas Relacionadas",
+      "subtitle": "Eleva la Calidad de tu Contenido",
+      "description": "Explora nuestro conjunto de herramientas diseñadas para mejorar la calidad, credibilidad y originalidad de tu contenido.",
+      "tools": {
+        "plagiarism": {
+          "title": "Detector de Plagio",
+          "description": "Evita la duplicación involuntaria. Nuestro comprobador de plagio escanea miles de millones de fuentes para confirmar que tu trabajo es original y está listo para publicarse."
         },
-        "step-2": {
-          "title": "Análisis IA",
-          "description": "Nuestros algoritmos avanzados de IA analizan tu texto oración por oración para verificar autenticidad."
+        "summarizer": {
+          "title": "Resumidor de Textos",
+          "description": "Transforma textos largos en resúmenes concisos y claros. Ahorra tiempo extrayendo los puntos clave de cualquier documento mientras mantienes la esencia del contenido."
         },
-        "step-3": {
-          "title": "Obtén Resultados Detallados",
-          "description": "Recibe informes completos con puntuaciones de probabilidad de IA y secciones resaltadas."
+        "humanizer": {
+          "title": "Humanizador de IA",
+          "description": "Refina el texto generado por IA en un lenguaje claro y natural que parezca humano, que resuene con los lectores y refleje la voz de tu marca."
         }
-      }
+      },
+      "tryNow": "Probar Ahora",
+      "exploreAll": "Explorar Todas las Herramientas"
     },
     "features3": {
       "title": "Casos de Uso del Detector IA",
