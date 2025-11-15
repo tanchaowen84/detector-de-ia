@@ -34,61 +34,70 @@ import { useMemo, useRef, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
 
+type TranslationFunction = (key: string) => string;
+
 const MIN_CHARS = 300;
 const MAX_CHARS = 150000;
+
+type SampleTextKey = 'sampleTexts.iaEssay' | 'sampleTexts.humanArticle' | 'sampleTexts.mixedEmail';
 
 const samplePresets = [
   {
     value: 'ia-ensayo',
-    labelKey: 'samples.iaEssay',
-    textKey: 'sampleTexts.iaEssay',
+    labelKey: 'samples.iaEssay' as const,
+    textKey: 'sampleTexts.iaEssay' as SampleTextKey,
   },
   {
     value: 'humano-articulo',
-    labelKey: 'samples.humanArticle',
-    textKey: 'sampleTexts.humanArticle',
+    labelKey: 'samples.humanArticle' as const,
+    textKey: 'sampleTexts.humanArticle' as SampleTextKey,
   },
   {
     value: 'correo-mixto',
-    labelKey: 'samples.mixedEmail',
-    textKey: 'sampleTexts.mixedEmail',
+    labelKey: 'samples.mixedEmail' as const,
+    textKey: 'sampleTexts.mixedEmail' as SampleTextKey,
   },
 ];
+
+type EvaluationKey = 'evaluation.aiLikely' | 'evaluation.mixedContent' | 'evaluation.humanLikely';
+type ExplanationKey = 'evaluation.aiExplanation' | 'evaluation.mixedExplanation' | 'evaluation.humanExplanation';
 
 const evaluationCopy = [
   {
     threshold: 75,
-    labelKey: 'evaluation.aiLikely',
+    labelKey: 'evaluation.aiLikely' as EvaluationKey,
     variant: 'destructive' as const,
-    explanationKey: 'evaluation.aiExplanation',
+    explanationKey: 'evaluation.aiExplanation' as ExplanationKey,
   },
   {
     threshold: 40,
-    labelKey: 'evaluation.mixedContent',
+    labelKey: 'evaluation.mixedContent' as EvaluationKey,
     variant: 'secondary' as const,
-    explanationKey: 'evaluation.mixedExplanation',
+    explanationKey: 'evaluation.mixedExplanation' as ExplanationKey,
   },
   {
     threshold: 0,
-    labelKey: 'evaluation.humanLikely',
+    labelKey: 'evaluation.humanLikely' as EvaluationKey,
     variant: 'default' as const,
-    explanationKey: 'evaluation.humanExplanation',
+    explanationKey: 'evaluation.humanExplanation' as ExplanationKey,
   },
 ];
+
+type TrustIndicatorKey = 'report.trustIndicators.encrypted' | 'report.trustIndicators.notShared' | 'report.trustIndicators.noTraining';
 
 const trustIndicators = [
   {
-    labelKey: 'report.trustIndicators.encrypted',
+    labelKey: 'report.trustIndicators.encrypted' as TrustIndicatorKey,
   },
   {
-    labelKey: 'report.trustIndicators.notShared',
+    labelKey: 'report.trustIndicators.notShared' as TrustIndicatorKey,
   },
   {
-    labelKey: 'report.trustIndicators.noTraining',
+    labelKey: 'report.trustIndicators.noTraining' as TrustIndicatorKey,
   },
 ];
 
-function getEvaluation(aiScore: number, t: (key: string) => string) {
+function getEvaluation(aiScore: number, t: TranslationFunction) {
   const evaluation = evaluationCopy.find((item) => aiScore >= item.threshold) ??
     evaluationCopy.at(-1)!;
 
@@ -109,7 +118,7 @@ function sentenceTone(aiScore: number) {
   return 'border-emerald-200/70 bg-emerald-50 text-emerald-900 dark:border-emerald-500/20 dark:bg-emerald-500/10';
 }
 
-function GaugeArc({ value, t }: { value: number | null; t: (key: string) => string }) {
+function GaugeArc({ value, t }: { value: number | null; t: TranslationFunction }) {
   const safeValue = Math.max(0, Math.min(100, value ?? 0));
   const radius = 92;
   const arcLength = Math.PI * radius;
@@ -287,7 +296,7 @@ export function AiDetectorSection() {
     ? Math.max(0, Math.min(100, 100 - result.score))
     : null;
   const evaluation =
-    typeof aiScore === 'number' ? getEvaluation(aiScore, t) : null;
+    typeof aiScore === 'number' ? getEvaluation(aiScore, t as TranslationFunction) : null;
   const highlightedSegments = useMemo(() => {
     if (!result?.sentences?.length) {
       return [{ text, tone: null, key: 'full-text' }];
@@ -597,7 +606,7 @@ export function AiDetectorSection() {
             </CardHeader>
             <CardContent className="space-y-4 pt-0">
               <div className="flex flex-col items-center gap-0.5 text-center">
-                <GaugeArc value={aiScore} t={t} />
+                <GaugeArc value={aiScore} t={t as TranslationFunction} />
                 <p className="text-sm text-slate-500">
                   {result
                     ? `${evaluation?.label ?? t('evaluation.mixedContent')} · ${t('report.confidence')}`

@@ -783,6 +783,73 @@
       "capability-3": "Aprendizaje continuo",
       "capability-4": "Soporte multiidioma"
     },
+    "features": {
+      "title": "Características Principales",
+      "subtitle": "Tecnología de Vanguardia",
+      "description": "Explora nuestras capacidades avanzadas de detección de IA diseñadas para proporcionar resultados precisos y confiables.",
+      "items": {
+        "item-1": {
+          "title": "Base de Datos Integral",
+          "description": "Acceso a una amplia base de datos de patrones de IA entrenados con millones de ejemplos para mayor precisión."
+        },
+        "item-2": {
+          "title": "Detección por Huella Digital",
+          "description": "Análisis avanzado de patrones lingüísticos y estilísticos para identificar la firma única de cada modelo de IA."
+        },
+        "item-3": {
+          "title": "Verificación de Identidad",
+          "description": "Validación multicapa que examina estructura, sintaxis y semántica para resultados más confiables."
+        },
+        "item-4": {
+          "title": "Análisis Estadístico",
+          "description": "Métricas detalladas y puntuaciones de confianza para ayudar a tomar decisiones informadas sobre el contenido."
+        }
+      }
+    },
+    "features2": {
+      "title": "Características Adicionales",
+      "subtitle": "Más Funciones Poderosas",
+      "description": "Descubre funcionalidades adicionales que hacen de nuestro detector de IA la herramienta más completa y versátil del mercado.",
+      "feature-1": "Análisis de correos electrónicos y documentos en tiempo real",
+      "feature-2": "Procesamiento por lotes para análisis masivo eficiente",
+      "feature-3": "Integración API para flujos de trabajo personalizados",
+      "feature-4": "Panel de control con análisis detallados y métricas"
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "subtitle": "Proceso Sencillo en 3 Pasos",
+      "description": "Nuestra tecnología de detección de IA es fácil de usar y proporciona resultados precisos en minutos. Sigue estos simples pasos para verificar la autenticidad de tu contenido.",
+      "steps": {
+        "step-1": {
+          "title": "Ingresa tu Texto",
+          "description": "Pega o escribe el contenido que quieres analizar. Aceptamos múltiples formatos incluyendo texto plano, documentos y correos electrónicos.",
+          "details": [
+            "Mínimo 300 caracteres para análisis preciso",
+            "Soporta archivos .txt y .docx",
+            "Pega directamente desde tu portapapeles"
+          ]
+        },
+        "step-2": {
+          "title": "Análisis de IA",
+          "description": "Nuestro algoritmo avanzado analiza patrones lingüísticos, estructurales y semánticos para identificar contenido generado por IA.",
+          "details": [
+            "Análisis de múltiples modelos de IA simultáneamente",
+            "Evaluación de patrones de escritura y estilo",
+            "Comparación con base de datos de contenido IA conocido"
+          ]
+        },
+        "step-3": {
+          "title": "Obtén Resultados",
+          "description": "Recibe un informe detallado con puntuaciones de confianza y análisis por oración para tomar decisiones informadas.",
+          "details": [
+            "Informe completo con porcentaje de probabilidad de IA",
+            "Resaltado por oración del contenido potencial",
+            "Recomendaciones para mejorar la autenticidad"
+          ]
+        }
+      },
+      "getStarted": "Comenzar Ahora"
+    },
     "faqs": {
       "title": "Preguntas Frecuentes",
       "subtitle": "Respuestas a tus dudas",
