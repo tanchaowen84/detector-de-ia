@@ -104,20 +104,7 @@ export default function DetectionProcessSection() {
           </div>
         </div>
 
-        {/* 底部CTA按钮 */}
-        <div className="mt-16 text-center">
-          <Button
-            asChild
-            size="lg"
-            className="gap-2 bg-gradient-to-r from-indigo-400 to-purple-400 text-white hover:from-indigo-500 hover:to-purple-500 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <LocaleLink href="#detector">
-              {t('exploreAll')}
-              <ChevronRight className="!size-5" />
-            </LocaleLink>
-          </Button>
         </div>
-      </div>
     </section>
   );
 }
