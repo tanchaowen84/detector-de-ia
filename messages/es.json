@@ -667,21 +667,62 @@
       }
     },
     "howItWorks": {
-      "title": "Cómo Funciona",
-      "subtitle": "Proceso Simple de 3 Pasos",
-      "description": "Detecta contenido generado por IA en segundos con nuestro proceso simplificado de tres pasos.",
+      "title": "Cómo funciona nuestro detector de IA",
+      "subtitle": "Solo necesitas tres pasos para obtener un informe claro y profesional sobre el posible uso de IA en tu texto.",
       "steps": {
         "step-1": {
-          "title": "Pega tu Texto",
-          "description": "Simplemente pega tu texto en español en el campo de texto para comenzar el análisis."
+          "label": "Paso 1 · Pega tu texto",
+          "imageAlt": "Interfaz del detector pegando un texto",
+          "items": [
+            {
+              "title": "Agrega tu contenido",
+              "description": "Copia y pega el texto que quieras analizar con el detector de IA, o escríbelo directamente en el cuadro."
+            },
+            {
+              "title": "Elige el idioma",
+              "description": "Actualmente funciona mejor con textos en español e inglés. Muy pronto sumaremos más idiomas."
+            },
+            {
+              "title": "Revisa la longitud",
+              "description": "Para resultados estables te recomendamos que el texto tenga al menos 30–50 palabras."
+            }
+          ]
         },
         "step-2": {
-          "title": "Análisis IA",
-          "description": "Nuestros avanzados algoritmos de IA analizan tu texto para determinar si fue generado por IA."
+          "label": "Paso 2 · Ejecuta la detección",
+          "imageAlt": "Vista del informe mostrando porcentaje de IA",
+          "items": [
+            {
+              "title": "Haz clic en «Detectar ahora»",
+              "description": "Pulsa el botón principal para iniciar el análisis con el detector de IA."
+            },
+            {
+              "title": "Obtén un porcentaje claro",
+              "description": "Verás una estimación de la probabilidad de que el texto completo haya sido escrito por IA."
+            },
+            {
+              "title": "Consulta los resaltados",
+              "description": "Marcamos en el texto las partes que podrían haberse generado con IA para que las revises en detalle."
+            }
+          ]
         },
         "step-3": {
-          "title": "Obtén Resultados Detallados",
-          "description": "Recibe un informe completo con puntuaciones de IA y análisis detallado por oraciones."
+          "label": "Paso 3 · Revisa y perfecciona tu texto",
+          "imageAlt": "Usuario ajustando frases resaltadas",
+          "items": [
+            {
+              "title": "Revisa las partes resaltadas",
+              "description": "Fíjate primero en las frases o párrafos que el detector marcó como posiblemente generados por IA."
+            },
+            {
+              "title": "Ajusta cuando sea necesario",
+              "description": "Edita el texto para mejorar claridad, coherencia y tono humano siempre que lo consideres oportuno."
+            },
+            {
+              "title": "Vuelve a comprobar si lo deseas",
+              "description": "Ejecuta una nueva detección antes de compartir o entregar el documento para validar los cambios."
+            }
+          ]
         }
       }
     },
