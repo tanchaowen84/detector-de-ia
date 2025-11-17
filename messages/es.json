@@ -598,7 +598,7 @@
   "HomePage": {
     "aiDetector": {
       "badge": "Haz que tus textos inspiren confianza",
-      "title": "Detector de IA para contenido profesional",
+      "title": "Detector de IA para contenido\u00a0profesional",
       "description": "Asegúrate de que cada informe, propuesta o mensaje mantenga la calidad, originalidad y transparencia que esperas, con una evaluación clara del posible uso de IA.",
       "uploadFile": "Subir archivo",
       "pasteUrl": "Pegar URL",
