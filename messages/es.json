@@ -854,44 +854,48 @@
       "feature-4": "Panel de control con análisis detallados y métricas"
     },
     "faqs": {
-      "title": "Preguntas Frecuentes",
+      "title": "Preguntas frecuentes",
       "subtitle": "Respuestas a tus dudas",
       "items": {
         "item-1": {
-          "question": "¿Hay una versión gratuita del Detector de IA?",
-          "answer": "Sí. Ofrecemos un plan gratuito con análisis limitados para que puedas probar nuestro servicio. También tenemos planes de pago para necesidades más intensivas."
+          "question": "¿Qué es este detector de IA y qué tipo de contenido puede analizar?",
+          "answer": "Nuestro detector de ia estima la probabilidad de que un texto haya sido escrito con modelos como ChatGPT, Gemini, Claude, DeepSeek o Kimi. Es útil para trabajos de investigación, artículos de blog, informes profesionales, correos extensos y cualquier texto de escritura profesional."
         },
         "item-2": {
-          "question": "¿Qué tipos de contenido puede detectar el sistema?",
-          "answer": "Nuestro sistema puede detectar contenido generado por GPT-3, GPT-4, Claude, Gemini y otros modelos de lenguaje avanzados. Analizamos patrones lingüísticos, estructurales y semánticos para identificar el origen del texto."
+          "question": "¿Cómo funciona el detector de IA a grandes rasgos?",
+          "answer": "Analizamos estructura, ritmo, repetición y elección de palabras y los comparamos con ejemplos humanos e IA. Así generamos una probabilidad global y resaltamos las secciones que merecen revisión. No medimos palabras aisladas sino el estilo completo."
         },
         "item-3": {
-          "question": "¿Qué tan precisa es la detección?",
-          "answer": "Nuestro detector tiene una precisión superior al 95% en la mayoría de los casos. La precisión puede variar según la calidad y longitud del texto, así como el modelo de IA utilizado."
+          "question": "¿Qué tan preciso es el detector de IA? ¿Puede equivocarse?",
+          "answer": "Es una estimación probabilística, no un veredicto absoluto. En la mayoría de los casos sirve como señal fiable, pero pueden existir falsos positivos o negativos. Úsalo como indicador dentro de tu revisión, no como única fuente de decisión."
         },
         "item-4": {
-          "question": "¿Puedo usar el detector para múltiples documentos?",
-          "answer": "Sí. Ofrecemos análisis por lotes en nuestros planes profesionales y empresariales. Puedes analizar múltiples documentos simultáneamente para ahorrar tiempo."
+          "question": "¿Cómo debo interpretar el porcentaje y los resaltados del informe?",
+          "answer": "El porcentaje refleja qué tanto el texto completo se parece a escritos por IA. No significa que un porcentaje exacto del texto sea IA. Los resaltados indican frases o párrafos con estilo especialmente similar a la IA para que los revises con más detalle."
         },
         "item-5": {
-          "question": "¿Qué tan rápido es el análisis?",
-          "answer": "La mayoría de los análisis se completan en segundos. El tiempo exacto depende de la longitud del texto y la carga actual del sistema, pero generalmente menos de 30 segundos para textos estándar."
+          "question": "¿Cuál es la longitud mínima recomendada y qué formatos de archivo puedo usar?",
+          "answer": "Recomendamos textos de al menos 30–50 palabras para obtener resultados más estables. Puedes pegar el contenido o subir .docx y formatos de texto plano como .txt. Fragmentos muy cortos dan resultados menos fiables en cualquier detector."
         },
         "item-6": {
-          "question": "¿Es seguro mi contenido?",
-          "answer": "Absolutamente. Todo el contenido analizado se encripta y no se almacena permanentemente. Respetamos tu privacidad y confidencialidad en todo momento."
+          "question": "¿Qué idiomas soporta el detector de IA en este momento?",
+          "answer": "Actualmente está optimizado para español e inglés. Estamos ajustando el modelo para añadir más idiomas cuando podamos garantizar una calidad de detección razonable."
         },
         "item-7": {
-          "question": "¿Cómo funcionan los planes de precios?",
-          "answer": "Ofrecemos planes flexibles según tus necesidades. El plan gratuito incluye análisis limitados, los planes profesionales ofrecen más capacidad, y los planes empresariales proporcionan acceso ilimitado y funciones adicionales."
+          "question": "¿Es gratis usar el detector de IA? ¿Hay límites o planes de pago?",
+          "answer": "Puedes usarlo gratis con un número limitado de detecciones. Para analizar más textos o habilitar funciones avanzadas, contamos con planes de suscripción con límites ampliados."
         },
         "item-8": {
-          "question": "¿Puedo cancelar mi suscripción en cualquier momento?",
-          "answer": "Sí. Puedes cancelar tu suscripción en cualquier momento desde tu cuenta. No hay penalizidades ni periodos de permanencia mínima."
+          "question": "¿Qué pasa con mis textos? ¿Se guardan o se usan para entrenar modelos?",
+          "answer": "No almacenamos tus textos de forma permanente ni los usamos para entrenar modelos propios o de terceros. Solo procesamos el contenido para generar el informe y no lo compartimos con otras herramientas."
         },
         "item-9": {
-          "question": "¿Qué idiomas soporta el detector?",
-          "answer": "Actualmente soportamos español, inglés, portugués, francés, alemán, italiano y otros idiomas principales. Estamos constantemente añadiendo soporte para nuevos idiomas."
+          "question": "¿El detector de IA funciona con textos mezclados o parafraseados?",
+          "answer": "Sí. Puede analizar textos con partes humanas e IA o reescritos desde un borrador generado por IA. El resultado refleja cuánto se acerca el estilo global a los modelos. Cuanto más edites y personalices, más se alejará de esos patrones."
+        },
+        "item-10": {
+          "question": "¿Qué puedo hacer si estoy seguro de que mi texto es original pero el detector lo marca como IA?",
+          "answer": "Recuerda que es una estimación y puede equivocarse. Conserva borradores, notas y el historial de edición como evidencia de tu proceso. Usa el informe como punto de partida para dialogar con profesores, clientes o revisores, pero no como sustituto de una revisión humana."
         }
       }
     }
