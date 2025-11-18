@@ -3,7 +3,6 @@
 import { LoginWrapper } from '@/components/auth/login-wrapper';
 import Container from '@/components/layout/container';
 import { Logo } from '@/components/layout/logo';
-import { ModeSwitcher } from '@/components/layout/mode-switcher';
 import { NavbarMobile } from '@/components/layout/navbar-mobile';
 import { UserButton } from '@/components/layout/user-button';
 import { Button } from '@/components/ui/button';
@@ -249,7 +248,6 @@ export function Navbar({ scroll }: NavBarProps) {
               </div>
             )}
 
-            <ModeSwitcher />
             <LocaleSwitcher />
           </div>
         </nav>

@@ -2,20 +2,22 @@
 
 import Container from '@/components/layout/container';
 import { Logo } from '@/components/layout/logo';
-import { ModeSwitcherHorizontal } from '@/components/layout/mode-switcher-horizontal';
-import BuiltWithButton from '@/components/shared/built-with-button';
 import { getFooterLinks } from '@/config/footer-config';
 import { getSocialLinks } from '@/config/social-config';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import type React from 'react';
-import { ThemeSelector } from './theme-selector';
+import { ModeSwitcherHorizontal } from './mode-switcher-horizontal';
 
 export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   const t = useTranslations();
   const footerLinks = getFooterLinks();
   const socialLinks = getSocialLinks();
+  const githubOnly = socialLinks?.filter(
+    (link) => link.title?.toLowerCase() === 'github'
+  );
+  const displayedSocialLinks = githubOnly?.length ? githubOnly : [];
 
   return (
     <footer className={cn('border-t', className)}>
@@ -37,27 +39,25 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               </p>
 
               {/* social links */}
-              <div className="flex items-center gap-4 py-2">
-                <div className="flex items-center gap-2">
-                  {socialLinks?.map((link) => (
-                    <a
-                      key={link.title}
-                      href={link.href || '#'}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={link.title}
-                      className="border border-border inline-flex h-8 w-8 items-center 
-                          justify-center rounded-full hover:bg-accent hover:text-accent-foreground"
-                    >
-                      <span className="sr-only">{link.title}</span>
-                      {link.icon ? link.icon : null}
-                    </a>
-                  ))}
+              {displayedSocialLinks.length ? (
+                <div className="flex items-center gap-4 py-2">
+                  <div className="flex items-center gap-2">
+                    {displayedSocialLinks.map((link) => (
+                      <a
+                        key={link.title}
+                        href={link.href || '#'}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={link.title}
+                        className="border border-border inline-flex h-8 w-8 items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground"
+                      >
+                        <span className="sr-only">{link.title}</span>
+                        {link.icon ? link.icon : null}
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              {/* built with button */}
-              <BuiltWithButton />
+              ) : null}
             </div>
           </div>
 

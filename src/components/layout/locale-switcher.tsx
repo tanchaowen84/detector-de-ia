@@ -10,7 +10,6 @@ import {
 import { websiteConfig } from '@/config/website';
 import { useLocalePathname, useLocaleRouter } from '@/i18n/navigation';
 import { useLocaleStore } from '@/stores/locale-store';
-import { Languages } from 'lucide-react';
 import { type Locale, useLocale, useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useEffect, useTransition } from 'react';
@@ -56,16 +55,20 @@ export default function LocaleSwitcher() {
     });
   };
 
+  const activeLocaleData = websiteConfig.i18n.locales[locale as Locale];
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="ghost"
+          variant="outline"
           size="sm"
-          className="size-8 p-0.5 border border-border rounded-full cursor-pointer"
+          className="h-9 rounded-full border border-border px-3 text-sm font-medium flex items-center gap-2"
         >
-          <Languages className="size-3" />
-          <span className="sr-only">{t('language')}</span>
+          <span role="img" aria-hidden="true">
+            {activeLocaleData?.flag ?? '🌐'}
+          </span>
+          <span>{activeLocaleData?.name ?? locale.toUpperCase()}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
