@@ -1,7 +1,12 @@
 import { HeaderSection } from '@/components/layout/header-section';
 import { Button } from '@/components/ui/button';
 import { LocaleLink } from '@/i18n/navigation';
-import { ChevronRight, SearchIcon, FileTextIcon, SparklesIcon } from 'lucide-react';
+import {
+  ChevronRight,
+  FileTextIcon,
+  SearchIcon,
+  SparklesIcon,
+} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 /**
@@ -103,8 +108,7 @@ export default function DetectionProcessSection() {
             </div>
           </div>
         </div>
-
-        </div>
+      </div>
     </section>
   );
 }

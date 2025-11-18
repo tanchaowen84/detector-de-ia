@@ -771,33 +771,33 @@
       "exploreAll": "Explorar Todas las Herramientas"
     },
     "features3": {
-      "title": "Casos de Uso del Detector IA",
-      "subtitle": "Para Quién es Esta Herramienta",
-      "description": "Ya seas estudiante, educador, creador de contenido o especialista SEO, nuestro detector de IA se adapta perfectamente a tus necesidades profesionales.",
+      "title": "Casos de uso del detector de IA",
+      "subtitle": "Para quién es esta herramienta",
+      "description": "Conoce situaciones reales donde nuestro detector de IA aporta claridad antes de publicar o entregar tus textos.",
       "items": {
         "item-1": {
-          "title": "Estudiantes Universitarios",
-          "description": "Verifica la originalidad de ensayos y trabajos académicos antes de la entrega para garantizar integridad académica y evitar problemas de plagio."
+          "title": "Trabajos de investigación",
+          "description": "Comprueba, antes de enviar, que tu texto no genere alertas innecesarias en detectores de IA o plagio."
         },
         "item-2": {
-          "title": "Profesores y Docentes",
-          "description": "Identifica rápidamente contenido generado por IA en trabajos estudiantiles y proporciona retroalimentación apropiada para mejorar la calidad académica."
+          "title": "Evitar falsos positivos",
+          "description": "Localiza fragmentos que se parecen demasiado a la escritura de modelos como ChatGPT o GPT-4o para reducir el riesgo de ser marcado."
         },
         "item-3": {
-          "title": "Creadores de Contenido",
-          "description": "Asegúrate de que tu contenido sea original y escrito por humanos para mantener autenticidad, confianza con tu audiencia y SEO orgánico."
+          "title": "Contenido de blog",
+          "description": "Verifica que tus entradas con apoyo de IA mantengan un nivel razonable de originalidad y no dependan en exceso del contenido generado."
         },
         "item-4": {
-          "title": "Especialistas SEO",
-          "description": "Optimiza la calidad del contenido y evita penalizaciones de motores de búsqueda por contenido generado masivamente por IA."
+          "title": "Educación y corrección de tareas",
+          "description": "Ofrece una primera señal de si un trabajo estudiantil usa IA de forma significativa para decidir qué revisar con más detalle."
         },
         "item-5": {
-          "title": "Periodistas y Editores",
-          "description": "Verifica la autenticidad de fuentes y contenido para mantener los más altos estándares de integridad periodística y ética profesional."
+          "title": "Contenido encargado a redactores o agencias",
+          "description": "Comprueba hasta qué punto el texto entregado por freelancers o agencias depende de la IA frente al trabajo humano esperado."
         },
         "item-6": {
-          "title": "Agencias de Marketing",
-          "description": "Garantiza que el contenido para clientes sea original y cumpla con las pautas de plataformas de anuncios y políticas de calidad."
+          "title": "Equipos de marketing y campañas de marca",
+          "description": "Evalúa qué copys de campaña parecen apoyarse demasiado en la IA antes de lanzarlos y protege el tono de tu marca."
         }
       }
     },
