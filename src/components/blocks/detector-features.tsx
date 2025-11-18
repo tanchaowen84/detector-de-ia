@@ -35,7 +35,7 @@ export default function AiDetectorFeaturesSection() {
         <HeaderSection
           title={t('title')}
           subtitle={t('subtitle')}
-          subtitleAs="h2"
+          subtitleAs="p"
           className="text-center mb-16"
         />
 
@@ -90,6 +90,7 @@ export default function AiDetectorFeaturesSection() {
                     <p className="text-xs font-semibold uppercase tracking-[0.45em] text-indigo-500">
                       {label}
                     </p>
+                    <h3 className="sr-only">{label}</h3>
                   </div>
                   <div className="space-y-4">
                     {items.map((item) => (

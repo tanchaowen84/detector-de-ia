@@ -15,8 +15,8 @@ export default function HowItWorksSection() {
         <HeaderSection
           title={t('title')}
           subtitle={t('subtitle')}
+          subtitleAs="p"
           description={t('description')}
-          subtitleAs="h2"
           descriptionAs="p"
         />
 

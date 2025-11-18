@@ -12,7 +12,7 @@ export default function PricingSection() {
         <HeaderSection
           title={t('title')}
           subtitle={t('subtitle')}
-          subtitleAs="h2"
+          subtitleAs="p"
           description={t('description')}
           descriptionAs="p"
           className="text-center mb-16"

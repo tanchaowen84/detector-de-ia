@@ -22,8 +22,8 @@ export default function DetectionProcessSection() {
         <HeaderSection
           title={t('title')}
           subtitle={t('subtitle')}
+          subtitleAs="p"
           description={t('description')}
-          subtitleAs="h2"
           descriptionAs="p"
           className="text-center mb-16"
         />
