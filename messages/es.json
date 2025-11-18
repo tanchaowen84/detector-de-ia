@@ -625,7 +625,7 @@
         "mixedEmail": "Hola equipo, adjunto el informe que preparé esta mañana. Reorganicé las tablas según la retroalimentación de ayer y agregué dos secciones que redacté con IA para ahorrar tiempo; en ellas notarás un lenguaje más formal y redondo. El resto del mensaje lo escribí manualmente para mantener nuestra voz cercana. Avísenme si prefieren que reemplace los fragmentos automatizados antes de enviarlo al cliente."
       },
       "report": {
-        "title": "Originality report",
+        "title": "Informe de originalidad",
         "subtitle": "Observa la probabilidad de IA en un vistazo.",
         "realTime": "Tiempo real",
         "confidence": "Confianza estimada",
@@ -643,16 +643,16 @@
         "aiLikely": "Más probable IA",
         "mixedContent": "Contenido mixto",
         "humanLikely": "Más probable humano",
-        "aiExplanation": "Style is highly repetitive and similar to typical AI-generated text.",
-        "mixedExplanation": "Signals are mixed. Manual review recommended to confirm authorship.",
-        "humanExplanation": "Structure and variation look closer to human-written content."
+        "aiExplanation": "El estilo es muy repetitivo y se parece al de textos típicamente generados por IA.",
+        "mixedExplanation": "Las señales son mixtas. Recomendamos una revisión manual para confirmar la autoría.",
+        "humanExplanation": "La estructura y variación se acercan más a un contenido escrito por humanos."
       },
       "characterCount": "{count} / {max} caracteres · mínimo {min}",
       "addMoreText": "Añade más texto para un resultado confiable.",
-      "defaultConfidence": "--% Confident that's AI",
+      "defaultConfidence": "--% Probabilidad de ser IA",
       "gauge": {
-        "low": "Low",
-        "high": "High"
+        "low": "Bajo",
+        "high": "Alto"
       },
       "errors": {
         "clipboardNotSupported": "Tu navegador no permite leer el portapapeles.",
