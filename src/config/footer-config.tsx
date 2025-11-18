@@ -40,45 +40,6 @@ export function getFooterLinks(): NestedMenuItem[] {
       ],
     },
     {
-      title: t('resources.title'),
-      items: [
-        {
-          title: t('resources.items.blog'),
-          href: Routes.Blog,
-          external: false,
-        },
-        ...(websiteConfig.features.enableDocsPage
-          ? [
-              {
-                title: t('resources.items.docs'),
-                href: Routes.Docs,
-                external: false,
-              },
-            ]
-          : []),
-        {
-          title: t('resources.items.changelog'),
-          href: Routes.Changelog,
-          external: false,
-        },
-      ],
-    },
-    {
-      title: t('company.title'),
-      items: [
-        {
-          title: t('company.items.about'),
-          href: Routes.About,
-          external: false,
-        },
-        {
-          title: t('company.items.contact'),
-          href: Routes.Contact,
-          external: false,
-        },
-      ],
-    },
-    {
       title: t('legal.title'),
       items: [
         {

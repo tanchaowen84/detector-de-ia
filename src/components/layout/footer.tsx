@@ -3,21 +3,14 @@
 import Container from '@/components/layout/container';
 import { Logo } from '@/components/layout/logo';
 import { getFooterLinks } from '@/config/footer-config';
-import { getSocialLinks } from '@/config/social-config';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import type React from 'react';
-import { ModeSwitcherHorizontal } from './mode-switcher-horizontal';
 
 export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   const t = useTranslations();
   const footerLinks = getFooterLinks();
-  const socialLinks = getSocialLinks();
-  const githubOnly = socialLinks?.filter(
-    (link) => link.title?.toLowerCase() === 'github'
-  );
-  const displayedSocialLinks = githubOnly?.length ? githubOnly : [];
 
   return (
     <footer className={cn('border-t', className)}>
@@ -38,26 +31,7 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                 {t('Marketing.footer.tagline')}
               </p>
 
-              {/* social links */}
-              {displayedSocialLinks.length ? (
-                <div className="flex items-center gap-4 py-2">
-                  <div className="flex items-center gap-2">
-                    {displayedSocialLinks.map((link) => (
-                      <a
-                        key={link.title}
-                        href={link.href || '#'}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={link.title}
-                        className="border border-border inline-flex h-8 w-8 items-center justify-center rounded-full hover:bg-accent hover:text-accent-foreground"
-                      >
-                        <span className="sr-only">{link.title}</span>
-                        {link.icon ? link.icon : null}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
+              {/* social links intentionally removed */}
             </div>
           </div>
 
@@ -97,11 +71,6 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
             &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
             Reserved.
           </span>
-
-          <div className="flex items-center gap-x-4">
-            {/* <ThemeSelector /> */}
-            <ModeSwitcherHorizontal />
-          </div>
         </Container>
       </div>
     </footer>
