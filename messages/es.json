@@ -807,10 +807,10 @@
       "description": "Desde análisis gratuitos hasta soluciones empresariales, tenemos el plan adecuado para tus necesidades."
     },
     "calltoaction": {
-      "title": "Comienza a Detectar Contenido IA Ahora",
-      "description": "Verifica la originalidad de tus textos en segundos con nuestra tecnología de vanguardia",
-      "primaryButton": "Comenzar a Detectar",
-      "secondaryButton": "Ver Casos de Uso"
+      "title": "Activa tu detector de IA ahora",
+      "description": "Verifica la originalidad de tus textos en segundos combinando nuestro detector de ia con informes claros y resaltados precisos.",
+      "primaryButton": "Probar el detector de ia",
+      "secondaryButton": "Explorar casos de uso"
     },
     "aiCapabilities": {
       "title": "Capacidades de IA Avanzadas",
