@@ -647,8 +647,9 @@
         "mixedExplanation": "Signals are mixed. Manual review recommended to confirm authorship.",
         "humanExplanation": "Structure and variation look closer to human-written content."
       },
-      "characterCount": "{count} / {max} characters · minimum {min}",
-      "addMoreText": "Add more text for a reliable result.",
+      "characterCount": "You've entered {count} characters",
+      "limitUpgradePrompt": "Need to analyze longer texts? Upgrade your plan to unlock more capacity.",
+      "upgradeCta": "See pricing",
       "defaultConfidence": "--% Confident that's AI",
       "gauge": {
         "low": "Low",

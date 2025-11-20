@@ -10,9 +10,10 @@ const detectSchema = z.object({
   text: z
     .string()
     .trim()
-    .min(300, { message: 'Por favor ingresa al menos 300 caracteres.' })
-    .max(150000, {
-      message: 'El texto es demasiado largo. Límite: 150000 caracteres.',
+    .min(1, { message: 'Por favor ingresa un texto para analizar.' })
+    .max(1500, {
+      message:
+        'El texto supera el límite gratuito de 1500 caracteres. Actualiza tu plan para analizar textos más largos.',
     }),
 });
 

@@ -647,8 +647,9 @@
         "mixedExplanation": "Las señales son mixtas. Recomendamos una revisión manual para confirmar la autoría.",
         "humanExplanation": "La estructura y variación se acercan más a un contenido escrito por humanos."
       },
-      "characterCount": "{count} / {max} caracteres · mínimo {min}",
-      "addMoreText": "Añade más texto para un resultado confiable.",
+      "characterCount": "Has escrito {count} caracteres",
+      "limitUpgradePrompt": "¿Necesitas analizar textos más largos? Actualiza tu plan para desbloquear más capacidad.",
+      "upgradeCta": "Ver planes",
       "defaultConfidence": "--% Probabilidad de ser IA",
       "gauge": {
         "low": "Bajo",

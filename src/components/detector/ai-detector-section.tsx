@@ -19,7 +19,9 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { Routes } from '@/routes';
 import type { DetectAIContentResult } from '@/lib/winston';
 import {
   ClipboardPasteIcon,
@@ -36,8 +38,7 @@ import { useTranslations } from 'next-intl';
 
 type TranslationFunction = (key: string) => string;
 
-const MIN_CHARS = 300;
-const MAX_CHARS = 150000;
+const MAX_CHARS = 1500;
 
 type SampleTextKey = 'sampleTexts.iaEssay' | 'sampleTexts.humanArticle' | 'sampleTexts.mixedEmail';
 
@@ -223,7 +224,7 @@ export function AiDetectorSection() {
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   const charCount = text.length;
-  const isTooShort = text.trim().length > 0 && text.trim().length < MIN_CHARS;
+  const hasReachedLimit = charCount >= MAX_CHARS;
 
   const handlePasteFromClipboard = async () => {
     if (isPending) {
@@ -531,18 +532,26 @@ export function AiDetectorSection() {
             </CardContent>
             <CardFooter className="py-4">
               <div className="flex w-full flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex flex-col gap-1 text-left">
                   <span>
                     {t('characterCount', {
                       count: charCount.toLocaleString(),
-                      max: MAX_CHARS.toLocaleString(),
-                      min: MIN_CHARS
                     })}
                   </span>
-                  {isTooShort && (
-                    <span className="text-amber-600">
-                      {t('addMoreText')}
-                    </span>
+                  {hasReachedLimit && (
+                    <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                      <span>{t('limitUpgradePrompt')}</span>
+                      <Button
+                        asChild
+                        variant="link"
+                        size="sm"
+                        className="h-auto px-0 text-indigo-600"
+                      >
+                        <LocaleLink href={Routes.Pricing}>
+                          {t('upgradeCta')}
+                        </LocaleLink>
+                      </Button>
+                    </div>
                   )}
                 </div>
                 <div className="flex items-center gap-3">
@@ -562,7 +571,7 @@ export function AiDetectorSection() {
                   </Button>
                   <Button
                     onClick={handleDetect}
-                    disabled={isPending || text.trim().length < MIN_CHARS}
+                    disabled={isPending || !text.trim()}
                     className="rounded-full bg-indigo-600 px-6 text-white hover:bg-indigo-500"
                   >
                     {isPending ? (
