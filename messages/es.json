@@ -650,6 +650,13 @@
       "characterCount": "Has escrito {count} caracteres",
       "limitUpgradePrompt": "¿Necesitas analizar textos más largos? Actualiza tu plan para desbloquear más capacidad.",
       "upgradeCta": "Ver planes",
+      "uploadingFile": "Subiendo...",
+      "fileReady": "Archivo listo para analizar.",
+      "websiteReady": "URL lista para analizar.",
+      "urlPlaceholder": "https://ejemplo.com/articulo",
+      "urlApply": "Usar URL",
+      "urlClear": "Limpiar",
+      "clearSource": "Quitar fuente",
       "defaultConfidence": "--% Probabilidad de ser IA",
       "gauge": {
         "low": "Bajo",
@@ -661,10 +668,13 @@
         "clipboardReadFailed": "No pudimos leer tu portapapeles.",
         "pasteSuccess": "Texto pegado desde el portapapeles.",
         "emptyText": "Por favor pega un texto en español.",
-        "addTextWarning": "Añade un texto antes de analizar.",
+        "addTextWarning": "Añade un texto, archivo o URL antes de analizar.",
         "analysisFailed": "No pudimos analizar el texto.",
         "analysisComplete": "Análisis completado",
-        "unexpectedError": "Ocurrió un error inesperado."
+        "unexpectedError": "Ocurrió un error inesperado.",
+        "uploadFailed": "No pudimos subir el archivo.",
+        "invalidUrl": "Introduce una URL válida con https://",
+        "noInputSource": "Agrega un texto, archivo o URL para analizar."
       }
     },
     "howItWorks": {

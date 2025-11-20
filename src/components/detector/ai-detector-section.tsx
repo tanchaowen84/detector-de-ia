@@ -19,6 +19,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
@@ -30,11 +32,13 @@ import {
   Loader2Icon,
   SparklesIcon,
   UploadCloudIcon,
+  XIcon,
 } from 'lucide-react';
-import type { CSSProperties, UIEvent } from 'react';
+import type { CSSProperties, ChangeEvent, UIEvent } from 'react';
 import { useMemo, useRef, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
+import { uploadFileFromBrowser } from '@/storage';
 
 type TranslationFunction = (key: string) => string;
 
@@ -222,9 +226,17 @@ export function AiDetectorSection() {
   const [scrollState, setScrollState] = useState({ top: 0, left: 0 });
   const [selectedSample, setSelectedSample] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const [uploadedFile, setUploadedFile] = useState<{ name: string; url: string } | null>(null);
+  const [isUploadingFile, setIsUploadingFile] = useState(false);
+  const [websiteUrl, setWebsiteUrl] = useState<string | null>(null);
+  const [websiteInput, setWebsiteInput] = useState('');
+  const [isWebsitePopoverOpen, setIsWebsitePopoverOpen] = useState(false);
 
   const charCount = text.length;
   const hasReachedLimit = charCount >= MAX_CHARS;
+  const hasAltSource = !!uploadedFile || !!websiteUrl;
+  const canDetect = text.trim().length > 0 || hasAltSource;
 
   const handlePasteFromClipboard = async () => {
     if (isPending) {
@@ -244,6 +256,8 @@ export function AiDetectorSection() {
       setResult(null);
       setError(null);
       setSelectedSample(null);
+      setUploadedFile(null);
+      setWebsiteUrl(null);
       toast.success(t('errors.pasteSuccess'));
     } catch (clipError) {
       console.error('Clipboard read failed:', clipError);
@@ -258,12 +272,81 @@ export function AiDetectorSection() {
       setText(t(preset.textKey));
       setResult(null);
       setError(null);
+      setUploadedFile(null);
+      setWebsiteUrl(null);
     }
   };
 
+  const handleUploadButtonClick = () => {
+    if (isPending || isUploadingFile) {
+      return;
+    }
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) {
+      return;
+    }
+
+    setIsUploadingFile(true);
+    try {
+      const uploadResult = await uploadFileFromBrowser(file, 'winston-detections');
+      setUploadedFile({ name: file.name, url: uploadResult.url });
+      setWebsiteUrl(null);
+      setWebsiteInput('');
+      setText('');
+      setResult(null);
+      toast.success(t('fileReady'));
+    } catch (uploadError) {
+      console.error('File upload failed:', uploadError);
+      toast.error(t('errors.uploadFailed'));
+    } finally {
+      setIsUploadingFile(false);
+      event.target.value = '';
+    }
+  };
+
+  const clearUploadedFile = () => {
+    setUploadedFile(null);
+  };
+
+  const handleApplyWebsite = () => {
+    const value = websiteInput.trim();
+    if (!value) {
+      setWebsiteUrl(null);
+      setIsWebsitePopoverOpen(false);
+      return;
+    }
+
+    try {
+      const normalized = new URL(value.startsWith('http') ? value : `https://${value}`);
+      if (!['http:', 'https:'].includes(normalized.protocol)) {
+        throw new Error('Invalid protocol');
+      }
+      setWebsiteUrl(normalized.href);
+      setWebsiteInput(normalized.href);
+      setUploadedFile(null);
+      setText('');
+      setResult(null);
+      toast.success(t('websiteReady'));
+      setIsWebsitePopoverOpen(false);
+    } catch (urlError) {
+      console.error('Invalid URL:', urlError);
+      toast.error(t('errors.invalidUrl'));
+    }
+  };
+
+  const clearWebsite = () => {
+    setWebsiteUrl(null);
+    setWebsiteInput('');
+  };
+
   const handleDetect = () => {
-    if (!text.trim()) {
-      setError(t('errors.emptyText'));
+    const trimmedText = text.trim();
+    if (!trimmedText && !uploadedFile && !websiteUrl) {
+      setError(t('errors.noInputSource'));
       toast.warning(t('errors.addTextWarning'));
       return;
     }
@@ -272,7 +355,11 @@ export function AiDetectorSection() {
       setError(null);
 
       try {
-        const response = await detectAIContentAction({ text });
+        const response = await detectAIContentAction({
+          text: trimmedText || undefined,
+          fileUrl: uploadedFile?.url,
+          websiteUrl: websiteUrl ?? undefined,
+        });
 
         if (!response?.data?.success) {
           const message =
@@ -376,20 +463,79 @@ export function AiDetectorSection() {
           <Card className="min-w-0 rounded-[28px] border-white/10 bg-white/95 text-slate-900 shadow-[0px_20px_80px_rgba(15,23,42,0.12)]">
             <CardHeader className="pb-0">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:flex-nowrap">
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
-                >
-                  <UploadCloudIcon className="size-4" /> {t('uploadFile')}
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
-                >
-                  <Link2Icon className="size-4" /> {t('pasteUrl')}
-                </Button>
+                <div className="flex flex-wrap items-center gap-2">
+                  <Button
+                    type="button"
+                    onClick={handleUploadButtonClick}
+                    disabled={isPending || isUploadingFile}
+                    variant="outline"
+                    className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
+                  >
+                    {isUploadingFile ? (
+                      <>
+                        <Loader2Icon className="mr-2 size-4 animate-spin" />
+                        {t('uploadingFile')}
+                      </>
+                    ) : (
+                      <>
+                        <UploadCloudIcon className="size-4" /> {t('uploadFile')}
+                      </>
+                    )}
+                  </Button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".pdf,.doc,.docx,.txt"
+                    className="hidden"
+                    onChange={handleFileChange}
+                  />
+                  <Popover
+                    open={isWebsitePopoverOpen}
+                    onOpenChange={(open) => {
+                      setIsWebsitePopoverOpen(open);
+                      if (open) {
+                        setWebsiteInput(websiteUrl ?? '');
+                      }
+                    }}
+                  >
+                    <PopoverTrigger asChild>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className={cn(
+                          'h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]',
+                          websiteUrl && 'border-indigo-300 text-indigo-600'
+                        )}
+                      >
+                        <Link2Icon className="size-4" /> {t('pasteUrl')}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-80 space-y-3">
+                      <Input
+                        value={websiteInput}
+                        onChange={(event) => setWebsiteInput(event.target.value)}
+                        placeholder={t('urlPlaceholder')}
+                        autoFocus
+                      />
+                      <div className="flex justify-end gap-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => {
+                            setWebsiteInput('');
+                            setWebsiteUrl(null);
+                            setIsWebsitePopoverOpen(false);
+                          }}
+                        >
+                          {t('urlClear')}
+                        </Button>
+                        <Button size="sm" onClick={handleApplyWebsite}>
+                          {t('urlApply')}
+                        </Button>
+                      </div>
+                    </PopoverContent>
+                  </Popover>
+                </div>
                 <Select
                   value={selectedSample ?? undefined}
                   onValueChange={handleSampleSelect}
@@ -412,6 +558,38 @@ export function AiDetectorSection() {
                   {t('scanHistory')}
                 </Button>
               </div>
+              {(uploadedFile || websiteUrl) && (
+                <div className="flex flex-wrap items-center gap-2 px-1 pb-2 pt-3 text-xs text-slate-600">
+                  {uploadedFile && (
+                    <div className="flex max-w-full items-center gap-2 rounded-full bg-slate-100 px-3 py-1">
+                      <UploadCloudIcon className="size-3.5 text-slate-500" />
+                      <span className="truncate text-slate-600">{uploadedFile.name}</span>
+                      <button
+                        type="button"
+                        onClick={clearUploadedFile}
+                        className="text-slate-500 transition hover:text-slate-800"
+                        aria-label={t('clearSource')}
+                      >
+                        <XIcon className="size-3.5" />
+                      </button>
+                    </div>
+                  )}
+                  {websiteUrl && (
+                    <div className="flex max-w-full items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-indigo-700">
+                      <Link2Icon className="size-3.5" />
+                      <span className="truncate">{websiteUrl}</span>
+                      <button
+                        type="button"
+                        onClick={clearWebsite}
+                        className="text-indigo-500 transition hover:text-indigo-700"
+                        aria-label={t('clearSource')}
+                      >
+                        <XIcon className="size-3.5" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
             </CardHeader>
             <CardContent className="min-w-0 px-6 pb-4 pt-1 sm:px-8">
               <div className="mb-2 h-px w-full bg-slate-100" />
@@ -490,11 +668,13 @@ export function AiDetectorSection() {
                           variant="outline"
                           onClick={(event) => {
                             event.stopPropagation();
+                            handleUploadButtonClick();
                           }}
+                          disabled={isPending || isUploadingFile}
                           className="h-16 w-28 flex-col rounded-2xl border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
                         >
                           <UploadCloudIcon className="size-5" />
-                          {t('upload')}
+                          {isUploadingFile ? t('uploadingFile') : t('upload')}
                         </Button>
                         </div>
                       </>
@@ -563,15 +743,20 @@ export function AiDetectorSection() {
                       setResult(null);
                       setError(null);
                       setSelectedSample(null);
+                      setUploadedFile(null);
+                      setWebsiteUrl(null);
+                      setWebsiteInput('');
                     }}
-                    disabled={isPending || (!text && !result)}
+                    disabled={
+                      isPending || (!text && !result && !uploadedFile && !websiteUrl)
+                    }
                     className="text-slate-500 hover:bg-slate-100"
                   >
                     {t('clear')}
                   </Button>
                   <Button
                     onClick={handleDetect}
-                    disabled={isPending || !text.trim()}
+                    disabled={isPending || !canDetect}
                     className="rounded-full bg-indigo-600 px-6 text-white hover:bg-indigo-500"
                   >
                     {isPending ? (

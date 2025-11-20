@@ -31,7 +31,9 @@ export interface WinstonDetectionResponse {
 }
 
 export interface DetectAIContentParams {
-  text: string;
+  text?: string;
+  fileUrl?: string;
+  websiteUrl?: string;
   language?: string;
   version?: string;
 }
@@ -69,6 +71,8 @@ function normalizeSentences(
 
 export async function detectAIContent({
   text,
+  fileUrl,
+  websiteUrl,
   language = 'auto',
   version = 'latest',
 }: DetectAIContentParams): Promise<DetectAIContentResult> {
@@ -78,18 +82,29 @@ export async function detectAIContent({
     throw new Error('Winston API key is not configured');
   }
 
+  const payload: Record<string, unknown> = {
+    sentences: true,
+    language,
+    version,
+  };
+
+  if (websiteUrl) {
+    payload.website = websiteUrl;
+  } else if (fileUrl) {
+    payload.file = fileUrl;
+  } else if (text) {
+    payload.text = text;
+  } else {
+    throw new Error('No input provided for Winston detection');
+  }
+
   const response = await fetch(WINSTON_API_URL, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      text,
-      sentences: true,
-      language,
-      version,
-    }),
+    body: JSON.stringify(payload),
   });
 
   const data = (await response.json()) as WinstonDetectionResponse;

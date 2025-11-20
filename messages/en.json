@@ -650,6 +650,13 @@
       "characterCount": "You've entered {count} characters",
       "limitUpgradePrompt": "Need to analyze longer texts? Upgrade your plan to unlock more capacity.",
       "upgradeCta": "See pricing",
+      "uploadingFile": "Uploading...",
+      "fileReady": "File ready to analyze.",
+      "websiteReady": "URL ready to analyze.",
+      "urlPlaceholder": "https://example.com/article",
+      "urlApply": "Use URL",
+      "urlClear": "Clear",
+      "clearSource": "Remove source",
       "defaultConfidence": "--% Confident that's AI",
       "gauge": {
         "low": "Low",
@@ -661,10 +668,13 @@
         "clipboardReadFailed": "We could not read your clipboard.",
         "pasteSuccess": "Text pasted from clipboard.",
         "emptyText": "Please paste a Spanish text.",
-        "addTextWarning": "Add text before analyzing.",
+        "addTextWarning": "Add text, file, or URL before analyzing.",
         "analysisFailed": "We could not analyze the text.",
         "analysisComplete": "Analysis complete",
-        "unexpectedError": "An unexpected error occurred."
+        "unexpectedError": "An unexpected error occurred.",
+        "uploadFailed": "We couldn't upload the file.",
+        "invalidUrl": "Enter a valid URL that starts with https://",
+        "noInputSource": "Add text, a file, or a URL to analyze."
       }
     },
     "aiDetectorFeatures": {
