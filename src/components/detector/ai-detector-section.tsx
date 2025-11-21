@@ -358,6 +358,7 @@ export function AiDetectorSection() {
         const response = await detectAIContentAction({
           text: trimmedText || undefined,
           fileUrl: uploadedFile?.url,
+          fileName: uploadedFile?.name,
           websiteUrl: websiteUrl ?? undefined,
         });
 
@@ -552,10 +553,11 @@ export function AiDetectorSection() {
                   </SelectContent>
                 </Select>
                 <Button
+                  asChild
                   variant="ghost"
                   className="ml-auto h-10 rounded-full px-3 text-xs text-slate-500 hover:bg-slate-100"
                 >
-                  {t('scanHistory')}
+                  <LocaleLink href={Routes.Dashboard}>{t('scanHistory')}</LocaleLink>
                 </Button>
               </div>
               {(uploadedFile || websiteUrl) && (

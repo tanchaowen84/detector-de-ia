@@ -1,4 +1,14 @@
-import { boolean, pgTable, text, timestamp, integer, jsonb } from "drizzle-orm/pg-core";
+import { boolean, pgTable, text, timestamp, integer, jsonb, doublePrecision } from "drizzle-orm/pg-core";
+
+type DetectionSentence = {
+	text: string;
+	score: number;
+	length?: number;
+};
+
+type DetectionAttackDetected = {
+	[key: string]: boolean | undefined;
+};
 
 export const user = pgTable("user", {
 	id: text("id").primaryKey(),
@@ -87,4 +97,26 @@ export const creditsHistory = pgTable("credits_history", {
 	creemOrderId: text('creem_order_id'),
 	createdAt: timestamp('created_at').notNull().defaultNow(),
 	metadata: jsonb('metadata').default('{}'),
+});
+
+export const detections = pgTable('detections', {
+	id: text('id').primaryKey(),
+	userId: text('user_id')
+		.notNull()
+		.references(() => user.id, { onDelete: 'cascade' }),
+	sourceType: text('source_type').notNull(),
+	inputType: text('input_type').notNull(),
+	inputPreview: text('input_preview'),
+	rawScore: doublePrecision('raw_score').notNull(),
+	aiScore: doublePrecision('ai_score').notNull(),
+	length: integer('length'),
+	sentenceCount: integer('sentence_count'),
+	sentences: jsonb('sentences').$type<DetectionSentence[] | null>(),
+	attackDetected: jsonb('attack_detected').$type<DetectionAttackDetected | null>(),
+	readabilityScore: doublePrecision('readability_score'),
+	creditsUsed: integer('credits_used'),
+	creditsRemaining: integer('credits_remaining'),
+	version: text('version'),
+	language: text('language'),
+	createdAt: timestamp('created_at').notNull().defaultNow(),
 });

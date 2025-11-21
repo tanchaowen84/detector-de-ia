@@ -387,6 +387,37 @@
     "dashboard": {
       "title": "Dashboard"
     },
+    "history": {
+      "title": "Historial de detecciones",
+      "description": "Has generado {total} análisis en total. Aquí verás los más recientes.",
+      "breadcrumbs": {
+        "history": "Historial de detecciones"
+      },
+      "table": {
+        "columns": {
+          "input": "Contenido",
+          "source": "Origen",
+          "score": "AI Score",
+          "language": "Idioma",
+          "date": "Fecha"
+        },
+        "source": {
+          "text": "Texto",
+          "file": "Archivo",
+          "url": "URL"
+        },
+        "rawScore": "Score bruto {value}",
+        "sentences": "oraciones",
+        "unknownInput": "Sin vista previa",
+        "characters": "{value} caracteres",
+        "charactersUnknown": "Caracteres desconocidos"
+      },
+      "empty": {
+        "title": "Aún no tienes detecciones",
+        "subtitle": "Analiza un texto para que aparezca en tu historial.",
+        "cta": "Analizar ahora"
+      }
+    },
     "admin": {
       "title": "Admin",
       "users": {

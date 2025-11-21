@@ -3,6 +3,7 @@ const WINSTON_API_URL = 'https://api.gowinston.ai/v2/ai-content-detection';
 type WinstonSentence = {
   text: string;
   score: number;
+  length?: number;
 };
 
 type WinstonSentencesField =
@@ -20,6 +21,7 @@ type WinstonAttackDetected = {
 export interface WinstonDetectionResponse {
   status?: number;
   score: number;
+  length?: number;
   sentences?: WinstonSentencesField;
   input?: string;
   attack_detected?: WinstonAttackDetected;

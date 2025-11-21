@@ -387,6 +387,37 @@
     "dashboard": {
       "title": "Dashboard"
     },
+    "history": {
+      "title": "Detection history",
+      "description": "You've generated {total} analyses so far. Here are the most recent ones.",
+      "breadcrumbs": {
+        "history": "Detection history"
+      },
+      "table": {
+        "columns": {
+          "input": "Content",
+          "source": "Source",
+          "score": "AI Score",
+          "language": "Language",
+          "date": "Date"
+        },
+        "source": {
+          "text": "Text",
+          "file": "File",
+          "url": "URL"
+        },
+        "rawScore": "Raw score {value}",
+        "sentences": "sentences",
+        "unknownInput": "No preview available",
+        "characters": "{value} characters",
+        "charactersUnknown": "Characters unknown"
+      },
+      "empty": {
+        "title": "No detections yet",
+        "subtitle": "Run your first analysis to see it listed here.",
+        "cta": "Run detection"
+      }
+    },
     "admin": {
       "title": "Admin",
       "users": {

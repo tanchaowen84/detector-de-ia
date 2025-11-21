@@ -1,23 +1,25 @@
-import { ChartAreaInteractive } from '@/components/dashboard/chart-area-interactive';
+import { DetectionHistoryTable } from '@/components/detections/detection-history-table';
 import { DashboardHeader } from '@/components/dashboard/dashboard-header';
-import { DataTable } from '@/components/dashboard/data-table';
-import { SectionCards } from '@/components/dashboard/section-cards';
-import { useTranslations } from 'next-intl';
+import { getUserDetectionsSummary } from '@/lib/detections';
+import { getSession } from '@/lib/server';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { redirect } from 'next/navigation';
 
-import data from './data.json';
+export default async function DashboardPage() {
+  const session = await getSession();
+  if (!session?.user) {
+    redirect('/auth/login');
+  }
 
-/**
- * Dashboard page
- *
- * NOTICE: This is a demo page for the dashboard, no real data is used,
- * we will show real data in the future
- */
-export default function DashboardPage() {
-  const t = useTranslations();
+  const [t, locale, history] = await Promise.all([
+    getTranslations('Dashboard.history'),
+    getLocale(),
+    getUserDetectionsSummary({ userId: session.user.id }),
+  ]);
 
   const breadcrumbs = [
     {
-      label: t('Dashboard.dashboard.title'),
+      label: t('breadcrumbs.history'),
       isCurrentPage: true,
     },
   ];
@@ -25,17 +27,13 @@ export default function DashboardPage() {
   return (
     <>
       <DashboardHeader breadcrumbs={breadcrumbs} />
-
-      <div className="flex flex-1 flex-col">
-        <div className="@container/main flex flex-1 flex-col gap-2">
-          <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-            <SectionCards />
-            <div className="px-4 lg:px-6">
-              <ChartAreaInteractive />
-            </div>
-            <DataTable data={data} />
-          </div>
-        </div>
+      <div className="flex flex-1 flex-col py-6">
+        <DetectionHistoryTable
+          items={history.items}
+          total={history.total}
+          t={t}
+          locale={locale}
+        />
       </div>
     </>
   );
