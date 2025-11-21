@@ -5,30 +5,30 @@
     "description": "Analiza textos, informes y artículos con nuestro detector de ia profesional, obtén una evaluación clara y revisa al instante las frases resaltadas clave."
   },
   "Common": {
-    "login": "Log in",
-    "logout": "Log out",
-    "signUp": "Sign up",
-    "language": "Switch language",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "signUp": "Crear cuenta",
+    "language": "Cambiar idioma",
     "mode": {
-      "label": "Toggle mode",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Cambiar modo",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
     },
     "theme": {
-      "label": "Toggle theme",
-      "default": "Default",
-      "blue": "Blue",
-      "green": "Green",
-      "amber": "Amber",
-      "neutral": "Neutral"
+      "label": "Cambiar tema",
+      "default": "Predeterminado",
+      "blue": "Azul",
+      "green": "Verde",
+      "amber": "Ámbar",
+      "neutral": "Neutro"
     },
-    "copy": "Copy",
-    "saving": "Saving...",
-    "save": "Save",
-    "loading": "Loading...",
-    "cancel": "Cancel",
-    "logoutFailed": "Failed to log out"
+    "copy": "Copiar",
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "loading": "Cargando...",
+    "cancel": "Cancelar",
+    "logoutFailed": "No se pudo cerrar sesión"
   },
   "PricingPage": {
     "title": "Pricing",
