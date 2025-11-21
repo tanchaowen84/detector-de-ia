@@ -281,64 +281,64 @@
   "Marketing": {
     "navbar": {
       "features": {
-        "title": "Features"
+        "title": "Funciones"
       },
       "pricing": {
-        "title": "Pricing"
+        "title": "Precios"
       },
       "blog": {
         "title": "Blog"
       },
       "docs": {
-        "title": "Docs"
+        "title": "Documentación"
       },
       "pages": {
-        "title": "Pages",
+        "title": "Páginas",
         "items": {
           "about": {
-            "title": "About",
-            "description": "Learn more about our company and mission"
+            "title": "Sobre nosotros",
+            "description": "Conoce más sobre nuestra misión y equipo"
           },
           "contact": {
-            "title": "Contact",
-            "description": "Get in touch with our team"
+            "title": "Contacto",
+            "description": "Ponte en contacto con nuestro equipo"
           },
           "changelog": {
-            "title": "Changelog",
-            "description": "See what's new in our latest updates"
+            "title": "Novedades",
+            "description": "Revisa lo nuevo en nuestras últimas actualizaciones"
           },
           "cookiePolicy": {
-            "title": "Cookie Policy",
-            "description": "Learn about our cookie usage and privacy"
+            "title": "Política de cookies",
+            "description": "Conoce el uso de cookies y privacidad"
           },
           "privacyPolicy": {
-            "title": "Privacy Policy",
-            "description": "Read our privacy policy and data protection"
+            "title": "Política de privacidad",
+            "description": "Lee nuestra política de privacidad y protección de datos"
           },
           "termsOfService": {
-            "title": "Terms of Service",
-            "description": "Review our terms and conditions"
+            "title": "Términos de servicio",
+            "description": "Revisa nuestros términos y condiciones"
           }
         }
       },
       "ai": {
-        "title": "AI Tools",
+        "title": "Herramientas IA",
         "items": {
           "text": {
-            "title": "AI Text",
-            "description": "Show how to use AI to write stunning text"
+            "title": "Texto IA",
+            "description": "Usa IA para redactar textos claros"
           },
           "image": {
-            "title": "AI Image",
-            "description": "Show how to use AI to generate beautiful images"
+            "title": "Imagen IA",
+            "description": "Genera imágenes atractivas con IA"
           },
           "video": {
-            "title": "AI Video",
-            "description": "Show how to use AI to generate amazing videos"
+            "title": "Video IA",
+            "description": "Crea videos con ayuda de IA"
           },
           "audio": {
-            "title": "AI Audio",
-            "description": "Show how to use AI to generate wonderful audio"
+            "title": "Audio IA",
+            "description": "Genera audio de calidad con IA"
           }
         }
       }
@@ -346,46 +346,46 @@
     "footer": {
       "tagline": "Evalúa tus textos con nuestro detector de ia profesional: resultados claros, resaltados precisos y transparencia total",
       "product": {
-        "title": "Product",
+        "title": "Producto",
         "items": {
-          "features": "Features",
-          "pricing": "Pricing",
-          "faq": "FAQ"
+          "features": "Funciones",
+          "pricing": "Precios",
+          "faq": "Preguntas frecuentes"
         }
       },
       "resources": {
-        "title": "Resources",
+        "title": "Recursos",
         "items": {
           "blog": "Blog",
-          "docs": "Documentation",
-          "changelog": "Changelog"
+          "docs": "Documentación",
+          "changelog": "Novedades"
         }
       },
       "company": {
-        "title": "Company",
+        "title": "Compañía",
         "items": {
-          "about": "About",
-          "contact": "Contact"
+          "about": "Sobre nosotros",
+          "contact": "Contacto"
         }
       },
       "legal": {
         "title": "Legal",
         "items": {
-          "cookiePolicy": "Cookie Policy",
-          "privacyPolicy": "Privacy Policy",
-          "termsOfService": "Terms of Service"
+          "cookiePolicy": "Política de cookies",
+          "privacyPolicy": "Política de privacidad",
+          "termsOfService": "Términos de servicio"
         }
       }
     },
     "avatar": {
-      "dashboard": "Dashboard",
-      "billing": "Billing",
-      "settings": "Settings"
+      "dashboard": "Panel",
+      "billing": "Facturación",
+      "settings": "Ajustes"
     }
   },
   "Dashboard": {
     "dashboard": {
-      "title": "Dashboard"
+      "title": "Panel"
     },
     "history": {
       "title": "Historial de detecciones",
@@ -475,127 +475,127 @@
       }
     },
     "settings": {
-      "title": "Settings",
+      "title": "Ajustes",
       "profile": {
-        "title": "Profile",
-        "description": "Manage your account information",
+        "title": "Perfil",
+        "description": "Administra la información de tu cuenta",
         "avatar": {
           "title": "Avatar",
-          "description": "Click upload button to upload a custom one",
-          "recommendation": "An avatar is optional but strongly recommended",
-          "uploading": "Uploading...",
-          "uploadAvatar": "Upload Avatar",
-          "success": "Avatar updated successfully",
-          "fail": "Failed to update avatar"
+          "description": "Sube una imagen personalizada",
+          "recommendation": "Opcional pero recomendable",
+          "uploading": "Subiendo...",
+          "uploadAvatar": "Subir avatar",
+          "success": "Avatar actualizado",
+          "fail": "No se pudo actualizar el avatar"
         },
         "name": {
-          "title": "Name",
-          "description": "Please enter your display name",
-          "placeholder": "Enter your name",
-          "minLength": "Please use 3 characters at minimum",
-          "maxLength": "Please use 30 characters at maximum",
-          "hint": "Please use 3-30 characters for your name",
-          "success": "Name updated successfully",
-          "fail": "Failed to update name",
-          "saving": "Saving...",
-          "save": "Save"
+          "title": "Nombre",
+          "description": "Ingresa tu nombre para mostrar",
+          "placeholder": "Escribe tu nombre",
+          "minLength": "Usa al menos 3 caracteres",
+          "maxLength": "Máximo 30 caracteres",
+          "hint": "Usa entre 3 y 30 caracteres",
+          "success": "Nombre actualizado",
+          "fail": "No se pudo actualizar el nombre",
+          "saving": "Guardando...",
+          "save": "Guardar"
         }
       },
       "billing": {
-        "title": "Billing",
-        "description": "Manage your subscription and billing details",
+        "title": "Facturación",
+        "description": "Administra tu suscripción y pagos",
         "status": {
-          "active": "Active",
-          "trial": "Trial",
-          "canceled": "Canceled",
-          "free": "Free",
-          "lifetime": "Lifetime"
+          "active": "Activa",
+          "trial": "Prueba",
+          "canceled": "Cancelada",
+          "free": "Gratis",
+          "lifetime": "De por vida"
         },
         "interval": {
-          "month": "month",
-          "year": "year",
-          "oneTime": "one-time"
+          "month": "mes",
+          "year": "año",
+          "oneTime": "pago único"
         },
         "currentPlan": {
-          "title": "Current Plan",
-          "description": "Your current plan details",
-          "noPlan": "You have no active plan"
+          "title": "Plan actual",
+          "description": "Detalles de tu plan",
+          "noPlan": "No tienes un plan activo"
         },
         "CustomerPortalButton": {
-          "loading": "Loading...",
-          "createCustomerPortalFailed": "Failed to open Stripe customer portal"
+          "loading": "Cargando...",
+          "createCustomerPortalFailed": "No se pudo abrir el portal de cliente"
         },
-        "price": "Price:",
-        "nextBillingDate": "Next billing date:",
-        "trialEnds": "Trial ends:",
-        "serviceEnds": "Service ends:",
-        "freePlanMessage": "You are currently on the free plan with limited features",
-        "lifetimeMessage": "You have lifetime access to all premium features",
-        "manageSubscription": "Manage Subscription and Billing",
-        "manageBilling": "Manage Billing",
-        "upgradePlan": "Upgrade Plan",
-        "retry": "Retry",
-        "errorMessage": "Failed to get data"
+        "price": "Precio:",
+        "nextBillingDate": "Próxima facturación:",
+        "trialEnds": "La prueba termina:",
+        "serviceEnds": "El servicio termina:",
+        "freePlanMessage": "Estás en el plan gratuito con funciones limitadas",
+        "lifetimeMessage": "Tienes acceso de por vida a todas las funciones premium",
+        "manageSubscription": "Gestionar suscripción y facturación",
+        "manageBilling": "Gestionar facturación",
+        "upgradePlan": "Mejorar plan",
+        "retry": "Reintentar",
+        "errorMessage": "No se pudieron obtener los datos"
       },
       "notification": {
-        "title": "Notification",
-        "description": "Manage your notification preferences",
+        "title": "Notificaciones",
+        "description": "Administra tus preferencias de notificación",
         "newsletter": {
-          "title": "Newsletter Subscription",
-          "description": "Manage your newsletter subscription preferences",
-          "label": "Subscribe to newsletter",
-          "hint": "You can change your subscription preferences at any time",
-          "emailRequired": "Email is required to subscribe to the newsletter",
-          "subscribeSuccess": "Successfully subscribed to the newsletter",
-          "subscribeFail": "Failed to subscribe to the newsletter",
-          "unsubscribeSuccess": "Successfully unsubscribed from the newsletter",
-          "unsubscribeFail": "Failed to unsubscribe from the newsletter",
-          "error": "An error occurred while updating your subscription"
+          "title": "Suscripción al boletín",
+          "description": "Gestiona tu suscripción al boletín",
+          "label": "Suscribirme al boletín",
+          "hint": "Puedes cambiar tus preferencias en cualquier momento",
+          "emailRequired": "El correo es obligatorio para suscribirte",
+          "subscribeSuccess": "Suscripción realizada",
+          "subscribeFail": "No se pudo suscribir",
+          "unsubscribeSuccess": "Suscripción cancelada",
+          "unsubscribeFail": "No se pudo cancelar la suscripción",
+          "error": "Ocurrió un error al actualizar tu suscripción"
         }
       },
       "security": {
-        "title": "Security",
-        "description": "Manage your security settings",
+        "title": "Seguridad",
+        "description": "Gestiona tus ajustes de seguridad",
         "updatePassword": {
-          "title": "Change Password",
-          "description": "Enter your current password and a new password",
-          "currentPassword": "Current Password",
-          "currentRequired": "Current password is required",
-          "newPassword": "New Password",
-          "newMinLength": "Password must be at least 8 characters",
-          "hint": "Please use at least 8 characters for password",
-          "showPassword": "Show password",
-          "hidePassword": "Hide password",
-          "success": "Password updated successfully",
-          "fail": "Failed to update password",
-          "saving": "Saving...",
-          "save": "Save"
+          "title": "Cambiar contraseña",
+          "description": "Ingresa tu contraseña actual y la nueva",
+          "currentPassword": "Contraseña actual",
+          "currentRequired": "La contraseña actual es obligatoria",
+          "newPassword": "Nueva contraseña",
+          "newMinLength": "Debe tener al menos 8 caracteres",
+          "hint": "Usa al menos 8 caracteres",
+          "showPassword": "Mostrar contraseña",
+          "hidePassword": "Ocultar contraseña",
+          "success": "Contraseña actualizada",
+          "fail": "No se pudo actualizar la contraseña",
+          "saving": "Guardando...",
+          "save": "Guardar"
         },
         "resetPassword": {
-          "title": "Reset Password",
-          "description": "Reset password to enable email login",
-          "info": "Resetting your password will allow you to sign in using your email and password in addition to your social login methods. You will receive an email with instructions to reset your password",
-          "button": "Reset Password"
+          "title": "Restablecer contraseña",
+          "description": "Restablece la contraseña para habilitar el login por email",
+          "info": "Al restablecerla podrás iniciar sesión con email y contraseña además de tus métodos sociales. Recibirás un correo con instrucciones.",
+          "button": "Restablecer contraseña"
         },
         "deleteAccount": {
-          "title": "Delete Account",
-          "description": "Permanently remove your account and all of its contents",
-          "warning": "This action is not reversible, so please continue with caution",
-          "button": "Delete Account",
-          "confirmTitle": "Delete Account",
-          "confirmDescription": "Are you sure you want to delete your account? This action cannot be undone.",
-          "confirm": "Delete",
-          "cancel": "Cancel",
-          "deleting": "Deleting...",
-          "success": "Account deleted successfully",
-          "fail": "Failed to delete account"
+          "title": "Eliminar cuenta",
+          "description": "Eliminarás tu cuenta y todos sus datos",
+          "warning": "Esta acción no se puede deshacer, procede con cuidado",
+          "button": "Eliminar cuenta",
+          "confirmTitle": "Eliminar cuenta",
+          "confirmDescription": "¿Seguro que deseas eliminarla? No podrás revertirlo.",
+          "confirm": "Eliminar",
+          "cancel": "Cancelar",
+          "deleting": "Eliminando...",
+          "success": "Cuenta eliminada",
+          "fail": "No se pudo eliminar la cuenta"
         }
       }
     },
     "upgrade": {
-      "title": "Upgrade",
-      "description": "Upgrade to Pro to access all features",
-      "button": "Upgrade"
+      "title": "Mejora tu plan",
+      "description": "Pásate a Pro para desbloquear todas las funciones",
+      "button": "Mejorar"
     }
   },
   "Mail": {
