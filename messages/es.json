@@ -630,7 +630,7 @@
   "HomePage": {
     "aiDetector": {
       "badge": "Haz que tus textos inspiren confianza",
-      "title": "Detector de IA para contenido\u00a0profesional",
+      "title": "Detector de IA para contenido profesional",
       "description": "Asegúrate de que cada informe, propuesta o mensaje mantenga la calidad, originalidad y transparencia que esperas, con una evaluación clara del posible uso de IA.",
       "uploadFile": "Subir archivo",
       "pasteUrl": "Pegar URL",
@@ -941,6 +941,27 @@
           "answer": "Recuerda que es una estimación y puede equivocarse. Conserva borradores, notas y el historial de edición como evidencia de tu proceso. Usa el informe como punto de partida para dialogar con profesores, clientes o revisores, pero no como sustituto de una revisión humana."
         }
       }
+    }
+  },
+  "CookieBanner": {
+    "title": "Usamos cookies",
+    "description": "Utilizamos cookies necesarias para que el sitio funcione y analíticas (GA4, Clarity, Plausible) si nos das tu consentimiento.",
+    "acceptAll": "Aceptar todas",
+    "acceptNecessary": "Solo necesarias",
+    "manage": "Preferencias",
+    "manageTitle": "Gestiona tus preferencias",
+    "save": "Guardar selección",
+    "sectionNecessary": {
+      "title": "Necesarias",
+      "desc": "Imprescindibles para sesión, idioma y seguridad."
+    },
+    "sectionAnalytics": {
+      "title": "Analítica",
+      "desc": "Nos ayudan a entender el uso y mejorar (GA4, Clarity, Plausible)."
+    },
+    "sectionMarketing": {
+      "title": "Marketing",
+      "desc": "No instalamos hoy. Si activamos anuncios (p.ej. AdSense) pediremos tu consentimiento."
     }
   }
 }

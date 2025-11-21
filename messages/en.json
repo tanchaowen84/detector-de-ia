@@ -926,5 +926,26 @@
         }
       }
     }
+  },
+  "CookieBanner": {
+    "title": "We use cookies",
+    "description": "We use essential cookies to run the site and analytics (GA4, Clarity, Plausible) if you consent.",
+    "acceptAll": "Accept all",
+    "acceptNecessary": "Necessary only",
+    "manage": "Preferences",
+    "manageTitle": "Manage your preferences",
+    "save": "Save selection",
+    "sectionNecessary": {
+      "title": "Necessary",
+      "desc": "Required for session, language and security."
+    },
+    "sectionAnalytics": {
+      "title": "Analytics",
+      "desc": "Help us understand usage and improve (GA4, Clarity, Plausible)."
+    },
+    "sectionMarketing": {
+      "title": "Marketing",
+      "desc": "Not used today. If we add ads (e.g. AdSense) we will request consent first."
+    }
   }
 }
