@@ -733,25 +733,25 @@
       }
     },
     "useCases": {
-      "title": "Perfect for All Professionals",
-      "subtitle": "Versatile Applications",
-      "description": "Whether you're a student, educator, content creator, or SEO specialist, our AI detector adapts to your specific needs.",
+      "title": "Perfect for all professionals",
+      "subtitle": "Versatile applications",
+      "description": "Whether you are a student, educator, content creator or SEO specialist, our AI detector adapts to your needs.",
       "cases": {
         "students": {
           "title": "Students",
-          "description": "Verify originality of essays and assignments before submission to ensure academic integrity"
+          "description": "Verify the originality of essays and assignments before submitting to ensure academic integrity."
         },
         "teachers": {
           "title": "Teachers",
-          "description": "Quickly identify AI-generated content in student work and provide appropriate feedback"
+          "description": "Quickly spot AI-generated content in student work and give the right feedback."
         },
         "content": {
-          "title": "Content Creators",
-          "description": "Ensure your content is original and human-written to maintain authenticity and audience trust"
+          "title": "Content creators",
+          "description": "Keep your articles authentic and human to maintain audience trust and brand voice."
         },
         "seo": {
-          "title": "SEO Specialists",
-          "description": "Optimize content quality and avoid AI-generated penalties from search engines"
+          "title": "SEO specialists",
+          "description": "Improve content quality and avoid penalties for AI-generated mass content."
         }
       }
     },
