@@ -953,20 +953,20 @@
     },
     "relatedTools": {
       "title": "Not just an AI detector: more tools for your text",
-      "subtitle": "Combine the detector with plagiarism, summarizer, and humanizer tools to control quality, credibility, and readability at once.",
-      "description": "Explore our toolkit designed to improve the quality, credibility, and originality of your content.",
+      "subtitle": "Combine the detector with plagiarism, summarizer, and humanizer tools to control quality, credibility, and readability.",
+      "description": "Explore our toolkit built to improve the quality, credibility, and originality of your content.",
       "tools": {
         "plagiarism": {
-          "title": "Plagiarism Checker",
-          "description": "Avoid unintentional duplication. Our checker scans billions of sources to confirm your work is original and ready to publish."
+          "title": "Plagiarism checker",
+          "description": "Scan billions of sources to confirm your work is original and ready to publish."
         },
         "summarizer": {
-          "title": "Text Summarizer",
-          "description": "Turn long texts into concise, clear summaries. Save time by extracting key points while keeping the essence intact."
+          "title": "Text summarizer",
+          "description": "Turn long texts into concise, clear summaries while keeping the key points."
         },
         "humanizer": {
-          "title": "AI Humanizer",
-          "description": "Polish AI‑generated text into clear, natural language that sounds human, resonates with readers, and reflects your brand voice."
+          "title": "AI humanizer",
+          "description": "Polish AI-generated text into natural, human-sounding language that fits your brand voice."
         }
       },
       "tryNow": "Try now",
