@@ -373,7 +373,8 @@
         "items": {
           "cookiePolicy": "Política de cookies",
           "privacyPolicy": "Política de privacidad",
-          "termsOfService": "Términos de servicio"
+          "termsOfService": "Términos de servicio",
+          "refundPolicy": "Política de reembolsos"
         }
       }
     },
