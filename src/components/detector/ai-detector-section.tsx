@@ -470,7 +470,7 @@ export function AiDetectorSection() {
                     onClick={handleUploadButtonClick}
                     disabled={isPending || isUploadingFile}
                     variant="outline"
-                    className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]"
+                    className="h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed] flex-shrink-0"
                   >
                     {isUploadingFile ? (
                       <>
@@ -505,7 +505,8 @@ export function AiDetectorSection() {
                         variant="outline"
                         className={cn(
                           'h-10 rounded-full border-[#d9b061]/40 bg-white px-4 text-sm font-medium text-[#9b6000] shadow-none hover:bg-[#fff8ed]',
-                          websiteUrl && 'border-indigo-300 text-indigo-600'
+                          websiteUrl && 'border-indigo-300 text-indigo-600',
+                          'flex-shrink-0'
                         )}
                       >
                         <Link2Icon className="size-4" /> {t('pasteUrl')}
@@ -541,8 +542,8 @@ export function AiDetectorSection() {
                   value={selectedSample ?? undefined}
                   onValueChange={handleSampleSelect}
                 >
-                  <SelectTrigger className="h-10 min-w-[180px] rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
-                    <SelectValue placeholder={t('trySamples')} />
+                  <SelectTrigger className="h-10 min-w-[200px] max-w-[340px] flex-1 rounded-full border-slate-200 bg-white px-4 text-sm text-slate-600">
+                    <SelectValue placeholder={t('trySamples')} className="truncate" />
                   </SelectTrigger>
                   <SelectContent>
                     {samplePresets.map((sample) => (
@@ -799,16 +800,21 @@ export function AiDetectorSection() {
             <CardContent className="space-y-4 pt-0">
               <div className="flex flex-col items-center gap-0.5 text-center">
                 <GaugeArc value={aiScore} t={t as TranslationFunction} />
-                <p className="text-sm text-slate-500">
-                  {result
-                    ? `${evaluation?.label ?? t('evaluation.mixedContent')} · ${t('report.confidence')}`
-                    : t('defaultConfidence')}
-                </p>
-                {evaluation && result && (
-                  <p className="mt-1 text-xs text-slate-400">
-                    {evaluation.explanation}
+                <div className="text-center">
+                  <p className="text-4xl font-semibold text-slate-900">
+                    {aiScore !== null ? `${aiScore.toFixed(1)}%` : '--%'}
                   </p>
-                )}
+                  <p className="text-sm text-slate-500">
+                    {result
+                      ? `${evaluation?.label ?? t('evaluation.mixedContent')} · ${t('report.confidence')}`
+                      : t('defaultConfidence')}
+                  </p>
+                  {evaluation && result && (
+                    <p className="mt-1 text-xs text-slate-400">
+                      {evaluation.explanation}
+                    </p>
+                  )}
+                </div>
               </div>
 
               <div className="space-y-3 text-center">
