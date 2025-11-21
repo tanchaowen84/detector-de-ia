@@ -27,7 +27,7 @@ export default async function DashboardPage() {
   return (
     <>
       <DashboardHeader breadcrumbs={breadcrumbs} />
-      <div className="flex flex-1 flex-col py-6">
+      <div className="flex flex-1 flex-col py-6 px-4 sm:px-6 lg:px-8">
         <DetectionHistoryTable
           items={history.items}
           total={history.total}
