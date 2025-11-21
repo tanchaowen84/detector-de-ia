@@ -812,10 +812,10 @@
       "description": "From free analysis to enterprise solutions, we have the right plan for your needs."
     },
     "calltoaction": {
-      "title": "Start Detecting AI Content Now",
-      "description": "Verify the authenticity of your texts in seconds with our cutting-edge technology",
-      "primaryButton": "Start Detecting",
-      "secondaryButton": "See Use Cases"
+      "title": "Start your AI detection now",
+      "description": "Verify the originality of your texts in seconds with clear reports and precise highlights.",
+      "primaryButton": "Try the AI detector",
+      "secondaryButton": "Explore use cases"
     },
     "features": {
       "title": "Key Features",
