@@ -629,9 +629,9 @@
   },
   "HomePage": {
     "aiDetector": {
-      "badge": "Detect AI content with 99% accuracy",
-      "title": "The most accurate AI detector",
-      "description": "Make every report, proposal, or message trustworthy with a clear evaluation of possible AI use.",
+      "badge": "Make your texts inspire trust",
+      "title": "AI detector for professional content",
+      "description": "Ensure every report, proposal or message keeps the quality, originality and transparency you expect, with a clear evaluation of possible AI use.",
       "uploadFile": "Upload file",
       "pasteUrl": "Paste URL",
       "trySamples": "Try samples",
@@ -639,7 +639,7 @@
       "placeholder": {
         "title": "Drag your file or paste content here",
         "subtitle": "We accept .txt, .docx and plain text. Colors will appear by sentence.",
-        "textareaPlaceholder": "Paste your essay or article in Spanish here..."
+        "textareaPlaceholder": "Paste your essay or article here..."
       },
       "paste": "Paste",
       "upload": "Upload",
@@ -648,13 +648,13 @@
       "analyzing": "Analyzing...",
       "samples": {
         "iaEssay": "AI-generated essay",
-        "humanArticle": "Handwritten article",
-        "mixedEmail": "Mixed content email"
+        "humanArticle": "Human-written article",
+        "mixedEmail": "Mixed email"
       },
       "sampleTexts": {
-        "iaEssay": "This essay was generated with an AI model and uses filler phrases to build a narrative that sounds convincing but slightly repetitive. It leans on the same arguments, recycles connectors like “on the other hand,” and avoids concrete details—pleasant but predictable. Use it to see how the detector behaves with clearly synthetic text and how sentence highlights look.",
-        "humanArticle": "This article was written by a human editor using real interview notes, then woven into medium-length paragraphs with specific examples, proper names, and concrete dates or numbers. Short sentences emphasize key ideas, alternating rhetorical questions with personal observations. That varied rhythm gives it an authentic tone that typically scores low on AI probability.",
-        "mixedEmail": "Hi team, attaching the report I prepared this morning. I reorganized the tables per yesterday’s feedback and added two sections drafted with AI to save time—you’ll notice a more formal, rounded tone there. The rest I wrote manually to keep our friendly voice. Let me know if you want me to replace the automated fragments before sending to the client."
+        "iaEssay": "This essay was generated with an AI model and uses filler phrases to build a narrative that sounds convincing but slightly repetitive. It leans on the same arguments, recycles connectors like \"on the other hand\" and avoids concrete details, resulting in a pleasant yet predictable structure. Use it to see how the detector behaves with clearly synthetic text and to view the sentence-level highlights.",
+        "humanArticle": "This article was written by a human editor who works from real interview notes and then shapes them into medium-length paragraphs. Each section centers on specific examples, proper names, and concrete dates or figures. The style mixes shorter sentences to emphasize key ideas with rhetorical questions and personal observations, giving it an authentic tone that usually scores low for AI.",
+        "mixedEmail": "Hi team, attaching the report I prepared this morning. I reorganized the tables based on yesterday's feedback and added two sections drafted with AI to save time; you'll notice a more formal, rounded tone there. The rest I wrote manually to keep our friendly voice. Let me know if you want me to replace the automated fragments before sending to the client."
       },
       "report": {
         "title": "Originality report",
