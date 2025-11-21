@@ -1,4 +1,8 @@
+'use client';
+
 import { websiteConfig } from '@/config/website';
+import { useCookieConsent } from '@/hooks/use-cookie-consent';
+import { useEffect, useState } from 'react';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AhrefsAnalytics } from './ahrefs-analytics';
@@ -11,52 +15,55 @@ import { SelineAnalytics } from './seline-analytics';
 import { UmamiAnalytics } from './umami-analytics';
 
 /**
- * Analytics Components all in one
- *
- * 1. all the analytics components only work in production
- * 2. only work if the environment variable for the analytics is set
- *
- * docs:
- * https://mksaas.com/docs/analytics
+ * Client-side analytics wrapper with consent gate.
  */
 export function Analytics() {
-  if (process.env.NODE_ENV !== 'production') {
+  const consent = useCookieConsent();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted || process.env.NODE_ENV !== 'production') {
     return null;
   }
 
   return (
     <>
       {/* google analytics */}
-      <GoogleAnalytics />
+      {consent.analytics && <GoogleAnalytics />}
 
-      {/* umami analytics */}
+      {/* umami analytics (no cookie; allow always) */}
       <UmamiAnalytics />
 
-      {/* plausible analytics */}
-      <PlausibleAnalytics />
+      {/* plausible analytics (respect analytics consent) */}
+      {consent.analytics && <PlausibleAnalytics />}
 
-      {/* microsoft clarity analytics */}
-      <ClarityAnalytics />
+      {/* microsoft clarity */}
+      {consent.analytics && <ClarityAnalytics />}
 
       {/* ahrefs analytics */}
-      <AhrefsAnalytics />
+      {consent.analytics && <AhrefsAnalytics />}
 
       {/* datafast analytics */}
-      <DataFastAnalytics />
+      {consent.analytics && <DataFastAnalytics />}
 
       {/* openpanel analytics */}
-      <OpenPanelAnalytics />
+      {consent.analytics && <OpenPanelAnalytics />}
 
       {/* seline analytics */}
-      <SelineAnalytics />
+      {consent.analytics && <SelineAnalytics />}
 
       {/* vercel analytics */}
-      {/* https://vercel.com/docs/analytics/quickstart */}
-      {websiteConfig.analytics.enableVercelAnalytics && <VercelAnalytics />}
+      {websiteConfig.analytics.enableVercelAnalytics && consent.analytics && (
+        <VercelAnalytics />
+      )}
 
       {/* speed insights */}
-      {/* https://vercel.com/docs/speed-insights/quickstart */}
-      {websiteConfig.analytics.enableSpeedInsights && <SpeedInsights />}
+      {websiteConfig.analytics.enableSpeedInsights && consent.analytics && (
+        <SpeedInsights />
+      )}
     </>
   );
 }
