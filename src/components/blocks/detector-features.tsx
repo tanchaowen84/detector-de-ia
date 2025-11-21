@@ -1,6 +1,6 @@
 import { HeaderSection } from '@/components/layout/header-section';
 import { cn } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const STEP_KEYS = ['step-1', 'step-2', 'step-3'] as const;
 
@@ -9,6 +9,12 @@ type StepKey = (typeof STEP_KEYS)[number];
 type StepItem = {
   title: string;
   description: string;
+};
+
+type Step = {
+  label: string;
+  imageAlt: string;
+  items: StepItem[];
 };
 
 const visualStyles: Record<StepKey, { gradient: string; accent: string }> = {
@@ -28,6 +34,7 @@ const visualStyles: Record<StepKey, { gradient: string; accent: string }> = {
 
 export default function AiDetectorFeaturesSection() {
   const t = useTranslations('HomePage.howItWorks');
+  const locale = useLocale();
 
   return (
     <section id="how-it-works" className="relative py-20 text-slate-900">
@@ -41,9 +48,12 @@ export default function AiDetectorFeaturesSection() {
 
         <div className="grid grid-cols-1 gap-8 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
           {STEP_KEYS.map((key) => {
-            const label = t(`steps.${key}.label`);
-            const imageAlt = t(`steps.${key}.imageAlt`);
-            const items = t.raw(`steps.${key}.items`) as StepItem[];
+            const step = t.raw(`steps.${key}`) as Step;
+            let items = step.items ?? [];
+            if (items.length > 3) {
+              // 防止回退合并导致的多语言重复，按当前语言截取
+              items = locale === 'en' ? items.slice(-3) : items.slice(0, 3);
+            }
             return (
               <article
                 key={key}
@@ -55,7 +65,7 @@ export default function AiDetectorFeaturesSection() {
                     visualStyles[key].gradient
                   )}
                   role="img"
-                  aria-label={imageAlt}
+                  aria-label={step.imageAlt}
                 >
                   <div className="flex items-center gap-2">
                     <span className="h-3 w-10 rounded-full bg-white/70" />
@@ -88,9 +98,9 @@ export default function AiDetectorFeaturesSection() {
                 <div className="flex flex-col gap-5 text-left">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.45em] text-indigo-500">
-                      {label}
+                      {step.label}
                     </p>
-                    <h3 className="sr-only">{label}</h3>
+                    <h3 className="sr-only">{step.label}</h3>
                   </div>
                   <div className="space-y-4">
                     {items.map((item) => (

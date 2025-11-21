@@ -715,37 +715,37 @@
       "steps": {
         "step-1": {
           "label": "Paso 1 · Pega tu texto",
-          "imageAlt": "Interfaz del detector pegando un texto",
+          "imageAlt": "Interfaz pegando un texto",
           "items": [
             {
               "title": "Agrega tu contenido",
-              "description": "Copia y pega el texto que quieras analizar con el detector de IA, o escríbelo directamente en el cuadro."
+              "description": "Copia y pega el texto que quieras analizar con el detector de IA, o escríbelo directamente."
             },
             {
               "title": "Elige el idioma",
-              "description": "Actualmente funciona mejor con textos en español e inglés. Muy pronto sumaremos más idiomas."
+              "description": "Optimizado hoy para español e inglés; pronto más idiomas."
             },
             {
               "title": "Revisa la longitud",
-              "description": "Para resultados estables te recomendamos que el texto tenga al menos 30–50 palabras."
+              "description": "Recomendamos al menos 30–50 palabras; plan gratis: 1.500 caracteres por análisis."
             }
           ]
         },
         "step-2": {
           "label": "Paso 2 · Ejecuta la detección",
-          "imageAlt": "Vista del informe mostrando porcentaje de IA",
+          "imageAlt": "Informe mostrando porcentaje de IA",
           "items": [
             {
               "title": "Haz clic en «Detectar ahora»",
-              "description": "Pulsa el botón principal para iniciar el análisis con el detector de IA."
+              "description": "Inicia el análisis y obtén una probabilidad global."
             },
             {
               "title": "Obtén un porcentaje claro",
-              "description": "Verás una estimación de la probabilidad de que el texto completo haya sido escrito por IA."
+              "description": "Verás qué tanto el texto completo parece escrito por IA."
             },
             {
               "title": "Consulta los resaltados",
-              "description": "Marcamos en el texto las partes que podrían haberse generado con IA para que las revises en detalle."
+              "description": "Marcamos las oraciones que podrían ser IA para revisarlas."
             }
           ]
         },
@@ -755,15 +755,15 @@
           "items": [
             {
               "title": "Revisa las partes resaltadas",
-              "description": "Fíjate primero en las frases o párrafos que el detector marcó como posiblemente generados por IA."
+              "description": "Empieza por las frases o párrafos marcados."
             },
             {
               "title": "Ajusta cuando sea necesario",
-              "description": "Edita el texto para mejorar claridad, coherencia y tono humano siempre que lo consideres oportuno."
+              "description": "Mejora claridad, coherencia y tono humano donde haga falta."
             },
             {
               "title": "Vuelve a comprobar si lo deseas",
-              "description": "Ejecuta una nueva detección antes de compartir o entregar el documento para validar los cambios."
+              "description": "Ejecuta otra detección para validar cambios; el historial dura 90 días."
             }
           ]
         }

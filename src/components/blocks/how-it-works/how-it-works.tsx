@@ -23,69 +23,35 @@ export default function HowItWorksSection() {
         <div className="grid items-center gap-12 lg:grid-cols-5 lg:gap-24">
           <div className="lg:col-span-2">
             <ul className="divide-y border-y *:flex *:items-start *:gap-4 *:py-4">
-              <li>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold flex-shrink-0 mt-1">
-                  1
-                </div>
-                <div className="space-y-2">
-                  <h3 className="font-semibold">{t('steps.step-1.title')}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('steps.step-1.description')}
-                  </p>
-                  <ul className="space-y-1 text-xs text-muted-foreground">
-                    {(t.raw('steps.step-1.details') as string[]).map(
-                      (detail, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <span className="text-primary">•</span>
-                          <span>{detail}</span>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold flex-shrink-0 mt-1">
-                  2
-                </div>
-                <div className="space-y-2">
-                  <h3 className="font-semibold">{t('steps.step-2.title')}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('steps.step-2.description')}
-                  </p>
-                  <ul className="space-y-1 text-xs text-muted-foreground">
-                    {(t.raw('steps.step-2.details') as string[]).map(
-                      (detail, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <span className="text-primary">•</span>
-                          <span>{detail}</span>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold flex-shrink-0 mt-1">
-                  3
-                </div>
-                <div className="space-y-2">
-                  <h3 className="font-semibold">{t('steps.step-3.title')}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('steps.step-3.description')}
-                  </p>
-                  <ul className="space-y-1 text-xs text-muted-foreground">
-                    {(t.raw('steps.step-3.details') as string[]).map(
-                      (detail, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <span className="text-primary">•</span>
-                          <span>{detail}</span>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              </li>
+              {[1, 2, 3].map((num) => {
+                const key = `step-${num}` as const;
+                const step = t.raw(`steps.${key}`) as {
+                  label: string;
+                  items: { title: string; description: string }[];
+                };
+                return (
+                  <li key={key}>
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold flex-shrink-0 mt-1">
+                      {num}
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-semibold">{step.label}</h3>
+                      <ul className="space-y-1 text-xs text-muted-foreground">
+                        {step.items.map((item) => (
+                          <li key={item.title} className="flex flex-col gap-1">
+                            <p className="text-sm text-slate-900 font-semibold">
+                              {item.title}
+                            </p>
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                              {item.description}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

@@ -631,7 +631,7 @@
     "aiDetector": {
       "badge": "Detect AI content with 99% accuracy",
       "title": "The most accurate AI detector",
-      "description": "Available for free on this page to evaluate texts from ChatGPT, GPT-4o, Gemini, Claude and other popular models. Analyze essays or emails without leaving your browser and get immediate clarity.",
+      "description": "Make every report, proposal, or message trustworthy with a clear evaluation of possible AI use.",
       "uploadFile": "Upload file",
       "pasteUrl": "Paste URL",
       "trySamples": "Try samples",
@@ -652,9 +652,9 @@
         "mixedEmail": "Mixed content email"
       },
       "sampleTexts": {
-        "iaEssay": "Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como \"por otro lado\" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector frente a un texto claramente sintético y verificar la visualización de colores por oración.",
-        "humanArticle": "Este artículo fue redactado por una editora humana que toma notas en entrevistas reales y luego las incorpora en párrafos de longitud media. Cada sección se centra en ejemplos específicos, menciona nombres propios y cita fechas o cifras concretas. El estilo introduce frases más cortas para subrayar ideas clave y alterna preguntas retóricas con observaciones personales. Esa mezcla de ritmo da al texto un tono auténtico que suele obtener una probabilidad baja de IA.",
-        "mixedEmail": "Hola equipo, adjunto el informe que preparé esta mañana. Reorganicé las tablas según la retroalimentación de ayer y agregué dos secciones que redacté con IA para ahorrar tiempo; en ellas notarás un lenguaje más formal y redondo. El resto del mensaje lo escribí manualmente para mantener nuestra voz cercana. Avísenme si prefieren que reemplace los fragmentos automatizados antes de enviarlo al cliente."
+        "iaEssay": "This essay was generated with an AI model and uses filler phrases to build a narrative that sounds convincing but slightly repetitive. It leans on the same arguments, recycles connectors like “on the other hand,” and avoids concrete details—pleasant but predictable. Use it to see how the detector behaves with clearly synthetic text and how sentence highlights look.",
+        "humanArticle": "This article was written by a human editor using real interview notes, then woven into medium-length paragraphs with specific examples, proper names, and concrete dates or numbers. Short sentences emphasize key ideas, alternating rhetorical questions with personal observations. That varied rhythm gives it an authentic tone that typically scores low on AI probability.",
+        "mixedEmail": "Hi team, attaching the report I prepared this morning. I reorganized the tables per yesterday’s feedback and added two sections drafted with AI to save time—you’ll notice a more formal, rounded tone there. The rest I wrote manually to keep our friendly voice. Let me know if you want me to replace the automated fragments before sending to the client."
       },
       "report": {
         "title": "Originality report",
@@ -850,39 +850,64 @@
       "feature-4": "Control panel with detailed analytics and metrics"
     },
     "howItWorks": {
-      "title": "How It Works",
-      "subtitle": "Simple 3-Step Process",
-      "description": "Our AI detection technology is easy to use and provides accurate results in minutes. Follow these simple steps to verify your content authenticity.",
+      "title": "How our AI detector works",
+      "subtitle": "You only need three steps to get a clear, professional report on possible AI use in your text.",
       "steps": {
         "step-1": {
-          "title": "Input Your Text",
-          "description": "Paste or type the content you want to analyze. We accept multiple formats including plain text, documents, and emails.",
-          "details": [
-            "Minimum 300 characters for accurate analysis",
-            "Supports .txt and .docx files",
-            "Paste directly from your clipboard"
+          "label": "Step 1 · Paste your text",
+          "imageAlt": "Interface pasting a text",
+          "items": [
+            {
+              "title": "Add your content",
+              "description": "Paste or type the text you want to analyze with the AI detector."
+            },
+            {
+              "title": "Choose the language",
+              "description": "Optimized for Spanish and English today; more languages soon."
+            },
+            {
+              "title": "Check the length",
+              "description": "We recommend at least 30–50 words; free plan: 1,500-character cap per detection."
+            }
           ]
         },
         "step-2": {
-          "title": "AI Analysis",
-          "description": "Our advanced algorithm analyzes linguistic, structural, and semantic patterns to identify AI-generated content.",
-          "details": [
-            "Simultaneous analysis of multiple AI models",
-            "Evaluation of writing patterns and style",
-            "Comparison with known AI content database"
+          "label": "Step 2 · Run detection",
+          "imageAlt": "Report showing AI percentage",
+          "items": [
+            {
+              "title": "Click Detect now",
+              "description": "Start the analysis with one click and get an overall probability."
+            },
+            {
+              "title": "See a clear percentage",
+              "description": "View the chance the whole text was written by AI."
+            },
+            {
+              "title": "Review highlights",
+              "description": "We highlight sentences that may be AI so you can inspect them."
+            }
           ]
         },
         "step-3": {
-          "title": "Get Results",
-          "description": "Receive a detailed report with confidence scores and sentence-level analysis to make informed decisions.",
-          "details": [
-            "Complete report with AI probability percentage",
-            "Sentence-by-sentence highlighting of potential content",
-            "Recommendations for improving authenticity"
+          "label": "Step 3 · Review and refine",
+          "imageAlt": "User refining highlighted sentences",
+          "items": [
+            {
+              "title": "Focus on highlights",
+              "description": "Look first at sentences/paragraphs the detector flagged."
+            },
+            {
+              "title": "Edit as needed",
+              "description": "Improve clarity, coherence, and human tone where necessary."
+            },
+            {
+              "title": "Re-check if needed",
+              "description": "Run detection again to validate changes; history keeps 90 days."
+            }
           ]
         }
-      },
-      "getStarted": "Get Started Now"
+      }
     },
     "faqs": {
       "title": "Frequently Asked Questions",
@@ -925,6 +950,36 @@
           "answer": "Currently we support Spanish, English, Portuguese, French, German, Italian and other major languages. We're constantly adding support for new languages."
         }
       }
+    },
+    "relatedTools": {
+      "title": "Not just an AI detector: more tools for your text",
+      "subtitle": "Combine the detector with plagiarism, summarizer, and humanizer tools to control quality, credibility, and readability at once.",
+      "description": "Explore our toolkit designed to improve the quality, credibility, and originality of your content.",
+      "tools": {
+        "plagiarism": {
+          "title": "Plagiarism Checker",
+          "description": "Avoid unintentional duplication. Our checker scans billions of sources to confirm your work is original and ready to publish."
+        },
+        "summarizer": {
+          "title": "Text Summarizer",
+          "description": "Turn long texts into concise, clear summaries. Save time by extracting key points while keeping the essence intact."
+        },
+        "humanizer": {
+          "title": "AI Humanizer",
+          "description": "Polish AI‑generated text into clear, natural language that sounds human, resonates with readers, and reflects your brand voice."
+        }
+      },
+      "tryNow": "Try now",
+      "exploreAll": "Explore all tools"
+    },
+    "aiCapabilities": {
+      "title": "Advanced AI capabilities",
+      "subtitle": "Powered by cutting-edge AI",
+      "description": "Our technology uses state-of-the-art algorithms to analyze and detect AI-generated content with unmatched precision.",
+      "capability-1": "Deep semantic analysis",
+      "capability-2": "Ultra-fast processing",
+      "capability-3": "Continuous learning",
+      "capability-4": "Multi-language support"
     }
   },
   "CookieBanner": {
