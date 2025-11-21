@@ -21,8 +21,17 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate file type (optional, based on your requirements)
-    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
-    if (!allowedTypes.includes(file.type)) {
+    const allowedTypes = [
+      'image/jpeg',
+      'image/png',
+      'image/webp',
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'text/plain',
+      'application/octet-stream', // some browsers send doc/docx as octet-stream
+    ];
+    if (file.type && !allowedTypes.includes(file.type)) {
       return NextResponse.json(
         { error: 'File type not supported' },
         { status: 400 }

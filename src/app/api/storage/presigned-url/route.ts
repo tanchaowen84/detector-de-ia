@@ -27,7 +27,17 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate content type (optional, based on your requirements)
-    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+    const allowedTypes = [
+      'image/jpeg',
+      'image/png',
+      'image/gif',
+      'image/webp',
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'text/plain',
+      'application/octet-stream',
+    ];
     if (!allowedTypes.includes(contentType)) {
       return NextResponse.json(
         { error: 'File type not supported' },
