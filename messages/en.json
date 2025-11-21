@@ -855,54 +855,54 @@
       "steps": {
         "step-1": {
           "label": "Step 1 · Paste your text",
-          "imageAlt": "Interface pasting a text",
+          "imageAlt": "Detector interface pasting a text",
           "items": [
             {
               "title": "Add your content",
-              "description": "Paste or type the text you want to analyze with the AI detector."
+              "description": "Copy and paste the text you want to analyze, or type it directly."
             },
             {
               "title": "Choose the language",
-              "description": "Optimized for Spanish and English today; more languages soon."
+              "description": "Optimized for Spanish and English today; more languages coming soon."
             },
             {
               "title": "Check the length",
-              "description": "We recommend at least 30–50 words; free plan: 1,500-character cap per detection."
+              "description": "We recommend at least 30–50 words; free plan: 1,500 characters per analysis."
             }
           ]
         },
         "step-2": {
           "label": "Step 2 · Run detection",
-          "imageAlt": "Report showing AI percentage",
+          "imageAlt": "Report view showing AI percentage",
           "items": [
             {
-              "title": "Click Detect now",
-              "description": "Start the analysis with one click and get an overall probability."
+              "title": "Click “Detect now”",
+              "description": "Start the analysis and get an overall probability."
             },
             {
               "title": "See a clear percentage",
-              "description": "View the chance the whole text was written by AI."
+              "description": "We show how likely the whole text was written by AI."
             },
             {
-              "title": "Review highlights",
-              "description": "We highlight sentences that may be AI so you can inspect them."
+              "title": "Review the highlights",
+              "description": "We mark sentences that may be AI-generated so you can inspect them."
             }
           ]
         },
         "step-3": {
           "label": "Step 3 · Review and refine",
-          "imageAlt": "User refining highlighted sentences",
+          "imageAlt": "User adjusting highlighted sentences",
           "items": [
             {
-              "title": "Focus on highlights",
-              "description": "Look first at sentences/paragraphs the detector flagged."
+              "title": "Focus on highlighted parts",
+              "description": "Start with the sentences or paragraphs that were flagged."
             },
             {
-              "title": "Edit as needed",
-              "description": "Improve clarity, coherence, and human tone where necessary."
+              "title": "Adjust where needed",
+              "description": "Improve clarity, coherence, and a human tone wherever necessary."
             },
             {
-              "title": "Re-check if needed",
+              "title": "Re-check if you want",
               "description": "Run detection again to validate changes; history keeps 90 days."
             }
           ]
