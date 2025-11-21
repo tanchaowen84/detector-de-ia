@@ -1,9 +1,7 @@
-import { NewsletterFormCard } from '@/components/settings/notification/newsletter-form-card';
+import { redirect } from 'next/navigation';
+import { Routes } from '@/routes';
 
-export default function NotificationPage() {
-  return (
-    <div className="grid gap-8 md:grid-cols-2">
-      <NewsletterFormCard />
-    </div>
-  );
+export default function NotificationsPage() {
+  // Notificaciones deshabilitadas en MVP: redirigimos a perfil
+  redirect(Routes.SettingsProfile);
 }
