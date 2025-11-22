@@ -9,6 +9,7 @@ import { Routes } from '@/routes';
 import { getLocale } from 'next-intl/server';
 import { createSafeActionClient } from 'next-safe-action';
 import { z } from 'zod';
+import { getPlanPolicy } from '@/config/plan-policy';
 
 // Create a safe action client
 const actionClient = createSafeActionClient();
@@ -66,11 +67,17 @@ export const createCheckoutAction = actionClient
         };
       }
 
+      const planPolicy = getPlanPolicy(plan.id);
+      const isOneTime = plan.prices.find((p) => p.priceId === priceId)?.type === 'one_time';
+
       // Add user id to metadata, so we can get it in the webhook event
       const customMetadata = {
         ...metadata,
         userId: session.user.id,
         userName: session.user.name,
+        planId: plan.id,
+        productType: isOneTime ? 'credits' : 'subscription',
+        credits: isOneTime ? `${planPolicy.oneTimeCredits ?? 0}` : undefined,
       };
 
       // Create the checkout session with localized URLs

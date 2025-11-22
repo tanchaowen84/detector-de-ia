@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from 'crypto';
-import { desc, eq } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 import { getDb } from '../../db';
 import { payment, user } from '../../db/schema';
 import {
@@ -27,6 +27,7 @@ import type {
   Subscription,
   getSubscriptionsParams,
 } from '../types';
+import { getPlanByPriceId, getPlanPolicy } from '@/config/plan-policy';
 
 /**
  * World-class Creem Payment Provider Implementation
@@ -54,6 +55,66 @@ export class CreemProvider implements PaymentProvider {
 
     if (!this.webhookSecret || !this.apiKey || !this.apiUrl) {
       throw new Error('Missing required Creem environment variables');
+    }
+  }
+
+  /**
+   * Sync user credits and plan metadata based on priceId
+   */
+  private async syncPlanCredits(
+    tx: any,
+    userId: string,
+    priceId?: string | null,
+    resetToFree = false
+  ) {
+    try {
+      const plan = resetToFree
+        ? getPlanPolicy('free')
+        : priceId
+          ? getPlanByPriceId(priceId) ?? getPlanPolicy('free')
+          : getPlanPolicy('free');
+
+      const userRow = await tx
+        .select({
+          id: user.id,
+          credits: user.credits,
+          metadata: user.metadata,
+        })
+        .from(user)
+        .where(eq(user.id, userId))
+        .limit(1);
+
+      if (!userRow.length) return;
+
+      const metadata = (userRow[0].metadata as Record<string, any> | null) ?? {};
+      const nextMetadata = { ...metadata, planId: plan.id };
+      let credits = userRow[0].credits ?? 0;
+
+      if (plan.monthlyCredits) {
+        credits = plan.monthlyCredits;
+        const nextReset = new Date();
+        nextReset.setMonth(nextReset.getMonth() + 1);
+        nextMetadata.creditsResetAt = nextReset.toISOString();
+      }
+
+      if (plan.oneTimeCredits) {
+        credits = plan.oneTimeCredits;
+        if (plan.oneTimeExpiresDays) {
+          const expires = new Date(Date.now() + plan.oneTimeExpiresDays * 24 * 60 * 60 * 1000);
+          nextMetadata.oneTimeExpiresAt = expires.toISOString();
+        }
+      }
+
+      await tx
+        .update(user)
+        .set({
+          credits,
+          metadata: nextMetadata,
+          updatedAt: new Date(),
+        } as any)
+        .where(eq(user.id, userId));
+    } catch (error) {
+      console.error('syncPlanCredits error', error);
     }
   }
 
@@ -543,6 +604,13 @@ export class CreemProvider implements PaymentProvider {
       );
     }
 
+    // Sync plan/credits based on product
+    const priceId =
+      typeof order.product === 'string'
+        ? order.product
+        : (order.product as any)?.id;
+    await this.syncPlanCredits(tx, userId, priceId);
+
     // Also handle checkout-level credits (fallback for old implementations)
     // Only process if we haven't already processed credits at order level
     if (
@@ -591,6 +659,11 @@ export class CreemProvider implements PaymentProvider {
       userId,
       event.eventType
     );
+    const priceId =
+      typeof subscription.product === 'string'
+        ? subscription.product
+        : subscription.product?.id;
+    await this.syncPlanCredits(tx, userId, priceId);
 
     console.log(`✅ Subscription activation processed for user ${userId}`);
   }
@@ -621,6 +694,11 @@ export class CreemProvider implements PaymentProvider {
       userId,
       event.eventType
     );
+    const priceId =
+      typeof subscription.product === 'string'
+        ? subscription.product
+        : subscription.product?.id;
+    await this.syncPlanCredits(tx, userId, priceId);
 
     console.log(`✅ Subscription payment processed for user ${userId}`);
   }
@@ -651,6 +729,11 @@ export class CreemProvider implements PaymentProvider {
       userId,
       event.eventType
     );
+    const priceId =
+      typeof subscription.product === 'string'
+        ? subscription.product
+        : subscription.product?.id;
+    await this.syncPlanCredits(tx, userId, priceId);
 
     console.log(`✅ Subscription trial processed for user ${userId}`);
   }
@@ -680,6 +763,7 @@ export class CreemProvider implements PaymentProvider {
       userId,
       event.eventType
     );
+    await this.syncPlanCredits(tx, userId, undefined, true);
 
     console.log(`✅ Subscription cancellation processed for user ${userId}`);
   }
@@ -709,6 +793,7 @@ export class CreemProvider implements PaymentProvider {
       userId,
       event.eventType
     );
+    await this.syncPlanCredits(tx, userId, undefined, true);
 
     console.log(`✅ Subscription expiration processed for user ${userId}`);
   }
@@ -738,6 +823,7 @@ export class CreemProvider implements PaymentProvider {
       userId,
       event.eventType
     );
+    await this.syncPlanCredits(tx, userId, undefined, true);
 
     console.log(`✅ Subscription unpaid status processed for user ${userId}`);
   }
@@ -767,6 +853,11 @@ export class CreemProvider implements PaymentProvider {
       userId,
       event.eventType
     );
+    const priceId =
+      typeof subscription.product === 'string'
+        ? subscription.product
+        : subscription.product?.id;
+    await this.syncPlanCredits(tx, userId, priceId);
 
     console.log(`✅ Subscription update processed for user ${userId}`);
   }

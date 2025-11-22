@@ -4,6 +4,13 @@ import { detections } from '@/db/schema';
 import { getDb } from '@/db';
 import { getSession } from '@/lib/server';
 import { detectAIContent } from '@/lib/winston';
+import {
+  countWords,
+  deductGuestCredits,
+  deductUserCredits,
+  estimateWordsFromChars,
+  loadUserPlanContext,
+} from '@/lib/credits';
 import { randomUUID } from 'node:crypto';
 import { createSafeActionClient } from 'next-safe-action';
 import { z } from 'zod';
@@ -15,10 +22,6 @@ const detectSchema = z
     text: z
       .string()
       .trim()
-      .max(1500, {
-        message:
-          'El texto supera el límite gratuito de 1500 caracteres. Actualiza tu plan para analizar textos más largos.',
-      })
       .optional(),
     fileUrl: z
       .string()
@@ -44,6 +47,59 @@ const detectSchema = z
 export const detectAIContentAction = actionClient
   .schema(detectSchema)
   .action(async ({ parsedInput }) => {
+    const session = await getSession();
+    const db = await getDb();
+
+    // Lazy reset and current credits
+    const planContext = await loadUserPlanContext(session);
+    const activePlan = planContext.plan;
+    let availableCredits = planContext.credits;
+
+    // Input gating by plan
+    const sourceType = parsedInput.websiteUrl ? 'url' : parsedInput.fileUrl ? 'file' : 'text';
+    if (sourceType === 'file' && !activePlan.allowFile) {
+      return {
+        success: false,
+        error: 'Tu plan no permite subir archivos. Activa Trial Pack para continuar.',
+        errorCode: 'PLAN_GATE_BLOCKED' as const,
+      };
+    }
+    if (sourceType === 'url' && !activePlan.allowUrl) {
+      return {
+        success: false,
+        error: 'Tu plan no permite analizar URLs. Activa Trial Pack para continuar.',
+        errorCode: 'PLAN_GATE_BLOCKED' as const,
+      };
+    }
+
+    const textLength = parsedInput.text?.length ?? 0;
+    if (sourceType === 'text' && activePlan.maxChars && textLength > activePlan.maxChars) {
+      return {
+        success: false,
+        error: `El texto supera el límite de ${activePlan.maxChars.toLocaleString()} caracteres para tu plan.`,
+        errorCode: 'PLAN_GATE_BLOCKED' as const,
+      };
+    }
+
+    // Pre-calc required credits for text inputs
+    let requiredCredits = 0;
+    if (sourceType === 'text') {
+      requiredCredits = countWords(parsedInput.text ?? '') * activePlan.creditsPerWordDetect;
+      if (requiredCredits <= 0) {
+        return {
+          success: false,
+          error: 'Por favor proporciona texto válido.',
+        };
+      }
+      if (availableCredits < requiredCredits) {
+        return {
+          success: false,
+          error: 'Créditos insuficientes. Actualiza tu plan.',
+          errorCode: 'INSUFFICIENT_CREDITS' as const,
+        };
+      }
+    }
+
     try {
       const result = await detectAIContent({
         text: parsedInput.text && parsedInput.text.length > 0 ? parsedInput.text : undefined,
@@ -51,20 +107,62 @@ export const detectAIContentAction = actionClient
         websiteUrl: parsedInput.websiteUrl,
       });
 
-      const session = await getSession();
-      if (session?.user?.id) {
-        const sourceType = parsedInput.websiteUrl
+      // Calculate credits based on response (for file/url we only know after)
+      if (requiredCredits === 0) {
+        const responseChars =
+          result.length ??
+          result.sentences.reduce(
+            (sum, s) => sum + (s.length ?? s.text?.length ?? 0),
+            0
+          );
+        const words = estimateWordsFromChars(responseChars);
+        requiredCredits = Math.max(1, words * activePlan.creditsPerWordDetect);
+      }
+
+      if (requiredCredits <= 0) {
+        requiredCredits = 1;
+      }
+
+      // Deduct credits
+      if (planContext.isGuest) {
+        const deduction = deductGuestCredits(requiredCredits);
+        if (!deduction.ok) {
+          return {
+            success: false,
+            error: deduction.message,
+            errorCode: deduction.errorCode,
+          };
+        }
+        availableCredits = deduction.creditsLeft;
+      } else if (session?.user?.id) {
+        const deduction = await deductUserCredits(session.user.id, activePlan, requiredCredits, {
+          planId: activePlan.id,
+          creditsResetAt: planContext.metadata.creditsResetAt,
+          oneTimeExpiresAt: planContext.metadata.oneTimeExpiresAt,
+        });
+        if (!deduction.ok) {
+          return {
+            success: false,
+            error: deduction.message,
+            errorCode: deduction.errorCode,
+          };
+        }
+        availableCredits = deduction.creditsLeft;
+      }
+
+      if (session?.user?.id && activePlan.saveHistory) {
+        const sourceTypeComputed = parsedInput.websiteUrl
           ? 'url'
           : parsedInput.fileUrl
             ? 'file'
             : 'text';
 
         let preview: string | null = null;
-        if (sourceType === 'text') {
+        if (sourceTypeComputed === 'text') {
           preview = parsedInput.text?.slice(0, 200) ?? null;
-        } else if (sourceType === 'file') {
+        } else if (sourceTypeComputed === 'file') {
           preview = parsedInput.fileName ?? parsedInput.fileUrl ?? null;
-        } else if (sourceType === 'url') {
+        } else if (sourceTypeComputed === 'url') {
           preview = parsedInput.websiteUrl ?? null;
           if (preview) {
             try {
@@ -80,12 +178,11 @@ export const detectAIContentAction = actionClient
         const detectionLength = result.length ?? parsedInput.text?.length ?? null;
 
         try {
-          const db = await getDb();
           await db.insert(detections).values({
             id: randomUUID(),
             userId: session.user.id,
-            sourceType,
-            inputType: result.input ?? sourceType,
+            sourceType: sourceTypeComputed,
+            inputType: result.input ?? sourceTypeComputed,
             inputPreview: preview,
             rawScore: result.score,
             aiScore,
@@ -94,7 +191,7 @@ export const detectAIContentAction = actionClient
             sentences: result.sentences,
             attackDetected: result.attack_detected ?? null,
             readabilityScore: result.readability_score ?? null,
-            creditsUsed: result.credits_used ?? null,
+            creditsUsed: requiredCredits,
             creditsRemaining: result.credits_remaining ?? null,
             version: result.version ?? null,
             language: result.language ?? null,
@@ -107,6 +204,9 @@ export const detectAIContentAction = actionClient
       return {
         success: true,
         result,
+        creditsUsed: requiredCredits,
+        creditsLeft: availableCredits,
+        plan: activePlan.id,
       };
     } catch (error) {
       console.error('detectAIContentAction error:', error);

@@ -153,6 +153,43 @@ export const websiteConfig: WebsiteConfig = {
         isLifetime: false,
         recommended: true,
       },
+      hobby: {
+        id: 'hobby',
+        prices: [
+          {
+            type: PaymentTypes.SUBSCRIPTION,
+            priceId: process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID_HOBBY_MONTHLY!,
+            amount: 0,
+            currency: 'USD',
+            interval: PlanIntervals.MONTH,
+          },
+          {
+            type: PaymentTypes.SUBSCRIPTION,
+            priceId: process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID_HOBBY_YEARLY ?? '',
+            amount: 0,
+            currency: 'USD',
+            interval: PlanIntervals.YEAR,
+            disabled: true,
+          },
+        ],
+        isFree: false,
+        isLifetime: false,
+        recommended: false,
+      },
+      trial: {
+        id: 'trial',
+        prices: [
+          {
+            type: PaymentTypes.ONE_TIME,
+            priceId: process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID_TRIAL_PACK!,
+            amount: 0,
+            currency: 'USD',
+          },
+        ],
+        isFree: false,
+        isLifetime: false,
+        recommended: false,
+      },
       lifetime: {
         id: 'lifetime',
         prices: [

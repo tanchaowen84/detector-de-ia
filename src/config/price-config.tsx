@@ -75,5 +75,17 @@ export function getPricePlans(): Record<string, PricePlan> {
     };
   }
 
+  // Add any additional plans without hardcoded translations (fallback to config-provided texts)
+  Object.entries(priceConfig.plans).forEach(([key, plan]) => {
+    if (plans[key]) return;
+    plans[key] = {
+      ...plan,
+      name: plan.name ?? key,
+      description: plan.description ?? '',
+      features: plan.features ?? [],
+      limits: plan.limits ?? [],
+    };
+  });
+
   return plans;
 }
