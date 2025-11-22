@@ -1,6 +1,6 @@
 import { cookies, headers } from 'next/headers';
 import { randomUUID, createHmac } from 'node:crypto';
-import { sql, and, eq } from 'drizzle-orm';
+import { sql, and, eq, desc } from 'drizzle-orm';
 import { getDb } from '@/db';
 import { user, payment, creditsHistory } from '@/db/schema';
 import { getPlanByPriceId, getPlanPolicy, type PlanPolicy } from '@/config/plan-policy';

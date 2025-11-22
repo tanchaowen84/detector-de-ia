@@ -151,3 +151,23 @@ detector de ia 产品MVP文档
 - 历史与详情
   - Dashboard 历史行可点击浮起跳转详情；详情显示句子高亮、creditsUsed、元信息。
   - 未登录访问受保护页跳登录；访问他人 ID 返回 404。
+
+
+### 调试速查：额度/周期快速修改
+- 配置入口：`src/config/plan-policy.ts`
+  - `maxChars`：单次字符上限（Trial=30000, Hobby=30000, Pro=60000）。改小即可验证前端/后端 gating，改回后重启。
+  - `monthlyCredits`：Hobby/Pro 月配额（100000 / 200000）。临时改小可快速打光额度；改大可绕过限制。
+  - `oneTimeCredits`, `oneTimeExpiresDays`：Trial Pack 一次性额度与有效期（30k, 14 天）。调小/调短便于验证过期/清零。
+  - 访客/Free：`monthlyCredits`、`resetIntervalDays`（当前 400、30 天）。调小 + 清 cookie 即可模拟不足。
+- 访客额度快速重置
+  - 浏览器删除 cookie `guest_credits`；或在 `src/lib/credits.ts` 的 `getGuestBucket` 内临时改初始额度/周期（记得改回）。
+- 用户额度/过期模拟（DB 层）(okay)
+  - 表 `user`：`credits` 余额；`metadata.planId`、`metadata.creditsResetAt`、`metadata.oneTimeExpiresAt`。
+  - 调试：把 `creditsResetAt` 或 `oneTimeExpiresAt` 改成过去时间，再触发检测，代码会懒重置/清零；把 `credits` 改成小值可模拟不足。
+  - 表 `credits_history`：可检查/清理扣费记录（仅调试环境）。
+- 价格/产品 ID(okay)
+  - `src/config/website.tsx`：Creem 产品 ID 与展示价格，需与 Creem 后台保持一致；可临时切换到测试产品。
+- 详情/显示来源(okay)
+  - Billing 卡与详情页使用 `user.credits` + `metadata`，改 DB 或 plan-policy 即可看到 UI 变化（刷新）。
+
+调完务必将 `plan-policy.ts` 和 DB 还原为正式数值，避免测试配置遗留上线。

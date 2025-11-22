@@ -58,7 +58,9 @@ export const planPolicies: Record<string, PlanPolicy> = {
     oneTimeExpiresDays: 14,
     saveHistory: true,
     creditsPerWordDetect: 1,
-    priceIds: [env.NEXT_PUBLIC_CREEM_PRODUCT_ID_TRIAL_PACK].filter(Boolean) as string[],
+    priceIds: [env.NEXT_PUBLIC_CREEM_PRODUCT_ID_TRIAL_PACK].filter(
+      Boolean
+    ) as string[],
   },
   hobby: {
     id: 'hobby',
@@ -101,7 +103,9 @@ export const planPolicies: Record<string, PlanPolicy> = {
     oneTimeExpiresDays: 365 * 5, // generous buffer, adjust later
     saveHistory: true,
     creditsPerWordDetect: 1,
-    priceIds: [env.NEXT_PUBLIC_CREEM_PRODUCT_ID_LIFETIME].filter(Boolean) as string[],
+    priceIds: [env.NEXT_PUBLIC_CREEM_PRODUCT_ID_LIFETIME].filter(
+      Boolean
+    ) as string[],
   },
 };
 
@@ -112,7 +116,9 @@ export function getPlanPolicy(planId?: string | null): PlanPolicy {
   return planPolicies.free;
 }
 
-export function getPlanByPriceId(priceId?: string | null): PlanPolicy | undefined {
+export function getPlanByPriceId(
+  priceId?: string | null
+): PlanPolicy | undefined {
   if (!priceId) return undefined;
   return Object.values(planPolicies).find((plan) =>
     plan.priceIds?.includes(priceId)

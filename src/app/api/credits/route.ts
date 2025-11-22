@@ -1,7 +1,5 @@
-import { getDb } from '@/db';
-import { user } from '@/db/schema';
 import { getSession } from '@/lib/server';
-import { eq } from 'drizzle-orm';
+import { loadUserPlanContext } from '@/lib/credits';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
@@ -10,25 +8,16 @@ export async function GET() {
     return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
   }
 
-  const db = await getDb();
-  const result = await db
-    .select({
-      credits: user.credits,
-      metadata: user.metadata,
-    })
-    .from(user)
-    .where(eq(user.id, session.user.id))
-    .limit(1);
-
-  if (!result.length) {
-    return NextResponse.json({ success: false, error: 'User not found' }, { status: 404 });
-  }
+  // Lazy reset + load latest plan/credits
+  const planContext = await loadUserPlanContext(session);
 
   return NextResponse.json({
     success: true,
     data: {
-      credits: result[0].credits ?? 0,
-      metadata: result[0].metadata ?? {},
+      credits: planContext.credits ?? 0,
+      metadata: planContext.metadata ?? {},
+      planId: planContext.plan.id,
+      isGuest: planContext.isGuest,
     },
   });
 }
