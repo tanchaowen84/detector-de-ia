@@ -30,7 +30,7 @@ export const SocialLoginButton = ({
     return null;
   }
 
-  const t = useTranslations('AuthPage.login');
+  const t = useTranslations('AuthPage.common');
   const searchParams = useSearchParams();
   const paramCallbackUrl = searchParams.get('callbackUrl');
   // Use prop callback URL or param callback URL if provided, otherwise use the default login redirect
@@ -93,7 +93,7 @@ export const SocialLoginButton = ({
 
   return (
     <div className="w-full flex flex-col gap-4">
-      <DividerWithText text={t('or')} />
+      <DividerWithText text={t('orContinue')} />
       {websiteConfig.auth.enableGoogleLogin && (
         <Button
           size="lg"

@@ -436,7 +436,7 @@
       "email": "Email",
       "password": "Password",
       "signIn": "Sign In",
-      "signUpHint": "Don't have an account? Sign up",
+      "signUpHint": "¿No tienes una cuenta?",
       "forgotPassword": "Forgot Password?",
       "signInWithGoogle": "Sign In with Google",
       "signInWithGitHub": "Sign In with GitHub",
@@ -444,7 +444,8 @@
       "hidePassword": "Hide password",
       "or": "Or continue with",
       "emailRequired": "Please enter your email",
-      "passwordRequired": "Please enter your password"
+      "passwordRequired": "Please enter your password",
+      "socialOnly": "El acceso por email está temporalmente no disponible. Usa inicio de sesión social."
     },
     "register": {
       "title": "Register",
@@ -453,13 +454,14 @@
       "email": "Email",
       "password": "Password",
       "signUp": "Sign Up",
-      "signInHint": "Already have an account? Sign in",
+      "signInHint": "¿Ya tienes una cuenta?",
       "checkEmail": "Please check your email inbox",
       "showPassword": "Show password",
       "hidePassword": "Hide password",
       "nameRequired": "Please enter your name",
       "emailRequired": "Please enter your email",
-      "passwordRequired": "Please enter your password"
+      "passwordRequired": "Please enter your password",
+      "socialOnly": "El registro por email está temporalmente no disponible. Continúa con una cuenta social."
     },
     "forgotPassword": {
       "title": "Forgot Password",
@@ -485,10 +487,17 @@
       "checkEmail": "Please check your email inbox"
     },
     "common": {
-      "termsOfService": "Terms of Service",
-      "privacyPolicy": "Privacy Policy",
-      "byClickingContinue": "By clicking continue, you agree to our ",
-      "and": " and "
+      "orContinue": "O continúa con",
+      "signInWithGoogle": "Inicia sesión con Google",
+      "signInWithGitHub": "Inicia sesión con GitHub",
+      "dontHave": "¿No tienes una cuenta?",
+      "haveAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión",
+      "signUp": "Regístrate",
+      "byClickingContinue": "Al continuar aceptas nuestros",
+      "termsOfService": "Términos de servicio",
+      "privacyPolicy": "Política de privacidad",
+      "and": "y"
     }
   },
   "BlogPage": {
