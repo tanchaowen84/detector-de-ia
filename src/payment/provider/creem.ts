@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from 'crypto';
-import { eq } from 'drizzle-orm';
+import { desc, eq } from 'drizzle-orm';
 import { getDb } from '../../db';
 import { payment, user } from '../../db/schema';
 import {
