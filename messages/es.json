@@ -55,81 +55,81 @@
     }
   },
   "PricePlans": {
-    "free": {
-      "name": "Gratis",
-      "description": "Prueba nuestro detector de IA con análisis básicos y gratuitos.",
+    "trial": {
+      "name": "Trial",
+      "description": "Pase único de 14 días con 30k créditos y funciones completas.",
       "features": {
-        "feature-1": "5 análisis de IA por día",
-        "feature-2": "Detección de contenido IA básica",
-        "feature-3": "Resultados con puntuación de probabilidad",
-        "feature-4": "Soporte para español e inglés",
-        "feature-5": "Resultados guardados temporalmente"
+        "feature-1": "30,000 créditos en un solo pool",
+        "feature-2": "Texto + subir archivos + análisis de URL",
+        "feature-3": "30k–60k caracteres por detección",
+        "feature-4": "Resaltado por oración",
+        "feature-5": "Historial guardado durante el trial"
       },
       "limits": {
-        "limit-1": "Máximo 5 análisis diarios",
-        "limit-2": "Sin soporte técnico prioritario",
-        "limit-3": "Procesamiento estándar"
+        "limit-1": "Expira en 14 días",
+        "limit-2": "Créditos se borran al expirar"
       }
     },
     "hobby": {
-      "name": "Estudiante",
-      "description": "Perfecto para estudiantes que necesitan análisis frecuentes para trabajos académicos.",
+      "name": "Hobby",
+      "description": "Plan mensual para uso personal frecuente con todos los detectores.",
       "features": {
-        "feature-1": "25 análisis de IA por día",
-        "feature-2": "Detección avanzada con resaltado",
-        "feature-3": "Análisis por oraciones detallado",
-        "feature-4": "Hasta 5,000 caracteres por análisis",
-        "feature-5": "Soporte por email (24-48h)",
-        "feature-6": "Historial de análisis guardado"
+        "feature-1": "100,000 créditos / mes",
+        "feature-2": "Texto + subir archivos + análisis de URL",
+        "feature-3": "Hasta 30,000 caracteres por detección",
+        "feature-4": "Historial completo",
+        "feature-5": "Soporte estándar por email"
       },
       "limits": {
-        "limit-1": "Límite de caracteres 5,000",
-        "limit-2": "Soporte estándar"
-      }
-    },
-    "professional": {
-      "name": "Profesional",
-      "description": "Ideal para creadores de contenido y profesionales que necesitan análisis ilimitados.",
-      "features": {
-        "feature-1": "Análisis de IA ilimitados",
-        "feature-2": "Hasta 50,000 caracteres por análisis",
-        "feature-3": "Detección multi-modelo (ChatGPT, Gemini, Claude)",
-        "feature-4": "Informes detallados con resaltado",
-        "feature-5": "Soporte prioritario (24h)",
-        "feature-6": "API básica incluida",
-        "feature-7": "Historial completo de análisis"
-      },
-      "limits": {
-        "limit-1": "Límite de caracteres 50,000",
-        "limit-2": "API rate limits estándar"
+        "limit-1": "Créditos se reinician cada mes",
+        "limit-2": "Se aplican límites de uso razonable"
       }
     },
     "pro": {
       "name": "Pro",
-      "description": "Advanced features for professional users and teams.",
+      "description": "Límites mayores y prioridad para equipos y uso intensivo.",
       "features": {
-        "feature-1": "Unlimited AI requests",
-        "feature-2": "Priority processing and support",
-        "feature-3": "Advanced collaboration tools",
-        "feature-4": "Custom integrations",
-        "feature-5": "Enterprise-grade security"
+        "feature-1": "200,000 créditos / mes",
+        "feature-2": "Texto + subir archivos + análisis de URL",
+        "feature-3": "Hasta 60,000 caracteres por detección",
+        "feature-4": "Soporte prioritario",
+        "feature-5": "Historial completo y compartible"
       },
       "limits": {
-        "limit-1": "Advanced features require technical setup",
-        "limit-2": "Enterprise support available separately"
+        "limit-1": "Créditos se reinician cada mes",
+        "limit-2": "Tiempos de respuesta prioritarios"
+      }
+    },
+    "free": {
+      "name": "Gratis",
+      "description": "Nivel gratis para pruebas básicas",
+      "features": {
+        "feature-1": "400 créditos cada 30 días",
+        "feature-2": "Solo texto, 1,500 caracteres",
+        "feature-3": "Detección IA básica",
+        "feature-4": "Historial limitado"
+      },
+      "limits": {
+        "limit-1": "Sin subida de archivos/URL",
+        "limit-2": "Reinicio 30 días por cuenta/IP",
+        "limit-3": "Soporte no incluido"
       }
     },
     "lifetime": {
       "name": "Lifetime",
-      "description": "One-time payment for lifetime access to all premium features.",
+      "description": "Entrada legacy de por vida (oculta)",
       "features": {
-        "feature-1": "Lifetime access to all features",
-        "feature-2": "Unlimited AI requests forever",
-        "feature-3": "Priority support for life",
-        "feature-4": "All future updates included",
-        "feature-5": "Advanced collaboration tools",
-        "feature-6": "Custom integrations",
-        "feature-7": "Enterprise-grade security"
+        "feature-1": "-",
+        "feature-2": "-",
+        "feature-3": "-",
+        "feature-4": "-",
+        "feature-5": "-",
+        "feature-6": "-",
+        "feature-7": "-"
+      },
+      "limits": {
+        "limit-1": "-",
+        "limit-2": "-"
       }
     }
   },

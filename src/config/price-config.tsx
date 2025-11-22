@@ -57,6 +57,44 @@ export function getPricePlans(): Record<string, PricePlan> {
     };
   }
 
+  if (priceConfig.plans.hobby) {
+    plans.hobby = {
+      ...priceConfig.plans.hobby,
+      name: t('hobby.name'),
+      description: t('hobby.description'),
+      features: [
+        t('hobby.features.feature-1'),
+        t('hobby.features.feature-2'),
+        t('hobby.features.feature-3'),
+        t('hobby.features.feature-4'),
+        t('hobby.features.feature-5'),
+      ],
+      limits: [
+        t('hobby.limits.limit-1'),
+        t('hobby.limits.limit-2'),
+      ],
+    };
+  }
+
+  if (priceConfig.plans.trial) {
+    plans.trial = {
+      ...priceConfig.plans.trial,
+      name: t('trial.name'),
+      description: t('trial.description'),
+      features: [
+        t('trial.features.feature-1'),
+        t('trial.features.feature-2'),
+        t('trial.features.feature-3'),
+        t('trial.features.feature-4'),
+        t('trial.features.feature-5'),
+      ],
+      limits: [
+        t('trial.limits.limit-1'),
+        t('trial.limits.limit-2'),
+      ],
+    };
+  }
+
   if (priceConfig.plans.lifetime) {
     plans.lifetime = {
       ...priceConfig.plans.lifetime,

@@ -55,81 +55,81 @@
     }
   },
   "PricePlans": {
-    "free": {
-      "name": "Free",
-      "description": "Try our AI detector with basic and free analysis.",
+    "trial": {
+      "name": "Trial",
+      "description": "One-time 14-day pass with 30k credits for full features.",
       "features": {
-        "feature-1": "5 AI analyses per day",
-        "feature-2": "Basic AI content detection",
-        "feature-3": "Probability scoring results",
-        "feature-4": "Support for Spanish and English",
-        "feature-5": "Temporary result storage"
+        "feature-1": "30,000 credits shared pool",
+        "feature-2": "Text + file upload + URL scan",
+        "feature-3": "30k–60k chars per detection",
+        "feature-4": "AI sentence highlighting",
+        "feature-5": "History saved during trial"
       },
       "limits": {
-        "limit-1": "Maximum 5 analyses per day",
-        "limit-2": "No priority technical support",
-        "limit-3": "Standard processing speed"
+        "limit-1": "Expires in 14 days",
+        "limit-2": "Credits clear when expired"
       }
     },
     "hobby": {
       "name": "Hobby",
-      "description": "Great for individuals who need more AI requests and light technical assistance.",
+      "description": "Monthly plan for frequent personal use with full detectors.",
       "features": {
-        "feature-1": "500 AI requests per month",
-        "feature-2": "Full access to AI agent for generation and editing",
-        "feature-3": "Unlimited diagram storage",
-        "feature-4": "Text and image input supported",
-        "feature-5": "Email support (24–48h response, max 7 days)",
-        "feature-6": "All generated content belongs to the user"
+        "feature-1": "100,000 credits / month",
+        "feature-2": "Text + file upload + URL scan",
+        "feature-3": "Up to 30,000 chars per detection",
+        "feature-4": "Full detection history",
+        "feature-5": "Standard email support"
       },
       "limits": {
-        "limit-1": "No priority support",
-        "limit-2": "Standard processing speed"
-      }
-    },
-    "professional": {
-      "name": "Professional",
-      "description": "Perfect for power users and professionals who want faster response and priority support.",
-      "features": {
-        "feature-1": "1000 AI requests per month",
-        "feature-2": "Priority AI processing",
-        "feature-3": "Unlimited diagram storage",
-        "feature-4": "Real-time AI-assisted editing",
-        "feature-5": "Email & technical support (under 24h, max 48h)",
-        "feature-6": "Text and image input supported",
-        "feature-7": "All generated content belongs to the user"
-      },
-      "limits": {
-        "limit-1": "For advanced or customized service needs, please contact our team directly",
-        "limit-2": "Does not include API access or enterprise features"
+        "limit-1": "Credits reset monthly",
+        "limit-2": "Fair-use rate limits apply"
       }
     },
     "pro": {
       "name": "Pro",
-      "description": "Advanced features for professional users and teams.",
+      "description": "Higher limits and priority for teams and heavy users.",
       "features": {
-        "feature-1": "Unlimited AI requests",
-        "feature-2": "Priority processing and support",
-        "feature-3": "Advanced collaboration tools",
-        "feature-4": "Custom integrations",
-        "feature-5": "Enterprise-grade security"
+        "feature-1": "200,000 credits / month",
+        "feature-2": "Text + file upload + URL scan",
+        "feature-3": "Up to 60,000 chars per detection",
+        "feature-4": "Priority support",
+        "feature-5": "Complete history & sharing"
       },
       "limits": {
-        "limit-1": "Advanced features require technical setup",
-        "limit-2": "Enterprise support available separately"
+        "limit-1": "Credits reset monthly",
+        "limit-2": "Priority response times"
+      }
+    },
+    "free": {
+      "name": "Free",
+      "description": "Free tier for basic testing",
+      "features": {
+        "feature-1": "400 credits every 30 days",
+        "feature-2": "Text only, 1,500 chars",
+        "feature-3": "AI detection basic",
+        "feature-4": "History limited"
+      },
+      "limits": {
+        "limit-1": "No file/URL upload",
+        "limit-2": "30-day reset by account/IP",
+        "limit-3": "Support not included"
       }
     },
     "lifetime": {
       "name": "Lifetime",
-      "description": "One-time payment for lifetime access to all premium features.",
+      "description": "Legacy lifetime entry (hidden)",
       "features": {
-        "feature-1": "Lifetime access to all features",
-        "feature-2": "Unlimited AI requests forever",
-        "feature-3": "Priority support for life",
-        "feature-4": "All future updates included",
-        "feature-5": "Advanced collaboration tools",
-        "feature-6": "Custom integrations",
-        "feature-7": "Enterprise-grade security"
+        "feature-1": "-",
+        "feature-2": "-",
+        "feature-3": "-",
+        "feature-4": "-",
+        "feature-5": "-",
+        "feature-6": "-",
+        "feature-7": "-"
+      },
+      "limits": {
+        "limit-1": "-",
+        "limit-2": "-"
       }
     }
   },
