@@ -6,11 +6,12 @@ import { getSession } from '@/lib/server';
 import { detectAIContent } from '@/lib/winston';
 import {
   countWords,
-  deductGuestCredits,
   deductUserCredits,
   estimateWordsFromChars,
   loadUserPlanContext,
 } from '@/lib/credits';
+import { getClientIp } from '@/lib/credits';
+import { headers } from 'next/headers';
 import { randomUUID } from 'node:crypto';
 import { createSafeActionClient } from 'next-safe-action';
 import { z } from 'zod';
@@ -125,7 +126,23 @@ export const detectAIContentAction = actionClient
 
       // Deduct credits
       if (planContext.isGuest) {
-        const deduction = deductGuestCredits(requiredCredits);
+        const ip = getClientIp();
+        const ua = headers().get('user-agent');
+        const deduction = await (async () => {
+          const res = await import('@/lib/credits');
+          // use db-based guest deduction
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const fn: any = (res as any).deductGuestCreditsDb ?? (res as any).defaultGuestDeduct;
+          if (!fn) {
+            return {
+              ok: false,
+              errorCode: 'INSUFFICIENT_CREDITS' as const,
+              message: 'Créditos insuficientes. Crea cuenta para obtener más.',
+            };
+          }
+          return fn(ip, ua, requiredCredits);
+        })();
+
         if (!deduction.ok) {
           return {
             success: false,

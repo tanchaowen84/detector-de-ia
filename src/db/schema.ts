@@ -99,6 +99,18 @@ export const creditsHistory = pgTable("credits_history", {
 	metadata: jsonb('metadata').default('{}'),
 });
 
+export const guestCredits = pgTable('guest_credits', {
+	id: text('id').primaryKey(),
+	ipHash: text('ip_hash').notNull().unique(),
+	rawIp: text('raw_ip'),
+	credits: integer('credits').notNull(),
+	resetAt: timestamp('reset_at').notNull(),
+	userAgent: text('user_agent'),
+	createdAt: timestamp('created_at').notNull().defaultNow(),
+	updatedAt: timestamp('updated_at').notNull().defaultNow(),
+	lastUsedAt: timestamp('last_used_at'),
+});
+
 export const detections = pgTable('detections', {
 	id: text('id').primaryKey(),
 	userId: text('user_id')

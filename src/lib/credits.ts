@@ -2,7 +2,7 @@ import { cookies, headers } from 'next/headers';
 import { randomUUID, createHmac } from 'node:crypto';
 import { sql, and, eq, desc } from 'drizzle-orm';
 import { getDb } from '@/db';
-import { user, payment, creditsHistory } from '@/db/schema';
+import { user, payment, creditsHistory, guestCredits } from '@/db/schema';
 import { getPlanByPriceId, getPlanPolicy, type PlanPolicy } from '@/config/plan-policy';
 import { findPlanByPriceId } from '@/lib/price-plan';
 import { type Session } from '@/lib/auth-types';
@@ -11,11 +11,6 @@ type UserMetadata = Record<string, any> & {
   planId?: string;
   creditsResetAt?: string | null;
   oneTimeExpiresAt?: string | null;
-};
-
-type GuestBucket = {
-  credits: number;
-  resetAt: string;
 };
 
 export type PlanContext = {
@@ -30,6 +25,8 @@ export type CreditCheckResult =
   | { ok: false; errorCode: 'INSUFFICIENT_CREDITS' | 'PLAN_GATE_BLOCKED'; message: string };
 
 const FIVE_CHARS_AVG_WORD = 5;
+const GUEST_DEFAULT_CREDITS = 400;
+const GUEST_RESET_DAYS = 30;
 
 export function countWords(text: string): number {
   if (!text) return 0;
@@ -53,53 +50,6 @@ export function getClientIp(): string {
 
 function getSigningSecret() {
   return process.env.BETTER_AUTH_SECRET || process.env.WINSTON_API_KEY || 'fallback-secret';
-}
-
-function signPayload(payload: string) {
-  return createHmac('sha256', getSigningSecret()).update(payload).digest('hex');
-}
-
-function parseGuestCookie(value: string | undefined): GuestBucket | null {
-  if (!value) return null;
-  const [payload, signature] = value.split('.');
-  if (!payload || !signature) return null;
-  const expected = signPayload(payload);
-  if (expected !== signature) return null;
-  try {
-    const json = Buffer.from(payload, 'base64').toString('utf8');
-    return JSON.parse(json) as GuestBucket;
-  } catch {
-    return null;
-  }
-}
-
-function serializeGuestCookie(bucket: GuestBucket) {
-  const payload = Buffer.from(JSON.stringify(bucket)).toString('base64');
-  const sig = signPayload(payload);
-  return `${payload}.${sig}`;
-}
-
-function getGuestBucket(): GuestBucket {
-  const store = cookies();
-  const parsed = parseGuestCookie(store.get('guest_credits')?.value);
-  const now = new Date();
-  if (parsed) {
-    const resetAt = new Date(parsed.resetAt);
-    if (resetAt > now) return parsed;
-  }
-  const reset = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
-  return { credits: 400, resetAt: reset.toISOString() };
-}
-
-function saveGuestBucket(bucket: GuestBucket) {
-  const store = cookies();
-  store.set('guest_credits', serializeGuestCookie(bucket), {
-    httpOnly: true,
-    sameSite: 'lax',
-    secure: true,
-    path: '/',
-    expires: new Date(bucket.resetAt),
-  });
 }
 
 export async function resolvePlanForUser(session: Session | null): Promise<PlanPolicy> {
@@ -146,8 +96,10 @@ export async function resolvePlanForUser(session: Session | null): Promise<PlanP
 export async function loadUserPlanContext(session: Session | null): Promise<PlanContext> {
   if (!session?.user) {
     const plan = getPlanPolicy('guest');
-    const bucket = getGuestBucket();
-    return { plan, credits: bucket.credits, metadata: {}, isGuest: true };
+    const ip = getClientIp();
+    const ua = headers().get('user-agent');
+    const rec = await getGuestRecord(ip, ua);
+    return { plan, credits: rec.credits, metadata: { resetAt: rec.resetAt?.toISOString?.() }, isGuest: true };
   }
 
   const db = await getDb();
@@ -302,16 +254,114 @@ export async function deductUserCredits(
 }
 
 export function deductGuestCredits(required: number): CreditCheckResult {
+  // legacy stub; replaced by DB-based guest credits
+  return {
+    ok: false,
+    errorCode: 'INSUFFICIENT_CREDITS',
+    message: 'Créditos insuficientes. Crea cuenta para obtener más.',
+  };
+}
+
+function hashIp(ip: string): string {
+  return createHmac('sha256', getSigningSecret()).update(ip).digest('hex');
+}
+
+async function getGuestRecord(ip: string, ua: string | null) {
+  const db = await getDb();
+  const ipHash = hashIp(ip);
+  const now = new Date();
+  const rows = await db
+    .select()
+    .from(guestCredits)
+    .where(eq(guestCredits.ipHash, ipHash))
+    .limit(1);
+
+  if (!rows.length) {
+    const reset = new Date(now.getTime() + GUEST_RESET_DAYS * 24 * 60 * 60 * 1000);
+    await db.insert(guestCredits).values({
+      id: randomUUID(),
+      ipHash,
+      rawIp: ip,
+      credits: GUEST_DEFAULT_CREDITS,
+      resetAt: reset,
+      userAgent: ua ?? null,
+    });
+    return { credits: GUEST_DEFAULT_CREDITS, resetAt: reset, ipHash };
+  }
+
+  const rec = rows[0];
+  if (rec.resetAt <= now) {
+    const reset = new Date(now.getTime() + GUEST_RESET_DAYS * 24 * 60 * 60 * 1000);
+    await db
+      .update(guestCredits)
+      .set({ credits: GUEST_DEFAULT_CREDITS, resetAt: reset, updatedAt: now })
+      .where(eq(guestCredits.ipHash, ipHash));
+    return { credits: GUEST_DEFAULT_CREDITS, resetAt: reset, ipHash };
+  }
+
+  return { credits: rec.credits, resetAt: rec.resetAt, ipHash };
+}
+
+async function deductGuestCreditsDb(ip: string, ua: string | null, required: number): Promise<CreditCheckResult> {
   if (required <= 0) return { ok: true, creditsLeft: 0 };
-  const bucket = getGuestBucket();
-  if (bucket.credits < required) {
+  const db = await getDb();
+  const ipHash = hashIp(ip);
+  const now = new Date();
+
+  const result = await db.transaction(async (tx) => {
+    const recs = await tx
+      .select()
+      .from(guestCredits)
+      .where(eq(guestCredits.ipHash, ipHash))
+      .limit(1);
+
+    let rec = recs[0];
+    if (!rec) {
+      const reset = new Date(now.getTime() + GUEST_RESET_DAYS * 24 * 60 * 60 * 1000);
+      await tx.insert(guestCredits).values({
+        id: randomUUID(),
+        ipHash,
+        rawIp: ip,
+        credits: GUEST_DEFAULT_CREDITS,
+        resetAt: reset,
+        userAgent: ua ?? null,
+        createdAt: now,
+        updatedAt: now,
+      });
+      rec = { credits: GUEST_DEFAULT_CREDITS, resetAt: reset } as any;
+    }
+
+    if (rec.resetAt <= now) {
+      rec.credits = GUEST_DEFAULT_CREDITS;
+      rec.resetAt = new Date(now.getTime() + GUEST_RESET_DAYS * 24 * 60 * 60 * 1000);
+    }
+
+    if (rec.credits < required) {
+      return null;
+    }
+
+    const updated = await tx
+      .update(guestCredits)
+      .set({
+        credits: sql`${guestCredits.credits} - ${required}`,
+        updatedAt: now,
+        lastUsedAt: now,
+        userAgent: ua ?? rec.userAgent,
+      })
+      .where(and(eq(guestCredits.ipHash, ipHash), sql`${guestCredits.credits} >= ${required}`))
+      .returning({ credits: guestCredits.credits });
+
+    if (!updated.length) return null;
+    return updated[0].credits;
+  });
+
+  if (result === null) {
     return {
       ok: false,
       errorCode: 'INSUFFICIENT_CREDITS',
       message: 'Créditos insuficientes. Crea cuenta para obtener más.',
     };
   }
-  bucket.credits -= required;
-  saveGuestBucket(bucket);
-  return { ok: true, creditsLeft: bucket.credits };
+
+  return { ok: true, creditsLeft: result };
 }
