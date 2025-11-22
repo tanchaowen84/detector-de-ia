@@ -103,3 +103,27 @@ detector de ia 产品MVP文档
 │ (Terms) + legal copy        │
 └─────────────────────────────┘
 ```
+
+## 付费与额度功能落地计划（简版执行稿，复用现有 Creem 支付）
+
+- 数据与配置
+  - 计划能力配置：`maxChars`、`allowText|File|Url`、`monthlyCredits`、`resetInterval`、`oneTimeCredits`、`oneTimeExpiresDays`、`saveHistory`、`creditsPerWordDetect=1`。
+  - 用户/访客额度字段：`plan`、`credits`、`creditsResetAt`、`oneTimeExpiresAt`（Trial Pack），访客用 `ipCredits`、`ipCreditsResetAt`（cookie/ip-key），尽量复用 `user` 表或 `metadata`，少动表结构。
+- 扣费与过期逻辑（Server Action，Winston 调用前）
+  - 顺序：计划校验 → 过期/重置检查 → 额度校验 → 扣费事务 → 调用 Winston。
+  - 重置规则：Trial 过期清零；订阅按周期重置；访客/Free 30 天重置 400；额度不足返回错误码 `INSUFFICIENT_CREDITS`
+  - 记 `creditsHistory`（扣费明细）、保留字数与类型。
+- 入口与付费墙（前端）
+  - Guest/Free：文件/URL 按钮直接弹 Trial CTA；文本超上限阻止提交；额度不足弹对应 CTA（Free→Trial，Trial/Hobby/Pro→续费/升级）。
+  - 显示当前 credits 与重置时间（Detector 区 + Dashboard 顶部）。
+- Trial Pack 商品（Creem）
+  - 直接在现有 Creem 流程上增加产品 ID（ONE_TIME，30000 credits，14 天过期），复用现成 `createCheckoutAction` 和 Creem Provider。
+- Webhook 闭环（Creem 已有）
+  - 复用现有 `/api/webhooks/creem` 验签与处理逻辑，仅补充：成功事件写入 Trial Pack 余额与 `oneTimeExpiresAt`，订阅事件更新月度配额/`creditsResetAt`；取消/退款可简化为计划降级 + 余额清零。
+- 历史与详情页
+  - 新增 `/dashboard/detections/[id]`：全文+句子高亮、来源、版本、扣费信息；列表行可点击。
+  - Guest 历史默认不存或存短期（配置化）。
+- 迁移与验证
+  - Drizzle migration：补字段/默认值；预置 Creem 价格 ID。
+  - 自测用例：访客/Free/Trial/Hobby/Pro 覆盖超字数、额度不足、Trial 过期、订阅重置、Webhook 成功链路。
+  - Checklist：env 填充、Creem webhook 生效、移动端回归。
