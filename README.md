@@ -127,3 +127,27 @@ detector de ia 产品MVP文档
   - Drizzle migration：补字段/默认值；预置 Creem 价格 ID。
   - 自测用例：访客/Free/Trial/Hobby/Pro 覆盖超字数、额度不足、Trial 过期、订阅重置、Webhook 成功链路。
   - Checklist：env 填充、Creem webhook 生效、移动端回归。
+
+
+## 上线前测试清单（付费/额度重点）
+
+- 访客 / Free
+  - 文本 ≤1500 chars 可检测；文件/URL 点击弹 Trial CTA。
+  - 连续检测至 400 credits 用尽返回不足提示；清理 cookie 后额度重置。
+- Trial Pack（一次性，30k credits，14 天）
+  - Creem 下单 → webhook 生效：credits=30,000、`oneTimeExpiresAt`=+14d、plan=trial。
+  - 单次字符上限 30,000；文件/URL 可用。
+  - 模拟过期（改 DB 时间）后检测被拒/提示升级，余额清零。
+- Hobby / Pro（订阅）
+  - 成功支付后：plan 设置正确；credits=100,000(Hobby)/200,000(Pro)；`creditsResetAt`=+1 月。
+  - 字符上限：Hobby 30,000 / Pro 60,000；文件/URL 可用。
+  - 到期懒重置：周期后首次调用前刷新额度；取消/过期 webhook 回落到 free、清零。
+- 计费口径
+  - 文本 1 credit/word；文件/URL 以响应长度估算；抄袭检测入口未开放（确保无误扣）。
+  - Credits 不足提示：Free→Trial CTA；Trial/Hobby/Pro→续费/升级提示。
+- Pricing & Billing 展示
+  - Pricing 卡顺序 Trial→Hobby→Pro；价格：Trial $4.99；Hobby $9/mo ($84/yr)；Pro $19/mo ($180/yr)；文案显示 30k/60k 上限正确。
+  - Billing 页面显示当前计划、剩余/总 credits、重置时间；详情页有返回按钮。
+- 历史与详情
+  - Dashboard 历史行可点击浮起跳转详情；详情显示句子高亮、creditsUsed、元信息。
+  - 未登录访问受保护页跳登录；访问他人 ID 返回 404。
