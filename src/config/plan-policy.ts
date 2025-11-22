@@ -17,7 +17,10 @@ export type PlanPolicy = {
   interval?: PlanIntervals;
 };
 
-const env = process.env;
+const env =
+  typeof process !== 'undefined' && (process as any).env
+    ? (process as any).env
+    : ({} as Record<string, string | undefined>);
 
 export const planPolicies: Record<string, PlanPolicy> = {
   guest: {
@@ -27,6 +30,7 @@ export const planPolicies: Record<string, PlanPolicy> = {
     allowFile: false,
     allowUrl: false,
     maxChars: 1500,
+    monthlyCredits: 400,
     resetIntervalDays: 30,
     saveHistory: false,
     creditsPerWordDetect: 1,
@@ -38,6 +42,7 @@ export const planPolicies: Record<string, PlanPolicy> = {
     allowFile: false,
     allowUrl: false,
     maxChars: 1500,
+    monthlyCredits: 400,
     resetIntervalDays: 30,
     saveHistory: true,
     creditsPerWordDetect: 1,

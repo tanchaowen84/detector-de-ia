@@ -1,5 +1,6 @@
 import { getActiveSubscriptionAction } from '@/actions/get-active-subscription';
 import { getLifetimeStatusAction } from '@/actions/get-lifetime-status';
+import { getPlanPolicy } from '@/config/plan-policy';
 import type { Session } from '@/lib/auth-types';
 import { getAllPricePlans } from '@/lib/price-plan';
 import type { PricePlan, Subscription } from '@/payment/types';
@@ -9,85 +10,65 @@ import { create } from 'zustand';
  * Payment state interface
  */
 export interface PaymentState {
-  // Current plan
   currentPlan: PricePlan | null;
-  // Active subscription
   subscription: Subscription | null;
-  // Loading state
+  creditsRemaining: number | null;
+  creditsTotal: number | null;
+  creditsResetAt: Date | null;
   isLoading: boolean;
-  // Error state
   error: string | null;
-
-  // Actions
   fetchPayment: (user: Session['user'] | null | undefined) => Promise<void>;
   resetState: () => void;
 }
 
-/**
- * Payment store using Zustand
- * Manages the user's payment and subscription data globally
- */
 export const usePaymentStore = create<PaymentState>((set, get) => ({
-  // Initial state
   currentPlan: null,
   subscription: null,
+  creditsRemaining: null,
+  creditsTotal: null,
+  creditsResetAt: null,
   isLoading: false,
   error: null,
 
-  /**
-   * Fetch payment and subscription data for the current user
-   * @param user Current user from auth session
-   */
   fetchPayment: async (user) => {
-    // Skip if already loading
     if (get().isLoading) return;
 
-    // Skip if no user is provided
     if (!user) {
       set({
         currentPlan: null,
         subscription: null,
+        creditsRemaining: null,
+        creditsTotal: null,
+        creditsResetAt: null,
         error: null,
       });
       return;
     }
 
-    // Fetch subscription data
     set({ isLoading: true, error: null });
 
-    // Get all price plans
     const plans: PricePlan[] = getAllPricePlans();
-    const freePlan = plans.find((plan) => plan.isFree);
-    const lifetimePlan = plans.find((plan) => plan.isLifetime);
+    const freePlan = plans.find((plan) => plan.isFree) || null;
+    const lifetimePlan = plans.find((plan) => plan.isLifetime) || null;
 
-    // Check if user is a lifetime member directly from the database
+    // Lifetime check
     let isLifetimeMember = false;
     try {
       const result = await getLifetimeStatusAction({ userId: user.id });
       if (result?.data?.success) {
         isLifetimeMember = result.data.isLifetimeMember || false;
-        console.log('get lifetime status result', result);
-      } else {
-        console.warn('get lifetime status failed', result?.data?.error);
-        // set({
-        //   error: result?.data?.error || 'Failed to fetch payment data',
-        //   isLoading: false
-        // });
       }
     } catch (error) {
       console.error('get lifetime status error:', error);
-      // set({
-      //   error: 'Failed to fetch payment data',
-      //   isLoading: false
-      // });
     }
 
-    // If lifetime member, set the lifetime plan
     if (isLifetimeMember) {
-      console.log('set lifetime plan for user', user.id);
       set({
-        currentPlan: lifetimePlan || null,
+        currentPlan: lifetimePlan,
         subscription: null,
+        creditsRemaining: null,
+        creditsTotal: null,
+        creditsResetAt: null,
         isLoading: false,
         error: null,
       });
@@ -95,74 +76,104 @@ export const usePaymentStore = create<PaymentState>((set, get) => ({
     }
 
     try {
-      // Check if user has an active subscription
-      const result = await getActiveSubscriptionAction({ userId: user.id });
-      if (result?.data?.success) {
-        const activeSubscription = result.data.data;
-
-        // Set subscription state
-        if (activeSubscription) {
-          const plan =
-            plans.find((p) =>
-              p.prices.find(
-                (price) => price.priceId === activeSubscription.priceId
-              )
-            ) || null;
-          console.log(
-            'subscription found, setting plan for user',
-            user.id,
-            plan?.id
-          );
-          set({
-            currentPlan: plan,
-            subscription: activeSubscription,
-            isLoading: false,
-            error: null,
-          });
-        } else {
-          // No subscription found - set to free plan
-          console.log(
-            'no subscription found, setting free plan for user',
-            user.id
-          );
-          set({
-            currentPlan: freePlan || null,
-            subscription: null,
-            isLoading: false,
-            error: null,
-          });
-        }
-      } else {
-        // Failed to fetch subscription
-        console.error(
-          'fetch subscription for user failed',
-          result?.data?.error
-        );
-        set({
-          error: result?.data?.error || 'Failed to fetch payment data',
-          isLoading: false,
-        });
+      const subResult = await getActiveSubscriptionAction({ userId: user.id });
+      if (!subResult?.data?.success) {
+        throw new Error(subResult?.data?.error || 'Failed to fetch subscription');
       }
+
+      const activeSubscription = subResult.data.data;
+      let plan: PricePlan | null = freePlan;
+
+      if (activeSubscription) {
+        plan =
+          plans.find((p) =>
+            p.prices.find((price) => price.priceId === activeSubscription.priceId)
+          ) || freePlan;
+      }
+
+      const creditsInfo = await computeCredits(plan, user.id);
+
+      set({
+        currentPlan: plan,
+        subscription: activeSubscription || null,
+        ...creditsInfo,
+        isLoading: false,
+        error: null,
+      });
     } catch (error) {
       console.error('fetch payment data error:', error);
       set({
-        error: 'Failed to fetch payment data',
+        currentPlan: freePlan,
+        subscription: null,
+        creditsRemaining: null,
+        creditsTotal: null,
+        creditsResetAt: null,
         isLoading: false,
+        error: 'Failed to fetch payment data',
       });
-    } finally {
-      set({ isLoading: false });
     }
   },
 
-  /**
-   * Reset payment state
-   */
   resetState: () => {
     set({
       currentPlan: null,
       subscription: null,
+      creditsRemaining: null,
+      creditsTotal: null,
+      creditsResetAt: null,
       isLoading: false,
       error: null,
     });
   },
 }));
+
+async function computeCredits(plan: PricePlan | null, _userId: string) {
+  try {
+    const res = await fetch('/api/credits', { cache: 'no-store' });
+    if (!res.ok) {
+      return {
+        creditsRemaining: null,
+        creditsTotal: null,
+        creditsResetAt: null,
+      };
+    }
+    const json = (await res.json()) as {
+      success: boolean;
+      data?: { credits: number; metadata: Record<string, any> };
+    };
+    if (!json.success || !json.data) {
+      return {
+        creditsRemaining: null,
+        creditsTotal: null,
+        creditsResetAt: null,
+      };
+    }
+    const credits = json.data.credits ?? 0;
+    const metadata = (json.data.metadata as any) || {};
+    const policy = plan
+      ? getPlanPolicy(plan.id)
+      : getPlanPolicy(metadata.planId || 'free');
+
+    const total =
+      policy.monthlyCredits ??
+      policy.oneTimeCredits ??
+      metadata.oneTimeCredits ??
+      credits;
+    const resetAt = metadata.creditsResetAt
+      ? new Date(metadata.creditsResetAt)
+      : null;
+
+    return {
+      creditsRemaining: credits,
+      creditsTotal: total,
+      creditsResetAt: resetAt,
+    };
+  } catch (error) {
+    console.error('computeCredits error', error);
+    return {
+      creditsRemaining: null,
+      creditsTotal: null,
+      creditsResetAt: null,
+    };
+  }
+}

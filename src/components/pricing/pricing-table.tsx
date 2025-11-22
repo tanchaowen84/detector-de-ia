@@ -38,29 +38,24 @@ export function PricingTable({
   // Get price plans with translations
   const pricePlans = getPricePlans();
   const plans = Object.values(pricePlans);
+  const orderedIds = ['trial', 'hobby', 'pro'];
+  const orderedPlans = orderedIds
+    .map((id) => plans.find((p) => p.id === id && !p.disabled))
+    .filter(Boolean) as PricePlan[];
 
   // Current plan ID for comparison
   const currentPlanId = currentPlan?.id || null;
 
-  // Filter plans into free, subscription and one-time plans
-  const freePlans = plans.filter((plan) => plan.isFree && !plan.disabled);
-
-  const subscriptionPlans = plans.filter(
-    (plan) =>
-      !plan.isFree &&
-      !plan.disabled &&
-      plan.prices.some(
-        (price) => !price.disabled && price.type === PaymentTypes.SUBSCRIPTION
-      )
+  const subscriptionPlans = orderedPlans.filter((plan) =>
+    plan.prices.some(
+      (price) => !price.disabled && price.type === PaymentTypes.SUBSCRIPTION
+    )
   );
 
-  const oneTimePlans = plans.filter(
-    (plan) =>
-      !plan.isFree &&
-      !plan.disabled &&
-      plan.prices.some(
-        (price) => !price.disabled && price.type === PaymentTypes.ONE_TIME
-      )
+  const oneTimePlans = orderedPlans.filter((plan) =>
+    plan.prices.some(
+      (price) => !price.disabled && price.type === PaymentTypes.ONE_TIME
+    )
   );
 
   // Check if any plan has a monthly price option
@@ -126,8 +121,7 @@ export function PricingTable({
 
       {/* Calculate total number of visible plans */}
       {(() => {
-        const totalVisiblePlans =
-          freePlans.length + subscriptionPlans.length + oneTimePlans.length;
+        const totalVisiblePlans = orderedPlans.length;
         return (
           <div
             className={cn(
@@ -140,38 +134,43 @@ export function PricingTable({
                 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
             )}
           >
-            {/* Render free plans (always visible) */}
-            {freePlans.map((plan) => (
-              <PricingCard
-                key={plan.id}
-                plan={plan}
-                metadata={metadata}
-                isCurrentPlan={currentPlanId === plan.id}
-              />
-            ))}
+            {orderedPlans.map((plan) => {
+              const hasSubscriptionPrice = plan.prices.some(
+                (price) =>
+                  !price.disabled && price.type === PaymentTypes.SUBSCRIPTION
+              );
+              const hasOneTimePrice = plan.prices.some(
+                (price) =>
+                  !price.disabled && price.type === PaymentTypes.ONE_TIME
+              );
 
-            {/* Render subscription plans with the selected interval */}
-            {subscriptionPlans.map((plan) => (
-              <PricingCard
-                key={plan.id}
-                plan={plan}
-                interval={interval}
-                paymentType={PaymentTypes.SUBSCRIPTION}
-                metadata={metadata}
-                isCurrentPlan={currentPlanId === plan.id}
-              />
-            ))}
+              if (hasSubscriptionPrice) {
+                return (
+                  <PricingCard
+                    key={plan.id}
+                    plan={plan}
+                    interval={interval}
+                    paymentType={PaymentTypes.SUBSCRIPTION}
+                    metadata={metadata}
+                    isCurrentPlan={currentPlanId === plan.id}
+                  />
+                );
+              }
 
-            {/* Render one-time plans (always visible) */}
-            {oneTimePlans.map((plan) => (
-              <PricingCard
-                key={plan.id}
-                plan={plan}
-                paymentType={PaymentTypes.ONE_TIME}
-                metadata={metadata}
-                isCurrentPlan={currentPlanId === plan.id}
-              />
-            ))}
+              if (hasOneTimePrice) {
+                return (
+                  <PricingCard
+                    key={plan.id}
+                    plan={plan}
+                    paymentType={PaymentTypes.ONE_TIME}
+                    metadata={metadata}
+                    isCurrentPlan={currentPlanId === plan.id}
+                  />
+                );
+              }
+
+              return null;
+            })}
           </div>
         );
       })()}

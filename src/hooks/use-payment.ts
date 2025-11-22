@@ -9,8 +9,16 @@ import { useEffect } from 'react';
  * It also automatically fetches payment information when the user changes.
  */
 export function usePayment() {
-  const { currentPlan, subscription, isLoading, error, fetchPayment } =
-    usePaymentStore();
+  const {
+    currentPlan,
+    subscription,
+    isLoading,
+    error,
+    fetchPayment,
+    creditsRemaining,
+    creditsTotal,
+    creditsResetAt,
+  } = usePaymentStore();
 
   const { data: session } = authClient.useSession();
 
@@ -28,6 +36,9 @@ export function usePayment() {
     subscription,
     isLoading,
     error,
+    creditsRemaining,
+    creditsTotal,
+    creditsResetAt,
     refetch: () => {
       const currentUser = session?.user;
       if (currentUser) {

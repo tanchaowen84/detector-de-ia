@@ -31,6 +31,9 @@ export default function BillingCard() {
     error: loadPaymentError,
     subscription,
     currentPlan: currentPlanFromStore,
+    creditsRemaining,
+    creditsTotal,
+    creditsResetAt,
     refetch,
   } = usePayment();
 
@@ -236,6 +239,51 @@ export default function BillingCard() {
 
           {/* user has subscription, show manage subscription button */}
           {subscription && currentUser && (
+            <CustomerPortalButton userId={currentUser.id} className="">
+              {t('manageSubscription')}
+            </CustomerPortalButton>
+          )}
+        </CardFooter>
+      </Card>
+
+      <Card className="w-full max-w-lg md:max-w-xl overflow-hidden pt-6 pb-0 flex flex-col">
+        <CardHeader>
+          <CardTitle className="text-lg font-semibold">Créditos</CardTitle>
+          <CardDescription>Disponibles y reinicio programado.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4 flex-1">
+          <div className="flex items-end justify-between">
+            <div>
+              <div className="text-sm text-muted-foreground">Restantes</div>
+              <div className="text-3xl font-semibold">
+                {creditsRemaining ?? '—'}
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="text-sm text-muted-foreground">Total ciclo</div>
+              <div className="text-lg font-medium">
+                {creditsTotal ?? '—'}
+              </div>
+            </div>
+          </div>
+          {creditsRemaining != null && creditsTotal != null && creditsTotal > 0 && (
+            <div className="text-sm text-muted-foreground">
+              Usados: {Math.max(0, creditsTotal - creditsRemaining)}
+            </div>
+          )}
+          {creditsResetAt && (
+            <div className="text-sm text-muted-foreground">
+              Reinicio: {formatDate(creditsResetAt)}
+            </div>
+          )}
+          {!creditsResetAt && (
+            <div className="text-sm text-muted-foreground">
+              Reinicio: no programado
+            </div>
+          )}
+        </CardContent>
+        <CardFooter className="mt-2 px-6 py-4 flex justify-end items-center bg-background rounded-none">
+          {currentUser && (
             <CustomerPortalButton userId={currentUser.id} className="">
               {t('manageSubscription')}
             </CustomerPortalButton>
