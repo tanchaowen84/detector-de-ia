@@ -133,6 +133,244 @@
       }
     }
   },
+  "Dashboard": {
+    "dashboard": {
+      "title": "Panel"
+    },
+    "history": {
+      "title": "Historial de detecciones",
+      "description": "Has generado {total} análisis en total. Aquí verás los más recientes.",
+      "breadcrumbs": {
+        "history": "Historial de detecciones"
+      },
+      "table": {
+        "columns": {
+          "input": "Contenido",
+          "source": "Origen",
+          "score": "AI Score",
+          "language": "Idioma",
+          "date": "Fecha"
+        },
+        "source": {
+          "text": "Texto",
+          "file": "Archivo",
+          "url": "URL"
+        },
+        "rawScore": "Score bruto {value}",
+        "sentences": "oraciones",
+        "unknownInput": "Sin vista previa",
+        "characters": "{value} caracteres",
+        "charactersUnknown": "Caracteres desconocidos"
+      },
+      "empty": {
+        "title": "Aún no tienes detecciones",
+        "subtitle": "Analiza un texto para que aparezca en tu historial.",
+        "cta": "Analizar ahora"
+      },
+      "detail": {
+        "title": "Detalle de detección",
+        "subtitle": "Puntajes, metadatos y oraciones",
+        "score": "Puntaje IA",
+        "rawScore": "Puntaje bruto: {value}",
+        "metadata": "Metadatos",
+        "length": "Longitud: {value}",
+        "sentences": "Oraciones: {value}",
+        "language": "Idioma: {value}",
+        "version": "Versión: {value}",
+        "created": "Creado: {value}",
+        "credits": "Créditos",
+        "creditsUsed": "Usados: {value}",
+        "creditsRemaining": "Restantes: {value}",
+        "inputType": "Tipo de entrada: {value}",
+        "noPreview": "Sin vista previa",
+        "sentencesTitle": "Análisis por oración",
+        "sentence": "Oración",
+        "prob": "Probabilidad IA {value}",
+        "noSentences": "No hay desglose por oración",
+        "unknown": "desconocido",
+        "back": "Volver al historial"
+      }
+    },
+    "admin": {
+      "title": "Admin",
+      "users": {
+        "title": "Users",
+        "fakeData": "Note: Faked data for demonstration, some features are disabled",
+        "error": "Failed to get users",
+        "search": "Search users...",
+        "columns": {
+          "columns": "Columns",
+          "name": "Name",
+          "email": "Email",
+          "role": "Role",
+          "createdAt": "Created At",
+          "customerId": "Customer ID",
+          "status": "Status",
+          "banReason": "Ban Reason",
+          "banExpires": "Ban Expires"
+        },
+        "noResults": "No results",
+        "firstPage": "First Page",
+        "lastPage": "Last Page",
+        "nextPage": "Next Page",
+        "previousPage": "Previous Page",
+        "rowsPerPage": "Rows per page",
+        "page": "Page",
+        "loading": "Loading...",
+        "admin": "Admin",
+        "user": "User",
+        "email": {
+          "verified": "Email Verified",
+          "unverified": "Email Unverified"
+        },
+        "emailCopied": "Email copied to clipboard",
+        "banned": "Banned",
+        "active": "Active",
+        "joined": "Joined",
+        "updated": "Updated",
+        "ban": {
+          "reason": "Ban Reason",
+          "reasonPlaceholder": "Enter the reason for banning this user",
+          "defaultReason": "Spamming",
+          "never": "Never",
+          "expires": "Ban Expires",
+          "selectDate": "Select Date",
+          "button": "Ban User",
+          "success": "User has been banned",
+          "error": "Failed to ban user"
+        },
+        "unban": {
+          "button": "Unban User",
+          "success": "User has been unbanned",
+          "error": "Failed to unban user"
+        },
+        "close": "Close"
+      }
+    },
+    "settings": {
+      "title": "Ajustes",
+      "profile": {
+        "title": "Perfil",
+        "description": "Administra la información de tu cuenta",
+        "avatar": {
+          "title": "Avatar",
+          "description": "Sube una imagen personalizada",
+          "recommendation": "Opcional pero recomendable",
+          "uploading": "Subiendo...",
+          "uploadAvatar": "Subir avatar",
+          "success": "Avatar actualizado",
+          "fail": "No se pudo actualizar el avatar"
+        },
+        "name": {
+          "title": "Nombre",
+          "description": "Ingresa tu nombre para mostrar",
+          "placeholder": "Escribe tu nombre",
+          "minLength": "Usa al menos 3 caracteres",
+          "maxLength": "Máximo 30 caracteres",
+          "hint": "Usa entre 3 y 30 caracteres",
+          "success": "Nombre actualizado",
+          "fail": "No se pudo actualizar el nombre",
+          "saving": "Guardando...",
+          "save": "Guardar"
+        }
+      },
+      "billing": {
+        "title": "Facturación",
+        "description": "Administra tu suscripción y pagos",
+        "status": {
+          "active": "Activa",
+          "trial": "Prueba",
+          "canceled": "Cancelada",
+          "free": "Gratis",
+          "lifetime": "De por vida"
+        },
+        "interval": {
+          "month": "mes",
+          "year": "año",
+          "oneTime": "pago único"
+        },
+        "currentPlan": {
+          "title": "Plan actual",
+          "description": "Detalles de tu plan",
+          "noPlan": "No tienes un plan activo"
+        },
+        "CustomerPortalButton": {
+          "loading": "Cargando...",
+          "createCustomerPortalFailed": "No se pudo abrir el portal de cliente"
+        },
+        "price": "Precio:",
+        "nextBillingDate": "Próxima facturación:",
+        "trialEnds": "La prueba termina:",
+        "serviceEnds": "El servicio termina:",
+        "freePlanMessage": "Estás en el plan gratuito con funciones limitadas",
+        "lifetimeMessage": "Tienes acceso de por vida a todas las funciones premium",
+        "manageSubscription": "Gestionar suscripción y facturación",
+        "manageBilling": "Gestionar facturación",
+        "upgradePlan": "Mejorar plan",
+        "retry": "Reintentar",
+        "errorMessage": "No se pudieron obtener los datos"
+      },
+      "notification": {
+        "title": "Notificaciones",
+        "description": "Administra tus preferencias de notificación",
+        "newsletter": {
+          "title": "Suscripción al boletín",
+          "description": "Gestiona tu suscripción al boletín",
+          "label": "Suscribirme al boletín",
+          "hint": "Puedes cambiar tus preferencias en cualquier momento",
+          "emailRequired": "El correo es obligatorio para suscribirte",
+          "subscribeSuccess": "Suscripción realizada",
+          "subscribeFail": "No se pudo suscribir",
+          "unsubscribeSuccess": "Suscripción cancelada",
+          "unsubscribeFail": "No se pudo cancelar la suscripción",
+          "error": "Ocurrió un error al actualizar tu suscripción"
+        }
+      },
+      "security": {
+        "title": "Seguridad",
+        "description": "Gestiona tus ajustes de seguridad",
+        "updatePassword": {
+          "title": "Cambiar contraseña",
+          "description": "Ingresa tu contraseña actual y la nueva",
+          "currentPassword": "Contraseña actual",
+          "currentRequired": "La contraseña actual es obligatoria",
+          "newPassword": "Nueva contraseña",
+          "newMinLength": "Debe tener al menos 8 caracteres",
+          "hint": "Usa al menos 8 caracteres",
+          "showPassword": "Mostrar contraseña",
+          "hidePassword": "Ocultar contraseña",
+          "success": "Contraseña actualizada",
+          "fail": "No se pudo actualizar la contraseña",
+          "saving": "Guardando...",
+          "save": "Guardar"
+        },
+        "resetPassword": {
+          "title": "Restablecer contraseña",
+          "description": "Restablece la contraseña para habilitar el login por email",
+          "info": "Al restablecerla podrás iniciar sesión con email y contraseña además de tus métodos sociales. Recibirás un correo con instrucciones.",
+          "button": "Restablecer contraseña"
+        },
+        "deleteAccount": {
+          "title": "Eliminar cuenta",
+          "description": "Eliminarás tu cuenta y todos sus datos",
+          "warning": "Esta acción no se puede deshacer, procede con cuidado",
+          "button": "Eliminar cuenta",
+          "confirmTitle": "Eliminar cuenta",
+          "confirmDescription": "¿Seguro que deseas eliminarla? No podrás revertirlo.",
+          "confirm": "Eliminar",
+          "cancel": "Cancelar",
+          "deleting": "Eliminando...",
+          "success": "Cuenta eliminada",
+          "fail": "No se pudo eliminar la cuenta"
+        }
+      }
+    },
+    "upgrade": {
+      "title": "Mejora tu plan",
+      "description": "Pásate a Pro para desbloquear todas las funciones",
+      "button": "Mejorar"
+    }
+  },
   "NotFoundPage": {
     "title": "404",
     "message": "Sorry, the page you are looking for does not exist.",
@@ -382,221 +620,6 @@
       "dashboard": "Panel",
       "billing": "Facturación",
       "settings": "Ajustes"
-    }
-  },
-  "Dashboard": {
-    "dashboard": {
-      "title": "Panel"
-    },
-    "history": {
-      "title": "Historial de detecciones",
-      "description": "Has generado {total} análisis en total. Aquí verás los más recientes.",
-      "breadcrumbs": {
-        "history": "Historial de detecciones"
-      },
-      "table": {
-        "columns": {
-          "input": "Contenido",
-          "source": "Origen",
-          "score": "AI Score",
-          "language": "Idioma",
-          "date": "Fecha"
-        },
-        "source": {
-          "text": "Texto",
-          "file": "Archivo",
-          "url": "URL"
-        },
-        "rawScore": "Score bruto {value}",
-        "sentences": "oraciones",
-        "unknownInput": "Sin vista previa",
-        "characters": "{value} caracteres",
-        "charactersUnknown": "Caracteres desconocidos"
-      },
-      "empty": {
-        "title": "Aún no tienes detecciones",
-        "subtitle": "Analiza un texto para que aparezca en tu historial.",
-        "cta": "Analizar ahora"
-      }
-    },
-    "admin": {
-      "title": "Admin",
-      "users": {
-        "title": "Users",
-        "fakeData": "Note: Faked data for demonstration, some features are disabled",
-        "error": "Failed to get users",
-        "search": "Search users...",
-        "columns": {
-          "columns": "Columns",
-          "name": "Name",
-          "email": "Email",
-          "role": "Role",
-          "createdAt": "Created At",
-          "customerId": "Customer ID",
-          "status": "Status",
-          "banReason": "Ban Reason",
-          "banExpires": "Ban Expires"
-        },
-        "noResults": "No results",
-        "firstPage": "First Page",
-        "lastPage": "Last Page",
-        "nextPage": "Next Page",
-        "previousPage": "Previous Page",
-        "rowsPerPage": "Rows per page",
-        "page": "Page",
-        "loading": "Loading...",
-        "admin": "Admin",
-        "user": "User",
-        "email": {
-          "verified": "Email Verified",
-          "unverified": "Email Unverified"
-        },
-        "emailCopied": "Email copied to clipboard",
-        "banned": "Banned",
-        "active": "Active",
-        "joined": "Joined",
-        "updated": "Updated",
-        "ban": {
-          "reason": "Ban Reason",
-          "reasonPlaceholder": "Enter the reason for banning this user",
-          "defaultReason": "Spamming",
-          "never": "Never",
-          "expires": "Ban Expires",
-          "selectDate": "Select Date",
-          "button": "Ban User",
-          "success": "User has been banned",
-          "error": "Failed to ban user"
-        },
-        "unban": {
-          "button": "Unban User",
-          "success": "User has been unbanned",
-          "error": "Failed to unban user"
-        },
-        "close": "Close"
-      }
-    },
-    "settings": {
-      "title": "Ajustes",
-      "profile": {
-        "title": "Perfil",
-        "description": "Administra la información de tu cuenta",
-        "avatar": {
-          "title": "Avatar",
-          "description": "Sube una imagen personalizada",
-          "recommendation": "Opcional pero recomendable",
-          "uploading": "Subiendo...",
-          "uploadAvatar": "Subir avatar",
-          "success": "Avatar actualizado",
-          "fail": "No se pudo actualizar el avatar"
-        },
-        "name": {
-          "title": "Nombre",
-          "description": "Ingresa tu nombre para mostrar",
-          "placeholder": "Escribe tu nombre",
-          "minLength": "Usa al menos 3 caracteres",
-          "maxLength": "Máximo 30 caracteres",
-          "hint": "Usa entre 3 y 30 caracteres",
-          "success": "Nombre actualizado",
-          "fail": "No se pudo actualizar el nombre",
-          "saving": "Guardando...",
-          "save": "Guardar"
-        }
-      },
-      "billing": {
-        "title": "Facturación",
-        "description": "Administra tu suscripción y pagos",
-        "status": {
-          "active": "Activa",
-          "trial": "Prueba",
-          "canceled": "Cancelada",
-          "free": "Gratis",
-          "lifetime": "De por vida"
-        },
-        "interval": {
-          "month": "mes",
-          "year": "año",
-          "oneTime": "pago único"
-        },
-        "currentPlan": {
-          "title": "Plan actual",
-          "description": "Detalles de tu plan",
-          "noPlan": "No tienes un plan activo"
-        },
-        "CustomerPortalButton": {
-          "loading": "Cargando...",
-          "createCustomerPortalFailed": "No se pudo abrir el portal de cliente"
-        },
-        "price": "Precio:",
-        "nextBillingDate": "Próxima facturación:",
-        "trialEnds": "La prueba termina:",
-        "serviceEnds": "El servicio termina:",
-        "freePlanMessage": "Estás en el plan gratuito con funciones limitadas",
-        "lifetimeMessage": "Tienes acceso de por vida a todas las funciones premium",
-        "manageSubscription": "Gestionar suscripción y facturación",
-        "manageBilling": "Gestionar facturación",
-        "upgradePlan": "Mejorar plan",
-        "retry": "Reintentar",
-        "errorMessage": "No se pudieron obtener los datos"
-      },
-      "notification": {
-        "title": "Notificaciones",
-        "description": "Administra tus preferencias de notificación",
-        "newsletter": {
-          "title": "Suscripción al boletín",
-          "description": "Gestiona tu suscripción al boletín",
-          "label": "Suscribirme al boletín",
-          "hint": "Puedes cambiar tus preferencias en cualquier momento",
-          "emailRequired": "El correo es obligatorio para suscribirte",
-          "subscribeSuccess": "Suscripción realizada",
-          "subscribeFail": "No se pudo suscribir",
-          "unsubscribeSuccess": "Suscripción cancelada",
-          "unsubscribeFail": "No se pudo cancelar la suscripción",
-          "error": "Ocurrió un error al actualizar tu suscripción"
-        }
-      },
-      "security": {
-        "title": "Seguridad",
-        "description": "Gestiona tus ajustes de seguridad",
-        "updatePassword": {
-          "title": "Cambiar contraseña",
-          "description": "Ingresa tu contraseña actual y la nueva",
-          "currentPassword": "Contraseña actual",
-          "currentRequired": "La contraseña actual es obligatoria",
-          "newPassword": "Nueva contraseña",
-          "newMinLength": "Debe tener al menos 8 caracteres",
-          "hint": "Usa al menos 8 caracteres",
-          "showPassword": "Mostrar contraseña",
-          "hidePassword": "Ocultar contraseña",
-          "success": "Contraseña actualizada",
-          "fail": "No se pudo actualizar la contraseña",
-          "saving": "Guardando...",
-          "save": "Guardar"
-        },
-        "resetPassword": {
-          "title": "Restablecer contraseña",
-          "description": "Restablece la contraseña para habilitar el login por email",
-          "info": "Al restablecerla podrás iniciar sesión con email y contraseña además de tus métodos sociales. Recibirás un correo con instrucciones.",
-          "button": "Restablecer contraseña"
-        },
-        "deleteAccount": {
-          "title": "Eliminar cuenta",
-          "description": "Eliminarás tu cuenta y todos sus datos",
-          "warning": "Esta acción no se puede deshacer, procede con cuidado",
-          "button": "Eliminar cuenta",
-          "confirmTitle": "Eliminar cuenta",
-          "confirmDescription": "¿Seguro que deseas eliminarla? No podrás revertirlo.",
-          "confirm": "Eliminar",
-          "cancel": "Cancelar",
-          "deleting": "Eliminando...",
-          "success": "Cuenta eliminada",
-          "fail": "No se pudo eliminar la cuenta"
-        }
-      }
-    },
-    "upgrade": {
-      "title": "Mejora tu plan",
-      "description": "Pásate a Pro para desbloquear todas las funciones",
-      "button": "Mejorar"
     }
   },
   "Mail": {

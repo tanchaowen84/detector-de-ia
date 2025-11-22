@@ -2,7 +2,7 @@ import { DetectionHistoryTable } from '@/components/detections/detection-history
 import { DashboardHeader } from '@/components/dashboard/dashboard-header';
 import { getUserDetectionsSummary } from '@/lib/detections';
 import { getSession } from '@/lib/server';
-import { getLocale, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { redirect } from 'next/navigation';
 
 export default async function DashboardPage() {
@@ -11,9 +11,8 @@ export default async function DashboardPage() {
     redirect('/auth/login');
   }
 
-  const [t, locale, history] = await Promise.all([
+  const [t, history] = await Promise.all([
     getTranslations('Dashboard.history'),
-    getLocale(),
     getUserDetectionsSummary({ userId: session.user.id }),
   ]);
 
@@ -31,8 +30,6 @@ export default async function DashboardPage() {
         <DetectionHistoryTable
           items={history.items}
           total={history.total}
-          t={t}
-          locale={locale}
         />
       </div>
     </>

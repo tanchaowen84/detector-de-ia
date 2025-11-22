@@ -1,8 +1,12 @@
+'use client';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { LocaleLink } from '@/i18n/navigation';
 import { Routes } from '@/routes';
+import { useRouter } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 
 export type DetectionSummaryItem = {
   id: string;
@@ -18,11 +22,10 @@ export type DetectionSummaryItem = {
   createdAt: Date;
 };
 
+
 interface DetectionHistoryTableProps {
   items: DetectionSummaryItem[];
   total: number;
-  t: (key: string, values?: Record<string, string | number>) => string;
-  locale: string;
 }
 
 const sourceBadgeVariants: Record<string, string> = {
@@ -38,7 +41,11 @@ function formatDateTime(date: Date, locale: string) {
   }).format(date);
 }
 
-export function DetectionHistoryTable({ items, total, t, locale }: DetectionHistoryTableProps) {
+export function DetectionHistoryTable({ items, total }: DetectionHistoryTableProps) {
+  const router = useRouter();
+  const t = useTranslations("Dashboard.history");
+  const locale = useLocale();
+
   return (
     <div className="min-w-0 space-y-4">
       <div className="space-y-1">
@@ -70,7 +77,18 @@ export function DetectionHistoryTable({ items, total, t, locale }: DetectionHist
             </TableHeader>
             <TableBody>
               {items.map((item) => (
-                <TableRow key={item.id} className="text-sm">
+                <TableRow
+                  key={item.id}
+                  className="text-sm cursor-pointer transition duration-150 hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-200"
+                  onClick={() => router.push(`/dashboard/detections/${item.id}`)}
+                  role="link"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      router.push(`/dashboard/detections/${item.id}`);
+                    }
+                  }}
+                >
                   <TableCell>
                     <div className="max-w-[320px] truncate text-slate-900">
                       {item.inputPreview ?? t('table.unknownInput')}

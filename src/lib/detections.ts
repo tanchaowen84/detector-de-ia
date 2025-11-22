@@ -1,6 +1,7 @@
 import { getDb } from '@/db';
 import { detections } from '@/db/schema';
 import { and, desc, eq, sql } from 'drizzle-orm';
+import type { DetectionSentence } from '@/types/detections';
 
 export type DetectionSourceType = 'text' | 'file' | 'url';
 
@@ -57,5 +58,29 @@ export async function getUserDetectionsSummary({
     total: Number(count),
     page,
     pageSize,
+  };
+}
+
+export async function getDetectionById({
+  userId,
+  detectionId,
+}: {
+  userId: string;
+  detectionId: string;
+}) {
+  const db = await getDb();
+  const rows = await db
+    .select()
+    .from(detections)
+    .where(and(eq(detections.userId, userId), eq(detections.id, detectionId)))
+    .limit(1);
+
+  if (!rows.length) return null;
+
+  const record = rows[0];
+
+  return {
+    ...record,
+    sentences: (record.sentences ?? []) as DetectionSentence[],
   };
 }
