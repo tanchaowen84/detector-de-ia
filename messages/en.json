@@ -818,6 +818,13 @@
         }
       }
     },
+    "inlineCta": {
+      "title": "Try the AI detector right now",
+      "description": "Paste your text or upload a file and get a clear report in seconds.",
+      "primary": "Use the AI detector",
+      "secondary": "See plans"
+    },
+
     "features3": {
       "title": "AI Detector Use Cases",
       "subtitle": "Who This Tool Is For",

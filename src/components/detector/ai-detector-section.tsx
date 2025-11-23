@@ -495,7 +495,7 @@ export function AiDetectorSection() {
 
   return (
     <>
-    <section className="relative py-20 text-slate-900">
+    <section id="detector" className="relative py-20 text-slate-900">
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <div className="mb-0 flex flex-col items-center gap-4 text-center">
           <Badge className="border-purple-200 bg-purple-50 text-xs uppercase tracking-[0.2em] text-purple-700">

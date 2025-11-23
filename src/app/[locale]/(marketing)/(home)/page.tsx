@@ -2,6 +2,7 @@ import { AiDetectorSection } from '@/components/detector/ai-detector-section';
 import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
 import Features3Section from '@/components/blocks/features/features3';
 import DetectionProcessSection from '@/components/blocks/detection-process';
+import { InlineCtaSection } from '@/components/blocks/inline-cta';
 import PricingSection from '@/components/blocks/pricing/pricing';
 import FaqSection from '@/components/blocks/faqs/faqs';
 import CallToActionSection from '@/components/blocks/calltoaction/calltoaction';
@@ -58,8 +59,14 @@ export default async function HomePage(props: HomePageProps) {
         {/* 2. 功能特性板块 - 左文右图，展示核心技术 */}
         <AiDetectorFeaturesSection />
 
+        {/* CTA after how-it-works */}
+        <InlineCtaSection />
+
         {/* 3. 使用场景板块 - 6个板块并列两行，展示AI检测器的应用场景 */}
         <Features3Section />
+
+        {/* CTA after use cases, before more tools */}
+        <InlineCtaSection />
 
         {/* 4. 工作流程板块 - 左图右文，展示3步检测过程 */}
         <DetectionProcessSection />

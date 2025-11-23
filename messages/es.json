@@ -856,6 +856,13 @@
       "tryNow": "Probar Ahora",
       "exploreAll": "Explorar Todas las Herramientas"
     },
+    "inlineCta": {
+      "title": "Prueba el detector de IA ahora mismo",
+      "description": "Pega tu texto o sube un archivo y obtén un informe claro en segundos.",
+      "primary": "Usar el detector de IA",
+      "secondary": "Ver planes"
+    },
+
     "features3": {
       "title": "Casos de uso del detector de IA",
       "subtitle": "Para quién es esta herramienta",
