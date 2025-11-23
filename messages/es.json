@@ -31,11 +31,11 @@
     "logoutFailed": "No se pudo cerrar sesión"
   },
   "PricingPage": {
-    "title": "Pricing",
-    "description": "Choose the plan that works best for you",
-    "subtitle": "Choose the plan that works best for you",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
+    "title": "Planes de precios del detector de IA",
+    "description": "Elige el plan de VeriIA que mejor se ajuste a tu forma de usar el detector de IA.",
+    "subtitle": "Planes flexibles para seguir analizando con nuestro detector de IA.",
+    "monthly": "Mensual",
+    "yearly": "Anual",
     "PricingCard": {
       "freePrice": "$0",
       "perMonth": "/month",
@@ -591,7 +591,7 @@
       }
     },
     "footer": {
-      "tagline": "Evalúa tus textos con nuestro detector de ia profesional: resultados claros, resaltados precisos y transparencia total",
+      "tagline": "VeriIA, tu detector de IA para textos profesionales: claridad, confianza y resultados al instante",
       "product": {
         "title": "Producto",
         "items": {
@@ -663,7 +663,7 @@
     "aiDetector": {
       "badge": "Haz que tus textos inspiren confianza",
       "title": "Detector de IA para contenido profesional",
-      "description": "Asegúrate de que cada informe, propuesta o mensaje mantenga la calidad, originalidad y transparencia que esperas, con una evaluación clara del posible uso de IA.",
+      "description": "Asegúrate de que cada informe, propuesta o mensaje mantenga la calidad, originalidad y transparencia que esperas con nuestro detector de IA, obteniendo una evaluación clara del posible uso de IA.",
       "uploadFile": "Subir archivo",
       "pasteUrl": "Pegar URL",
       "trySamples": "Probar muestras",
@@ -888,7 +888,7 @@
       }
     },
     "pricing": {
-      "title": "Planes de Precios",
+      "title": "Planes de precios del detector de IA",
       "subtitle": "Elige el plan perfecto para ti",
       "description": "Desde análisis gratuitos hasta soluciones empresariales, tenemos el plan adecuado para tus necesidades."
     },
