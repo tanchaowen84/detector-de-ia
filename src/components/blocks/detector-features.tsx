@@ -1,5 +1,6 @@
 import { HeaderSection } from '@/components/layout/header-section';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 
 const STEP_KEYS = ['step-1', 'step-2', 'step-3'] as const;
@@ -19,15 +20,15 @@ type Step = {
 
 const visualStyles: Record<StepKey, { gradient: string; accent: string }> = {
   'step-1': {
-    gradient: 'from-indigo-50 via-white to-purple-50',
+    gradient: 'from-indigo-50/60 via-white/80 to-purple-50/50',
     accent: 'bg-indigo-500/80',
   },
   'step-2': {
-    gradient: 'from-amber-50 via-white to-orange-50',
+    gradient: 'from-amber-50/60 via-white/80 to-orange-50/50',
     accent: 'bg-amber-500/80',
   },
   'step-3': {
-    gradient: 'from-emerald-50 via-white to-teal-50',
+    gradient: 'from-emerald-50/60 via-white/80 to-teal-50/50',
     accent: 'bg-emerald-500/80',
   },
 };
@@ -35,6 +36,21 @@ const visualStyles: Record<StepKey, { gradient: string; accent: string }> = {
 export default function AiDetectorFeaturesSection() {
   const t = useTranslations('HomePage.howItWorks');
   const locale = useLocale();
+
+  const stepImages: Record<StepKey, { src: string; alt: string }> = {
+    'step-1': {
+      src: 'https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/steps/step1.webp',
+      alt: t('steps.step-1.imageAlt'),
+    },
+    'step-2': {
+      src: 'https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/steps/step2.webp',
+      alt: t('steps.step-2.imageAlt'),
+    },
+    'step-3': {
+      src: 'https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/steps/step3.webp',
+      alt: t('steps.step-3.imageAlt'),
+    },
+  };
 
   return (
     <section id="how-it-works" className="relative py-20 text-slate-900">
@@ -61,38 +77,18 @@ export default function AiDetectorFeaturesSection() {
               >
                 <div
                   className={cn(
-                    'relative mb-6 flex h-56 w-full flex-col gap-4 rounded-2xl border border-slate-100 bg-gradient-to-b p-5 shadow-inner',
+                    'relative mb-6 flex h-56 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b shadow-inner',
                     visualStyles[key].gradient
                   )}
-                  role="img"
-                  aria-label={step.imageAlt}
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="h-3 w-10 rounded-full bg-white/70" />
-                    <span className="h-3 flex-1 rounded-full bg-white/40" />
-                    <span className="h-3 w-6 rounded-full bg-white/30" />
-                  </div>
-                  <div className="flex flex-1 flex-col justify-center gap-3">
-                    <div className="rounded-2xl border border-white/40 bg-white/80 p-4 shadow-md">
-                      <div className="mb-3 h-3 w-1/2 rounded-full bg-slate-200" />
-                      <div className="space-y-2">
-                        <div className="h-2 rounded-full bg-slate-300/80" />
-                        <div className="h-2 rounded-full bg-slate-300/60" />
-                        <div className="h-2 rounded-full bg-slate-300/40" />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-3 gap-2">
-                      {[0, 1, 2].map((pill) => (
-                        <span
-                          key={pill}
-                          className={cn(
-                            'h-2 rounded-full bg-white/60',
-                            pill === 0 && visualStyles[key].accent
-                          )}
-                        />
-                      ))}
-                    </div>
-                  </div>
+                  <Image
+                    src={stepImages[key].src}
+                    alt={stepImages[key].alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 360px"
+                    className="object-cover"
+                    priority={key === 'step-1'}
+                  />
                 </div>
 
                 <div className="flex flex-col gap-5 text-left">
