@@ -60,13 +60,13 @@ export default async function HomePage(props: HomePageProps) {
         <AiDetectorFeaturesSection />
 
         {/* CTA after how-it-works */}
-        <InlineCtaSection />
+        <InlineCtaSection variant="primary" />
 
         {/* 3. 使用场景板块 - 6个板块并列两行，展示AI检测器的应用场景 */}
         <Features3Section />
 
         {/* CTA after use cases, before more tools */}
-        <InlineCtaSection />
+        <InlineCtaSection variant="secondary" />
 
         {/* 4. 工作流程板块 - 左图右文，展示3步检测过程 */}
         <DetectionProcessSection />

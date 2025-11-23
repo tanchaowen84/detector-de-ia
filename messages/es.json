@@ -857,10 +857,18 @@
       "exploreAll": "Explorar Todas las Herramientas"
     },
     "inlineCta": {
-      "title": "Prueba el detector de IA ahora mismo",
-      "description": "Pega tu texto o sube un archivo y obtén un informe claro en segundos.",
-      "primary": "Usar el detector de IA",
-      "secondary": "Ver planes"
+      "primary": {
+        "title": "Tu primera detección con detector de ia",
+        "description": "Empieza en un clic y revisa lo marcado en menos de un minuto.",
+        "primary": "Probar detector de ia",
+        "secondary": "Ver planes"
+      },
+      "secondary": {
+        "title": "Verifica antes de entregar con detector de ia",
+        "description": "Evita falsos positivos, protege tu tono y entrega tu texto con confianza.",
+        "primary": "Comprobar mi texto",
+        "secondary": "Ver planes"
+      }
     },
 
     "features3": {

@@ -819,10 +819,18 @@
       }
     },
     "inlineCta": {
-      "title": "Try the AI detector right now",
-      "description": "Paste your text or upload a file and get a clear report in seconds.",
-      "primary": "Use the AI detector",
-      "secondary": "See plans"
+      "primary": {
+        "title": "Your first detection with the AI detector",
+        "description": "Start in one click and review the highlights in under a minute.",
+        "primary": "Try the AI detector",
+        "secondary": "See plans"
+      },
+      "secondary": {
+        "title": "Check before you submit with the AI detector",
+        "description": "Avoid false positives, protect your tone, and deliver with confidence.",
+        "primary": "Check my text",
+        "secondary": "See plans"
+      }
     },
 
     "features3": {
