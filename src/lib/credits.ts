@@ -302,7 +302,7 @@ async function getGuestRecord(ip: string, ua: string | null) {
   return { credits: rec.credits, resetAt: rec.resetAt, ipHash };
 }
 
-async function deductGuestCreditsDb(ip: string, ua: string | null, required: number): Promise<CreditCheckResult> {
+export async function deductGuestCreditsDb(ip: string, ua: string | null, required: number): Promise<CreditCheckResult> {
   if (required <= 0) return { ok: true, creditsLeft: 0 };
   const db = await getDb();
   const ipHash = hashIp(ip);
