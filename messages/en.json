@@ -679,9 +679,9 @@
       "detect": "Detect now",
       "analyzing": "Analyzing...",
       "samples": {
-        "iaEssay": "AI-generated essay",
-        "humanArticle": "Human-written article",
-        "mixedEmail": "Mixed email"
+        "iaEssay": "AI",
+        "humanArticle": "Human",
+        "mixedEmail": "Human + AI"
       },
       "sampleTexts": {
         "iaEssay": "This essay was generated with an AI model and uses filler phrases to build a narrative that sounds convincing but slightly repetitive. It leans on the same arguments, recycles connectors like \"on the other hand\" and avoids concrete details, resulting in a pleasant yet predictable structure. Use it to see how the detector behaves with clearly synthetic text and to view the sentence-level highlights.",

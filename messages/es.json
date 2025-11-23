@@ -679,9 +679,9 @@
       "detect": "Detectar ahora",
       "analyzing": "Analizando...",
       "samples": {
-        "iaEssay": "Ensayo generado por IA",
-        "humanArticle": "Artículo escrito a mano",
-        "mixedEmail": "Correo con partes mezcladas"
+        "iaEssay": "IA",
+        "humanArticle": "Humano",
+        "mixedEmail": "Humano + IA"
       },
       "sampleTexts": {
         "iaEssay": "Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como \"por otro lado\" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector frente a un texto claramente sintético y verificar la visualización de colores por oración.",
