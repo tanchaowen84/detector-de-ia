@@ -943,7 +943,7 @@ export function AiDetectorSection() {
 
     {/* Upgrade / Pricing Modal */}
     <Dialog open={showUpgradeModal} onOpenChange={setShowUpgradeModal}>
-      <DialogContent className="sm:max-w-5xl">
+      <DialogContent className="sm:max-w-4xl max-h-[82vh] overflow-y-auto pt-4">
         <DialogHeader>
           <DialogTitle className="text-2xl font-semibold text-slate-900">
             Sube de plan para seguir detectando
@@ -954,7 +954,7 @@ export function AiDetectorSection() {
           </DialogDescription>
         </DialogHeader>
         <div className="mt-2">
-          <PricingTable />
+          <PricingTable className="pb-4" />
         </div>
       </DialogContent>
     </Dialog>
