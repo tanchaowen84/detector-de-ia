@@ -25,6 +25,22 @@ import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
 import type { DetectAIContentResult } from '@/lib/winston';
+import { useSession } from '@/hooks/use-session';
+import { authClient } from '@/lib/auth-client';
+import { getUrlWithLocaleInCallbackUrl } from '@/lib/urls/urls';
+import { DEFAULT_LOGIN_REDIRECT } from '@/routes';
+import { useLocale } from 'next-intl';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { PricingTable } from '@/components/pricing/pricing-table';
+import { GoogleIcon } from '@/components/icons/google';
+import { GitHubIcon } from '@/components/icons/github';
 import {
   ClipboardPasteIcon,
   FingerprintIcon,
@@ -219,6 +235,8 @@ function GaugeArc({ value, t }: { value: number | null; t: TranslationFunction }
 
 export function AiDetectorSection() {
   const t = useTranslations('HomePage.aiDetector');
+  const session = useSession();
+  const locale = useLocale();
   const [text, setText] = useState('');
   const [result, setResult] = useState<DetectAIContentResult | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -232,6 +250,9 @@ export function AiDetectorSection() {
   const [websiteUrl, setWebsiteUrl] = useState<string | null>(null);
   const [websiteInput, setWebsiteInput] = useState('');
   const [isWebsitePopoverOpen, setIsWebsitePopoverOpen] = useState(false);
+  const [showGuestModal, setShowGuestModal] = useState(false);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const [socialLoading, setSocialLoading] = useState<'google' | 'github' | null>(null);
 
   const charCount = text.length;
   const hasReachedLimit = charCount >= MAX_CHARS;
@@ -367,6 +388,15 @@ export function AiDetectorSection() {
             response?.data?.error ?? t('errors.analysisFailed');
           setError(message);
           toast.error(message);
+
+          const errorCode = response?.data?.errorCode;
+          if (errorCode === 'INSUFFICIENT_CREDITS') {
+            if (session?.user) {
+              setShowUpgradeModal(true);
+            } else {
+              setShowGuestModal(true);
+            }
+          }
           return;
         }
 
@@ -442,7 +472,29 @@ export function AiDetectorSection() {
     textareaRef.current?.focus();
   };
 
+  const callbackUrl = getUrlWithLocaleInCallbackUrl(DEFAULT_LOGIN_REDIRECT, locale);
+  const handleSocialLogin = async (provider: 'google' | 'github') => {
+    try {
+      setSocialLoading(provider);
+      await authClient.signIn.social(
+        {
+          provider,
+          callbackURL: callbackUrl,
+          errorCallbackURL: Routes.AuthError,
+        },
+        {
+          onError: () => setSocialLoading(null),
+          onSuccess: () => setSocialLoading(null),
+        }
+      );
+    } catch (err) {
+      console.error('social login error', err);
+      setSocialLoading(null);
+    }
+  };
+
   return (
+    <>
     <section className="relative py-20 text-slate-900">
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         <div className="mb-0 flex flex-col items-center gap-4 text-center">
@@ -844,5 +896,68 @@ export function AiDetectorSection() {
         </div>
       </div>
     </section>
+
+    {/* Guest CTA Modal */}
+    <Dialog open={showGuestModal} onOpenChange={setShowGuestModal}>
+      <DialogContent className="sm:max-w-sm">
+        <DialogHeader>
+          <DialogTitle className="text-lg font-semibold text-slate-900">
+            {t('guestModal.title')}
+          </DialogTitle>
+          <DialogDescription className="text-slate-600">
+            {t('guestModal.subtitle')}
+          </DialogDescription>
+        </DialogHeader>
+        <div className="flex flex-col gap-3">
+          <Button
+            className="h-11 justify-center gap-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500"
+            onClick={() => handleSocialLogin('google')}
+            disabled={socialLoading === 'google'}
+          >
+            {socialLoading === 'google' ? (
+              <Loader2Icon className="size-4 animate-spin" />
+            ) : (
+              <GoogleIcon className="size-4" />
+            )}
+            {t('guestModal.google')}
+          </Button>
+          <Button
+            variant="outline"
+            className="h-11 justify-center gap-2 rounded-xl"
+            onClick={() => handleSocialLogin('github')}
+            disabled={socialLoading === 'github'}
+          >
+            {socialLoading === 'github' ? (
+              <Loader2Icon className="size-4 animate-spin" />
+            ) : (
+              <GitHubIcon className="size-4" />
+            )}
+            {t('guestModal.github')}
+          </Button>
+        </div>
+        <DialogFooter className="text-[11px] text-slate-400">
+          {t('guestModal.footer')}
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+
+    {/* Upgrade / Pricing Modal */}
+    <Dialog open={showUpgradeModal} onOpenChange={setShowUpgradeModal}>
+      <DialogContent className="sm:max-w-5xl">
+        <DialogHeader>
+          <DialogTitle className="text-2xl font-semibold text-slate-900">
+            Sube de plan para seguir detectando
+          </DialogTitle>
+          <DialogDescription className="text-slate-600">
+            Elige el plan que mejor se ajuste: Trial Pack para una recarga rápida, o Hobby / Pro
+            para límites más altos y soporte de archivos/URLs.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="mt-2">
+          <PricingTable />
+        </div>
+      </DialogContent>
+    </Dialog>
+    </>
   );
 }

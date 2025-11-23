@@ -739,6 +739,13 @@
         "uploadFailed": "We couldn't upload the file.",
         "invalidUrl": "Enter a valid URL that starts with https://",
         "noInputSource": "Add text, a file, or a URL to analyze."
+      },
+      "guestModal": {
+        "title": "Need more credits?",
+        "subtitle": "Continue with Google or GitHub and get +400 credits instantly.",
+        "google": "Continue with Google · +400",
+        "github": "Continue with GitHub",
+        "footer": "By continuing you accept our policies and terms."
       }
     },
     "aiDetectorFeatures": {

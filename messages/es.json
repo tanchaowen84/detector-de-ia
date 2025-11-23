@@ -739,6 +739,13 @@
         "uploadFailed": "No pudimos subir el archivo.",
         "invalidUrl": "Introduce una URL válida con https://",
         "noInputSource": "Agrega un texto, archivo o URL para analizar."
+      },
+      "guestModal": {
+        "title": "¿Necesitas más créditos?",
+        "subtitle": "Inicia con Google o GitHub y recibe +400 créditos al instante.",
+        "google": "Continuar con Google · +400",
+        "github": "Continuar con GitHub",
+        "footer": "Al continuar aceptas nuestras políticas y términos."
       }
     },
     "howItWorks": {
