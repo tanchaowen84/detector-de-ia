@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "name": "VeriIA",
-    "title": "VeriIA | Free, accurate AI detector for your texts",
+    "title": "VeriIA | AI detector for professional content",
     "description": "Use VeriIA to see if a text was written with AI. Clear results in seconds, no registration required."
   },
   "Common": {
@@ -746,6 +746,10 @@
         "google": "Continue with Google · +400",
         "github": "Continue with GitHub",
         "footer": "By continuing you accept our policies and terms."
+      },
+      "upgradeModal": {
+        "title": "Upgrade to keep detecting",
+        "description": "Pick the plan that fits you best: Trial for a quick top-up, or Hobby / Pro for higher limits and file/URL support."
       }
     },
     "aiDetectorFeatures": {

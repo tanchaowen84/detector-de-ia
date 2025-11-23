@@ -746,6 +746,10 @@
         "google": "Continuar con Google · +400",
         "github": "Continuar con GitHub",
         "footer": "Al continuar aceptas nuestras políticas y términos."
+      },
+      "upgradeModal": {
+        "title": "Sube de plan para seguir detectando",
+        "description": "Elige el plan que mejor se ajuste: Trial para recarga rápida, o Hobby / Pro para límites más altos y soporte de archivos/URLs."
       }
     },
     "howItWorks": {

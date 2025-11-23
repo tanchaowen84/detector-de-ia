@@ -946,11 +946,10 @@ export function AiDetectorSection() {
       <DialogContent className="sm:max-w-4xl max-h-[82vh] overflow-y-auto pt-4">
         <DialogHeader>
           <DialogTitle className="text-2xl font-semibold text-slate-900">
-            Sube de plan para seguir detectando
+            {t('upgradeModal.title')}
           </DialogTitle>
           <DialogDescription className="text-slate-600">
-            Elige el plan que mejor se ajuste: Trial Pack para una recarga rápida, o Hobby / Pro
-            para límites más altos y soporte de archivos/URLs.
+            {t('upgradeModal.description')}
           </DialogDescription>
         </DialogHeader>
         <div className="mt-2">
