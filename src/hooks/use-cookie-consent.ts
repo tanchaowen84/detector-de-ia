@@ -11,7 +11,8 @@ type ConsentState = {
  * Minimal hook to read cookieconsent categories on client.
  */
 export function useCookieConsent() {
-  const [state, setState] = useState<ConsentState>({ analytics: false, marketing: false });
+  // 默认视为已同意 analytics，保证埋点可工作；实际同意状态以 cookieconsent 读数为准
+  const [state, setState] = useState<ConsentState>({ analytics: true, marketing: false });
 
   useEffect(() => {
     const cc = (window as any).CookieConsent || (window as any).cookieconsent;

@@ -17,8 +17,8 @@ export function CookieConsentBanner() {
     // Avoid double init on HMR by reusing instance
     let cancelled = false;
     (async () => {
-      const lib = await import('vanilla-cookieconsent');
-      const cc: any = (lib as any).default ?? lib;
+      await import('vanilla-cookieconsent');
+      const cc: any = (window as any).initCookieConsent?.();
       if (cancelled || !cc || typeof cc.run !== 'function') return;
 
       if (ccRef.current) {
@@ -44,6 +44,7 @@ export function CookieConsentBanner() {
         currentLang: locale,
         autoclearCookies: false,
         page_scripts: false, // we gate scripts manually
+        revision: 1, // bump to force re-consent when config changes
         languages: {
           [locale]: {
             consentModal: {
@@ -87,7 +88,7 @@ export function CookieConsentBanner() {
             autoClear: {
               cookies: [],
             },
-            enabled: false,
+            enabled: true, // 默认允许 analytics，确保埋点生效
           },
           marketing: {
             autoClear: {
