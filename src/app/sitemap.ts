@@ -17,15 +17,10 @@ function getEnabledStaticRoutes(): string[] {
     '/',
     '/pricing',
     '/blog',
-    '/about',
-    '/contact',
-    '/waitlist',
-    '/changelog',
     '/privacy',
     '/terms',
     '/cookie',
-    '/auth/login',
-    '/auth/register',
+    '/refund'
   ];
 
   // 条件性添加页面路由
