@@ -99,7 +99,7 @@ export function DetectionHistoryTable({ items, total }: DetectionHistoryTablePro
                   </TableCell>
                   <TableCell>
                     <Badge className={sourceBadgeVariants[item.sourceType] ?? 'bg-slate-100 text-slate-700'}>
-                      {t(`table.source.${item.sourceType}`)}
+                      {t(`table.source.${item.sourceType}` as any)}
                     </Badge>
                   </TableCell>
                   <TableCell>

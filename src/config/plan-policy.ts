@@ -1,3 +1,5 @@
+import { PlanIntervals } from '@/payment/types';
+
 export type PlanId = 'guest' | 'free' | 'trial' | 'hobby' | 'pro' | 'lifetime';
 
 export type PlanPolicy = {

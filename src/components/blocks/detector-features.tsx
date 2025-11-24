@@ -64,7 +64,7 @@ export default function AiDetectorFeaturesSection() {
 
         <div className="grid grid-cols-1 gap-8 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
           {STEP_KEYS.map((key) => {
-            const step = t.raw(`steps.${key}`) as Step;
+            const step = t.raw((`steps.${key}` as any)) as Step;
             let items = step.items ?? [];
             if (items.length > 3) {
               // 防止回退合并导致的多语言重复，按当前语言截取

@@ -1,7 +1,7 @@
 import { getDb } from '@/db';
 import { detections } from '@/db/schema';
 import { and, desc, eq, sql } from 'drizzle-orm';
-import type { DetectionSentence } from '@/types/detections';
+import type { DetectionSentence } from '@/db/schema';
 
 export type DetectionSourceType = 'text' | 'file' | 'url';
 
@@ -22,7 +22,7 @@ export async function getUserDetectionsSummary({
 
   let whereClause = eq(detections.userId, userId);
   if (sourceType) {
-    whereClause = and(whereClause, eq(detections.sourceType, sourceType));
+    whereClause = and(whereClause, eq(detections.sourceType, sourceType))!;
   }
 
   const offset = page * pageSize;

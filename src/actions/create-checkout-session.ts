@@ -71,13 +71,15 @@ export const createCheckoutAction = actionClient
       const isOneTime = plan.prices.find((p) => p.priceId === priceId)?.type === 'one_time';
 
       // Add user id to metadata, so we can get it in the webhook event
-      const customMetadata = {
+      const customMetadata: Record<string, string> = {
         ...metadata,
         userId: session.user.id,
-        userName: session.user.name,
+        userName: session.user.name ?? '',
         planId: plan.id,
         productType: isOneTime ? 'credits' : 'subscription',
-        credits: isOneTime ? `${planPolicy.oneTimeCredits ?? 0}` : undefined,
+        ...(isOneTime && planPolicy.oneTimeCredits
+          ? { credits: String(planPolicy.oneTimeCredits) }
+          : {}),
       };
 
       // Create the checkout session with localized URLs

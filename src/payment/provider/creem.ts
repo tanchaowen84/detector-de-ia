@@ -87,7 +87,7 @@ export class CreemProvider implements PaymentProvider {
       if (!userRow.length) return;
 
       const metadata = (userRow[0].metadata as Record<string, any> | null) ?? {};
-      const nextMetadata = { ...metadata, planId: plan.id };
+      const nextMetadata: Record<string, any> = { ...metadata, planId: plan.id };
       let credits = userRow[0].credits ?? 0;
 
       if (plan.monthlyCredits) {

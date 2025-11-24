@@ -126,8 +126,8 @@ export const detectAIContentAction = actionClient
 
       // Deduct credits
       if (planContext.isGuest) {
-        const ip = getClientIp();
-        const ua = headers().get('user-agent');
+        const ip = await getClientIp();
+        const ua = (await headers()).get('user-agent');
         const deduction = await (async () => {
           const res = await import('@/lib/credits');
           // use db-based guest deduction

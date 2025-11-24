@@ -16,7 +16,7 @@ export default function HowItWorksSection() {
           title={t('title')}
           subtitle={t('subtitle')}
           subtitleAs="p"
-          description={t('description')}
+          description={t('description' as any)}
           descriptionAs="p"
         />
 
@@ -25,7 +25,7 @@ export default function HowItWorksSection() {
             <ul className="divide-y border-y *:flex *:items-start *:gap-4 *:py-4">
               {[1, 2, 3].map((num) => {
                 const key = `step-${num}` as const;
-                const step = t.raw(`steps.${key}`) as {
+                const step = t.raw((`steps.${key}` as any)) as {
                   label: string;
                   items: { title: string; description: string }[];
                 };
@@ -73,7 +73,7 @@ export default function HowItWorksSection() {
         <div className="mt-12 text-center">
           <Button asChild size="lg" className="gap-2">
             <LocaleLink href="/canvas">
-              {t('getStarted')}
+              {t('getStarted' as any)}
               <ChevronRight className="!size-4" />
             </LocaleLink>
           </Button>

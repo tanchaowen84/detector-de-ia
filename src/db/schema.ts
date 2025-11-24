@@ -1,12 +1,12 @@
 import { boolean, pgTable, text, timestamp, integer, jsonb, doublePrecision } from "drizzle-orm/pg-core";
 
-type DetectionSentence = {
+export type DetectionSentence = {
 	text: string;
 	score: number;
 	length?: number;
 };
 
-type DetectionAttackDetected = {
+export type DetectionAttackDetected = {
 	[key: string]: boolean | undefined;
 };
 

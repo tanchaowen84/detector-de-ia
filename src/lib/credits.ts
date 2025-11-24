@@ -39,8 +39,8 @@ export function estimateWordsFromChars(chars: number | null | undefined): number
   return Math.max(1, Math.ceil(chars / FIVE_CHARS_AVG_WORD));
 }
 
-export function getClientIp(): string {
-  const h = headers();
+export async function getClientIp(): Promise<string> {
+  const h = await headers();
   const xfwd = h.get('x-forwarded-for');
   if (xfwd) return xfwd.split(',')[0]?.trim() || 'unknown';
   const realIp = h.get('x-real-ip');
@@ -96,8 +96,8 @@ export async function resolvePlanForUser(session: Session | null): Promise<PlanP
 export async function loadUserPlanContext(session: Session | null): Promise<PlanContext> {
   if (!session?.user) {
     const plan = getPlanPolicy('guest');
-    const ip = getClientIp();
-    const ua = headers().get('user-agent');
+    const ip = await getClientIp();
+    const ua = (await headers()).get('user-agent');
     const rec = await getGuestRecord(ip, ua);
     return { plan, credits: rec.credits, metadata: { resetAt: rec.resetAt?.toISOString?.() }, isGuest: true };
   }
