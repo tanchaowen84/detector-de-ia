@@ -577,23 +577,6 @@ export class CreemProvider implements PaymentProvider {
     if (order.type === 'one_time') {
       // Handle one-time purchase
       await createOrUpdatePaymentFromCreemOrder(tx, order, userId);
-
-      // Add credits if this is a credits purchase
-      if (
-        order.metadata?.product_type === 'credits' &&
-        order.metadata?.credits
-      ) {
-        const creditsAmount = Number(order.metadata.credits);
-        if (creditsAmount > 0) {
-          await addCreditsToUser(
-            tx,
-            userId,
-            creditsAmount,
-            order.id,
-            `Credits purchase from order ${order.id}`
-          );
-        }
-      }
     } else if (order.type === 'recurring' && checkout.subscription) {
       // Handle subscription
       await createOrUpdatePaymentFromCreemSubscription(
@@ -610,25 +593,6 @@ export class CreemProvider implements PaymentProvider {
         ? order.product
         : (order.product as any)?.id;
     await this.syncPlanCredits(tx, userId, priceId);
-
-    // Also handle checkout-level credits (fallback for old implementations)
-    // Only process if we haven't already processed credits at order level
-    if (
-      order.type !== 'one_time' && // Avoid double processing for one-time orders
-      checkout.metadata?.product_type === 'credits' &&
-      checkout.metadata?.credits
-    ) {
-      const creditsAmount = Number(checkout.metadata.credits);
-      if (creditsAmount > 0) {
-        await addCreditsToUser(
-          tx,
-          userId,
-          creditsAmount,
-          checkout.order.id,
-          `Purchased ${creditsAmount} credits`
-        );
-      }
-    }
 
     console.log(`✅ Checkout completion processed for user ${userId}`);
   }

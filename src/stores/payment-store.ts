@@ -93,6 +93,14 @@ export const usePaymentStore = create<PaymentState>((set, get) => ({
 
       const creditsInfo = await computeCredits(plan, user.id);
 
+      // If there is no active subscription (e.g., one-time Trial Pack), use the plan hinted by credits API
+      if (!activeSubscription && creditsInfo.resolvedPlanId) {
+        const hintedPlan = plans.find((p) => p.id === creditsInfo.resolvedPlanId);
+        if (hintedPlan) {
+          plan = hintedPlan;
+        }
+      }
+
       set({
         currentPlan: plan,
         subscription: activeSubscription || null,
@@ -139,7 +147,7 @@ async function computeCredits(plan: PricePlan | null, _userId: string) {
     }
     const json = (await res.json()) as {
       success: boolean;
-      data?: { credits: number; metadata: Record<string, any> };
+      data?: { credits: number; metadata: Record<string, any>; planId?: string };
     };
     if (!json.success || !json.data) {
       return {
@@ -150,14 +158,21 @@ async function computeCredits(plan: PricePlan | null, _userId: string) {
     }
     const credits = json.data.credits ?? 0;
     const metadata = (json.data.metadata as any) || {};
-    const policy = plan
+
+    // Prefer planId from credits API/metadata when available (handles one-time packs like Trial)
+    let policy = plan
       ? getPlanPolicy(plan.id)
-      : getPlanPolicy(metadata.planId || 'free');
+      : getPlanPolicy(metadata.planId || json.data.planId || 'free');
+
+    // If current plan looks free but credits hint a different plan, adopt it
+    if (plan?.isFree && (metadata.planId || json.data.planId)) {
+      policy = getPlanPolicy((metadata.planId || json.data.planId) as string);
+    }
 
     const total =
-      policy.monthlyCredits ??
-      policy.oneTimeCredits ??
       metadata.oneTimeCredits ??
+      policy.oneTimeCredits ??
+      policy.monthlyCredits ??
       credits;
     const resetAt = metadata.creditsResetAt
       ? new Date(metadata.creditsResetAt)
@@ -167,13 +182,15 @@ async function computeCredits(plan: PricePlan | null, _userId: string) {
       creditsRemaining: credits,
       creditsTotal: total,
       creditsResetAt: resetAt,
+      resolvedPlanId: policy.id,
     };
   } catch (error) {
     console.error('computeCredits error', error);
-    return {
-      creditsRemaining: null,
-      creditsTotal: null,
-      creditsResetAt: null,
-    };
+      return {
+        creditsRemaining: null,
+        creditsTotal: null,
+        creditsResetAt: null,
+        resolvedPlanId: null,
+      };
   }
 }
