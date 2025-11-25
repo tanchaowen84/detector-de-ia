@@ -198,8 +198,8 @@ export function PlagiarismDetector() {
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <Card className="border-slate-100 bg-white/95 shadow-lg">
+        <div className="grid gap-6 lg:grid-cols-2 items-stretch">
+          <Card className="border-slate-100 bg-white/95 shadow-lg flex-shrink-0 min-w-[340px] h-full">
             <CardHeader className="pb-2">
               <CardTitle className="text-lg font-semibold text-slate-800">
                 {t('input.title')}
@@ -300,9 +300,8 @@ export function PlagiarismDetector() {
                   setSources(null);
                   setError(null);
                 }}
-                rows={10}
                 placeholder={t('input.placeholder')}
-                className="min-h-[240px] resize-none border-slate-200 bg-white/90"
+                className="h-64 resize-none border-slate-200 bg-white/90 overflow-auto"
               />
               {error && <p className="text-sm text-rose-500">{error}</p>}
 
@@ -333,7 +332,7 @@ export function PlagiarismDetector() {
             </CardContent>
           </Card>
 
-          <Card className="border-slate-100 bg-white/95 shadow-lg">
+          <Card className="border-slate-100 bg-white/95 shadow-lg min-w-[360px] h-full">
             <CardHeader className="pb-2">
               <CardTitle className="text-lg font-semibold text-slate-800 flex items-center gap-2">
                 {t('results.title')}
@@ -372,7 +371,7 @@ export function PlagiarismDetector() {
                   <span className="text-xs">{sources?.length ?? 0} {t('results.count')}</span>
                 </div>
                 {sources?.length ? (
-                  <div className="space-y-3 max-h-72 overflow-auto pr-1">
+                  <div className="space-y-3 max-h-[360px] overflow-auto pr-1">
                     {sources.map((src, idx) => (
                       <div key={idx} className="rounded-xl border border-slate-200 p-3 bg-slate-50/80">
                         <div className="flex items-center justify-between gap-2 text-sm font-semibold text-slate-800">
