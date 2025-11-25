@@ -23,11 +23,6 @@ export function getFooterLinks(): NestedMenuItem[] {
       title: t('product.title'),
       items: [
         {
-          title: t('product.items.features'),
-          href: Routes.Features,
-          external: false,
-        },
-        {
           title: t('product.items.plagiarism'),
           href: Routes.PlagiarismDetector,
           external: false,

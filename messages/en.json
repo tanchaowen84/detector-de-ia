@@ -736,12 +736,11 @@
       "product": {
         "title": "Product",
         "items": {
-          "features": "Features",
           "plagiarism": "Plagiarism checker",
           "textCompare": "Text compare",
           "wordCounter": "Word counter",
-          "pricing": "Pricing",
-          "faq": "FAQ"
+          "pricing": "",
+          "faq": ""
         }
       },
       "resources": {

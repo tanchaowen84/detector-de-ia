@@ -736,12 +736,11 @@
       "product": {
         "title": "Producto",
         "items": {
-          "features": "Funciones",
           "plagiarism": "Detector de plagio",
           "textCompare": "Comparador de textos",
           "wordCounter": "Contador de palabras",
-          "pricing": "Precios",
-          "faq": "Preguntas frecuentes"
+          "pricing": "",
+          "faq": ""
         }
       },
       "resources": {
