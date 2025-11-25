@@ -7,6 +7,7 @@ import { LocaleLink } from '@/i18n/navigation';
 import { Routes } from '@/routes';
 import { useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import { DeleteButton } from './delete-button';
 
 export type DetectionSummaryItem = {
   id: string;
@@ -26,6 +27,7 @@ export type DetectionSummaryItem = {
 interface DetectionHistoryTableProps {
   items: DetectionSummaryItem[];
   total: number;
+  onDelete?: (id: string) => void;
 }
 
 const sourceBadgeVariants: Record<string, string> = {
@@ -41,7 +43,7 @@ function formatDateTime(date: Date, locale: string) {
   }).format(date);
 }
 
-export function DetectionHistoryTable({ items, total }: DetectionHistoryTableProps) {
+export function DetectionHistoryTable({ items, total, onDelete }: DetectionHistoryTableProps) {
   const router = useRouter();
   const t = useTranslations("Dashboard.history");
   const locale = useLocale();
@@ -66,18 +68,19 @@ export function DetectionHistoryTable({ items, total }: DetectionHistoryTablePro
       ) : (
         <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
           <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>{t('table.columns.input')}</TableHead>
-                <TableHead>{t('table.columns.source')}</TableHead>
-                <TableHead>{t('table.columns.score')}</TableHead>
-                <TableHead>{t('table.columns.language')}</TableHead>
-                <TableHead>{t('table.columns.date')}</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {items.map((item) => (
-                <TableRow
+        <TableHeader>
+          <TableRow>
+            <TableHead>{t('table.columns.input')}</TableHead>
+            <TableHead>{t('table.columns.source')}</TableHead>
+            <TableHead>{t('table.columns.score')}</TableHead>
+            <TableHead>{t('table.columns.language')}</TableHead>
+            <TableHead>{t('table.columns.date')}</TableHead>
+            <TableHead></TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {items.map((item) => (
+            <TableRow
                   key={item.id}
                   className="text-sm cursor-pointer transition duration-150 hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-200"
                   onClick={() => router.push(`/dashboard/detections/${item.id}`)}
@@ -114,20 +117,24 @@ export function DetectionHistoryTable({ items, total }: DetectionHistoryTablePro
                     <div className="text-slate-900">{item.language?.toUpperCase() ?? '--'}</div>
                     <p className="text-xs text-slate-400">{item.version ?? '—'}</p>
                   </TableCell>
-                  <TableCell>
-                    <div className="text-slate-900">
-                      {formatDateTime(item.createdAt, locale)}
-                    </div>
-                    <p className="text-xs text-slate-400">
-                      {item.length
-                        ? t('table.characters', { value: item.length })
-                        : t('table.charactersUnknown')}
-                    </p>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              <TableCell>
+                <div className="text-slate-900">
+                  {formatDateTime(item.createdAt, locale)}
+                </div>
+                <p className="text-xs text-slate-400">
+                  {item.length
+                    ? t('table.characters', { value: item.length })
+                    : t('table.charactersUnknown')}
+                </p>
+              </TableCell>
+              <TableCell>
+                {/* Delete action handled by parent via onDelete prop */}
+                <DeleteButton id={item.id} label={t('table.delete')} className="text-rose-600 hover:text-rose-700" />
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
         </div>
       )}
     </div>

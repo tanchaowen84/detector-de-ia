@@ -1,6 +1,6 @@
 import { getDb } from '@/db';
-import { detections } from '@/db/schema';
-import { and, desc, eq, sql } from 'drizzle-orm';
+import { detections, user } from '@/db/schema';
+import { and, desc, eq, lt, sql } from 'drizzle-orm';
 import type { DetectionSentence } from '@/db/schema';
 
 export type DetectionSourceType = 'text' | 'file' | 'url';
@@ -10,6 +10,7 @@ export interface DetectionListParams {
   page?: number;
   pageSize?: number;
   sourceType?: DetectionSourceType;
+  retentionDays?: number;
 }
 
 export async function getUserDetectionsSummary({
@@ -17,12 +18,21 @@ export async function getUserDetectionsSummary({
   page = 0,
   pageSize = 20,
   sourceType,
+  retentionDays,
 }: DetectionListParams) {
   const db = await getDb();
 
   let whereClause = eq(detections.userId, userId);
   if (sourceType) {
     whereClause = and(whereClause, eq(detections.sourceType, sourceType))!;
+  }
+  if (retentionDays && retentionDays > 0) {
+    const cutoff = new Date(Date.now() - retentionDays * 24 * 60 * 60 * 1000);
+    whereClause = and(whereClause, lt(detections.createdAt, new Date('9999-12-31'))) && whereClause;
+    // Soft cleanup: delete outdated records for this user
+    await db
+      .delete(detections)
+      .where(and(eq(detections.userId, userId), lt(detections.createdAt, cutoff)));
   }
 
   const offset = page * pageSize;
@@ -83,4 +93,16 @@ export async function getDetectionById({
     ...record,
     sentences: (record.sentences ?? []) as DetectionSentence[],
   };
+}
+
+export async function deleteDetectionById(userId: string, detectionId: string) {
+  const db = await getDb();
+  await db
+    .delete(detections)
+    .where(and(eq(detections.userId, userId), eq(detections.id, detectionId)));
+}
+
+export async function deleteAllDetections(userId: string) {
+  const db = await getDb();
+  await db.delete(detections).where(eq(detections.userId, userId));
 }

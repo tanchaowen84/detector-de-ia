@@ -285,6 +285,13 @@
       "breadcrumbs": {
         "history": "Historial de detecciones"
       },
+      "clearAll": "Eliminar todo el historial",
+      "retention": {
+        "label": "Tiempo de retención",
+        "option30": "30 días",
+        "option90": "90 días",
+        "save": "Guardar"
+      },
       "table": {
         "columns": {
           "input": "Contenido",
@@ -302,7 +309,8 @@
         "sentences": "oraciones",
         "unknownInput": "Sin vista previa",
         "characters": "{value} caracteres",
-        "charactersUnknown": "Caracteres desconocidos"
+        "charactersUnknown": "Caracteres desconocidos",
+        "delete": "Eliminar"
       },
       "empty": {
         "title": "Aún no tienes detecciones",

@@ -285,6 +285,13 @@
       "breadcrumbs": {
         "history": "Detection history"
       },
+      "clearAll": "Delete all history",
+      "retention": {
+        "label": "Retention period",
+        "option30": "30 days",
+        "option90": "90 days",
+        "save": "Save"
+      },
       "table": {
         "columns": {
           "input": "Content",
@@ -302,7 +309,8 @@
         "sentences": "sentences",
         "unknownInput": "No preview available",
         "characters": "{value} characters",
-        "charactersUnknown": "Characters unknown"
+        "charactersUnknown": "Characters unknown",
+        "delete": "Delete"
       },
       "empty": {
         "title": "No detections yet",
