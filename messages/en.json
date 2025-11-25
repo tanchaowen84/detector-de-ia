@@ -54,6 +54,35 @@
       "checkoutFailed": "Failed to open checkout page"
     }
   },
+  "WordCounterPage": {
+    "metadata": {
+      "title": "Word & Character Counter | VeriIA",
+      "description": "Count words, characters, sentences, and paragraphs in real time. Free and credit-free."
+    },
+    "hero": {
+      "badge": "Free tool",
+      "title": "Word & character counter",
+      "subtitle": "Paste your text and get instant metrics: words, characters, sentences, and reading time.",
+      "placeholder": "Type or paste your text here...",
+      "clear": "Clear",
+      "copied": "Copied",
+      "copy": "Copy"
+    },
+    "stats": {
+      "title": "Metrics",
+      "words": "Words",
+      "characters": "Characters (with spaces)",
+      "charactersNoSpaces": "Characters (no spaces)",
+      "sentences": "Sentences",
+      "paragraphs": "Paragraphs",
+      "readingTime": "Estimated reading time",
+      "minutes": "≈ {value} min"
+    },
+    "footer": {
+      "privacy": "Your text never leaves the browser; counting happens locally.",
+      "free": "No credits consumed, no account required."
+    }
+  },
   "PricePlans": {
     "trial": {
       "name": "Trial",
@@ -1015,7 +1044,7 @@
     },
     "relatedTools": {
       "title": "Not just an AI detector: more tools for your text",
-      "subtitle": "Combine the detector with plagiarism, summarizer, and humanizer tools to control quality, credibility, and readability.",
+      "subtitle": "Combine the detector with plagiarism, text compare, and word counter tools to control quality, credibility, and length.",
       "description": "Explore our toolkit built to improve the quality, credibility, and originality of your content.",
       "tools": {
         "plagiarism": {
@@ -1023,12 +1052,12 @@
           "description": "Scan billions of sources to confirm your work is original and ready to publish."
         },
         "summarizer": {
-          "title": "Text summarizer",
-          "description": "Turn long texts into concise, clear summaries while keeping the key points."
+          "title": "Text compare",
+          "description": "Drop in two texts to get a similarity score in seconds. Spot reuse, differences, and consistency across versions."
         },
         "humanizer": {
-          "title": "AI humanizer",
-          "description": "Polish AI-generated text into natural, human-sounding language that fits your brand voice."
+          "title": "Word counter",
+          "description": "Count words, characters, and sentences instantly. Perfect for meeting length limits or SEO snippets."
         }
       },
       "tryNow": "Try now",

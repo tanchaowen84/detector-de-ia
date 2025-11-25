@@ -74,7 +74,7 @@ export default function DetectionProcessSection() {
                 className="gap-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-300 rounded-full"
                 asChild
               >
-                <LocaleLink href="/text-summarizer">
+                <LocaleLink href="/text-compare">
                   {t('tryNow')}
                   <ChevronRight className="!size-4" />
                 </LocaleLink>
@@ -100,7 +100,7 @@ export default function DetectionProcessSection() {
                 className="gap-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-300 rounded-full"
                 asChild
               >
-                <LocaleLink href="/ai-humanizer">
+                <LocaleLink href="/word-counter">
                   {t('tryNow')}
                   <ChevronRight className="!size-4" />
                 </LocaleLink>

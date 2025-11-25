@@ -54,6 +54,35 @@
       "checkoutFailed": "Failed to open checkout page"
     }
   },
+  "WordCounterPage": {
+    "metadata": {
+      "title": "Contador de palabras y caracteres | VeriIA",
+      "description": "Cuenta palabras, caracteres, oraciones y párrafos en tiempo real. Gratis y sin usar créditos."
+    },
+    "hero": {
+      "badge": "Herramienta gratuita",
+      "title": "Contador de palabras y caracteres",
+      "subtitle": "Pega tu texto y obtén métricas al instante: palabras, caracteres, oraciones y tiempo de lectura.",
+      "placeholder": "Escribe o pega tu texto aquí...",
+      "clear": "Limpiar",
+      "copied": "Copiado",
+      "copy": "Copiar"
+    },
+    "stats": {
+      "title": "Métricas",
+      "words": "Palabras",
+      "characters": "Caracteres (con espacios)",
+      "charactersNoSpaces": "Caracteres (sin espacios)",
+      "sentences": "Oraciones",
+      "paragraphs": "Párrafos",
+      "readingTime": "Tiempo de lectura aprox.",
+      "minutes": "≈ {value} min"
+    },
+    "footer": {
+      "privacy": "Tu texto no se envía a ningún servidor; el conteo se hace en tu navegador.",
+      "free": "No consume créditos ni requiere cuenta."
+    }
+  },
   "PricePlans": {
     "trial": {
       "name": "Trial",
@@ -837,7 +866,7 @@
     },
     "relatedTools": {
       "title": "No solo un detector de IA: más herramientas para tus textos",
-      "subtitle": "Combina el detector de ia con herramientas de plagio, resumen y humanización para controlar de una vez la calidad, credibilidad y legibilidad de tu contenido.",
+      "subtitle": "Combina el detector de IA con herramientas de plagio, comparación de textos y conteo para controlar calidad, credibilidad y extensión.",
       "description": "Explora nuestro conjunto de herramientas diseñadas para mejorar la calidad, credibilidad y originalidad de tu contenido.",
       "tools": {
         "plagiarism": {
@@ -845,12 +874,12 @@
           "description": "Evita la duplicación involuntaria. Nuestro comprobador de plagio escanea miles de millones de fuentes para confirmar que tu trabajo es original y está listo para publicarse."
         },
         "summarizer": {
-          "title": "Resumidor de Textos",
-          "description": "Transforma textos largos en resúmenes concisos y claros. Ahorra tiempo extrayendo los puntos clave de cualquier documento mientras mantienes la esencia del contenido."
+          "title": "Comparador de textos",
+          "description": "Coloca dos textos y obten una similitud en segundos. Detecta reuso, diferencias y coherencia entre versiones sin salir del flujo."
         },
         "humanizer": {
-          "title": "Humanizador de IA",
-          "description": "Refina el texto generado por IA en un lenguaje claro y natural que parezca humano, que resuene con los lectores y refleje la voz de tu marca."
+          "title": "Contador de palabras",
+          "description": "Calcula palabras, caracteres y frases al instante. Ideal para limitar extensiones, meta descripciones o requisitos académicos."
         }
       },
       "tryNow": "Probar Ahora",

@@ -62,6 +62,11 @@ export enum Routes {
   SignupBlocks = '/blocks/sign-up',
   ForgotPasswordBlocks = '/blocks/forgot-password',
   ContactBlocks = '/blocks/contact',
+
+  // tools pages
+  PlagiarismDetector = '/plagiarism-detector',
+  TextCompare = '/text-compare',
+  WordCounter = '/word-counter',
 }
 
 /**
