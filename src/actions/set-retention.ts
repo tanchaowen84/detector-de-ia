@@ -10,7 +10,7 @@ import { z } from 'zod';
 const actionClient = createSafeActionClient();
 
 const schema = z.object({
-  retentionDays: z.enum(['30', '90']),
+  retentionDays: z.enum(['0', '30', '90']),
 });
 
 export const setRetentionAction = actionClient

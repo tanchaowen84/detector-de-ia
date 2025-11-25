@@ -288,6 +288,7 @@
       "clearAll": "Eliminar todo el historial",
       "retention": {
         "label": "Tiempo de retención",
+        "option0": "No guardar historial",
         "option30": "30 días",
         "option90": "90 días",
         "save": "Guardar"

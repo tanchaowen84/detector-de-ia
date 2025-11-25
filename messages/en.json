@@ -288,6 +288,7 @@
       "clearAll": "Delete all history",
       "retention": {
         "label": "Retention period",
+        "option0": "Do not save history",
         "option30": "30 days",
         "option90": "90 days",
         "save": "Save"
