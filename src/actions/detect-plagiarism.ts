@@ -128,7 +128,7 @@ export const detectPlagiarismAction = actionClient
         availableCredits = deduction.creditsLeft;
       }
 
-      if (session?.user?.id && activePlan.saveHistory) {
+      if (session?.user?.id && activePlan.saveHistory && planContext.metadata?.retentionDays !== 0) {
         const topSources =
           result.sources?.slice(0, 5).map((src) => ({
             score: src.score,

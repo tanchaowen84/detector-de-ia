@@ -167,7 +167,7 @@ export const detectAIContentAction = actionClient
         availableCredits = deduction.creditsLeft;
       }
 
-      if (session?.user?.id && activePlan.saveHistory) {
+      if (session?.user?.id && activePlan.saveHistory && planContext.metadata?.retentionDays !== 0) {
         const sourceTypeComputed = parsedInput.websiteUrl
           ? 'url'
           : parsedInput.fileUrl
