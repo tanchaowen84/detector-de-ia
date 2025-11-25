@@ -28,6 +28,7 @@ export function TextCompare() {
   const [textB, setTextB] = useState('');
   const [parts, setParts] = useState<DiffPart[] | null>(null);
   const [isComparing, setIsComparing] = useState(false);
+  const resultsRef = useRef<HTMLDivElement | null>(null);
 
   const fileInputARef = useRef<HTMLInputElement | null>(null);
   const fileInputBRef = useRef<HTMLInputElement | null>(null);
@@ -59,6 +60,9 @@ export function TextCompare() {
       const diff = diffWords(textA, textB);
       setParts(diff);
       toast.success(t('success'));
+      requestAnimationFrame(() => {
+        resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     } catch (error) {
       console.error('diff error', error);
       toast.error(t('errors.generic'));
@@ -165,6 +169,7 @@ export function TextCompare() {
           </div>
         </div>
 
+        <div ref={resultsRef}>
         <Card className="border-slate-100 bg-white/95 shadow-lg">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-semibold text-slate-800 flex items-center gap-3">
@@ -200,6 +205,7 @@ export function TextCompare() {
             )}
           </CardContent>
         </Card>
+        </div>
       </div>
     </section>
   );
