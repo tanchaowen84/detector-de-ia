@@ -83,6 +83,50 @@
       "free": "No credits consumed, no account required."
     }
   },
+  "TextComparePage": {
+    "metadata": {
+      "title": "Text Compare | VeriIA",
+      "description": "Compare two texts in seconds with highlighted differences."
+    },
+    "hero": {
+      "badge": "Comparator",
+      "title": "Compare two texts instantly",
+      "subtitle": "Paste versions A and B, hit compare, and see additions and removals highlighted.",
+      "loading": "Comparing..."
+    },
+    "input": {
+      "original": "Original text",
+      "changed": "Changed text",
+      "placeholderA": "Paste the original text here...",
+      "placeholderB": "Paste the changed text here..."
+    },
+    "controls": {
+      "compare": "Compare text",
+      "swap": "Swap",
+      "clear": "Clear"
+    },
+    "errors": {
+      "missing": "Add both texts to compare",
+      "generic": "We couldn't compare the texts. Please try again.",
+      "fileNotSupported": "Only text files (.txt, .md) are supported",
+      "fileRead": "Unable to read the file"
+    },
+    "success": "Comparison ready",
+    "stats": {
+      "wordsA": "Text A: {value} words",
+      "wordsB": "Text B: {value} words"
+    },
+    "results": {
+      "title": "Differences",
+      "subtitle": "We highlight what was removed and added",
+      "summary": "{additions} additions · {removals} removals",
+      "removals": "Removals",
+      "additions": "Additions",
+      "noRemovals": "No removals found",
+      "noAdditions": "No additions found",
+      "placeholder": "Press \"Compare text\" to see differences"
+    }
+  },
   "PricePlans": {
     "trial": {
       "name": "Trial",

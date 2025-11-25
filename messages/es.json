@@ -83,6 +83,50 @@
       "free": "No consume créditos ni requiere cuenta."
     }
   },
+  "TextComparePage": {
+    "metadata": {
+      "title": "Comparador de textos | VeriIA",
+      "description": "Compara dos textos en segundos con diferencias resaltadas."
+    },
+    "hero": {
+      "badge": "Comparador",
+      "title": "Compara dos textos al instante",
+      "subtitle": "Pega tus versiones A y B, pulsa comparar y mira las adiciones y eliminaciones resaltadas.",
+      "loading": "Comparando..."
+    },
+    "input": {
+      "original": "Texto original",
+      "changed": "Texto modificado",
+      "placeholderA": "Pega aquí el texto original...",
+      "placeholderB": "Pega aquí el texto modificado..."
+    },
+    "controls": {
+      "compare": "Comparar texto",
+      "swap": "Intercambiar",
+      "clear": "Limpiar"
+    },
+    "errors": {
+      "missing": "Añade ambos textos para comparar",
+      "generic": "No pudimos comparar los textos. Inténtalo de nuevo.",
+      "fileNotSupported": "Solo se admiten archivos de texto (.txt, .md)",
+      "fileRead": "No se pudo leer el archivo"
+    },
+    "success": "Comparación lista",
+    "stats": {
+      "wordsA": "Texto A: {value} palabras",
+      "wordsB": "Texto B: {value} palabras"
+    },
+    "results": {
+      "title": "Diferencias",
+      "subtitle": "Resaltamos lo eliminado y lo añadido",
+      "summary": "{additions} añadidos · {removals} eliminados",
+      "removals": "Eliminaciones",
+      "additions": "Adiciones",
+      "noRemovals": "No se encontraron eliminaciones",
+      "noAdditions": "No se encontraron adiciones",
+      "placeholder": "Pulsa \"Comparar texto\" para ver las diferencias"
+    }
+  },
   "PricePlans": {
     "trial": {
       "name": "Trial",
