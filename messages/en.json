@@ -96,6 +96,12 @@
       "title": "Insufficient credits",
       "subtitle": "Upgrade your plan to keep using the plagiarism checker without interruptions."
     },
+    "guest": {
+      "title": "Create an account to continue",
+      "subtitle": "Sign up free and get starter credits to use the checker.",
+      "login": "Log in",
+      "register": "Sign up"
+    },
     "results": {
       "title": "Results",
       "subtitle": "Plagiarism percentage and matched sources",

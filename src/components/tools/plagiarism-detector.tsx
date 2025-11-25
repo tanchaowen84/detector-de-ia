@@ -16,6 +16,8 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { PricingTable } from '@/components/pricing/pricing-table';
+import { LocaleLink } from '@/i18n/navigation';
+import { useSession } from '@/hooks/use-session';
 import { uploadFileFromBrowser } from '@/storage';
 import { cn } from '@/lib/utils';
 import type { PlagiarismResponse } from '@/lib/winston';
@@ -46,6 +48,8 @@ export function PlagiarismDetector() {
   const [isPending, startTransition] = useTransition();
   const fileRef = useRef<HTMLInputElement | null>(null);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const [showGuestModal, setShowGuestModal] = useState(false);
+  const session = useSession();
 
   const hasInput = text.trim().length > 0 || file || website;
   const plagiarismScore = result?.result?.score ?? null;
@@ -154,6 +158,12 @@ export function PlagiarismDetector() {
         if (!payload.success) {
           const msg = payload.error ?? t('errors.generic');
           if ((payload as any)?.errorCode === 'INSUFFICIENT_CREDITS') {
+            if (!session?.user) {
+              setShowGuestModal(true);
+            } else {
+              setShowUpgradeModal(true);
+            }
+          } else {
             setShowUpgradeModal(true);
           }
           setError(msg);
@@ -432,6 +442,34 @@ export function PlagiarismDetector() {
           </DialogHeader>
           <div className="mt-2">
             <PricingTable className="pb-4" />
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showGuestModal} onOpenChange={setShowGuestModal}>
+        <DialogContent className="sm:max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="text-lg font-semibold text-slate-900">
+              {t('guest.title')}
+            </DialogTitle>
+            <DialogDescription className="text-slate-600">
+              {t('guest.subtitle')}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col gap-3">
+            <Button
+              className="h-11 justify-center gap-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500"
+              asChild
+            >
+              <LocaleLink href="/auth/login">{t('guest.login')}</LocaleLink>
+            </Button>
+            <Button
+              variant="outline"
+              className="h-11 justify-center gap-2 rounded-xl"
+              asChild
+            >
+              <LocaleLink href="/auth/register">{t('guest.register')}</LocaleLink>
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
