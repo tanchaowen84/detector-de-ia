@@ -20,6 +20,11 @@ export function getNavbarLinks(): NestedMenuItem[] {
 
   const links: NestedMenuItem[] = [
     {
+      title: t('textCompare.title'),
+      href: Routes.TextCompare,
+      external: false,
+    },
+    {
       title: t('wordCounter.title'),
       href: Routes.WordCounter,
       external: false,

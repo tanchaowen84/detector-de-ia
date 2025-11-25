@@ -98,7 +98,8 @@
       "original": "Original text",
       "changed": "Changed text",
       "placeholderA": "Paste the original text here...",
-      "placeholderB": "Paste the changed text here..."
+      "placeholderB": "Paste the changed text here...",
+      "upload": "Upload file"
     },
     "controls": {
       "compare": "Compare text",
@@ -606,6 +607,9 @@
       "wordCounter": {
         "title": "Word counter"
       },
+      "textCompare": {
+        "title": "Text compare"
+      },
       "pricing": {
         "title": "Pricing"
       },
@@ -672,6 +676,7 @@
         "title": "Product",
         "items": {
           "features": "Features",
+          "textCompare": "Text compare",
           "wordCounter": "Word counter",
           "pricing": "Pricing",
           "faq": "FAQ"

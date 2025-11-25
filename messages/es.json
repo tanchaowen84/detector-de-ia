@@ -98,7 +98,8 @@
       "original": "Texto original",
       "changed": "Texto modificado",
       "placeholderA": "Pega aquí el texto original...",
-      "placeholderB": "Pega aquí el texto modificado..."
+      "placeholderB": "Pega aquí el texto modificado...",
+      "upload": "Subir archivo"
     },
     "controls": {
       "compare": "Comparar texto",
@@ -606,6 +607,9 @@
       "wordCounter": {
         "title": "Contador de palabras"
       },
+      "textCompare": {
+        "title": "Comparador de textos"
+      },
       "pricing": {
         "title": "Precios"
       },
@@ -672,6 +676,7 @@
         "title": "Producto",
         "items": {
           "features": "Funciones",
+          "textCompare": "Comparador de textos",
           "wordCounter": "Contador de palabras",
           "pricing": "Precios",
           "faq": "Preguntas frecuentes"

@@ -131,6 +131,7 @@ export function TextCompare() {
             fileRef={fileInputARef}
             onFile={(e) => handleFile(e, setTextA)}
             placeholder={t('input.placeholderA')}
+            uploadLabel={t('input.upload')}
           />
           <InputCard
             label={t('input.changed')}
@@ -139,6 +140,7 @@ export function TextCompare() {
             fileRef={fileInputBRef}
             onFile={(e) => handleFile(e, setTextB)}
             placeholder={t('input.placeholderB')}
+            uploadLabel={t('input.upload')}
           />
         </div>
 
@@ -218,9 +220,10 @@ type InputCardProps = {
   fileRef: React.RefObject<HTMLInputElement>;
   onFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
+  uploadLabel: string;
 };
 
-function InputCard({ label, value, onChange, fileRef, onFile, placeholder }: InputCardProps) {
+function InputCard({ label, value, onChange, fileRef, onFile, placeholder, uploadLabel }: InputCardProps) {
   return (
     <Card className="border-slate-100 bg-white/95 shadow-lg">
       <CardHeader className="flex flex-row items-center justify-between pb-3">
@@ -243,7 +246,7 @@ function InputCard({ label, value, onChange, fileRef, onFile, placeholder }: Inp
             onClick={() => fileRef.current?.click()}
           >
             <UploadCloudIcon className="h-4 w-4" />
-            {label}
+            {uploadLabel}
           </Button>
         </div>
       </CardHeader>

@@ -28,6 +28,11 @@ export function getFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
+          title: t('product.items.textCompare'),
+          href: Routes.TextCompare,
+          external: false,
+        },
+        {
           title: t('product.items.wordCounter'),
           href: Routes.WordCounter,
           external: false,
