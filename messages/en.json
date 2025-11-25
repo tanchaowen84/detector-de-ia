@@ -54,6 +54,64 @@
       "checkoutFailed": "Failed to open checkout page"
     }
   },
+  "PlagiarismPage": {
+    "metadata": {
+      "title": "Plagiarism checker | VeriIA",
+      "description": "Scan text, files, or URLs for plagiarism and get matched sources with a clear score."
+    },
+    "hero": {
+      "badge": "Plagiarism checker",
+      "title": "Detect plagiarism in seconds",
+      "subtitle": "Paste text, upload a file, or enter a URL to find matching sources instantly."
+    },
+    "input": {
+      "title": "Content to scan",
+      "description": "Text, file, or URL. Use whichever works for you.",
+      "url": "Enter URL",
+      "file": "Upload file",
+      "paste": "Paste text",
+      "placeholder": "Paste the text you want to scan here...",
+      "urlClear": "Clear",
+      "urlApply": "Apply",
+      "count": "{value} characters"
+    },
+    "controls": {
+      "detect": "Check plagiarism",
+      "detecting": "Scanning...",
+      "clear": "Clear all"
+    },
+    "errors": {
+      "noInput": "Add text, file, or URL to scan",
+      "invalidUrl": "Invalid URL",
+      "generic": "We couldn't complete the scan. Please try again.",
+      "clipboardEmpty": "Clipboard is empty",
+      "clipboardFail": "Couldn't read clipboard"
+    },
+    "uploading": "Uploading file...",
+    "uploadSuccess": "File ready",
+    "uploadFail": "Failed to upload file",
+    "urlReady": "URL ready",
+    "success": "Scan completed",
+    "results": {
+      "title": "Results",
+      "subtitle": "Plagiarism percentage and matched sources",
+      "scoreLabel": "Plagiarism %",
+      "sources": "Detected sources",
+      "count": "sources",
+      "untitled": "Untitled source",
+      "matchWords": "{value} matching words",
+      "identicalWords": "{value} identical words",
+      "similarWords": "{value} similar words",
+      "placeholder": "Run a scan to see matches",
+      "attack": "Possible obfuscation"
+    },
+    "summary": {
+      "sources": "{value} sources",
+      "words": "{value} plagiarized words",
+      "identical": "{value} identical words",
+      "similar": "{value} similar words"
+    }
+  },
   "WordCounterPage": {
     "metadata": {
       "title": "Word & Character Counter | VeriIA",
@@ -604,6 +662,9 @@
       "features": {
         "title": "Features"
       },
+      "plagiarism": {
+        "title": "Plagiarism checker"
+      },
       "wordCounter": {
         "title": "Word counter"
       },
@@ -676,6 +737,7 @@
         "title": "Product",
         "items": {
           "features": "Features",
+          "plagiarism": "Plagiarism checker",
           "textCompare": "Text compare",
           "wordCounter": "Word counter",
           "pricing": "Pricing",

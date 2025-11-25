@@ -54,6 +54,64 @@
       "checkoutFailed": "Failed to open checkout page"
     }
   },
+  "PlagiarismPage": {
+    "metadata": {
+      "title": "Detector de plagio | VeriIA",
+      "description": "Analiza texto, archivos o URLs y obtiene el porcentaje de plagio con las fuentes encontradas."
+    },
+    "hero": {
+      "badge": "Detector de plagio",
+      "title": "Detecta plagio en segundos",
+      "subtitle": "Pega tu texto, sube un archivo o ingresa una URL y obtén coincidencias con fuentes encontradas."
+    },
+    "input": {
+      "title": "Contenido a analizar",
+      "description": "Texto, archivo o URL. Usa la opción que prefieras.",
+      "url": "Ingresar URL",
+      "file": "Cargar archivo",
+      "paste": "Pegar texto",
+      "placeholder": "Pega aquí el texto que quieres analizar...",
+      "urlClear": "Limpiar",
+      "urlApply": "Aplicar",
+      "count": "{value} caracteres"
+    },
+    "controls": {
+      "detect": "Detectar plagio",
+      "detecting": "Analizando...",
+      "clear": "Limpiar todo"
+    },
+    "errors": {
+      "noInput": "Añade texto, archivo o URL para analizar",
+      "invalidUrl": "URL no válida",
+      "generic": "No pudimos analizar el plagio. Inténtalo de nuevo.",
+      "clipboardEmpty": "El portapapeles está vacío",
+      "clipboardFail": "No se pudo leer el portapapeles"
+    },
+    "uploading": "Subiendo archivo...",
+    "uploadSuccess": "Archivo listo",
+    "uploadFail": "No se pudo subir el archivo",
+    "urlReady": "URL lista",
+    "success": "Análisis completado",
+    "results": {
+      "title": "Resultados",
+      "subtitle": "Porcentaje de plagio y fuentes coincidentes",
+      "scoreLabel": "% de plagio",
+      "sources": "Fuentes detectadas",
+      "count": "fuentes",
+      "untitled": "Fuente sin título",
+      "matchWords": "{value} palabras coincidentes",
+      "identicalWords": "{value} palabras idénticas",
+      "similarWords": "{value} palabras similares",
+      "placeholder": "Ejecuta un análisis para ver coincidencias",
+      "attack": "Posible manipulación"
+    },
+    "summary": {
+      "sources": "{value} fuentes",
+      "words": "{value} palabras plagiadas",
+      "identical": "{value} palabras idénticas",
+      "similar": "{value} palabras similares"
+    }
+  },
   "WordCounterPage": {
     "metadata": {
       "title": "Contador de palabras y caracteres | VeriIA",
@@ -604,6 +662,9 @@
       "features": {
         "title": "Funciones"
       },
+      "plagiarism": {
+        "title": "Detector de plagio"
+      },
       "wordCounter": {
         "title": "Contador de palabras"
       },
@@ -676,6 +737,7 @@
         "title": "Producto",
         "items": {
           "features": "Funciones",
+          "plagiarism": "Detector de plagio",
           "textCompare": "Comparador de textos",
           "wordCounter": "Contador de palabras",
           "pricing": "Precios",
