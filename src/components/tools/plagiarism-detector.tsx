@@ -8,6 +8,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { PricingTable } from '@/components/pricing/pricing-table';
 import { uploadFileFromBrowser } from '@/storage';
 import { cn } from '@/lib/utils';
 import type { PlagiarismResponse } from '@/lib/winston';
@@ -37,6 +45,7 @@ export function PlagiarismDetector() {
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
   const fileRef = useRef<HTMLInputElement | null>(null);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   const hasInput = text.trim().length > 0 || file || website;
   const plagiarismScore = result?.result?.score ?? null;
@@ -144,6 +153,9 @@ export function PlagiarismDetector() {
 
         if (!payload.success) {
           const msg = payload.error ?? t('errors.generic');
+          if ((payload as any)?.errorCode === 'INSUFFICIENT_CREDITS') {
+            setShowUpgradeModal(true);
+          }
           setError(msg);
           toast.error(msg);
           return;
@@ -407,6 +419,22 @@ export function PlagiarismDetector() {
           </Card>
         </div>
       </div>
+
+      <Dialog open={showUpgradeModal} onOpenChange={setShowUpgradeModal}>
+        <DialogContent className="sm:max-w-4xl max-h-[82vh] overflow-y-auto pt-4">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-semibold text-slate-900">
+              {t('upgrade.title')}
+            </DialogTitle>
+            <DialogDescription className="text-slate-600">
+              {t('upgrade.subtitle')}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-2">
+            <PricingTable className="pb-4" />
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

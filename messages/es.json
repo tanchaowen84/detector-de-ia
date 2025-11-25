@@ -92,6 +92,10 @@
     "uploadFail": "No se pudo subir el archivo",
     "urlReady": "URL lista",
     "success": "Análisis completado",
+    "upgrade": {
+      "title": "Créditos insuficientes",
+      "subtitle": "Actualiza tu plan para seguir usando el detector de plagio sin interrupciones."
+    },
     "results": {
       "title": "Resultados",
       "subtitle": "Porcentaje de plagio y fuentes coincidentes",

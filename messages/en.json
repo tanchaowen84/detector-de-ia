@@ -92,6 +92,10 @@
     "uploadFail": "Failed to upload file",
     "urlReady": "URL ready",
     "success": "Scan completed",
+    "upgrade": {
+      "title": "Insufficient credits",
+      "subtitle": "Upgrade your plan to keep using the plagiarism checker without interruptions."
+    },
     "results": {
       "title": "Results",
       "subtitle": "Plagiarism percentage and matched sources",
