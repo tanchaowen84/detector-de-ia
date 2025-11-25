@@ -43,6 +43,9 @@ export default async function DetectionDetailPage(props: DetailPageProps) {
     return 'border-emerald-200/70 bg-emerald-50 text-emerald-900 dark:border-emerald-500/20 dark:bg-emerald-500/10';
   };
 
+  const isPlagiarism = record.inputType === 'plagiarism';
+  const plagiarismSources = isPlagiarism ? ((record.sentences as any) ?? []) : [];
+
   return (
     <div className="flex flex-col gap-6 py-6 px-4 sm:px-6 lg:px-8">
       <div className="flex items-center justify-between gap-3">
@@ -106,32 +109,90 @@ export default async function DetectionDetailPage(props: DetailPageProps) {
         </Card>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">{t('sentencesTitle')}</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {record.sentences?.length ? (
-            record.sentences.map((sentence, idx) => {
-              const tone = toneForScore(100 - sentence.score);
-              return (
-                <div
-                  key={idx}
-                  className={`rounded-lg border px-3 py-2 text-sm leading-relaxed ${tone}`}
-                >
-                  <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-                    <span>{t('sentence')} #{idx + 1}</span>
-                    <span>{t('prob', { value: (100 - sentence.score).toFixed(1) })}%</span>
+      {isPlagiarism ? (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">{t('plagiarismSources')}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div>
+              <p className="text-sm font-semibold text-slate-700">{t('inputPreview')}</p>
+              <p className="mt-1 rounded-md bg-slate-50 px-3 py-2 text-sm text-slate-700">
+                {record.inputPreview ?? t('noPreview')}
+              </p>
+            </div>
+
+            {plagiarismSources?.length ? (
+              <div className="space-y-3">
+                {plagiarismSources.map((src: any, idx: number) => (
+                  <div
+                    key={idx}
+                    className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm"
+                  >
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="font-semibold truncate">
+                        {src.title || src.url || t('plagiarismSourceUntitled')}
+                      </p>
+                      <span className="text-purple-700 font-semibold">
+                        {(src.score ?? 0).toFixed(1)}%
+                      </span>
+                    </div>
+                    {src.url && (
+                      <p className="text-xs text-indigo-600 truncate">{src.url}</p>
+                    )}
+                    <div className="mt-2 flex flex-wrap gap-2 text-[11px] text-slate-600">
+                      {src.plagiarismWords !== undefined && (
+                        <Badge variant="outline" className="border-slate-200 text-slate-600">
+                          {t('plagiarismSourceWords', { value: src.plagiarismWords })}
+                        </Badge>
+                      )}
+                      {src.identicalWordCounts !== undefined && (
+                        <Badge variant="outline" className="border-slate-200 text-slate-600">
+                          {t('plagiarismSourceIdentical', { value: src.identicalWordCounts })}
+                        </Badge>
+                      )}
+                      {src.similarWordCounts !== undefined && (
+                        <Badge variant="outline" className="border-slate-200 text-slate-600">
+                          {t('plagiarismSourceSimilar', { value: src.similarWordCounts })}
+                        </Badge>
+                      )}
+                    </div>
                   </div>
-                  <div>{sentence.text}</div>
-                </div>
-              );
-            })
-          ) : (
-            <p className="text-sm text-slate-500">{t('noSentences')}</p>
-          )}
-        </CardContent>
-      </Card>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-slate-500">{t('plagiarismNoSources')}</p>
+            )}
+          </CardContent>
+        </Card>
+      ) : (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">{t('sentencesTitle')}</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {record.sentences?.length ? (
+              record.sentences.map((sentence, idx) => {
+                const tone = toneForScore(100 - sentence.score);
+                return (
+                  <div
+                    key={idx}
+                    className={`rounded-lg border px-3 py-2 text-sm leading-relaxed ${tone}`}
+                  >
+                    <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                      <span>{t('sentence')} #{idx + 1}</span>
+                      <span>{t('prob', { value: (100 - sentence.score).toFixed(1) })}%</span>
+                    </div>
+                    <div>{sentence.text}</div>
+                  </div>
+                );
+              })
+            ) : (
+              <p className="text-sm text-slate-500">{t('noSentences')}</p>
+            )}
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

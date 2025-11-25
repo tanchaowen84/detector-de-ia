@@ -320,7 +320,14 @@
         "prob": "Probabilidad IA {value}",
         "noSentences": "No hay desglose por oración",
         "unknown": "desconocido",
-        "back": "Volver al historial"
+        "back": "Volver al historial",
+        "inputPreview": "Texto original",
+        "plagiarismSources": "Fuentes coincidentes",
+        "plagiarismNoSources": "No hay fuentes guardadas para este análisis",
+        "plagiarismSourceUntitled": "Fuente sin título",
+        "plagiarismSourceWords": "{value} palabras coincidentes",
+        "plagiarismSourceIdentical": "{value} palabras idénticas",
+        "plagiarismSourceSimilar": "{value} palabras similares"
       }
     },
     "admin": {

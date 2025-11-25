@@ -129,6 +129,17 @@ export const detectPlagiarismAction = actionClient
       }
 
       if (session?.user?.id && activePlan.saveHistory) {
+        const topSources =
+          result.sources?.slice(0, 5).map((src) => ({
+            score: src.score,
+            url: src.url,
+            title: src.title,
+            plagiarismWords: src.plagiarismWords,
+            identicalWordCounts: src.identicalWordCounts,
+            similarWordCounts: src.similarWordCounts,
+            source: src.source,
+          })) ?? null;
+
         const preview =
           sourceType === 'text'
             ? parsedInput.text?.slice(0, 200) ?? null
@@ -154,6 +165,8 @@ export const detectPlagiarismAction = actionClient
             creditsRemaining: result.credits_remaining ?? null,
             version: result.scanInformation?.service ?? null,
             language: result.scanInformation?.language ?? null,
+            // store top sources inside sentences jsonb to reuse existing column
+            sentences: topSources as any,
           });
         } catch (dbError) {
           console.error('Failed to store plagiarism record:', dbError);

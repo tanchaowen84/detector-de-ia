@@ -320,7 +320,14 @@
         "prob": "AI likelihood {value}",
         "noSentences": "No sentence breakdown available",
         "unknown": "unknown",
-        "back": "Back to history"
+        "back": "Back to history",
+        "inputPreview": "Original text",
+        "plagiarismSources": "Matched sources",
+        "plagiarismNoSources": "No sources stored for this scan",
+        "plagiarismSourceUntitled": "Untitled source",
+        "plagiarismSourceWords": "{value} matching words",
+        "plagiarismSourceIdentical": "{value} identical words",
+        "plagiarismSourceSimilar": "{value} similar words"
       }
     },
     "admin": {
