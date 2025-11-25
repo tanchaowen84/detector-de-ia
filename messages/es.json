@@ -559,6 +559,9 @@
       "features": {
         "title": "Funciones"
       },
+      "wordCounter": {
+        "title": "Contador de palabras"
+      },
       "pricing": {
         "title": "Precios"
       },
@@ -625,6 +628,7 @@
         "title": "Producto",
         "items": {
           "features": "Funciones",
+          "wordCounter": "Contador de palabras",
           "pricing": "Precios",
           "faq": "Preguntas frecuentes"
         }

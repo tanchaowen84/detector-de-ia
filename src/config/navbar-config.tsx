@@ -20,6 +20,11 @@ export function getNavbarLinks(): NestedMenuItem[] {
 
   const links: NestedMenuItem[] = [
     {
+      title: t('wordCounter.title'),
+      href: Routes.WordCounter,
+      external: false,
+    },
+    {
       title: t('pricing.title'),
       href: Routes.Pricing,
       external: false,

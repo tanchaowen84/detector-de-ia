@@ -28,6 +28,11 @@ export function getFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
+          title: t('product.items.wordCounter'),
+          href: Routes.WordCounter,
+          external: false,
+        },
+        {
           title: t('product.items.pricing'),
           href: Routes.Pricing,
           external: false,

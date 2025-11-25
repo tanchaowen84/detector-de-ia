@@ -559,6 +559,9 @@
       "features": {
         "title": "Features"
       },
+      "wordCounter": {
+        "title": "Word counter"
+      },
       "pricing": {
         "title": "Pricing"
       },
@@ -625,6 +628,7 @@
         "title": "Product",
         "items": {
           "features": "Features",
+          "wordCounter": "Word counter",
           "pricing": "Pricing",
           "faq": "FAQ"
         }
