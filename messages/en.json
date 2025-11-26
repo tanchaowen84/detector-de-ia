@@ -56,13 +56,13 @@
   },
   "PlagiarismPage": {
     "metadata": {
-      "title": "Plagiarism checker | VeriIA",
-      "description": "Scan text, files, or URLs for plagiarism and get matched sources with a clear score."
+      "title": "Fast and accurate plagiarism checker online | VeriIA",
+      "description": "Verify originality with the plagiarism checker: scan text, files or URLs, see sources and a clear score in seconds for confident submissions."
     },
     "hero": {
       "badge": "Plagiarism checker",
-      "title": "Detect plagiarism in seconds",
-      "subtitle": "Paste text, upload a file, or enter a URL to find matching sources instantly."
+      "title": "Plagiarism checker online, fast and accurate",
+      "subtitle": "Scan text, files or URLs with the plagiarism checker and get percentage, sources, and alerts in seconds."
     },
     "input": {
       "title": "Content to scan",
@@ -124,145 +124,145 @@
     "blocks": {
       "howItWorks": {
         "title": "How the plagiarism checker works",
-        "subtitle": "Paste text, upload a file, or enter a URL—see matches in three steps.",
+        "subtitle": "Add content to the plagiarism checker, run the scan, and review matches without losing context.",
         "steps": {
           "step-1": {
             "label": "Step 1 · Add your content",
-            "imageAlt": "User adding text, file, or URL",
+            "imageAlt": "Upload text, file, or URL to the plagiarism checker",
             "items": [
               {
-                "title": "Choose the source",
-                "description": "Paste text, upload .doc/.docx/.pdf/.txt, or paste an https URL."
+                "title": "Paste or upload",
+                "description": "Paste text, upload .doc/.docx/.pdf, or drop an https URL that needs a plagiarism check."
               },
               {
-                "title": "Pick the language",
-                "description": "Auto-detect is on by default; select Spanish or English for best recall."
+                "title": "Set language and exclusions",
+                "description": "Auto-detect is on; you can lock English/Spanish and exclude trusted domains for a cleaner plagiarism checker report."
               },
               {
-                "title": "Optional: exclude sources",
-                "description": "Skip trusted domains to reduce noise and focus on unexpected matches."
+                "title": "Check file size",
+                "description": "Keep files under 10 MB so the plagiarism checker responds quickly."
               }
             ]
           },
           "step-2": {
-            "label": "Step 2 · Run the scan",
-            "imageAlt": "Plagiarism scan in progress",
+            "label": "Step 2 · Run the plagiarism checker scan",
+            "imageAlt": "Plagiarism checker scan in progress",
             "items": [
               {
-                "title": "Start the check",
-                "description": "Click “Detect plagiarism” and Winston searches billions of sources."
+                "title": "Start the plagiarism check",
+                "description": "Click “Detect plagiarism” to compare sentences across web, news, and academic sources."
               },
               {
-                "title": "Sentence-level analysis",
-                "description": "We compare fingerprints across web, academic, and news corpora to find overlaps."
+                "title": "Pattern analysis",
+                "description": "We surface identical and similar phrasing so you can spot paraphrased reuse."
               },
               {
-                "title": "Attack awareness",
-                "description": "Flags obfuscation tricks like homoglyphs or zero-width spaces so results stay honest."
+                "title": "Anti-evasion alerts",
+                "description": "Flags homoglyphs, zero-width spaces, and other tricks that hide plagiarism."
               }
             ]
           },
           "step-3": {
-            "label": "Step 3 · Review matches",
-            "imageAlt": "Reviewing detected sources",
+            "label": "Step 3 · Review the plagiarism checker report",
+            "imageAlt": "Reviewing sources detected by the plagiarism checker",
             "items": [
               {
-                "title": "See overall % plagiarized",
-                "description": "Understand how much of the text overlaps with known sources."
+                "title": "See the plagiarism percentage",
+                "description": "Check how much of the text overlaps and what type of match it is."
               },
               {
                 "title": "Open matched sources",
-                "description": "Check titles, URLs, and match counts to validate context and intent."
+                "description": "Scan titles, URLs, and snippets before you edit or cite."
               },
               {
-                "title": "Refine and re-run",
-                "description": "Edit flagged parts, re-scan, and save a clean version for submission."
+                "title": "Edit and re-scan",
+                "description": "Fix flagged sections and re-run the plagiarism checker until it’s clean."
               }
             ]
           }
         }
       },
       "useCases": {
-        "title": "Where this checker fits",
-        "subtitle": "Common scenarios",
-        "description": "Keep originality across academic, media, and business content.",
+        "title": "When to use the plagiarism checker",
+        "subtitle": "Scenarios where it protects your work.",
+        "description": "Ensure originality in academia, publishing, and business by running the plagiarism checker before you ship.",
         "items": {
           "item-1": {
             "title": "Academic integrity",
-            "description": "Theses, essays, and research submissions that must stay original."
+            "description": "Theses, essays, and submissions that need an original plagiarism checker report."
           },
           "item-2": {
-            "title": "Newsrooms & editors",
+            "title": "Newsrooms and editing",
             "description": "Verify quotes and avoid duplicated wires before publishing."
           },
           "item-3": {
-            "title": "SEO & content teams",
-            "description": "Check drafts against the web to avoid duplicate-content penalties."
+            "title": "Marketing and SEO",
+            "description": "Check drafts against the web to prevent duplicate-content penalties."
           },
           "item-4": {
-            "title": "Legal & compliance",
-            "description": "Contracts, policies, and disclosures that must be uniquely worded."
+            "title": "Legal and compliance",
+            "description": "Contracts, policies, and disclosures that must stay uniquely worded."
           },
           "item-5": {
-            "title": "Corporate comms",
-            "description": "Press releases, briefs, and exec updates that need clean sourcing."
+            "title": "Corporate communications",
+            "description": "Press releases and exec updates that must remain clean and sourced."
           },
           "item-6": {
-            "title": "Publishers & agencies",
-            "description": "Ensure client deliverables are original before handoff."
+            "title": "Agencies and publishers",
+            "description": "Deliver drafts to clients after a plagiarism checker pass."
           }
         }
       },
       "faq": {
         "title": "Plagiarism checker FAQ",
-        "subtitle": "Clear answers before you scan.",
+        "subtitle": "Quick answers before you scan.",
         "items": {
           "item-1": {
             "question": "What formats can I scan?",
-            "answer": "Paste text, upload .doc/.docx/.pdf/.txt files, or scan any https URL."
+            "answer": "Paste text, upload .doc/.docx/.pdf/.txt, or scan any https URL with the plagiarism checker."
           },
           "item-2": {
             "question": "Do scans consume credits?",
-            "answer": "Yes. Each scan uses credits based on length. Word counter and text compare are credit-free."
+            "answer": "Yes. Each plagiarism checker scan uses credits based on length; word counter and text compare are credit-free."
           },
           "item-3": {
             "question": "Will my documents be stored?",
-            "answer": "We process them only to return results. If you’re logged in and your plan allows, a short history is saved; nothing is used to train models."
+            "answer": "They’re processed only to return results; if logged in, a short history may be kept, and no data trains models."
           },
           "item-4": {
             "question": "Does it detect paraphrasing?",
-            "answer": "It surfaces identical and similar wording. Heavy rewrites may show as “similar” rather than identical—always review the context."
+            "answer": "It highlights identical and similar phrasing; deep rewrites may show as “similar,” so review context."
           },
           "item-5": {
             "question": "Which languages work best?",
-            "answer": "Optimized for Spanish and English. Other languages may work, but accuracy can vary."
+            "answer": "Optimized for English and Spanish; other languages can work but may vary in accuracy."
           },
           "item-6": {
-            "question": "Can I export or download the report?",
-            "answer": "Save or copy the matched source list manually today; a downloadable report will arrive in a later update."
+            "question": "Can I export the report?",
+            "answer": "For now copy the matched sources; a downloadable plagiarism checker report is on the way."
           },
           "item-7": {
-            "question": "What file size works best?",
-            "answer": "Keep uploads under ~8–10 MB for fastest scans; very large PDFs may take longer."
+            "question": "What file size is ideal?",
+            "answer": "Keep uploads under 8–10 MB so the plagiarism checker stays fast; very large PDFs take longer."
           },
           "item-8": {
-            "question": "Do you flag citations or quotes as plagiarism?",
-            "answer": "Quoted passages may appear as matches. Use the source list to verify proper attribution before submitting."
+            "question": "Do citations count as plagiarism?",
+            "answer": "Citations may appear as matches; confirm attribution before you submit."
           },
           "item-9": {
-            "question": "Can I exclude my own sites?",
-            "answer": "Yes. Add trusted domains to the excluded sources list so they don’t show as matches."
+            "question": "Can I exclude my own domains?",
+            "answer": "Yes—add trusted sites to the exclusion list so the plagiarism checker ignores them."
           },
           "item-10": {
-            "question": "How often are sources updated?",
-            "answer": "We refresh across web, news, and academic indices regularly to keep matches current."
+            "question": "How often are sources refreshed?",
+            "answer": "Web, news, and academic sources are refreshed regularly so plagiarism checker results stay current."
           }
         }
       },
       "related": {
-        "title": "More tools for clean, original text",
-        "subtitle": "Pair the plagiarism checker with these.",
-        "description": "Verify originality, compare versions, and control length with one toolkit.",
+        "title": "Pair the plagiarism checker with these tools",
+        "subtitle": "Control originality end to end.",
+        "description": "Detect AI, compare drafts, and control length to complement the plagiarism checker in your workflow.",
         "tryNow": "Try now",
         "items": {
           "detector": {
@@ -283,13 +283,13 @@
   },
   "WordCounterPage": {
     "metadata": {
-      "title": "Word & Character Counter | VeriIA",
-      "description": "Count words, characters, sentences, and paragraphs in real time. Free and credit-free."
+      "title": "Fast online word counter with character counts | VeriIA",
+      "description": "Use the word counter to measure words and characters instantly: paste your text, see clean counts, and meet limits without spending credits."
     },
     "hero": {
       "badge": "Free tool",
-      "title": "Word & character counter",
-      "subtitle": "Paste your text and get instant metrics: words, characters, sentences, and reading time.",
+      "title": "Word counter and character counter online",
+      "subtitle": "Paste your text into the word counter to see words, characters, and reading time in real time.",
       "placeholder": "Type or paste your text here...",
       "clear": "Clear",
       "copied": "Copied",
@@ -311,14 +311,14 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "How the counter works",
-        "subtitle": "Paste, see metrics instantly, and copy them out.",
+        "title": "How the word counter works",
+        "subtitle": "Paste your text, see metrics instantly, and copy them out.",
         "steps": {
           "step-1": {
             "label": "Step 1 · Paste or type",
             "imageAlt": "User pasting text into the counter",
             "items": [
-              { "title": "Drop your text", "description": "Paste any draft, caption, or snippet." },
+              { "title": "Drop your text", "description": "Paste any draft to start instantly." },
               { "title": "Stay in browser", "description": "All counting happens locally for privacy." },
               { "title": "Multi-language friendly", "description": "Works with Spanish, English, and mixed content." }
             ]
@@ -327,7 +327,7 @@
             "label": "Step 2 · Read the metrics",
             "imageAlt": "Metrics card with word counts",
             "items": [
-              { "title": "Words & characters", "description": "With/without spaces, plus sentences and paragraphs." },
+              { "title": "Words & characters", "description": "See counts with/without spaces, plus sentences and paragraphs." },
               { "title": "Reading time", "description": "See estimated minutes to read at ~200 wpm." },
               { "title": "Live updates", "description": "Counts refresh as you type—no buttons needed." }
             ]
@@ -336,7 +336,7 @@
             "label": "Step 3 · Act on limits",
             "imageAlt": "User copying text after checking limits",
             "items": [
-              { "title": "Match platform limits", "description": "Great for headlines, snippets, meta descriptions, social posts." },
+              { "title": "Match platform limits", "description": "Great for headlines, snippets, meta descriptions, and social posts." },
               { "title": "Adjust fast", "description": "Trim or expand until you hit the target count." },
               { "title": "Copy and send", "description": "One click to copy your text once it fits." }
             ]
@@ -344,26 +344,26 @@
         }
       },
       "useCases": {
-        "title": "Where counting helps",
-        "subtitle": "Everyday writing tasks",
-        "description": "Keep texts within limits and structured before you submit.",
+        "title": "When to use the word counter",
+        "subtitle": "Everyday tasks where the word counter helps.",
+        "description": "Use the word counter to keep texts within limits and well structured before you submit.",
         "items": {
-          "item-1": { "title": "Academic summaries", "description": "Hit word caps for abstracts and essays." },
+          "item-1": { "title": "Academic summaries", "description": "Hit word caps for abstracts and essays using the word counter." },
           "item-2": { "title": "SEO snippets", "description": "Check title and meta description lengths quickly." },
           "item-3": { "title": "Social captions", "description": "Stay within platform character limits without guesswork." },
           "item-4": { "title": "Product copy", "description": "Ensure feature bullets and banners stay concise." },
-          "item-5": { "title": "Email intros", "description": "Keep openings short and scannable." },
+          "item-5": { "title": "Email intros", "description": "Keep openings short and scannable using the word counter." },
           "item-6": { "title": "Translation QA", "description": "Verify target text length matches the source intent." }
         }
       },
       "faq": {
         "title": "Word counter FAQ",
-        "subtitle": "Know what happens with your text.",
+        "subtitle": "Understand how the word counter handles your text.",
         "items": {
-          "item-1": { "question": "Does it use credits?", "answer": "No. Counting is free and local." },
+          "item-1": { "question": "Does the word counter use credits?", "answer": "No. The word counter is free and local." },
           "item-2": { "question": "Is my text sent to a server?", "answer": "No, everything runs in your browser." },
           "item-3": { "question": "Which languages work?", "answer": "Any language; metrics are whitespace/punctuation based." },
-          "item-4": { "question": "Does it handle long texts?", "answer": "Yes, but for very long docs consider splitting for readability." },
+          "item-4": { "question": "Does it handle long texts?", "answer": "Yes, but for very long docs split them for readability." },
           "item-5": { "question": "Can I export counts?", "answer": "Copy the text or take notes; counts update live." },
           "item-6": { "question": "Does it change my text?", "answer": "No. It only reads for counting; your text stays exactly as pasted." },
           "item-7": { "question": "Will emojis or symbols count?", "answer": "Emojis count as characters; words are split on whitespace." },
@@ -373,9 +373,9 @@
         }
       },
       "related": {
-        "title": "More tools to polish your text",
+        "title": "Pair the word counter with more tools",
         "subtitle": "Detect AI, check originality, compare drafts.",
-        "description": "Keep quality, originality, and length under control.",
+        "description": "Keep quality, originality, and length under control alongside the word counter.",
         "tryNow": "Try now",
         "items": {
           "detector": { "title": "AI detector", "description": "Highlight AI-like sentences before delivering work." },
@@ -387,13 +387,13 @@
   },
   "TextComparePage": {
     "metadata": {
-      "title": "Text Compare | VeriIA",
-      "description": "Compare two texts in seconds with highlighted differences."
+      "title": "Text compare tool online, fast and clear now | VeriIA",
+      "description": "Use text compare to paste two versions, see highlighted differences, count changes, and ship the right draft in seconds with clear context every time."
     },
     "hero": {
       "badge": "Comparator",
-      "title": "Compare two texts instantly",
-      "subtitle": "Paste versions A and B, hit compare, and see additions and removals highlighted.",
+      "title": "Text compare online in seconds",
+      "subtitle": "Paste versions A and B into text compare, hit compare, and see additions and removals highlighted.",
       "loading": "Comparing..."
     },
     "input": {
@@ -431,8 +431,8 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "How the text comparator works",
-        "subtitle": "Drop in versions A and B, see clean highlights in three steps.",
+        "title": "How text compare works",
+        "subtitle": "Drop versions A and B into text compare, see clean highlights in three steps.",
         "steps": {
           "step-1": {
             "label": "Step 1 · Add both texts",
@@ -440,11 +440,11 @@
             "items": [
               { "title": "Paste or upload", "description": "Paste your original and changed text, or load .txt/.md files." },
               { "title": "Keep formatting simple", "description": "Plain text gives the clearest highlights and counts." },
-              { "title": "Check length", "description": "Best for up to a few thousand words per side for instant diff." }
+              { "title": "Check length", "description": "Best for up to a few thousand words per side for instant results." }
             ]
           },
           "step-2": {
-            "label": "Step 2 · Run compare",
+            "label": "Step 2 · Run text compare",
             "imageAlt": "Comparison in progress",
             "items": [
               { "title": "Click “Compare text”", "description": "We compute additions and removals and group them for you." },
@@ -453,7 +453,7 @@
             ]
           },
           "step-3": {
-            "label": "Step 3 · Review and share",
+            "label": "Step 3 · Review and share in text compare",
             "imageAlt": "Results with highlighted additions and removals",
             "items": [
               { "title": "Scroll the diff", "description": "Jump to sections that changed most." },
@@ -464,38 +464,38 @@
         }
       },
       "useCases": {
-        "title": "Where text compare helps",
-        "subtitle": "Common workflows",
-        "description": "Spot differences quickly across drafts, reviews, and compliance updates.",
+        "title": "When to use text compare",
+        "subtitle": "Workflows where text compare saves time.",
+        "description": "Spot differences quickly across drafts, reviews, and compliance updates with text compare.",
         "items": {
-          "item-1": { "title": "Version review", "description": "See what changed between draft and final without manual scanning." },
-          "item-2": { "title": "Contract redlines", "description": "Catch subtle clause edits before approving." },
+          "item-1": { "title": "Version review", "description": "See what changed between draft and final with text compare." },
+          "item-2": { "title": "Contract redlines", "description": "Catch subtle clause edits before approving in text compare." },
           "item-3": { "title": "Product copy updates", "description": "Compare release notes, in-app copy, and SEO tweaks." },
           "item-4": { "title": "Academic edits", "description": "Track advisor feedback vs. your latest revision." },
-          "item-5": { "title": "Localization QA", "description": "Ensure translated strings match the source intent." },
-          "item-6": { "title": "Policy/compliance", "description": "Verify mandated wording hasn’t drifted between versions." }
+          "item-5": { "title": "Localization QA", "description": "Ensure translated strings match the source intent using text compare." },
+          "item-6": { "title": "Policy/compliance", "description": "Verify mandated wording hasn’t drifted between versions with text compare." }
         }
       },
       "faq": {
         "title": "Text compare FAQ",
-        "subtitle": "Quick answers before you diff.",
+        "subtitle": "Quick answers before you diff with text compare.",
         "items": {
-          "item-1": { "question": "Are files supported?", "answer": "Yes, plain text (.txt) and Markdown (.md). Paste is recommended for faster edits." },
-          "item-2": { "question": "Is there a length limit?", "answer": "Best under a few thousand words per side for instant diff. Very large texts may be slower." },
+          "item-1": { "question": "Are files supported?", "answer": "Yes, plain text (.txt) and Markdown (.md) in text compare. Paste is recommended for faster edits." },
+          "item-2": { "question": "Is there a length limit?", "answer": "Best under a few thousand words per side for instant results; very large texts may be slower." },
           "item-3": { "question": "Does it cost credits?", "answer": "No. Text compare is free and does not use credits." },
           "item-4": { "question": "Is content stored?", "answer": "No server calls are made; diff runs in your browser." },
           "item-5": { "question": "Can I compare code?", "answer": "Yes for plain text, but it doesn’t parse syntax—use it for quick copy diffs." },
           "item-6": { "question": "Can I download the diff?", "answer": "For now, copy the highlighted sections or take a screenshot; export will arrive later." },
           "item-7": { "question": "Does formatting matter?", "answer": "We focus on text. Remove heavy formatting for the clearest highlights." },
-          "item-8": { "question": "Will it handle very long documents?", "answer": "It works, but performance is best on shorter sections. Consider splitting long docs." },
+          "item-8": { "question": "Will it handle very long documents?", "answer": "It works, but performance is best on shorter sections; consider splitting long docs." },
           "item-9": { "question": "Does it support right-to-left text?", "answer": "Yes, basic RTL text works; highlights remain color-coded." },
           "item-10": { "question": "Is there an API?", "answer": "Not yet for diff; today’s tool is browser-based and free." }
         }
       },
       "related": {
-        "title": "More tools for clean drafts",
+        "title": "Pair text compare with other tools",
         "subtitle": "Pair compare with detection and counting.",
-        "description": "Detect AI, check originality, and keep lengths in check.",
+        "description": "Detect AI, check originality, and keep lengths in check alongside text compare.",
         "tryNow": "Try now",
         "items": {
           "detector": { "title": "AI detector", "description": "Highlight AI-like sentences before shipping copy." },

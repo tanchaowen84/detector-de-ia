@@ -56,13 +56,13 @@
   },
   "PlagiarismPage": {
     "metadata": {
-      "title": "Detector de plagio | VeriIA",
-      "description": "Analiza texto, archivos o URLs y obtiene el porcentaje de plagio con las fuentes encontradas."
+      "title": "Detector de plagio online rápido y preciso | VeriIA",
+      "description": "Detecta plagio con el Detector de plagio de VeriIA: analiza textos, archivos o URLs y muestra fuentes y porcentaje para enviar con confianza."
     },
     "hero": {
       "badge": "Detector de plagio",
-      "title": "Detecta plagio en segundos",
-      "subtitle": "Pega tu texto, sube un archivo o ingresa una URL y obtén coincidencias con fuentes encontradas."
+      "title": "Detector de plagio online rápido y preciso",
+      "subtitle": "Analiza textos, archivos o URLs con el Detector de plagio y recibe porcentaje, fuentes y alertas en segundos."
     },
     "input": {
       "title": "Contenido a analizar",
@@ -123,146 +123,146 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "Cómo funciona el detector de plagio",
-        "subtitle": "Pega texto, sube un archivo o ingresa una URL: obtén coincidencias en tres pasos.",
+        "title": "Cómo funciona el Detector de plagio",
+        "subtitle": "Carga tu contenido en el Detector de plagio, ejecuta el escaneo y revisa coincidencias sin perder contexto.",
         "steps": {
           "step-1": {
             "label": "Paso 1 · Añade tu contenido",
-            "imageAlt": "Añadir texto, archivo o URL",
+            "imageAlt": "Subir texto, archivo o URL al Detector de plagio",
             "items": [
               {
-                "title": "Elige la fuente",
-                "description": "Pega texto, sube .doc/.docx/.pdf/.txt o ingresa una URL https."
+                "title": "Pega o sube",
+                "description": "Pega texto, sube .doc/.docx/.pdf o ingresa una URL que necesites revisar."
               },
               {
-                "title": "Selecciona el idioma",
-                "description": "Detectamos automáticamente; elige español o inglés para mejor recall."
+                "title": "Elige idioma y exclusiones",
+                "description": "Detectamos el idioma automáticamente; si quieres, fija español/inglés y excluye dominios propios para un reporte limpio."
               },
               {
-                "title": "Opcional: excluye fuentes",
-                "description": "Omite dominios de confianza para reducir ruido y enfocarte en hallazgos reales."
+                "title": "Comprueba el tamaño",
+                "description": "Mantén los archivos bajo 10 MB para que el Detector de plagio responda más rápido."
               }
             ]
           },
           "step-2": {
-            "label": "Paso 2 · Ejecuta el escaneo",
-            "imageAlt": "Escaneo de plagio en progreso",
+            "label": "Paso 2 · Lanza el escaneo del Detector de plagio",
+            "imageAlt": "Escaneo del Detector de plagio en progreso",
             "items": [
               {
-                "title": "Inicia la revisión",
-                "description": "Pulsa “Detectar plagio” y Winston busca en miles de millones de fuentes."
+                "title": "Ejecuta el Detector de plagio",
+                "description": "Pulsa “Detectar plagio” y comparamos oraciones contra web, noticias y bases académicas."
               },
               {
-                "title": "Análisis por oraciones",
-                "description": "Comparamos huellas en web, academia y noticias para hallar coincidencias."
+                "title": "Analizamos patrones",
+                "description": "Resaltamos coincidencias idénticas y similares para que identifiques paráfrasis o duplicados."
               },
               {
-                "title": "Alerta de ataques",
-                "description": "Marcamos trucos como homoglifos o espacios invisibles para evitar evasiones."
+                "title": "Alertas anti-evasión",
+                "description": "Señalamos trucos como espacios invisibles u homoglifos para evitar falsos negativos."
               }
             ]
           },
           "step-3": {
-            "label": "Paso 3 · Revisa las coincidencias",
-            "imageAlt": "Revisión de fuentes detectadas",
+            "label": "Paso 3 · Revisa el reporte del Detector de plagio",
+            "imageAlt": "Revisión de fuentes detectadas en el Detector de plagio",
             "items": [
               {
-                "title": "Mira el % de plagio",
-                "description": "Entiende qué parte del texto se solapa con fuentes conocidas."
+                "title": "Lee el porcentaje de plagio",
+                "description": "Ve cuánta parte del texto coincide y qué tipo de coincidencia es."
               },
               {
-                "title": "Abre las fuentes coincidentes",
-                "description": "Revisa títulos, URLs y conteos de coincidencias para validar contexto."
+                "title": "Abre las fuentes",
+                "description": "Explora títulos, URLs y fragmentos antes de editar o citar."
               },
               {
-                "title": "Ajusta y vuelve a escanear",
-                "description": "Edita lo señalado, vuelve a ejecutar y guarda la versión limpia para entregar."
+                "title": "Corrige y vuelve a pasar",
+                "description": "Ajusta el texto y reejecuta hasta dejarlo limpio."
               }
             ]
           }
         }
       },
       "useCases": {
-        "title": "Dónde encaja este detector",
-        "subtitle": "Escenarios comunes",
-        "description": "Mantén la originalidad en academia, medios y negocios.",
+        "title": "Cuándo usar el Detector de plagio",
+        "subtitle": "Casos en los que el Detector de plagio protege tu trabajo.",
+        "description": "Garantiza originalidad en academia, redacción y empresa usando el Detector de plagio antes de publicar.",
         "items": {
           "item-1": {
             "title": "Integridad académica",
-            "description": "Tesis, ensayos y entregas que deben ser originales."
+            "description": "Tesis, ensayos y tareas listos para entrega sin coincidencias indeseadas."
           },
           "item-2": {
-            "title": "Redacciones y edición",
-            "description": "Verifica citas y evita duplicar cables antes de publicar."
+            "title": "Redacción y prensa",
+            "description": "Verifica citas y evita duplicar notas, cables o briefs."
           },
           "item-3": {
-            "title": "SEO y equipos de contenido",
-            "description": "Revisa borradores contra la web para evitar penalizaciones por duplicado."
+            "title": "Marketing y SEO",
+            "description": "Asegura blogs y landing pages originales para evitar penalizaciones."
           },
           "item-4": {
             "title": "Legal y compliance",
-            "description": "Contratos, políticas y avisos que requieren redacción única."
+            "description": "Revisa contratos, políticas y avisos que no deben reciclar texto protegido."
           },
           "item-5": {
             "title": "Comunicaciones corporativas",
-            "description": "Notas de prensa, briefs y comunicados sin texto reciclado."
+            "description": "Notas de prensa y discursos consistentes sin párrafos reutilizados."
           },
           "item-6": {
-            "title": "Editoriales y agencias",
-            "description": "Entrega a clientes contenido original antes del handoff final."
+            "title": "Agencias y editoriales",
+            "description": "Entrega borradores verificados a clientes antes del handoff final."
           }
         }
       },
       "faq": {
-        "title": "Preguntas frecuentes del detector de plagio",
-        "subtitle": "Respuestas claras antes de escanear.",
+        "title": "FAQ del Detector de plagio",
+        "subtitle": "Respuestas rápidas para usar el Detector de plagio.",
         "items": {
           "item-1": {
             "question": "¿Qué formatos puedo analizar?",
-            "answer": "Texto, archivos .doc/.docx/.pdf/.txt o cualquier URL https."
+            "answer": "Texto, archivos .doc/.docx/.pdf/.txt o cualquier URL https compatible."
           },
           "item-2": {
-            "question": "¿Los escaneos consumen créditos?",
-            "answer": "Sí. Cada análisis usa créditos según la longitud. El contador y el comparador de texto no consumen créditos."
+            "question": "¿Cuántos créditos usa cada escaneo?",
+            "answer": "Cada análisis del Detector de plagio consume créditos según la longitud; el contador y el comparador no gastan créditos."
           },
           "item-3": {
-            "question": "¿Guardan mis documentos?",
-            "answer": "Solo los procesamos para darte el resultado. Si inicias sesión y tu plan lo permite, guardamos un historial corto; no se usan para entrenar modelos."
+            "question": "¿Qué pasa con mis documentos?",
+            "answer": "Solo se procesan en el Detector de plagio para darte el resultado; si tienes sesión, guardamos un historial breve y no entrenamos modelos con tus datos."
           },
           "item-4": {
             "question": "¿Detecta paráfrasis?",
-            "answer": "Muestra coincidencias idénticas y similares. Reescrituras profundas pueden aparecer como “similares”; revisa el contexto."
+            "answer": "Mostramos coincidencias idénticas y similares; las paráfrasis profundas pueden aparecer como “similares”, revisa el contexto."
           },
           "item-5": {
-            "question": "¿Qué idiomas funcionan mejor?",
+            "question": "¿Qué idiomas cubre mejor?",
             "answer": "Optimizado para español e inglés; otros idiomas pueden variar en precisión."
           },
           "item-6": {
-            "question": "¿Puedo exportar el informe?",
-            "answer": "Por ahora copia las fuentes coincidentes o toma captura; añadiremos descarga más adelante."
+            "question": "¿Puedo exportar el reporte?",
+            "answer": "Por ahora puedes copiar fuentes y tomar capturas; la exportación en PDF del Detector de plagio llegará pronto."
           },
           "item-7": {
-            "question": "¿Qué tamaño de archivo es ideal?",
-            "answer": "Menos de 8–10 MB para mayor velocidad; PDFs muy grandes tardan más."
+            "question": "¿Hay límite de tamaño?",
+            "answer": "Lo ideal es menos de 8–10 MB para mantener el escaneo rápido; PDFs muy grandes tardan más."
           },
           "item-8": {
             "question": "¿Las citas cuentan como plagio?",
-            "answer": "Las citas pueden aparecer como coincidencias. Verifica la atribución antes de enviar."
+            "answer": "Sí pueden aparecer como coincidencias; verifica la atribución antes de entregar."
           },
           "item-9": {
-            "question": "¿Puedo excluir mis propios sitios?",
-            "answer": "Sí. Añade dominios de confianza a la lista de exclusión para que no aparezcan como coincidencias."
+            "question": "¿Puedo excluir mis dominios?",
+            "answer": "Sí, añade sitios propios a la lista de exclusión para que no aparezcan en el reporte."
           },
           "item-10": {
-            "question": "¿Con qué frecuencia se actualizan las fuentes?",
-            "answer": "Actualizamos web, noticias y bases académicas con regularidad para mantener los resultados frescos."
+            "question": "¿Cada cuánto se actualizan las fuentes?",
+            "answer": "Actualizamos web, noticias y bases académicas con regularidad para que el Detector de plagio devuelva hallazgos recientes."
           }
         }
       },
       "related": {
-        "title": "Más herramientas para texto limpio y original",
-        "subtitle": "Combina el detector de plagio con estas.",
-        "description": "Verifica originalidad, compara versiones y controla la extensión en una sola caja de herramientas.",
+        "title": "Combina el Detector de plagio con estas herramientas",
+        "subtitle": "Controla la originalidad de principio a fin.",
+        "description": "Detecta IA, compara versiones y mide extensión para complementar el Detector de plagio en tu flujo.",
         "tryNow": "Probar ahora",
         "items": {
           "detector": {
@@ -283,13 +283,13 @@
   },
   "WordCounterPage": {
     "metadata": {
-      "title": "Contador de palabras y caracteres | VeriIA",
-      "description": "Cuenta palabras, caracteres, oraciones y párrafos en tiempo real. Gratis y sin usar créditos."
+      "title": "Contador de palabras online rápido y preciso | VeriIA",
+      "description": "Usa el contador de palabras para medir palabras y caracteres en segundos: pega tu texto, obtiene conteos claros y cumple límites sin gastar créditos."
     },
     "hero": {
       "badge": "Herramienta gratuita",
-      "title": "Contador de palabras y caracteres",
-      "subtitle": "Pega tu texto y obtén métricas al instante: palabras, caracteres, oraciones y tiempo de lectura.",
+      "title": "Contador de palabras y caracteres online",
+      "subtitle": "Usa el contador de palabras para pegar tu texto y ver palabras, caracteres y tiempo de lectura en tiempo real.",
       "placeholder": "Escribe o pega tu texto aquí...",
       "clear": "Limpiar",
       "copied": "Copiado",
@@ -311,14 +311,14 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "Cómo funciona el contador",
-        "subtitle": "Pega, mira las métricas al instante y copia.",
+        "title": "Cómo funciona el contador de palabras",
+        "subtitle": "Pega tu texto en el contador de palabras, mira las métricas al instante y copia.",
         "steps": {
           "step-1": {
             "label": "Paso 1 · Pega o escribe",
             "imageAlt": "Usuario pegando texto en el contador",
             "items": [
-              { "title": "Suelta tu texto", "description": "Pega cualquier borrador, caption o snippet." },
+              { "title": "Suelta tu texto", "description": "Pega cualquier borrador y empieza al instante." },
               { "title": "Todo queda en el navegador", "description": "El conteo es local para máxima privacidad." },
               { "title": "Amigable multi‑idioma", "description": "Funciona con español, inglés y textos mixtos." }
             ]
@@ -327,7 +327,7 @@
             "label": "Paso 2 · Lee las métricas",
             "imageAlt": "Tarjeta de métricas con conteos",
             "items": [
-              { "title": "Palabras y caracteres", "description": "Con/sin espacios, además de oraciones y párrafos." },
+              { "title": "Palabras y caracteres", "description": "Conteos con/sin espacios, además de oraciones y párrafos." },
               { "title": "Tiempo de lectura", "description": "Minutos estimados a ~200 ppm." },
               { "title": "Actualización en vivo", "description": "Los conteos se actualizan mientras escribes—sin botones." }
             ]
@@ -344,38 +344,38 @@
         }
       },
       "useCases": {
-        "title": "Dónde ayuda el conteo",
-        "subtitle": "Tareas de escritura diarias",
-        "description": "Mantén los textos dentro de límites y bien estructurados antes de enviar.",
+        "title": "Cuándo usar el contador de palabras",
+        "subtitle": "Tareas diarias donde el contador de palabras aporta.",
+        "description": "Usa el contador de palabras para mantener textos dentro de límites y bien estructurados antes de enviar.",
         "items": {
-          "item-1": { "title": "Resúmenes académicos", "description": "Cumple topes de palabras en abstracts y ensayos." },
-          "item-2": { "title": "Snippets SEO", "description": "Chequea longitud de títulos y descripciones meta." },
+          "item-1": { "title": "Resúmenes académicos", "description": "Asegura topes en abstracts y ensayos." },
+          "item-2": { "title": "Snippets SEO", "description": "Chequea títulos y descripciones meta sin salir del contador." },
           "item-3": { "title": "Captions en redes", "description": "Respeta límites de caracteres sin adivinar." },
-          "item-4": { "title": "Copy de producto", "description": "Asegura bullets y banners concisos." },
+          "item-4": { "title": "Copy de producto", "description": "Mantén bullets y banners concisos." },
           "item-5": { "title": "Introducciones de email", "description": "Mantén aperturas breves y escaneables." },
-          "item-6": { "title": "QA de traducción", "description": "Verifica que la longitud objetivo respete la intención fuente." }
+          "item-6": { "title": "QA de traducción", "description": "Verifica longitud objetivo sin perder intención." }
         }
       },
       "faq": {
-        "title": "FAQ del contador",
-        "subtitle": "Entiende qué pasa con tu texto.",
+        "title": "FAQ del contador de palabras",
+        "subtitle": "Entiende cómo trabaja el contador de palabras y cómo protege tu texto.",
         "items": {
-          "item-1": { "question": "¿Usa créditos?", "answer": "No. Contar es gratis y local." },
-          "item-2": { "question": "¿Mi texto se envía al servidor?", "answer": "No, todo corre en tu navegador." },
-          "item-3": { "question": "¿Qué idiomas soporta?", "answer": "Cualquiera; las métricas se basan en espacios y puntuación." },
-          "item-4": { "question": "¿Soporta textos largos?", "answer": "Sí, aunque para documentos muy extensos conviene dividir para una lectura cómoda." },
-          "item-5": { "question": "¿Puedo exportar conteos?", "answer": "Copia el texto o toma nota; los conteos se actualizan en vivo." },
-          "item-6": { "question": "¿Cambia mi texto?", "answer": "No. Solo lo lee para contar; se mantiene intacto." },
-          "item-7": { "question": "¿Las emojis cuentan?", "answer": "Los emojis cuentan como caracteres; las palabras se separan por espacios." },
-          "item-8": { "question": "¿Funciona sin conexión?", "answer": "Si la página ya cargó, el conteo sigue sin nuevas llamadas de red." },
-          "item-9": { "question": "¿Hay límite al pegar?", "answer": "El límite práctico es la memoria del navegador; borradores comunes funcionan bien." },
+          "item-1": { "question": "¿Usa créditos el contador de palabras?", "answer": "No. Es gratis y local." },
+          "item-2": { "question": "¿Mi texto sale del navegador?", "answer": "No, todo se procesa en tu navegador." },
+          "item-3": { "question": "¿Qué idiomas soporta?", "answer": "Funciona con cualquier idioma; se basa en espacios y puntuación." },
+          "item-4": { "question": "¿Soporta textos largos?", "answer": "Sí; para textos muy extensos divide en partes y vuelve al contador de palabras para mayor comodidad." },
+          "item-5": { "question": "¿Puedo exportar conteos?", "answer": "Copia el texto o toma nota; el contador de palabras actualiza los conteos en vivo." },
+          "item-6": { "question": "¿Cambia mi texto?", "answer": "No. Solo lo lee para contar; tu texto queda intacto." },
+          "item-7": { "question": "¿Las emojis cuentan?", "answer": "Sí, se suman como caracteres; el contador de palabras separa las palabras por espacios." },
+          "item-8": { "question": "¿Funciona sin conexión?", "answer": "Si la página cargó, sigue funcionando sin nuevas llamadas." },
+          "item-9": { "question": "¿Hay límite al pegar?", "answer": "El límite práctico es la memoria del navegador; cubre borradores comunes." },
           "item-10": { "question": "¿Tiene modo oscuro?", "answer": "Sí, sigue el selector de tema del sitio." }
         }
       },
       "related": {
-        "title": "Más herramientas para pulir tu texto",
-        "subtitle": "Detecta IA, revisa originalidad y compara borradores.",
-        "description": "Controla calidad, originalidad y extensión con un solo kit.",
+        "title": "Combina el contador de palabras con más herramientas",
+        "subtitle": "Detecta IA, revisa originalidad y compara borradores junto al contador de palabras.",
+        "description": "Controla calidad, originalidad y extensión junto al contador de palabras en un solo kit.",
         "tryNow": "Probar ahora",
         "items": {
           "detector": { "title": "Detector IA", "description": "Resalta frases con estilo de IA antes de entregar." },
@@ -387,13 +387,13 @@
   },
   "TextComparePage": {
     "metadata": {
-      "title": "Comparador de textos | VeriIA",
-      "description": "Compara dos textos en segundos con diferencias resaltadas."
+      "title": "Comparador de textos online rápido y claro | VeriIA",
+      "description": "Usa el comparador de textos para pegar dos versiones, ver diferencias resaltadas, contar cambios y entregar siempre la versión correcta en segundos."
     },
     "hero": {
       "badge": "Comparador",
-      "title": "Compara dos textos al instante",
-      "subtitle": "Pega tus versiones A y B, pulsa comparar y mira las adiciones y eliminaciones resaltadas.",
+      "title": "Comparador de textos online al instante",
+      "subtitle": "Pega tus versiones A y B en el comparador de textos, pulsa comparar y ve adiciones y eliminaciones resaltadas.",
       "loading": "Comparando..."
     },
     "input": {
@@ -431,71 +431,71 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "Cómo funciona el comparador",
-        "subtitle": "Coloca las versiones A y B y ve los cambios en tres pasos.",
+        "title": "Cómo funciona el comparador de textos",
+        "subtitle": "Coloca las versiones A y B en el comparador de textos y ve los cambios en tres pasos.",
         "steps": {
           "step-1": {
-            "label": "Paso 1 · Añade ambos textos",
-            "imageAlt": "Dos cajas de texto listas para comparar",
+            "label": "Paso 1 · Añade ambos textos al comparador de textos",
+            "imageAlt": "Dos cajas de texto listas para comparar en el comparador de textos",
             "items": [
-              { "title": "Pega o sube archivos", "description": "Pega tus textos o carga .txt/.md." },
+              { "title": "Pega o sube archivos", "description": "Pega tus textos o carga .txt/.md en el comparador de textos." },
               { "title": "Mantén formato simple", "description": "El texto plano da los resaltados más claros." },
               { "title": "Revisa la longitud", "description": "Ideal hasta unos miles de palabras por lado para diff instantáneo." }
             ]
           },
           "step-2": {
-            "label": "Paso 2 · Ejecuta la comparación",
-            "imageAlt": "Comparación en progreso",
+            "label": "Paso 2 · Ejecuta la comparación con el comparador de textos",
+            "imageAlt": "Comparación en progreso en el comparador de textos",
             "items": [
-              { "title": "Haz clic en “Comparar texto”", "description": "Calculamos adiciones y eliminaciones agrupadas." },
-              { "title": "Resaltados al instante", "description": "Izquierda eliminaciones, derecha adiciones—con color." },
+              { "title": "Haz clic en “Comparar texto”", "description": "El comparador de textos calcula adiciones y eliminaciones agrupadas." },
+              { "title": "Resaltados al instante", "description": "Izquierda eliminaciones, derecha adiciones—con color en el comparador de textos." },
               { "title": "Conteo por palabras", "description": "Suma añadidos y eliminados para dimensionar el cambio." }
             ]
           },
           "step-3": {
             "label": "Paso 3 · Revisa y comparte",
-            "imageAlt": "Resultados con adiciones y eliminaciones resaltadas",
+            "imageAlt": "Resultados con adiciones y eliminaciones resaltadas en el comparador de textos",
             "items": [
-              { "title": "Recorre el diff", "description": "Salta a las secciones con más cambios." },
-              { "title": "Refina borradores", "description": "Reescribe y vuelve a comparar para validar." },
-              { "title": "Guarda el contexto", "description": "Usa los conteos para resumir cambios al equipo." }
+              { "title": "Recorre el diff", "description": "Salta a las secciones con más cambios en el comparador de textos." },
+              { "title": "Refina borradores", "description": "Reescribe y vuelve a comparar para validar con el comparador de textos." },
+              { "title": "Guarda el contexto", "description": "Usa los conteos para resumir cambios al equipo desde el comparador de textos." }
             ]
           }
         }
       },
       "useCases": {
-        "title": "Dónde ayuda el comparador",
-        "subtitle": "Flujos habituales",
-        "description": "Detecta cambios rápido en borradores, revisiones y actualizaciones de cumplimiento.",
+        "title": "Cuándo usar el comparador de textos",
+        "subtitle": "Flujos habituales donde el comparador de textos ahorra tiempo.",
+        "description": "Detecta cambios rápido en borradores, revisiones y actualizaciones de cumplimiento usando el comparador de textos.",
         "items": {
-          "item-1": { "title": "Revisión de versiones", "description": "Mira qué cambió entre borrador y final sin revisar manualmente." },
-          "item-2": { "title": "Redlines de contratos", "description": "Detecta ediciones sutiles en cláusulas antes de aprobar." },
-          "item-3": { "title": "Copys de producto", "description": "Compara notas de versión, textos in-app y ajustes SEO." },
-          "item-4": { "title": "Ediciones académicas", "description": "Sigue la retro del asesor frente a tu última versión." },
-          "item-5": { "title": "QA de localización", "description": "Confirma que las traducciones mantienen la intención." },
-          "item-6": { "title": "Políticas / compliance", "description": "Verifica que la redacción obligatoria no cambió entre versiones." }
+          "item-1": { "title": "Revisión de versiones", "description": "Mira qué cambió entre borrador y final con el comparador de textos." },
+          "item-2": { "title": "Redlines de contratos", "description": "Detecta ediciones sutiles en cláusulas antes de aprobar con el comparador de textos." },
+          "item-3": { "title": "Copys de producto", "description": "Compara notas de versión, textos in-app y ajustes SEO en el comparador de textos." },
+          "item-4": { "title": "Ediciones académicas", "description": "Sigue la retro del asesor frente a tu última versión usando el comparador de textos." },
+          "item-5": { "title": "QA de localización", "description": "Confirma que las traducciones mantienen la intención con el comparador de textos." },
+          "item-6": { "title": "Políticas / compliance", "description": "Verifica que la redacción obligatoria no cambió entre versiones pasando por el comparador de textos." }
         }
       },
       "faq": {
-        "title": "FAQ de comparador de texto",
-        "subtitle": "Respuestas rápidas antes de comparar.",
+        "title": "FAQ del comparador de textos",
+        "subtitle": "Respuestas rápidas antes de usar el comparador de textos.",
         "items": {
-          "item-1": { "question": "¿Admite archivos?", "answer": "Sí, texto plano (.txt) y Markdown (.md). Pegar es más ágil." },
-          "item-2": { "question": "¿Hay límite de longitud?", "answer": "Funciona mejor con unos miles de palabras por lado. Textos enormes pueden tardar más." },
+          "item-1": { "question": "¿Admite archivos el comparador de textos?", "answer": "Sí, texto plano (.txt) y Markdown (.md). Pegar es más ágil." },
+          "item-2": { "question": "¿Hay límite de longitud?", "answer": "Funciona mejor con unos miles de palabras por lado." },
           "item-3": { "question": "¿Consume créditos?", "answer": "No. Comparar texto es gratis y no gasta créditos." },
           "item-4": { "question": "¿Se guarda mi contenido?", "answer": "No hacemos llamadas al servidor; el diff corre en tu navegador." },
           "item-5": { "question": "¿Sirve para código?", "answer": "Sí para texto plano, pero no analiza sintaxis; úsalo para cambios rápidos de copy." },
           "item-6": { "question": "¿Puedo descargar el diff?", "answer": "Por ahora copia los resaltados o toma captura; la exportación llegará después." },
-          "item-7": { "question": "¿Importa el formato?", "answer": "Nos centramos en texto. Quita formato pesado para resaltados más claros." },
-          "item-8": { "question": "¿Maneja documentos muy largos?", "answer": "Funciona, pero rinde mejor en secciones más cortas. Divide textos enormes si es necesario." },
-          "item-9": { "question": "¿Soporta texto RTL?", "answer": "Sí, texto de derecha a izquierda se compara; los colores se mantienen." },
+          "item-7": { "question": "¿Importa el formato?", "answer": "Nos centramos en texto. Quita formato pesado para resaltados más claros en el comparador de textos." },
+          "item-8": { "question": "¿Maneja documentos muy largos?", "answer": "Funciona, pero rinde mejor en secciones más cortas; divide textos enormes si es necesario." },
+          "item-9": { "question": "¿Soporta texto RTL?", "answer": "Sí, texto de derecha a izquierda se compara; los colores se mantienen en el comparador de textos." },
           "item-10": { "question": "¿Hay API?", "answer": "Aún no para diff; hoy la herramienta es gratis y en el navegador." }
         }
       },
       "related": {
-        "title": "Más herramientas para borradores limpios",
+        "title": "Combina el comparador de textos con más herramientas",
         "subtitle": "Combina comparador con detección y conteo.",
-        "description": "Detecta IA, comprueba originalidad y controla extensión.",
+        "description": "Detecta IA, comprueba originalidad y controla extensión junto al comparador de textos.",
         "tryNow": "Probar ahora",
         "items": {
           "detector": { "title": "Detector IA", "description": "Resalta frases con estilo de IA antes de publicar." },
