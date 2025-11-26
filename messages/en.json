@@ -57,16 +57,16 @@
   "PlagiarismPage": {
     "metadata": {
       "title": "Fast and accurate plagiarism checker online | VeriIA",
-      "description": "Verify originality with the plagiarism checker: scan text, files or URLs, see sources and a clear score in seconds for confident submissions."
+      "description": "Detect plagiarism with VeriIA’s plagiarism checker: scan text, files, or URLs, see sources and a clear match score so you can submit with confidence."
     },
     "hero": {
-      "badge": "Plagiarism checker",
-      "title": "Plagiarism checker online, fast and accurate",
-      "subtitle": "Scan text, files or URLs with the plagiarism checker and get percentage, sources, and alerts in seconds."
+      "badge": "Originality assured",
+      "title": "Plagiarism checker for professional submissions",
+      "subtitle": "Protect the originality of your texts, files, or URLs with the plagiarism checker: clear match percentage, sources, and alerts so you can submit with confidence."
     },
     "input": {
       "title": "Content to scan",
-      "description": "Text, file, or URL. Use whichever works for you.",
+      "description": "Text, file, or URL. Use whichever works best for you.",
       "url": "Enter URL",
       "file": "Upload file",
       "paste": "Paste text",
@@ -98,14 +98,14 @@
     },
     "guest": {
       "title": "Create an account to continue",
-      "subtitle": "Sign up free and get starter credits to use the checker.",
+      "subtitle": "Sign up free and get starter credits to use the plagiarism checker.",
       "login": "Log in",
       "register": "Sign up"
     },
     "results": {
       "title": "Results",
-      "subtitle": "Plagiarism percentage and matched sources",
-      "scoreLabel": "Plagiarism %",
+      "subtitle": "Match percentage and detected sources",
+      "scoreLabel": "Match %",
       "sources": "Detected sources",
       "count": "sources",
       "untitled": "Untitled source",
@@ -117,66 +117,66 @@
     },
     "summary": {
       "sources": "{value} sources",
-      "words": "{value} plagiarized words",
+      "words": "{value} matching words",
       "identical": "{value} identical words",
       "similar": "{value} similar words"
     },
     "blocks": {
       "howItWorks": {
         "title": "How the plagiarism checker works",
-        "subtitle": "Add content to the plagiarism checker, run the scan, and review matches without losing context.",
+        "subtitle": "In three steps, go from a draft you’re unsure about to a document ready to submit.",
         "steps": {
           "step-1": {
-            "label": "Step 1 · Add your content",
-            "imageAlt": "Upload text, file, or URL to the plagiarism checker",
+            "label": "Step 1 · Add your content to the plagiarism checker",
+            "imageAlt": "Uploading text, file, or URL to the plagiarism checker",
             "items": [
               {
                 "title": "Paste or upload",
-                "description": "Paste text, upload .doc/.docx/.pdf, or drop an https URL that needs a plagiarism check."
+                "description": "Choose whether you want to paste the text, upload a .doc/.docx/.pdf, or paste a full URL into the plagiarism checker. Everything starts here."
               },
               {
-                "title": "Set language and exclusions",
-                "description": "Auto-detect is on; you can lock English/Spanish and exclude trusted domains for a cleaner plagiarism checker report."
+                "title": "Automatic language detection",
+                "description": "The plagiarism checker automatically detects your text’s language, so you don’t need to configure anything or worry about this step."
               },
               {
-                "title": "Check file size",
-                "description": "Keep files under 10 MB so the plagiarism checker responds quickly."
+                "title": "Check the size",
+                "description": "Use the counter to make sure the file or text fits within the recommended limit (up to 10 MB) so the plagiarism checker can respond quickly."
               }
             ]
           },
           "step-2": {
-            "label": "Step 2 · Run the plagiarism checker scan",
+            "label": "Step 2 · Run the analysis in the plagiarism checker",
             "imageAlt": "Plagiarism checker scan in progress",
             "items": [
               {
-                "title": "Start the plagiarism check",
-                "description": "Click “Detect plagiarism” to compare sentences across web, news, and academic sources."
+                "title": "Click “Check plagiarism”",
+                "description": "Hit “Check plagiarism” and wait a few seconds while the plagiarism checker generates the full report."
               },
               {
-                "title": "Pattern analysis",
-                "description": "We surface identical and similar phrasing so you can spot paraphrased reuse."
+                "title": "Review the summary",
+                "description": "Start with the overall match percentage shown by the plagiarism checker and get a quick sense of whether the text needs deep changes or just light edits."
               },
               {
-                "title": "Anti-evasion alerts",
-                "description": "Flags homoglyphs, zero-width spaces, and other tricks that hide plagiarism."
+                "title": "Explore the matches",
+                "description": "Scroll through the plagiarism checker report to see where the text repeats, grouped by source and type of match."
               }
             ]
           },
           "step-3": {
-            "label": "Step 3 · Review the plagiarism checker report",
+            "label": "Step 3 · Edit with the plagiarism checker report open",
             "imageAlt": "Reviewing sources detected by the plagiarism checker",
             "items": [
               {
-                "title": "See the plagiarism percentage",
-                "description": "Check how much of the text overlaps and what type of match it is."
+                "title": "Decide what to change",
+                "description": "Quickly spot, with the help of the plagiarism checker, which paragraphs need citations, rewrites, or removal before you submit."
               },
               {
-                "title": "Open matched sources",
-                "description": "Scan titles, URLs, and snippets before you edit or cite."
+                "title": "Open original sources",
+                "description": "Click the URLs listed by the plagiarism checker to compare your text with the original without leaving your workflow."
               },
               {
-                "title": "Edit and re-scan",
-                "description": "Fix flagged sections and re-run the plagiarism checker until it’s clean."
+                "title": "Update and re-scan",
+                "description": "Fix the text and run another scan in the plagiarism checker until you’re happy with the final result."
               }
             ]
           }
@@ -184,98 +184,98 @@
       },
       "useCases": {
         "title": "When to use the plagiarism checker",
-        "subtitle": "Scenarios where it protects your work.",
-        "description": "Ensure originality in academia, publishing, and business by running the plagiarism checker before you ship.",
+        "subtitle": "Situations where the plagiarism checker protects your work and reputation.",
+        "description": "Use the plagiarism checker before you submit important work, publish content, or send sensitive documents to clients and decision-makers.",
         "items": {
           "item-1": {
             "title": "Academic integrity",
-            "description": "Theses, essays, and submissions that need an original plagiarism checker report."
+            "description": "Run theses, essays, and assignments through the plagiarism checker before uploading them to your campus platform and avoid overlaps that could raise questions about originality."
           },
           "item-2": {
-            "title": "Newsrooms and editing",
-            "description": "Verify quotes and avoid duplicated wires before publishing."
+            "title": "Writing and newsrooms",
+            "description": "Validate quotes, stories, and long features with the plagiarism checker before publishing so you don’t repeat paragraphs from wires, press releases, or previous articles."
           },
           "item-3": {
             "title": "Marketing and SEO",
-            "description": "Check drafts against the web to prevent duplicate-content penalties."
+            "description": "Use the plagiarism checker to ensure your blog posts, landing pages, and product copy add original value and don’t reuse wording from other brands or media."
           },
           "item-4": {
             "title": "Legal and compliance",
-            "description": "Contracts, policies, and disclosures that must stay uniquely worded."
+            "description": "Run contracts, policies, and legal notices through the plagiarism checker to catch recycled clauses that may need to be updated, rewritten, or clarified."
           },
           "item-5": {
             "title": "Corporate communications",
-            "description": "Press releases and exec updates that must remain clean and sourced."
+            "description": "Review speeches, presentations, and key internal notes so the message stays consistent without copying older texts word for word."
           },
           "item-6": {
             "title": "Agencies and publishers",
-            "description": "Deliver drafts to clients after a plagiarism checker pass."
+            "description": "Send drafts to clients, authors, or brands with a plagiarism checker pass already done, reducing rework and back-and-forth about originality."
           }
         }
       },
       "faq": {
         "title": "Plagiarism checker FAQ",
-        "subtitle": "Quick answers before you scan.",
+        "subtitle": "Frequently asked questions about use, results, and reliability.",
         "items": {
           "item-1": {
-            "question": "What formats can I scan?",
-            "answer": "Paste text, upload .doc/.docx/.pdf/.txt, or scan any https URL with the plagiarism checker."
+            "question": "How do I use VeriIA’s plagiarism checker?",
+            "answer": "Paste your text, upload a supported file, or paste a URL, click “Check plagiarism”, and in seconds you’ll get a report with a match percentage, detected sources, and passages that deserve a closer look."
           },
           "item-2": {
-            "question": "Do scans consume credits?",
-            "answer": "Yes. Each plagiarism checker scan uses credits based on length; word counter and text compare are credit-free."
+            "question": "Which file types and formats can I scan?",
+            "answer": "You can scan pasted text, .doc/.docx/.pdf/.txt files, and public URLs. For the clearest report, keep formatting simple."
           },
           "item-3": {
-            "question": "Will my documents be stored?",
-            "answer": "They’re processed only to return results; if logged in, a short history may be kept, and no data trains models."
+            "question": "How many words can I scan and how do credits work?",
+            "answer": "Each word you scan with the plagiarism checker costs 2 credits. The total cost depends on the length of your text, so it’s good to check your balance before you start a large scan."
           },
           "item-4": {
-            "question": "Does it detect paraphrasing?",
-            "answer": "It highlights identical and similar phrasing; deep rewrites may show as “similar,” so review context."
+            "question": "What happens to my documents and data?",
+            "answer": "Your texts are only used to generate the plagiarism checker report; we don’t train models on them, and you can delete your scan history whenever you like."
           },
           "item-5": {
-            "question": "Which languages work best?",
-            "answer": "Optimized for English and Spanish; other languages can work but may vary in accuracy."
+            "question": "What exactly counts as plagiarism?",
+            "answer": "Plagiarism means presenting someone else’s content as your own without clear citation — copying, translating, or paraphrasing others’ words or ideas without proper credit."
           },
           "item-6": {
-            "question": "Can I export the report?",
-            "answer": "For now copy the matched sources; a downloadable plagiarism checker report is on the way."
+            "question": "Does a high percentage mean I’m definitely plagiarizing?",
+            "answer": "Not always. There may be valid citations, common phrases, or standard definitions. You should review each match and decide whether it needs a citation or a rewrite."
           },
           "item-7": {
-            "question": "What file size is ideal?",
-            "answer": "Keep uploads under 8–10 MB so the plagiarism checker stays fast; very large PDFs take longer."
+            "question": "Do citations or the bibliography show up as matches?",
+            "answer": "Yes. Plagiarism checkers flag textual overlap — citations, references, or common phrases often show up; you simply need to confirm they’re properly cited or slightly rewrite them."
           },
           "item-8": {
-            "question": "Do citations count as plagiarism?",
-            "answer": "Citations may appear as matches; confirm attribution before you submit."
+            "question": "Can paraphrasing be marked as plagiarism?",
+            "answer": "Yes. If you keep the same structure or ideas without citing the source, even if you change some words, it can still be considered plagiarism."
           },
           "item-9": {
-            "question": "Can I exclude my own domains?",
-            "answer": "Yes—add trusted sites to the exclusion list so the plagiarism checker ignores them."
+            "question": "Can I plagiarize myself (self-plagiarism)?",
+            "answer": "Yes. Reusing substantial parts of your previous work without declaring it can be treated as self-plagiarism in academic or publishing contexts."
           },
           "item-10": {
-            "question": "How often are sources refreshed?",
-            "answer": "Web, news, and academic sources are refreshed regularly so plagiarism checker results stay current."
+            "question": "How can I reduce the match percentage?",
+            "answer": "Identify the highlighted sections, add citations where needed, rewrite in your own words, and then run another scan with the plagiarism checker to confirm the text is original enough."
           }
         }
       },
       "related": {
         "title": "Pair the plagiarism checker with these tools",
-        "subtitle": "Control originality end to end.",
-        "description": "Detect AI, compare drafts, and control length to complement the plagiarism checker in your workflow.",
+        "subtitle": "Cover the full review cycle: from AI detection to final checks before you hit send.",
+        "description": "Build your ideal workflow: detect AI, compare versions, and control text length without leaving VeriIA or your plagiarism checker flow.",
         "tryNow": "Try now",
         "items": {
           "detector": {
             "title": "AI content detector",
-            "description": "Score AI likelihood and highlight sentences worth reviewing."
+            "description": "Check whether a text sounds too much like AI before or after you run the plagiarism checker, and decide which parts to humanize or rewrite."
           },
           "compare": {
             "title": "Text compare",
-            "description": "See differences between two versions instantly and spot reuse."
+            "description": "Put two versions side by side to see exactly what changed after editing based on the plagiarism checker report and confirm that overlaps were reduced."
           },
           "counter": {
             "title": "Word counter",
-            "description": "Count words and characters to meet limits before you submit."
+            "description": "Track words and characters so you meet calls, briefs, or platform limits while keeping the quality and originality validated by the plagiarism checker."
           }
         }
       }
@@ -284,12 +284,12 @@
   "WordCounterPage": {
     "metadata": {
       "title": "Fast online word counter with character counts | VeriIA",
-      "description": "Use the word counter to measure words and characters instantly: paste your text, see clean counts, and meet limits without spending credits."
+      "description": "Use VeriIA’s word counter to measure words, characters, and reading time in seconds: paste your text, get clear counts, and adapt your message to any limit."
     },
     "hero": {
-      "badge": "Free tool",
-      "title": "Word counter and character counter online",
-      "subtitle": "Paste your text into the word counter to see words, characters, and reading time in real time.",
+      "badge": "Private & local",
+      "title": "Online word and character counter",
+      "subtitle": "Use the word counter to paste your text and see words, characters, and reading time in real time.",
       "placeholder": "Type or paste your text here...",
       "clear": "Clear",
       "copied": "Copied",
@@ -302,98 +302,182 @@
       "charactersNoSpaces": "Characters (no spaces)",
       "sentences": "Sentences",
       "paragraphs": "Paragraphs",
-      "readingTime": "Estimated reading time",
+      "readingTime": "Approximate reading time",
       "minutes": "≈ {value} min"
     },
     "footer": {
-      "privacy": "Your text never leaves the browser; counting happens locally.",
-      "free": "No credits consumed, no account required."
+      "privacy": "Your text is not sent to any server; the word counter runs entirely in your browser.",
+      "free": "No credits used and no account required."
     },
     "blocks": {
       "howItWorks": {
         "title": "How the word counter works",
-        "subtitle": "Paste your text, see metrics instantly, and copy them out.",
+        "subtitle": "Paste your text into the word counter, see metrics instantly, and copy when you’re done.",
         "steps": {
           "step-1": {
             "label": "Step 1 · Paste or type",
-            "imageAlt": "User pasting text into the counter",
+            "imageAlt": "User pasting text into the word counter",
             "items": [
-              { "title": "Drop your text", "description": "Paste any draft to start instantly." },
-              { "title": "Stay in browser", "description": "All counting happens locally for privacy." },
-              { "title": "Multi-language friendly", "description": "Works with Spanish, English, and mixed content." }
+              {
+                "title": "Drop your text",
+                "description": "Paste any draft into the word counter and start instantly."
+              },
+              {
+                "title": "Stay in the browser",
+                "description": "All counting happens locally for maximum privacy."
+              },
+              {
+                "title": "Multi-language friendly",
+                "description": "The word counter works with English, Spanish, and mixed texts."
+              }
             ]
           },
           "step-2": {
             "label": "Step 2 · Read the metrics",
-            "imageAlt": "Metrics card with word counts",
+            "imageAlt": "Metrics card showing word and character counts",
             "items": [
-              { "title": "Words & characters", "description": "See counts with/without spaces, plus sentences and paragraphs." },
-              { "title": "Reading time", "description": "See estimated minutes to read at ~200 wpm." },
-              { "title": "Live updates", "description": "Counts refresh as you type—no buttons needed." }
+              {
+                "title": "Words and characters",
+                "description": "See counts with and without spaces, plus sentences and paragraphs."
+              },
+              {
+                "title": "Reading time",
+                "description": "Check estimated reading minutes at around 200 words per minute."
+              },
+              {
+                "title": "Live updates",
+                "description": "The word counter refreshes counts as you type—no extra buttons needed."
+              }
             ]
           },
           "step-3": {
-            "label": "Step 3 · Act on limits",
-            "imageAlt": "User copying text after checking limits",
+            "label": "Step 3 · Adjust to limits",
+            "imageAlt": "User copying text after checking length limits",
             "items": [
-              { "title": "Match platform limits", "description": "Great for headlines, snippets, meta descriptions, and social posts." },
-              { "title": "Adjust fast", "description": "Trim or expand until you hit the target count." },
-              { "title": "Copy and send", "description": "One click to copy your text once it fits." }
+              {
+                "title": "Match every platform’s limits",
+                "description": "Perfect for headlines, snippets, descriptions, and social posts that must fit tight limits."
+              },
+              {
+                "title": "Adjust fast",
+                "description": "Trim or expand your text until the word counter shows the target count."
+              },
+              {
+                "title": "Copy and send",
+                "description": "Copy your text in one click once the length is exactly where you want it."
+              }
             ]
           }
         }
       },
       "useCases": {
         "title": "When to use the word counter",
-        "subtitle": "Everyday tasks where the word counter helps.",
-        "description": "Use the word counter to keep texts within limits and well structured before you submit.",
+        "subtitle": "Everyday situations where VeriIA’s word counter makes a difference.",
+        "description": "Use VeriIA’s word counter to keep your texts within limits and clearly structured before you submit or publish them.",
         "items": {
-          "item-1": { "title": "Academic summaries", "description": "Hit word caps for abstracts and essays using the word counter." },
-          "item-2": { "title": "SEO snippets", "description": "Check title and meta description lengths quickly." },
-          "item-3": { "title": "Social captions", "description": "Stay within platform character limits without guesswork." },
-          "item-4": { "title": "Product copy", "description": "Ensure feature bullets and banners stay concise." },
-          "item-5": { "title": "Email intros", "description": "Keep openings short and scannable using the word counter." },
-          "item-6": { "title": "Translation QA", "description": "Verify target text length matches the source intent." }
+          "item-1": {
+            "title": "Academic summaries",
+            "description": "Control the length of abstracts, summaries, and essays in seconds. Adjust the text until the word counter matches exactly what the call or campus platform requires."
+          },
+          "item-2": {
+            "title": "SEO snippets and meta descriptions",
+            "description": "Fine-tune titles, meta descriptions, and search snippets without leaving the word counter. Avoid texts that get cut off in Google or are too short to attract clicks."
+          },
+          "item-3": {
+            "title": "Social captions and posts",
+            "description": "Respect character limits on platforms like X, Instagram, or LinkedIn without guessing. Draft inside the word counter and tweak until the message feels just right."
+          },
+          "item-4": {
+            "title": "Product copy and ads",
+            "description": "Keep bullets, banners, and ad copy clear and concise. VeriIA’s word counter helps you avoid cluttered creatives and also makes sure you don’t leave out key info."
+          },
+          "item-5": {
+            "title": "Subject lines and key emails",
+            "description": "Write email subjects and intros that fit on mobile screens. Measure with the word counter so your message stays brief, direct, and easy to scan."
+          },
+          "item-6": {
+            "title": "Length control in translations",
+            "description": "Check that the translated text stays close to the original length without losing nuance. The word counter gives you a quick reference for localization and dubbing QA."
+          }
         }
       },
       "faq": {
         "title": "Word counter FAQ",
-        "subtitle": "Understand how the word counter handles your text.",
+        "subtitle": "Understand how the word counter works and how it treats your text.",
         "items": {
-          "item-1": { "question": "Does the word counter use credits?", "answer": "No. The word counter is free and local." },
-          "item-2": { "question": "Is my text sent to a server?", "answer": "No, everything runs in your browser." },
-          "item-3": { "question": "Which languages work?", "answer": "Any language; metrics are whitespace/punctuation based." },
-          "item-4": { "question": "Does it handle long texts?", "answer": "Yes, but for very long docs split them for readability." },
-          "item-5": { "question": "Can I export counts?", "answer": "Copy the text or take notes; counts update live." },
-          "item-6": { "question": "Does it change my text?", "answer": "No. It only reads for counting; your text stays exactly as pasted." },
-          "item-7": { "question": "Will emojis or symbols count?", "answer": "Emojis count as characters; words are split on whitespace." },
-          "item-8": { "question": "Can I use it offline?", "answer": "If the page is loaded, counting works without further network calls." },
-          "item-9": { "question": "Any limits on paste size?", "answer": "Practical limit is your browser memory; typical drafts work fine." },
-          "item-10": { "question": "Is there a dark mode?", "answer": "Yes, it follows the site theme toggle." }
+          "item-1": {
+            "question": "Is VeriIA’s word counter really free?",
+            "answer": "Yes. VeriIA’s word counter is a free tool: you can paste your text and see words, characters, and reading time without creating an account or spending credits."
+          },
+          "item-2": {
+            "question": "Does my text get sent to VeriIA’s servers when I use the word counter?",
+            "answer": "No. The word counter runs directly in your browser: your text is processed locally and is not stored or sent to our servers."
+          },
+          "item-3": {
+            "question": "What does the word counter measure besides word count?",
+            "answer": "In addition to words, VeriIA’s word counter shows characters with and without spaces, the number of sentences and paragraphs, and an approximate reading time in minutes."
+          },
+          "item-4": {
+            "question": "Why does the word counter show a different number than Word or Google Docs?",
+            "answer": "Because each tool uses slightly different rules to define a “word”. Some counters include numbers, URLs, or certain formatted elements and others don’t, so small differences are normal."
+          },
+          "item-5": {
+            "question": "What counts as a “word” in an online word counter?",
+            "answer": "Typically, a word is any group of characters separated by spaces or punctuation. Numbers, hashtags, or links can be counted as a single word depending on the word counter."
+          },
+          "item-6": {
+            "question": "How can I estimate how many pages X words will be?",
+            "answer": "First, use the word counter to get the total word count. As a rough guide, 250–300 words is about one page double-spaced at 12 pt, and around 500 words is one single-spaced page."
+          },
+          "item-7": {
+            "question": "How is reading time calculated in the word counter?",
+            "answer": "The word counter estimates reading time by dividing the total number of words by an average reading speed, for example 200–250 words per minute. It helps you see if an article or newsletter is longer than your audience expects."
+          },
+          "item-8": {
+            "question": "Does the word counter work well with any language?",
+            "answer": "It works best with languages that separate words using spaces, like English or Spanish. In texts with many symbols or in languages without clear spaces, there can be small variations."
+          },
+          "item-9": {
+            "question": "Is there a practical length limit for using the online word counter?",
+            "answer": "In practice, the limit is set by your browser and available memory. For very long manuscripts, it’s usually easier to split the content into sections and run each part through the word counter."
+          },
+          "item-10": {
+            "question": "When does it make sense to use an online word counter instead of Word or Google Docs?",
+            "answer": "When you want a quick check without opening a document, when you work across many formats, or when you need extra metrics like reading time. It’s an extra layer of control on top of your regular editor."
+          }
         }
       },
       "related": {
-        "title": "Pair the word counter with more tools",
-        "subtitle": "Detect AI, check originality, compare drafts.",
-        "description": "Keep quality, originality, and length under control alongside the word counter.",
+        "title": "Pair the word counter with more VeriIA tools",
+        "subtitle": "Detect AI, check originality, and compare drafts alongside the word counter.",
+        "description": "Build a complete workflow with VeriIA’s tools: use the word counter for length, the plagiarism checker for originality, and the AI detector for style and tone.",
         "tryNow": "Try now",
         "items": {
-          "detector": { "title": "AI detector", "description": "Highlight AI-like sentences before delivering work." },
-          "plagiarism": { "title": "Plagiarism checker", "description": "Verify originality across web and academic sources." },
-          "compare": { "title": "Text compare", "description": "See what changed between two versions instantly." }
+          "detector": {
+            "title": "VeriIA AI detector",
+            "description": "See whether your text sounds AI-generated and highlight sentences you might want to rewrite before sending."
+          },
+          "plagiarism": {
+            "title": "Plagiarism checker",
+            "description": "Check your content against the web and academic sources before you publish or submit an important document."
+          },
+          "compare": {
+            "title": "Text compare",
+            "description": "Open two versions of the same text and see exactly what changed between drafts to decide which one to keep."
+          }
         }
       }
     }
   },
   "TextComparePage": {
     "metadata": {
-      "title": "Text compare tool online, fast and clear now | VeriIA",
-      "description": "Use text compare to paste two versions, see highlighted differences, count changes, and ship the right draft in seconds with clear context every time."
+      "title": "Fast and clear online text compare tool | VeriIA",
+      "description": "Use the text compare tool to paste two versions, see highlighted differences, count changes, and always ship the right draft in seconds."
     },
     "hero": {
-      "badge": "Comparator",
-      "title": "Text compare online in seconds",
-      "subtitle": "Paste versions A and B into text compare, hit compare, and see additions and removals highlighted.",
+      "badge": "Private & local",
+      "title": "Instant online text compare",
+      "subtitle": "Paste versions A and B into the text compare tool, click compare, and see additions and removals highlighted.",
       "loading": "Comparing..."
     },
     "input": {
@@ -421,7 +505,7 @@
     },
     "results": {
       "title": "Differences",
-      "subtitle": "We highlight what was removed and added",
+      "subtitle": "We highlight what was removed and what was added",
       "summary": "{additions} additions · {removals} removals",
       "removals": "Removals",
       "additions": "Additions",
@@ -431,76 +515,160 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "How text compare works",
-        "subtitle": "Drop versions A and B into text compare, see clean highlights in three steps.",
+        "title": "How the text compare tool works",
+        "subtitle": "Drop versions A and B into the text compare tool and see the changes in three steps.",
         "steps": {
           "step-1": {
-            "label": "Step 1 · Add both texts",
-            "imageAlt": "Two text boxes ready to compare",
+            "label": "Step 1 · Add both texts to text compare",
+            "imageAlt": "Two text boxes ready to compare in the text compare tool",
             "items": [
-              { "title": "Paste or upload", "description": "Paste your original and changed text, or load .txt/.md files." },
-              { "title": "Keep formatting simple", "description": "Plain text gives the clearest highlights and counts." },
-              { "title": "Check length", "description": "Best for up to a few thousand words per side for instant results." }
+              {
+                "title": "Paste or upload files",
+                "description": "Paste your texts directly or upload .txt/.md files into the text compare tool."
+              },
+              {
+                "title": "Keep formatting simple",
+                "description": "Plain text gives the clearest highlights and makes the diff easier to read."
+              },
+              {
+                "title": "Check the length",
+                "description": "Best for up to a few thousand words per side so text compare can return results instantly."
+              }
             ]
           },
           "step-2": {
-            "label": "Step 2 · Run text compare",
-            "imageAlt": "Comparison in progress",
+            "label": "Step 2 · Run the comparison in text compare",
+            "imageAlt": "Comparison in progress in the text compare tool",
             "items": [
-              { "title": "Click “Compare text”", "description": "We compute additions and removals and group them for you." },
-              { "title": "See highlights instantly", "description": "Left shows removals, right shows additions—color coded." },
-              { "title": "Word-level counts", "description": "Additions and removals are counted so you can scope edits fast." }
+              {
+                "title": "Click “Compare text”",
+                "description": "The text compare tool calculates additions and removals and groups them for you."
+              },
+              {
+                "title": "See highlights instantly",
+                "description": "The left side shows removals, the right side shows additions—color coded in text compare."
+              },
+              {
+                "title": "Word-level counts",
+                "description": "Added and removed words are counted so you can quickly understand how big the change is."
+              }
             ]
           },
           "step-3": {
-            "label": "Step 3 · Review and share in text compare",
-            "imageAlt": "Results with highlighted additions and removals",
+            "label": "Step 3 · Review and share from text compare",
+            "imageAlt": "Results with highlighted additions and removals in text compare",
             "items": [
-              { "title": "Scroll the diff", "description": "Jump to sections that changed most." },
-              { "title": "Refine drafts", "description": "Rewrite, then rerun compare to confirm changes landed." },
-              { "title": "Save context", "description": "Use the counts to summarize what changed for teammates." }
+              {
+                "title": "Scroll through the diff",
+                "description": "Jump to the sections with the most changes inside the text compare view."
+              },
+              {
+                "title": "Refine drafts",
+                "description": "Rewrite, then rerun text compare to confirm that edits landed as expected."
+              },
+              {
+                "title": "Save and share context",
+                "description": "Use the counts from text compare to summarize what changed for teammates or reviewers."
+              }
             ]
           }
         }
       },
       "useCases": {
-        "title": "When to use text compare",
-        "subtitle": "Workflows where text compare saves time.",
-        "description": "Spot differences quickly across drafts, reviews, and compliance updates with text compare.",
+        "title": "When to use the text compare tool",
+        "subtitle": "Scenarios where VeriIA’s text compare saves reviews and misunderstandings.",
+        "description": "Use VeriIA’s text compare tool to see at a glance what changed between two versions, document redlines, and make sure everyone is working from the same text.",
         "items": {
-          "item-1": { "title": "Version review", "description": "See what changed between draft and final with text compare." },
-          "item-2": { "title": "Contract redlines", "description": "Catch subtle clause edits before approving in text compare." },
-          "item-3": { "title": "Product copy updates", "description": "Compare release notes, in-app copy, and SEO tweaks." },
-          "item-4": { "title": "Academic edits", "description": "Track advisor feedback vs. your latest revision." },
-          "item-5": { "title": "Localization QA", "description": "Ensure translated strings match the source intent using text compare." },
-          "item-6": { "title": "Policy/compliance", "description": "Verify mandated wording hasn’t drifted between versions with text compare." }
+          "item-1": {
+            "title": "Version review",
+            "description": "Check in seconds what changed between a draft and the final version. Text compare highlights additions and removals so you can see if edits are light tweaks or a full rewrite."
+          },
+          "item-2": {
+            "title": "Contract redlines and legal documents",
+            "description": "Catch subtle edits in clauses, dates, or amounts before signing. The text compare tool shows line-by-line what was added and removed, ideal for redlining contracts, NDAs, and policies."
+          },
+          "item-3": {
+            "title": "Product copy and marketing content",
+            "description": "Compare in-app copy, release notes, landing pages, and SEO text to see if changes really improve the message. Text compare helps you confirm the new copy keeps tone, claims, and legal requirements."
+          },
+          "item-4": {
+            "title": "Academic edits and style corrections",
+            "description": "Follow advisor feedback by comparing the new version with the previous one. With text compare you can see which paragraphs were rewritten, which citations changed, and whether all comments were applied."
+          },
+          "item-5": {
+            "title": "Translation and localization QA",
+            "description": "Confirm that translations keep the original intent without adding or losing information. Use text compare to review versions in the same language and pick the one that fits best."
+          },
+          "item-6": {
+            "title": "Internal policies and compliance",
+            "description": "Verify that sensitive texts—like privacy policies, legal notices, or internal manuals—haven’t been changed without approval. Text compare shows you exactly which lines differ between one version and the next."
+          }
         }
       },
       "faq": {
         "title": "Text compare FAQ",
-        "subtitle": "Quick answers before you diff with text compare.",
+        "subtitle": "Quick answers before you use the text compare tool.",
         "items": {
-          "item-1": { "question": "Are files supported?", "answer": "Yes, plain text (.txt) and Markdown (.md) in text compare. Paste is recommended for faster edits." },
-          "item-2": { "question": "Is there a length limit?", "answer": "Best under a few thousand words per side for instant results; very large texts may be slower." },
-          "item-3": { "question": "Does it cost credits?", "answer": "No. Text compare is free and does not use credits." },
-          "item-4": { "question": "Is content stored?", "answer": "No server calls are made; diff runs in your browser." },
-          "item-5": { "question": "Can I compare code?", "answer": "Yes for plain text, but it doesn’t parse syntax—use it for quick copy diffs." },
-          "item-6": { "question": "Can I download the diff?", "answer": "For now, copy the highlighted sections or take a screenshot; export will arrive later." },
-          "item-7": { "question": "Does formatting matter?", "answer": "We focus on text. Remove heavy formatting for the clearest highlights." },
-          "item-8": { "question": "Will it handle very long documents?", "answer": "It works, but performance is best on shorter sections; consider splitting long docs." },
-          "item-9": { "question": "Does it support right-to-left text?", "answer": "Yes, basic RTL text works; highlights remain color-coded." },
-          "item-10": { "question": "Is there an API?", "answer": "Not yet for diff; today’s tool is browser-based and free." }
+          "item-1": {
+            "question": "Is VeriIA’s text compare tool free, and do I need an account?",
+            "answer": "VeriIA’s text compare tool is free to use: you can paste two versions, compare them, and see changes without spending credits or creating an account."
+          },
+          "item-2": {
+            "question": "Which formats does the text compare tool support?",
+            "answer": "The text compare tool is optimized for pasted text and plain text files like .txt or .md. We recommend simple formatting so highlights stay clean and easy to read."
+          },
+          "item-3": {
+            "question": "Where are my texts processed when I use text compare?",
+            "answer": "The diff for text compare runs in your browser: we don’t need to upload your texts to a server to calculate differences."
+          },
+          "item-4": {
+            "question": "What kinds of differences does a text compare tool show?",
+            "answer": "A text compare tool usually shows what was added, what was removed, and what changed between two versions, often at line, word, or character level."
+          },
+          "item-5": {
+            "question": "Why can two text compare tools show different results for the same documents?",
+            "answer": "Because each text compare tool uses different rules and algorithms. Some compare by line, others by words or characters, and some can ignore spaces or capitalization depending on settings."
+          },
+          "item-6": {
+            "question": "Can I use the text compare tool for code as well?",
+            "answer": "Yes, many people use text compare for code. It helps you see which lines were added, removed, or modified between two versions of a file, although it doesn’t analyze syntax."
+          },
+          "item-7": {
+            "question": "Is there a practical size limit for online text compare?",
+            "answer": "Online text compare tools work best with moderately sized documents. For very long texts, it’s usually better to split them into sections and compare each part separately."
+          },
+          "item-8": {
+            "question": "Can I use text compare to detect plagiarism?",
+            "answer": "Text compare is great for seeing differences between two known versions, but it doesn’t search the whole web. For plagiarism checks, it’s better to use a dedicated plagiarism checker alongside text compare."
+          },
+          "item-9": {
+            "question": "Is it safe to use text compare with sensitive documents?",
+            "answer": "It depends on how each tool handles your data. A text compare tool that runs entirely in the browser, like VeriIA’s, is safer because your text doesn’t leave your device."
+          },
+          "item-10": {
+            "question": "What best practices do you recommend when using text compare?",
+            "answer": "Paste as plain text, use the same text compare tool across a project, enable options like ignoring spaces when you only care about content changes, and keep simple summaries of diffs to document what changed."
+          }
         }
       },
       "related": {
-        "title": "Pair text compare with other tools",
-        "subtitle": "Pair compare with detection and counting.",
-        "description": "Detect AI, check originality, and keep lengths in check alongside text compare.",
+        "title": "Pair text compare with more VeriIA tools",
+        "subtitle": "Complete your review: compare, detect AI, and check originality.",
+        "description": "Build a full review flow with VeriIA: use text compare to see changes between versions, the plagiarism checker to validate originality, and the AI detector to review style and tone.",
         "tryNow": "Try now",
         "items": {
-          "detector": { "title": "AI detector", "description": "Highlight AI-like sentences before shipping copy." },
-          "plagiarism": { "title": "Plagiarism checker", "description": "Find overlapping sources before you publish." },
-          "counter": { "title": "Word counter", "description": "Stay within limits for titles, snippets, and briefs." }
+          "detector": {
+            "title": "VeriIA AI detector",
+            "description": "Check whether a text sounds AI-generated before or after using text compare, and highlight sentences worth rewriting."
+          },
+          "plagiarism": {
+            "title": "Plagiarism checker",
+            "description": "After choosing your final version with text compare, run it through the plagiarism checker to look for overlaps across the web and academic sources."
+          },
+          "counter": {
+            "title": "Word counter",
+            "description": "Adjust the length of titles, emails, and documents once the diff is closed. VeriIA’s word counter helps you meet character limits while staying clear and direct."
+          }
         }
       }
     }
