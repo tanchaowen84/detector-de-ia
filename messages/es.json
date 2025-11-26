@@ -475,7 +475,7 @@
       "description": "Usa el comparador de textos para pegar dos versiones, ver diferencias resaltadas, contar cambios y entregar siempre la versión correcta en segundos."
     },
     "hero": {
-      "badge": "Comparador",
+      "badge": "Privado y local",
       "title": "Comparador de textos online al instante",
       "subtitle": "Pega tus versiones A y B en el comparador de textos, pulsa comparar y ve adiciones y eliminaciones resaltadas.",
       "loading": "Comparando..."
@@ -541,12 +541,12 @@
             "imageAlt": "Comparación en progreso en el comparador de textos",
             "items": [
               {
-                "title": "Haz clic en “Comparar texto”",
+                "title": "Haz clic en \"Comparar texto\"",
                 "description": "El comparador de textos calcula adiciones y eliminaciones agrupadas."
               },
               {
                 "title": "Resaltados al instante",
-                "description": "Izquierda eliminaciones, derecha adiciones—con color en el comparador de textos."
+                "description": "Izquierda eliminaciones, derecha adiciones, con color en el comparador de textos."
               },
               {
                 "title": "Conteo por palabras",
@@ -576,32 +576,32 @@
       },
       "useCases": {
         "title": "Cuándo usar el comparador de textos",
-        "subtitle": "Flujos habituales donde el comparador de textos ahorra tiempo.",
-        "description": "Detecta cambios rápido en borradores, revisiones y actualizaciones de cumplimiento usando el comparador de textos.",
+        "subtitle": "Escenarios donde el comparador de textos de VeriIA te ahorra revisiones y malentendidos.",
+        "description": "Usa el comparador de textos de VeriIA para ver de un vistazo qué cambió entre dos versiones, documentar redlines y asegurarte de que todo el mundo trabaja sobre el mismo texto.",
         "items": {
           "item-1": {
             "title": "Revisión de versiones",
-            "description": "Mira qué cambió entre borrador y final con el comparador de textos."
+            "description": "Comprueba en segundos qué cambió entre un borrador y la versión final. El comparador de textos de VeriIA resalta adiciones y eliminaciones para que sepas si los cambios son solo retoques de estilo o una reescritura profunda."
           },
           "item-2": {
-            "title": "Redlines de contratos",
-            "description": "Detecta ediciones sutiles en cláusulas antes de aprobar con el comparador de textos."
+            "title": "Redlines de contratos y documentos legales",
+            "description": "Detecta ediciones sutiles en cláusulas, fechas o importes antes de firmar. El comparador de textos marca línea por línea qué se añadió y qué se eliminó, ideal para revisar redlines de contratos, NDAs y políticas."
           },
           "item-3": {
-            "title": "Copys de producto",
-            "description": "Compara notas de versión, textos in-app y ajustes SEO en el comparador de textos."
+            "title": "Copys de producto y contenido de marketing",
+            "description": "Compara textos in-app, notas de versión, landings y textos SEO para ver si los cambios realmente mejoran el mensaje. El comparador de textos de VeriIA te ayuda a validar que el copy nuevo respeta tono, claims y requisitos legales."
           },
           "item-4": {
-            "title": "Ediciones académicas",
-            "description": "Sigue la retro del asesor frente a tu última versión usando el comparador de textos."
+            "title": "Ediciones académicas y corrección de estilo",
+            "description": "Sigue los comentarios de tu asesor o corrector comparando la nueva versión con la anterior. Con el comparador de textos ves qué párrafos se han reescrito, qué citas han cambiado y si se han aplicado todas las sugerencias."
           },
           "item-5": {
-            "title": "QA de localización",
-            "description": "Confirma que las traducciones mantienen la intención con el comparador de textos."
+            "title": "QA de traducción y localización",
+            "description": "Confirma que la traducción mantiene la intención del original sin añadir ni perder información. Usa el comparador de textos para revisar versiones en el mismo idioma y elegir la que mejor encaja."
           },
           "item-6": {
-            "title": "Políticas / compliance",
-            "description": "Verifica que la redacción obligatoria no cambió entre versiones pasando por el comparador de textos."
+            "title": "Políticas internas y cumplimiento (compliance)",
+            "description": "Verifica que textos sensibles, como políticas de privacidad, avisos legales o manuales internos, no han sufrido cambios no autorizados. El comparador de textos de VeriIA te muestra exactamente qué líneas se han tocado entre una versión y otra."
           }
         }
       },
@@ -610,64 +610,64 @@
         "subtitle": "Respuestas rápidas antes de usar el comparador de textos.",
         "items": {
           "item-1": {
-            "question": "¿Admite archivos el comparador de textos?",
-            "answer": "Sí, texto plano (.txt) y Markdown (.md). Pegar es más ágil."
+            "question": "¿El comparador de textos de VeriIA es gratuito y necesito cuenta?",
+            "answer": "El comparador de textos de VeriIA es una herramienta gratuita: puedes pegar tus dos versiones, comparar y ver los cambios sin usar créditos ni crear una cuenta."
           },
           "item-2": {
-            "question": "¿Hay límite de longitud?",
-            "answer": "Funciona mejor con unos miles de palabras por lado."
+            "question": "¿Qué formatos admite el comparador de textos de VeriIA?",
+            "answer": "El comparador de textos de VeriIA está optimizado para texto pegado directamente y archivos de texto plano como .txt o .md. Recomendamos usar formato sencillo para que los resaltados sean más claros."
           },
           "item-3": {
-            "question": "¿Consume créditos?",
-            "answer": "No. Comparar texto es gratis y no gasta créditos."
+            "question": "¿Dónde se procesan mis textos cuando uso el comparador de textos de VeriIA?",
+            "answer": "El diff del comparador de textos de VeriIA se ejecuta en tu navegador: no necesitamos subir tus textos a un servidor para calcular las diferencias."
           },
           "item-4": {
-            "question": "¿Se guarda mi contenido?",
-            "answer": "No hacemos llamadas al servidor; el diff corre en tu navegador."
+            "question": "¿Qué tipo de diferencias marca un comparador de textos?",
+            "answer": "Un comparador de textos resalta normalmente qué se añadió, qué se eliminó y qué se modificó entre dos versiones, ya sea por palabra, por carácter o por línea."
           },
           "item-5": {
-            "question": "¿Sirve para código?",
-            "answer": "Sí para texto plano, pero no analiza sintaxis; úsalo para cambios rápidos de copy."
+            "question": "¿Por qué dos comparadores de textos pueden mostrar resultados distintos con los mismos documentos?",
+            "answer": "Porque cada comparador de textos usa reglas y algoritmos distintos. Algunos comparan por líneas, otros por palabras o caracteres, y pueden ignorar espacios o mayúsculas según la configuración."
           },
           "item-6": {
-            "question": "¿Puedo descargar el diff?",
-            "answer": "Por ahora copia los resaltados o toma captura; la exportación llegará después."
+            "question": "¿Sirve un comparador de textos también para código?",
+            "answer": "Sí, muchos comparadores de textos se usan para revisar código. Te permiten ver qué líneas se han añadido, eliminado o modificado entre dos versiones de un archivo."
           },
           "item-7": {
-            "question": "¿Importa el formato?",
-            "answer": "Nos centramos en texto. Quita formato pesado para resaltados más claros en el comparador de textos."
+            "question": "¿Hay un límite práctico de tamaño al usar un comparador de textos online?",
+            "answer": "Los comparadores de textos online funcionan mejor con documentos de tamaño moderado. Para textos muy largos es recomendable dividir el contenido en secciones y compararlas por partes."
           },
           "item-8": {
-            "question": "¿Maneja documentos muy largos?",
-            "answer": "Funciona, pero rinde mejor en secciones más cortas; divide textos enormes si es necesario."
+            "question": "¿Puedo usar un comparador de textos para detectar plagio?",
+            "answer": "Un comparador de textos es ideal para ver diferencias entre dos versiones conocidas, pero no busca en toda la web. Para una revisión de plagio completa es mejor combinarlo con un detector de plagio dedicado."
           },
           "item-9": {
-            "question": "¿Soporta texto RTL?",
-            "answer": "Sí, texto de derecha a izquierda se compara; los colores se mantienen en el comparador de textos."
+            "question": "¿Es seguro usar un comparador de textos online con documentos sensibles?",
+            "answer": "Depende de cómo procese los datos cada herramienta. Un comparador de textos que trabaja solo en el navegador, como el de VeriIA, es más seguro porque el texto no sale de tu equipo."
           },
           "item-10": {
-            "question": "¿Hay API?",
-            "answer": "Aún no para diff; hoy la herramienta es gratis y en el navegador."
+            "question": "¿Qué buenas prácticas recomiendan al usar un comparador de textos?",
+            "answer": "Copia como texto plano, usa siempre el mismo comparador de textos en un proyecto, ajusta opciones como ignorar espacios cuando solo te interesan los cambios de contenido y guarda resúmenes de los diffs para documentar qué ha cambiado."
           }
         }
       },
       "related": {
-        "title": "Combina el comparador de textos con más herramientas",
-        "subtitle": "Combina comparador con detección y conteo.",
-        "description": "Detecta IA, comprueba originalidad y controla extensión junto al comparador de textos.",
+        "title": "Combina el comparador de textos con más herramientas de VeriIA",
+        "subtitle": "Completa tu revisión: compara, detecta IA y controla originalidad.",
+        "description": "Construye un flujo de revisión completo con VeriIA: usa el comparador de textos para ver cambios entre versiones, el detector de plagio para validar originalidad y el detector IA para revisar el estilo del contenido.",
         "tryNow": "Probar ahora",
         "items": {
           "detector": {
-            "title": "Detector IA",
-            "description": "Resalta frases con estilo de IA antes de publicar."
+            "title": "Detector IA de VeriIA",
+            "description": "Comprueba si un texto suena generado por IA antes o después de compararlo y decide qué frases conviene reescribir de forma más humana."
           },
           "plagiarism": {
             "title": "Detector de plagio",
-            "description": "Encuentra fuentes coincidentes antes de publicar."
+            "description": "Después de elegir la versión definitiva con el comparador de textos, pasa el documento por el detector de plagio de VeriIA para verificar coincidencias en web y bases académicas."
           },
           "counter": {
             "title": "Contador de palabras",
-            "description": "Respeta límites en títulos, snippets y briefs."
+            "description": "Ajusta la longitud de títulos, correos y documentos tras cerrar el diff. El contador de palabras de VeriIA te ayuda a cumplir límites de caracteres y mantener el texto claro y directo."
           }
         }
       }
