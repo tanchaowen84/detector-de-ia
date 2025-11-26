@@ -1490,11 +1490,11 @@
           "title": "Detector de plagio",
           "description": "Evita la duplicación involuntaria. Nuestro detector de plagio analiza tus textos frente a la web y fuentes académicas para confirmar que tu trabajo es original antes de enviarlo junto al informe del detector de ia."
         },
-        "compare": {
+        "summarizer": {
           "title": "Comparador de textos",
           "description": "Coloca dos versiones del mismo texto y ve las diferencias en segundos. Detecta reuso, cambios de tono y ajustes tras pasar por el detector de IA, sin salir de tu flujo de revisión."
         },
-        "counter": {
+        "humanizer": {
           "title": "Contador de palabras",
           "description": "Calcula palabras, caracteres y tiempo de lectura al instante. Ideal para respetar extensiones, meta descripciones o requisitos académicos después de validar estilo y originalidad con el detector de ia."
         }
