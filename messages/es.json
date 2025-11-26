@@ -124,59 +124,59 @@
     "blocks": {
       "howItWorks": {
         "title": "Cómo funciona el Detector de plagio",
-        "subtitle": "En tres pasos pasas de un texto dudoso a un documento listo para enviar.",
+        "subtitle": "En tres pasos pasas de un texto dudoso a un documento listo para enviar con el Detector de plagio.",
         "steps": {
           "step-1": {
-            "label": "Paso 1 · Añade tu contenido",
+            "label": "Paso 1 · Añade tu contenido al Detector de plagio",
             "imageAlt": "Subir texto, archivo o URL al Detector de plagio",
             "items": [
               {
                 "title": "Pega o sube",
-                "description": "Elige si quieres pegar el texto, subir .doc/.docx/.pdf o pegar una URL completa. Todo empieza aquí."
+                "description": "Elige si quieres pegar el texto, subir .doc/.docx/.pdf o pegar una URL completa en el Detector de plagio. Todo empieza aquí."
               },
               {
                 "title": "Idioma automático",
-                "description": "Detectamos automáticamente el idioma de tu texto, así que no tienes que configurarlo ni preocuparte por este paso."
+                "description": "El Detector de plagio detecta automáticamente el idioma de tu texto, así que no tienes que configurarlo ni preocuparte por este paso."
               },
               {
                 "title": "Comprueba el tamaño",
-                "description": "Usa el contador para asegurarte de que el archivo o texto entra en el límite recomendado (hasta 10 MB) y evita esperas innecesarias."
+                "description": "Usa el contador para asegurarte de que el archivo o texto entra en el límite recomendado (hasta 10 MB) y el Detector de plagio responde rápido."
               }
             ]
           },
           "step-2": {
-            "label": "Paso 2 · Ejecuta el análisis",
+            "label": "Paso 2 · Ejecuta el análisis en el Detector de plagio",
             "imageAlt": "Escaneo del Detector de plagio en progreso",
             "items": [
               {
                 "title": "Pulsa “Detectar plagio”",
-                "description": "Haz clic en “Detectar plagio” y espera unos segundos mientras se genera el informe completo."
+                "description": "Haz clic en “Detectar plagio” y espera unos segundos mientras el Detector de plagio genera el informe completo."
               },
               {
                 "title": "Revisa el resumen",
-                "description": "Empieza por el porcentaje global y un vistazo rápido al estado del texto para saber si requiere cambios profundos o solo ajustes finos."
+                "description": "Empieza por el porcentaje global que muestra el Detector de plagio y un vistazo rápido al estado del texto para saber si requiere cambios profundos o solo ajustes finos."
               },
               {
                 "title": "Explora coincidencias",
-                "description": "Desplázate por el informe para ver en qué partes se repite el texto, agrupado por fuente y tipo de coincidencia."
+                "description": "Desplázate por el informe del Detector de plagio para ver en qué partes se repite el texto, agrupado por fuente y tipo de coincidencia."
               }
             ]
           },
           "step-3": {
-            "label": "Paso 3 · Edita con el reporte delante",
+            "label": "Paso 3 · Edita con el reporte del Detector de plagio",
             "imageAlt": "Revisión de fuentes detectadas en el Detector de plagio",
             "items": [
               {
                 "title": "Decide qué cambiar",
-                "description": "Detecta rápidamente qué párrafos necesitan cita, reescritura o eliminación antes de entregar."
+                "description": "Detecta rápidamente con el Detector de plagio qué párrafos necesitan cita, reescritura o eliminación antes de entregar."
               },
               {
                 "title": "Abre las fuentes originales",
-                "description": "Haz clic en las URLs detectadas para comparar tu texto con el original sin salir de tu flujo de trabajo."
+                "description": "Haz clic en las URLs que muestra el Detector de plagio para comparar tu texto con el original sin salir de tu flujo de trabajo."
               },
               {
                 "title": "Actualiza y vuelve a analizar",
-                "description": "Corrige el texto y lanza un nuevo análisis hasta que estés cómodo con el resultado final."
+                "description": "Corrige el texto y lanza un nuevo análisis en el Detector de plagio hasta que estés cómodo con el resultado final."
               }
             ]
           }
@@ -189,19 +189,19 @@
         "items": {
           "item-1": {
             "title": "Integridad académica",
-            "description": "Comprueba tesis, ensayos y tareas antes de subirlas al campus virtual y evita coincidencias que puedan levantar sospechas de copia."
+            "description": "Pasa tesis, ensayos y tareas por el Detector de plagio antes de subirlas al campus virtual y evita coincidencias que puedan levantar sospechas de copia."
           },
           "item-2": {
             "title": "Redacción y prensa",
-            "description": "Valida citas, notas y reportajes largos antes de publicarlos para no repetir párrafos de agencias, comunicados o artículos anteriores."
+            "description": "Valida citas, notas y reportajes largos con el Detector de plagio antes de publicarlos para no repetir párrafos de agencias, comunicados o artículos anteriores."
           },
           "item-3": {
             "title": "Marketing y SEO",
-            "description": "Garantiza que tus blogs, landings y fichas de producto aportan contenido original y no copian textos de otras marcas o medios."
+            "description": "Garantiza con el Detector de plagio que tus blogs, landings y fichas de producto aportan contenido original y no copian textos de otras marcas o medios."
           },
           "item-4": {
             "title": "Legal y compliance",
-            "description": "Pasa contratos, políticas y avisos legales por el detector para detectar fragmentos reciclados que quizá deban reescribirse o matizarse."
+            "description": "Pasa contratos, políticas y avisos legales por el Detector de plagio para detectar fragmentos reciclados que quizá deban reescribirse o matizarse."
           },
           "item-5": {
             "title": "Comunicaciones corporativas",
@@ -209,7 +209,7 @@
           },
           "item-6": {
             "title": "Agencias y editoriales",
-            "description": "Entrega borradores a clientes, autores o marcas con un control previo de originalidad que reduce retrabajos y discusiones posteriores."
+            "description": "Entrega borradores a clientes, autores o marcas con un control previo en el Detector de plagio que reduce retrabajos y discusiones posteriores."
           }
         }
       },
@@ -262,19 +262,20 @@
       "related": {
         "title": "Combina el Detector de plagio con estas herramientas",
         "subtitle": "Cubre todo el ciclo: desde la detección de IA hasta la última revisión antes de enviar.",
-        "description": "Arma tu flujo ideal: detecta IA, compara versiones y controla extensión sin salir del ecosistema de VeriIA.",
+        "description": "Arma tu flujo ideal: detecta IA, compara versiones y controla extensión sin salir del ecosistema de VeriIA ni del Detector de plagio.",
+        "tryNow": "Probar ahora",
         "items": {
           "detector": {
             "title": "Detector de contenido IA",
-            "description": "Revisa si un texto suena demasiado a IA antes o después de comprobar el plagio y decide qué partes conviene humanizar o reescribir."
+            "description": "Revisa si un texto suena demasiado a IA antes o después de comprobar el plagio con el Detector de plagio y decide qué partes conviene humanizar o reescribir."
           },
           "compare": {
             "title": "Comparador de textos",
-            "description": "Pon dos versiones en paralelo para ver exactamente qué cambió entre un borrador y otro y comprobar si se redujeron las coincidencias."
+            "description": "Pon dos versiones en paralelo para ver exactamente qué cambió entre un borrador y otro tras pasar por el Detector de plagio y comprobar si se redujeron las coincidencias."
           },
           "counter": {
             "title": "Contador de palabras",
-            "description": "Controla palabras y caracteres para ajustarte a convocatorias, briefs o límites de plataformas mientras mantienes la calidad y la originalidad."
+            "description": "Controla palabras y caracteres para ajustarte a convocatorias, briefs o límites de plataformas mientras mantienes la calidad y la originalidad que valida el Detector de plagio."
           }
         }
       }
@@ -283,10 +284,10 @@
   "WordCounterPage": {
     "metadata": {
       "title": "Contador de palabras online rápido y preciso | VeriIA",
-      "description": "Usa el contador de palabras para medir palabras y caracteres en segundos: pega tu texto, obtiene conteos claros y cumple límites sin gastar créditos."
+      "description": "Usa el contador de palabras de VeriIA para medir palabras, caracteres y tiempo de lectura en segundos: pega tu texto, obtén conteos claros y adapta tu mensaje a cualquier límite."
     },
     "hero": {
-      "badge": "Herramienta gratuita",
+      "badge": "Privado y local",
       "title": "Contador de palabras y caracteres online",
       "subtitle": "Usa el contador de palabras para pegar tu texto y ver palabras, caracteres y tiempo de lectura en tiempo real.",
       "placeholder": "Escribe o pega tu texto aquí...",
@@ -326,7 +327,7 @@
                 "description": "El conteo es local para máxima privacidad."
               },
               {
-                "title": "Amigable multi‑idioma",
+                "title": "Amigable multi-idioma",
                 "description": "Funciona con español, inglés y textos mixtos."
               }
             ]
@@ -371,32 +372,32 @@
       },
       "useCases": {
         "title": "Cuándo usar el contador de palabras",
-        "subtitle": "Tareas diarias donde el contador de palabras aporta.",
-        "description": "Usa el contador de palabras para mantener textos dentro de límites y bien estructurados antes de enviar.",
+        "subtitle": "Situaciones diarias donde el contador de palabras de VeriIA marca la diferencia.",
+        "description": "Usa el contador de palabras de VeriIA para mantener tus textos dentro de los límites y con una estructura clara antes de enviarlos o publicarlos.",
         "items": {
           "item-1": {
             "title": "Resúmenes académicos",
-            "description": "Asegura topes en abstracts y ensayos."
+            "description": "Controla en segundos la longitud de abstracts, resúmenes y ensayos. Ajusta el texto hasta que el contador de palabras marque exactamente lo que pide la convocatoria o el campus virtual."
           },
           "item-2": {
-            "title": "Snippets SEO",
-            "description": "Chequea títulos y descripciones meta sin salir del contador."
+            "title": "Snippets y meta descripciones SEO",
+            "description": "Afina títulos, descripciones meta y extractos sin salir del contador de palabras. Evita que tus textos se corten en Google o queden demasiado cortos como para captar clics."
           },
           "item-3": {
-            "title": "Captions en redes",
-            "description": "Respeta límites de caracteres sin adivinar."
+            "title": "Captions y posts en redes sociales",
+            "description": "Respeta límites de caracteres en plataformas como X, Instagram o LinkedIn sin andar probando a ciegas. Escribe en el contador de palabras y ajusta hasta que el mensaje quede redondo."
           },
           "item-4": {
-            "title": "Copy de producto",
-            "description": "Mantén bullets y banners concisos."
+            "title": "Copy de producto y anuncios",
+            "description": "Mantén bullets, banners y anuncios claros y concisos. El contador de palabras de VeriIA te ayuda a no sobrecargar creatividades ni quedarte corto en información clave."
           },
           "item-5": {
-            "title": "Introducciones de email",
-            "description": "Mantén aperturas breves y escaneables."
+            "title": "Introducciones y correos importantes",
+            "description": "Redacta asuntos e introducciones de email que se lean completas en móvil. Mide con el contador de palabras para que tu mensaje sea breve, directo y fácil de escanear."
           },
           "item-6": {
-            "title": "QA de traducción",
-            "description": "Verifica longitud objetivo sin perder intención."
+            "title": "Control de longitud en traducciones",
+            "description": "Comprueba que la traducción mantiene una longitud similar al original sin perder matices. El contador de palabras te da una referencia rápida para QA de localización y doblaje."
           }
         }
       },
@@ -405,64 +406,64 @@
         "subtitle": "Entiende cómo trabaja el contador de palabras y cómo protege tu texto.",
         "items": {
           "item-1": {
-            "question": "¿Usa créditos el contador de palabras?",
-            "answer": "No. Es gratis y local."
+            "question": "¿El contador de palabras de VeriIA es realmente gratuito?",
+            "answer": "Sí. El contador de palabras de VeriIA es una herramienta gratuita: puedes pegar tu texto, ver palabras, caracteres y tiempo de lectura sin iniciar sesión ni usar créditos."
           },
           "item-2": {
-            "question": "¿Mi texto sale del navegador?",
-            "answer": "No, todo se procesa en tu navegador."
+            "question": "¿Mi texto se envía a los servidores de VeriIA cuando uso el contador de palabras?",
+            "answer": "No. El contador de palabras de VeriIA funciona directamente en tu navegador: el texto se procesa de forma local y no se guarda ni se envía a nuestros servidores."
           },
           "item-3": {
-            "question": "¿Qué idiomas soporta?",
-            "answer": "Funciona con cualquier idioma; se basa en espacios y puntuación."
+            "question": "¿Qué mide exactamente el contador de palabras de VeriIA además del número de palabras?",
+            "answer": "Además del recuento de palabras, el contador de palabras de VeriIA muestra caracteres con y sin espacios, número de oraciones, párrafos y un tiempo de lectura aproximado en minutos."
           },
           "item-4": {
-            "question": "¿Soporta textos largos?",
-            "answer": "Sí; para textos muy extensos divide en partes y vuelve al contador de palabras para mayor comodidad."
+            "question": "¿Por qué mi contador de palabras da una cifra distinta a Word o Google Docs?",
+            "answer": "Porque cada herramienta usa reglas distintas para definir qué es una palabra. Algunos contadores incluyen números, URLs o ciertos elementos de formato y otros no, por eso puede haber pequeñas diferencias."
           },
           "item-5": {
-            "question": "¿Puedo exportar conteos?",
-            "answer": "Copia el texto o toma nota; el contador de palabras actualiza los conteos en vivo."
+            "question": "¿Qué cuenta como “palabra” en un contador de palabras online?",
+            "answer": "Normalmente se considera palabra a cualquier conjunto de caracteres separado por espacios o signos de puntuación. Números, hashtags o enlaces pueden contarse como una palabra según el contador."
           },
           "item-6": {
-            "question": "¿Cambia mi texto?",
-            "answer": "No. Solo lo lee para contar; tu texto queda intacto."
+            "question": "¿Cómo puedo saber cuántas páginas son X palabras?",
+            "answer": "Primero usa el contador de palabras para saber el total. Como referencia, unas 250–300 palabras suelen equivaler a una página a doble espacio en tamaño 12 pt, y unas 500 a una página a espacio sencillo."
           },
           "item-7": {
-            "question": "¿Las emojis cuentan?",
-            "answer": "Sí, se suman como caracteres; el contador de palabras separa las palabras por espacios."
+            "question": "¿Cómo se calcula el tiempo de lectura en un contador de palabras?",
+            "answer": "Se estima dividiendo el número de palabras entre una velocidad media de lectura, por ejemplo 200–250 palabras por minuto. Así sabes si un artículo o newsletter es más largo de lo que tu audiencia espera."
           },
           "item-8": {
-            "question": "¿Funciona sin conexión?",
-            "answer": "Si la página cargó, sigue funcionando sin nuevas llamadas."
+            "question": "¿Funciona bien el contador de palabras con cualquier idioma?",
+            "answer": "Funciona especialmente bien en idiomas que separan palabras con espacios, como español o inglés. En textos con muchos símbolos o en idiomas sin espacios claros puede haber pequeñas variaciones."
           },
           "item-9": {
-            "question": "¿Hay límite al pegar?",
-            "answer": "El límite práctico es la memoria del navegador; cubre borradores comunes."
+            "question": "¿Hay un límite de longitud para usar el contador de palabras online?",
+            "answer": "El límite práctico lo marca tu navegador y la memoria disponible. Para manuscritos muy largos es mejor dividir el contenido en secciones y pasarlas por el contador de palabras por partes."
           },
           "item-10": {
-            "question": "¿Tiene modo oscuro?",
-            "answer": "Sí, sigue el selector de tema del sitio."
+            "question": "¿Cuándo tiene sentido usar un contador de palabras online en lugar del de Word o Google Docs?",
+            "answer": "Cuando quieres una vista rápida sin abrir un documento, cuando trabajas con muchos formatos distintos o cuando necesitas métricas extra como tiempo de lectura. Es una capa adicional de control sobre tus textos."
           }
         }
       },
       "related": {
-        "title": "Combina el contador de palabras con más herramientas",
+        "title": "Combina el contador de palabras con más herramientas de VeriIA",
         "subtitle": "Detecta IA, revisa originalidad y compara borradores junto al contador de palabras.",
-        "description": "Controla calidad, originalidad y extensión junto al contador de palabras en un solo kit.",
+        "description": "Crea un flujo completo con las herramientas de VeriIA: usa el contador de palabras para la longitud, el detector de plagio para la originalidad y el detector IA para el estilo del texto.",
         "tryNow": "Probar ahora",
         "items": {
           "detector": {
-            "title": "Detector IA",
-            "description": "Resalta frases con estilo de IA antes de entregar."
+            "title": "Detector IA de VeriIA",
+            "description": "Analiza si tu texto parece generado por IA y señala las frases que quizá quieras reescribir antes de enviarlo."
           },
           "plagiarism": {
             "title": "Detector de plagio",
-            "description": "Verifica originalidad en web y fuentes académicas."
+            "description": "Comprueba la originalidad de tu contenido frente a la web y fuentes académicas antes de publicar o entregar un documento importante."
           },
           "compare": {
             "title": "Comparador de textos",
-            "description": "Ve al instante qué cambió entre dos versiones."
+            "description": "Abre dos versiones del mismo texto y ve exactamente qué cambió entre un borrador y otro para decidir con qué versión quedarte."
           }
         }
       }
