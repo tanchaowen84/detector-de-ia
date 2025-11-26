@@ -288,6 +288,76 @@
     "footer": {
       "privacy": "Your text never leaves the browser; counting happens locally.",
       "free": "No credits consumed, no account required."
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "How the counter works",
+        "subtitle": "Paste, see metrics instantly, and copy them out.",
+        "steps": {
+          "step-1": {
+            "label": "Step 1 · Paste or type",
+            "imageAlt": "User pasting text into the counter",
+            "items": [
+              { "title": "Drop your text", "description": "Paste any draft, caption, or snippet." },
+              { "title": "Stay in browser", "description": "All counting happens locally for privacy." },
+              { "title": "Multi-language friendly", "description": "Works with Spanish, English, and mixed content." }
+            ]
+          },
+          "step-2": {
+            "label": "Step 2 · Read the metrics",
+            "imageAlt": "Metrics card with word counts",
+            "items": [
+              { "title": "Words & characters", "description": "With/without spaces, plus sentences and paragraphs." },
+              { "title": "Reading time", "description": "See estimated minutes to read at ~200 wpm." },
+              { "title": "Live updates", "description": "Counts refresh as you type—no buttons needed." }
+            ]
+          },
+          "step-3": {
+            "label": "Step 3 · Act on limits",
+            "imageAlt": "User copying text after checking limits",
+            "items": [
+              { "title": "Match platform limits", "description": "Great for headlines, snippets, meta descriptions, social posts." },
+              { "title": "Adjust fast", "description": "Trim or expand until you hit the target count." },
+              { "title": "Copy and send", "description": "One click to copy your text once it fits." }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Where counting helps",
+        "subtitle": "Everyday writing tasks",
+        "description": "Keep texts within limits and structured before you submit.",
+        "items": {
+          "item-1": { "title": "Academic summaries", "description": "Hit word caps for abstracts and essays." },
+          "item-2": { "title": "SEO snippets", "description": "Check title and meta description lengths quickly." },
+          "item-3": { "title": "Social captions", "description": "Stay within platform character limits without guesswork." },
+          "item-4": { "title": "Product copy", "description": "Ensure feature bullets and banners stay concise." },
+          "item-5": { "title": "Email intros", "description": "Keep openings short and scannable." },
+          "item-6": { "title": "Translation QA", "description": "Verify target text length matches the source intent." }
+        }
+      },
+      "faq": {
+        "title": "Word counter FAQ",
+        "subtitle": "Know what happens with your text.",
+        "items": {
+          "item-1": { "question": "Does it use credits?", "answer": "No. Counting is free and local." },
+          "item-2": { "question": "Is my text sent to a server?", "answer": "No, everything runs in your browser." },
+          "item-3": { "question": "Which languages work?", "answer": "Any language; metrics are whitespace/punctuation based." },
+          "item-4": { "question": "Does it handle long texts?", "answer": "Yes, but for very long docs consider splitting for readability." },
+          "item-5": { "question": "Can I export counts?", "answer": "Copy the text or take notes; counts update live." }
+        }
+      },
+      "related": {
+        "title": "More tools to polish your text",
+        "subtitle": "Detect AI, check originality, compare drafts.",
+        "description": "Keep quality, originality, and length under control.",
+        "tryNow": "Try now",
+        "items": {
+          "detector": { "title": "AI detector", "description": "Highlight AI-like sentences before delivering work." },
+          "plagiarism": { "title": "Plagiarism checker", "description": "Verify originality across web and academic sources." },
+          "compare": { "title": "Text compare", "description": "See what changed between two versions instantly." }
+        }
+      }
     }
   },
   "TextComparePage": {
@@ -333,6 +403,76 @@
       "noRemovals": "No removals found",
       "noAdditions": "No additions found",
       "placeholder": "Press \"Compare text\" to see differences"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "How the text comparator works",
+        "subtitle": "Drop in versions A and B, see clean highlights in three steps.",
+        "steps": {
+          "step-1": {
+            "label": "Step 1 · Add both texts",
+            "imageAlt": "Two text boxes ready to compare",
+            "items": [
+              { "title": "Paste or upload", "description": "Paste your original and changed text, or load .txt/.md files." },
+              { "title": "Keep formatting simple", "description": "Plain text gives the clearest highlights and counts." },
+              { "title": "Check length", "description": "Best for up to a few thousand words per side for instant diff." }
+            ]
+          },
+          "step-2": {
+            "label": "Step 2 · Run compare",
+            "imageAlt": "Comparison in progress",
+            "items": [
+              { "title": "Click “Compare text”", "description": "We compute additions and removals and group them for you." },
+              { "title": "See highlights instantly", "description": "Left shows removals, right shows additions—color coded." },
+              { "title": "Word-level counts", "description": "Additions and removals are counted so you can scope edits fast." }
+            ]
+          },
+          "step-3": {
+            "label": "Step 3 · Review and share",
+            "imageAlt": "Results with highlighted additions and removals",
+            "items": [
+              { "title": "Scroll the diff", "description": "Jump to sections that changed most." },
+              { "title": "Refine drafts", "description": "Rewrite, then rerun compare to confirm changes landed." },
+              { "title": "Save context", "description": "Use the counts to summarize what changed for teammates." }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Where text compare helps",
+        "subtitle": "Common workflows",
+        "description": "Spot differences quickly across drafts, reviews, and compliance updates.",
+        "items": {
+          "item-1": { "title": "Version review", "description": "See what changed between draft and final without manual scanning." },
+          "item-2": { "title": "Contract redlines", "description": "Catch subtle clause edits before approving." },
+          "item-3": { "title": "Product copy updates", "description": "Compare release notes, in-app copy, and SEO tweaks." },
+          "item-4": { "title": "Academic edits", "description": "Track advisor feedback vs. your latest revision." },
+          "item-5": { "title": "Localization QA", "description": "Ensure translated strings match the source intent." },
+          "item-6": { "title": "Policy/compliance", "description": "Verify mandated wording hasn’t drifted between versions." }
+        }
+      },
+      "faq": {
+        "title": "Text compare FAQ",
+        "subtitle": "Quick answers before you diff.",
+        "items": {
+          "item-1": { "question": "Are files supported?", "answer": "Yes, plain text (.txt) and Markdown (.md). Paste is recommended for faster edits." },
+          "item-2": { "question": "Is there a length limit?", "answer": "Best under a few thousand words per side for instant diff. Very large texts may be slower." },
+          "item-3": { "question": "Does it cost credits?", "answer": "No. Text compare is free and does not use credits." },
+          "item-4": { "question": "Is content stored?", "answer": "No server calls are made; diff runs in your browser." },
+          "item-5": { "question": "Can I compare code?", "answer": "Yes for plain text, but it doesn’t parse syntax—use it for quick copy diffs." }
+        }
+      },
+      "related": {
+        "title": "More tools for clean drafts",
+        "subtitle": "Pair compare with detection and counting.",
+        "description": "Detect AI, check originality, and keep lengths in check.",
+        "tryNow": "Try now",
+        "items": {
+          "detector": { "title": "AI detector", "description": "Highlight AI-like sentences before shipping copy." },
+          "plagiarism": { "title": "Plagiarism checker", "description": "Find overlapping sources before you publish." },
+          "counter": { "title": "Word counter", "description": "Stay within limits for titles, snippets, and briefs." }
+        }
+      }
     }
   },
   "PricePlans": {

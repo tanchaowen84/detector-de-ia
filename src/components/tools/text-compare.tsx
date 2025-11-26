@@ -106,8 +106,6 @@ export function TextCompare() {
 
   return (
     <section className="relative py-16">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-indigo-50" aria-hidden />
-
       <div className="relative z-10 mx-auto max-w-6xl px-4 lg:px-6 space-y-8">
         <div className="flex flex-col gap-3 text-center">
           <div className="flex justify-center">
