@@ -3,12 +3,7 @@
 import { HeaderSection } from '@/components/layout/header-section';
 import { Button } from '@/components/ui/button';
 import { LocaleLink } from '@/i18n/navigation';
-import {
-  ChevronRight,
-  FileTextIcon,
-  SearchIcon,
-  SparklesIcon,
-} from 'lucide-react';
+import { ChevronRight, SparklesIcon } from 'lucide-react';
 import type { IconName } from 'lucide-react/dynamic';
 import { useTranslations } from 'next-intl';
 
@@ -29,14 +24,8 @@ type RelatedToolsProps = {
 };
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  search: SearchIcon,
-  'search-icon': SearchIcon,
-  plagiarism: SearchIcon,
-  file: FileTextIcon,
-  text: FileTextIcon,
-  compare: FileTextIcon,
   sparkles: SparklesIcon,
-  humanizer: SparklesIcon,
+  star: SparklesIcon,
 };
 
 export default function DetectionProcessSection({
@@ -85,9 +74,7 @@ export default function DetectionProcessSection({
             return (
               <div key={item.href} className="text-center">
                 <div className="flex flex-col items-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mb-6">
-                    <Icon className="size-8 text-white" />
-                  </div>
+                  <div className="mb-6 h-1.5 w-14 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-amber-400 shadow-sm shadow-indigo-100" />
                   <h3 className="text-xl font-semibold text-slate-900 mb-3">
                     {item.title}
                   </h3>
