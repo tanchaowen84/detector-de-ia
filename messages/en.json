@@ -236,6 +236,26 @@
           "item-5": {
             "question": "Which languages work best?",
             "answer": "Optimized for Spanish and English. Other languages may work, but accuracy can vary."
+          },
+          "item-6": {
+            "question": "Can I export or download the report?",
+            "answer": "Save or copy the matched source list manually today; a downloadable report will arrive in a later update."
+          },
+          "item-7": {
+            "question": "What file size works best?",
+            "answer": "Keep uploads under ~8–10 MB for fastest scans; very large PDFs may take longer."
+          },
+          "item-8": {
+            "question": "Do you flag citations or quotes as plagiarism?",
+            "answer": "Quoted passages may appear as matches. Use the source list to verify proper attribution before submitting."
+          },
+          "item-9": {
+            "question": "Can I exclude my own sites?",
+            "answer": "Yes. Add trusted domains to the excluded sources list so they don’t show as matches."
+          },
+          "item-10": {
+            "question": "How often are sources updated?",
+            "answer": "We refresh across web, news, and academic indices regularly to keep matches current."
           }
         }
       },
@@ -344,7 +364,12 @@
           "item-2": { "question": "Is my text sent to a server?", "answer": "No, everything runs in your browser." },
           "item-3": { "question": "Which languages work?", "answer": "Any language; metrics are whitespace/punctuation based." },
           "item-4": { "question": "Does it handle long texts?", "answer": "Yes, but for very long docs consider splitting for readability." },
-          "item-5": { "question": "Can I export counts?", "answer": "Copy the text or take notes; counts update live." }
+          "item-5": { "question": "Can I export counts?", "answer": "Copy the text or take notes; counts update live." },
+          "item-6": { "question": "Does it change my text?", "answer": "No. It only reads for counting; your text stays exactly as pasted." },
+          "item-7": { "question": "Will emojis or symbols count?", "answer": "Emojis count as characters; words are split on whitespace." },
+          "item-8": { "question": "Can I use it offline?", "answer": "If the page is loaded, counting works without further network calls." },
+          "item-9": { "question": "Any limits on paste size?", "answer": "Practical limit is your browser memory; typical drafts work fine." },
+          "item-10": { "question": "Is there a dark mode?", "answer": "Yes, it follows the site theme toggle." }
         }
       },
       "related": {
@@ -459,7 +484,12 @@
           "item-2": { "question": "Is there a length limit?", "answer": "Best under a few thousand words per side for instant diff. Very large texts may be slower." },
           "item-3": { "question": "Does it cost credits?", "answer": "No. Text compare is free and does not use credits." },
           "item-4": { "question": "Is content stored?", "answer": "No server calls are made; diff runs in your browser." },
-          "item-5": { "question": "Can I compare code?", "answer": "Yes for plain text, but it doesn’t parse syntax—use it for quick copy diffs." }
+          "item-5": { "question": "Can I compare code?", "answer": "Yes for plain text, but it doesn’t parse syntax—use it for quick copy diffs." },
+          "item-6": { "question": "Can I download the diff?", "answer": "For now, copy the highlighted sections or take a screenshot; export will arrive later." },
+          "item-7": { "question": "Does formatting matter?", "answer": "We focus on text. Remove heavy formatting for the clearest highlights." },
+          "item-8": { "question": "Will it handle very long documents?", "answer": "It works, but performance is best on shorter sections. Consider splitting long docs." },
+          "item-9": { "question": "Does it support right-to-left text?", "answer": "Yes, basic RTL text works; highlights remain color-coded." },
+          "item-10": { "question": "Is there an API?", "answer": "Not yet for diff; today’s tool is browser-based and free." }
         }
       },
       "related": {

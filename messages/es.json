@@ -236,6 +236,26 @@
           "item-5": {
             "question": "¿Qué idiomas funcionan mejor?",
             "answer": "Optimizado para español e inglés; otros idiomas pueden variar en precisión."
+          },
+          "item-6": {
+            "question": "¿Puedo exportar el informe?",
+            "answer": "Por ahora copia las fuentes coincidentes o toma captura; añadiremos descarga más adelante."
+          },
+          "item-7": {
+            "question": "¿Qué tamaño de archivo es ideal?",
+            "answer": "Menos de 8–10 MB para mayor velocidad; PDFs muy grandes tardan más."
+          },
+          "item-8": {
+            "question": "¿Las citas cuentan como plagio?",
+            "answer": "Las citas pueden aparecer como coincidencias. Verifica la atribución antes de enviar."
+          },
+          "item-9": {
+            "question": "¿Puedo excluir mis propios sitios?",
+            "answer": "Sí. Añade dominios de confianza a la lista de exclusión para que no aparezcan como coincidencias."
+          },
+          "item-10": {
+            "question": "¿Con qué frecuencia se actualizan las fuentes?",
+            "answer": "Actualizamos web, noticias y bases académicas con regularidad para mantener los resultados frescos."
           }
         }
       },
@@ -344,7 +364,12 @@
           "item-2": { "question": "¿Mi texto se envía al servidor?", "answer": "No, todo corre en tu navegador." },
           "item-3": { "question": "¿Qué idiomas soporta?", "answer": "Cualquiera; las métricas se basan en espacios y puntuación." },
           "item-4": { "question": "¿Soporta textos largos?", "answer": "Sí, aunque para documentos muy extensos conviene dividir para una lectura cómoda." },
-          "item-5": { "question": "¿Puedo exportar conteos?", "answer": "Copia el texto o toma nota; los conteos se actualizan en vivo." }
+          "item-5": { "question": "¿Puedo exportar conteos?", "answer": "Copia el texto o toma nota; los conteos se actualizan en vivo." },
+          "item-6": { "question": "¿Cambia mi texto?", "answer": "No. Solo lo lee para contar; se mantiene intacto." },
+          "item-7": { "question": "¿Las emojis cuentan?", "answer": "Los emojis cuentan como caracteres; las palabras se separan por espacios." },
+          "item-8": { "question": "¿Funciona sin conexión?", "answer": "Si la página ya cargó, el conteo sigue sin nuevas llamadas de red." },
+          "item-9": { "question": "¿Hay límite al pegar?", "answer": "El límite práctico es la memoria del navegador; borradores comunes funcionan bien." },
+          "item-10": { "question": "¿Tiene modo oscuro?", "answer": "Sí, sigue el selector de tema del sitio." }
         }
       },
       "related": {
@@ -459,7 +484,12 @@
           "item-2": { "question": "¿Hay límite de longitud?", "answer": "Funciona mejor con unos miles de palabras por lado. Textos enormes pueden tardar más." },
           "item-3": { "question": "¿Consume créditos?", "answer": "No. Comparar texto es gratis y no gasta créditos." },
           "item-4": { "question": "¿Se guarda mi contenido?", "answer": "No hacemos llamadas al servidor; el diff corre en tu navegador." },
-          "item-5": { "question": "¿Sirve para código?", "answer": "Sí para texto plano, pero no analiza sintaxis; úsalo para cambios rápidos de copy." }
+          "item-5": { "question": "¿Sirve para código?", "answer": "Sí para texto plano, pero no analiza sintaxis; úsalo para cambios rápidos de copy." },
+          "item-6": { "question": "¿Puedo descargar el diff?", "answer": "Por ahora copia los resaltados o toma captura; la exportación llegará después." },
+          "item-7": { "question": "¿Importa el formato?", "answer": "Nos centramos en texto. Quita formato pesado para resaltados más claros." },
+          "item-8": { "question": "¿Maneja documentos muy largos?", "answer": "Funciona, pero rinde mejor en secciones más cortas. Divide textos enormes si es necesario." },
+          "item-9": { "question": "¿Soporta texto RTL?", "answer": "Sí, texto de derecha a izquierda se compara; los colores se mantienen." },
+          "item-10": { "question": "¿Hay API?", "answer": "Aún no para diff; hoy la herramienta es gratis y en el navegador." }
         }
       },
       "related": {
