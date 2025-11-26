@@ -1308,8 +1308,8 @@
   "HomePage": {
     "aiDetector": {
       "badge": "Haz que tus textos inspiren confianza",
-      "title": "Detector de IA para contenido profesional",
-      "description": "Asegúrate de que cada informe, propuesta o mensaje mantenga la calidad, originalidad y transparencia que esperas con nuestro detector de IA, obteniendo una evaluación clara del posible uso de IA.",
+      "title": "Detector de IA para contenido profesional",
+      "description": "Asegúrate de que cada informe, propuesta o mensaje mantenga la calidad, originalidad y transparencia que esperas con el detector de IA de VeriIA, tu detector de ia para contenido profesional.",
       "uploadFile": "Subir archivo",
       "pasteUrl": "Pegar URL",
       "trySamples": "Probar muestras",
@@ -1330,7 +1330,7 @@
         "mixedEmail": "Humano + IA"
       },
       "sampleTexts": {
-        "iaEssay": "Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como \"por otro lado\" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector frente a un texto claramente sintético y verificar la visualización de colores por oración.",
+        "iaEssay": "Este ensayo fue generado con un modelo de IA y utiliza frases de relleno para construir una narrativa que suena convincente pero ligeramente repetitiva. El texto insiste en los mismos argumentos, recicla conectores como \"por otro lado\" y evita los detalles concretos, lo que genera una estructura agradable aunque predecible. Puedes usarlo para probar cómo se comporta el detector de ia frente a un texto claramente sintético y verificar la visualización de colores por oración.",
         "humanArticle": "La tierra y sus paisajes naturales son sorprendes. Esté Bosque de Piedras parece salido de la imaginación de un artista surealista. Este paisaje andino se caracteriza por piedras puntiagudas. Su extensión es de 60 hectáreasy está a 3.600 m de altitud.\n\nEl videografo daniel rosemarin Kantanella  y Peru  nos cuentan más.\n\nTambién conocido como Pampa de Pabellones o Páncula. Es un bosque de piedras ubicado sobre la Cordillera de los Andes, en el distrito de Pampachiri. Es una de las formaciones pétreas más importantes del departamento de Apurímac. El lugar se caracteriza por poseer una gran cantidad de rocas puntiagudas que logran alcanzar hasta los 8 metros de altura.",
         "mixedEmail": "Yo vi un Bosque de Piedras en Apurímac y es muy diferente de otros lugares. Hay muchas piedra puntiaguda, como cuchillo o torre, y algunas es muy alta, casi 8 metros. El paisaje parece salido de un sueño, porque las formas son raras y al mismo tiempo ordenadas, como si alguien las puso alli con intención. Este sitio esta en la Cordillera de los Andes, a como 3.600 metros, entonces hace frio y falta aire, y caminar un rato te cansa rápido. No entiendo bien porque las rocas tiene esta forma, pero creo que es por viento, lluvia y muchos años. También hay un silencio fuerte, y cuando miras alrededor sientes que la naturaleza hizo algo increíble aqui, sin prisa. En fotos se ve bonito, pero en persona es más impactante, te deja pensando un buen tiempo."
       },
@@ -1400,7 +1400,7 @@
     },
     "howItWorks": {
       "title": "Cómo funciona nuestro detector de IA",
-      "subtitle": "Solo necesitas tres pasos para obtener un informe claro y profesional sobre el posible uso de IA en tu texto.",
+      "subtitle": "Solo necesitas tres pasos para obtener un informe claro y profesional sobre el posible uso de IA en tu texto con el detector de ia de VeriIA.",
       "steps": {
         "step-1": {
           "label": "Paso 1 · Pega tu texto",
@@ -1411,12 +1411,12 @@
               "description": "Copia y pega el texto que quieras analizar con el detector de IA, o escríbelo directamente."
             },
             {
-              "title": "Elige el idioma",
-              "description": "Optimizado hoy para español e inglés; pronto más idiomas."
+              "title": "Idioma detectado automáticamente",
+              "description": "El detector de IA de VeriIA detecta automáticamente el idioma de tu texto, así que no tienes que configurarlo ni preocuparte por este paso."
             },
             {
               "title": "Revisa la longitud",
-              "description": "Recomendamos al menos 30–50 palabras; plan gratis: 1.500 caracteres por análisis."
+              "description": "Recomendamos al menos 30–50 palabras; plan gratis: 1.500 caracteres por análisis con el detector de ia."
             }
           ]
         },
@@ -1426,15 +1426,15 @@
           "items": [
             {
               "title": "Haz clic en «Detectar ahora»",
-              "description": "Inicia el análisis y obtén una probabilidad global."
+              "description": "Inicia el análisis y obtén una probabilidad global en el informe del detector de IA."
             },
             {
               "title": "Obtén un porcentaje claro",
-              "description": "Verás qué tanto el texto completo parece escrito por IA."
+              "description": "Verás qué tanto el texto completo parece escrito por IA, en un solo vistazo."
             },
             {
               "title": "Consulta los resaltados",
-              "description": "Marcamos las oraciones que podrían ser IA para revisarlas."
+              "description": "Marcamos las oraciones que podrían ser IA para revisarlas con más calma dentro del informe del detector de ia."
             }
           ]
         },
@@ -1444,79 +1444,78 @@
           "items": [
             {
               "title": "Revisa las partes resaltadas",
-              "description": "Empieza por las frases o párrafos marcados."
+              "description": "Empieza por las frases o párrafos marcados por el detector de IA como más probables de ser generados por modelos."
             },
             {
               "title": "Ajusta cuando sea necesario",
-              "description": "Mejora claridad, coherencia y tono humano donde haga falta."
+              "description": "Mejora claridad, coherencia y tono humano donde haga falta para que tu texto se aleje de patrones típicos de IA."
             },
             {
               "title": "Vuelve a comprobar si lo deseas",
-              "description": "Ejecuta otra detección para validar cambios; el historial dura 90 días."
+              "description": "Ejecuta otra detección con el detector de ia para validar cambios; el historial dura 90 días."
             }
           ]
         }
       }
     },
     "useCases": {
-      "title": "Perfecto para Todos los Profesionales",
-      "subtitle": "Aplicaciones Versátiles",
-      "description": "Ya seas estudiante, educador, creador de contenido o especialista SEO, nuestro detector IA se adapta a tus necesidades específicas.",
+      "title": "Perfecto para todos los profesionales",
+      "subtitle": "Aplicaciones del detector de ia en tu día a día",
+      "description": "Ya seas estudiante, educador, creador de contenido o especialista SEO, el detector de ia de VeriIA se adapta a tus necesidades específicas antes de entregar o publicar.",
       "cases": {
         "students": {
           "title": "Estudiantes",
-          "description": "Verifica la originalidad de ensayos y tareas antes de la entrega para garantizar la integridad académica"
+          "description": "Verifica con el detector de ia la originalidad de ensayos y tareas antes de la entrega para proteger tu integridad académica."
         },
         "teachers": {
           "title": "Profesores",
-          "description": "Identifica rápidamente contenido generado por IA en trabajos estudiantiles y proporciona retroalimentación adecuada"
+          "description": "Identifica rápidamente con el detector de IA trabajos que parecen generados por modelos y decide qué piezas requieren revisión manual más profunda."
         },
         "content": {
-          "title": "Creadores de Contenido",
-          "description": "Asegúrate de que tu contenido sea original y escrito por humanos para mantener la autenticidad y confianza de la audiencia"
+          "title": "Creadores de contenido",
+          "description": "Asegúrate de que tus artículos, newsletters y posts mantienen una voz humana propia usando el detector de ia como señal adicional antes de publicar."
         },
         "seo": {
           "title": "Especialistas SEO",
-          "description": "Optimiza la calidad del contenido y evita penalizaciones por contenido generado por IA en motores de búsqueda"
+          "description": "Optimiza la calidad del contenido, evita abusar de textos generados por IA y reduce el riesgo de penalizaciones usando el detector de ia como parte de tu checklist."
         }
       }
     },
     "relatedTools": {
       "title": "No solo un detector de IA: más herramientas para tus textos",
-      "subtitle": "Combina el detector de IA con herramientas de plagio, comparación de textos y conteo para controlar calidad, credibilidad y extensión.",
-      "description": "Explora nuestro conjunto de herramientas diseñadas para mejorar la calidad, credibilidad y originalidad de tu contenido.",
+      "subtitle": "Combina el detector de ia con herramientas de plagio, comparación de textos y conteo para controlar calidad, credibilidad y extensión.",
+      "description": "Explora el conjunto de herramientas de VeriIA diseñado para mejorar la calidad, credibilidad y originalidad de tu contenido alrededor del detector de ia.",
       "tools": {
         "plagiarism": {
-          "title": "Detector de Plagio",
-          "description": "Evita la duplicación involuntaria. Nuestro comprobador de plagio escanea miles de millones de fuentes para confirmar que tu trabajo es original y está listo para publicarse."
+          "title": "Detector de plagio",
+          "description": "Evita la duplicación involuntaria. Nuestro detector de plagio analiza tus textos frente a la web y fuentes académicas para confirmar que tu trabajo es original antes de enviarlo junto al informe del detector de ia."
         },
-        "summarizer": {
+        "compare": {
           "title": "Comparador de textos",
-          "description": "Coloca dos textos y obten una similitud en segundos. Detecta reuso, diferencias y coherencia entre versiones sin salir del flujo."
+          "description": "Coloca dos versiones del mismo texto y ve las diferencias en segundos. Detecta reuso, cambios de tono y ajustes tras pasar por el detector de IA, sin salir de tu flujo de revisión."
         },
-        "humanizer": {
+        "counter": {
           "title": "Contador de palabras",
-          "description": "Calcula palabras, caracteres y frases al instante. Ideal para limitar extensiones, meta descripciones o requisitos académicos."
+          "description": "Calcula palabras, caracteres y tiempo de lectura al instante. Ideal para respetar extensiones, meta descripciones o requisitos académicos después de validar estilo y originalidad con el detector de ia."
         }
       },
-      "tryNow": "Probar Ahora",
-      "exploreAll": "Explorar Todas las Herramientas"
+      "tryNow": "Probar ahora",
+      "exploreAll": "Explorar todas las herramientas"
     },
     "inlineCta": {
       "primary": {
-        "title": "Tu primera detección con detector de ia",
-        "description": "Empieza en un clic y revisa lo marcado en menos de un minuto.",
+        "title": "Tu primera detección con el detector de ia",
+        "description": "Empieza en un clic con el detector de ia y revisa lo marcado en menos de un minuto.",
         "primary": "Probar detector de ia",
         "secondary": "Ver planes"
       },
       "secondary": {
-        "title": "Verifica antes de entregar con detector de ia",
-        "description": "Evita falsos positivos, protege tu tono y entrega tu texto con confianza.",
+        "title": "Verifica antes de entregar con el detector de ia",
+        "description": "Evita falsos positivos, protege tu tono y entrega tu texto con confianza usando el detector de ia como apoyo.",
         "primary": "Comprobar mi texto",
         "secondary": "Ver planes"
       }
     },
-
     "features3": {
       "title": "Casos de uso del detector de IA",
       "subtitle": "Para quién es esta herramienta",
@@ -1524,34 +1523,34 @@
       "items": {
         "item-1": {
           "title": "Trabajos de investigación",
-          "description": "Comprueba, antes de enviar, que tu texto no genere alertas innecesarias en detectores de IA o plagio."
+          "description": "Comprueba, antes de enviar, que tu texto no genere alertas innecesarias en detectores de IA o plagio. Usa el detector de ia de VeriIA como primera señal para decidir qué partes ajustar o citar mejor."
         },
         "item-2": {
           "title": "Evitar falsos positivos",
-          "description": "Localiza fragmentos que se parecen demasiado a la escritura de modelos como ChatGPT o GPT-4o para reducir el riesgo de ser marcado."
+          "description": "Localiza fragmentos que se parecen demasiado a la escritura de modelos como ChatGPT o GPT-4o con el detector de ia para reducir el riesgo de ser marcado cuando otras herramientas vuelvan a analizar el documento."
         },
         "item-3": {
           "title": "Contenido de blog",
-          "description": "Verifica que tus entradas con apoyo de IA mantengan un nivel razonable de originalidad y no dependan en exceso del contenido generado."
+          "description": "Verifica que tus entradas con apoyo de IA mantengan un nivel razonable de originalidad y no dependan en exceso del contenido generado. El detector de IA te ayuda a equilibrar velocidad y autenticidad."
         },
         "item-4": {
           "title": "Educación y corrección de tareas",
-          "description": "Ofrece una primera señal de si un trabajo estudiantil usa IA de forma significativa para decidir qué revisar con más detalle."
+          "description": "Ofrece una primera señal de si un trabajo estudiantil usa IA de forma significativa para decidir qué revisar con más detalle y cómo orientar la conversación con el alumno."
         },
         "item-5": {
           "title": "Contenido encargado a redactores o agencias",
-          "description": "Comprueba hasta qué punto el texto entregado por freelancers o agencias depende de la IA frente al trabajo humano esperado."
+          "description": "Comprueba hasta qué punto el texto entregado por freelancers o agencias depende de la IA frente al trabajo humano esperado, usando el detector de ia como parte del control de calidad."
         },
         "item-6": {
           "title": "Equipos de marketing y campañas de marca",
-          "description": "Evalúa qué copys de campaña parecen apoyarse demasiado en la IA antes de lanzarlos y protege el tono de tu marca."
+          "description": "Evalúa qué copys de campaña parecen apoyarse demasiado en la IA antes de lanzarlos y protege el tono de tu marca, combinando el detector de IA con tus guías de estilo internas."
         }
       }
     },
     "pricing": {
       "title": "Planes de precios del detector de IA",
       "subtitle": "Elige el plan perfecto para ti",
-      "description": "Desde análisis gratuitos hasta soluciones empresariales, tenemos el plan adecuado para tus necesidades."
+      "description": "Desde análisis gratuitos con el detector de ia hasta soluciones empresariales, tenemos el plan adecuado para tus necesidades y el volumen de textos que quieres revisar."
     },
     "calltoaction": {
       "title": "Activa tu detector de IA ahora",
@@ -1569,36 +1568,36 @@
       "capability-4": "Soporte multiidioma"
     },
     "features": {
-      "title": "Características Principales",
-      "subtitle": "Tecnología de Vanguardia",
-      "description": "Explora nuestras capacidades avanzadas de detección de IA diseñadas para proporcionar resultados precisos y confiables.",
+      "title": "Características principales del detector de IA",
+      "subtitle": "Resultados claros y utilizables",
+      "description": "Explora las capacidades del detector de IA de VeriIA diseñadas para ofrecer señales útiles, transparentes y fáciles de explicar.",
       "items": {
         "item-1": {
-          "title": "Base de Datos Integral",
-          "description": "Acceso a una amplia base de datos de patrones de IA entrenados con millones de ejemplos para mayor precisión."
+          "title": "Informe claro por secciones",
+          "description": "El detector de ia resume el resultado en un porcentaje global, pero también muestra cómo se distribuye el riesgo por frases y párrafos para ayudarte a decidir qué revisar primero."
         },
         "item-2": {
-          "title": "Detección por Huella Digital",
-          "description": "Análisis avanzado de patrones lingüísticos y estilísticos para identificar la firma única de cada modelo de IA."
+          "title": "Resaltado por oración",
+          "description": "Los fragmentos que se parecen más a IA se marcan con colores, de modo que puedas ver de un vistazo qué partes retocar, citar o justificar mejor."
         },
         "item-3": {
-          "title": "Verificación de Identidad",
-          "description": "Validación multicapa que examina estructura, sintaxis y semántica para resultados más confiables."
+          "title": "Privacidad y control de datos",
+          "description": "El detector de IA procesa tus textos solo para generar el informe, sin entrenar modelos con ellos. El historial es limitado y puedes limpiar tus escaneos cuando lo necesites."
         },
         "item-4": {
-          "title": "Análisis Estadístico",
-          "description": "Métricas detalladas y puntuaciones de confianza para ayudar a tomar decisiones informadas sobre el contenido."
+          "title": "Métricas de confianza",
+          "description": "Incluimos una estimación de confianza y explicaciones en lenguaje natural para que puedas usar el detector de ia como apoyo en conversaciones con profesores, clientes o equipos internos."
         }
       }
     },
     "features2": {
-      "title": "Características Adicionales",
-      "subtitle": "Más Funciones Poderosas",
-      "description": "Descubre funcionalidades adicionales que hacen de nuestro detector de IA la herramienta más completa y versátil del mercado.",
-      "feature-1": "Análisis de correos electrónicos y documentos en tiempo real",
-      "feature-2": "Procesamiento por lotes para análisis masivo eficiente",
-      "feature-3": "Integración API para flujos de trabajo personalizados",
-      "feature-4": "Panel de control con análisis detallados y métricas"
+      "title": "Características adicionales",
+      "subtitle": "Más funciones prácticas para tu día a día",
+      "description": "Descubre funcionalidades adicionales que hacen del detector de IA una herramienta cómoda de integrar en tus flujos habituales.",
+      "feature-1": "Historial de análisis para revisar cómo evoluciona un mismo texto a lo largo del tiempo.",
+      "feature-2": "Gestión sencilla de límites por plan para adaptar el detector de ia a tu volumen real de uso.",
+      "feature-3": "Soporte para texto pegado, archivos y URLs públicas en un mismo panel.",
+      "feature-4": "Interfaz ligera que funciona en el navegador, sin instalaciones ni configuraciones complejas."
     },
     "faqs": {
       "title": "Preguntas frecuentes",
@@ -1610,7 +1609,7 @@
         },
         "item-2": {
           "question": "¿Cómo funciona el detector de IA a grandes rasgos?",
-          "answer": "Analizamos estructura, ritmo, repetición y elección de palabras y los comparamos con ejemplos humanos e IA. Así generamos una probabilidad global y resaltamos las secciones que merecen revisión. No medimos palabras aisladas sino el estilo completo."
+          "answer": "Analizamos estructura, ritmo, repetición y elección de palabras y los comparamos con ejemplos humanos e IA. Así generamos una probabilidad global y resaltamos las secciones que merecen revisión. El detector de ia no mide palabras aisladas sino el estilo completo."
         },
         "item-3": {
           "question": "¿Qué tan preciso es el detector de IA? ¿Puede equivocarse?",
@@ -1622,7 +1621,7 @@
         },
         "item-5": {
           "question": "¿Cuál es la longitud mínima recomendada y qué formatos de archivo puedo usar?",
-          "answer": "Recomendamos textos de al menos 30–50 palabras para obtener resultados más estables. Puedes pegar el contenido o subir .docx y formatos de texto plano como .txt. Fragmentos muy cortos dan resultados menos fiables en cualquier detector."
+          "answer": "Recomendamos textos de al menos 30–50 palabras para obtener resultados más estables. Puedes pegar el contenido o subir .docx y formatos de texto plano como .txt. Fragmentos muy cortos dan resultados menos fiables en cualquier detector de ia."
         },
         "item-6": {
           "question": "¿Qué idiomas soporta el detector de IA en este momento?",
@@ -1630,11 +1629,11 @@
         },
         "item-7": {
           "question": "¿Es gratis usar el detector de IA? ¿Hay límites o planes de pago?",
-          "answer": "Puedes usarlo gratis con un número limitado de detecciones. Para analizar más textos o habilitar funciones avanzadas, contamos con planes de suscripción con límites ampliados."
+          "answer": "Puedes usar el detector de ia gratis con un número limitado de detecciones. Para analizar más textos o habilitar funciones avanzadas, contamos con planes de suscripción con límites ampliados."
         },
         "item-8": {
           "question": "¿Qué pasa con mis textos? ¿Se guardan o se usan para entrenar modelos?",
-          "answer": "No almacenamos tus textos de forma permanente ni los usamos para entrenar modelos propios o de terceros. Solo procesamos el contenido para generar el informe y no lo compartimos con otras herramientas."
+          "answer": "No almacenamos tus textos de forma permanente ni los usamos para entrenar modelos propios o de terceros. Solo procesamos el contenido para generar el informe del detector de IA y no lo compartimos con otras herramientas."
         },
         "item-9": {
           "question": "¿El detector de IA funciona con textos mezclados o parafraseados?",
@@ -1642,7 +1641,7 @@
         },
         "item-10": {
           "question": "¿Qué puedo hacer si estoy seguro de que mi texto es original pero el detector lo marca como IA?",
-          "answer": "Recuerda que es una estimación y puede equivocarse. Conserva borradores, notas y el historial de edición como evidencia de tu proceso. Usa el informe como punto de partida para dialogar con profesores, clientes o revisores, pero no como sustituto de una revisión humana."
+          "answer": "Recuerda que es una estimación y puede equivocarse. Conserva borradores, notas y el historial de edición como evidencia de tu proceso. Usa el informe del detector de ia como punto de partida para dialogar con profesores, clientes o revisores, pero no como sustituto de una revisión humana."
         }
       }
     }

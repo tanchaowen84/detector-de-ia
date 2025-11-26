@@ -1308,8 +1308,8 @@
   "HomePage": {
     "aiDetector": {
       "badge": "Make your texts inspire trust",
-      "title": "AI detector for professional content",
-      "description": "Ensure every report, proposal or message keeps the quality, originality and transparency you expect, with a clear evaluation of possible AI use.",
+      "title": "AI detector for professional content",
+      "description": "Ensure every report, proposal, or message keeps the quality, originality, and transparency you expect with the AI detector from VeriIA, your AI detector for serious, professional content.",
       "uploadFile": "Upload file",
       "pasteUrl": "Paste URL",
       "trySamples": "Try samples",
@@ -1330,9 +1330,9 @@
         "mixedEmail": "Human + AI"
       },
       "sampleTexts": {
-        "iaEssay": "This essay was generated with an AI model and uses filler phrases to build a narrative that sounds convincing but slightly repetitive. It leans on the same arguments, recycles connectors like \"on the other hand\" and avoids concrete details, resulting in a pleasant yet predictable structure. Use it to see how the detector behaves with clearly synthetic text and to view the sentence-level highlights.",
+        "iaEssay": "This essay was generated with an AI model and uses filler phrases to build a narrative that sounds convincing but slightly repetitive. It leans on the same arguments, recycles connectors like \"on the other hand\" and avoids concrete details, resulting in a pleasant yet predictable structure. Use it to see how the AI detector behaves with clearly synthetic text and to view the sentence-level highlights.",
         "humanArticle": "As Apple and Google transform their voice assistants into chatbots, OpenAI is transforming its chatbot into a voice assistant.\nOn Monday, the San Francisco artificial intelligence start-up unveiled a new version of its ChatGPT chatbot that can receive and respond to voice commands, images and videos.\n“We are looking at the future of the interaction between ourselves and machines,” said Mira Murati, the company’s chief technology officer.",
-        "mixedEmail": "AI content detection systems are crucial tools for online platforms and businesses to utilize as they allow for the automated identification and screening of harmful, illegal, sensitive or copyrighted material at large scales, helping to remove such content from circulation faster and prevent its spread. Specifically, AI detectors can help find child abuse images, terrorist propaganda, spam, private personal details, misinformation, graphic violence, harassment and illegally posted copyrighted content. This enforcement of community guidelines and legal standards through AI screening upholds safety, privacy, integrity and authenticity online while also respecting intellectual property - ultimately benefiting both users and organizations."
+        "mixedEmail": "AI content detection systems are crucial tools for online platforms and businesses to utilize as they allow for the automated identification and screening of harmful, illegal, sensitive or copyrighted material at large scales, helping to remove such content from circulation faster and prevent its spread. Specifically, AI detectors can help find child abuse images, terrorist propaganda, spam, private personal details, misinformation, graphic violence, harassment and illegally posted copyrighted content. This enforcement of community guidelines and legal standards through AI screening upholds safety, privacy, integrity and authenticity online while also respecting intellectual property – ultimately benefiting both users and organizations."
       },
       "report": {
         "title": "Originality report",
@@ -1354,11 +1354,11 @@
         "mixedContent": "Mixed content",
         "humanLikely": "More likely human",
         "aiExplanation": "Style is highly repetitive and similar to typical AI-generated text.",
-        "mixedExplanation": "Signals are mixed. Manual review recommended to confirm authorship.",
+        "mixedExplanation": "Signals are mixed. Manual review with the AI detector report is recommended to confirm authorship.",
         "humanExplanation": "Structure and variation look closer to human-written content."
       },
       "characterCount": "You've entered {count} characters",
-      "limitUpgradePrompt": "Need to analyze longer texts? Upgrade your plan to unlock more capacity.",
+      "limitUpgradePrompt": "Need to analyze longer texts? Upgrade your plan to unlock more capacity with the AI detector.",
       "upgradeCta": "See pricing",
       "uploadingFile": "Uploading...",
       "fileReady": "File ready to analyze.",
@@ -1377,8 +1377,8 @@
         "clipboardEmpty": "The clipboard is empty.",
         "clipboardReadFailed": "We could not read your clipboard.",
         "pasteSuccess": "Text pasted from clipboard.",
-        "emptyText": "Please paste a Spanish text.",
-        "addTextWarning": "Add text, file, or URL before analyzing.",
+        "emptyText": "Please paste a Spanish or English text.",
+        "addTextWarning": "Add text, file, or URL before analyzing with the AI detector.",
         "analysisFailed": "We could not analyze the text.",
         "analysisComplete": "Analysis complete",
         "unexpectedError": "An unexpected error occurred.",
@@ -1388,170 +1388,169 @@
       },
       "guestModal": {
         "title": "Need more credits?",
-        "subtitle": "Continue with Google or GitHub and get +400 credits instantly.",
+        "subtitle": "Continue with Google or GitHub and get +400 credits for the AI detector instantly.",
         "google": "Continue with Google · +400",
         "github": "Continue with GitHub",
         "footer": "By continuing you accept our policies and terms."
       },
       "upgradeModal": {
         "title": "Upgrade to keep detecting",
-        "description": "Pick the plan that fits you best: Trial for a quick top-up, or Hobby / Pro for higher limits and file/URL support."
+        "description": "Pick the plan that fits you best: Trial for a quick top-up, or Hobby / Pro for higher limits and file/URL support in the AI detector."
       }
     },
     "aiDetectorFeatures": {
-      "title": "Powerful AI Detection Technology",
-      "subtitle": "Advanced Detection Features",
-      "description": "Our AI detector uses cutting-edge technology to identify AI-generated content with unmatched accuracy and reliability.",
+      "title": "Powerful AI detector technology",
+      "subtitle": "Signals you can actually use",
+      "description": "The VeriIA AI detector focuses on clear, practical signals so you can explain and act on every result.",
       "features": {
         "accuracy": {
-          "title": "99% Accuracy",
-          "description": "Industry-leading precision in detecting AI-generated content across all major models"
+          "title": "Focused, practical accuracy",
+          "description": "The AI detector estimates how much your text resembles AI writing and turns that into a clear, usable signal."
         },
         "models": {
-          "title": "Multiple AI Models",
-          "description": "Supports ChatGPT, GPT-4o, Gemini, Claude, and other popular AI language models"
+          "title": "Works across major AI models",
+          "description": "The AI detector is tuned on examples from models like ChatGPT, GPT-4o, Gemini, Claude, DeepSeek, and others."
         },
         "highlights": {
-          "title": "Sentence-Level Analysis",
-          "description": "Color-coded highlighting shows exactly which parts of your text may be AI-generated"
+          "title": "Sentence-level highlights",
+          "description": "Color-coded highlights show exactly which sentences the AI detector considers more AI-like, so you know where to edit first."
         },
         "realtime": {
-          "title": "Real-Time Results",
-          "description": "Get instant analysis with detailed reports and confidence scores"
+          "title": "Fast, browser-based results",
+          "description": "Get AI detector results in seconds with a lightweight interface designed for quick checks before you submit."
         }
       }
     },
     "useCases": {
       "title": "Perfect for all professionals",
-      "subtitle": "Versatile applications",
-      "description": "Whether you are a student, educator, content creator or SEO specialist, our AI detector adapts to your needs.",
+      "subtitle": "Where the AI detector fits in your workflow",
+      "description": "Whether you are a student, educator, content creator or SEO specialist, the VeriIA AI detector adapts to your day-to-day work.",
       "cases": {
         "students": {
           "title": "Students",
-          "description": "Verify the originality of essays and assignments before submitting to ensure academic integrity."
+          "description": "Use the AI detector to double-check essays and assignments before submitting and protect your academic integrity."
         },
         "teachers": {
           "title": "Teachers",
-          "description": "Quickly spot AI-generated content in student work and give the right feedback."
+          "description": "Quickly spot likely AI-generated sections in student work and use the AI detector report to guide feedback and conversations."
         },
         "content": {
           "title": "Content creators",
-          "description": "Keep your articles authentic and human to maintain audience trust and brand voice."
+          "description": "Keep articles, newsletters, and social posts clearly human by running them through the AI detector before publishing."
         },
         "seo": {
           "title": "SEO specialists",
-          "description": "Improve content quality and avoid penalties for AI-generated mass content."
+          "description": "Add the AI detector to your SEO checklist to keep content quality high and avoid over-relying on mass-generated AI text."
         }
       }
     },
     "detectionProcess": {
-      "title": "Simple 3-Step Process",
-      "subtitle": "Get Results in Seconds",
-      "description": "Our streamlined process makes AI detection incredibly simple and fast.",
-      "getStarted": "Try AI Detector Now",
+      "title": "Simple 3-step process",
+      "subtitle": "Get AI detector results in seconds",
+      "description": "The AI detector is built to be simple: paste, analyze, and act on a clear report.",
+      "getStarted": "Try AI detector now",
       "steps": {
         "step-1": {
-          "title": "Paste Your Text",
-          "description": "Simply paste your Spanish text or upload a file to begin the analysis."
+          "title": "Paste your text",
+          "description": "Paste your Spanish or English text or upload a file to start an AI detector analysis."
         },
         "step-2": {
-          "title": "AI Analysis",
-          "description": "Our advanced AI algorithms analyze your text sentence by sentence for authenticity."
+          "title": "AI analysis",
+          "description": "The AI detector reviews structure, repetition, and word choice, sentence by sentence."
         },
         "step-3": {
-          "title": "Get Detailed Results",
-          "description": "Receive comprehensive reports with AI probability scores and highlighted sections."
+          "title": "Get detailed results",
+          "description": "You receive a clear AI probability, confidence, and highlighted sections you can review and edit."
         }
       }
     },
     "inlineCta": {
       "primary": {
-        "title": "Your first detection with the AI detector",
-        "description": "Start in one click and review the highlights in under a minute.",
+        "title": "Your first check with the AI detector",
+        "description": "Start in one click with the AI detector and review the highlights in under a minute.",
         "primary": "Try the AI detector",
         "secondary": "See plans"
       },
       "secondary": {
         "title": "Check before you submit with the AI detector",
-        "description": "Avoid false positives, protect your tone, and deliver with confidence.",
+        "description": "Avoid false positives, protect your tone, and deliver with confidence using the AI detector as an extra signal.",
         "primary": "Check my text",
         "secondary": "See plans"
       }
     },
-
     "features3": {
-      "title": "AI Detector Use Cases",
-      "subtitle": "Who This Tool Is For",
-      "description": "Whether you're a student, educator, content creator, or SEO specialist, our AI detector adapts perfectly to your professional needs.",
+      "title": "AI detector use cases",
+      "subtitle": "Who this tool is for",
+      "description": "See real situations where the AI detector brings clarity before you publish or submit your texts.",
       "items": {
         "item-1": {
-          "title": "University Students",
-          "description": "Verify the originality of essays and academic assignments before submission to ensure academic integrity and avoid plagiarism issues."
+          "title": "University students",
+          "description": "Verify essays and research papers with the AI detector before submission so your work is less likely to trigger other detectors or plagiarism checks."
         },
         "item-2": {
-          "title": "Teachers & Educators",
-          "description": "Quickly identify AI-generated content in student work and provide appropriate feedback to improve academic quality."
+          "title": "Teachers & educators",
+          "description": "Use the AI detector as a first pass on student work to see where AI use might be significant and where a closer manual review is needed."
         },
         "item-3": {
-          "title": "Content Creators",
-          "description": "Ensure your content is original and human-written to maintain authenticity, audience trust, and organic SEO performance."
+          "title": "Content creators",
+          "description": "Balance speed and authenticity by running AI-assisted drafts through the AI detector and editing sections that look too synthetic."
         },
         "item-4": {
-          "title": "SEO Specialists",
-          "description": "Optimize content quality and avoid search engine penalties for mass-generated AI content that may harm rankings."
+          "title": "SEO specialists",
+          "description": "Use the AI detector to monitor how much your blog posts and landing pages lean on AI patterns before publishing at scale."
         },
         "item-5": {
-          "title": "Journalists & Editors",
-          "description": "Verify source authenticity and content to maintain the highest standards of journalistic integrity and professional ethics."
+          "title": "Journalists & editors",
+          "description": "Check sensitive stories and op-eds in the AI detector to make sure they read clearly human and match your editorial standards."
         },
         "item-6": {
-          "title": "Marketing Agencies",
-          "description": "Ensure client content is original and complies with advertising platform guidelines and quality policies for campaign success."
+          "title": "Marketing teams & agencies",
+          "description": "Run campaign copy and client deliverables through the AI detector to safeguard tone of voice and brand trust before launch."
         }
       }
     },
     "pricing": {
-      "title": "Pricing Plans",
-      "subtitle": "Choose the perfect plan for you",
-      "description": "From free analysis to enterprise solutions, we have the right plan for your needs."
+      "title": "AI detector pricing plans",
+      "subtitle": "Choose the plan that fits you",
+      "description": "From free AI detector checks to higher-volume and team options, VeriIA has a plan for the way you work."
     },
     "calltoaction": {
       "title": "Start your AI detection now",
-      "description": "Verify the originality of your texts in seconds with clear reports and precise highlights.",
+      "description": "Verify the originality and style of your texts in seconds with the VeriIA AI detector, clear reports, and precise highlights.",
       "primaryButton": "Try the AI detector",
       "secondaryButton": "Explore use cases"
     },
     "features": {
-      "title": "Key Features",
-      "subtitle": "Cutting-Edge Technology",
-      "description": "Explore our advanced AI detection capabilities designed to deliver accurate and reliable results.",
+      "title": "Key features of the AI detector",
+      "subtitle": "Clarity over black-box claims",
+      "description": "Explore AI detector capabilities designed to give you signals you can explain to teachers, clients, or teams.",
       "items": {
         "item-1": {
-          "title": "Comprehensive Database",
-          "description": "Access to an extensive database of AI patterns trained on millions of examples for enhanced accuracy."
+          "title": "Clear section-by-section report",
+          "description": "The AI detector gives you an overall probability plus a breakdown by sentences and paragraphs, so you know where to focus."
         },
         "item-2": {
-          "title": "Fingerprint Detection",
-          "description": "Advanced analysis of linguistic and stylistic patterns to identify the unique signature of each AI model."
+          "title": "Sentence-level highlighting",
+          "description": "AI-like passages are color-coded, making it easy to see which parts to rewrite, cite, or justify."
         },
         "item-3": {
-          "title": "Identity Verification",
-          "description": "Multi-layer validation that examines structure, syntax, and semantics for more reliable results."
+          "title": "Privacy-first processing",
+          "description": "Texts are processed only to generate the AI detector report; they are not used to train models and you control your scan history."
         },
         "item-4": {
-          "title": "Statistical Analysis",
-          "description": "Detailed metrics and confidence scores to help make informed decisions about content authenticity."
+          "title": "Confidence and context",
+          "description": "Along with a probability, the AI detector includes confidence and plain-language explanations to support your decisions."
         }
       }
     },
     "features2": {
-      "title": "Additional Features",
-      "subtitle": "More Powerful Capabilities",
-      "description": "Discover additional functionalities that make our AI detector the most complete and versatile tool on the market.",
-      "feature-1": "Real-time email and document analysis",
-      "feature-2": "Batch processing for efficient bulk analysis",
-      "feature-3": "API integration for custom workflows",
-      "feature-4": "Control panel with detailed analytics and metrics"
+      "title": "Additional features",
+      "subtitle": "More practical functions for daily use",
+      "description": "Discover extra conveniences that make the VeriIA AI detector easy to add to your existing workflows.",
+      "feature-1": "Analysis history so you can see how a text evolves as you edit it over time.",
+      "feature-2": "Simple limits per plan so the AI detector scales with how often you need to run checks.",
+      "feature-3": "Support for pasted text, files, and public URLs in a single, clean interface.",
+      "feature-4": "Lightweight, browser-based experience with no installs or complex setup."
     },
     "howItWorks": {
       "title": "How our AI detector works",
@@ -1563,15 +1562,15 @@
           "items": [
             {
               "title": "Add your content",
-              "description": "Copy and paste the text you want to analyze, or type it directly."
+              "description": "Copy and paste the text you want to analyze with the AI detector, or type it directly."
             },
             {
-              "title": "Choose the language",
-              "description": "Optimized for Spanish and English today; more languages coming soon."
+              "title": "Language detected automatically",
+              "description": "The AI detector is optimized today for Spanish and English and detects the language automatically, so you don’t need to configure it."
             },
             {
               "title": "Check the length",
-              "description": "We recommend at least 30–50 words; free plan: 1,500 characters per analysis."
+              "description": "We recommend at least 30–50 words; on the free plan you can analyze up to 1,500 characters per AI detector check."
             }
           ]
         },
@@ -1581,15 +1580,15 @@
           "items": [
             {
               "title": "Click “Detect now”",
-              "description": "Start the analysis and get an overall probability."
+              "description": "Start the analysis and get an overall AI probability for your text."
             },
             {
               "title": "See a clear percentage",
-              "description": "We show how likely the whole text was written by AI."
+              "description": "The AI detector shows how likely it is that the full text was written by AI."
             },
             {
               "title": "Review the highlights",
-              "description": "We mark sentences that may be AI-generated so you can inspect them."
+              "description": "Sentences that look especially AI-like are highlighted so you can inspect them more closely."
             }
           ]
         },
@@ -1599,15 +1598,15 @@
           "items": [
             {
               "title": "Focus on highlighted parts",
-              "description": "Start with the sentences or paragraphs that were flagged."
+              "description": "Start with the sentences or paragraphs flagged by the AI detector as more likely AI-generated."
             },
             {
               "title": "Adjust where needed",
-              "description": "Improve clarity, coherence, and a human tone wherever necessary."
+              "description": "Improve clarity, coherence, citations, and human tone in the key sections."
             },
             {
               "title": "Re-check if you want",
-              "description": "Run detection again to validate changes; history keeps 90 days."
+              "description": "Run another AI detector scan to validate your edits; your history is kept for up to 90 days."
             }
           ]
         }
@@ -1619,62 +1618,62 @@
       "items": {
         "item-1": {
           "question": "What is this AI detector and what can it analyze?",
-          "answer": "We estimate the probability that a text was written with models like ChatGPT, Gemini, Claude, DeepSeek or Kimi. It works for research papers, blog posts, professional reports, long emails—any professional writing."
+          "answer": "The VeriIA AI detector estimates how likely it is that a text was written with models like ChatGPT, Gemini, Claude, DeepSeek or Kimi. It works for research papers, blog posts, professional reports, long emails—any kind of professional writing."
         },
         "item-2": {
-          "question": "How does the detector work in broad strokes?",
-          "answer": "We analyze structure, rhythm, repetition and word choice, comparing against human and AI examples. We output a global probability and highlight sections worth reviewing; we assess style, not isolated words."
+          "question": "How does the AI detector work in broad strokes?",
+          "answer": "The AI detector analyzes structure, rhythm, repetition, and word choice and compares them against human and AI examples. It then outputs a global probability and highlights sections worth reviewing. It evaluates style, not isolated words."
         },
         "item-3": {
-          "question": "How accurate is it? Can it be wrong?",
-          "answer": "It is probabilistic, not an absolute verdict. It is a reliable signal in most cases but false positives/negatives can occur. Use it as one input, not the only decision maker."
+          "question": "How accurate is the AI detector? Can it be wrong?",
+          "answer": "It is probabilistic, not an absolute verdict. In most cases the AI detector is a useful signal, but false positives and false negatives can happen. Use it as one input among others, not as the only decision maker."
         },
         "item-4": {
           "question": "How should I read the percentage and highlights?",
-          "answer": "The percentage shows how much the overall text resembles AI writing. It does not mean that exact percent of the text is AI. Highlights point to sentences/paragraphs with AI-like style to review more closely."
+          "answer": "The percentage shows how much the overall text resembles AI writing. It does not mean that exact percent of the text is AI. Highlights point to sentences or paragraphs with more AI-like style so you can review them more carefully."
         },
         "item-5": {
-          "question": "Minimum length and file formats?",
-          "answer": "We recommend at least 30–50 words. Paste text or upload .docx and plain text (.txt). Very short fragments yield less reliable results in any detector."
+          "question": "What is the minimum length and which file formats are supported?",
+          "answer": "We recommend at least 30–50 words for more stable AI detector results. You can paste text or upload .docx and plain text formats like .txt. Very short fragments are less reliable for any detector."
         },
         "item-6": {
-          "question": "Which languages are supported right now?",
-          "answer": "Optimized for Spanish and English. We will add more languages once we can ensure good quality."
+          "question": "Which languages does the AI detector support right now?",
+          "answer": "The AI detector is currently optimized for Spanish and English. We will add more languages when we can guarantee reasonable detection quality."
         },
         "item-7": {
-          "question": "Is there a free plan? What are the limits?",
-          "answer": "Yes. You can use it free with limited detections. For more volume or advanced features, subscription plans lift the limits."
+          "question": "Is there a free plan for the AI detector? What are the limits?",
+          "answer": "Yes. You can use the AI detector for free with a limited number of checks. To analyze more texts or unlock advanced features, our paid plans raise the limits."
         },
         "item-8": {
           "question": "What happens to my texts? Do you store or train on them?",
-          "answer": "We do not permanently store your texts or use them to train models. We only process them to generate the report and do not share them with other tools."
+          "answer": "We do not permanently store your texts or use them to train our models or third-party models. We only process the content to generate the AI detector report and do not share it with other tools."
         },
         "item-9": {
-          "question": "Does it work with mixed or paraphrased texts?",
-          "answer": "Yes. It can analyze mixes of human and AI sections or paraphrased drafts. The result reflects the overall style—the more you edit and personalize, the further it gets from AI patterns."
+          "question": "Does the AI detector work with mixed or paraphrased texts?",
+          "answer": "Yes. The AI detector can analyze texts with both human and AI parts, or paraphrased drafts. The result reflects the overall style—the more you edit and personalize, the further it moves away from typical AI patterns."
         },
         "item-10": {
-          "question": "What if my text is original but flagged as AI?",
-          "answer": "Remember it is an estimate. Keep drafts, notes, and edit history as evidence. Use the report as a signal to discuss with teachers/clients/reviewers, not as a substitute for human review."
+          "question": "What if I am sure my text is original but the AI detector flags it as AI?",
+          "answer": "Remember that the AI detector gives an estimate, not a legal verdict. Keep drafts, notes, and edit history as evidence of your process. Use the report as a starting point for discussions with teachers, clients, or reviewers, not as a substitute for human judgment."
         }
       }
     },
     "relatedTools": {
       "title": "Not just an AI detector: more tools for your text",
-      "subtitle": "Combine the detector with plagiarism, text compare, and word counter tools to control quality, credibility, and length.",
-      "description": "Explore our toolkit built to improve the quality, credibility, and originality of your content.",
+      "subtitle": "Combine the AI detector with plagiarism checks, text compare, and word counting.",
+      "description": "Explore the VeriIA toolkit built to improve quality, credibility, and originality around your AI detector workflow.",
       "tools": {
         "plagiarism": {
           "title": "Plagiarism checker",
-          "description": "Scan billions of sources to confirm your work is original and ready to publish."
+          "description": "Scan the web and academic sources so your final text is original before or after running it through the AI detector."
         },
         "summarizer": {
           "title": "Text compare",
-          "description": "Drop in two texts to get a similarity score in seconds. Spot reuse, differences, and consistency across versions."
+          "description": "Drop in two versions to see exactly what changed after editing based on the AI detector report."
         },
         "humanizer": {
           "title": "Word counter",
-          "description": "Count words, characters, and sentences instantly. Perfect for meeting length limits or SEO snippets."
+          "description": "Count words and characters to meet briefs, calls, or platform limits once you are happy with style and originality."
         }
       },
       "tryNow": "Try now",
@@ -1683,7 +1682,7 @@
     "aiCapabilities": {
       "title": "Advanced AI capabilities",
       "subtitle": "Powered by cutting-edge AI",
-      "description": "Our technology uses state-of-the-art algorithms to analyze and detect AI-generated content with unmatched precision.",
+      "description": "Our technology uses state-of-the-art algorithms to analyze and detect AI-generated content with solid, practical precision.",
       "capability-1": "Deep semantic analysis",
       "capability-2": "Ultra-fast processing",
       "capability-3": "Continuous learning",
