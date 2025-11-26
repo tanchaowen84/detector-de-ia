@@ -1,21 +1,11 @@
 'use client';
 
 import { HeaderSection } from '@/components/layout/header-section';
-import {
-  CpuIcon,
-  FingerprintIcon,
-  type LucideIcon,
-  PencilIcon,
-  Settings2Icon,
-  SparklesIcon,
-  ZapIcon,
-} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 type FeatureItem = {
   title: string;
   description: string;
-  icon: LucideIcon;
 };
 
 type FeaturesSectionProps = {
@@ -51,36 +41,29 @@ export default function Features3Section({
               {
                 title: t('items.item-1.title'),
                 description: t('items.item-1.description'),
-                icon: ZapIcon,
               },
               {
                 title: t('items.item-2.title'),
                 description: t('items.item-2.description'),
-                icon: CpuIcon,
               },
               {
                 title: t('items.item-3.title'),
                 description: t('items.item-3.description'),
-                icon: FingerprintIcon,
               },
               {
                 title: t('items.item-4.title'),
                 description: t('items.item-4.description'),
-                icon: PencilIcon,
               },
               {
                 title: t('items.item-5.title'),
                 description: t('items.item-5.description'),
-                icon: Settings2Icon,
               },
               {
                 title: t('items.item-6.title'),
                 description: t('items.item-6.description'),
-                icon: SparklesIcon,
               },
             ]
           ).map((item) => {
-            const Icon = item.icon;
             return (
               <div
                 key={item.title}
@@ -88,9 +71,7 @@ export default function Features3Section({
               >
                 <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-indigo-100 blur-xl group-hover:bg-indigo-200 transition-colors" />
                 <div className="relative z-10">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600">
-                    <Icon className="size-6 text-white" />
-                  </div>
+                  <div className="mb-4 h-1.5 w-12 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-amber-400 shadow-sm shadow-indigo-100" />
                   <h3 className="mb-3 text-xl font-semibold text-slate-900">
                     {item.title}
                   </h3>
