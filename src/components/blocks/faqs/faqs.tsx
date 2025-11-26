@@ -17,11 +17,18 @@ type FAQItem = {
   answer: string;
 };
 
-export default function FaqSection() {
-  const locale = useLocale();
-  const t = useTranslations('HomePage.faqs');
+type FaqSectionProps = {
+  i18nNamespace?: string;
+  items?: FAQItem[];
+};
 
-  const faqItems: FAQItem[] = [
+export default function FaqSection({
+  i18nNamespace = 'HomePage.faqs',
+  items: itemsOverride,
+}: FaqSectionProps) {
+  const t = useTranslations(i18nNamespace);
+
+  const faqItems: FAQItem[] = itemsOverride ?? [
     {
       id: 'item-1',
       icon: 'calendar-clock',

@@ -1,3 +1,5 @@
+"use client";
+
 import { HeaderSection } from '@/components/layout/header-section';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -16,6 +18,14 @@ type Step = {
   label: string;
   imageAlt: string;
   items: StepItem[];
+  imageSrc?: string;
+};
+
+type StepsSectionProps = {
+  /** i18n namespace, defaults to HomePage.howItWorks */
+  i18nNamespace?: string;
+  /** override steps to bypass translations */
+  steps?: Step[];
 };
 
 const visualStyles: Record<StepKey, { gradient: string; accent: string }> = {
@@ -33,8 +43,11 @@ const visualStyles: Record<StepKey, { gradient: string; accent: string }> = {
   },
 };
 
-export default function AiDetectorFeaturesSection() {
-  const t = useTranslations('HomePage.howItWorks');
+export default function AiDetectorFeaturesSection({
+  i18nNamespace = 'HomePage.howItWorks',
+  steps: stepsOverride,
+}: StepsSectionProps) {
+  const t = useTranslations(i18nNamespace);
   const locale = useLocale();
 
   const stepImages: Record<StepKey, { src: string; alt: string }> = {
@@ -52,6 +65,13 @@ export default function AiDetectorFeaturesSection() {
     },
   };
 
+  const steps: Step[] = stepsOverride ??
+    STEP_KEYS.map((key) => t.raw((`steps.${key}` as any)) as Step).map((step, idx) => ({
+      ...step,
+      imageSrc: step.imageSrc ?? stepImages[STEP_KEYS[idx]].src,
+      imageAlt: step.imageAlt ?? stepImages[STEP_KEYS[idx]].alt,
+    }));
+
   return (
     <section id="how-it-works" className="relative py-20 text-slate-900">
       <div className="relative z-10 mx-auto max-w-6xl px-4">
@@ -63,8 +83,8 @@ export default function AiDetectorFeaturesSection() {
         />
 
         <div className="grid grid-cols-1 gap-8 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-          {STEP_KEYS.map((key) => {
-            const step = t.raw((`steps.${key}` as any)) as Step;
+          {steps.map((step, idx) => {
+            const key = STEP_KEYS[idx] ?? STEP_KEYS[STEP_KEYS.length - 1];
             let items = step.items ?? [];
             if (items.length > 3) {
               // 防止回退合并导致的多语言重复，按当前语言截取
@@ -72,22 +92,22 @@ export default function AiDetectorFeaturesSection() {
             }
             return (
               <article
-                key={key}
+                key={step.label}
                 className="flex h-full flex-col rounded-[32px] border border-slate-200 bg-white/95 p-6 shadow-[0_18px_70px_rgba(15,23,42,0.08)]"
               >
                 <div
                   className={cn(
                     'relative mb-6 flex h-56 w-full overflow-hidden rounded-2xl border border-slate-100 bg-gradient-to-b shadow-inner',
-                    visualStyles[key].gradient
+                    visualStyles[key]?.gradient ?? visualStyles['step-1'].gradient
                   )}
                 >
                   <Image
-                    src={stepImages[key].src}
-                    alt={stepImages[key].alt}
+                    src={step.imageSrc ?? stepImages['step-1'].src}
+                    alt={step.imageAlt}
                     fill
                     sizes="(max-width: 640px) 100vw, 360px"
                     className="object-cover"
-                    priority={key === 'step-1'}
+                    priority={idx === 0}
                   />
                 </div>
 

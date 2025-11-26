@@ -1,9 +1,15 @@
+"use client";
+
 import { HeaderSection } from '@/components/layout/header-section';
 import { PricingTable } from '@/components/pricing/pricing-table';
 import { useTranslations } from 'next-intl';
 
-export default function PricingSection() {
-  const t = useTranslations('HomePage.pricing');
+type PricingSectionProps = {
+  i18nNamespace?: string;
+};
+
+export default function PricingSection({ i18nNamespace = 'HomePage.pricing' }: PricingSectionProps) {
+  const t = useTranslations(i18nNamespace);
 
   return (
     <section className="relative py-20 text-slate-900">

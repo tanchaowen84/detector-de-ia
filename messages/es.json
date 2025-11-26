@@ -120,6 +120,145 @@
       "words": "{value} palabras plagiadas",
       "identical": "{value} palabras idénticas",
       "similar": "{value} palabras similares"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Cómo funciona el detector de plagio",
+        "subtitle": "Pega texto, sube un archivo o ingresa una URL: obtén coincidencias en tres pasos.",
+        "steps": {
+          "step-1": {
+            "label": "Paso 1 · Añade tu contenido",
+            "imageAlt": "Añadir texto, archivo o URL",
+            "items": [
+              {
+                "title": "Elige la fuente",
+                "description": "Pega texto, sube .doc/.docx/.pdf/.txt o ingresa una URL https."
+              },
+              {
+                "title": "Selecciona el idioma",
+                "description": "Detectamos automáticamente; elige español o inglés para mejor recall."
+              },
+              {
+                "title": "Opcional: excluye fuentes",
+                "description": "Omite dominios de confianza para reducir ruido y enfocarte en hallazgos reales."
+              }
+            ]
+          },
+          "step-2": {
+            "label": "Paso 2 · Ejecuta el escaneo",
+            "imageAlt": "Escaneo de plagio en progreso",
+            "items": [
+              {
+                "title": "Inicia la revisión",
+                "description": "Pulsa “Detectar plagio” y Winston busca en miles de millones de fuentes."
+              },
+              {
+                "title": "Análisis por oraciones",
+                "description": "Comparamos huellas en web, academia y noticias para hallar coincidencias."
+              },
+              {
+                "title": "Alerta de ataques",
+                "description": "Marcamos trucos como homoglifos o espacios invisibles para evitar evasiones."
+              }
+            ]
+          },
+          "step-3": {
+            "label": "Paso 3 · Revisa las coincidencias",
+            "imageAlt": "Revisión de fuentes detectadas",
+            "items": [
+              {
+                "title": "Mira el % de plagio",
+                "description": "Entiende qué parte del texto se solapa con fuentes conocidas."
+              },
+              {
+                "title": "Abre las fuentes coincidentes",
+                "description": "Revisa títulos, URLs y conteos de coincidencias para validar contexto."
+              },
+              {
+                "title": "Ajusta y vuelve a escanear",
+                "description": "Edita lo señalado, vuelve a ejecutar y guarda la versión limpia para entregar."
+              }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Dónde encaja este detector",
+        "subtitle": "Escenarios comunes",
+        "description": "Mantén la originalidad en academia, medios y negocios.",
+        "items": {
+          "item-1": {
+            "title": "Integridad académica",
+            "description": "Tesis, ensayos y entregas que deben ser originales."
+          },
+          "item-2": {
+            "title": "Redacciones y edición",
+            "description": "Verifica citas y evita duplicar cables antes de publicar."
+          },
+          "item-3": {
+            "title": "SEO y equipos de contenido",
+            "description": "Revisa borradores contra la web para evitar penalizaciones por duplicado."
+          },
+          "item-4": {
+            "title": "Legal y compliance",
+            "description": "Contratos, políticas y avisos que requieren redacción única."
+          },
+          "item-5": {
+            "title": "Comunicaciones corporativas",
+            "description": "Notas de prensa, briefs y comunicados sin texto reciclado."
+          },
+          "item-6": {
+            "title": "Editoriales y agencias",
+            "description": "Entrega a clientes contenido original antes del handoff final."
+          }
+        }
+      },
+      "faq": {
+        "title": "Preguntas frecuentes del detector de plagio",
+        "subtitle": "Respuestas claras antes de escanear.",
+        "items": {
+          "item-1": {
+            "question": "¿Qué formatos puedo analizar?",
+            "answer": "Texto, archivos .doc/.docx/.pdf/.txt o cualquier URL https."
+          },
+          "item-2": {
+            "question": "¿Los escaneos consumen créditos?",
+            "answer": "Sí. Cada análisis usa créditos según la longitud. El contador y el comparador de texto no consumen créditos."
+          },
+          "item-3": {
+            "question": "¿Guardan mis documentos?",
+            "answer": "Solo los procesamos para darte el resultado. Si inicias sesión y tu plan lo permite, guardamos un historial corto; no se usan para entrenar modelos."
+          },
+          "item-4": {
+            "question": "¿Detecta paráfrasis?",
+            "answer": "Muestra coincidencias idénticas y similares. Reescrituras profundas pueden aparecer como “similares”; revisa el contexto."
+          },
+          "item-5": {
+            "question": "¿Qué idiomas funcionan mejor?",
+            "answer": "Optimizado para español e inglés; otros idiomas pueden variar en precisión."
+          }
+        }
+      },
+      "related": {
+        "title": "Más herramientas para texto limpio y original",
+        "subtitle": "Combina el detector de plagio con estas.",
+        "description": "Verifica originalidad, compara versiones y controla la extensión en una sola caja de herramientas.",
+        "tryNow": "Probar ahora",
+        "items": {
+          "detector": {
+            "title": "Detector de contenido IA",
+            "description": "Mide la probabilidad de IA y resalta las oraciones a revisar."
+          },
+          "compare": {
+            "title": "Comparador de textos",
+            "description": "Ve al instante las diferencias entre dos versiones y detecta reutilización."
+          },
+          "counter": {
+            "title": "Contador de palabras",
+            "description": "Cuenta palabras y caracteres para cumplir límites antes de enviar."
+          }
+        }
+      }
     }
   },
   "WordCounterPage": {

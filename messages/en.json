@@ -120,6 +120,145 @@
       "words": "{value} plagiarized words",
       "identical": "{value} identical words",
       "similar": "{value} similar words"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "How the plagiarism checker works",
+        "subtitle": "Paste text, upload a file, or enter a URL—see matches in three steps.",
+        "steps": {
+          "step-1": {
+            "label": "Step 1 · Add your content",
+            "imageAlt": "User adding text, file, or URL",
+            "items": [
+              {
+                "title": "Choose the source",
+                "description": "Paste text, upload .doc/.docx/.pdf/.txt, or paste an https URL."
+              },
+              {
+                "title": "Pick the language",
+                "description": "Auto-detect is on by default; select Spanish or English for best recall."
+              },
+              {
+                "title": "Optional: exclude sources",
+                "description": "Skip trusted domains to reduce noise and focus on unexpected matches."
+              }
+            ]
+          },
+          "step-2": {
+            "label": "Step 2 · Run the scan",
+            "imageAlt": "Plagiarism scan in progress",
+            "items": [
+              {
+                "title": "Start the check",
+                "description": "Click “Detect plagiarism” and Winston searches billions of sources."
+              },
+              {
+                "title": "Sentence-level analysis",
+                "description": "We compare fingerprints across web, academic, and news corpora to find overlaps."
+              },
+              {
+                "title": "Attack awareness",
+                "description": "Flags obfuscation tricks like homoglyphs or zero-width spaces so results stay honest."
+              }
+            ]
+          },
+          "step-3": {
+            "label": "Step 3 · Review matches",
+            "imageAlt": "Reviewing detected sources",
+            "items": [
+              {
+                "title": "See overall % plagiarized",
+                "description": "Understand how much of the text overlaps with known sources."
+              },
+              {
+                "title": "Open matched sources",
+                "description": "Check titles, URLs, and match counts to validate context and intent."
+              },
+              {
+                "title": "Refine and re-run",
+                "description": "Edit flagged parts, re-scan, and save a clean version for submission."
+              }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Where this checker fits",
+        "subtitle": "Common scenarios",
+        "description": "Keep originality across academic, media, and business content.",
+        "items": {
+          "item-1": {
+            "title": "Academic integrity",
+            "description": "Theses, essays, and research submissions that must stay original."
+          },
+          "item-2": {
+            "title": "Newsrooms & editors",
+            "description": "Verify quotes and avoid duplicated wires before publishing."
+          },
+          "item-3": {
+            "title": "SEO & content teams",
+            "description": "Check drafts against the web to avoid duplicate-content penalties."
+          },
+          "item-4": {
+            "title": "Legal & compliance",
+            "description": "Contracts, policies, and disclosures that must be uniquely worded."
+          },
+          "item-5": {
+            "title": "Corporate comms",
+            "description": "Press releases, briefs, and exec updates that need clean sourcing."
+          },
+          "item-6": {
+            "title": "Publishers & agencies",
+            "description": "Ensure client deliverables are original before handoff."
+          }
+        }
+      },
+      "faq": {
+        "title": "Plagiarism checker FAQ",
+        "subtitle": "Clear answers before you scan.",
+        "items": {
+          "item-1": {
+            "question": "What formats can I scan?",
+            "answer": "Paste text, upload .doc/.docx/.pdf/.txt files, or scan any https URL."
+          },
+          "item-2": {
+            "question": "Do scans consume credits?",
+            "answer": "Yes. Each scan uses credits based on length. Word counter and text compare are credit-free."
+          },
+          "item-3": {
+            "question": "Will my documents be stored?",
+            "answer": "We process them only to return results. If you’re logged in and your plan allows, a short history is saved; nothing is used to train models."
+          },
+          "item-4": {
+            "question": "Does it detect paraphrasing?",
+            "answer": "It surfaces identical and similar wording. Heavy rewrites may show as “similar” rather than identical—always review the context."
+          },
+          "item-5": {
+            "question": "Which languages work best?",
+            "answer": "Optimized for Spanish and English. Other languages may work, but accuracy can vary."
+          }
+        }
+      },
+      "related": {
+        "title": "More tools for clean, original text",
+        "subtitle": "Pair the plagiarism checker with these.",
+        "description": "Verify originality, compare versions, and control length with one toolkit.",
+        "tryNow": "Try now",
+        "items": {
+          "detector": {
+            "title": "AI content detector",
+            "description": "Score AI likelihood and highlight sentences worth reviewing."
+          },
+          "compare": {
+            "title": "Text compare",
+            "description": "See differences between two versions instantly and spot reuse."
+          },
+          "counter": {
+            "title": "Word counter",
+            "description": "Count words and characters to meet limits before you submit."
+          }
+        }
+      }
     }
   },
   "WordCounterPage": {
