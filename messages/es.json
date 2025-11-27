@@ -129,6 +129,7 @@
           "step-1": {
             "label": "Paso 1 · Añade tu contenido al Detector de plagio",
             "imageAlt": "Subir texto, archivo o URL al Detector de plagio",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/plagiarism/step1.webp",
             "items": [
               {
                 "title": "Pega o sube",
@@ -147,6 +148,7 @@
           "step-2": {
             "label": "Paso 2 · Ejecuta el análisis en el Detector de plagio",
             "imageAlt": "Escaneo del Detector de plagio en progreso",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/plagiarism/step2.webp",
             "items": [
               {
                 "title": "Pulsa “Detectar plagio”",
@@ -165,6 +167,7 @@
           "step-3": {
             "label": "Paso 3 · Edita con el reporte del Detector de plagio",
             "imageAlt": "Revisión de fuentes detectadas en el Detector de plagio",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/plagiarism/step3.webp",
             "items": [
               {
                 "title": "Decide qué cambiar",
@@ -317,6 +320,7 @@
           "step-1": {
             "label": "Paso 1 · Pega o escribe",
             "imageAlt": "Usuario pegando texto en el contador",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step1.webp",
             "items": [
               {
                 "title": "Suelta tu texto",
@@ -335,6 +339,7 @@
           "step-2": {
             "label": "Paso 2 · Lee las métricas",
             "imageAlt": "Tarjeta de métricas con conteos",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step2.webp",
             "items": [
               {
                 "title": "Palabras y caracteres",
@@ -353,6 +358,7 @@
           "step-3": {
             "label": "Paso 3 · Ajusta a los límites",
             "imageAlt": "Usuario copiando texto tras revisar límites",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step3.webp",
             "items": [
               {
                 "title": "Cumple los límites de cada plataforma",
@@ -521,6 +527,7 @@
           "step-1": {
             "label": "Paso 1 · Añade ambos textos al comparador de textos",
             "imageAlt": "Dos cajas de texto listas para comparar en el comparador de textos",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step1.webp",
             "items": [
               {
                 "title": "Pega o sube archivos",
@@ -539,6 +546,7 @@
           "step-2": {
             "label": "Paso 2 · Ejecuta la comparación con el comparador de textos",
             "imageAlt": "Comparación en progreso en el comparador de textos",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step2.webp",
             "items": [
               {
                 "title": "Haz clic en \"Comparar texto\"",
@@ -557,6 +565,7 @@
           "step-3": {
             "label": "Paso 3 · Revisa y comparte",
             "imageAlt": "Resultados con adiciones y eliminaciones resaltadas en el comparador de textos",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step3.webp",
             "items": [
               {
                 "title": "Recorre el diff",
