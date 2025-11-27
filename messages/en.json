@@ -320,6 +320,7 @@
           "step-1": {
             "label": "Step 1 · Paste or type",
             "imageAlt": "User pasting text into the word counter",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step1.webp",
             "items": [
               {
                 "title": "Drop your text",
@@ -338,6 +339,7 @@
           "step-2": {
             "label": "Step 2 · Read the metrics",
             "imageAlt": "Metrics card showing word and character counts",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step2.webp",
             "items": [
               {
                 "title": "Words and characters",
@@ -356,6 +358,7 @@
           "step-3": {
             "label": "Step 3 · Adjust to limits",
             "imageAlt": "User copying text after checking length limits",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step3.webp",
             "items": [
               {
                 "title": "Match every platform’s limits",
@@ -524,6 +527,7 @@
           "step-1": {
             "label": "Step 1 · Add both texts to text compare",
             "imageAlt": "Two text boxes ready to compare in the text compare tool",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step1.webp",
             "items": [
               {
                 "title": "Paste or upload files",
@@ -542,6 +546,7 @@
           "step-2": {
             "label": "Step 2 · Run the comparison in text compare",
             "imageAlt": "Comparison in progress in the text compare tool",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step2.webp",
             "items": [
               {
                 "title": "Click “Compare text”",
@@ -560,6 +565,7 @@
           "step-3": {
             "label": "Step 3 · Review and share from text compare",
             "imageAlt": "Results with highlighted additions and removals in text compare",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step3.webp",
             "items": [
               {
                 "title": "Scroll through the diff",
