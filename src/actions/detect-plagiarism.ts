@@ -158,7 +158,6 @@ export const detectPlagiarismAction = actionClient
             aiScore: result.result.score,
             length: parsedInput.text?.length ?? null,
             sentenceCount: null,
-            sentences: null,
             attackDetected: result.attackDetected ?? null,
             readabilityScore: null,
             creditsUsed,

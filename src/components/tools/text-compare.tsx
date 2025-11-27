@@ -215,7 +215,7 @@ type InputCardProps = {
   label: string;
   value: string;
   onChange: (v: string) => void;
-  fileRef: React.RefObject<HTMLInputElement>;
+  fileRef: React.RefObject<HTMLInputElement | null>;
   onFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
   uploadLabel: string;

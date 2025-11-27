@@ -26,7 +26,8 @@ export default function FaqSection({
   i18nNamespace = 'HomePage.faqs',
   items: itemsOverride,
 }: FaqSectionProps) {
-  const t = useTranslations(i18nNamespace);
+  // Relax typing for dynamic namespace usage
+  const t = useTranslations(i18nNamespace as any) as unknown as (key: string) => string;
 
   const faqItems: FAQItem[] = itemsOverride ?? [
     {

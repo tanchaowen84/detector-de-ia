@@ -28,7 +28,7 @@ export async function getUserDetectionsSummary({
   }
   if (retentionDays && retentionDays > 0) {
     const cutoff = new Date(Date.now() - retentionDays * 24 * 60 * 60 * 1000);
-    whereClause = and(whereClause, lt(detections.createdAt, new Date('9999-12-31'))) && whereClause;
+    whereClause = and(whereClause, lt(detections.createdAt, cutoff))!;
     // Soft cleanup: delete outdated records for this user
     await db
       .delete(detections)

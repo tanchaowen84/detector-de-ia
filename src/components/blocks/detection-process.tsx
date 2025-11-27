@@ -32,7 +32,8 @@ export default function DetectionProcessSection({
   i18nNamespace = 'HomePage.relatedTools',
   items: itemsOverride,
 }: RelatedToolsProps) {
-  const t = useTranslations(i18nNamespace);
+  // i18nNamespace may be dynamic, so relax typing to satisfy next-intl generics
+  const t = useTranslations(i18nNamespace as any) as unknown as (key: string) => string;
 
   const items = itemsOverride ?? [
     {

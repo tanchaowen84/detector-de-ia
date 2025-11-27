@@ -47,7 +47,11 @@ export default function AiDetectorFeaturesSection({
   i18nNamespace = 'HomePage.howItWorks',
   steps: stepsOverride,
 }: StepsSectionProps) {
-  const t = useTranslations(i18nNamespace);
+  // Relax typing so dynamic namespaces compile cleanly
+  const t = useTranslations(i18nNamespace as any) as unknown as {
+    (key: string): string;
+    raw: (key: string) => any;
+  };
   const locale = useLocale();
 
   const stepImages: Record<StepKey, { src: string; alt: string }> = {

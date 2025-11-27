@@ -9,7 +9,7 @@ type PricingSectionProps = {
 };
 
 export default function PricingSection({ i18nNamespace = 'HomePage.pricing' }: PricingSectionProps) {
-  const t = useTranslations(i18nNamespace);
+  const t = useTranslations(i18nNamespace as any) as unknown as (key: string) => string;
 
   return (
     <section className="relative py-20 text-slate-900">

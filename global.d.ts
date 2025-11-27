@@ -12,3 +12,6 @@ declare module 'next-intl' {
     Messages: typeof messages;
   }
 }
+
+// Fallback types for untyped third-party modules
+declare module 'diff';
