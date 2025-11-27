@@ -15,12 +15,15 @@ type Href = Parameters<typeof getLocalePathname>[0]['href'];
 function getEnabledStaticRoutes(): string[] {
   const baseRoutes = [
     '/',
+    '/plagiarism',
+    '/text-compare',
+    '/word-counter',
     '/pricing',
     '/blog',
     '/privacy',
     '/terms',
     '/cookie',
-    '/refund'
+    '/refund',
   ];
 
   // 条件性添加页面路由
