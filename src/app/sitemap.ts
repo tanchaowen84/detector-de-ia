@@ -15,7 +15,7 @@ type Href = Parameters<typeof getLocalePathname>[0]['href'];
 function getEnabledStaticRoutes(): string[] {
   const baseRoutes = [
     '/',
-    '/plagiarism',
+    '/plagiarism-detector',
     '/text-compare',
     '/word-counter',
     '/pricing',
