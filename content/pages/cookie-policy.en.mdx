@@ -9,17 +9,13 @@ published: true
 
 ## Quick summary
 - Controller: Detector de IA (individually operated). Contact: support@detectordeia.pro
-- **Essential cookies** for login, preferences, security.
+- **Essential**: login (better-auth), language/theme preference, CSRF protection.
 - **Analytics**: Google Analytics 4, Microsoft Clarity, self-hosted Plausible.
-- No marketing/advertising cookies today; no data selling. If we later enable ads (e.g., Google AdSense), we will treat them as marketing cookies and ask for explicit consent before loading.
-- Consent banner lets you accept/reject analytics anytime.
+- No marketing/advertising cookies today; no data selling. If we ever enable ads (e.g., Google AdSense), we’ll treat them as marketing and request explicit consent before loading.
 
 ## What we use
 - **Strictly necessary**: session (`better-auth`), language/theme, CSRF protection.
-- **Analytics (consent)**: GA4 for traffic, Clarity for heatmaps, Plausible for aggregated metrics (aimed to be cookieless).
-
-## Managing consent
-Change your choice in the banner or clear cookies in your browser.
+- **Analytics**: GA4 for traffic, Clarity for heatmaps, Plausible for aggregated metrics (configured without personal identifiers).
 
 ## Retention
 GA4 up to 14 months; Clarity up to 12 months; Plausible aggregated; essentials up to 1 year (language/theme), session while logged in.
@@ -29,3 +25,11 @@ Google LLC; Microsoft Corporation; self-hosted Plausible under our control.
 
 ## Changes
 We will post updates here; material changes will be highlighted in-site.
+
+## Cookie/storage table
+- **better-auth (session)**: session; essential; authenticate and keep you logged in.
+- **NEXT_LOCALE / theme preference**: up to 1 year; essential; remember language/theme.
+- **CSRF token**: session; essential; protect against CSRF.
+- **_ga, _ga\_*** (Google Analytics): up to 14 months; analytics; visits/events.
+- **CLID, ANONCHK, MUID** (Microsoft Clarity): up to 12 months; analytics (heatmaps/session insights).
+- **Plausible**: cookieless in current setup; no first-party IDs stored, minimal aggregate counting.

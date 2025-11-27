@@ -13,24 +13,26 @@ published: true
 
 ## Datos que tratamos
 - **Cuenta**: correo electrónico, nombre opcional, credenciales cifradas, preferencias de idioma/tema.
-- **Uso del servicio**: textos, archivos o URLs que envías para análisis; resultados y puntuaciones; historial guardado 90 días.
-- **Metadatos técnicos**: IP, navegador, eventos de producto (analítica con GA4, Clarity, Plausible).
+- **Uso del servicio**: textos, archivos o URLs que envías para análisis; resultados y puntuaciones; historial que puedes elegir guardar 0, 30 o 90 días (90 días por defecto si no eliges).
+- **Metadatos técnicos**: IP, navegador, eventos de producto (analítica con GA4, Clarity y Plausible autogestionado).
 - **Facturación**: datos mínimos necesarios para procesar pagos vía Creem (no almacenamos tu tarjeta).
 
 ## Finalidades y bases legales
 - Prestar el servicio de detección y mostrar resultados/historial (ejecución de contrato).
-- Seguridad y prevención de abuso (interés legítimo).
-- Métricas y mejora del producto (consentimiento para cookies analíticas; interés legítimo en agregados de Plausible autohospedado).
+- Autenticación y seguridad (interés legítimo).
+- Métricas y mejora del producto: GA4 y Clarity sobre base de consentimiento; Plausible en modo autogestionado/agrupado (interés legítimo).
 - Facturación y soporte (ejecución de contrato).
 
 ## Proveedores y almacenamiento
 - Base de datos: Supabase (PostgreSQL gestionado).
 - Almacenamiento de archivos: Cloudflare R2.
 - Analítica: Google Analytics 4, Microsoft Clarity, Plausible autohospedado.
-- Pagos: Creem (procesa cobros; recibimos identificadores de transacción, no números de tarjeta).
+- Autenticación: Google y GitHub OAuth.
+- Pagos: Creem (recibimos identificadores de transacción, no números de tarjeta).
+- Email/transaccional: Resend (si enviamos correos de soporte o verificación).
 
 ## Retención
-- Historial de detecciones: 90 días.
+- Historial de detecciones: configurable por el usuario (0, 30 o 90 días; 90 por defecto).
 - Registros técnicos: hasta 90 días salvo obligación legal.
 - Datos de cuenta: mientras mantengas la cuenta o hasta que solicites eliminación.
 
@@ -50,3 +52,6 @@ No fijamos un límite específico de edad, pero el servicio se dirige a quienes 
 
 ## Cambios
 Publicaremos actualizaciones aquí. Si el cambio es importante, avisaremos en el sitio o por email (si procede).
+
+## Marco de privacidad de EE. UU.
+No realizamos venta ni “compartición” de datos personales según CPRA. Actualmente entendemos que no alcanzamos los umbrales de aplicación de esa norma; si en el futuro aplicara, habilitaremos mecanismos de “Do Not Sell/Share” y honraremos señales de preferencia global (GPC).

@@ -12,18 +12,21 @@ Detector de IA (individually operated). Email: support@detectordeia.pro
 
 ## Data we process
 - **Account**: email, optional name, hashed credentials, language/theme prefs.
-- **Service use**: texts/files/URLs you submit, scores/results, history kept 90 days.
-- **Technical**: IP, user agent, product events (GA4, Clarity, Plausible).
-- **Billing**: minimal data to process payments via Creem (no card storage by us).
+- **Service use**: texts/files/URLs you submit, scores/results; history you can choose to keep 0, 30 or 90 days (90 by default if you don’t choose).
+- **Technical**: IP, user agent, product events (GA4, Clarity, self-hosted Plausible).
+- **Billing**: minimal data to process payments via Creem (we don’t store card numbers).
 
 ## Purposes & legal bases
-Service delivery, security, product metrics (consent for analytics cookies), billing and support.
+- Service delivery and showing history (contract).
+- Authentication & security (legitimate interest).
+- Product metrics and improvement: GA4 and Clarity based on consent; Plausible aggregated/self-hosted (legitimate interest).
+- Billing and support (contract).
 
 ## Processors & storage
-Supabase (Postgres), Cloudflare R2 (files), GA4, Clarity, self-hosted Plausible, Creem for payments.
+Supabase (Postgres), Cloudflare R2 (files), GA4, Clarity, self-hosted Plausible, Google/GitHub OAuth, Creem for payments, Resend for transactional/support email.
 
 ## Retention
-History 90 days; logs up to 90 days; account data until deletion.
+History configurable by you: 0 / 30 / 90 days (90 default). Technical logs up to 90 days. Account data until deletion.
 
 ## We do NOT
 Sell data; train models with your content; share beyond listed providers.
@@ -35,7 +38,10 @@ Access, rectify, erase, object, port. Email support@detectordeia.pro. EU/EEA use
 Data may be processed in providers' locations (e.g., US); standard safeguards apply where required.
 
 ## Minors
-No specific age gate; service intended for users able to contract. Guardians may request deletion for minors.
+No specific age gate, but intended for users able to contract. Guardians may request deletion for minors.
 
 ## Changes
 We will update this page; material changes will be announced in-site.
+
+## U.S. state privacy (CCPA/CPRA)
+We do not “sell” or “share” personal data. Based on current scale we don’t meet CPRA applicability thresholds; if that changes we will provide a “Do Not Sell/Share” mechanism and honor global privacy signals (GPC).
