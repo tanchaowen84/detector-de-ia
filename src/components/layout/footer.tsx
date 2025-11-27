@@ -2,15 +2,30 @@
 
 import Container from '@/components/layout/container';
 import { Logo } from '@/components/layout/logo';
+import { Button } from '@/components/ui/button';
 import { getFooterLinks } from '@/config/footer-config';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
+import { CopyIcon } from 'lucide-react';
 import type React from 'react';
+import { useState } from 'react';
 
 export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
   const t = useTranslations();
   const footerLinks = getFooterLinks();
+  const supportEmail = 'support@detectordeia.pro';
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(supportEmail);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   return (
     <footer className={cn('border-t', className)}>
@@ -30,6 +45,22 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               <p className="text-muted-foreground text-base py-2 md:pr-12">
                 {t('Marketing.footer.tagline')}
               </p>
+
+              {/* contact email (copyable) */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground break-all">
+                  {supportEmail}
+                </span>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleCopy}
+                  className="h-8"
+                >
+                  <CopyIcon className="size-4" />
+                  {copied ? 'Copiado' : 'Copiar'}
+                </Button>
+              </div>
 
               {/* social links intentionally removed */}
             </div>
