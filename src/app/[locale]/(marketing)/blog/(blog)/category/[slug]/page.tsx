@@ -1,6 +1,8 @@
 import BlogGridWithPagination from '@/components/blog/blog-grid-with-pagination';
+import { websiteConfig } from '@/config/website';
 import { LOCALES } from '@/i18n/routing';
 import { getPaginatedBlogPosts } from '@/lib/blog/data';
+import { ensureBlogEnabled } from '@/lib/blog/guard';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
 import { allCategories } from 'content-collections';
@@ -11,6 +13,9 @@ import { notFound } from 'next/navigation';
 // Generate all static params for SSG (locale + category)
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
+  if (!websiteConfig.features.enableBlogPage) {
+    return params;
+  }
   for (const locale of LOCALES) {
     const localeCategories = allCategories.filter(
       (category) => category.locale === locale
@@ -25,6 +30,9 @@ export function generateStaticParams() {
 // Generate metadata for each static category page (locale + category)
 export async function generateMetadata({ params }: BlogCategoryPageProps) {
   const { locale, slug } = await params;
+  if (!websiteConfig.features.enableBlogPage) {
+    return;
+  }
   const category = allCategories.find(
     (category) => category.locale === locale && category.slug === slug
   );
@@ -51,6 +59,7 @@ export default async function BlogCategoryPage({
   params,
 }: BlogCategoryPageProps) {
   const { locale, slug } = await params;
+  ensureBlogEnabled();
   const category = allCategories.find(
     (category) => category.locale === locale && category.slug === slug
   );

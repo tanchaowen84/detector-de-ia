@@ -39,12 +39,15 @@ export function getNavbarLinks(): NestedMenuItem[] {
       href: Routes.Pricing,
       external: false,
     },
-    {
+  ];
+
+  if (websiteConfig.features.enableBlogPage) {
+    links.push({
       title: t('blog.title'),
       href: Routes.Blog,
       external: false,
-    },
-  ];
+    });
+  }
 
   // 条件性添加docs链接
   if (websiteConfig.features.enableDocsPage) {

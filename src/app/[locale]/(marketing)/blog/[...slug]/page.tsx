@@ -7,6 +7,7 @@ import { websiteConfig } from '@/config/website';
 import { LocaleLink } from '@/i18n/navigation';
 import { LOCALES } from '@/i18n/routing';
 import { getTableOfContents } from '@/lib/blog/toc';
+import { ensureBlogEnabled } from '@/lib/blog/guard';
 import { formatDate } from '@/lib/formatter';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
@@ -70,6 +71,9 @@ async function getRelatedPosts(post: Post) {
 }
 
 export function generateStaticParams() {
+  if (!websiteConfig.features.enableBlogPage) {
+    return [];
+  }
   return LOCALES.flatMap((locale) => {
     const posts = allPosts.filter((post) => post.locale === locale);
     return posts.map((post) => ({
@@ -83,6 +87,9 @@ export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata | undefined> {
   const { locale, slug } = await params;
+  if (!websiteConfig.features.enableBlogPage) {
+    return;
+  }
   const post = await getBlogPostFromParams(locale, slug.join('/'));
   if (!post) {
     notFound();
@@ -107,6 +114,7 @@ interface BlogPostPageProps {
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
   const { locale, slug } = await props.params;
+  ensureBlogEnabled();
   const post = await getBlogPostFromParams(locale, slug.join('/'));
   if (!post) {
     notFound();

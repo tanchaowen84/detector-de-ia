@@ -73,6 +73,7 @@ export interface FeaturesConfig {
   enableAIPages?: boolean;            // Whether to enable the AI pages
   enableMagicUIPage?: boolean;        // Whether to enable the MagicUI showcase page
   enableBlocksPages?: boolean;        // Whether to enable the blocks pages
+  enableBlogPage?: boolean;           // Whether to expose blog routes and links
 }
 
 /**

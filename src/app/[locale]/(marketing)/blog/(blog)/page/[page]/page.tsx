@@ -2,6 +2,7 @@ import BlogGridWithPagination from '@/components/blog/blog-grid-with-pagination'
 import { websiteConfig } from '@/config/website';
 import { LOCALES } from '@/i18n/routing';
 import { getPaginatedBlogPosts } from '@/lib/blog/data';
+import { ensureBlogEnabled } from '@/lib/blog/guard';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
 import { allPosts } from 'content-collections';
@@ -11,6 +12,9 @@ import { getTranslations } from 'next-intl/server';
 export function generateStaticParams() {
   const paginationSize = websiteConfig.blog.paginationSize;
   const params: { locale: string; page: string }[] = [];
+  if (!websiteConfig.features.enableBlogPage) {
+    return params;
+  }
   for (const locale of LOCALES) {
     const publishedPosts = allPosts.filter(
       (post) => post.published && post.locale === locale
@@ -31,6 +35,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogListPageProps) {
   const { locale, page } = await params;
+  if (!websiteConfig.features.enableBlogPage) {
+    return;
+  }
   const t = await getTranslations({ locale, namespace: 'Metadata' });
   const pt = await getTranslations({ locale, namespace: 'BlogPage' });
   const canonicalPath = `/blog/page/${page}`;
@@ -49,6 +56,7 @@ interface BlogListPageProps {
 }
 
 export default async function BlogListPage({ params }: BlogListPageProps) {
+  ensureBlogEnabled();
   const { page, locale } = await params;
   const currentPage = Number(page);
   const { paginatedPosts, totalPages } = getPaginatedBlogPosts({

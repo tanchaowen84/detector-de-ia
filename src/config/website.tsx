@@ -41,6 +41,8 @@ export const websiteConfig: WebsiteConfig = {
     enableAIPages: false,
     enableMagicUIPage: false,
     enableBlocksPages: false,
+    // Blog stays closed by default; set NEXT_PUBLIC_ENABLE_BLOG_PAGE="true" to reopen.
+    enableBlogPage: false,
   },
   routes: {
     defaultLoginRedirect: '/dashboard',
@@ -165,7 +167,8 @@ export const websiteConfig: WebsiteConfig = {
           },
           {
             type: PaymentTypes.SUBSCRIPTION,
-            priceId: process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID_HOBBY_YEARLY ?? '',
+            priceId:
+              process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID_HOBBY_YEARLY ?? '',
             amount: 8400,
             currency: 'USD',
             interval: PlanIntervals.YEAR,

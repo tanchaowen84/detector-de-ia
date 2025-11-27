@@ -1,5 +1,6 @@
 import { BlogCategoryFilter } from '@/components/blog/blog-category-filter';
 import Container from '@/components/layout/container';
+import { ensureBlogEnabled } from '@/lib/blog/guard';
 import type { NextPageProps } from '@/types/next-page-props';
 import { allCategories } from 'content-collections';
 import { getTranslations } from 'next-intl/server';
@@ -11,6 +12,7 @@ export default async function BlogListLayout({
   children,
   params,
 }: BlogListLayoutProps) {
+  ensureBlogEnabled();
   const resolvedParams = await params;
   const { locale } = resolvedParams;
   const t = await getTranslations('BlogPage');
