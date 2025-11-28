@@ -62,6 +62,33 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                 </Button>
               </div>
 
+              {/* partner badges */}
+              <div className="flex flex-wrap items-center gap-3 pt-3">
+                <a
+                  href="https://twelve.tools"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://twelve.tools/badge0-light.svg"
+                    alt="Featured on Twelve Tools"
+                    width={200}
+                    height={54}
+                  />
+                </a>
+                <a
+                  href="https://turbo0.com/item/veriia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://img.turbo0.com/badge-listed-light.svg"
+                    alt="Listed on Turbo0"
+                    style={{ height: 54, width: 'auto' }}
+                  />
+                </a>
+              </div>
+
               {/* social links intentionally removed */}
             </div>
           </div>
