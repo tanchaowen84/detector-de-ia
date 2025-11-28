@@ -62,33 +62,6 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                 </Button>
               </div>
 
-              {/* partner badges */}
-              <div className="flex flex-wrap items-center gap-3 pt-3">
-                <a
-                  href="https://twelve.tools"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src="https://twelve.tools/badge0-light.svg"
-                    alt="Featured on Twelve Tools"
-                    width={200}
-                    height={54}
-                  />
-                </a>
-                <a
-                  href="https://turbo0.com/item/veriia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://img.turbo0.com/badge-listed-light.svg"
-                    alt="Listed on Turbo0"
-                    style={{ height: 54, width: 'auto' }}
-                  />
-                </a>
-              </div>
-
               {/* social links intentionally removed */}
             </div>
           </div>
@@ -120,6 +93,47 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               </ul>
             </div>
           ))}
+
+          {/* partner badges column */}
+          <div className="col-span-full md:col-span-2 flex flex-col items-start gap-4">
+            <span className="text-sm font-semibold uppercase">Badges</span>
+            <div className="flex flex-col gap-3 max-w-xs">
+              <a
+                href="https://twelve.tools"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://twelve.tools/badge0-light.svg"
+                  alt="Featured on Twelve Tools"
+                  width={200}
+                  height={54}
+                />
+              </a>
+              <a
+                href="https://turbo0.com/item/veriia"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://img.turbo0.com/badge-listed-light.svg"
+                  alt="Listed on Turbo0"
+                  style={{ height: 54, width: 'auto' }}
+                />
+              </a>
+              <a
+                href="https://theresanaiforthat.com/ai/veriia/?ref=featured&v=4681111"
+                target="_blank"
+                rel="nofollow"
+              >
+                <img
+                  src="https://media.theresanaiforthat.com/featured-on-taaft.png?width=600"
+                  alt="Featured on There's An AI For That"
+                  width={300}
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </Container>
 
