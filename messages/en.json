@@ -296,7 +296,8 @@
       "placeholder": "Type or paste your text here...",
       "clear": "Clear",
       "copied": "Copied",
-      "copy": "Copy"
+      "copy": "Copy",
+      "copyError": "Couldn't copy"
     },
     "stats": {
       "title": "Metrics",
@@ -833,6 +834,14 @@
         "plagiarismSourceWords": "{value} matching words",
         "plagiarismSourceIdentical": "{value} identical words",
         "plagiarismSourceSimilar": "{value} similar words"
+      },
+      "deleteDialog": {
+        "title": "Delete detection",
+        "description": "This action cannot be undone. Do you want to delete this detection?",
+        "cancel": "Cancel",
+        "confirm": "Delete",
+        "success": "Deleted",
+        "error": "Failed to delete"
       }
     },
     "admin": {

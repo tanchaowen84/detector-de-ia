@@ -47,7 +47,7 @@ export function WordCounter() {
       await navigator.clipboard.writeText(text);
       toast.success(t('hero.copied'));
     } catch (error) {
-      toast.error('No se pudo copiar');
+      toast.error(t('hero.copyError'));
     }
   };
 

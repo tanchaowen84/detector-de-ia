@@ -49,11 +49,11 @@
       "notAvailable": "Not Available",
       "daysTrial": "{days}-day free trial"
     },
-    "CheckoutButton": {
-      "loading": "Loading...",
-      "checkoutFailed": "Failed to open checkout page"
-    }
-  },
+      "CheckoutButton": {
+        "loading": "Loading...",
+        "checkoutFailed": "No se pudo abrir la página de pago"
+      }
+    },
   "PlagiarismPage": {
     "metadata": {
       "title": "Detector de plagio online rápido y preciso | VeriIA",
@@ -296,7 +296,8 @@
       "placeholder": "Escribe o pega tu texto aquí...",
       "clear": "Limpiar",
       "copied": "Copiado",
-      "copy": "Copiar"
+      "copy": "Copiar",
+      "copyError": "No se pudo copiar"
     },
     "stats": {
       "title": "Métricas",
@@ -833,62 +834,70 @@
         "plagiarismSourceWords": "{value} palabras coincidentes",
         "plagiarismSourceIdentical": "{value} palabras idénticas",
         "plagiarismSourceSimilar": "{value} palabras similares"
+      },
+      "deleteDialog": {
+        "title": "Eliminar detección",
+        "description": "Esta acción no se puede deshacer. ¿Quieres eliminar esta detección?",
+        "cancel": "Cancelar",
+        "confirm": "Eliminar",
+        "success": "Eliminado",
+        "error": "No se pudo eliminar"
       }
     },
     "admin": {
       "title": "Admin",
       "users": {
-        "title": "Users",
-        "fakeData": "Note: Faked data for demonstration, some features are disabled",
-        "error": "Failed to get users",
-        "search": "Search users...",
+        "title": "Usuarios",
+        "fakeData": "Nota: Datos de demostración, algunas funciones están desactivadas",
+        "error": "No se pudieron obtener los usuarios",
+        "search": "Buscar usuarios...",
         "columns": {
-          "columns": "Columns",
-          "name": "Name",
+          "columns": "Columnas",
+          "name": "Nombre",
           "email": "Email",
-          "role": "Role",
-          "createdAt": "Created At",
+          "role": "Rol",
+          "createdAt": "Creado",
           "customerId": "Customer ID",
-          "status": "Status",
-          "banReason": "Ban Reason",
-          "banExpires": "Ban Expires"
+          "status": "Estado",
+          "banReason": "Motivo del bloqueo",
+          "banExpires": "Fin del bloqueo"
         },
-        "noResults": "No results",
-        "firstPage": "First Page",
-        "lastPage": "Last Page",
-        "nextPage": "Next Page",
-        "previousPage": "Previous Page",
-        "rowsPerPage": "Rows per page",
-        "page": "Page",
-        "loading": "Loading...",
+        "noResults": "Sin resultados",
+        "firstPage": "Primera página",
+        "lastPage": "Última página",
+        "nextPage": "Siguiente página",
+        "previousPage": "Página anterior",
+        "rowsPerPage": "Filas por página",
+        "page": "Página",
+        "loading": "Cargando...",
         "admin": "Admin",
         "user": "User",
         "email": {
-          "verified": "Email Verified",
-          "unverified": "Email Unverified"
+          "verified": "Email verificado",
+          "unverified": "Email sin verificar"
         },
-        "emailCopied": "Email copied to clipboard",
-        "banned": "Banned",
-        "active": "Active",
-        "joined": "Joined",
-        "updated": "Updated",
+        "emailCopied": "Email copiado",
+        "banned": "Bloqueado",
+        "active": "Activo",
+        "joined": "Alta",
+        "updated": "Actualizado",
         "ban": {
-          "reason": "Ban Reason",
-          "reasonPlaceholder": "Enter the reason for banning this user",
-          "defaultReason": "Spamming",
-          "never": "Never",
-          "expires": "Ban Expires",
-          "selectDate": "Select Date",
-          "button": "Ban User",
-          "success": "User has been banned",
-          "error": "Failed to ban user"
+          "reason": "Motivo del bloqueo",
+          "reasonPlaceholder": "Escribe el motivo del bloqueo",
+          "defaultReason": "Spam",
+          "never": "Nunca",
+          "expires": "Fin del bloqueo",
+          "selectDate": "Selecciona fecha",
+          "button": "Bloquear usuario",
+          "success": "Usuario bloqueado",
+          "error": "No se pudo bloquear al usuario"
         },
         "unban": {
-          "button": "Unban User",
-          "success": "User has been unbanned",
-          "error": "Failed to unban user"
+          "button": "Desbloquear usuario",
+          "success": "Usuario desbloqueado",
+          "error": "No se pudo desbloquear al usuario"
         },
-        "close": "Close"
+        "close": "Cerrar"
       }
     },
     "settings": {
@@ -1062,15 +1071,15 @@
   },
   "Newsletter": {
     "title": "Newsletter",
-    "subtitle": "Join the community",
-    "description": "Subscribe to our newsletter for the latest news and updates",
+    "subtitle": "Únete a la comunidad",
+    "description": "Suscríbete y recibe noticias y actualizaciones",
     "form": {
-      "email": "Email",
-      "subscribe": "Subscribe",
-      "subscribing": "Subscribing...",
-      "success": "Subscribed successfully",
-      "fail": "Failed to subscribe",
-      "emailValidation": "Please enter a valid email address"
+      "email": "Correo electrónico",
+      "subscribe": "Suscribirme",
+      "subscribing": "Enviando...",
+      "success": "Suscripción realizada",
+      "fail": "No se pudo suscribir",
+      "emailValidation": "Ingresa un correo válido"
     }
   },
   "AuthPage": {

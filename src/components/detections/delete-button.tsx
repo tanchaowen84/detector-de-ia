@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { deleteDetectionAction } from '@/actions/delete-detection';
 import { useTransition, useState } from 'react';
 import { toast } from 'sonner';
+import { useTranslations } from 'next-intl';
 import {
   Dialog,
   DialogContent,
@@ -21,6 +22,7 @@ interface DeleteButtonProps {
 export function DeleteButton({ id, label, className }: DeleteButtonProps) {
   const [isPending, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
+  const t = useTranslations('Dashboard.history.deleteDialog');
 
   return (
     <>
@@ -41,10 +43,8 @@ export function DeleteButton({ id, label, className }: DeleteButtonProps) {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Delete record</DialogTitle>
-            <DialogDescription>
-              This action cannot be undone. Do you want to delete this detection?
-            </DialogDescription>
+            <DialogTitle>{t('title')}</DialogTitle>
+            <DialogDescription>{t('description')}</DialogDescription>
           </DialogHeader>
           <div className="flex justify-end gap-2">
             <Button
@@ -52,7 +52,7 @@ export function DeleteButton({ id, label, className }: DeleteButtonProps) {
               onClick={() => setOpen(false)}
               disabled={isPending}
             >
-              Cancel
+              {t('cancel')}
             </Button>
             <Button
               variant="destructive"
@@ -62,20 +62,20 @@ export function DeleteButton({ id, label, className }: DeleteButtonProps) {
                   try {
                     const res = await deleteDetectionAction({ id });
                     if (!res?.data?.success) {
-                      toast.error(res?.data?.error ?? 'Failed to delete');
+                      toast.error(res?.data?.error ?? t('error'));
                     } else {
-                      toast.success('Deleted');
+                      toast.success(t('success'));
                     }
                   } catch (error) {
                     console.error('delete detection client error', error);
-                    toast.error('Failed to delete');
+                    toast.error(t('error'));
                   } finally {
                     setOpen(false);
                   }
                 });
               }}
             >
-              Delete
+              {t('confirm')}
             </Button>
           </div>
         </DialogContent>
