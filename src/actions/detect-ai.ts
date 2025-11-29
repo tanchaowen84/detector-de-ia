@@ -50,6 +50,7 @@ export const detectAIContentAction = actionClient
   .action(async ({ parsedInput }) => {
     const session = await getSession();
     const db = await getDb();
+    let detectionId: string | null = null;
 
     // Lazy reset and current credits
     const planContext = await loadUserPlanContext(session);
@@ -195,8 +196,10 @@ export const detectAIContentAction = actionClient
         const detectionLength = result.length ?? parsedInput.text?.length ?? null;
 
         try {
+          detectionId = randomUUID();
+
           await db.insert(detections).values({
-            id: randomUUID(),
+            id: detectionId,
             userId: session.user.id,
             sourceType: sourceTypeComputed,
             inputType: result.input ?? sourceTypeComputed,
@@ -224,6 +227,7 @@ export const detectAIContentAction = actionClient
         creditsUsed: requiredCredits,
         creditsLeft: availableCredits,
         plan: activePlan.id,
+        detectionId,
       };
     } catch (error) {
       console.error('detectAIContentAction error:', error);

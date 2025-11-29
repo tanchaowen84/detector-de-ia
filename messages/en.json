@@ -1349,6 +1349,11 @@
         "realTime": "Real time",
         "confidence": "Estimated confidence",
         "secureText": "Your text is secure…",
+        "nextSteps": "What do you want to do next?",
+        "loginPrompt": "Log in to keep your report and unlock more credits.",
+        "viewReport": "View detailed report",
+        "loginToView": "Log in to view report",
+        "checkPlagiarism": "Check plagiarism",
         "trustIndicators": {
           "encrypted": "Encrypted",
           "notShared": "Never shared",

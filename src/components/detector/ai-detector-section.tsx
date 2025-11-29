@@ -52,6 +52,7 @@ import {
 } from 'lucide-react';
 import type { CSSProperties, ChangeEvent, UIEvent } from 'react';
 import { useMemo, useRef, useState, useTransition } from 'react';
+import { usePathname } from 'next/navigation';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
 import { uploadFileFromBrowser } from '@/storage';
@@ -237,8 +238,10 @@ export function AiDetectorSection() {
   const t = useTranslations('HomePage.aiDetector');
   const session = useSession();
   const locale = useLocale();
+  const pathname = usePathname();
   const [text, setText] = useState('');
   const [result, setResult] = useState<DetectAIContentResult | null>(null);
+  const [detectionId, setDetectionId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
   const [scrollState, setScrollState] = useState({ top: 0, left: 0 });
@@ -275,6 +278,7 @@ export function AiDetectorSection() {
       }
       setText(clipboardText);
       setResult(null);
+      setDetectionId(null);
       setError(null);
       setSelectedSample(null);
       setUploadedFile(null);
@@ -292,6 +296,7 @@ export function AiDetectorSection() {
     if (preset) {
       setText(t(preset.textKey));
       setResult(null);
+      setDetectionId(null);
       setError(null);
       setUploadedFile(null);
       setWebsiteUrl(null);
@@ -319,6 +324,7 @@ export function AiDetectorSection() {
       setWebsiteInput('');
       setText('');
       setResult(null);
+      setDetectionId(null);
       toast.success(t('fileReady'));
     } catch (uploadError) {
       console.error('File upload failed:', uploadError);
@@ -351,6 +357,7 @@ export function AiDetectorSection() {
       setUploadedFile(null);
       setText('');
       setResult(null);
+      setDetectionId(null);
       toast.success(t('websiteReady'));
       setIsWebsitePopoverOpen(false);
     } catch (urlError) {
@@ -362,6 +369,7 @@ export function AiDetectorSection() {
   const clearWebsite = () => {
     setWebsiteUrl(null);
     setWebsiteInput('');
+    setDetectionId(null);
   };
 
   const handleDetect = () => {
@@ -387,6 +395,7 @@ export function AiDetectorSection() {
           const message =
             response?.data?.error ?? t('errors.analysisFailed');
           setError(message);
+          setDetectionId(null);
           toast.error(message);
 
           const errorCode = response?.data?.errorCode;
@@ -401,11 +410,13 @@ export function AiDetectorSection() {
         }
 
         setResult(response.data.result ?? null);
+        setDetectionId(response.data.detectionId ?? null);
         toast.success(t('errors.analysisComplete'));
       } catch (err) {
         console.error('AiDetectorSection error:', err);
         const message = t('errors.unexpectedError');
         setError(message);
+        setDetectionId(null);
         toast.error(message);
       }
     });
@@ -416,6 +427,9 @@ export function AiDetectorSection() {
     : null;
   const evaluation =
     typeof aiScore === 'number' ? getEvaluation(aiScore, t as TranslationFunction) : null;
+  const isLoggedIn = !!session?.user;
+  const hasReportLink = isLoggedIn && !!detectionId;
+  const loginHref = `${Routes.Login}?callbackUrl=${encodeURIComponent(pathname ?? '/')}`;
   const highlightedSegments = useMemo(() => {
     if (!result?.sentences?.length) {
       return [{ text, tone: null, key: 'full-text' }];
@@ -743,6 +757,7 @@ export function AiDetectorSection() {
                     setText(event.target.value);
                     if (result) {
                       setResult(null);
+                      setDetectionId(null);
                     }
                     if (error) {
                       setError(null);
@@ -796,6 +811,7 @@ export function AiDetectorSection() {
                     onClick={() => {
                       setText('');
                       setResult(null);
+                      setDetectionId(null);
                       setError(null);
                       setSelectedSample(null);
                       setUploadedFile(null);
@@ -869,27 +885,64 @@ export function AiDetectorSection() {
                 </div>
               </div>
 
-              <div className="space-y-3 text-center">
-                <p className="text-sm font-semibold text-slate-600">
-                  {t('report.secureText')}
-                </p>
-                <div className="space-y-2">
-                  {trustIndicators.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 rounded-2xl bg-[#ede8ff] px-4 py-3 text-sm text-slate-700"
-                    >
-                      <span className="text-emerald-500">✅</span>
-                      <p className="font-semibold">{t(item.labelKey)}</p>
+              <div className="space-y-3">
+                {result ? (
+                  <div className="space-y-3">
+                    <p className="text-sm font-semibold text-slate-600 text-center">
+                      {isLoggedIn ? t('report.nextSteps') : t('report.loginPrompt')}
+                    </p>
+                    <div className="flex flex-col gap-2">
+                      <Button
+                        asChild
+                        disabled={isLoggedIn && !hasReportLink}
+                        className="h-11 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500"
+                      >
+                        <LocaleLink
+                          href={isLoggedIn
+                            ? hasReportLink
+                              ? `/dashboard/detections/${detectionId}`
+                              : Routes.Dashboard
+                            : loginHref}
+                        >
+                          {isLoggedIn ? t('report.viewReport') : t('report.loginToView')}
+                        </LocaleLink>
+                      </Button>
+
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="h-11 rounded-xl border-indigo-200 text-indigo-700 hover:bg-indigo-50"
+                      >
+                        <LocaleLink href={Routes.PlagiarismDetector}>
+                          {t('report.checkPlagiarism')}
+                        </LocaleLink>
+                      </Button>
                     </div>
-                  ))}
-                </div>
-                <p className="text-xs text-slate-400">
-                  {t.rich('report.terms', {
-                    terms: (children) => <span className="underline">{children}</span>,
-                    privacy: (children) => <span className="underline">{children}</span>,
-                  })}
-                </p>
+                  </div>
+                ) : (
+                  <div className="space-y-3 text-center">
+                    <p className="text-sm font-semibold text-slate-600">
+                      {t('report.secureText')}
+                    </p>
+                    <div className="space-y-2">
+                      {trustIndicators.map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-3 rounded-2xl bg-[#ede8ff] px-4 py-3 text-sm text-slate-700"
+                        >
+                          <span className="text-emerald-500">✅</span>
+                          <p className="font-semibold">{t(item.labelKey)}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-slate-400">
+                      {t.rich('report.terms', {
+                        terms: (children) => <span className="underline">{children}</span>,
+                        privacy: (children) => <span className="underline">{children}</span>,
+                      })}
+                    </p>
+                  </div>
+                )}
               </div>
             </CardContent>
           </Card>

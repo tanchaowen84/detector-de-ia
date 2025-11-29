@@ -1349,6 +1349,11 @@
         "realTime": "Tiempo real",
         "confidence": "Confianza estimada",
         "secureText": "Tu texto está seguro…",
+        "nextSteps": "¿Qué quieres hacer ahora?",
+        "loginPrompt": "Inicia sesión para guardar el reporte y obtener más créditos.",
+        "viewReport": "Ver reporte detallado",
+        "loginToView": "Inicia sesión para ver el reporte",
+        "checkPlagiarism": "Detectar plagio",
         "trustIndicators": {
           "encrypted": "Encriptado",
           "notShared": "Nunca compartido",
