@@ -2,7 +2,6 @@ import { ApaGenerator } from '@/components/tools/apa-generator';
 import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
 import Features3Section from '@/components/blocks/features/features3';
 import DetectionProcessSection from '@/components/blocks/detection-process';
-import PricingSection from '@/components/blocks/pricing/pricing';
 import FaqSection from '@/components/blocks/faqs/faqs';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
@@ -69,10 +68,8 @@ export default async function ApaGeneratorPage({ params }: ApaGeneratorPageProps
             },
           ]}
         />
-        <PricingSection />
         <FaqSection i18nNamespace="ApaGeneratorPage.blocks.faq" />
       </div>
     </>
   );
 }
-

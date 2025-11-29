@@ -1732,32 +1732,32 @@
   },
   "ApaGeneratorPage": {
     "metadata": {
-      "title": "Free APA citation generator",
-      "description": "Generate APA 7 references and in-text citations in seconds, free and without credits."
+      "title": "APA Citation Generator – Free APA 7 References",
+      "description": "Use this free APA Citation Generator to create APA 7 references and in-text citations in seconds, with no signup, no limits, and no data stored."
     },
     "hero": {
       "badge": "Free · APA 7th",
-      "title": "APA citation generator",
-      "subtitle": "Enter your source details to get a ready-to-paste APA reference and in-text citation.",
-      "searchPlaceholder": "Paste DOI, ISBN, or URL (we'll auto-fill if possible)",
+      "title": "APA Citation Generator – Free APA 7 Tool",
+      "subtitle": "With this APA Citation Generator you paste a DOI/ISBN/URL or enter the source details and get ready-to-paste APA 7 references and in-text citations.",
+      "searchPlaceholder": "Paste DOI, ISBN or URL (we’ll auto-fill when we can)",
       "searchCta": "Cite",
       "styleLabel": "Citation style",
-      "manualLink": "Manual citation",
-      "manualLabel": "Or fill manually"
+      "manualLink": "Cite manually",
+      "manualLabel": "Or fill in manually"
     },
     "form": {
-      "title": "Fill in the details",
-      "description": "No credits used and nothing is stored.",
+      "title": "Fill in your source details",
+      "description": "This APA Citation Generator is free and requires no sign up. We don’t store your content or use up any credits.",
       "sourceType": "Source type",
       "types": {
         "book": "Book",
         "journal": "Journal article",
-        "website": "Website"
+        "website": "Web page"
       },
       "fields": {
-        "authors": "Autores",
+        "authors": "Authors",
         "year": "Year",
-        "title": "Título",
+        "title": "Title",
         "publisher": "Publisher",
         "journal": "Journal",
         "volume": "Volume",
@@ -1769,220 +1769,228 @@
         "accessDate": "Access date"
       },
       "placeholders": {
-        "authors": "Last, First; Last, First",
+        "authors": "Last name, First name; Last name, First name",
         "year": "2024",
         "title": "Title of the work",
         "publisher": "Publisher",
         "journal": "Journal name",
         "volume": "12",
         "issue": "3",
-        "pages": "123-145",
+        "pages": "123–145",
         "doi": "10.0000/abcd.1234",
         "url": "https://example.com/article",
         "site": "Site name",
         "accessDate": "March 12, 2024"
       },
       "hints": {
-        "authors": "Separate authors with new lines or semicolons. Up to 20 before et al."
+        "authors": "Separate authors with line breaks or semicolons. Max. 20 before et al."
       },
       "clear": "Clear",
       "generate": "Generate citation",
       "copied": "{target} copied",
-      "copyError": "Could not copy",
-      "emptyWarning": "Add at least a title or author to generate.",
+      "copyError": "Couldn’t copy",
+      "emptyWarning": "Add at least a title or one author to generate.",
       "generated": "Citation generated"
     },
     "result": {
       "title": "APA reference",
-      "subtitle": "Ready to paste in your bibliography",
+      "subtitle": "Ready to paste into your reference list",
       "inText": "In-text citation",
       "copyReference": "Copy reference",
       "copyInText": "Copy in-text citation",
-      "empty": "Your reference will appear here"
+      "empty": "Your APA reference will appear here"
     },
     "cta": {
       "plagiarism": "Check plagiarism",
-      "detector": "AI detector",
+      "detector": "Detect AI",
       "compare": "Compare texts"
     },
     "blocks": {
       "howItWorks": {
-        "title": "How it works",
-        "subtitle": "Generate references and in-text citations in three steps.",
+        "title": "How the APA Citation Generator works",
+        "subtitle": "Create APA references and in-text citations in three steps.",
         "steps": {
           "step-1": {
             "label": "Step 1",
-            "title": "Choose source type",
-            "description": "Pick book, journal article, or website to see only required fields.",
+            "title": "Choose your source type",
+            "description": "Start by choosing whether you want to cite a book, a journal article or a web page so the APA Citation Generator only shows the fields you need.",
             "items": [
               {
                 "title": "Book / Article / Web",
-                "description": ""
+                "description": "Select the source type so the form adapts and hides fields that are not relevant."
               },
               {
-                "title": "Minimal fields",
-                "description": ""
+                "title": "Minimum required fields",
+                "description": "We mark the basic fields you need to fill in to generate a valid APA citation."
               },
               {
-                "title": "APA 7",
-                "description": ""
+                "title": "APA 7 format",
+                "description": "The reference is built following the 7th edition of the APA style."
               }
             ],
             "imageAlt": "Step 1"
           },
           "step-2": {
             "label": "Step 2",
-            "title": "Fill the details",
-            "description": "Authors, year, title, and optional URL/DOI.",
+            "title": "Complete the details",
+            "description": "Type authors, year and title, then add optional details like pages, journal, publisher, DOI or URL. If you pasted a DOI, ISBN or URL and data is available, some fields can be filled in automatically.",
             "items": [
               {
-                "title": "Autores con et al.",
-                "description": ""
+                "title": "Multiple authors and et al.",
+                "description": "Add several authors separated by line breaks or semicolons; the APA Citation Generator applies et al. when needed."
               },
               {
-                "title": "Año o s.f.",
-                "description": ""
+                "title": "Year or no date",
+                "description": "Enter the publication year or use “n.d.” for sources with no date."
               },
               {
-                "title": "Título en sentence case",
-                "description": ""
+                "title": "Sentence case titles",
+                "description": "Titles are formatted towards APA 7 sentence case for books, articles and web pages."
               }
             ],
             "imageAlt": "Step 2"
           },
           "step-3": {
             "label": "Step 3",
-            "title": "Copy your citation",
-            "description": "Get reference and in-text citation ready to paste.",
+            "title": "Generate and copy",
+            "description": "Click “Generate citation” to see both the full APA reference and the in-text citation, then copy each one with a single click.",
             "items": [
               {
-                "title": "Referencia",
-                "description": ""
+                "title": "Reference list entry",
+                "description": "See the complete APA reference ready for your reference list or bibliography."
               },
               {
-                "title": "Cita en texto",
-                "description": ""
+                "title": "In-text citation",
+                "description": "Get the in-text citation in author–year format to paste directly into your document."
               },
               {
-                "title": "Copy button",
-                "description": ""
+                "title": "Copy buttons",
+                "description": "Use the copy buttons to grab the reference or in-text citation without losing formatting."
               }
             ],
             "imageAlt": "Step 3"
           }
         },
-        "description": ""
+        "description": "The APA Citation Generator brings manual entry and DOI/ISBN/URL lookup into one place so you don’t have to worry about APA formatting every time you cite a source."
       },
       "useCases": {
-        "title": "Use cases",
-        "subtitle": "Ready for your academic work.",
-        "description": "",
+        "title": "Use cases for the APA Citation Generator",
+        "subtitle": "Built for real academic work.",
+        "description": "Use our APA Citation Generator whenever you need consistent APA 7 citations and references across your academic writing.",
         "items": {
           "item-1": {
-            "title": "Theses and dissertations",
-            "description": "Keep your bibliography consistent across the manuscript."
+            "title": "Theses, dissertations and capstone projects",
+            "description": "Manage long reference lists with dozens of sources and keep the APA format consistent from chapter to chapter using the APA Citation Generator."
           },
           "item-2": {
-            "title": "Journal articles",
-            "description": "Generate quick references for manuscripts and reviews."
+            "title": "Journal articles and manuscripts",
+            "description": "Create APA references for journal articles with volume, issue, pages and DOI ready to submit, directly from the APA Citation Generator."
           },
           "item-3": {
-            "title": "University papers",
-            "description": "Submit essays with formatted citations."
+            "title": "Essays and course assignments",
+            "description": "Quickly add APA in-text citations and references to short reports, essays and class projects without memorising the style guide."
           },
           "item-4": {
-            "title": "Blogs and reports",
-            "description": "Cite web sources with access dates."
+            "title": "Teaching and course materials",
+            "description": "As a teacher or tutor, prepare reading lists, handouts and lecture slides with clean APA citations generated in the APA Citation Generator."
           },
           "item-5": {
-            "title": "Presentations",
-            "description": "Add APA references to slides."
+            "title": "Academic presentations and posters",
+            "description": "Add clear APA references to slides and posters by generating them first in the APA Citation Generator and then pasting them into your design."
           },
           "item-6": {
-            "title": "Reading lists",
-            "description": "Share clean references with your team."
+            "title": "Group projects and shared reading lists",
+            "description": "Coordinate group work or research projects so everyone uses the same APA Citation Generator and follows a consistent APA style."
           }
         }
       },
       "related": {
         "items": {
           "plagiarism": {
-            "title": "Plagiarism detector",
-            "description": "Check overlaps before submitting."
+            "title": "Plagiarism checker",
+            "description": "Scan your academic writing for similarity before you submit."
           },
           "detector": {
-            "title": "AI detector",
-            "description": "Estimate AI likelihood in seconds."
+            "title": "AI content detector",
+            "description": "Check whether a text likely contains AI-generated content and decide if you need to edit it."
           },
           "compare": {
-            "title": "Compare texts",
-            "description": "Spot differences between drafts."
+            "title": "Text compare",
+            "description": "Compare two versions of an academic text and see exactly what changed."
           }
         },
-        "title": "More tools",
-        "subtitle": "Jump to other checks",
-        "description": "Continue with complementary checks.",
+        "title": "More academic tools",
+        "subtitle": "Complete your workflow with other tools",
+        "description": "Alongside the APA Citation Generator, this site offers more academic tools you can use: a plagiarism checker, an AI detector and a text compare tool to review your work before submission.",
         "tryNow": "Try now",
         "tools": {
           "plagiarism": {
-            "title": "Plagiarism detector",
-            "description": "Check overlaps before submitting."
+            "title": "Plagiarism checker",
+            "description": "Check similarity before you submit."
           },
           "detector": {
-            "title": "AI detector",
-            "description": "Estimate AI likelihood in seconds."
+            "title": "AI content detector",
+            "description": "Estimate AI probability in seconds."
           },
           "compare": {
-            "title": "Compare texts",
-            "description": "Spot differences between drafts."
+            "title": "Text compare",
+            "description": "Spot differences between versions."
           }
         }
       },
       "faq": {
-        "title": "FAQ",
-        "subtitle": "APA 7 made simple.",
+        "title": "Frequently asked questions about the APA Citation Generator",
+        "subtitle": "APA 7 explained in plain language.",
         "items": {
           "item-1": {
-            "question": "Which APA version?",
-            "answer": "We follow APA 7th edition."
+            "question": "What is this APA Citation Generator and what does it do?",
+            "answer": "The APA Citation Generator is a tool that helps you create APA 7 references and in-text citations without memorising the rules. You paste a DOI/ISBN/URL or type in the basic source details, and the APA Citation Generator builds the full reference and in-text citation for you."
           },
           "item-2": {
-            "question": "Multiple authors?",
-            "answer": "Write each author on a new line or separate with ;. Up to 20 before et al."
+            "question": "Is the APA Citation Generator free? Do I need an account?",
+            "answer": "Yes. This APA Citation Generator is completely free to use. You don’t need to register, log in or add any payment details—just open the page, enter your sources and generate as many APA citations as you need."
           },
           "item-3": {
-            "question": "No date?",
-            "answer": "We use (n.d.) and keep the same in-text format."
+            "question": "Which version of APA style does the tool use?",
+            "answer": "The APA Citation Generator uses the 7th edition of the APA Publication Manual, which is the current standard for most universities and journals. If your institution requires small adjustments, you can use the generated APA citation as a starting point and tweak it."
           },
           "item-4": {
-            "question": "Can I cite a website?",
-            "answer": "Yes, include the URL and optional access date."
+            "question": "What types of sources can I cite with the APA Citation Generator?",
+            "answer": "Right now you can cite books, journal articles and web pages or online articles. These are the source types most students and researchers need, and the APA Citation Generator focuses on getting these right."
           },
           "item-5": {
-            "question": "Do you store my data?",
-            "answer": "We do not store your input and no credits are used."
+            "question": "Does the APA Citation Generator create both references and in-text citations?",
+            "answer": "Yes. For every source you add, the APA Citation Generator shows a full reference list entry and an in-text citation in author–year format, so you don’t have to figure out the pattern yourself."
           },
           "item-6": {
-            "question": "One-click copy?",
-            "answer": "Yes, copy reference and in-text separately."
+            "question": "How accurate are the citations? Should I still check them?",
+            "answer": "The APA Citation Generator aims to follow APA 7 as closely as possible, whether you enter sources manually or via DOI/ISBN/URL. That said, it’s always a good idea to double-check names, dates and special rules your department or journal may have."
           },
           "item-7": {
-            "question": "DOI support?",
-            "answer": "Paste DOI with or without https, we normalize it."
+            "question": "What happens if I paste a DOI/ISBN/URL and nothing is found?",
+            "answer": "If the lookup doesn’t return any data, you can switch to manual mode and fill in the core fields yourself. The APA Citation Generator will still handle the APA formatting for you based on what you’ve entered."
           },
           "item-8": {
-            "question": "Is it free?",
-            "answer": "Yes, this tool does not use credits."
+            "question": "How does the APA Citation Generator handle no author, no date or many authors?",
+            "answer": "The APA Citation Generator follows APA 7 rules: for no author it uses the title in place of the author, for no date it uses “n.d.”, and for many authors it supports up to 20 and applies et al. in citations when required."
+          },
+          "item-9": {
+            "question": "Does the APA Citation Generator store my texts or my sources?",
+            "answer": "No. The APA Citation Generator does not store the text you paste or the sources you enter. Your input is processed only to generate the citation and is not kept for later use."
+          },
+          "item-10": {
+            "question": "Can I use this APA Citation Generator for my thesis or university papers?",
+            "answer": "Yes. The APA Citation Generator is designed for real academic work: essays, reports, theses, dissertations and journal submissions. Just make sure your source data is correct and check whether your department has any extra formatting rules."
           }
         }
       }
     },
     "lookup": {
-      "empty": "Enter DOI, ISBN, or URL",
-      "notFound": "No data found, please fill manually.",
-      "filled": "Data found. Review and generate your citation.",
-      "error": "Lookup failed, try again.",
-      "normalized": "Authors normalized to initials"
+      "empty": "Enter DOI, ISBN or URL",
+      "notFound": "We couldn’t find data for that input—fill in the fields manually.",
+      "filled": "We found data for your source. Check the fields and generate your citation.",
+      "error": "Lookup failed. Please try again.",
+      "normalized": "Authors have been normalised to initials and last names"
     }
   }
 }

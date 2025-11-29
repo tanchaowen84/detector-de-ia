@@ -2,7 +2,6 @@ import { WordCounter } from '@/components/tools/word-counter';
 import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
 import Features3Section from '@/components/blocks/features/features3';
 import DetectionProcessSection from '@/components/blocks/detection-process';
-import PricingSection from '@/components/blocks/pricing/pricing';
 import FaqSection from '@/components/blocks/faqs/faqs';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
@@ -69,7 +68,6 @@ export default async function WordCounterPage({ params }: WordCounterPageProps) 
             },
           ]}
         />
-        <PricingSection />
         <FaqSection i18nNamespace="WordCounterPage.blocks.faq" />
       </div>
     </>

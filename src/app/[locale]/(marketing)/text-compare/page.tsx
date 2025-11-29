@@ -2,7 +2,6 @@ import { TextCompare } from '@/components/tools/text-compare';
 import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
 import Features3Section from '@/components/blocks/features/features3';
 import DetectionProcessSection from '@/components/blocks/detection-process';
-import PricingSection from '@/components/blocks/pricing/pricing';
 import FaqSection from '@/components/blocks/faqs/faqs';
 import { constructMetadata } from '@/lib/metadata';
 import { getUrlWithLocale } from '@/lib/urls/urls';
@@ -69,7 +68,6 @@ export default async function TextComparePage({ params }: TextComparePageProps) 
             },
           ]}
         />
-        <PricingSection />
         <FaqSection i18nNamespace="TextComparePage.blocks.faq" />
       </div>
     </>
