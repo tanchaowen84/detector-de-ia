@@ -1934,7 +1934,8 @@
       "empty": "Ingresa DOI, ISBN o URL",
       "notFound": "No encontramos datos, rellena a mano.",
       "filled": "Datos encontrados. Revisa y genera la cita.",
-      "error": "Búsqueda falló, intenta de nuevo."
+      "error": "Búsqueda falló, intenta de nuevo.",
+      "normalized": "Autores normalizados con iniciales"
     }
   }
 }

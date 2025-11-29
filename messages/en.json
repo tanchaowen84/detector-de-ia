@@ -1977,7 +1977,8 @@
       "empty": "Enter DOI, ISBN, or URL",
       "notFound": "No data found, please fill manually.",
       "filled": "Data found. Review and generate your citation.",
-      "error": "Lookup failed, try again."
+      "error": "Lookup failed, try again.",
+      "normalized": "Authors normalized to initials"
     }
   }
 }

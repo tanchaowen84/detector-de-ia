@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
 import { LocaleLink } from '@/i18n/navigation';
 import { Routes } from '@/routes';
-import { Loader2Icon, SearchIcon } from 'lucide-react';
+import { Loader2Icon } from 'lucide-react';
 import { useRef } from 'react';
 
 type SourceType = 'book' | 'journal' | 'website';
@@ -42,10 +42,24 @@ function parseAuthors(input: string): string[] {
     .map((a) => a.trim())
     .filter(Boolean)
     .map((author) => {
+      const makeInitials = (names: string[]) =>
+        names
+          .filter(Boolean)
+          .map((n) => n.trim())
+          .filter(Boolean)
+          .map((n) => `${n.charAt(0).toUpperCase()}.`)
+          .join(' ');
+
+      if (author.includes(',')) {
+        const [family, given = ''] = author.split(',').map((s) => s.trim());
+        const initials = makeInitials(given.split(/\s+/));
+        return initials ? `${family}, ${initials}` : family;
+      }
+
       const parts = author.split(/\s+/);
       if (parts.length === 1) return author;
       const last = parts.pop();
-      const initials = parts.map((p) => `${p.charAt(0).toUpperCase()}.`).join(' ');
+      const initials = makeInitials(parts);
       return `${last}, ${initials}`;
     });
 }
@@ -151,6 +165,52 @@ export function ApaGenerator() {
 
   const fieldLabel = (key: FieldKey) => t(`form.fields.${key}`);
   const fieldPlaceholder = (key: FieldKey) => t(`form.placeholders.${key}`);
+
+  const handleLookup = async () => {
+    const query = lookupInput.trim();
+    if (!query) {
+      toast.info(t('lookup.empty'));
+      return;
+    }
+    try {
+      setIsLookingUp(true);
+      const res = await fetch('/api/citations/lookup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query }),
+      });
+      const data = await res.json();
+      if (!data?.success) {
+        toast.error(t('lookup.notFound'));
+        return;
+      }
+      const d = data.data as Record<string, string>;
+      setSourceType((d.sourceType as SourceType) || 'website');
+      setFields((prev) => ({
+        ...prev,
+        authors: d.authors ?? prev.authors,
+        year: d.year ?? prev.year,
+        title: d.title ?? prev.title,
+        publisher: d.publisher ?? prev.publisher,
+        journal: d.journal ?? prev.journal,
+        volume: d.volume ?? prev.volume,
+        issue: d.issue ?? prev.issue,
+        pages: d.pages ?? prev.pages,
+        doi: d.doi ?? prev.doi,
+        url: d.url ?? prev.url,
+        site: d.site ?? prev.site,
+      }));
+      toast.success(t('lookup.filled'));
+      if (formRef.current) {
+        formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } catch (err) {
+      console.error('lookup error', err);
+      toast.error(t('lookup.error'));
+    } finally {
+      setIsLookingUp(false);
+    }
+  };
 
   return (
     <section className="relative py-16">
@@ -452,49 +512,3 @@ export function ApaGenerator() {
     </section>
   );
 }
-  const handleLookup = async () => {
-    const query = lookupInput.trim();
-    if (!query) {
-      toast.info(t('lookup.empty'));
-      return;
-    }
-    try {
-      setIsLookingUp(true);
-      const res = await fetch('/api/citations/lookup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query }),
-      });
-      const data = await res.json();
-      if (!data?.success) {
-        toast.error(t('lookup.notFound'));
-        return;
-      }
-      const d = data.data as Record<string, string>;
-      setSourceType((d.sourceType as SourceType) || 'website');
-      setFields((prev) => ({
-        ...prev,
-        authors: d.authors ?? prev.authors,
-        year: d.year ?? prev.year,
-        title: d.title ?? prev.title,
-        publisher: d.publisher ?? prev.publisher,
-        journal: d.journal ?? prev.journal,
-        volume: d.volume ?? prev.volume,
-        issue: d.issue ?? prev.issue,
-        pages: d.pages ?? prev.pages,
-        doi: d.doi ?? prev.doi,
-        url: d.url ?? prev.url,
-        site: d.site ?? prev.site,
-      }));
-      toast.success(t('lookup.filled'));
-      // scroll to form
-      if (formRef.current) {
-        formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } catch (err) {
-      console.error('lookup error', err);
-      toast.error(t('lookup.error'));
-    } finally {
-      setIsLookingUp(false);
-    }
-  };

@@ -27,7 +27,10 @@ async function lookupDoi(doi: string) {
   return {
     sourceType: item['type']?.includes('journal') ? 'journal' : 'web',
     title: Array.isArray(item.title) ? item.title[0] : item.title,
-    authors: (item.author || []).map((a: any) => [a.family, a.given].filter(Boolean).join(' ')).join('; '),
+    // store as "Family, Given" so formatter handles initials correctly
+    authors: (item.author || [])
+      .map((a: any) => [a.family, a.given].filter(Boolean).join(', '))
+      .join('; '),
     year: item.created?.['date-parts']?.[0]?.[0]?.toString() ?? '',
     journal: Array.isArray(item['container-title']) ? item['container-title'][0] : item['container-title'],
     volume: item.volume ?? '',
@@ -126,4 +129,3 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, error: 'Lookup failed' }, { status: 500 });
   }
 }
-
