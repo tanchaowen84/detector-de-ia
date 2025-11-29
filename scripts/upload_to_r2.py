@@ -23,11 +23,11 @@ class R2Uploader:
         # Cloudflare R2 配置 - 先读环境变量，缺失则回退到默认（.env 建议覆盖）
         self.STORAGE_REGION = os.environ.get("STORAGE_REGION", "auto")
         self.STORAGE_BUCKET_NAME = os.environ.get("STORAGE_BUCKET_NAME", "detector-de-ia")
-        self.STORAGE_ACCESS_KEY_ID = os.environ.get("STORAGE_ACCESS_KEY_ID", "")
-        self.STORAGE_SECRET_ACCESS_KEY = os.environ.get("STORAGE_SECRET_ACCESS_KEY", "")
+        self.STORAGE_ACCESS_KEY_ID = os.environ.get("STORAGE_ACCESS_KEY_ID", "aa379abf2ee7b91e9246fbb5f3490bb8")
+        self.STORAGE_SECRET_ACCESS_KEY = os.environ.get("STORAGE_SECRET_ACCESS_KEY", "02dc099905166d493fa1410d8d941bc9fc82316e45ca32207b02a801dd760df6")
         self.STORAGE_ENDPOINT = os.environ.get(
             "STORAGE_ENDPOINT",
-            "https://fdee8734b76e53341cbdfc715a2e25b1.r2.cloudflarestorage.com",
+            "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev",
         )
         self.STORAGE_FORCE_PATH_STYLE = str(
             os.environ.get("STORAGE_FORCE_PATH_STYLE", "false")
