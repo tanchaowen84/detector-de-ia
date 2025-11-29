@@ -1,6 +1,5 @@
 'use client';
 
-import { LoginWrapper } from '@/components/auth/login-wrapper';
 import Container from '@/components/layout/container';
 import { Logo } from '@/components/layout/logo';
 import { NavbarMobile } from '@/components/layout/navbar-mobile';
@@ -224,15 +223,15 @@ export function Navbar({ scroll }: NavBarProps) {
               <UserButton user={currentUser} />
             ) : (
               <div className="flex items-center gap-x-4">
-                <LoginWrapper mode="modal" asChild>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="cursor-pointer"
-                  >
-                    {t('Common.login')}
-                  </Button>
-                </LoginWrapper>
+                <LocaleLink
+                  href={Routes.Login}
+                  className={cn(
+                    buttonVariants({ variant: 'outline', size: 'sm' }),
+                    'cursor-pointer'
+                  )}
+                >
+                  {t('Common.login')}
+                </LocaleLink>
 
                 <LocaleLink
                   href={Routes.Register}
