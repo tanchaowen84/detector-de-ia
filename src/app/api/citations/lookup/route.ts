@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server';
 
-// Simple, stable lookup: DOI via Crossref, ISBN via OpenLibrary, URL tries to extract DOI from URL or meta minimal.
+// Simple, stable lookup: DOI via Crossref, ISBN via OpenLibrary, URL tries to extract DOI or meta data.
 
 const DOI_REGEX = /10\.\d{4,9}\/[-._;()\/A-Z0-9]+/i;
 const ISBN_REGEX = /(97(8|9))?\d{9}(\d|X)/i;
+const FETCH_TIMEOUT_MS = 10_000;
+const MAX_HTML_BYTES = 512 * 1024; // cap read size to avoid huge pages
 
 async function fetchJson(url: string) {
   const res = await fetch(url, { headers: { Accept: 'application/json' }, next: { revalidate: 0 } });
@@ -58,24 +60,142 @@ async function lookupIsbn(isbn: string) {
   } as Record<string, string>;
 }
 
+function parseMetaTags(html: string) {
+  const metaMatches = Array.from(
+    html.matchAll(/<meta\s+(?:name|property)=["']([^"']+)["']\s+content=["']([^"']+)["'][^>]*>/gi)
+  );
+  const meta: Record<string, string | string[]> = {};
+  for (const [, name, content] of metaMatches) {
+    const key = name.toLowerCase();
+    if (meta[key]) {
+      const existing = meta[key];
+      meta[key] = Array.isArray(existing) ? [...existing, content] : [existing as string, content];
+    } else {
+      meta[key] = content;
+    }
+  }
+  return meta;
+}
+
+function pickFirst(meta: Record<string, string | string[]>, key: string) {
+  const v = meta[key];
+  if (!v) return '';
+  return Array.isArray(v) ? v[0] : v;
+}
+
+function ensureArray(meta: Record<string, string | string[]>, key: string) {
+  const v = meta[key];
+  if (!v) return [];
+  return Array.isArray(v) ? v : [v];
+}
+
+function parseJsonLd(html: string) {
+  const scripts = Array.from(
+    html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)
+  );
+  const entries: any[] = [];
+  for (const [, body] of scripts) {
+    try {
+      const json = JSON.parse(body.trim());
+      if (Array.isArray(json)) {
+        entries.push(...json);
+      } else {
+        entries.push(json);
+      }
+    } catch {
+      // ignore parse errors
+    }
+  }
+  return entries;
+}
+
 async function fetchMetaFromUrl(urlStr: string) {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 3000);
+  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
   try {
-    const res = await fetch(urlStr, { signal: controller.signal });
-    const html = await res.text();
-    const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
-    const ogTitleMatch = html.match(/property="og:title" content="([^"]+)"/i);
-    const metaAuthor = html.match(/name="author" content="([^"]+)"/i);
-    const published = html.match(/property="article:published_time" content="([^"]+)"/i);
-    const site = html.match(/property="og:site_name" content="([^"]+)"/i);
-    const year = published?.[1]?.match(/\d{4}/)?.[0] ?? '';
+    const res = await fetch(urlStr, {
+      signal: controller.signal,
+      redirect: 'follow',
+      headers: { 'User-Agent': 'Mozilla/5.0 (APA Citation Lookup)' },
+    });
+    const buf = await res.arrayBuffer();
+    const slice = buf.byteLength > MAX_HTML_BYTES ? buf.slice(0, MAX_HTML_BYTES) : buf;
+    const html = new TextDecoder().decode(slice);
+
+    // Meta tags (OpenGraph, Highwire)
+    const meta = parseMetaTags(html);
+
+    // JSON-LD (schema.org Article/ScholarlyArticle)
+    const jsonld = parseJsonLd(html);
+    const articleLd = jsonld.find(
+      (entry) =>
+        entry['@type'] === 'Article' ||
+        entry['@type'] === 'ScholarlyArticle' ||
+        (Array.isArray(entry['@type']) &&
+          entry['@type'].some((t: string) => t === 'Article' || t === 'ScholarlyArticle'))
+    );
+
+    const titleTag = html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? '';
+    const ogTitle = pickFirst(meta, 'og:title') || titleTag;
+    const ogSite = pickFirst(meta, 'og:site_name');
+    const metaAuthor = pickFirst(meta, 'author');
+    const citationAuthors = ensureArray(meta, 'citation_author');
+    const citationTitle = pickFirst(meta, 'citation_title');
+    const citationJournal = pickFirst(meta, 'citation_journal_title');
+    const citationDoi = pickFirst(meta, 'citation_doi');
+    const citationDate = pickFirst(meta, 'citation_date') || pickFirst(meta, 'citation_publication_date');
+    const citationYear = pickFirst(meta, 'citation_year');
+    const citationVolume = pickFirst(meta, 'citation_volume');
+    const citationIssue = pickFirst(meta, 'citation_issue');
+    const citationFirst = pickFirst(meta, 'citation_firstpage');
+    const citationLast = pickFirst(meta, 'citation_lastpage');
+
+    const ldTitle = articleLd?.headline || articleLd?.name || '';
+    const ldAuthors = Array.isArray(articleLd?.author)
+      ? articleLd.author
+          .map((a: any) => a?.name)
+          .filter(Boolean)
+      : articleLd?.author?.name
+        ? [articleLd.author.name]
+        : [];
+    const ldDate = articleLd?.datePublished || articleLd?.dateCreated || '';
+    const ldDoi = articleLd?.identifier && typeof articleLd.identifier === 'string'
+      ? articleLd.identifier.match(DOI_REGEX)?.[0]
+      : null;
+
+    // Prefer explicit DOIs from meta/jsonld
+    const doi = citationDoi || ldDoi;
+
+    const yearFromDate = (citationDate || ldDate || '').match(/\d{4}/)?.[0] ?? '';
+    const year = citationYear || yearFromDate;
+    const pages = citationFirst && citationLast ? `${citationFirst}-${citationLast}` : citationFirst || '';
+
+    // Authors priority: citation_author > ldAuthors > meta author
+    const authorsJoined =
+      citationAuthors.join('; ') ||
+      ldAuthors.join('; ') ||
+      metaAuthor ||
+      '';
+
+    // Title priority: citation_title > ldTitle > og/title tag
+    const title = citationTitle || ldTitle || ogTitle || titleTag;
+
+    const site = ogSite || new URL(urlStr).hostname;
+
+    const inferredSourceType =
+      citationJournal || citationVolume || citationIssue ? 'journal' : 'website';
+
     return {
-      sourceType: 'website',
-      title: ogTitleMatch?.[1] ?? titleMatch?.[1] ?? '',
-      authors: metaAuthor?.[1] ?? '',
+      sourceType: inferredSourceType,
+      title,
+      authors: authorsJoined,
       year,
-      site: site?.[1] ?? new URL(urlStr).hostname,
+      journal: citationJournal || '',
+      volume: citationVolume || '',
+      issue: citationIssue || '',
+      pages,
+      doi: doi || '',
+      site,
       url: urlStr,
     } as Record<string, string>;
   } finally {
