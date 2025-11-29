@@ -1177,6 +1177,9 @@
       "plagiarism": {
         "title": "Detector de plagio"
       },
+      "apaGenerator": {
+        "title": "Generador APA"
+      },
       "wordCounter": {
         "title": "Contador de palabras"
       },
@@ -1249,6 +1252,7 @@
         "title": "Producto",
         "items": {
           "plagiarism": "Detector de plagio",
+          "apaGenerator": "Generador APA",
           "textCompare": "Comparador de textos",
           "wordCounter": "Contador de palabras",
           "pricing": "",
@@ -1685,13 +1689,13 @@
   },
   "ApaGeneratorPage": {
     "metadata": {
-      "title": "Generador de citas APA gratis",
-      "description": "Genera referencias y citas en formato APA 7 en segundos, sin consumir créditos."
+      "title": "Generador APA gratis para citas y referencias APA 7",
+      "description": "Generador APA gratis en línea. Usa el Generador APA para crear citas y referencias en formato APA 7 en segundos, sin registro y sin límites."
     },
     "hero": {
       "badge": "Gratis · APA 7ª",
-      "title": "Generador de citas APA",
-      "subtitle": "Introduce los datos de tu fuente y obtén la referencia y la cita dentro del texto listas para pegar.",
+      "title": "Generador APA gratis para citas y referencias",
+      "subtitle": "Con este Generador APA introduces los datos de tu fuente o usas DOI/ISBN/URL y obtienes referencias en formato APA 7 listas para pegar en tu trabajo.",
       "searchPlaceholder": "Pega DOI, ISBN o URL (autocompletamos si podemos)",
       "searchCta": "Citar",
       "styleLabel": "Estilo de cita",
@@ -1700,7 +1704,7 @@
     },
     "form": {
       "title": "Completa los datos",
-      "description": "No consumimos créditos ni guardamos tu contenido.",
+      "description": "Este Generador APA es gratis y sin registro: no consumimos créditos ni guardamos tu contenido.",
       "sourceType": "Tipo de fuente",
       "types": {
         "book": "Libro",
@@ -1760,25 +1764,25 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "Cómo funciona",
+        "title": "Cómo funciona el Generador APA",
         "subtitle": "Genera referencias y citas en tres pasos.",
         "steps": {
           "step-1": {
             "label": "Paso 1",
             "title": "Elige el tipo de fuente",
-            "description": "Selecciona libro, artículo o página web para mostrar solo los campos necesarios.",
+            "description": "Elige si quieres citar un libro, un artículo de revista o una página web para mostrar solo los campos que necesitas.",
             "items": [
               {
                 "title": "Libro / Artículo / Web",
-                "description": ""
+                "description": "Selecciona el tipo de fuente para adaptar el formulario y no ver campos innecesarios."
               },
               {
                 "title": "Campos mínimos",
-                "description": ""
+                "description": "Indicamos los campos básicos que debes rellenar para poder generar la cita APA."
               },
               {
                 "title": "APA 7",
-                "description": ""
+                "description": "La referencia se genera siguiendo el formato de la 7ª edición de APA."
               }
             ],
             "imageAlt": "Paso 1"
@@ -1786,74 +1790,74 @@
           "step-2": {
             "label": "Paso 2",
             "title": "Completa los datos",
-            "description": "Autores, año, título y URL/DOI opcional.",
+            "description": "Escribe autores, año y título, y añade datos opcionales como páginas, revista, editorial, DOI o URL. Si pegaste un DOI, ISBN o URL y hay datos disponibles, algunos campos pueden rellenarse automáticamente.",
             "items": [
               {
                 "title": "Autores con et al.",
-                "description": ""
+                "description": "Introduce varios autores separados por salto de línea o punto y coma; el Generador APA aplica et al. cuando corresponde."
               },
               {
                 "title": "Año o s.f.",
-                "description": ""
+                "description": "Añade el año de publicación o usa s.f. si la fuente no tiene fecha."
               },
               {
                 "title": "Título en sentence case",
-                "description": ""
+                "description": "El título se ajusta al formato de sentence case recomendado por APA 7."
               }
             ],
             "imageAlt": "Paso 2"
           },
           "step-3": {
             "label": "Paso 3",
-            "title": "Copia la cita",
-            "description": "Obtén referencia y cita en texto listas para pegar.",
+            "title": "Genera y copia la cita",
+            "description": "Pulsa en “Generar cita” para ver la referencia completa y la cita dentro del texto, y cópialas en un clic.",
             "items": [
               {
                 "title": "Referencia",
-                "description": ""
+                "description": "Verás la referencia APA lista para tu lista de referencias o bibliografía."
               },
               {
                 "title": "Cita en texto",
-                "description": ""
+                "description": "Mostramos la cita en el texto en formato autor-año para pegarla en tu documento."
               },
               {
                 "title": "Botón copiar",
-                "description": ""
+                "description": "Usa los botones para copiar la referencia o la cita en texto sin perder el formato."
               }
             ],
             "imageAlt": "Paso 3"
           }
         },
-        "description": ""
+        "description": "Nuestro Generador APA reúne en un solo lugar el formulario manual y la búsqueda por DOI/ISBN/URL para que no tengas que preocuparte por el formato de tus citas APA al usar el Generador APA."
       },
       "useCases": {
-        "title": "Casos de uso",
+        "title": "Casos de uso del Generador APA",
         "subtitle": "Listo para tus proyectos académicos.",
-        "description": "",
+        "description": "Usa nuestro Generador APA gratis cada vez que necesites formatear citas y referencias de forma rápida y coherente en tus trabajos académicos.",
         "items": {
           "item-1": {
-            "title": "Tesis y disertaciones",
-            "description": "Mantén la bibliografía coherente en todo el documento."
+            "title": "Tesis, TFG y TFM",
+            "description": "Gestiona una bibliografía larga con decenas de fuentes usando siempre el mismo Generador APA para mantener el formato APA consistente."
           },
           "item-2": {
-            "title": "Artículos científicos",
-            "description": "Genera referencias rápidas para manuscritos y revisiones."
+            "title": "Artículos científicos y manuscritos",
+            "description": "Crea referencias APA para artículos de revista con volumen, número, páginas y DOI listos para enviar, sin salir del Generador APA."
           },
           "item-3": {
-            "title": "Trabajos universitarios",
-            "description": "Entrega ensayos con citas formateadas."
+            "title": "Trabajos y ensayos universitarios",
+            "description": "Añade rápidamente citas y referencias APA a informes cortos, ensayos y proyectos de clase usando el Generador APA."
           },
           "item-4": {
-            "title": "Blogs y reportes",
-            "description": "Cita fuentes web con fecha de consulta."
+            "title": "Docencia y materiales de clase",
+            "description": "Como profesor o tutor, prepara guías de lectura y bibliografías recomendadas con el Generador APA para que tus estudiantes vean siempre el mismo formato."
           },
           "item-5": {
-            "title": "Presentaciones",
-            "description": "Agrega referencias APA en diapositivas."
+            "title": "Presentaciones académicas y pósteres",
+            "description": "Incluye referencias APA claras en diapositivas y pósteres generándolas primero en el Generador APA y copiándolas en tu presentación."
           },
           "item-6": {
-            "title": "Listas de lectura",
-            "description": "Comparte referencias limpias con tu equipo."
+            "title": "Proyectos y listas de lectura en equipo",
+            "description": "Coordina proyectos de investigación o trabajos en grupo usando el mismo Generador APA para que todas las citas sigan el mismo estilo."
           }
         }
       },
@@ -1861,20 +1865,20 @@
         "items": {
           "plagiarism": {
             "title": "Detector de plagio",
-            "description": "Revisa similitudes antes de entregar."
+            "description": "Revisa similitudes en tus textos académicos antes de entregar tu trabajo."
           },
           "detector": {
             "title": "Detector de IA",
-            "description": "Evalúa probabilidad de IA en segundos."
+            "description": "Comprueba si un texto parece escrito con IA y decide si necesitas editarlo."
           },
           "compare": {
             "title": "Comparar textos",
-            "description": "Detecta diferencias entre versiones."
+            "description": "Compara dos versiones de un texto académico y detecta qué ha cambiado."
           }
         },
-        "title": "Más herramientas",
-        "subtitle": "Enlaza con otras comprobaciones",
-        "description": "Continúa con verificaciones complementarias.",
+        "title": "Más herramientas académicas",
+        "subtitle": "Completa tu flujo de trabajo con otras herramientas",
+        "description": "Además del Generador APA, en esta web tienes más herramientas académicas que pueden ayudarte: detector de plagio, detector de IA y comparador de textos para revisar tus trabajos antes de entregarlos.",
         "tryNow": "Probar ahora",
         "tools": {
           "plagiarism": {
@@ -1892,40 +1896,48 @@
         }
       },
       "faq": {
-        "title": "Preguntas frecuentes",
+        "title": "Preguntas frecuentes sobre el Generador APA",
         "subtitle": "APA 7 en lenguaje sencillo.",
         "items": {
           "item-1": {
-            "question": "¿Qué versión de APA usan?",
-            "answer": "Usamos APA 7ª edición."
+            "question": "¿Qué es este Generador APA y qué hace exactamente?",
+            "answer": "Es una herramienta que te ayuda a crear referencias y citas en formato APA 7 sin tener que memorizar las normas. Tú introduces los datos básicos de la fuente o pegas un DOI/ISBN/URL, y el Generador APA construye por ti la referencia completa y la cita dentro del texto, listas para copiar y pegar en tu trabajo."
           },
           "item-2": {
-            "question": "¿Cómo escribir autores múltiples?",
-            "answer": "Escribe cada autor en una línea o separa con ;. Mostramos hasta 20 y luego usamos et al."
+            "question": "¿El Generador APA es gratis? ¿Necesito crear una cuenta?",
+            "answer": "Sí, este Generador APA es completamente gratis. No necesitas registrarte, iniciar sesión ni añadir ningún método de pago. Entras, pegas tus datos o tu DOI/URL y generas todas las citas APA que necesites."
           },
           "item-3": {
-            "question": "¿Y si no hay fecha?",
-            "answer": "Usamos (s.f.) y la cita en texto mantiene el formato."
+            "question": "¿Qué versión de las normas APA usan?",
+            "answer": "Usamos la 7ª edición de las normas APA, que es la versión actual para la mayoría de trabajos académicos. Si en tu universidad o revista te piden algo específico, puedes usar la cita generada como base y hacer pequeños cambios a mano con el apoyo del Generador APA."
           },
           "item-4": {
-            "question": "¿Puedo citar una web?",
-            "answer": "Sí, incluye URL y fecha de consulta opcional."
+            "question": "¿Qué tipos de fuentes puedo citar con el Generador APA?",
+            "answer": "Ahora mismo puedes citar libros, artículos de revista y páginas web o artículos online. El Generador APA cubre lo que más se usa en trabajos de clase, TFG/TFM y artículos."
           },
           "item-5": {
-            "question": "¿Se guardan mis datos?",
-            "answer": "No guardamos tus entradas ni consumimos créditos."
+            "question": "¿Puedo generar también la cita dentro del texto, o solo la referencia final?",
+            "answer": "Las dos cosas. Cada vez que creas una fuente, el Generador APA muestra la referencia completa para la bibliografía y la cita en el texto en formato autor-año, para que no tengas que calcularlo a mano."
           },
           "item-6": {
-            "question": "¿Puedo copiar en un clic?",
-            "answer": "Sí, copia referencia e in-text por separado."
+            "question": "¿Qué tan fiables son las citas? ¿Tengo que revisarlas manualmente?",
+            "answer": "El objetivo del Generador APA es que las citas salgan lo más ajustadas posible a APA 7, tanto si las introduces a mano como si usamos DOI/ISBN/URL. Aun así, siempre es buena idea revisar los datos y comprobar si tu universidad o revista tiene alguna regla especial."
           },
           "item-7": {
-            "question": "¿Acepta DOI?",
-            "answer": "Pega el DOI con o sin https, lo normalizamos."
+            "question": "¿Qué pasa si pego un DOI/ISBN/URL y la herramienta no encuentra nada?",
+            "answer": "Si la búsqueda automática no devuelve resultados, puedes cambiar a modo manual y rellenar los campos básicos tú mismo. El Generador APA se encarga del formato aunque hayas puesto los datos a mano."
           },
           "item-8": {
-            "question": "¿Es gratis?",
-            "answer": "Sí, esta herramienta no usa créditos."
+            "question": "¿Cómo funciona con fuentes sin autor, sin fecha o con muchos autores?",
+            "answer": "Seguimos las reglas APA 7 para estos casos: sin autor usamos el título, sin fecha usamos (s.f.) y con muchos autores aceptamos hasta 20 y aplicamos et al. cuando corresponde en el Generador APA."
+          },
+          "item-9": {
+            "question": "¿Guardan mis textos o las fuentes que introduzco?",
+            "answer": "No. El Generador APA no guarda el contenido que pegas ni las fuentes que introduces. Se procesan en el momento para generar tu referencia APA y después no se utilizan para nada más."
+          },
+          "item-10": {
+            "question": "¿Puedo usar este Generador APA para mi tesis o trabajos de universidad?",
+            "answer": "Sí, el Generador APA está pensado justo para eso: trabajos universitarios, TFG/TFM, artículos y proyectos de clase. Lo importante es que los datos de la fuente sean correctos y que revises la cita final por si tu facultad tiene alguna exigencia extra."
           }
         }
       }

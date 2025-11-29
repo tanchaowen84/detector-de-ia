@@ -1177,6 +1177,9 @@
       "plagiarism": {
         "title": "Plagiarism checker"
       },
+      "apaGenerator": {
+        "title": "APA generator"
+      },
       "wordCounter": {
         "title": "Word counter"
       },
@@ -1249,6 +1252,7 @@
         "title": "Product",
         "items": {
           "plagiarism": "Plagiarism checker",
+          "apaGenerator": "APA generator",
           "textCompare": "Text compare",
           "wordCounter": "Word counter",
           "pricing": "",

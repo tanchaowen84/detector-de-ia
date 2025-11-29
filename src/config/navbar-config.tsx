@@ -25,6 +25,11 @@ export function getNavbarLinks(): NestedMenuItem[] {
       external: false,
     },
     {
+      title: t('apaGenerator.title'),
+      href: Routes.ApaGenerator,
+      external: false,
+    },
+    {
       title: t('textCompare.title'),
       href: Routes.TextCompare,
       external: false,
