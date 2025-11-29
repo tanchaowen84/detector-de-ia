@@ -1401,16 +1401,22 @@
         "noInputSource": "Agrega un texto, archivo o URL para analizar."
       },
       "guestModal": {
-        "title": "¿Necesitas más créditos?",
-        "subtitle": "Inicia con Google o GitHub y recibe +400 créditos al instante.",
-        "google": "Continuar con Google · +400",
-        "github": "Continuar con GitHub",
-        "footer": "Al continuar aceptas nuestras políticas y términos."
+        "title": "Más poder al instante",
+        "subtitle": "Inicia sesión para desbloquear 4× créditos, 4× texto y activar la subida de archivos.",
+        "google": "Continuar con Google · 4× créditos",
+        "github": "Continuar con GitHub · 4× créditos",
+        "footer": "Puedes entrar con Google o GitHub en un clic."
       },
       "upgradeModal": {
         "title": "Sube de plan para seguir detectando",
         "description": "Elige el plan que mejor se ajuste: Trial para recarga rápida, o Hobby / Pro para límites más altos y soporte de archivos/URLs."
-      }
+      },
+      "lowCreditsBanner": {
+        "message": "Créditos bajos como invitado. Inicia sesión para obtener 4× créditos, 4× texto y subir archivos.",
+        "cta": "Iniciar sesión"
+      },
+      "limitLoginPrompt": "¿Necesitas analizar textos más largos? Inicia sesión para obtener 4× capacidad.",
+      "loginCta": "Iniciar sesión"
     },
     "howItWorks": {
       "title": "Cómo funciona nuestro detector de IA",

@@ -59,7 +59,8 @@ import { uploadFileFromBrowser } from '@/storage';
 
 type TranslationFunction = (key: string) => string;
 
-const MAX_CHARS = 1500;
+const MAX_CHARS_GUEST = 1000;
+const MAX_CHARS_AUTH = 4000;
 
 type SampleTextKey = 'sampleTexts.iaEssay' | 'sampleTexts.humanArticle' | 'sampleTexts.mixedEmail';
 
@@ -258,9 +259,14 @@ export function AiDetectorSection() {
   const [socialLoading, setSocialLoading] = useState<'google' | 'github' | null>(null);
 
   const charCount = text.length;
-  const hasReachedLimit = charCount >= MAX_CHARS;
+  const maxChars = session?.user ? MAX_CHARS_AUTH : MAX_CHARS_GUEST;
+  const hasReachedLimit = charCount >= maxChars;
   const hasAltSource = !!uploadedFile || !!websiteUrl;
   const canDetect = text.trim().length > 0 || hasAltSource;
+
+  const triggerLoginModal = () => {
+    setShowGuestModal(true);
+  };
 
   const handlePasteFromClipboard = async () => {
     if (isPending) {
@@ -307,12 +313,23 @@ export function AiDetectorSection() {
     if (isPending || isUploadingFile) {
       return;
     }
+
+    if (!session?.user) {
+      triggerLoginModal();
+      return;
+    }
     fileInputRef.current?.click();
   };
 
   const handleFileChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) {
+      return;
+    }
+
+    if (!session?.user) {
+      triggerLoginModal();
+      event.target.value = '';
       return;
     }
 
@@ -347,6 +364,11 @@ export function AiDetectorSection() {
       return;
     }
 
+    if (!session?.user) {
+      triggerLoginModal();
+      return;
+    }
+
     try {
       const normalized = new URL(value.startsWith('http') ? value : `https://${value}`);
       if (!['http:', 'https:'].includes(normalized.protocol)) {
@@ -377,6 +399,15 @@ export function AiDetectorSection() {
     if (!trimmedText && !uploadedFile && !websiteUrl) {
       setError(t('errors.noInputSource'));
       toast.warning(t('errors.addTextWarning'));
+      return;
+    }
+
+    if (charCount > maxChars) {
+      if (session?.user) {
+        setShowUpgradeModal(true);
+      } else {
+        triggerLoginModal();
+      }
       return;
     }
 
@@ -430,6 +461,13 @@ export function AiDetectorSection() {
   const isLoggedIn = !!session?.user;
   const hasReportLink = isLoggedIn && !!detectionId;
   const loginHref = `${Routes.Login}?callbackUrl=${encodeURIComponent(pathname ?? '/')}`;
+
+  const showLowCreditsBanner = !isLoggedIn && typeof result?.creditsRemaining === 'number'
+    ? result.creditsRemaining < 150
+    : false;
+
+  // free tier should not allow URL; upgrade modal will block it
+  const planAllowsUrl = false;
   const highlightedSegments = useMemo(() => {
     if (!result?.sentences?.length) {
       return [{ text, tone: null, key: 'full-text' }];
@@ -511,6 +549,21 @@ export function AiDetectorSection() {
     <>
     <section id="detector" className="relative py-20 text-slate-900">
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
+        {showLowCreditsBanner && (
+          <div className="mb-4 flex items-center justify-between rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 shadow-sm">
+            <div className="flex items-center gap-2">
+              <span className="text-lg">⚡</span>
+              <span>{t('lowCreditsBanner.message')}</span>
+            </div>
+            <Button
+              size="sm"
+              className="h-9 rounded-lg bg-indigo-600 px-3 text-white hover:bg-indigo-500"
+              onClick={triggerLoginModal}
+            >
+              {t('lowCreditsBanner.cta')}
+            </Button>
+          </div>
+        )}
         <div className="mb-0 flex flex-col items-center gap-4 text-center">
           <Badge className="border-purple-200 bg-purple-50 text-xs uppercase tracking-[0.2em] text-purple-700">
             {t('badge')}
@@ -559,10 +612,24 @@ export function AiDetectorSection() {
                   <Popover
                     open={isWebsitePopoverOpen}
                     onOpenChange={(open) => {
-                      setIsWebsitePopoverOpen(open);
-                      if (open) {
-                        setWebsiteInput(websiteUrl ?? '');
+                      if (!open) {
+                        setIsWebsitePopoverOpen(false);
+                        return;
                       }
+
+                      if (!session?.user) {
+                        triggerLoginModal();
+                        return;
+                      }
+
+                      // Logged in but free tier: URL not allowed -> show upgrade modal
+                      if (session?.user && !planAllowsUrl) {
+                        setShowUpgradeModal(true);
+                        return;
+                      }
+
+                      setIsWebsitePopoverOpen(true);
+                      setWebsiteInput(websiteUrl ?? '');
                     }}
                   >
                     <PopoverTrigger asChild>
@@ -765,7 +832,7 @@ export function AiDetectorSection() {
                   }}
                   rows={13}
                   placeholder={t('placeholder.textareaPlaceholder')}
-                  maxLength={MAX_CHARS}
+                  maxLength={maxChars}
                   className="relative h-[360px] w-full min-w-0 resize-none rounded-3xl border border-transparent bg-transparent text-transparent caret-indigo-600 focus-visible:ring-2 focus-visible:ring-indigo-200 focus-visible:ring-offset-0"
                   style={{
                     WebkitTextFillColor: 'transparent',
@@ -790,17 +857,30 @@ export function AiDetectorSection() {
                   </span>
                   {hasReachedLimit && (
                     <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
-                      <span>{t('limitUpgradePrompt')}</span>
-                      <Button
-                        asChild
-                        variant="link"
-                        size="sm"
-                        className="h-auto px-0 text-indigo-600"
-                      >
-                        <LocaleLink href={Routes.Pricing}>
-                          {t('upgradeCta')}
-                        </LocaleLink>
-                      </Button>
+                      <span>
+                        {isLoggedIn ? t('limitUpgradePrompt') : t('limitLoginPrompt')}
+                      </span>
+                      {isLoggedIn ? (
+                        <Button
+                          asChild
+                          variant="link"
+                          size="sm"
+                          className="h-auto px-0 text-indigo-600"
+                        >
+                          <LocaleLink href={Routes.Pricing}>
+                            {t('upgradeCta')}
+                          </LocaleLink>
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="link"
+                          size="sm"
+                          className="h-auto px-0 text-indigo-600"
+                          onClick={triggerLoginModal}
+                        >
+                          {t('loginCta')}
+                        </Button>
+                      )}
                     </div>
                   )}
                 </div>
