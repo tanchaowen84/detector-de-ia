@@ -1411,10 +1411,6 @@
         "title": "Upgrade to keep detecting",
         "description": "Pick the plan that fits you best: Trial for a quick top-up, or Hobby / Pro for higher limits and file/URL support in the AI detector."
       },
-      "lowCreditsBanner": {
-        "message": "Low on credits as guest. Log in to get 4× credits, 4× text length, and file uploads.",
-        "cta": "Log in"
-      },
       "limitLoginPrompt": "Need to analyze longer texts? Log in to get 4× capacity.",
       "loginCta": "Log in"
     },

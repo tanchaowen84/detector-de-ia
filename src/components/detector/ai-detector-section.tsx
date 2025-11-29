@@ -462,10 +462,6 @@ export function AiDetectorSection() {
   const hasReportLink = isLoggedIn && !!detectionId;
   const loginHref = `${Routes.Login}?callbackUrl=${encodeURIComponent(pathname ?? '/')}`;
 
-  const showLowCreditsBanner = !isLoggedIn && typeof result?.creditsRemaining === 'number'
-    ? result.creditsRemaining < 150
-    : false;
-
   // free tier should not allow URL; upgrade modal will block it
   const planAllowsUrl = false;
   const highlightedSegments = useMemo(() => {
@@ -549,21 +545,6 @@ export function AiDetectorSection() {
     <>
     <section id="detector" className="relative py-20 text-slate-900">
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
-        {showLowCreditsBanner && (
-          <div className="mb-4 flex items-center justify-between rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 shadow-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-lg">⚡</span>
-              <span>{t('lowCreditsBanner.message')}</span>
-            </div>
-            <Button
-              size="sm"
-              className="h-9 rounded-lg bg-indigo-600 px-3 text-white hover:bg-indigo-500"
-              onClick={triggerLoginModal}
-            >
-              {t('lowCreditsBanner.cta')}
-            </Button>
-          </div>
-        )}
         <div className="mb-0 flex flex-col items-center gap-4 text-center">
           <Badge className="border-purple-200 bg-purple-50 text-xs uppercase tracking-[0.2em] text-purple-700">
             {t('badge')}

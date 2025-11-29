@@ -1411,10 +1411,6 @@
         "title": "Sube de plan para seguir detectando",
         "description": "Elige el plan que mejor se ajuste: Trial para recarga rápida, o Hobby / Pro para límites más altos y soporte de archivos/URLs."
       },
-      "lowCreditsBanner": {
-        "message": "Créditos bajos como invitado. Inicia sesión para obtener 4× créditos, 4× texto y subir archivos.",
-        "cta": "Iniciar sesión"
-      },
       "limitLoginPrompt": "¿Necesitas analizar textos más largos? Inicia sesión para obtener 4× capacidad.",
       "loginCta": "Iniciar sesión"
     },
