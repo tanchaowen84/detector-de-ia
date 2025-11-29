@@ -1725,5 +1725,259 @@
       "title": "Marketing",
       "desc": "Not used today. If we add ads (e.g. AdSense) we will request consent first."
     }
+  },
+  "ApaGeneratorPage": {
+    "metadata": {
+      "title": "Free APA citation generator",
+      "description": "Generate APA 7 references and in-text citations in seconds, free and without credits."
+    },
+    "hero": {
+      "badge": "Free · APA 7th",
+      "title": "APA citation generator",
+      "subtitle": "Enter your source details to get a ready-to-paste APA reference and in-text citation.",
+      "searchPlaceholder": "Paste DOI, ISBN, or URL (we'll auto-fill if possible)",
+      "searchCta": "Cite",
+      "styleLabel": "Citation style",
+      "manualLink": "Manual citation",
+      "manualLabel": "Or fill manually"
+    },
+    "form": {
+      "title": "Fill in the details",
+      "description": "No credits used and nothing is stored.",
+      "sourceType": "Source type",
+      "types": {
+        "book": "Book",
+        "journal": "Journal article",
+        "website": "Website"
+      },
+      "fields": {
+        "authors": "Autores",
+        "year": "Year",
+        "title": "Título",
+        "publisher": "Publisher",
+        "journal": "Journal",
+        "volume": "Volume",
+        "issue": "Issue",
+        "pages": "Pages",
+        "doi": "DOI",
+        "url": "URL",
+        "site": "Site",
+        "accessDate": "Access date"
+      },
+      "placeholders": {
+        "authors": "Last, First; Last, First",
+        "year": "2024",
+        "title": "Title of the work",
+        "publisher": "Publisher",
+        "journal": "Journal name",
+        "volume": "12",
+        "issue": "3",
+        "pages": "123-145",
+        "doi": "10.0000/abcd.1234",
+        "url": "https://example.com/article",
+        "site": "Site name",
+        "accessDate": "March 12, 2024"
+      },
+      "hints": {
+        "authors": "Separate authors with new lines or semicolons. Up to 20 before et al."
+      },
+      "clear": "Clear",
+      "generate": "Generate citation",
+      "copied": "{target} copied",
+      "copyError": "Could not copy",
+      "emptyWarning": "Add at least a title or author to generate.",
+      "generated": "Citation generated"
+    },
+    "result": {
+      "title": "APA reference",
+      "subtitle": "Ready to paste in your bibliography",
+      "inText": "In-text citation",
+      "copyReference": "Copy reference",
+      "copyInText": "Copy in-text citation",
+      "empty": "Your reference will appear here"
+    },
+    "cta": {
+      "plagiarism": "Check plagiarism",
+      "detector": "AI detector",
+      "compare": "Compare texts"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "How it works",
+        "subtitle": "Generate references and in-text citations in three steps.",
+        "steps": {
+          "step-1": {
+            "label": "Step 1",
+            "title": "Choose source type",
+            "description": "Pick book, journal article, or website to see only required fields.",
+            "items": [
+              {
+                "title": "Book / Article / Web",
+                "description": ""
+              },
+              {
+                "title": "Minimal fields",
+                "description": ""
+              },
+              {
+                "title": "APA 7",
+                "description": ""
+              }
+            ],
+            "imageAlt": "Step 1"
+          },
+          "step-2": {
+            "label": "Step 2",
+            "title": "Fill the details",
+            "description": "Authors, year, title, and optional URL/DOI.",
+            "items": [
+              {
+                "title": "Autores con et al.",
+                "description": ""
+              },
+              {
+                "title": "Año o s.f.",
+                "description": ""
+              },
+              {
+                "title": "Título en sentence case",
+                "description": ""
+              }
+            ],
+            "imageAlt": "Step 2"
+          },
+          "step-3": {
+            "label": "Step 3",
+            "title": "Copy your citation",
+            "description": "Get reference and in-text citation ready to paste.",
+            "items": [
+              {
+                "title": "Referencia",
+                "description": ""
+              },
+              {
+                "title": "Cita en texto",
+                "description": ""
+              },
+              {
+                "title": "Copy button",
+                "description": ""
+              }
+            ],
+            "imageAlt": "Step 3"
+          }
+        },
+        "description": ""
+      },
+      "useCases": {
+        "title": "Use cases",
+        "subtitle": "Ready for your academic work.",
+        "description": "",
+        "items": {
+          "item-1": {
+            "title": "Theses and dissertations",
+            "description": "Keep your bibliography consistent across the manuscript."
+          },
+          "item-2": {
+            "title": "Journal articles",
+            "description": "Generate quick references for manuscripts and reviews."
+          },
+          "item-3": {
+            "title": "University papers",
+            "description": "Submit essays with formatted citations."
+          },
+          "item-4": {
+            "title": "Blogs and reports",
+            "description": "Cite web sources with access dates."
+          },
+          "item-5": {
+            "title": "Presentations",
+            "description": "Add APA references to slides."
+          },
+          "item-6": {
+            "title": "Reading lists",
+            "description": "Share clean references with your team."
+          }
+        }
+      },
+      "related": {
+        "items": {
+          "plagiarism": {
+            "title": "Plagiarism detector",
+            "description": "Check overlaps before submitting."
+          },
+          "detector": {
+            "title": "AI detector",
+            "description": "Estimate AI likelihood in seconds."
+          },
+          "compare": {
+            "title": "Compare texts",
+            "description": "Spot differences between drafts."
+          }
+        },
+        "title": "More tools",
+        "subtitle": "Jump to other checks",
+        "description": "Continue with complementary checks.",
+        "tryNow": "Try now",
+        "tools": {
+          "plagiarism": {
+            "title": "Plagiarism detector",
+            "description": "Check overlaps before submitting."
+          },
+          "detector": {
+            "title": "AI detector",
+            "description": "Estimate AI likelihood in seconds."
+          },
+          "compare": {
+            "title": "Compare texts",
+            "description": "Spot differences between drafts."
+          }
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "subtitle": "APA 7 made simple.",
+        "items": {
+          "item-1": {
+            "question": "Which APA version?",
+            "answer": "We follow APA 7th edition."
+          },
+          "item-2": {
+            "question": "Multiple authors?",
+            "answer": "Write each author on a new line or separate with ;. Up to 20 before et al."
+          },
+          "item-3": {
+            "question": "No date?",
+            "answer": "We use (n.d.) and keep the same in-text format."
+          },
+          "item-4": {
+            "question": "Can I cite a website?",
+            "answer": "Yes, include the URL and optional access date."
+          },
+          "item-5": {
+            "question": "Do you store my data?",
+            "answer": "We do not store your input and no credits are used."
+          },
+          "item-6": {
+            "question": "One-click copy?",
+            "answer": "Yes, copy reference and in-text separately."
+          },
+          "item-7": {
+            "question": "DOI support?",
+            "answer": "Paste DOI with or without https, we normalize it."
+          },
+          "item-8": {
+            "question": "Is it free?",
+            "answer": "Yes, this tool does not use credits."
+          }
+        }
+      }
+    },
+    "lookup": {
+      "empty": "Enter DOI, ISBN, or URL",
+      "notFound": "No data found, please fill manually.",
+      "filled": "Data found. Review and generate your citation.",
+      "error": "Lookup failed, try again."
+    }
   }
 }

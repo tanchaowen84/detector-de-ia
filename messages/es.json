@@ -1682,5 +1682,259 @@
       "title": "Marketing",
       "desc": "No instalamos hoy. Si activamos anuncios (p.ej. AdSense) pediremos tu consentimiento."
     }
+  },
+  "ApaGeneratorPage": {
+    "metadata": {
+      "title": "Generador de citas APA gratis",
+      "description": "Genera referencias y citas en formato APA 7 en segundos, sin consumir créditos."
+    },
+    "hero": {
+      "badge": "Gratis · APA 7ª",
+      "title": "Generador de citas APA",
+      "subtitle": "Introduce los datos de tu fuente y obtén la referencia y la cita dentro del texto listas para pegar.",
+      "searchPlaceholder": "Pega DOI, ISBN o URL (autocompletamos si podemos)",
+      "searchCta": "Citar",
+      "styleLabel": "Estilo de cita",
+      "manualLink": "Citar manualmente",
+      "manualLabel": "O cita manualmente"
+    },
+    "form": {
+      "title": "Completa los datos",
+      "description": "No consumimos créditos ni guardamos tu contenido.",
+      "sourceType": "Tipo de fuente",
+      "types": {
+        "book": "Libro",
+        "journal": "Artículo de revista",
+        "website": "Página web"
+      },
+      "fields": {
+        "authors": "Autores",
+        "year": "Año",
+        "title": "Título",
+        "publisher": "Editorial",
+        "journal": "Revista",
+        "volume": "Volumen",
+        "issue": "Número",
+        "pages": "Páginas",
+        "doi": "DOI",
+        "url": "URL",
+        "site": "Sitio",
+        "accessDate": "Fecha de consulta"
+      },
+      "placeholders": {
+        "authors": "Apellido, Nombre; Apellido, Nombre",
+        "year": "2024",
+        "title": "Título de la obra",
+        "publisher": "Editorial",
+        "journal": "Nombre de la revista",
+        "volume": "12",
+        "issue": "3",
+        "pages": "123-145",
+        "doi": "10.0000/abcd.1234",
+        "url": "https://ejemplo.com/articulo",
+        "site": "Nombre del sitio",
+        "accessDate": "12 de marzo de 2024"
+      },
+      "hints": {
+        "authors": "Separar autores con salto de línea o punto y coma. Máx. 20 antes de et al."
+      },
+      "clear": "Limpiar",
+      "generate": "Generar cita",
+      "copied": "{target} copiada",
+      "copyError": "No se pudo copiar",
+      "emptyWarning": "Agrega al menos un título o autor para generar.",
+      "generated": "Cita generada"
+    },
+    "result": {
+      "title": "Referencia APA",
+      "subtitle": "Lista para pegar en tu bibliografía",
+      "inText": "Cita en el texto",
+      "copyReference": "Copiar referencia",
+      "copyInText": "Copiar cita en texto",
+      "empty": "Tu referencia aparecerá aquí"
+    },
+    "cta": {
+      "plagiarism": "Verificar plagio",
+      "detector": "Detectar IA",
+      "compare": "Comparar textos"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Cómo funciona",
+        "subtitle": "Genera referencias y citas en tres pasos.",
+        "steps": {
+          "step-1": {
+            "label": "Paso 1",
+            "title": "Elige el tipo de fuente",
+            "description": "Selecciona libro, artículo o página web para mostrar solo los campos necesarios.",
+            "items": [
+              {
+                "title": "Libro / Artículo / Web",
+                "description": ""
+              },
+              {
+                "title": "Campos mínimos",
+                "description": ""
+              },
+              {
+                "title": "APA 7",
+                "description": ""
+              }
+            ],
+            "imageAlt": "Paso 1"
+          },
+          "step-2": {
+            "label": "Paso 2",
+            "title": "Completa los datos",
+            "description": "Autores, año, título y URL/DOI opcional.",
+            "items": [
+              {
+                "title": "Autores con et al.",
+                "description": ""
+              },
+              {
+                "title": "Año o s.f.",
+                "description": ""
+              },
+              {
+                "title": "Título en sentence case",
+                "description": ""
+              }
+            ],
+            "imageAlt": "Paso 2"
+          },
+          "step-3": {
+            "label": "Paso 3",
+            "title": "Copia la cita",
+            "description": "Obtén referencia y cita en texto listas para pegar.",
+            "items": [
+              {
+                "title": "Referencia",
+                "description": ""
+              },
+              {
+                "title": "Cita en texto",
+                "description": ""
+              },
+              {
+                "title": "Botón copiar",
+                "description": ""
+              }
+            ],
+            "imageAlt": "Paso 3"
+          }
+        },
+        "description": ""
+      },
+      "useCases": {
+        "title": "Casos de uso",
+        "subtitle": "Listo para tus proyectos académicos.",
+        "description": "",
+        "items": {
+          "item-1": {
+            "title": "Tesis y disertaciones",
+            "description": "Mantén la bibliografía coherente en todo el documento."
+          },
+          "item-2": {
+            "title": "Artículos científicos",
+            "description": "Genera referencias rápidas para manuscritos y revisiones."
+          },
+          "item-3": {
+            "title": "Trabajos universitarios",
+            "description": "Entrega ensayos con citas formateadas."
+          },
+          "item-4": {
+            "title": "Blogs y reportes",
+            "description": "Cita fuentes web con fecha de consulta."
+          },
+          "item-5": {
+            "title": "Presentaciones",
+            "description": "Agrega referencias APA en diapositivas."
+          },
+          "item-6": {
+            "title": "Listas de lectura",
+            "description": "Comparte referencias limpias con tu equipo."
+          }
+        }
+      },
+      "related": {
+        "items": {
+          "plagiarism": {
+            "title": "Detector de plagio",
+            "description": "Revisa similitudes antes de entregar."
+          },
+          "detector": {
+            "title": "Detector de IA",
+            "description": "Evalúa probabilidad de IA en segundos."
+          },
+          "compare": {
+            "title": "Comparar textos",
+            "description": "Detecta diferencias entre versiones."
+          }
+        },
+        "title": "Más herramientas",
+        "subtitle": "Enlaza con otras comprobaciones",
+        "description": "Continúa con verificaciones complementarias.",
+        "tryNow": "Probar ahora",
+        "tools": {
+          "plagiarism": {
+            "title": "Detector de plagio",
+            "description": "Revisa similitudes antes de entregar."
+          },
+          "detector": {
+            "title": "Detector de IA",
+            "description": "Evalúa probabilidad de IA en segundos."
+          },
+          "compare": {
+            "title": "Comparar textos",
+            "description": "Detecta diferencias entre versiones."
+          }
+        }
+      },
+      "faq": {
+        "title": "Preguntas frecuentes",
+        "subtitle": "APA 7 en lenguaje sencillo.",
+        "items": {
+          "item-1": {
+            "question": "¿Qué versión de APA usan?",
+            "answer": "Usamos APA 7ª edición."
+          },
+          "item-2": {
+            "question": "¿Cómo escribir autores múltiples?",
+            "answer": "Escribe cada autor en una línea o separa con ;. Mostramos hasta 20 y luego usamos et al."
+          },
+          "item-3": {
+            "question": "¿Y si no hay fecha?",
+            "answer": "Usamos (s.f.) y la cita en texto mantiene el formato."
+          },
+          "item-4": {
+            "question": "¿Puedo citar una web?",
+            "answer": "Sí, incluye URL y fecha de consulta opcional."
+          },
+          "item-5": {
+            "question": "¿Se guardan mis datos?",
+            "answer": "No guardamos tus entradas ni consumimos créditos."
+          },
+          "item-6": {
+            "question": "¿Puedo copiar en un clic?",
+            "answer": "Sí, copia referencia e in-text por separado."
+          },
+          "item-7": {
+            "question": "¿Acepta DOI?",
+            "answer": "Pega el DOI con o sin https, lo normalizamos."
+          },
+          "item-8": {
+            "question": "¿Es gratis?",
+            "answer": "Sí, esta herramienta no usa créditos."
+          }
+        }
+      }
+    },
+    "lookup": {
+      "empty": "Ingresa DOI, ISBN o URL",
+      "notFound": "No encontramos datos, rellena a mano.",
+      "filled": "Datos encontrados. Revisa y genera la cita.",
+      "error": "Búsqueda falló, intenta de nuevo."
+    }
   }
 }
