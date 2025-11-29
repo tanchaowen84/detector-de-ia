@@ -264,9 +264,9 @@ export function ApaGenerator() {
           <div className="flex-1 h-px bg-slate-200" />
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.35fr_0.9fr] items-start" ref={formRef}>
-          <Card className="border-slate-100 bg-white/95 shadow-lg">
-            <CardHeader className="pb-3">
+        <div className="grid gap-6 lg:grid-cols-[1.35fr_0.9fr] items-stretch" ref={formRef}>
+          <Card className="border-slate-100 bg-white/95 shadow-lg h-full">
+            <CardHeader className="pb-4">
               <CardTitle className="text-lg font-semibold text-slate-800">
                 {t('form.title')}
               </CardTitle>
@@ -274,8 +274,8 @@ export function ApaGenerator() {
                 {t('form.description')}
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid gap-3 sm:grid-cols-2">
+            <CardContent className="flex flex-col gap-4 h-full">
+              <div className="space-y-3">
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-medium text-slate-700">
                     {t('form.sourceType')}
@@ -290,16 +290,17 @@ export function ApaGenerator() {
                     <option value="website">{t('form.types.website')}</option>
                   </select>
                 </div>
+
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-medium text-slate-700">
                     {fieldLabel('authors')}
                   </label>
                   <Textarea
-                    rows={3}
+                    rows={5}
                     value={fields.authors}
                     onChange={(e) => handleChange('authors', e.target.value)}
                     placeholder={fieldPlaceholder('authors')}
-                    className="resize-none"
+                    className="resize-none min-h-[140px]"
                   />
                   <p className="text-xs text-slate-500">{t('form.hints.authors')}</p>
                 </div>
@@ -374,7 +375,7 @@ export function ApaGenerator() {
                     value={fields.title}
                     onChange={(e) => handleChange('title', e.target.value)}
                     placeholder={fieldPlaceholder('title')}
-                    className="resize-none"
+                    className="resize-none min-h-[80px]"
                   />
                 </div>
 
@@ -420,7 +421,7 @@ export function ApaGenerator() {
                 )}
               </div>
 
-              <div className="flex flex-wrap gap-2 justify-end pt-2">
+              <div className="mt-auto flex flex-wrap gap-2 justify-end pt-2">
                 <Button
                   variant="ghost"
                   className="text-slate-600"
@@ -459,7 +460,7 @@ export function ApaGenerator() {
             </CardContent>
           </Card>
 
-          <Card className="border-slate-100 bg-white/95 shadow-lg">
+          <Card className="border-slate-100 bg-white/95 shadow-lg h-full flex flex-col">
             <CardHeader className="pb-2">
               <CardTitle className="text-lg font-semibold text-slate-800">
                 {t('result.title')}
@@ -468,8 +469,8 @@ export function ApaGenerator() {
                 {t('result.subtitle')}
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm text-slate-800 min-h-[140px]">
+            <CardContent className="flex flex-col gap-4 h-full">
+              <div className="space-y-2 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm text-slate-800 min-h-[180px]">
                 {reference ? reference : <p className="text-slate-400">{t('result.empty')}</p>}
               </div>
               <div className="space-y-2 rounded-2xl border border-slate-100 bg-slate-50/70 p-4 text-sm text-slate-800">
@@ -491,18 +492,6 @@ export function ApaGenerator() {
                   onClick={() => copyText(inText, t('result.inText'))}
                 >
                   {t('result.copyInText')}
-                </Button>
-              </div>
-
-              <div className="flex flex-wrap gap-2 pt-2 text-sm">
-                <Button asChild variant="ghost" className="text-indigo-600 hover:bg-indigo-50">
-                  <LocaleLink href={Routes.PlagiarismDetector}>{t('cta.plagiarism')}</LocaleLink>
-                </Button>
-                <Button asChild variant="ghost" className="text-indigo-600 hover:bg-indigo-50">
-                  <LocaleLink href={Routes.Root}>{t('cta.detector')}</LocaleLink>
-                </Button>
-                <Button asChild variant="ghost" className="text-indigo-600 hover:bg-indigo-50">
-                  <LocaleLink href={Routes.TextCompare}>{t('cta.compare')}</LocaleLink>
                 </Button>
               </div>
             </CardContent>
