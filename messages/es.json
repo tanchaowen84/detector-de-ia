@@ -1797,8 +1797,8 @@
                 "description": "Introduce varios autores separados por salto de línea o punto y coma; el Generador APA aplica et al. cuando corresponde."
               },
               {
-                "title": "Año o s.f.",
-                "description": "Añade el año de publicación o usa s.f. si la fuente no tiene fecha."
+                "title": "Año o n.d.",
+                "description": "Añade el año de publicación o usa n.d. (no date) si la fuente no tiene fecha."
               },
               {
                 "title": "Título en sentence case",
@@ -1929,7 +1929,7 @@
           },
           "item-8": {
             "question": "¿Cómo funciona con fuentes sin autor, sin fecha o con muchos autores?",
-            "answer": "Seguimos las reglas APA 7 para estos casos: sin autor usamos el título, sin fecha usamos (s.f.) y con muchos autores aceptamos hasta 20 y aplicamos et al. cuando corresponde en el Generador APA."
+            "answer": "Seguimos las reglas APA 7 para estos casos: sin autor usamos el título, sin fecha usamos (n.d.) y con muchos autores aceptamos hasta 20 y aplicamos et al. cuando corresponde en el Generador APA."
           },
           "item-9": {
             "question": "¿Guardan mis textos o las fuentes que introduzco?",
