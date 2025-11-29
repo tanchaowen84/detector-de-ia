@@ -1765,16 +1765,16 @@
     "blocks": {
       "howItWorks": {
         "title": "Cómo funciona el Generador APA",
-        "subtitle": "Genera referencias y citas en tres pasos.",
+        "subtitle": "Genera referencias y citas APA 7 con el Generador APA en tres pasos rápidos.",
         "steps": {
           "step-1": {
             "label": "Paso 1",
             "title": "Elige el tipo de fuente",
-            "description": "Elige si quieres citar un libro, un artículo de revista o una página web para mostrar solo los campos que necesitas.",
+            "description": "Elige libro, artículo de revista o página web para que el Generador APA muestre solo los campos necesarios y se prepare para buscar un DOI/ISBN/URL si lo pegas.",
             "items": [
               {
                 "title": "Libro / Artículo / Web",
-                "description": "Selecciona el tipo de fuente para adaptar el formulario y no ver campos innecesarios."
+                "description": "Selecciona el tipo de fuente y el formulario se adapta, ocultando campos innecesarios."
               },
               {
                 "title": "Campos mínimos",
@@ -1782,7 +1782,7 @@
               },
               {
                 "title": "APA 7",
-                "description": "La referencia se genera siguiendo el formato de la 7ª edición de APA."
+                "description": "El Generador APA crea la referencia siguiendo la 7ª edición de APA."
               }
             ],
             "imageAlt": "Paso 1"
@@ -1790,7 +1790,7 @@
           "step-2": {
             "label": "Paso 2",
             "title": "Completa los datos",
-            "description": "Escribe autores, año y título, y añade datos opcionales como páginas, revista, editorial, DOI o URL. Si pegaste un DOI, ISBN o URL y hay datos disponibles, algunos campos pueden rellenarse automáticamente.",
+            "description": "Escribe autores, año y título, y añade páginas, revista, editorial, DOI o URL. Si pegas un DOI, ISBN o URL y hay datos, el Generador APA rellena los campos y tú solo ajustas lo que falte.",
             "items": [
               {
                 "title": "Autores con et al.",
@@ -1810,7 +1810,7 @@
           "step-3": {
             "label": "Paso 3",
             "title": "Genera y copia la cita",
-            "description": "Pulsa en “Generar cita” para ver la referencia completa y la cita dentro del texto, y cópialas en un clic.",
+            "description": "Pulsa “Generar cita” para ver la referencia APA y la cita en el texto. Cópialas en un clic manteniendo el formato APA 7 intacto.",
             "items": [
               {
                 "title": "Referencia",

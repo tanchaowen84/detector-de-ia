@@ -1808,16 +1808,16 @@
     "blocks": {
       "howItWorks": {
         "title": "How the APA Citation Generator works",
-        "subtitle": "Create APA references and in-text citations in three steps.",
+        "subtitle": "Create APA references and in-text citations with the APA Citation Generator in three quick steps.",
         "steps": {
           "step-1": {
             "label": "Step 1",
             "title": "Choose your source type",
-            "description": "Start by choosing whether you want to cite a book, a journal article or a web page so the APA Citation Generator only shows the fields you need.",
+            "description": "Pick book, journal article or web page so the APA Citation Generator shows only the fields you need and gets ready to look up a DOI/ISBN/URL if you add one.",
             "items": [
               {
                 "title": "Book / Article / Web",
-                "description": "Select the source type so the form adapts and hides fields that are not relevant."
+                "description": "Select the source type and the form adapts, hiding fields that are not relevant."
               },
               {
                 "title": "Minimum required fields",
@@ -1825,7 +1825,7 @@
               },
               {
                 "title": "APA 7 format",
-                "description": "The reference is built following the 7th edition of the APA style."
+                "description": "The APA Citation Generator builds the reference following the 7th edition of APA style."
               }
             ],
             "imageAlt": "Step 1"
@@ -1833,7 +1833,7 @@
           "step-2": {
             "label": "Step 2",
             "title": "Complete the details",
-            "description": "Type authors, year and title, then add optional details like pages, journal, publisher, DOI or URL. If you pasted a DOI, ISBN or URL and data is available, some fields can be filled in automatically.",
+            "description": "Type authors, year and title, then add pages, journal, publisher, DOI or URL. If you paste a DOI, ISBN or URL and data exists, the APA Citation Generator pre-fills the fields so you only tweak what’s missing.",
             "items": [
               {
                 "title": "Multiple authors and et al.",
@@ -1853,7 +1853,7 @@
           "step-3": {
             "label": "Step 3",
             "title": "Generate and copy",
-            "description": "Click “Generate citation” to see both the full APA reference and the in-text citation, then copy each one with a single click.",
+            "description": "Click “Generate citation” to see the APA reference and the in-text citation. Copy either one with a single click and keep the APA 7 formatting intact.",
             "items": [
               {
                 "title": "Reference list entry",
