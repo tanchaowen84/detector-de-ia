@@ -5,6 +5,7 @@ import { deleteDetectionAction } from '@/actions/delete-detection';
 import { useTransition, useState } from 'react';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import {
   Dialog,
   DialogContent,
@@ -23,6 +24,7 @@ export function DeleteButton({ id, label, className }: DeleteButtonProps) {
   const [isPending, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
   const t = useTranslations('Dashboard.history.deleteDialog');
+  const router = useRouter();
 
   return (
     <>
@@ -35,6 +37,10 @@ export function DeleteButton({ id, label, className }: DeleteButtonProps) {
         onClick={(e) => {
           e.stopPropagation();
           setOpen(true);
+        }}
+        onKeyDown={(e) => {
+          // Prevent the parent table row keyboard handler (opens detail page)
+          e.stopPropagation();
         }}
       >
         {label}
@@ -65,6 +71,7 @@ export function DeleteButton({ id, label, className }: DeleteButtonProps) {
                       toast.error(res?.data?.error ?? t('error'));
                     } else {
                       toast.success(t('success'));
+                      router.refresh();
                     }
                   } catch (error) {
                     console.error('delete detection client error', error);

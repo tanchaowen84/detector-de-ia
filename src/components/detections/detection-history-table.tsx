@@ -43,6 +43,16 @@ function formatDateTime(date: Date, locale: string) {
   }).format(date);
 }
 
+function isInteractiveTarget(target: EventTarget | null) {
+  const el = target as HTMLElement | null;
+  if (!el) return false;
+  return Boolean(
+    el.closest(
+      'button, a, input, textarea, select, option, [role="button"], [role="link"]'
+    )
+  );
+}
+
 export function DetectionHistoryTable({ items, total, onDelete }: DetectionHistoryTableProps) {
   const router = useRouter();
   const t = useTranslations("Dashboard.history");
@@ -83,10 +93,14 @@ export function DetectionHistoryTable({ items, total, onDelete }: DetectionHisto
             <TableRow
                   key={item.id}
                   className="text-sm cursor-pointer transition duration-150 hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-200"
-                  onClick={() => router.push(`/dashboard/detections/${item.id}`)}
+                  onClick={(e) => {
+                    if (isInteractiveTarget(e.target)) return;
+                    router.push(`/dashboard/detections/${item.id}`);
+                  }}
                   role="link"
                   tabIndex={0}
                   onKeyDown={(e) => {
+                    if (isInteractiveTarget(e.target)) return;
                     if (e.key === 'Enter' || e.key === ' ') {
                       router.push(`/dashboard/detections/${item.id}`);
                     }

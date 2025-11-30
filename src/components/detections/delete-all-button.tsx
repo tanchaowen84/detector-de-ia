@@ -4,6 +4,7 @@ import { deleteAllDetectionsAction } from '@/actions/delete-detection';
 import { Button } from '@/components/ui/button';
 import { useTransition, useState } from 'react';
 import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 import {
   Dialog,
   DialogContent,
@@ -19,6 +20,7 @@ interface DeleteAllButtonProps {
 export function DeleteAllButton({ label }: DeleteAllButtonProps) {
   const [isPending, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -55,6 +57,7 @@ export function DeleteAllButton({ label }: DeleteAllButtonProps) {
                       toast.error(res?.data?.error ?? 'Failed to delete history');
                     } else {
                       toast.success('History deleted');
+                      router.refresh();
                     }
                   } catch (error) {
                     console.error('delete all client error', error);
