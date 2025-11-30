@@ -1,6 +1,6 @@
 import { getDb } from '@/db';
 import { detections, user } from '@/db/schema';
-import { and, desc, eq, lt, sql } from 'drizzle-orm';
+import { and, desc, eq, gt, lt, sql } from 'drizzle-orm';
 import type { DetectionSentence } from '@/db/schema';
 
 export type DetectionSourceType = 'text' | 'file' | 'url';
@@ -28,7 +28,8 @@ export async function getUserDetectionsSummary({
   }
   if (retentionDays && retentionDays > 0) {
     const cutoff = new Date(Date.now() - retentionDays * 24 * 60 * 60 * 1000);
-    whereClause = and(whereClause, lt(detections.createdAt, cutoff))!;
+    // Only keep records within the retention window
+    whereClause = and(whereClause, gt(detections.createdAt, cutoff))!;
     // Soft cleanup: delete outdated records for this user
     await db
       .delete(detections)
