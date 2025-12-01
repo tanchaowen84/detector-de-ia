@@ -2,7 +2,6 @@
 
 import { useMemo, useRef, useState, useTransition } from 'react';
 import { summarizeTextAction } from '@/actions/summarize-text';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -43,11 +42,6 @@ export function TextSummarizerHero() {
       chars: text.length,
     };
   }, [text]);
-
-  const handleSample = () => {
-    setText(t('hero.sampleText'));
-    toast.success(t('hero.sampleLoaded'));
-  };
 
   const handlePaste = async () => {
     try {
@@ -107,10 +101,7 @@ export function TextSummarizerHero() {
     <section className="relative py-16">
       <div className="relative z-10 mx-auto max-w-6xl px-4 lg:px-6 space-y-8">
         <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap items-center gap-3">
-            <Badge className="bg-indigo-50 text-indigo-700 border-indigo-200">{t('hero.badge')}</Badge>
-            <div className="text-sm text-slate-500">{t('hero.tagline')}</div>
-          </div>
+          <div className="text-sm text-slate-500">{t('hero.tagline')}</div>
           <div className="flex flex-col gap-3">
             <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               {t('hero.title')}
@@ -147,9 +138,6 @@ export function TextSummarizerHero() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex flex-wrap gap-2">
-                <Button variant="secondary" size="sm" onClick={handleSample} disabled={isPending}>
-                  {t('input.sample')}
-                </Button>
                 <Popover open={isUrlOpen} onOpenChange={setIsUrlOpen}>
                   <PopoverTrigger asChild>
                     <Button variant="secondary" size="sm" className="gap-2" disabled={isPending}>
@@ -215,7 +203,7 @@ export function TextSummarizerHero() {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder={t('input.placeholder')}
-                className="min-h-[220px]"
+                className="h-64 resize-none"
                 disabled={isPending}
               />
 
@@ -233,6 +221,24 @@ export function TextSummarizerHero() {
                 </div>
                 <div className="text-emerald-600 font-medium">{t('input.free')}</div>
               </div>
+
+              <div className="flex justify-end">
+                <Button
+                  size="lg"
+                  className="bg-slate-900 text-white hover:bg-slate-800 px-6 rounded-full"
+                  onClick={runSummarize}
+                  disabled={isPending || isUploading}
+                >
+                  {isPending ? (
+                    <>
+                      <Loader2Icon className="mr-2 h-4 w-4 animate-spin" />
+                      {t('hero.loading')}
+                    </>
+                  ) : (
+                    t('hero.cta')
+                  )}
+                </Button>
+              </div>
             </CardContent>
           </Card>
 
@@ -244,47 +250,31 @@ export function TextSummarizerHero() {
               </div>
               <div className="text-xs text-slate-500 tabular-nums">{lengthPercent[0]}%</div>
             </CardHeader>
-            <CardContent className="space-y-3">
-              {isPending ? (
-                <div className="space-y-3 animate-pulse">
-                  <div className="h-3 w-5/6 rounded bg-slate-200" />
-                  <div className="h-3 w-4/6 rounded bg-slate-200" />
-                  <div className="h-3 w-3/6 rounded bg-slate-200" />
-                </div>
-              ) : summary ? (
-                <div className="prose prose-sm text-slate-800 max-w-none whitespace-pre-wrap">
-                  {summary}
-                </div>
-              ) : (
-                <div className="text-sm text-slate-500">
-                  {t('output.empty')}
-                </div>
-              )}
-              <div className="flex flex-wrap gap-2 text-xs text-slate-500">
+            <CardContent className="flex h-full flex-col space-y-3">
+              <div className="min-h-[220px] rounded-lg border border-slate-100 bg-slate-50/60 px-4 py-3">
+                {isPending ? (
+                  <div className="space-y-3 animate-pulse">
+                    <div className="h-3 w-5/6 rounded bg-slate-200" />
+                    <div className="h-3 w-4/6 rounded bg-slate-200" />
+                    <div className="h-3 w-3/6 rounded bg-slate-200" />
+                  </div>
+                ) : summary ? (
+                  <div className="prose prose-sm text-slate-800 max-w-none whitespace-pre-wrap">
+                    {summary}
+                  </div>
+                ) : (
+                  <div className="text-sm text-slate-500">
+                    {t('output.empty')}
+                  </div>
+                )}
+              </div>
+              <div className="mt-auto flex flex-wrap justify-end gap-2 text-xs text-slate-500 pt-2">
                 <span>{t('output.stats.sentences')}</span>
                 <span>·</span>
                 <span>{t('output.stats.words')}</span>
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        <div className="flex justify-end">
-          <Button
-            size="lg"
-            className="bg-slate-900 text-white hover:bg-slate-800 px-6 rounded-full"
-            onClick={runSummarize}
-            disabled={isPending || isUploading}
-          >
-            {isPending ? (
-              <>
-                <Loader2Icon className="mr-2 h-4 w-4 animate-spin" />
-                {t('hero.loading')}
-              </>
-            ) : (
-              t('hero.cta')
-            )}
-          </Button>
         </div>
       </div>
     </section>

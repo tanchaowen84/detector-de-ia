@@ -157,7 +157,7 @@ export const summarizeTextAction = actionClient
 
     // Billing: 0.01 credit per char, minimum 1 credit; URL-only uses fallback length
     const charCount = contentText.length || (parsedInput.websiteUrl ? 1000 : 0);
-    let requiredCredits = Math.max(1, Math.ceil(charCount * 0.01));
+    let requiredCredits = Math.max(1, Math.ceil(charCount * 0.001));
 
     if (planContext.isGuest) {
       const ip = await getClientIp();
