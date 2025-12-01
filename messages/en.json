@@ -2088,13 +2088,14 @@
               },
               {
                 "title": "Quick check",
-                "description": "Before summarizing, make sure your text is complete or that the link opens correctly in your browser to avoid incomplete results."
+                "description": "We instantly flag missing content or invalid links so you can fix them without wasting time."
               },
               {
                 "title": "Privacy",
                 "description": "We do not store your texts or summaries or extract personal data from them. Your content is processed temporarily only to generate the result and is then discarded."
               }
-            ]
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step1.webp"
           },
           "step-2": {
             "label": "Step 2 · Adjust the summary length",
@@ -2112,7 +2113,8 @@
                 "title": "Key ideas first",
                 "description": "The AI Summarizer focuses on key ideas, arguments and data points to preserve the meaning of the original text with fewer words."
               }
-            ]
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step2.webp"
           },
           "step-3": {
             "label": "Step 3 · Copy and use your summary",
@@ -2130,7 +2132,8 @@
                 "title": "Tweak and rerun",
                 "description": "Change the length and run the AI Summarizer again as many times as you need until the result fits your use case."
               }
-            ]
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step3.webp"
           }
         }
       },

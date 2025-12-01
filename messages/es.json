@@ -2045,13 +2045,14 @@
               },
               {
                 "title": "Comprobación rápida",
-                "description": "Pega tu texto, añade un enlace o sube un archivo de texto; el resumidor de textos convierte todo a texto plano antes de resumir."
+                "description": "Detectamos de inmediato si el enlace no es válido o si falta contenido, para que corrijas sin perder tiempo."
               },
               {
                 "title": "Privacidad",
                 "description": "No guardamos tus textos ni tus resúmenes ni extraemos datos personales de ellos. Tu contenido se procesa de forma temporal únicamente para generar el resultado y después se descarta."
               }
-            ]
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step1.webp"
           },
           "step-2": {
             "label": "Paso 2 · Ajusta la longitud del resumen",
@@ -2069,7 +2070,8 @@
                 "title": "Ideas clave primero",
                 "description": "El resumidor de textos se centra en ideas, argumentos y datos clave para mantener el sentido del texto original con menos palabras."
               }
-            ]
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step2.webp"
           },
           "step-3": {
             "label": "Paso 3 · Copia y usa tu resumen",
@@ -2087,7 +2089,8 @@
                 "title": "Ajusta y reintenta",
                 "description": "Cambia la longitud y vuelve a resumir tantas veces como quieras hasta que el resultado encaje contigo."
               }
-            ]
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step3.webp"
           }
         }
       },
