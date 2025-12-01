@@ -49,11 +49,11 @@
       "notAvailable": "Not Available",
       "daysTrial": "{days}-day free trial"
     },
-      "CheckoutButton": {
-        "loading": "Loading...",
-        "checkoutFailed": "No se pudo abrir la página de pago"
-      }
-    },
+    "CheckoutButton": {
+      "loading": "Loading...",
+      "checkoutFailed": "No se pudo abrir la página de pago"
+    }
+  },
   "PlagiarismPage": {
     "metadata": {
       "title": "Detector de plagio online rápido y preciso | VeriIA",
@@ -1964,14 +1964,14 @@
   },
   "TextSummarizerPage": {
     "metadata": {
-      "title": "Resumidor de textos con IA en español e inglés | VeriIA",
-      "description": "Pega texto, sube un archivo o deja una URL y obtén un resumen claro en segundos. Controla la longitud, gratis para probar."
+      "title": "Resumidor de textos con IA gratis | VeriIA",
+      "description": "Resumidor de textos con IA para artículos, correos y documentos largos. Pega texto, archivo o URL y obtén un resumen claro en segundos."
     },
     "hero": {
       "badge": "Nuevo",
-      "tagline": "Resume texto, archivos o URLs con IA",
+      "tagline": "Resumidor de textos con IA para tu día a día",
       "title": "Resumidor de textos con IA, rápido y claro",
-      "subtitle": "Pega tu contenido, elige la longitud y recibe un solo resumen limpio, sin relleno.",
+      "subtitle": "Pega tu contenido, ajusta la longitud y recibe un único resumen limpio, sin relleno ni tecnicismos.",
       "lengthLabel": "Longitud del resumen",
       "lengthShort": "Corto",
       "lengthLong": "Largo",
@@ -1990,11 +1990,11 @@
       "apply": "Aplicar",
       "clear": "Limpiar",
       "placeholder": "Empieza a escribir o pega tu contenido aquí...",
-      "free": "Versión de prueba — se muestra como gratis"
+      "free": "Prueba gratis"
     },
     "input": {
       "title": "Entrada",
-      "subtitle": "Pega texto, agrega una URL o sube un archivo de texto.",
+      "subtitle": "Pega texto, agrega una URL o sube un archivo de texto para resumir en segundos.",
       "sample": "Texto muestra",
       "addUrl": "Añadir URL",
       "paste": "Pegar texto",
@@ -2009,11 +2009,11 @@
         "words": "{value} palabras",
         "chars": "{value} caracteres"
       },
-      "free": "Gratis para probar"
+      "free": "Gratis para empezar"
     },
     "output": {
       "title": "Resumen",
-      "subtitle": "Un único resumen conciso basado en tu entrada.",
+      "subtitle": "Un resumen conciso generado a partir de tu texto.",
       "empty": "El resumen aparecerá aquí cuando lo ejecutes.",
       "hint": "Desplázate para ver el resumen completo",
       "copy": "Copiar resumen",
@@ -2031,112 +2031,158 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "Cómo funciona el resumidor",
-        "subtitle": "Pega o suelta la fuente, elige longitud y obtén un resumen en segundos.",
+        "title": "Cómo funciona el resumidor de textos",
+        "subtitle": "Pega tu contenido, ajusta la longitud del resumen y obtén un texto claro en segundos.",
         "steps": {
           "step-1": {
-            "label": "Paso 1 · Añade tu fuente",
-            "imageAlt": "Usuario pegando texto o URL en el resumidor",
+            "label": "Paso 1 · Añade tu texto, archivo o URL",
+            "imageAlt": "Usuario pegando texto o URL en el resumidor de textos",
             "items": [
-              { "title": "Texto, URL o archivo", "description": "Pega texto, añade un enlace o sube un archivo de texto; lo convertimos antes de resumir." },
-              { "title": "Validación rápida", "description": "Si falta contenido o el enlace no es válido, avisamos sin gastar créditos." },
-              { "title": "Privacidad", "description": "El usuario ve la versión gratis; el procesamiento y el conteo ocurren en el backend." }
+              {
+                "title": "Texto, URL o archivo",
+                "description": "Pega tu texto, añade un enlace o sube un archivo de texto; el resumidor de textos convierte todo a texto plano antes de resumir."
+              },
+              {
+                "title": "Comprobación rápida",
+                "description": "Si detectamos que falta contenido o que el enlace no es válido, te lo indicamos al instante para que puedas corregirlo sin perder tiempo."
+              },
+              {
+                "title": "Privacidad",
+                "description": "No guardamos tus textos ni tus resúmenes ni extraemos datos personales de ellos. Tu contenido se procesa de forma temporal únicamente para generar el resultado y después se descarta."
+              }
             ]
           },
           "step-2": {
-            "label": "Paso 2 · Ajusta la longitud",
+            "label": "Paso 2 · Ajusta la longitud del resumen",
             "imageAlt": "Control deslizante de longitud del resumen",
             "items": [
-              { "title": "Slider 0–100", "description": "Controla cuán corto o largo quieres el resumen sin configurar nada más." },
-              { "title": "Idioma automático", "description": "Resumimos en el mismo idioma detectado de la entrada." },
-              { "title": "Coste bajo", "description": "Cobro interno a 0.001 crédito por carácter, con mínimo de 1 crédito." }
+              {
+                "title": "Control con deslizador 0–100",
+                "description": "Decide si quieres un resumen más corto o más detallado moviendo un único control visual."
+              },
+              {
+                "title": "Idioma automático",
+                "description": "Detectamos automáticamente el idioma de entrada y devolvemos el resumen en el mismo idioma, sin que tengas que configurar nada."
+              },
+              {
+                "title": "Ideas clave primero",
+                "description": "El resumidor de textos se centra en ideas, argumentos y datos clave para mantener el sentido del texto original con menos palabras."
+              }
             ]
           },
           "step-3": {
-            "label": "Paso 3 · Copia y comparte",
+            "label": "Paso 3 · Copia y usa tu resumen",
             "imageAlt": "Resumen generado con botón de copiar",
             "items": [
-              { "title": "Bloque desplazable", "description": "El resumen vive en un contenedor fijo con scroll visible al pasar el mouse." },
-              { "title": "Copiar en un clic", "description": "Botón dedicado debajo del bloque para copiar todo el resumen al portapapeles." },
-              { "title": "Reintenta al instante", "description": "Ajusta la longitud y ejecuta de nuevo si necesitas más o menos detalle." }
+              {
+                "title": "Bloque desplazable",
+                "description": "Lee el resumen completo en un contenedor con scroll cuando el texto sea largo."
+              },
+              {
+                "title": "Copiar en un clic",
+                "description": "Usa el botón de copiar para pegar el resumen donde lo necesites: correos, apuntes, documentos o chats."
+              },
+              {
+                "title": "Ajusta y reintenta",
+                "description": "Cambia la longitud y vuelve a resumir tantas veces como quieras hasta que el resultado encaje contigo."
+              }
             ]
           }
         }
       },
       "useCases": {
-        "title": "Dónde encaja el resumidor",
-        "subtitle": "Briefs, correos y artículos largos: mantén lo esencial en menos tiempo.",
-        "description": "Reduce fricción en revisiones rápidas sin perder contexto ni tono.",
+        "title": "Dónde usar el resumidor de textos",
+        "subtitle": "Briefs, correos y artículos largos: quédate con lo esencial en menos tiempo.",
+        "description": "Usa el resumidor de textos como filtro rápido cuando no puedes leerlo todo, pero sí necesitas entender lo importante y compartirlo con otros.",
         "items": {
-          "item-1": { "title": "Estudio y apuntes", "description": "Convierte capítulos o PDFs de clase en resúmenes listos para repasar." },
-          "item-2": { "title": "Investigación y papers", "description": "Saca TL;DR bilingües para coordinar con equipos internacionales." },
-          "item-3": { "title": "Briefs y marketing", "description": "Resume doc briefs o research para campañas en un párrafo accionable." },
-          "item-4": { "title": "Correos ejecutivos", "description": "Envía resúmenes claros de threads largos sin ruido ni formalismos extra." },
-          "item-5": { "title": "Clientes y soporte", "description": "Condensa tickets extensos en puntos clave para responder más rápido." },
-          "item-6": { "title": "Lectura diaria", "description": "Aplica a newsletters, blogs o posts extensos y comparte un TL;DR." }
+          "item-1": {
+            "title": "Estudio, apuntes y resúmenes de clase",
+            "description": "Convierte capítulos, apuntes desordenados o lecturas obligatorias en resúmenes claros para estudiar. Puedes pegar partes de un libro, tus notas o un PDF convertido a texto y obtener un esquema más fácil de repasar antes de un examen."
+          },
+          "item-2": {
+            "title": "Investigación, informes y documentos técnicos",
+            "description": "Cuando trabajas con informes largos, estudios o documentación técnica, el resumidor de textos te ayuda a quedarte con objetivos, metodología y conclusiones principales. Después puedes compartir el resumen con tu equipo para decidir qué se lee en profundidad."
+          },
+          "item-3": {
+            "title": "Briefs, propuestas y documentación de proyectos",
+            "description": "Resume briefs creativos, propuestas comerciales o documentos de proyecto en un par de párrafos accionables. Ideal para preparar una reunión rápida, una presentación o un mensaje de actualización para stakeholders sin pegar el documento completo."
+          },
+          "item-4": {
+            "title": "Correos largos y hilos de email",
+            "description": "Copia un correo muy largo o un hilo completo y deja que el resumidor de textos extraiga decisiones, fechas y tareas acordadas. Así puedes responder con claridad o guardar solo lo esencial en tu gestor de tareas."
+          },
+          "item-5": {
+            "title": "Atención al cliente y soporte interno",
+            "description": "Condensa tickets extensos, mensajes de clientes o transcripciones de chat en puntos clave: qué pasó, qué se probó y qué queda por hacer. Esto reduce el tiempo de lectura y ayuda a pasar casos entre agentes sin perder contexto."
+          },
+          "item-6": {
+            "title": "Lectura diaria, newsletters y contenido web",
+            "description": "Pega artículos, newsletters o posts extensos y genera un TL;DR que puedas guardar o compartir. Útil para no perder información interesante aunque no tengas tiempo de leer todo en detalle en ese momento."
+          }
         }
       },
       "related": {
-        "title": "Combínalo con estas herramientas",
-        "subtitle": "Cubre todo tu flujo de revisión.",
+        "title": "Combínalo con otras herramientas de VeriIA",
+        "subtitle": "Cubre todo tu flujo de escritura y revisión: desde el resumen hasta la verificación de calidad.",
+        "tryNow": "Probar ahora",
         "items": {
           "detector": {
             "title": "Detector de IA",
-            "description": "Comprueba si el texto suena a IA antes de compartirlo."
+            "description": "Comprueba si un texto suena generado por IA antes de enviarlo a clientes, profesores o jefes. Úsalo después de resumir para asegurarte de que el resultado sigue sonando natural."
           },
           "plagiarism": {
             "title": "Detector de plagio",
-            "description": "Verifica originalidad tras resumir documentos largos."
+            "description": "Verifica la originalidad de trabajos, ensayos o informes resumidos. Ideal cuando necesitas demostrar que tu contenido es propio y no una copia de otras fuentes."
           },
           "counter": {
-            "title": "Contador de palabras",
-            "description": "Mantén el resumen dentro de límites estrictos."
+            "title": "Generador de citas APA",
+            "description": "Si estás resumiendo artículos académicos o papers, genera al momento las citas y referencias en formato APA para tu bibliografía o tu trabajo final."
           }
         }
       },
       "faq": {
-        "title": "Preguntas frecuentes sobre el resumidor",
-        "subtitle": "Respuestas rápidas antes de probarlo.",
+        "title": "Preguntas frecuentes sobre el resumidor de textos",
+        "subtitle": "Dudas típicas antes de confiarle tus documentos al resumidor de textos.",
         "items": {
           "item-1": {
-            "question": "¿El resumen mantiene el idioma original?",
-            "answer": "Sí. Detectamos automáticamente el idioma de entrada y devolvemos el resumen en el mismo idioma."
+            "question": "¿Qué tipos de contenido puedo resumir con el resumidor de textos?",
+            "answer": "Puedes pegar texto directamente, añadir una URL o subir archivos de texto (por ejemplo, .txt, markdown o JSON). El resumidor de textos convierte todo a texto plano antes de generar el resumen. Si trabajas con PDFs o imágenes, primero tendrás que extraer el texto o usar una página donde el contenido sea accesible."
           },
           "item-2": {
-            "question": "¿Puedo pegar URLs largas o con paywall?",
-            "answer": "Puedes pegar la URL; si el modelo no puede acceder, prueba pegar el texto directamente para asegurar el resultado."
+            "question": "¿Cuánto texto puedo pegar o subir de una sola vez?",
+            "answer": "Cada resumen tiene un límite de caracteres para mantener la calidad y el tiempo de respuesta. Si pegas un texto muy largo, el resumidor de textos te avisará antes de procesarlo para que puedas recortarlo o dividirlo en varias partes. Como referencia, suele ser suficiente para artículos, correos largos y capítulos razonables."
           },
           "item-3": {
-            "question": "¿Cuánto texto puedo pegar?",
-            "answer": "El límite depende de tu plan; si es muy extenso, el sistema avisará antes de procesar."
+            "question": "¿El resumidor de textos mantiene el idioma y el tono originales?",
+            "answer": "Sí. Detectamos automáticamente el idioma de entrada y devolvemos el resumen en ese mismo idioma. El resumidor de textos intenta conservar el tono, la intención y los matices principales del autor, reduciendo sobre todo el volumen y las repeticiones."
           },
           "item-4": {
-            "question": "¿Se guardan mis resúmenes?",
-            "answer": "En la versión actual no se muestra historial al usuario; el procesamiento se usa solo para generar el resumen."
+            "question": "¿El resumidor de textos puede inventar o cambiar información?",
+            "answer": "El objetivo del resumidor de textos es condensar lo que ya está en tu contenido, no inventar datos nuevos. Aun así, ningún modelo es perfecto: podría simplificar demasiado alguna idea o pasar por alto un matiz. Para textos sensibles (legales, médicos, contratos, etc.) te recomendamos revisar siempre las partes clave del original antes de tomar decisiones."
           },
           "item-5": {
-            "question": "¿Puedo subir PDFs o imágenes?",
-            "answer": "Por ahora solo se aceptan archivos de texto (texto plano, markdown, JSON). Para PDFs, pega el texto o una URL si el modelo puede navegar."
+            "question": "¿Es seguro usar el resumidor de textos con documentos privados o sensibles?",
+            "answer": "Sí. El resumidor de textos procesa tu contenido de forma temporal solo para generar el resultado y después lo descarta. No guardamos tus textos ni tus resúmenes, no creamos historiales de lectura y no utilizamos tus documentos para entrenar modelos propios. Aun así, si tu organización tiene políticas muy estrictas, revisa siempre sus normas internas."
           },
           "item-6": {
-            "question": "¿Y si el resumen queda muy largo o muy corto?",
-            "answer": "Ajusta el control de longitud y vuelve a ejecutar. Cada intento usa la misma tarifa por carácter."
+            "question": "¿Puedo usar el resumidor de textos para trabajos académicos sin problemas de plagio?",
+            "answer": "Un resumen sigue basado en ideas de otra persona, por lo que en contexto académico deberías citar siempre la fuente original. El resumidor de textos te ayuda a entender y condensar, pero no sustituye tu propia redacción ni las normas de citación de tu centro. Para ir sobre seguro, reescribe el contenido con tus palabras y añade las referencias adecuadas."
           },
           "item-7": {
-            "question": "¿Se conserva el formato (negritas, títulos)?",
-            "answer": "Devolvemos texto plano; eliminamos formato para mantener el resumen conciso."
+            "question": "¿Qué pasa si intento resumir una URL detrás de un login o paywall?",
+            "answer": "El resumidor de textos necesita poder acceder al contenido de la página. Si la URL está detrás de un login, un paywall o un entorno muy restringido, es probable que el modelo no pueda leerla. En esos casos, la opción más fiable es copiar el texto manualmente y pegarlo directamente en la herramienta."
           },
           "item-8": {
-            "question": "¿Hay límite de palabras/caracteres por solicitud?",
-            "answer": "Sí, depende del límite de tu plan. Si lo superas, verás un aviso antes de procesar."
+            "question": "¿Cómo puedo controlar la longitud y el nivel de detalle del resumen?",
+            "answer": "Puedes ajustar la longitud moviendo el control deslizante de corto a largo antes de ejecutar el resumidor de textos. If el resultado se queda demasiado superficial o demasiado denso, solo tienes que cambiar la posición del deslizador y volver a resumir hasta que el nivel de detalle encaje con lo que necesitas."
           },
           "item-9": {
-            "question": "¿Funcionan URLs detrás de login?",
-            "answer": "Probablemente no. Si el modelo no puede acceder, pega el contenido manualmente para asegurar el resultado."
+            "question": "¿El resumidor de textos es gratis? ¿Cómo funcionan los créditos?",
+            "answer": "Puedes usar el resumidor de textos gratis con un sistema de créditos muy sencillo: cada carácter de entrada consume 0,001 crédito. Sin registrarte dispones de 200 créditos y, al crear una cuenta, obtienes 800 créditos adicionales. Con un uso normal, esto te permite generar muchos resúmenes sin tener que pagar ni introducir tarjeta."
           },
           "item-10": {
-            "question": "¿Cómo se calculan los créditos?",
-            "answer": "Se cobra a 0.001 crédito por carácter de entrada (mínimo 1 crédito). Solo URL usa una longitud base pequeña si no se envía texto."
+            "question": "¿Con qué otras herramientas de VeriIA se lleva bien el resumidor de textos?",
+            "answer": "Después de usar el resumidor de textos, puedes enviar el resultado a otras herramientas de VeriIA según tu caso: el Detector de IA te ayuda a comprobar si el texto suena demasiado generado por modelos, el Detector de plagio te sirve para revisar la originalidad de trabajos largos y el Generador de citas APA te permite crear referencias bibliográficas cuando resumes artículos académicos o papers."
           }
         }
       }

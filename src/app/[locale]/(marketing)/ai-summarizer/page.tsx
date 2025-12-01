@@ -20,7 +20,7 @@ export async function generateMetadata({
   return constructMetadata({
     title: t('title'),
     description: t('description'),
-    canonicalUrl: getUrlWithLocale('/text-summarizer', locale),
+    canonicalUrl: getUrlWithLocale('/ai-summarizer', locale),
   });
 }
 
