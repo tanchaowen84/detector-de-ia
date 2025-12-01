@@ -2043,6 +2043,7 @@
       "paste": "Paste text",
       "upload": "Upload file",
       "uploading": "Uploading...",
+      "uploaded": "File \"{name}\" ready to summarize",
       "urlLabel": "URL",
       "urlPlaceholder": "https://example.com/article",
       "apply": "Apply",

@@ -2000,6 +2000,7 @@
       "paste": "Pegar texto",
       "upload": "Subir archivo",
       "uploading": "Subiendo...",
+      "uploaded": "Archivo \"{name}\" listo para resumir",
       "urlLabel": "URL",
       "urlPlaceholder": "https://ejemplo.com/articulo",
       "apply": "Aplicar",

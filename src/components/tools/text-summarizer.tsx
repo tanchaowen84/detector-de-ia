@@ -63,7 +63,7 @@ export function TextSummarizerHero() {
       const { url } = await uploadFileFromBrowser(file, 'uploads/summaries');
       setFileUrl(url);
       setFileName(file.name);
-      toast.success(t('hero.uploaded', { name: file.name }));
+      toast.success(t('input.uploaded', { name: file.name }));
     } catch (error) {
       console.error(error);
       toast.error(t('errors.upload'));
