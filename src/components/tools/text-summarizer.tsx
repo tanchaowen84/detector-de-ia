@@ -127,8 +127,8 @@ export function TextSummarizerHero() {
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
-          <Card className="border-slate-100 bg-white/95 shadow-lg">
+        <div className="grid gap-6 lg:grid-cols-2 items-stretch">
+          <Card className="border-slate-100 bg-white/95 shadow-lg h-full flex flex-col">
             <CardHeader className="pb-3">
               <CardTitle className="text-lg font-semibold text-slate-800 flex items-center gap-2">
                 {t('input.title')}
@@ -137,7 +137,7 @@ export function TextSummarizerHero() {
                 {t('input.subtitle')}
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="flex flex-col h-full space-y-4">
               <div className="flex flex-wrap gap-2">
                 <Popover open={isUrlOpen} onOpenChange={setIsUrlOpen}>
                   <PopoverTrigger asChild>
@@ -223,7 +223,7 @@ export function TextSummarizerHero() {
                 <div className="text-emerald-600 font-medium">{t('input.free')}</div>
               </div>
 
-              <div className="flex justify-end">
+              <div className="flex justify-end mt-auto">
                 <Button
                   size="lg"
                   className="bg-slate-900 text-white hover:bg-slate-800 px-6 rounded-full"
@@ -243,7 +243,7 @@ export function TextSummarizerHero() {
             </CardContent>
           </Card>
 
-          <Card className="border-slate-100 bg-white/95 shadow-lg">
+          <Card className="border-slate-100 bg-white/95 shadow-lg h-full flex flex-col">
             <CardHeader className="pb-3 flex flex-row items-center justify-between gap-3">
               <div>
                 <CardTitle className="text-lg font-semibold text-slate-800">{t('output.title')}</CardTitle>
@@ -253,7 +253,7 @@ export function TextSummarizerHero() {
             </CardHeader>
             <CardContent className="flex h-full flex-col space-y-3">
               <div
-                className="h-64 overflow-auto rounded-lg border border-slate-100 bg-slate-50/60 px-4 py-3"
+                className="flex-1 min-h-[260px] overflow-auto rounded-lg border border-slate-100 bg-slate-50/60 px-4 py-3"
                 style={{ scrollbarGutter: 'stable' }}
               >
                 {isPending ? (
@@ -291,11 +291,6 @@ export function TextSummarizerHero() {
                 >
                   {t('output.copy')}
                 </Button>
-              </div>
-              <div className="mt-auto flex flex-wrap justify-end gap-2 text-xs text-slate-500 pt-2">
-                <span>{t('output.stats.sentences')}</span>
-                <span>·</span>
-                <span>{t('output.stats.words')}</span>
               </div>
             </CardContent>
           </Card>
