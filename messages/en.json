@@ -2004,5 +2004,109 @@
       "error": "Lookup failed. Please try again.",
       "normalized": "Authors have been normalised to initials and last names"
     }
+  },
+  "TextSummarizerPage": {
+    "metadata": {
+      "title": "AI Summarizer in Spanish and English | VeriIA",
+      "description": "Paste text, upload a file, or drop a URL and get a concise AI summary in seconds. Adjustable length, privacy-friendly, and free to try."
+    },
+    "hero": {
+      "badge": "Nuevo",
+      "tagline": "Resume texto, archivos o URLs con IA",
+      "title": "AI Summarizer for clear, fast takeaways",
+      "subtitle": "Paste your content, choose the length, and get a single clean summary without fluff.",
+      "lengthLabel": "Summary length",
+      "lengthShort": "Short",
+      "lengthLong": "Long",
+      "cta": "Summarize now",
+      "loading": "Summarizing...",
+      "done": "Summary ready",
+      "sampleText": "La educación digital está transformando la forma en que los estudiantes acceden al conocimiento. Plataformas adaptativas permiten personalizar el ritmo de aprendizaje, mientras que la analítica ayuda a detectar brechas y ofrecer apoyo oportuno. Sin embargo, persisten retos como la brecha de conectividad y la formación docente en competencias digitales.",
+      "sampleLoaded": "Sample text added",
+      "pasted": "Pasted from clipboard",
+      "upload": "Upload file",
+      "uploading": "Uploading...",
+      "addUrl": "Add URL",
+      "paste": "Paste text",
+      "urlLabel": "Summarize a URL",
+      "urlPlaceholder": "https://ejemplo.com/articulo",
+      "apply": "Apply",
+      "clear": "Clear",
+      "placeholder": "Start typing or paste your content here...",
+      "free": "Free preview — no credits shown"
+    },
+    "input": {
+      "title": "Input",
+      "subtitle": "Paste text, attach a URL, or upload a text file.",
+      "sample": "Sample text",
+      "addUrl": "Add URL",
+      "paste": "Paste text",
+      "upload": "Upload file",
+      "uploading": "Uploading...",
+      "urlLabel": "URL",
+      "urlPlaceholder": "https://example.com/article",
+      "apply": "Apply",
+      "clear": "Clear",
+      "placeholder": "Start typing or paste your content here...",
+      "stats": {
+        "words": "{value} words",
+        "chars": "{value} chars"
+      },
+      "free": "Free to try"
+    },
+    "output": {
+      "title": "Summary",
+      "subtitle": "A single concise paragraph based on your input.",
+      "empty": "Your summary will appear here after you run it.",
+      "stats": {
+        "sentences": "Sentences calculated automatically",
+        "words": "Word count shown after generation"
+      }
+    },
+    "errors": {
+      "missing": "Add text, a URL, or a file to summarize.",
+      "generic": "Could not generate the summary. Try again.",
+      "upload": "Upload failed. Try another file.",
+      "clipboard": "Clipboard access was blocked.",
+      "emptyClipboard": "Clipboard is empty."
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "How the summarizer works",
+        "subtitle": "Paste or drop your source, pick a length, and get a concise summary in seconds.",
+        "steps": {
+          "step-1": { "label": "Step 1 · Add your source" },
+          "step-2": { "label": "Step 2 · Choose length" },
+          "step-3": { "label": "Step 3 · Copy and share" }
+        }
+      },
+      "useCases": {
+        "title": "Where the summarizer fits",
+        "subtitle": "Research briefs, emails, docs—keep them short without losing the point."
+      },
+      "related": {
+        "title": "Pair it with these tools",
+        "subtitle": "Cover your review workflow end to end.",
+        "items": {
+          "detector": {
+            "title": "AI content detector",
+            "description": "Check if the source sounds AI-like before sharing."
+          },
+          "plagiarism": {
+            "title": "Plagiarism checker",
+            "description": "Validate originality after summarizing long documents."
+          },
+          "counter": {
+            "title": "Word counter",
+            "description": "Keep summaries within strict limits."
+          }
+        }
+      },
+      "faq": {
+        "title": "FAQ about the summarizer",
+        "subtitle": "Quick answers before you try it.",
+        "items": {}
+      }
+    }
   }
 }

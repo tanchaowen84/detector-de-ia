@@ -17,6 +17,7 @@ function getEnabledStaticRoutes(): string[] {
     '/',
     '/plagiarism-detector',
     '/text-compare',
+    '/text-summarizer',
     '/word-counter',
     '/apa-generator',
     '/pricing',

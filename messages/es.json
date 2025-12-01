@@ -1961,5 +1961,109 @@
       "error": "Búsqueda falló, intenta de nuevo.",
       "normalized": "Autores normalizados con iniciales"
     }
+  },
+  "TextSummarizerPage": {
+    "metadata": {
+      "title": "Resumidor de textos con IA en español e inglés | VeriIA",
+      "description": "Pega texto, sube un archivo o deja una URL y obtén un resumen claro en segundos. Controla la longitud, gratis para probar."
+    },
+    "hero": {
+      "badge": "Nuevo",
+      "tagline": "Resume texto, archivos o URLs con IA",
+      "title": "Resumidor de textos con IA, rápido y claro",
+      "subtitle": "Pega tu contenido, elige la longitud y recibe un solo resumen limpio, sin relleno.",
+      "lengthLabel": "Longitud del resumen",
+      "lengthShort": "Corto",
+      "lengthLong": "Largo",
+      "cta": "Resumir textos",
+      "loading": "Resumiendo...",
+      "done": "Resumen listo",
+      "sampleText": "La educación digital está transformando la forma en que los estudiantes acceden al conocimiento. Plataformas adaptativas permiten personalizar el ritmo de aprendizaje, mientras que la analítica ayuda a detectar brechas y ofrecer apoyo oportuno. Sin embargo, persisten retos como la brecha de conectividad y la formación docente en competencias digitales.",
+      "sampleLoaded": "Texto de muestra añadido",
+      "pasted": "Pegado desde el portapapeles",
+      "upload": "Subir archivo",
+      "uploading": "Subiendo...",
+      "addUrl": "Añadir URL",
+      "paste": "Pegar texto",
+      "urlLabel": "Resumir una URL",
+      "urlPlaceholder": "https://ejemplo.com/articulo",
+      "apply": "Aplicar",
+      "clear": "Limpiar",
+      "placeholder": "Empieza a escribir o pega tu contenido aquí...",
+      "free": "Versión de prueba — se muestra como gratis"
+    },
+    "input": {
+      "title": "Entrada",
+      "subtitle": "Pega texto, agrega una URL o sube un archivo de texto.",
+      "sample": "Texto muestra",
+      "addUrl": "Añadir URL",
+      "paste": "Pegar texto",
+      "upload": "Subir archivo",
+      "uploading": "Subiendo...",
+      "urlLabel": "URL",
+      "urlPlaceholder": "https://ejemplo.com/articulo",
+      "apply": "Aplicar",
+      "clear": "Limpiar",
+      "placeholder": "Empieza a escribir o pega tu contenido aquí...",
+      "stats": {
+        "words": "{value} palabras",
+        "chars": "{value} caracteres"
+      },
+      "free": "Gratis para probar"
+    },
+    "output": {
+      "title": "Resumen",
+      "subtitle": "Un único resumen conciso basado en tu entrada.",
+      "empty": "El resumen aparecerá aquí cuando lo ejecutes.",
+      "stats": {
+        "sentences": "Frases calculadas automáticamente",
+        "words": "Conteo de palabras tras generar"
+      }
+    },
+    "errors": {
+      "missing": "Añade texto, una URL o un archivo para resumir.",
+      "generic": "No se pudo generar el resumen. Inténtalo de nuevo.",
+      "upload": "La subida falló. Prueba otro archivo.",
+      "clipboard": "El acceso al portapapeles fue bloqueado.",
+      "emptyClipboard": "El portapapeles está vacío."
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Cómo funciona el resumidor",
+        "subtitle": "Pega o suelta la fuente, elige longitud y obtén un resumen en segundos.",
+        "steps": {
+          "step-1": { "label": "Paso 1 · Añade tu fuente" },
+          "step-2": { "label": "Paso 2 · Ajusta la longitud" },
+          "step-3": { "label": "Paso 3 · Copia y comparte" }
+        }
+      },
+      "useCases": {
+        "title": "Dónde encaja el resumidor",
+        "subtitle": "Briefs, correos, docs: mantenlos cortos sin perder lo esencial."
+      },
+      "related": {
+        "title": "Combínalo con estas herramientas",
+        "subtitle": "Cubre todo tu flujo de revisión.",
+        "items": {
+          "detector": {
+            "title": "Detector de IA",
+            "description": "Comprueba si el texto suena a IA antes de compartirlo."
+          },
+          "plagiarism": {
+            "title": "Detector de plagio",
+            "description": "Verifica originalidad tras resumir documentos largos."
+          },
+          "counter": {
+            "title": "Contador de palabras",
+            "description": "Mantén el resumen dentro de límites estrictos."
+          }
+        }
+      },
+      "faq": {
+        "title": "Preguntas frecuentes sobre el resumidor",
+        "subtitle": "Respuestas rápidas antes de probarlo.",
+        "items": {}
+      }
+    }
   }
 }

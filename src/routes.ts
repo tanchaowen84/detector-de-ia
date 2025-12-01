@@ -68,6 +68,7 @@ export enum Routes {
   TextCompare = '/text-compare',
   WordCounter = '/word-counter',
   ApaGenerator = '/apa-generator',
+  TextSummarizer = '/text-summarizer',
 }
 
 /**
