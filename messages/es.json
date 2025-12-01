@@ -2015,6 +2015,8 @@
       "title": "Resumen",
       "subtitle": "Un único resumen conciso basado en tu entrada.",
       "empty": "El resumen aparecerá aquí cuando lo ejecutes.",
+      "hint": "Desplázate para ver el resumen completo",
+      "copy": "Copiar resumen",
       "stats": {
         "sentences": "Frases calculadas automáticamente",
         "words": "Conteo de palabras tras generar"

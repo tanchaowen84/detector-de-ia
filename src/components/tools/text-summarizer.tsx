@@ -88,11 +88,12 @@ export function TextSummarizerHero() {
         locale,
       });
 
-      if (!result?.success || !result.data) {
-        toast.error(result?.error ?? t('errors.generic'));
+      const payload = result?.data;
+      if (!payload?.success || !payload.data) {
+        toast.error(payload?.error ?? t('errors.generic'));
         return;
       }
-      setSummary(result.data.summary);
+      setSummary(payload.data.summary);
       toast.success(t('hero.done'));
     });
   };
@@ -251,7 +252,10 @@ export function TextSummarizerHero() {
               <div className="text-xs text-slate-500 tabular-nums">{lengthPercent[0]}%</div>
             </CardHeader>
             <CardContent className="flex h-full flex-col space-y-3">
-              <div className="min-h-[220px] rounded-lg border border-slate-100 bg-slate-50/60 px-4 py-3">
+              <div
+                className="h-64 overflow-auto rounded-lg border border-slate-100 bg-slate-50/60 px-4 py-3"
+                style={{ scrollbarGutter: 'stable' }}
+              >
                 {isPending ? (
                   <div className="space-y-3 animate-pulse">
                     <div className="h-3 w-5/6 rounded bg-slate-200" />
@@ -267,6 +271,26 @@ export function TextSummarizerHero() {
                     {t('output.empty')}
                   </div>
                 )}
+              </div>
+              <div className="flex flex-wrap items-center justify-between text-xs text-slate-500">
+                <div>{t('output.hint')}</div>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  disabled={!summary}
+                  onClick={async () => {
+                    if (!summary) return;
+                    try {
+                      await navigator.clipboard.writeText(summary);
+                      toast.success(t('hero.done'));
+                    } catch (error) {
+                      toast.error(t('errors.clipboard'));
+                    }
+                  }}
+                  className="text-slate-600 hover:text-slate-800"
+                >
+                  {t('output.copy')}
+                </Button>
               </div>
               <div className="mt-auto flex flex-wrap justify-end gap-2 text-xs text-slate-500 pt-2">
                 <span>{t('output.stats.sentences')}</span>

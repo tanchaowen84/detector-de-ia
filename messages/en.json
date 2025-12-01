@@ -2058,6 +2058,8 @@
       "title": "Summary",
       "subtitle": "A single concise paragraph based on your input.",
       "empty": "Your summary will appear here after you run it.",
+      "hint": "Scroll to view the full summary",
+      "copy": "Copy summary",
       "stats": {
         "sentences": "Sentences calculated automatically",
         "words": "Word count shown after generation"
