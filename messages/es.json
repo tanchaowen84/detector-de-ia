@@ -1965,13 +1965,13 @@
   "TextSummarizerPage": {
     "metadata": {
       "title": "Resumidor de textos con IA gratis | VeriIA",
-      "description": "Resumidor de textos con IA para artículos, correos y documentos largos. Pega texto, archivo o URL y obtén un resumen claro en segundos."
+      "description": "Resumidor de textos con IA para artículos, correos y documentos largos. Con el resumidor de textos de VeriIA pegas texto, archivo o URL y obtienes un resumen claro en segundos."
     },
     "hero": {
       "badge": "Nuevo",
       "tagline": "Resumidor de textos con IA para tu día a día",
       "title": "Resumidor de textos con IA, rápido y claro",
-      "subtitle": "Pega tu contenido, ajusta la longitud y recibe un único resumen limpio, sin relleno ni tecnicismos.",
+      "subtitle": "Pega tu contenido, ajusta la longitud y recibe un resumen limpio con nuestro resumidor de textos, sin relleno ni tecnicismos.",
       "lengthLabel": "Longitud del resumen",
       "lengthShort": "Corto",
       "lengthLong": "Largo",
@@ -1994,7 +1994,7 @@
     },
     "input": {
       "title": "Entrada",
-      "subtitle": "Pega texto, agrega una URL o sube un archivo de texto para resumir en segundos.",
+      "subtitle": "Pega texto, agrega una URL o sube un archivo de texto en el resumidor de textos para resumir en segundos.",
       "sample": "Texto muestra",
       "addUrl": "Añadir URL",
       "paste": "Pegar texto",
@@ -2013,7 +2013,7 @@
     },
     "output": {
       "title": "Resumen",
-      "subtitle": "Un resumen conciso generado a partir de tu texto.",
+      "subtitle": "Un resumen conciso generado por el resumidor de textos a partir de tu texto.",
       "empty": "El resumen aparecerá aquí cuando lo ejecutes.",
       "hint": "Desplázate para ver el resumen completo",
       "copy": "Copiar resumen",
@@ -2032,7 +2032,7 @@
     "blocks": {
       "howItWorks": {
         "title": "Cómo funciona el resumidor de textos",
-        "subtitle": "Pega tu contenido, ajusta la longitud del resumen y obtén un texto claro en segundos.",
+        "subtitle": "Pega tu contenido, ajusta la longitud del resumen y deja que el resumidor de textos lo devuelva claro en segundos.",
         "steps": {
           "step-1": {
             "label": "Paso 1 · Añade tu texto, archivo o URL",
@@ -2044,7 +2044,7 @@
               },
               {
                 "title": "Comprobación rápida",
-                "description": "Si detectamos que falta contenido o que el enlace no es válido, te lo indicamos al instante para que puedas corregirlo sin perder tiempo."
+                "description": "Pega tu texto, añade un enlace o sube un archivo de texto; el resumidor de textos convierte todo a texto plano antes de resumir."
               },
               {
                 "title": "Privacidad",
@@ -2092,7 +2092,7 @@
       },
       "useCases": {
         "title": "Dónde usar el resumidor de textos",
-        "subtitle": "Briefs, correos y artículos largos: quédate con lo esencial en menos tiempo.",
+        "subtitle": "Briefs, correos y artículos: el resumidor de textos te deja con lo esencial en menos tiempo.",
         "description": "Usa el resumidor de textos como filtro rápido cuando no puedes leerlo todo, pero sí necesitas entender lo importante y compartirlo con otros.",
         "items": {
           "item-1": {
@@ -2123,7 +2123,7 @@
       },
       "related": {
         "title": "Combínalo con otras herramientas de VeriIA",
-        "subtitle": "Cubre todo tu flujo de escritura y revisión: desde el resumen hasta la verificación de calidad.",
+        "subtitle": "Cubre todo tu flujo de escritura y revisión: el resumidor de textos más la verificación de calidad.",
         "tryNow": "Probar ahora",
         "items": {
           "detector": {
