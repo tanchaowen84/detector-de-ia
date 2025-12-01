@@ -2034,14 +2034,47 @@
         "title": "Cómo funciona el resumidor",
         "subtitle": "Pega o suelta la fuente, elige longitud y obtén un resumen en segundos.",
         "steps": {
-          "step-1": { "label": "Paso 1 · Añade tu fuente" },
-          "step-2": { "label": "Paso 2 · Ajusta la longitud" },
-          "step-3": { "label": "Paso 3 · Copia y comparte" }
+          "step-1": {
+            "label": "Paso 1 · Añade tu fuente",
+            "imageAlt": "Usuario pegando texto o URL en el resumidor",
+            "items": [
+              { "title": "Texto, URL o archivo", "description": "Pega texto, añade un enlace o sube un archivo de texto; lo convertimos antes de resumir." },
+              { "title": "Validación rápida", "description": "Si falta contenido o el enlace no es válido, avisamos sin gastar créditos." },
+              { "title": "Privacidad", "description": "El usuario ve la versión gratis; el procesamiento y el conteo ocurren en el backend." }
+            ]
+          },
+          "step-2": {
+            "label": "Paso 2 · Ajusta la longitud",
+            "imageAlt": "Control deslizante de longitud del resumen",
+            "items": [
+              { "title": "Slider 0–100", "description": "Controla cuán corto o largo quieres el resumen sin configurar nada más." },
+              { "title": "Idioma automático", "description": "Resumimos en el mismo idioma detectado de la entrada." },
+              { "title": "Coste bajo", "description": "Cobro interno a 0.001 crédito por carácter, con mínimo de 1 crédito." }
+            ]
+          },
+          "step-3": {
+            "label": "Paso 3 · Copia y comparte",
+            "imageAlt": "Resumen generado con botón de copiar",
+            "items": [
+              { "title": "Bloque desplazable", "description": "El resumen vive en un contenedor fijo con scroll visible al pasar el mouse." },
+              { "title": "Copiar en un clic", "description": "Botón dedicado debajo del bloque para copiar todo el resumen al portapapeles." },
+              { "title": "Reintenta al instante", "description": "Ajusta la longitud y ejecuta de nuevo si necesitas más o menos detalle." }
+            ]
+          }
         }
       },
       "useCases": {
         "title": "Dónde encaja el resumidor",
-        "subtitle": "Briefs, correos, docs: mantenlos cortos sin perder lo esencial."
+        "subtitle": "Briefs, correos y artículos largos: mantén lo esencial en menos tiempo.",
+        "description": "Reduce fricción en revisiones rápidas sin perder contexto ni tono.",
+        "items": {
+          "item-1": { "title": "Estudio y apuntes", "description": "Convierte capítulos o PDFs de clase en resúmenes listos para repasar." },
+          "item-2": { "title": "Investigación y papers", "description": "Saca TL;DR bilingües para coordinar con equipos internacionales." },
+          "item-3": { "title": "Briefs y marketing", "description": "Resume doc briefs o research para campañas en un párrafo accionable." },
+          "item-4": { "title": "Correos ejecutivos", "description": "Envía resúmenes claros de threads largos sin ruido ni formalismos extra." },
+          "item-5": { "title": "Clientes y soporte", "description": "Condensa tickets extensos en puntos clave para responder más rápido." },
+          "item-6": { "title": "Lectura diaria", "description": "Aplica a newsletters, blogs o posts extensos y comparte un TL;DR." }
+        }
       },
       "related": {
         "title": "Combínalo con estas herramientas",
@@ -2064,7 +2097,48 @@
       "faq": {
         "title": "Preguntas frecuentes sobre el resumidor",
         "subtitle": "Respuestas rápidas antes de probarlo.",
-        "items": {}
+        "items": {
+          "item-1": {
+            "question": "¿El resumen mantiene el idioma original?",
+            "answer": "Sí. Detectamos automáticamente el idioma de entrada y devolvemos el resumen en el mismo idioma."
+          },
+          "item-2": {
+            "question": "¿Puedo pegar URLs largas o con paywall?",
+            "answer": "Puedes pegar la URL; si el modelo no puede acceder, prueba pegar el texto directamente para asegurar el resultado."
+          },
+          "item-3": {
+            "question": "¿Cuánto texto puedo pegar?",
+            "answer": "El límite depende de tu plan; si es muy extenso, el sistema avisará antes de procesar."
+          },
+          "item-4": {
+            "question": "¿Se guardan mis resúmenes?",
+            "answer": "En la versión actual no se muestra historial al usuario; el procesamiento se usa solo para generar el resumen."
+          },
+          "item-5": {
+            "question": "¿Puedo subir PDFs o imágenes?",
+            "answer": "Por ahora solo se aceptan archivos de texto (texto plano, markdown, JSON). Para PDFs, pega el texto o una URL si el modelo puede navegar."
+          },
+          "item-6": {
+            "question": "¿Y si el resumen queda muy largo o muy corto?",
+            "answer": "Ajusta el control de longitud y vuelve a ejecutar. Cada intento usa la misma tarifa por carácter."
+          },
+          "item-7": {
+            "question": "¿Se conserva el formato (negritas, títulos)?",
+            "answer": "Devolvemos texto plano; eliminamos formato para mantener el resumen conciso."
+          },
+          "item-8": {
+            "question": "¿Hay límite de palabras/caracteres por solicitud?",
+            "answer": "Sí, depende del límite de tu plan. Si lo superas, verás un aviso antes de procesar."
+          },
+          "item-9": {
+            "question": "¿Funcionan URLs detrás de login?",
+            "answer": "Probablemente no. Si el modelo no puede acceder, pega el contenido manualmente para asegurar el resultado."
+          },
+          "item-10": {
+            "question": "¿Cómo se calculan los créditos?",
+            "answer": "Se cobra a 0.001 crédito por carácter de entrada (mínimo 1 crédito). Solo URL usa una longitud base pequeña si no se envía texto."
+          }
+        }
       }
     }
   }

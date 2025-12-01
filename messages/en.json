@@ -2077,14 +2077,47 @@
         "title": "How the summarizer works",
         "subtitle": "Paste or drop your source, pick a length, and get a concise summary in seconds.",
         "steps": {
-          "step-1": { "label": "Step 1 · Add your source" },
-          "step-2": { "label": "Step 2 · Choose length" },
-          "step-3": { "label": "Step 3 · Copy and share" }
+          "step-1": {
+            "label": "Step 1 · Add your source",
+            "imageAlt": "User pasting text or URL into the summarizer",
+            "items": [
+              { "title": "Text, URL or file", "description": "Paste text, add a link, or upload a text file; we convert it before summarizing." },
+              { "title": "Quick validation", "description": "If input is missing or the link is invalid we warn you before any credits are used." },
+              { "title": "Privacy-first", "description": "Users see a free UI; processing and metering stay on the backend." }
+            ]
+          },
+          "step-2": {
+            "label": "Step 2 · Tune the length",
+            "imageAlt": "Summary length slider",
+            "items": [
+              { "title": "Slider 0–100", "description": "Control how short or long the summary should be with one control." },
+              { "title": "Auto language", "description": "We summarize in the same language detected in the input." },
+              { "title": "Low cost", "description": "Internal billing at 0.001 credit per character, minimum 1 credit." }
+            ]
+          },
+          "step-3": {
+            "label": "Step 3 · Copy and share",
+            "imageAlt": "Generated summary with copy button",
+            "items": [
+              { "title": "Scrollable block", "description": "The summary sits in a fixed-height box with a visible scrollbar on hover." },
+              { "title": "One-click copy", "description": "Dedicated copy button under the block to grab the whole summary." },
+              { "title": "Retry instantly", "description": "Adjust the length and run again if you need more or less detail." }
+            ]
+          }
         }
       },
       "useCases": {
         "title": "Where the summarizer fits",
-        "subtitle": "Research briefs, emails, docs—keep them short without losing the point."
+        "subtitle": "Briefs, emails, and long reads—keep the essentials in less time.",
+        "description": "Cut review friction without losing context or tone.",
+        "items": {
+          "item-1": { "title": "Study & notes", "description": "Turn chapters or class PDFs into ready-to-review summaries." },
+          "item-2": { "title": "Research & papers", "description": "Produce bilingual TL;DRs to sync with international teams." },
+          "item-3": { "title": "Marketing briefs", "description": "Condense discovery docs into one actionable paragraph." },
+          "item-4": { "title": "Executive email", "description": "Send clear recaps of long threads without extra fluff." },
+          "item-5": { "title": "Customer support", "description": "Distill long tickets into key points for faster responses." },
+          "item-6": { "title": "Daily reading", "description": "Apply to newsletters, blogs, or long posts and share a TL;DR." }
+        }
       },
       "related": {
         "title": "Pair it with these tools",
@@ -2107,7 +2140,48 @@
       "faq": {
         "title": "FAQ about the summarizer",
         "subtitle": "Quick answers before you try it.",
-        "items": {}
+        "items": {
+          "item-1": {
+            "question": "Will the summary keep the original language?",
+            "answer": "Yes. We detect the input language and return the summary in the same language."
+          },
+          "item-2": {
+            "question": "Can I paste long or paywalled URLs?",
+            "answer": "You can paste the URL; if the model can’t fetch it, paste the text directly for guaranteed results."
+          },
+          "item-3": {
+            "question": "How much text can I paste?",
+            "answer": "It depends on your plan limits; if it’s too long you’ll get a warning before processing."
+          },
+          "item-4": {
+            "question": "Do you store my summaries?",
+            "answer": "The current version doesn’t expose history to the user; processing is used only to generate the summary."
+          },
+          "item-5": {
+            "question": "Can I upload PDFs or images?",
+            "answer": "Only text-based files are supported for now (plain text, markdown, JSON). For PDFs, paste the text or a link if your model can browse."
+          },
+          "item-6": {
+            "question": "What if the output is too long or too short?",
+            "answer": "Use the length slider and run again. Each retry is billed with the same per-character rate."
+          },
+          "item-7": {
+            "question": "Does formatting (bold, headings) stay?",
+            "answer": "We return plain text; rich formatting is stripped to keep the summary concise."
+          },
+          "item-8": {
+            "question": "Is there a word/character limit per request?",
+            "answer": "Yes, it follows your plan’s max characters. If exceeded, you’ll see a warning before processing."
+          },
+          "item-9": {
+            "question": "Will URLs behind login work?",
+            "answer": "Probably not. If the model can’t access them, paste the content manually for best results."
+          },
+          "item-10": {
+            "question": "How are credits calculated?",
+            "answer": "Summaries are billed at 0.001 credit per character of input (minimum 1 credit). URL-only uses a small fallback length if text isn’t provided."
+          }
+        }
       }
     }
   }
