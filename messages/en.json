@@ -2295,6 +2295,76 @@
         "body": "Sign in to continue humanizing text and unlock uploads.",
         "cta": "Sign in"
       }
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "How the AI Humanizer works",
+        "subtitle": "Paste your text, add a file if you’re logged in, and get a human version ready to share.",
+        "steps": {
+          "step-1": {
+            "label": "Step 1 · Add your text",
+            "imageAlt": "User pasting text into the humanizer",
+            "items": [
+              { "title": "Paste or upload", "description": "Guests paste text; logged-in users can also upload text files." },
+              { "title": "Keep context", "description": "We preserve intent and meaning before rewriting." },
+              { "title": "No jargon setup", "description": "Just drop the content, no sliders or extra fields required." }
+            ]
+          },
+          "step-2": {
+            "label": "Step 2 · Run the humanizer",
+            "imageAlt": "AI humanizer processing",
+            "items": [
+              { "title": "Prompted for stealth", "description": "A curated prompt removes AI-ish phrasing and varies sentence rhythm." },
+              { "title": "Attack the tell-tales", "description": "It avoids banned words and patterns common in detectors." },
+              { "title": "Credits auto-applied", "description": "If you’re short on credits, we show the existing upgrade modal." }
+            ]
+          },
+          "step-3": {
+            "label": "Step 3 · Copy and use",
+            "imageAlt": "Humanized text result",
+            "items": [
+              { "title": "Copy instantly", "description": "Grab the output with one click." },
+              { "title": "Send to AI detector", "description": "Jump to our AI detector to double-check tone and probability." },
+              { "title": "Retry fast", "description": "Adjust input and rerun in seconds if you want tweaks." }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "When to use the humanizer",
+        "subtitle": "Make AI-looking drafts sound like a person wrote them.",
+        "description": "Ideal when you must keep the ideas but lose the machine tone.",
+        "items": {
+          "item-1": { "title": "Essays and assignments", "description": "Rewrite AI-heavy sections so teachers see a natural voice." },
+          "item-2": { "title": "Client deliverables", "description": "Send decks, briefs or emails that don’t read like a bot." },
+          "item-3": { "title": "Blog & SEO drafts", "description": "Remove robotic cadence before publishing." },
+          "item-4": { "title": "Support macros", "description": "Humanize templated replies while keeping facts straight." },
+          "item-5": { "title": "Product copy", "description": "Make feature blurbs sound conversational, not generated." },
+          "item-6": { "title": "Academic paraphrase", "description": "Keep meaning, swap phrasing, stay citation-friendly." }
+        }
+      },
+      "related": {
+        "title": "Pair it with other tools",
+        "subtitle": "Cover detection, originality and quick checks.",
+        "description": "Move between tools without leaving VeriIA.",
+        "tryNow": "Try now",
+        "tools": {
+          "plagiarism": { "title": "Plagiarism detector", "description": "Check originality after humanizing long docs." },
+          "summarizer": { "title": "AI summarizer", "description": "Condense the new humanized draft for quick briefs." },
+          "humanizer": { "title": "AI detector", "description": "Verify probability and highlights in one click." }
+        }
+      },
+      "faq": {
+        "title": "AI humanizer FAQ",
+        "subtitle": "What people ask before running the humanizer.",
+        "items": {
+          "item-1": { "question": "Can guests upload files?", "answer": "No, guests can paste text only. Sign in to upload text files." },
+          "item-2": { "question": "What files work best?", "answer": "Plain text or lightweight formats (.txt, .md, .json). We block binaries and heavy PDFs." },
+          "item-3": { "question": "Does it change the meaning?", "answer": "The goal is to keep meaning and intent, but rewrite wording and rhythm. Review sensitive content." },
+          "item-4": { "question": "Will it always beat detectors?", "answer": "We reduce AI tells, but no tool guarantees 0% detection. Run our AI detector after humanizing." },
+          "item-5": { "question": "Are my texts stored?", "answer": "We process them transiently to generate the result and then discard them." }
+        }
+      }
     }
   }
 }
