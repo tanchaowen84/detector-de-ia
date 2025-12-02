@@ -2317,7 +2317,6 @@
       "upload": "Upload file",
       "uploading": "Uploading...",
       "uploaded": "{name} ready",
-      "loginNotice": "Sign in to upload files",
       "placeholder": "Paste or type your text here...",
       "stats": {
         "words": "{value} words",
@@ -2335,7 +2334,6 @@
     },
     "errors": {
       "clipboard": "Could not read clipboard.",
-      "loginForUpload": "Sign in to upload files.",
       "upload": "Upload failed. Try again.",
       "missing": "Add text or a file to continue.",
       "generic": "Could not humanize. Try again."
@@ -2510,6 +2508,13 @@
           }
         }
       }
+    },
+    "guestModal": {
+      "title": "Get more power",
+      "subtitle": "Log in to unlock 4× credits, 4× text length, and enable file uploads.",
+      "google": "Continue with Google · 4× credits",
+      "github": "Continue with GitHub · 4× credits",
+      "footer": "You can switch to Google or GitHub in one click."
     }
   }
 }

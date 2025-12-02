@@ -3,16 +3,14 @@
 import { useMemo, useRef, useState, useTransition } from 'react';
 import { humanizeTextAction } from '@/actions/humanize-text';
 import { PricingTable } from '@/components/pricing/pricing-table';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { GoogleIcon } from '@/components/icons/google';
+import { GitHubIcon } from '@/components/icons/github';
+import { authClient } from '@/lib/auth-client';
+import { DialogFooter } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
 import { LocaleLink } from '@/i18n/navigation';
 import { useSession } from '@/hooks/use-session';
 import { uploadFileFromBrowser } from '@/storage';
@@ -37,6 +35,7 @@ export function HumanizerHero() {
   const [isUploading, setIsUploading] = useState(false);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showGuestModal, setShowGuestModal] = useState(false);
+  const [socialLoading, setSocialLoading] = useState<'google' | 'github' | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
@@ -61,7 +60,7 @@ export function HumanizerHero() {
 
   const handleUpload = async (file: File) => {
     if (!session?.user) {
-      toast.error(t('errors.loginForUpload'));
+      setShowGuestModal(true);
       return;
     }
     setIsUploading(true);
@@ -153,29 +152,35 @@ export function HumanizerHero() {
                     <ClipboardPasteIcon className="h-4 w-4" />
                     {t('input.paste')}
                   </Button>
-                  <Button
-                    variant="secondary"
-                    size="sm"
-                    className="gap-2"
-                    onClick={() => fileInputRef.current?.click()}
-                    disabled={isPending || isUploading || !session?.user}
-                  >
-                    {isUploading ? (
-                      <>
-                        <Loader2Icon className="h-4 w-4 animate-spin" />
-                        {t('input.uploading')}
-                      </>
-                    ) : (
-                      <>
-                        <UploadCloudIcon className="h-4 w-4" />
-                        {t('input.upload')}
-                      </>
-                    )}
-                  </Button>
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    className="hidden"
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  className="gap-2"
+                  onClick={() => {
+                    if (!session?.user) {
+                      setShowGuestModal(true);
+                      return;
+                    }
+                    fileInputRef.current?.click();
+                  }}
+                  disabled={isPending || isUploading}
+                >
+                  {isUploading ? (
+                    <>
+                      <Loader2Icon className="h-4 w-4 animate-spin" />
+                      {t('input.uploading')}
+                    </>
+                  ) : (
+                    <>
+                      <UploadCloudIcon className="h-4 w-4" />
+                      {t('input.upload')}
+                    </>
+                  )}
+                </Button>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  className="hidden"
                     onChange={(event) => {
                       const f = event.target.files?.[0];
                       if (f) {
@@ -184,12 +189,7 @@ export function HumanizerHero() {
                       event.target.value = '';
                     }}
                   />
-                  {!session?.user ? (
-                    <span className="text-xs text-slate-500 self-center">
-                      {t('input.loginNotice')}
-                    </span>
-                  ) : null}
-                </div>
+              </div>
 
                 <Textarea
                   value={text}
@@ -318,19 +318,51 @@ export function HumanizerHero() {
         </Dialog>
 
         <Dialog open={showGuestModal} onOpenChange={setShowGuestModal}>
-          <DialogContent className="max-w-md">
+          <DialogContent className="sm:max-w-sm">
             <DialogHeader>
-              <DialogTitle>{t('modals.guest.title')}</DialogTitle>
-              <DialogDescription>{t('modals.guest.subtitle')}</DialogDescription>
+              <DialogTitle className="text-lg font-semibold text-slate-900">
+                {t('modals.guest.title')}
+              </DialogTitle>
+              <DialogDescription className="text-slate-600">
+                {t('modals.guest.subtitle')}
+              </DialogDescription>
             </DialogHeader>
-            <div className="text-sm text-slate-600">{t('modals.guest.body')}</div>
-            <div className="flex justify-end">
-              <LocaleLink href="/auth/login" className="no-underline">
-                <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-full">
-                  {t('modals.guest.cta')}
-                </Button>
-              </LocaleLink>
+            <div className="flex flex-col gap-3">
+              <Button
+                className="h-11 justify-center gap-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500"
+                onClick={() => {
+                  setSocialLoading('google');
+                  void authClient.signIn.social({ provider: 'google' }).finally(() => setSocialLoading(null));
+                }}
+                disabled={socialLoading === 'google'}
+              >
+                {socialLoading === 'google' ? (
+                  <Loader2Icon className="size-4 animate-spin" />
+                ) : (
+                  <GoogleIcon className="size-4" />
+                )}
+                {t('guestModal.google')}
+              </Button>
+              <Button
+                variant="outline"
+                className="h-11 justify-center gap-2 rounded-xl"
+                onClick={() => {
+                  setSocialLoading('github');
+                  void authClient.signIn.social({ provider: 'github' }).finally(() => setSocialLoading(null));
+                }}
+                disabled={socialLoading === 'github'}
+              >
+                {socialLoading === 'github' ? (
+                  <Loader2Icon className="size-4 animate-spin" />
+                ) : (
+                  <GitHubIcon className="size-4" />
+                )}
+                {t('guestModal.github')}
+              </Button>
             </div>
+            <DialogFooter className="text-[11px] text-slate-400">
+              {t('guestModal.footer')}
+            </DialogFooter>
           </DialogContent>
         </Dialog>
       </div>

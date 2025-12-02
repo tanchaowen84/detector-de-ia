@@ -2247,7 +2247,6 @@
       "upload": "Subir archivo",
       "uploading": "Subiendo...",
       "uploaded": "{name} listo",
-      "loginNotice": "Inicia sesión para subir archivos",
       "placeholder": "Pega o escribe tu texto aquí...",
       "stats": {
         "words": "{value} palabras",
@@ -2265,7 +2264,6 @@
     },
     "errors": {
       "clipboard": "No se pudo leer el portapapeles.",
-      "loginForUpload": "Inicia sesión para subir archivos.",
       "upload": "No se pudo subir el archivo.",
       "missing": "Añade texto o un archivo para continuar.",
       "generic": "No se pudo humanizar. Inténtalo de nuevo."
@@ -2440,6 +2438,13 @@
           }
         }
       }
+    },
+    "guestModal": {
+      "title": "Obtén más poder",
+      "subtitle": "Inicia sesión para desbloquear 4× créditos, 4× texto y habilitar subidas.",
+      "google": "Continuar con Google · 4× créditos",
+      "github": "Continuar con GitHub · 4× créditos",
+      "footer": "Puedes cambiar a Google o GitHub en un clic."
     }
   }
 }
