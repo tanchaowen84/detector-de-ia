@@ -2251,7 +2251,7 @@
       "counter": { "title": "Word count" },
       "apa": { "title": "APA" },
       "pricing": { "title": "Pricing" },
-      "more": { "title": "More" }
+      "trigger": "Tools"
     }
   },
   "HumanizerPage": {
