@@ -33,6 +33,11 @@ export function getFooterLinks(): NestedMenuItem[] {
           external: false,
         },
         {
+          title: t('product.items.textSummarizer'),
+          href: Routes.TextSummarizer,
+          external: false,
+        },
+        {
           title: t('product.items.apaGenerator'),
           href: Routes.ApaGenerator,
           external: false,

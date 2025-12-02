@@ -1189,6 +1189,9 @@
       "humanizer": {
         "title": "AI humanizer"
       },
+      "textSummarizer": {
+        "title": "AI summarizer"
+      },
       "apaGenerator": {
         "title": "APA generator"
       },
@@ -1265,6 +1268,7 @@
         "items": {
           "plagiarism": "Plagiarism checker",
           "humanizer": "AI humanizer",
+          "textSummarizer": "AI summarizer",
           "apaGenerator": "APA generator",
           "textCompare": "Text compare",
           "wordCounter": "Word counter",

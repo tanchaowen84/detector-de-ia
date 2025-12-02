@@ -30,6 +30,11 @@ export function getNavbarLinks(): NestedMenuItem[] {
       external: false,
     },
     {
+      title: t('textSummarizer.title'),
+      href: Routes.TextSummarizer,
+      external: false,
+    },
+    {
       title: t('apaGenerator.title'),
       href: Routes.ApaGenerator,
       external: false,
@@ -37,11 +42,6 @@ export function getNavbarLinks(): NestedMenuItem[] {
     {
       title: t('textCompare.title'),
       href: Routes.TextCompare,
-      external: false,
-    },
-    {
-      title: t('wordCounter.title'),
-      href: Routes.WordCounter,
       external: false,
     },
     {

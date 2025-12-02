@@ -1189,6 +1189,9 @@
       "humanizer": {
         "title": "Humanizador de IA"
       },
+      "textSummarizer": {
+        "title": "Resumidor de IA"
+      },
       "apaGenerator": {
         "title": "Generador APA"
       },
@@ -1265,6 +1268,7 @@
         "items": {
           "plagiarism": "Detector de plagio",
           "humanizer": "Humanizador de IA",
+          "textSummarizer": "Resumidor de IA",
           "apaGenerator": "Generador APA",
           "textCompare": "Comparador de textos",
           "wordCounter": "Contador de palabras",
