@@ -1328,7 +1328,8 @@
       "apa": {
         "title": "APA"
       },
-      "trigger": "Tools"
+      "trigger": "Tools",
+      "hide": "Hide"
     }
   },
   "Mail": {

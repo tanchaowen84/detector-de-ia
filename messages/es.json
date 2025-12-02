@@ -1283,7 +1283,8 @@
       "apa": {
         "title": "APA"
       },
-      "trigger": "Herramientas"
+      "trigger": "Herramientas",
+      "hide": "Ocultar"
     },
     "footer": {
       "tagline": "VeriIA, tu detector de IA para textos profesionales: claridad, confianza y resultados al instante",

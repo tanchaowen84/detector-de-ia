@@ -109,18 +109,16 @@ export function ToolRail() {
           </div>
         ) : (
           <div className="pointer-events-auto w-[88px] rounded-[26px] bg-white/80 p-3 shadow-lg shadow-indigo-100 backdrop-blur">
-            <RailItems />
-            <div className="mt-3 flex justify-center">
+            <div className="mb-2 flex justify-center">
               <Button
-                size="icon"
                 variant="ghost"
-                className="h-8 w-8 rounded-full text-slate-500 hover:text-slate-700"
+                className="h-6 rounded-full px-2 text-[11px] text-slate-600 hover:text-slate-800"
                 onClick={toggle}
               >
-                ✕
-                <span className="sr-only">{t('trigger')}</span>
+                {t('hide')}
               </Button>
             </div>
+            <RailItems />
           </div>
         )}
       </div>
