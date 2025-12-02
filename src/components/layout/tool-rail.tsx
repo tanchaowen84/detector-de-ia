@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { useEffect, useState } from 'react';
 
 type ToolItem = {
   key: string;
@@ -75,14 +76,53 @@ function RailItems() {
 
 export function ToolRail() {
   const t = useTranslations('Marketing.sidebar');
+  const [collapsed, setCollapsed] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const stored = window.localStorage.getItem('tool-rail-collapsed');
+    if (stored === '1') setCollapsed(true);
+  }, []);
+
+  const toggle = () => {
+    const next = !collapsed;
+    setCollapsed(next);
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('tool-rail-collapsed', next ? '1' : '0');
+    }
+  };
 
   return (
     <>
       {/* Desktop / tablet */}
       <div className="pointer-events-none fixed left-3 top-1/2 z-40 hidden -translate-y-1/2 md:block">
-        <div className="pointer-events-auto w-[88px] rounded-[26px] bg-white/80 p-3 shadow-lg shadow-indigo-100 backdrop-blur">
-          <RailItems />
-        </div>
+        {collapsed ? (
+          <div className="pointer-events-auto flex flex-col items-center gap-2">
+            <Button
+              size="icon"
+              className="h-10 w-10 rounded-full bg-slate-900 text-white shadow-lg"
+              onClick={toggle}
+            >
+              ▶
+              <span className="sr-only">{t('trigger')}</span>
+            </Button>
+          </div>
+        ) : (
+          <div className="pointer-events-auto w-[88px] rounded-[26px] bg-white/80 p-3 shadow-lg shadow-indigo-100 backdrop-blur">
+            <RailItems />
+            <div className="mt-3 flex justify-center">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="h-8 w-8 rounded-full text-slate-500 hover:text-slate-700"
+                onClick={toggle}
+              >
+                ✕
+                <span className="sr-only">{t('trigger')}</span>
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Mobile FAB + sheet */}
