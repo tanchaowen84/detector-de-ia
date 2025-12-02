@@ -2266,27 +2266,54 @@
             "label": "Paso 1 · Añade tu texto",
             "imageAlt": "Persona pegando texto en el humanizador",
             "items": [
-              { "title": "Pega o sube", "description": "Los invitados solo pegan texto; con sesión también puedes subir archivos de texto." },
-              { "title": "Mantén el sentido", "description": "Preservamos intención y contexto antes de reescribir." },
-              { "title": "Sin ajustes raros", "description": "Solo pega el contenido, sin sliders ni campos extra." }
+              {
+                "title": "Pega o sube",
+                "description": "Los invitados solo pegan texto; con sesión también puedes subir archivos de texto."
+              },
+              {
+                "title": "Mantén el sentido",
+                "description": "Preservamos intención y contexto antes de reescribir."
+              },
+              {
+                "title": "Sin ajustes raros",
+                "description": "Solo pega el contenido, sin sliders ni campos extra."
+              }
             ]
           },
           "step-2": {
             "label": "Paso 2 · Ejecuta el humanizador",
             "imageAlt": "Proceso de humanización en curso",
             "items": [
-              { "title": "Prompt afinado", "description": "El prompt elimina giros robóticos y varía el ritmo de frases." },
-              { "title": "Evita palabras delatoras", "description": "Ignora vocabulario y patrones típicos que detectan las herramientas." },
-              { "title": "Créditos automáticos", "description": "Si faltan créditos, mostramos el modal de upgrade que ya usamos." }
+              {
+                "title": "Prompt afinado",
+                "description": "El prompt elimina giros robóticos y varía el ritmo de frases."
+              },
+              {
+                "title": "Evita palabras delatoras",
+                "description": "Ignora vocabulario y patrones típicos que detectan las herramientas."
+              },
+              {
+                "title": "Créditos automáticos",
+                "description": "Si faltan créditos, mostramos el modal de upgrade que ya usamos."
+              }
             ]
           },
           "step-3": {
             "label": "Paso 3 · Copia y usa",
             "imageAlt": "Resultado de texto humanizado",
             "items": [
-              { "title": "Copia al instante", "description": "Llévate la salida en un clic." },
-              { "title": "Pasa al detector de IA", "description": "Salta a nuestro detector para revisar probabilidad y tono." },
-              { "title": "Reintenta rápido", "description": "Ajusta la entrada y vuelve a ejecutar en segundos." }
+              {
+                "title": "Copia al instante",
+                "description": "Llévate la salida en un clic."
+              },
+              {
+                "title": "Pasa al detector de IA",
+                "description": "Salta a nuestro detector para revisar probabilidad y tono."
+              },
+              {
+                "title": "Reintenta rápido",
+                "description": "Ajusta la entrada y vuelve a ejecutar en segundos."
+              }
             ]
           }
         }
@@ -2296,12 +2323,30 @@
         "subtitle": "Haz que los borradores con tono de IA suenen escritos por una persona.",
         "description": "Ideal cuando quieres conservar las ideas pero quitar el tono robótico.",
         "items": {
-          "item-1": { "title": "Ensayos y tareas", "description": "Reescribe partes con mucha IA para que el profesor lea una voz natural." },
-          "item-2": { "title": "Entregables a clientes", "description": "Envía decks, briefs o correos que no parezcan hechos por un bot." },
-          "item-3": { "title": "Borradores de blog y SEO", "description": "Elimina la cadencia robótica antes de publicar." },
-          "item-4": { "title": "Macros de soporte", "description": "Humaniza respuestas templadas manteniendo los hechos correctos." },
-          "item-5": { "title": "Copy de producto", "description": "Haz que los textos de features suenen conversacionales, no generados." },
-          "item-6": { "title": "Paráfrasis académica", "description": "Conserva el significado, cambia la redacción y respeta las citas." }
+          "item-1": {
+            "title": "Ensayos y tareas",
+            "description": "Reescribe partes con mucha IA para que el profesor lea una voz natural."
+          },
+          "item-2": {
+            "title": "Entregables a clientes",
+            "description": "Envía decks, briefs o correos que no parezcan hechos por un bot."
+          },
+          "item-3": {
+            "title": "Borradores de blog y SEO",
+            "description": "Elimina la cadencia robótica antes de publicar."
+          },
+          "item-4": {
+            "title": "Macros de soporte",
+            "description": "Humaniza respuestas templadas manteniendo los hechos correctos."
+          },
+          "item-5": {
+            "title": "Copy de producto",
+            "description": "Haz que los textos de features suenen conversacionales, no generados."
+          },
+          "item-6": {
+            "title": "Paráfrasis académica",
+            "description": "Conserva el significado, cambia la redacción y respeta las citas."
+          }
         }
       },
       "related": {
@@ -2310,20 +2355,64 @@
         "description": "Pasa de una herramienta a otra sin salir de VeriIA.",
         "tryNow": "Probar ahora",
         "tools": {
-          "plagiarism": { "title": "Detector de plagio", "description": "Revisa originalidad tras humanizar documentos largos." },
-          "summarizer": { "title": "Resumidor de IA", "description": "Condensa el borrador humanizado para briefs rápidos." },
-          "humanizer": { "title": "Detector de IA", "description": "Verifica probabilidad y resaltados en un clic." }
+          "plagiarism": {
+            "title": "Detector de plagio",
+            "description": "Revisa originalidad tras humanizar documentos largos."
+          },
+          "summarizer": {
+            "title": "Resumidor de IA",
+            "description": "Condensa el borrador humanizado para briefs rápidos."
+          },
+          "humanizer": {
+            "title": "Detector de IA",
+            "description": "Verifica probabilidad y resaltados en un clic."
+          }
         }
       },
       "faq": {
         "title": "Preguntas sobre el Humanizador de IA",
         "subtitle": "Lo que se pregunta antes de ejecutar el humanizador.",
         "items": {
-          "item-1": { "question": "¿Los invitados pueden subir archivos?", "answer": "No, los invitados solo pueden pegar texto. Inicia sesión para subir archivos de texto." },
-          "item-2": { "question": "¿Qué archivos funcionan mejor?", "answer": "Texto plano o formatos ligeros (.txt, .md, .json). Bloqueamos binarios y PDFs pesados." },
-          "item-3": { "question": "¿Cambia el significado?", "answer": "La meta es mantener el sentido e intención, pero reescribir el tono y el ritmo. Revisa contenido sensible." },
-          "item-4": { "question": "¿Siempre pasará detectores?", "answer": "Reducimos señales de IA, pero ninguna herramienta garantiza 0%. Usa nuestro Detector de IA después de humanizar." },
-          "item-5": { "question": "¿Guardan mis textos?", "answer": "Se procesan de forma temporal para generar el resultado y luego se descartan." }
+          "item-1": {
+            "question": "¿Los invitados pueden subir archivos?",
+            "answer": "No, los invitados solo pueden pegar texto. Inicia sesión para subir archivos de texto."
+          },
+          "item-2": {
+            "question": "¿Qué archivos funcionan mejor?",
+            "answer": "Texto plano o formatos ligeros (.txt, .md, .json). Bloqueamos binarios y PDFs pesados."
+          },
+          "item-3": {
+            "question": "¿Cambia el significado?",
+            "answer": "La meta es mantener el sentido e intención, pero reescribir el tono y el ritmo. Revisa contenido sensible."
+          },
+          "item-4": {
+            "question": "¿Siempre pasará detectores?",
+            "answer": "Reducimos señales de IA, pero ninguna herramienta garantiza 0%. Usa nuestro Detector de IA después de humanizar."
+          },
+          "item-5": {
+            "question": "¿Guardan mis textos?",
+            "answer": "Se procesan de forma temporal para generar el resultado y luego se descartan."
+          },
+          "item-6": {
+            "question": "¿Puedo humanizar documentos largos?",
+            "answer": "Sí, dentro de los límites de tu plan. Si es muy largo, divídelo en partes para mantener la calidad."
+          },
+          "item-7": {
+            "question": "¿Qué idiomas funcionan?",
+            "answer": "Seguimos el idioma de entrada. Probado sobre todo en español e inglés; otros pueden variar pero se ejecutan."
+          },
+          "item-8": {
+            "question": "¿Debo configurar algo extra?",
+            "answer": "No hay mandos adicionales. Pega o sube, pulsa humanizar y copia el resultado."
+          },
+          "item-9": {
+            "question": "¿Y las citas o comillas?",
+            "answer": "Mantenemos las citas pero podemos simplificar el texto alrededor. Verifica las referencias sensibles."
+          },
+          "item-10": {
+            "question": "¿Cómo se calculan los créditos?",
+            "answer": "Se estiman por conteo de palabras antes de ejecutar. Si faltan créditos verás el modal de upgrade."
+          }
         }
       }
     }

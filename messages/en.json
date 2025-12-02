@@ -2309,27 +2309,54 @@
             "label": "Step 1 · Add your text",
             "imageAlt": "User pasting text into the humanizer",
             "items": [
-              { "title": "Paste or upload", "description": "Guests paste text; logged-in users can also upload text files." },
-              { "title": "Keep context", "description": "We preserve intent and meaning before rewriting." },
-              { "title": "No jargon setup", "description": "Just drop the content, no sliders or extra fields required." }
+              {
+                "title": "Paste or upload",
+                "description": "Guests paste text; logged-in users can also upload text files."
+              },
+              {
+                "title": "Keep context",
+                "description": "We preserve intent and meaning before rewriting."
+              },
+              {
+                "title": "No jargon setup",
+                "description": "Just drop the content, no sliders or extra fields required."
+              }
             ]
           },
           "step-2": {
             "label": "Step 2 · Run the humanizer",
             "imageAlt": "AI humanizer processing",
             "items": [
-              { "title": "Prompted for stealth", "description": "A curated prompt removes AI-ish phrasing and varies sentence rhythm." },
-              { "title": "Attack the tell-tales", "description": "It avoids banned words and patterns common in detectors." },
-              { "title": "Credits auto-applied", "description": "If you’re short on credits, we show the existing upgrade modal." }
+              {
+                "title": "Prompted for stealth",
+                "description": "A curated prompt removes AI-ish phrasing and varies sentence rhythm."
+              },
+              {
+                "title": "Attack the tell-tales",
+                "description": "It avoids banned words and patterns common in detectors."
+              },
+              {
+                "title": "Credits auto-applied",
+                "description": "If you’re short on credits, we show the existing upgrade modal."
+              }
             ]
           },
           "step-3": {
             "label": "Step 3 · Copy and use",
             "imageAlt": "Humanized text result",
             "items": [
-              { "title": "Copy instantly", "description": "Grab the output with one click." },
-              { "title": "Send to AI detector", "description": "Jump to our AI detector to double-check tone and probability." },
-              { "title": "Retry fast", "description": "Adjust input and rerun in seconds if you want tweaks." }
+              {
+                "title": "Copy instantly",
+                "description": "Grab the output with one click."
+              },
+              {
+                "title": "Send to AI detector",
+                "description": "Jump to our AI detector to double-check tone and probability."
+              },
+              {
+                "title": "Retry fast",
+                "description": "Adjust input and rerun in seconds if you want tweaks."
+              }
             ]
           }
         }
@@ -2339,12 +2366,30 @@
         "subtitle": "Make AI-looking drafts sound like a person wrote them.",
         "description": "Ideal when you must keep the ideas but lose the machine tone.",
         "items": {
-          "item-1": { "title": "Essays and assignments", "description": "Rewrite AI-heavy sections so teachers see a natural voice." },
-          "item-2": { "title": "Client deliverables", "description": "Send decks, briefs or emails that don’t read like a bot." },
-          "item-3": { "title": "Blog & SEO drafts", "description": "Remove robotic cadence before publishing." },
-          "item-4": { "title": "Support macros", "description": "Humanize templated replies while keeping facts straight." },
-          "item-5": { "title": "Product copy", "description": "Make feature blurbs sound conversational, not generated." },
-          "item-6": { "title": "Academic paraphrase", "description": "Keep meaning, swap phrasing, stay citation-friendly." }
+          "item-1": {
+            "title": "Essays and assignments",
+            "description": "Rewrite AI-heavy sections so teachers see a natural voice."
+          },
+          "item-2": {
+            "title": "Client deliverables",
+            "description": "Send decks, briefs or emails that don’t read like a bot."
+          },
+          "item-3": {
+            "title": "Blog & SEO drafts",
+            "description": "Remove robotic cadence before publishing."
+          },
+          "item-4": {
+            "title": "Support macros",
+            "description": "Humanize templated replies while keeping facts straight."
+          },
+          "item-5": {
+            "title": "Product copy",
+            "description": "Make feature blurbs sound conversational, not generated."
+          },
+          "item-6": {
+            "title": "Academic paraphrase",
+            "description": "Keep meaning, swap phrasing, stay citation-friendly."
+          }
         }
       },
       "related": {
@@ -2353,20 +2398,64 @@
         "description": "Move between tools without leaving VeriIA.",
         "tryNow": "Try now",
         "tools": {
-          "plagiarism": { "title": "Plagiarism detector", "description": "Check originality after humanizing long docs." },
-          "summarizer": { "title": "AI summarizer", "description": "Condense the new humanized draft for quick briefs." },
-          "humanizer": { "title": "AI detector", "description": "Verify probability and highlights in one click." }
+          "plagiarism": {
+            "title": "Plagiarism detector",
+            "description": "Check originality after humanizing long docs."
+          },
+          "summarizer": {
+            "title": "AI summarizer",
+            "description": "Condense the new humanized draft for quick briefs."
+          },
+          "humanizer": {
+            "title": "AI detector",
+            "description": "Verify probability and highlights in one click."
+          }
         }
       },
       "faq": {
         "title": "AI humanizer FAQ",
         "subtitle": "What people ask before running the humanizer.",
         "items": {
-          "item-1": { "question": "Can guests upload files?", "answer": "No, guests can paste text only. Sign in to upload text files." },
-          "item-2": { "question": "What files work best?", "answer": "Plain text or lightweight formats (.txt, .md, .json). We block binaries and heavy PDFs." },
-          "item-3": { "question": "Does it change the meaning?", "answer": "The goal is to keep meaning and intent, but rewrite wording and rhythm. Review sensitive content." },
-          "item-4": { "question": "Will it always beat detectors?", "answer": "We reduce AI tells, but no tool guarantees 0% detection. Run our AI detector after humanizing." },
-          "item-5": { "question": "Are my texts stored?", "answer": "We process them transiently to generate the result and then discard them." }
+          "item-1": {
+            "question": "Can guests upload files?",
+            "answer": "No, guests can paste text only. Sign in to upload text files."
+          },
+          "item-2": {
+            "question": "What files work best?",
+            "answer": "Plain text or lightweight formats (.txt, .md, .json). We block binaries and heavy PDFs."
+          },
+          "item-3": {
+            "question": "Does it change the meaning?",
+            "answer": "The goal is to keep meaning and intent, but rewrite wording and rhythm. Review sensitive content."
+          },
+          "item-4": {
+            "question": "Will it always beat detectors?",
+            "answer": "We reduce AI tells, but no tool guarantees 0% detection. Run our AI detector after humanizing."
+          },
+          "item-5": {
+            "question": "Are my texts stored?",
+            "answer": "We process them transiently to generate the result and then discard them."
+          },
+          "item-6": {
+            "question": "Can I humanize long documents?",
+            "answer": "Yes, within your plan limits. If it is very long, split it into chunks to keep quality."
+          },
+          "item-7": {
+            "question": "Which languages work?",
+            "answer": "We follow the input language. Spanish and English are tested most; others may vary but still run."
+          },
+          "item-8": {
+            "question": "Do I need to tune settings?",
+            "answer": "No extra knobs. Paste or upload, click humanize, and copy the result."
+          },
+          "item-9": {
+            "question": "What about citations or quotes?",
+            "answer": "We keep quotes but may simplify surrounding text. Double-check citations for accuracy."
+          },
+          "item-10": {
+            "question": "How are credits calculated?",
+            "answer": "Credits are estimated by word count before running. If you’re short, you’ll see the upgrade modal."
+          }
         }
       }
     }
