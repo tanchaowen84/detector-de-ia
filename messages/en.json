@@ -1186,6 +1186,9 @@
       "plagiarism": {
         "title": "Plagiarism checker"
       },
+      "humanizer": {
+        "title": "AI humanizer"
+      },
       "apaGenerator": {
         "title": "APA generator"
       },
@@ -1261,6 +1264,7 @@
         "title": "Product",
         "items": {
           "plagiarism": "Plagiarism checker",
+          "humanizer": "AI humanizer",
           "apaGenerator": "APA generator",
           "textCompare": "Text compare",
           "wordCounter": "Word counter",
@@ -2232,6 +2236,64 @@
             "answer": "After using the AI Summarizer, you can send the result to other VeriIA tools depending on your case: the AI Detector helps you check if a text sounds too machine-generated, the Plagiarism Detector lets you review the originality of long work, and the APA Citation Generator creates references when you summarize academic articles or papers."
           }
         }
+      }
+    }
+  },
+  "HumanizerPage": {
+    "metadata": {
+      "title": "AI Humanizer – Make AI text sound human | VeriIA",
+      "description": "Rewrite AI-generated text to sound natural. Paste text or upload a file and get a humanized version ready to pass AI detectors."
+    },
+    "hero": {
+      "badge": "AI humanizer",
+      "title": "Humanizador de IA",
+      "subtitle": "Turn AI-looking text into something that reads human, with rough edges and a real voice.",
+      "cta": "Humanize now",
+      "secondaryCta": "Detect AI",
+      "loading": "Humanizing...",
+      "done": "Humanized",
+      "pasted": "Pasted"
+    },
+    "input": {
+      "title": "Input",
+      "subtitle": "Paste your text or upload a file to humanize.",
+      "paste": "Paste",
+      "upload": "Upload file",
+      "uploading": "Uploading...",
+      "uploaded": "{name} ready",
+      "loginNotice": "Sign in to upload files",
+      "placeholder": "Paste or type your text here...",
+      "stats": {
+        "words": "{value} words",
+        "chars": "{value} characters"
+      },
+      "hint": "Guests can paste text; uploads need login."
+    },
+    "output": {
+      "title": "Humanized output",
+      "subtitle": "Your humanized text will appear here.",
+      "empty": "Run the humanizer to see your text.",
+      "hint": "You can copy the result.",
+      "copy": "Copy",
+      "copied": "Copied"
+    },
+    "errors": {
+      "clipboard": "Could not read clipboard.",
+      "loginForUpload": "Sign in to upload files.",
+      "upload": "Upload failed. Try again.",
+      "missing": "Add text or a file to continue.",
+      "generic": "Could not humanize. Try again."
+    },
+    "modals": {
+      "upgrade": {
+        "title": "Need more credits?",
+        "subtitle": "Upgrade to keep humanizing text and unlock higher limits."
+      },
+      "guest": {
+        "title": "Create an account",
+        "subtitle": "Get more credits and enable file uploads.",
+        "body": "Sign in to continue humanizing text and unlock uploads.",
+        "cta": "Sign in"
       }
     }
   }

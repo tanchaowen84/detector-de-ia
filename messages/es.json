@@ -1186,6 +1186,9 @@
       "plagiarism": {
         "title": "Detector de plagio"
       },
+      "humanizer": {
+        "title": "Humanizador de IA"
+      },
       "apaGenerator": {
         "title": "Generador APA"
       },
@@ -1261,6 +1264,7 @@
         "title": "Producto",
         "items": {
           "plagiarism": "Detector de plagio",
+          "humanizer": "Humanizador de IA",
           "apaGenerator": "Generador APA",
           "textCompare": "Comparador de textos",
           "wordCounter": "Contador de palabras",
@@ -2189,6 +2193,64 @@
             "answer": "Después de usar el resumidor de textos, puedes enviar el resultado a otras herramientas de VeriIA según tu caso: el Detector de IA te ayuda a comprobar si el texto suena demasiado generado por modelos, el Detector de plagio te sirve para revisar la originalidad de trabajos largos y el Generador de citas APA te permite crear referencias bibliográficas cuando resumes artículos académicos o papers."
           }
         }
+      }
+    }
+  },
+  "HumanizerPage": {
+    "metadata": {
+      "title": "Humanizador de IA – Haz que el texto suene humano | VeriIA",
+      "description": "Reescribe texto generado por IA para que suene natural. Pega texto o sube un archivo y recibe una versión humanizada lista para pasar detectores."
+    },
+    "hero": {
+      "badge": "Humanizador de IA",
+      "title": "Humanizador de IA",
+      "subtitle": "Convierte texto que parece IA en algo que suene humano y con voz real.",
+      "cta": "Humanizar ahora",
+      "secondaryCta": "Detectar IA",
+      "loading": "Humanizando...",
+      "done": "Texto humanizado",
+      "pasted": "Pegado"
+    },
+    "input": {
+      "title": "Entrada",
+      "subtitle": "Pega tu texto o sube un archivo para humanizarlo.",
+      "paste": "Pegar",
+      "upload": "Subir archivo",
+      "uploading": "Subiendo...",
+      "uploaded": "{name} listo",
+      "loginNotice": "Inicia sesión para subir archivos",
+      "placeholder": "Pega o escribe tu texto aquí...",
+      "stats": {
+        "words": "{value} palabras",
+        "chars": "{value} caracteres"
+      },
+      "hint": "Los invitados solo pueden pegar texto; los archivos requieren iniciar sesión."
+    },
+    "output": {
+      "title": "Salida humanizada",
+      "subtitle": "Aquí verás tu texto humanizado.",
+      "empty": "Ejecuta el humanizador para ver el resultado.",
+      "hint": "Puedes copiar el resultado.",
+      "copy": "Copiar",
+      "copied": "Copiado"
+    },
+    "errors": {
+      "clipboard": "No se pudo leer el portapapeles.",
+      "loginForUpload": "Inicia sesión para subir archivos.",
+      "upload": "No se pudo subir el archivo.",
+      "missing": "Añade texto o un archivo para continuar.",
+      "generic": "No se pudo humanizar. Inténtalo de nuevo."
+    },
+    "modals": {
+      "upgrade": {
+        "title": "¿Necesitas más créditos?",
+        "subtitle": "Mejora tu plan para seguir humanizando texto y ampliar límites."
+      },
+      "guest": {
+        "title": "Crea una cuenta",
+        "subtitle": "Obtén más créditos y habilita las subidas de archivos.",
+        "body": "Inicia sesión para seguir humanizando texto y subir archivos.",
+        "cta": "Iniciar sesión"
       }
     }
   }

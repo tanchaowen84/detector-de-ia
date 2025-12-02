@@ -65,6 +65,7 @@ export enum Routes {
 
   // tools pages
   PlagiarismDetector = '/plagiarism-detector',
+  AIHumanizer = '/ai-humanizer',
   TextCompare = '/text-compare',
   WordCounter = '/word-counter',
   ApaGenerator = '/apa-generator',

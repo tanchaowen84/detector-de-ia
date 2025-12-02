@@ -16,6 +16,7 @@ function getEnabledStaticRoutes(): string[] {
   const baseRoutes = [
     '/',
     '/plagiarism-detector',
+    '/ai-humanizer',
     '/text-compare',
     '/ai-summarizer',
     '/word-counter',
