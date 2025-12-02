@@ -1261,6 +1261,17 @@
         }
       }
     },
+    "sidebar": {
+      "detector": { "title": "Detector IA" },
+      "plagiarism": { "title": "Plagio" },
+      "humanizer": { "title": "Humanizador" },
+      "summarizer": { "title": "Resumidor" },
+      "compare": { "title": "Comparar" },
+      "counter": { "title": "Contador" },
+      "apa": { "title": "APA" },
+      "pricing": { "title": "Precios" },
+      "more": { "title": "Más" }
+    },
     "footer": {
       "tagline": "VeriIA, tu detector de IA para textos profesionales: claridad, confianza y resultados al instante",
       "product": {

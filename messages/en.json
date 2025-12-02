@@ -2241,6 +2241,17 @@
           }
         }
       }
+    },
+    "sidebar": {
+      "detector": { "title": "AI detector" },
+      "plagiarism": { "title": "Plagiarism" },
+      "humanizer": { "title": "Humanizer" },
+      "summarizer": { "title": "Summarizer" },
+      "compare": { "title": "Compare" },
+      "counter": { "title": "Word count" },
+      "apa": { "title": "APA" },
+      "pricing": { "title": "Pricing" },
+      "more": { "title": "More" }
     }
   },
   "HumanizerPage": {
