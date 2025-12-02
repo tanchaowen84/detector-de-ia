@@ -40,11 +40,6 @@ export function getNavbarLinks(): NestedMenuItem[] {
       external: false,
     },
     {
-      title: t('textCompare.title'),
-      href: Routes.TextCompare,
-      external: false,
-    },
-    {
       title: t('pricing.title'),
       href: Routes.Pricing,
       external: false,
