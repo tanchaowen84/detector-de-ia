@@ -1305,6 +1305,33 @@
       "dashboard": "Dashboard",
       "billing": "Billing",
       "settings": "Settings"
+    },
+    "sidebar": {
+      "detector": {
+        "title": "AI detector"
+      },
+      "plagiarism": {
+        "title": "Plagiarism"
+      },
+      "humanizer": {
+        "title": "Humanizer"
+      },
+      "summarizer": {
+        "title": "Summarizer"
+      },
+      "compare": {
+        "title": "Compare"
+      },
+      "counter": {
+        "title": "Word count"
+      },
+      "apa": {
+        "title": "APA"
+      },
+      "pricing": {
+        "title": "Pricing"
+      },
+      "trigger": "Tools"
     }
   },
   "Mail": {
@@ -2243,14 +2270,30 @@
       }
     },
     "sidebar": {
-      "detector": { "title": "AI detector" },
-      "plagiarism": { "title": "Plagiarism" },
-      "humanizer": { "title": "Humanizer" },
-      "summarizer": { "title": "Summarizer" },
-      "compare": { "title": "Compare" },
-      "counter": { "title": "Word count" },
-      "apa": { "title": "APA" },
-      "pricing": { "title": "Pricing" },
+      "detector": {
+        "title": "AI detector"
+      },
+      "plagiarism": {
+        "title": "Plagiarism"
+      },
+      "humanizer": {
+        "title": "Humanizer"
+      },
+      "summarizer": {
+        "title": "Summarizer"
+      },
+      "compare": {
+        "title": "Compare"
+      },
+      "counter": {
+        "title": "Word count"
+      },
+      "apa": {
+        "title": "APA"
+      },
+      "pricing": {
+        "title": "Pricing"
+      },
       "trigger": "Tools"
     }
   },
