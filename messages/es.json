@@ -2228,12 +2228,12 @@
   "HumanizerPage": {
     "metadata": {
       "title": "Humanizador de IA – Haz que el texto suene humano | VeriIA",
-      "description": "Reescribe texto generado por IA para que suene natural. Pega texto o sube un archivo y recibe una versión humanizada lista para pasar detectores."
+      "description": "Reescribe texto generado por IA con el Humanizador de IA para que suene natural. Pega texto o sube un archivo y recibe una versión humanizada lista para pasar detectores."
     },
     "hero": {
       "badge": "Herramienta de VeriIA",
       "title": "Humanizador de IA para que tu texto suene humano",
-      "subtitle": "Convierte borradores generados por IA en textos que parecen escritos por una persona, manteniendo las ideas pero con un tono natural.",
+      "subtitle": "Convierte borradores generados por IA en textos que parecen escritos por una persona con el Humanizador de IA, manteniendo las ideas pero con un tono natural.",
       "cta": "Humanizar texto ahora",
       "secondaryCta": "Detectar IA en mi texto",
       "loading": "Humanizando tu texto...",
@@ -2242,7 +2242,7 @@
     },
     "input": {
       "title": "Entrada",
-      "subtitle": "Pega tu texto o sube un archivo para humanizarlo.",
+      "subtitle": "Pega tu texto o sube un archivo para humanizarlo con el Humanizador de IA.",
       "paste": "Pegar",
       "upload": "Subir archivo",
       "uploading": "Subiendo...",
@@ -2252,11 +2252,11 @@
         "words": "{value} palabras",
         "chars": "{value} caracteres"
       },
-      "hint": "Los invitados solo pueden pegar texto; los archivos requieren iniciar sesión."
+      "hint": ""
     },
     "output": {
       "title": "Salida humanizada",
-      "subtitle": "Aquí verás tu texto humanizado.",
+      "subtitle": "Aquí verás tu texto humanizado por el Humanizador de IA.",
       "empty": "Ejecuta el humanizador para ver el resultado.",
       "hint": "Puedes copiar el resultado.",
       "copy": "Copiar",
@@ -2282,8 +2282,8 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "Cómo funciona el humanizador de IA",
-        "subtitle": "Desde pegar el texto hasta copiar el resultado, en tres pasos sencillos.",
+        "title": "Cómo funciona el Humanizador de IA",
+        "subtitle": "Desde pegar el texto hasta copiar el resultado, el Humanizador de IA actúa en tres pasos sencillos.",
         "steps": {
           "step-1": {
             "label": "Paso 1 · Añade tu contenido",
@@ -2327,15 +2327,15 @@
             "items": [
               {
                 "title": "Revisa que te represente",
-                "description": "Lee el resultado y ajusta los detalles que necesites para que el texto encaje todavía más con tu voz o la de tu organización."
+                "description": "El resultado humanizado está pensado para sonar natural en blogs, emails o informes, evitando señales claras de haber sido escrito por IA."
               },
               {
                 "title": "Copia la versión humanizada",
-                "description": "Cuando estés conforme, copia el texto en un clic y pégalo en tu editor, plataforma de trabajo o gestor de tareas."
+                "description": "Escanea de nuevo con el detector de IA si quieres validar que el texto suena más humano antes de enviarlo."
               },
               {
                 "title": "Conéctalo con otras herramientas",
-                "description": "Si quieres ir más allá, puedes pasar el texto por el Detector de IA, el Detector de plagio o el Resumidor de textos de VeriIA."
+                "description": "Copia el texto con un clic o descárgalo si trabajas con documentos. Tú eliges cómo mover el contenido humanizado."
               }
             ]
           }
