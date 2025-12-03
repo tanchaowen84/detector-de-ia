@@ -978,6 +978,16 @@ export function AiDetectorSection() {
                           {t('report.checkPlagiarism')}
                         </LocaleLink>
                       </Button>
+
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="h-11 rounded-xl border-indigo-200 text-indigo-700 hover:bg-indigo-50"
+                      >
+                        <LocaleLink href={Routes.AIHumanizer}>
+                          {t('report.humanize')}
+                        </LocaleLink>
+                      </Button>
                     </div>
                   </div>
                 ) : (

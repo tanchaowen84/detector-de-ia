@@ -1407,7 +1407,9 @@
         },
         "terms": "By continuing you accept our {terms} and {privacy}.",
         "termsLink": "Terms",
-        "privacyLink": "Privacy Policy"
+        "privacyLink": "Privacy Policy",
+        "humanize": "Humanize text",
+        "humanizeDescription": "Send the result to the AI Humanizer to make it sound more natural."
       },
       "evaluation": {
         "aiLikely": "More likely AI",
