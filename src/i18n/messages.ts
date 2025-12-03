@@ -2,11 +2,18 @@ import deepmerge from 'deepmerge';
 import type { Locale, Messages } from 'next-intl';
 import { routing } from './routing';
 
-// assume that the default messages are in the en.json file
-// if you want to use a different default locale, you can change to other {locale}.json file
-// we need to export the default messages so that we can use them in the app/manifest.ts file
-// and the email templates can use the default messages to preview the emails
-export { default as defaultMessages } from '../../messages/en.json';
+import enMessages from '../../messages/en.json';
+import esMessages from '../../messages/es.json';
+
+// Keep a tiny in-memory map so the default locale drives which language
+// we surface for manifest/OG fallbacks instead of hard-coding English.
+const messagesMap: Record<string, Messages> = {
+  en: enMessages as Messages,
+  es: esMessages as Messages,
+};
+
+export const defaultMessages: Messages =
+  messagesMap[routing.defaultLocale] ?? messagesMap.en;
 
 const importLocale = async (locale: Locale): Promise<Messages> => {
   return (await import(`../../messages/${locale}.json`)).default as Messages;

@@ -23,6 +23,7 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     canonicalUrl: getUrlWithLocale('/plagiarism-detector', locale),
+    locale,
   });
 }
 

@@ -101,6 +101,7 @@ export async function generateMetadata({
     title: `${post.title} | ${t('title')}`,
     description: post.description,
     canonicalUrl: getUrlWithLocale(post.slug, locale),
+    locale,
     image: post.image,
   });
 }
