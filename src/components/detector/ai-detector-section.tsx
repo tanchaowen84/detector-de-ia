@@ -49,6 +49,8 @@ import {
   SparklesIcon,
   UploadCloudIcon,
   XIcon,
+  FileSearchIcon,
+  ClipboardTypeIcon,
 } from 'lucide-react';
 import type { CSSProperties, ChangeEvent, UIEvent } from 'react';
 import { useMemo, useRef, useState, useTransition } from 'react';
@@ -956,7 +958,7 @@ export function AiDetectorSection() {
                       <Button
                         asChild
                         disabled={isLoggedIn && !hasReportLink}
-                        className="h-11 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500"
+                        className="h-11 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500 gap-2"
                       >
                         <LocaleLink
                           href={isLoggedIn
@@ -965,26 +967,27 @@ export function AiDetectorSection() {
                               : Routes.Dashboard
                             : loginHref}
                         >
+                          <FingerprintIcon className="h-4 w-4" />
                           {isLoggedIn ? t('report.viewReport') : t('report.loginToView')}
                         </LocaleLink>
                       </Button>
 
                       <Button
                         asChild
-                        variant="outline"
-                        className="h-11 rounded-xl border-indigo-200 text-indigo-700 hover:bg-indigo-50"
+                        className="h-11 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500 gap-2"
                       >
                         <LocaleLink href={Routes.PlagiarismDetector}>
+                          <FileSearchIcon className="h-4 w-4" />
                           {t('report.checkPlagiarism')}
                         </LocaleLink>
                       </Button>
 
                       <Button
                         asChild
-                        variant="outline"
-                        className="h-11 rounded-xl border-indigo-200 text-indigo-700 hover:bg-indigo-50"
+                        className="h-11 rounded-xl bg-indigo-600 text-white hover:bg-indigo-500 gap-2"
                       >
                         <LocaleLink href={Routes.AIHumanizer}>
+                          <ClipboardTypeIcon className="h-4 w-4" />
                           {t('report.humanize')}
                         </LocaleLink>
                       </Button>
