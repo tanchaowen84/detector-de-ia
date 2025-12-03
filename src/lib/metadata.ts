@@ -44,7 +44,7 @@ function mapOpenGraphLocale(locale?: Locale): string {
     case 'en':
       return 'en_US';
     default:
-      return 'en_US';
+      return 'es_ES';
   }
 }
 

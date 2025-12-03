@@ -2298,21 +2298,21 @@
   "HumanizerPage": {
     "metadata": {
       "title": "AI Humanizer – Make AI text sound human | VeriIA",
-      "description": "Rewrite AI-generated text to sound natural. Paste text or upload a file and get a humanized version ready to pass AI detectors."
+      "description": "Use our AI humanizer to rewrite AI-generated text so it sounds natural. Paste your content or upload a file and get a humanized version ready to share or check with detectors."
     },
     "hero": {
-      "badge": "AI humanizer",
-      "title": "Humanizador de IA",
-      "subtitle": "Turn AI-looking text into something that reads human, with rough edges and a real voice.",
-      "cta": "Humanize now",
-      "secondaryCta": "Detect AI",
-      "loading": "Humanizing...",
-      "done": "Humanized",
-      "pasted": "Pasted"
+      "badge": "VeriIA tool",
+      "title": "AI humanizer to make your text sound human",
+      "subtitle": "Turn AI-generated drafts into text that reads like a real person wrote it, keeping the ideas but with a natural tone.",
+      "cta": "Humanize text now",
+      "secondaryCta": "Detect AI in my text",
+      "loading": "Humanizing your text...",
+      "done": "Humanized text ready",
+      "pasted": "Text pasted"
     },
     "input": {
       "title": "Input",
-      "subtitle": "Paste your text or upload a file to humanize.",
+      "subtitle": "Paste your text or upload a file to humanize it.",
       "paste": "Paste",
       "upload": "Upload file",
       "uploading": "Uploading...",
@@ -2322,196 +2322,199 @@
         "words": "{value} words",
         "chars": "{value} characters"
       },
-      "hint": "Guests can paste text; uploads need login."
+      "hint": "Guests can only paste text; file uploads require logging in."
     },
     "output": {
       "title": "Humanized output",
       "subtitle": "Your humanized text will appear here.",
-      "empty": "Run the humanizer to see your text.",
+      "empty": "Run the AI humanizer to see the result.",
       "hint": "You can copy the result.",
       "copy": "Copy",
       "copied": "Copied"
     },
     "errors": {
-      "clipboard": "Could not read clipboard.",
-      "upload": "Upload failed. Try again.",
+      "clipboard": "Could not read the clipboard.",
+      "upload": "Could not upload the file.",
       "missing": "Add text or a file to continue.",
-      "generic": "Could not humanize. Try again."
+      "generic": "We couldn’t humanize your text. Please try again."
     },
     "modals": {
       "upgrade": {
         "title": "Need more credits?",
-        "subtitle": "Upgrade to keep humanizing text and unlock higher limits."
+        "subtitle": "Upgrade your plan to keep using the AI humanizer and increase your limits."
       },
       "guest": {
         "title": "Create an account",
-        "subtitle": "Get more credits and enable file uploads.",
-        "body": "Sign in to continue humanizing text and unlock uploads.",
-        "cta": "Sign in"
+        "subtitle": "Get more credits and unlock file uploads.",
+        "body": "Log in to keep humanizing text and upload files.",
+        "cta": "Log in"
       }
     },
     "blocks": {
       "howItWorks": {
-        "title": "How the AI Humanizer works",
-        "subtitle": "Paste your text, add a file if you’re logged in, and get a human version ready to share.",
+        "title": "How the AI humanizer works",
+        "subtitle": "From pasting your text to copying the result in three simple steps.",
         "steps": {
           "step-1": {
-            "label": "Step 1 · Add your text",
-            "imageAlt": "User pasting text into the humanizer",
+            "label": "Step 1 · Add your content",
+            "imageAlt": "Person pasting text into the AI humanizer",
             "items": [
               {
-                "title": "Paste or upload",
-                "description": "Guests paste text; logged-in users can also upload text files."
+                "title": "Paste your text or upload a file",
+                "description": "Start by pasting your text or uploading a compatible text file. It works best if the content is already clean and not full of strange formatting."
               },
               {
-                "title": "Keep context",
-                "description": "We preserve intent and meaning before rewriting."
+                "title": "Choose what you want to improve",
+                "description": "You can humanize the whole text or start with the parts that sound the most like AI, and refine the tone section by section."
               },
               {
-                "title": "No jargon setup",
-                "description": "Just drop the content, no sliders or extra fields required."
+                "title": "Check everything looks right",
+                "description": "Before you humanize, make sure there’s no sensitive information you don’t want to process and that the language is the one you expect."
               }
             ]
           },
           "step-2": {
-            "label": "Step 2 · Run the humanizer",
-            "imageAlt": "AI humanizer processing",
+            "label": "Step 2 · We humanize the text",
+            "imageAlt": "AI humanization process in progress",
             "items": [
               {
-                "title": "Prompted for stealth",
-                "description": "A curated prompt removes AI-ish phrasing and varies sentence rhythm."
+                "title": "We adjust tone and rhythm",
+                "description": "We rewrite sentences so the text flows more like something a person would write, avoiding repetitive blocks and very generic phrasing."
               },
               {
-                "title": "Attack the tell-tales",
-                "description": "It avoids banned words and patterns common in detectors."
+                "title": "We reduce typical AI patterns",
+                "description": "We soften common AI patterns and overused structures, keeping your ideas, examples and references while changing how they are expressed."
               },
               {
-                "title": "Credits auto-applied",
-                "description": "If you’re short on credits, we show the existing upgrade modal."
+                "title": "No complex settings",
+                "description": "You don’t have to tweak any advanced controls: just click “Humanize text now” and wait for the new version to appear."
               }
             ]
           },
           "step-3": {
-            "label": "Step 3 · Copy and use",
-            "imageAlt": "Humanized text result",
+            "label": "Step 3 · Review, copy and continue",
+            "imageAlt": "Result of humanized text",
             "items": [
               {
-                "title": "Copy instantly",
-                "description": "Grab the output with one click."
+                "title": "Check that it sounds like you",
+                "description": "Read the result and adjust any details you need so the text matches your voice or your organization’s tone even better."
               },
               {
-                "title": "Send to AI detector",
-                "description": "Jump to our AI detector to double-check tone and probability."
+                "title": "Copy the humanized version",
+                "description": "Once you’re happy, copy the text in one click and paste it into your editor, work platform or task manager."
               },
               {
-                "title": "Retry fast",
-                "description": "Adjust input and rerun in seconds if you want tweaks."
+                "title": "Connect it with other tools",
+                "description": "If you want to go further, you can send the text to the AI Detector, Plagiarism Detector or Text Summarizer inside VeriIA."
               }
             ]
           }
         }
       },
       "useCases": {
-        "title": "When to use the humanizer",
-        "subtitle": "Make AI-looking drafts sound like a person wrote them.",
-        "description": "Ideal when you must keep the ideas but lose the machine tone.",
+        "title": "When to use the AI humanizer",
+        "subtitle": "Make AI-sounding drafts read like they were written by a person, without starting from scratch.",
+        "description": "The AI humanizer is useful when you already have a draft created with AI and want to keep the ideas, but change the tone so it fits your voice, your context or your reader’s expectations.",
         "items": {
           "item-1": {
             "title": "Essays and assignments",
-            "description": "Rewrite AI-heavy sections so teachers see a natural voice."
+            "description": "Take paragraphs you drafted with AI and humanize them so your teacher reads a text that feels closer to your own style, not a robotic one. Use it as support to improve your writing, not to submit work that isn’t really yours."
           },
           "item-2": {
             "title": "Client deliverables",
-            "description": "Send decks, briefs or emails that don’t read like a bot."
+            "description": "Polish proposals, reports, decks or emails you started with AI so they sound clearer, more direct and more professional before you send them to a client."
           },
           "item-3": {
-            "title": "Blog & SEO drafts",
-            "description": "Remove robotic cadence before publishing."
+            "title": "Blog and SEO drafts",
+            "description": "Turn AI-written articles into more natural, readable posts while keeping important keywords, so your content doesn’t feel like a copy-paste AI template."
           },
           "item-4": {
-            "title": "Support macros",
-            "description": "Humanize templated replies while keeping facts straight."
+            "title": "Support macros and replies",
+            "description": "Humanize very templated support messages, keeping facts and policies correct but with a more empathetic and less mechanical tone."
           },
           "item-5": {
-            "title": "Product copy",
-            "description": "Make feature blurbs sound conversational, not generated."
+            "title": "Product copy and marketing",
+            "description": "Rewrite landing page copy, emails or feature descriptions so they feel more conversational and easier to understand for real users."
           },
           "item-6": {
-            "title": "Academic paraphrase",
-            "description": "Keep meaning, swap phrasing, stay citation-friendly."
+            "title": "Academic paraphrasing",
+            "description": "Paraphrase content while keeping meaning and references, useful to explain complex ideas in your own words and avoid repeating the same sentence patterns."
           }
         }
       },
       "related": {
-        "title": "Pair it with other tools",
-        "subtitle": "Cover detection, originality and quick checks.",
-        "description": "Move between tools without leaving VeriIA.",
-        "tryNow": "Try now",
+        "title": "Combine it with other VeriIA tools",
+        "subtitle": "Handle AI use, plagiarism and clarity of your texts in one place.",
+        "description": "After using the AI humanizer, you can send your text to our other tools to check AI usage, review originality and create fast, clear summaries.",
+        "tryNow": "Open tool",
         "tools": {
           "plagiarism": {
-            "title": "Plagiarism detector",
-            "description": "Check originality after humanizing long docs."
+            "title": "Plagiarism Detector",
+            "description": "Check the originality of long documents after humanizing them, and detect possible overlaps with other sources before you submit your work.",
+            "cta": "Open Plagiarism Detector"
           },
           "summarizer": {
-            "title": "AI summarizer",
-            "description": "Condense the new humanized draft for quick briefs."
+            "title": "AI Text Summarizer",
+            "description": "Create shorter versions of your humanized text for briefs, executive summaries or quick emails, without losing the main idea or the natural tone you just achieved.",
+            "cta": "Open Text Summarizer"
           },
           "humanizer": {
-            "title": "AI detector",
-            "description": "Verify probability and highlights in one click."
+            "title": "AI Detector",
+            "description": "Analyze the humanized text and review the estimated AI usage, with highlighted segments and a quick read on risk. Helpful for sensitive texts like academic work or official communications.",
+            "cta": "Open AI Detector"
           }
         }
       },
       "faq": {
-        "title": "AI humanizer FAQ",
-        "subtitle": "What people ask before running the humanizer.",
+        "title": "Questions about the AI humanizer",
+        "subtitle": "What people usually ask before using an AI humanizer for text.",
         "items": {
           "item-1": {
-            "question": "Can guests upload files?",
-            "answer": "No, guests can paste text only. Sign in to upload text files."
+            "question": "How is VeriIA’s AI humanizer different from a simple paraphraser?",
+            "answer": "Many paraphrasers just swap words or change sentence order so the text doesn’t look exactly like the original. VeriIA’s AI humanizer is built for something else: taking AI-generated drafts and rewriting them with a more natural tone, changing the rhythm of the sentences and avoiding very typical AI patterns, while we try to keep the overall intent and structure of your text."
           },
           "item-2": {
-            "question": "What files work best?",
-            "answer": "Plain text or lightweight formats (.txt, .md, .json). We block binaries and heavy PDFs."
+            "question": "Do you store my texts or use them to train models at VeriIA?",
+            "answer": "Texts you send to the AI humanizer are processed to generate the result and then discarded. We don’t use them to train our own models or to build profiles about you. Still, as a good practice, it’s better not to paste extremely sensitive information into any AI tool, including ours."
           },
           "item-3": {
-            "question": "Does it change the meaning?",
-            "answer": "The goal is to keep meaning and intent, but rewrite wording and rhythm. Review sensitive content."
+            "question": "Is using an AI humanizer cheating or plagiarism?",
+            "answer": "It depends on the context and on the rules you must follow. In many professional settings, using AI to improve clarity and tone is as acceptable as using a spell checker. In academic settings where AI is banned or must be declared, trying to hide that you used AI can be considered dishonest. When in doubt, the safest option is to read your institution’s policy and be transparent about the tools you used."
           },
           "item-4": {
-            "question": "Will it always beat detectors?",
-            "answer": "We reduce AI tells, but no tool guarantees 0% detection. Run our AI detector after humanizing."
+            "question": "Will humanized text always pass AI detectors?",
+            "answer": "No. No serious AI humanizer can guarantee that a text will pass every detector in every situation. Detectors rely on statistical patterns and sometimes flag human-written text, or miss AI-generated text. Humanizing helps reduce common AI signals (repetitive phrasing, flat tone, cloned structures), but there is always some risk that a detector will still mark the text."
           },
           "item-5": {
-            "question": "Are my texts stored?",
-            "answer": "We process them transiently to generate the result and then discard them."
+            "question": "What is the real benefit of using an AI humanizer?",
+            "answer": "It mainly helps you to:\n- Improve reading experience, so the text feels more natural, varied and less robotic.\n- Match the text to your personal or brand voice instead of sounding like every other AI output.\n- Reduce some patterns that AI detectors tend to look for, without promising perfect results.\n\nThe best way to use an ai-humanizer is as a starting point, and then do a manual review so the final text is truly yours."
           },
           "item-6": {
-            "question": "Can I humanize long documents?",
-            "answer": "Yes, within your plan limits. If it is very long, split it into chunks to keep quality."
+            "question": "What’s the difference between “humanizing text” and “making it undetectable”?",
+            "answer": "Humanizing text focuses on reading quality: clarity, tone, rhythm and natural flow. The goal is to make it read like something a person would write.\n\n“Making it undetectable” usually describes tools that promise to bypass all AI detectors. In practice, nobody can guarantee that all the time, and designing text only to trick detectors can cross ethical lines or break rules, especially in education. Our focus is on readability and responsible use, not on absolute guarantees."
           },
           "item-7": {
-            "question": "Which languages work?",
-            "answer": "We follow the input language. Spanish and English are tested most; others may vary but still run."
+            "question": "Will the AI humanizer change the meaning of my text?",
+            "answer": "The goal is to keep the main ideas, logic and key references, while mostly changing how sentences are written. Still, any rewrite can shift emphasis or nuance a bit.\n\nThat’s why we recommend:\n- Reviewing the full result, especially for legal, technical or academic texts.\n- Fixing any detail that no longer matches exactly what you want to say."
           },
           "item-8": {
-            "question": "Do I need to tune settings?",
-            "answer": "No extra knobs. Paste or upload, click humanize, and copy the result."
+            "question": "What kinds of texts benefit most from an AI humanizer?",
+            "answer": "An ai-humanizer is especially helpful for:\n- Essays, assignments and reports that were drafted with AI first.\n- Blog posts, SEO content and newsletters that sound too generic.\n- Professional emails, proposals and client documents.\n- Product copy, sales pages and very templated support messages.\n\nFor very short texts, manual editing can be faster; for very long texts, it often helps to split them into sections."
           },
           "item-9": {
-            "question": "What about citations or quotes?",
-            "answer": "We keep quotes but may simplify surrounding text. Double-check citations for accuracy."
+            "question": "How can I use an AI humanizer responsibly in academic settings?",
+            "answer": "A few general guidelines:\n- Use it to improve writing and clarity, not to outsource all the work.\n- Always read your school or university policy on AI tools.\n- If the rules ask for transparency, add a note saying you used AI tools as support.\n- Make sure the ideas, approach and conclusions are really yours, and always cite your original sources."
           },
           "item-10": {
-            "question": "How are credits calculated?",
-            "answer": "Credits are estimated by word count before running. If you’re short, you’ll see the upgrade modal."
+            "question": "In which languages can I use an AI humanizer?",
+            "answer": "You can use an AI humanizer with different languages as long as the text is reasonably well written and has a clear structure. In general, the more care you put into the final review, the better the results will be, especially for technical or specialized content.\n\nThe tool helps with tone and fluency, but it doesn’t replace your judgment: it’s always a good idea to read the full result and tweak anything that doesn’t sound exactly how you want."
           }
         }
       }
     },
     "guestModal": {
       "title": "Get more power",
-      "subtitle": "Log in to unlock 4× credits, 4× text length, and enable file uploads.",
+      "subtitle": "Log in to unlock 4× credits, 4× text length and file uploads.",
       "google": "Continue with Google · 4× credits",
       "github": "Continue with GitHub · 4× credits",
       "footer": "You can switch to Google or GitHub in one click."
