@@ -2,9 +2,6 @@ import { NextResponse } from 'next/server';
 
 import { getBaseUrl } from '@/lib/urls/urls';
 
-export const runtime = 'edge';
-export const preferredRegion = 'auto';
-
 function buildRobots(): string {
   const baseUrl = getBaseUrl().replace(/\/+$/, '');
 
