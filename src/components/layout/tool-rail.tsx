@@ -17,8 +17,18 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 
+const TOOL_I18N_KEYS = {
+  detector: 'detector',
+  plagiarism: 'plagiarism',
+  humanizer: 'humanizer',
+  summarizer: 'summarizer',
+  compare: 'compare',
+  counter: 'counter',
+  apa: 'apa',
+} as const;
+
 type ToolItem = {
-  key: string;
+  key: keyof typeof TOOL_I18N_KEYS;
   href: string;
   icon: React.ComponentType<{ className?: string }>;
 };

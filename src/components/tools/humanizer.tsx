@@ -313,7 +313,7 @@ export function HumanizerHero() {
               <DialogTitle>{t('modals.upgrade.title')}</DialogTitle>
               <DialogDescription>{t('modals.upgrade.subtitle')}</DialogDescription>
             </DialogHeader>
-            <PricingTable variant="modal" />
+            <PricingTable />
           </DialogContent>
         </Dialog>
 
