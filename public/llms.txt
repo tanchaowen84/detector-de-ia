@@ -1,0 +1,42 @@
+# VeriIA — Global AI Content Verification & Writing Assistant
+
+> VeriIA helps creators, educators, reviewers, and teams validate authenticity, spot plagiarism, compare versions, and finish rewrites or summaries before they ship—privacy-first and action-ready.
+
+## Background
+AI writing boosts output but raises trust and compliance risks. VeriIA brings detection, comparison, rewriting, summarizing, counting, and citation tools into one experience so every submission can be verified, explained, and improved with minimal effort. We serve a global audience and keep expanding language support.
+
+## Content Categories
+### [AI Content Detector](https://detectordeia.pro/)
+One-click checks for text/files/URLs, returning overall AI probability plus sentence-level probability highlights to pinpoint risky lines fast.
+
+### [Plagiarism Checker](https://detectordeia.pro/plagiarism-detector)
+Shows match percentage, source list, and similar segments for academic, editorial, or brand reviews.
+
+### [Text Compare](https://detectordeia.pro/text-compare)
+Side-by-side similarity and differences to validate rewrites, merges, or version reviews.
+
+### [AI Humanizer](https://detectordeia.pro/ai-humanizer)
+Rewrites to keep meaning while sounding more natural and less machine-like—ideal pre-submission polish.
+
+### [AI Summarizer](https://detectordeia.pro/ai-summarizer)
+Compresses long content from text/URLs/files; length is controllable while key points stay intact.
+
+### [Word Counter](https://detectordeia.pro/word-counter)
+Front-end only, real-time counts for words, characters, sentences, paragraphs; zero credits.
+
+### [APA Citation Generator](https://detectordeia.pro/apa-generator)
+Produces ready-to-copy references and in-text citations for papers and reports.
+
+## User Value
+- Compliance and trust: dual AI + plagiarism checks with visual highlights to justify decisions.
+- Faster finalization: rewrite, summarize, compare, and count form a pre-submit workflow that cuts rework.
+- High accuracy, better value: strong detection quality with more affordable pricing tiers so individuals and teams can adopt long term.
+- Transparent costs and access: word-based credits, guest/free/subscription/lifetime options, optional history retention.
+- Privacy-first: content is used only to generate results, never for training; files and links stay private.
+
+## Latest Updates
+### [AI Humanizer released](https://detectordeia.pro/ai-humanizer)
+Natural rewrite mode to reduce machine tone for both text and file inputs.
+
+### [AI Summarizer launched](https://detectordeia.pro/ai-summarizer)
+Multi-source summarization with adjustable length, keeping key insights for quick reading and decisions.

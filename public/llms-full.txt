@@ -1,0 +1,54 @@
+# VeriIA — Global, Trusted AI Content Verification & Writing Suite (Full)
+
+> VeriIA delivers AI content detection, plagiarism checks, text comparison, AI Humanizer, AI Summarizer, word counting, and APA citation in one workflow. It serves creators, educators, publishers, and compliance teams worldwide with accuracy, affordability, and privacy-by-default.
+
+## Background
+AI writing accelerates output but introduces authenticity and compliance concerns. VeriIA was built so every submission can be verified, explained, and improved before delivery. By uniting detection, comparison, rewriting, summarizing, counting, and citation tools, we minimize back-and-forth edits and keep users in control of cost, privacy, and evidence. The platform is global-first and continually expands language support.
+
+## Content Categories
+### [AI Content Detector](https://detectordeia.pro/)
+- Inputs: text, common documents, public URLs.
+- Outputs: overall AI probability plus sentence-level probability and highlights to isolate risky passages quickly.
+- Value: clear evidence for teaching, editing, and review; export or keep history when needed.
+
+### [Plagiarism Checker](https://detectordeia.pro/plagiarism-detector)
+- Delivers match percentage, source list, similar segments, and same/similar word counts.
+- Use cases: academic submissions, long-form journalism, brand or legal reviews; supports text/file/URL inputs.
+- Output: clickable sources for human verification and rewrite guidance.
+
+### [Text Compare](https://detectordeia.pro/text-compare)
+- Compares two versions, surfacing similarity, unique passages, and overlaps.
+- Scenarios: rewrite validation, version review, manuscript merge; shows credits used for budget control.
+
+### [AI Humanizer](https://detectordeia.pro/ai-humanizer)
+- Rewrites while preserving meaning, making tone more natural and less machine-like.
+- Supports text and file inputs; results ready to copy into final submissions.
+- Value: lowers the chance of “machiney” style flags and boosts readability.
+
+### [AI Summarizer](https://detectordeia.pro/ai-summarizer)
+- Works with text, URLs, and files; keeps output in the source language.
+- Length slider balances compression with information retention; ideal for quick briefings and decisions.
+- Includes usage hints for transparent credit management.
+
+### [Word Counter](https://detectordeia.pro/word-counter)
+- Front-end only, zero cost: real-time counts of words, characters (with/without spaces), sentences, paragraphs.
+- Helpful before detection or submission to respect length limits on any device.
+
+### [APA Citation Generator](https://detectordeia.pro/apa-generator)
+- Handles books, journals, websites; formats authors, year, DOI/URL, and in-text citations.
+- One-click copy of references and in-text entries for academic and report compliance.
+
+## User Value
+- Compliance and trust: dual AI + plagiarism protection with sentence-level and source visualization for evidence-backed decisions.
+- Pre-submit efficiency: summarize → compare → humanize → cite → count forms a complete rewrite loop that reduces rework.
+- High accuracy with better pricing: competitive detection quality paired with more affordable tiers so individuals, schools, and teams can sustain usage.
+- Transparent costs and permissions: guest/free/subscription/lifetime options, word-based credits, optional history retention, and plan-based file/URL access.
+- Privacy by default: user content is only used to produce results, never for training; file and link scans stay private.
+- Team ready: dashboard for history and retention settings; clear payments and quota management to roll out quickly across groups.
+
+## Latest Updates
+### [AI Humanizer released](https://detectordeia.pro/ai-humanizer)
+New natural rewrite experience for text and file inputs to reduce machine tone before submission.
+
+### [AI Summarizer launched](https://detectordeia.pro/ai-summarizer)
+Multi-source summarization with adjustable length and source-language output to surface key points faster for decisions and pre-reading.
