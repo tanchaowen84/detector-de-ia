@@ -2252,7 +2252,7 @@
         "words": "{value} palabras",
         "chars": "{value} caracteres"
       },
-      "hint": ""
+      "hint": "El Humanizador de IA funciona mejor con texto claro y sin formato extraño."
     },
     "output": {
       "title": "Salida humanizada",
@@ -2265,18 +2265,18 @@
     "errors": {
       "clipboard": "No se pudo leer el portapapeles.",
       "upload": "No se pudo subir el archivo.",
-      "missing": "Añade texto o un archivo para continuar.",
+      "missing": "Añade texto o un archivo para continuar con el Humanizador de IA.",
       "generic": "No se pudo humanizar. Inténtalo de nuevo."
     },
     "modals": {
       "upgrade": {
         "title": "¿Necesitas más créditos?",
-        "subtitle": "Mejora tu plan para seguir humanizando texto y ampliar límites."
+        "subtitle": "Mejora tu plan para seguir usando el Humanizador de IA y ampliar límites."
       },
       "guest": {
         "title": "Crea una cuenta",
-        "subtitle": "Obtén más créditos y habilita las subidas de archivos.",
-        "body": "Inicia sesión para seguir humanizando texto y subir archivos.",
+        "subtitle": "Obtén más créditos y habilita las subidas de archivos para el Humanizador de IA.",
+        "body": "Inicia sesión para seguir humanizando texto y subir archivos con el Humanizador de IA.",
         "cta": "Iniciar sesión"
       }
     },
@@ -2291,7 +2291,7 @@
             "items": [
               {
                 "title": "Pega tu texto o sube un archivo",
-                "description": "Empieza pegando tu texto o subiendo un archivo de texto compatible. Es más fácil si el contenido ya está limpio y sin formato extraño."
+                "description": "Empieza pegando tu texto o subiendo un archivo de texto compatible. Es más fácil si el contenido ya está limpio y sin formato extraño para que el Humanizador de IA trabaje mejor."
               },
               {
                 "title": "Elige el fragmento que quieres mejorar",
@@ -2299,7 +2299,7 @@
               },
               {
                 "title": "Revisa que todo esté correcto",
-                "description": "Antes de humanizar, comprueba que no haya datos sensibles que no quieras procesar y que el idioma del texto sea el que esperas."
+                "description": "Antes de usar el Humanizador de IA, comprueba que no haya datos sensibles que no quieras procesar y que el idioma del texto sea el que esperas."
               }
             ]
           },
@@ -2309,7 +2309,7 @@
             "items": [
               {
                 "title": "Ajustamos tono y ritmo",
-                "description": "Reescribimos frases para que el texto fluya como lo escribiría una persona, evitando bloques repetitivos y giros demasiado genéricos."
+                "description": "Con el Humanizador de IA reescribimos frases para que el texto fluya como lo escribiría una persona, evitando bloques repetitivos y giros demasiado genéricos."
               },
               {
                 "title": "Reducimos patrones típicos de IA",
@@ -2342,9 +2342,9 @@
         }
       },
       "useCases": {
-        "title": "Cuándo usar el humanizador",
+        "title": "Cuándo usar el Humanizador de IA",
         "subtitle": "Haz que los borradores con tono de IA suenen escritos por una persona, sin empezar desde cero.",
-        "description": "Es útil cuando ya tienes un borrador generado con IA y quieres quedarte con las ideas, pero cambiar el tono para que encaje mejor con tu voz, con tu contexto o con las expectativas de quien va a leerlo.",
+        "description": "El Humanizador de IA es útil cuando ya tienes un borrador generado con IA y quieres quedarte con las ideas, pero cambiar el tono para que encaje mejor con tu voz, con tu contexto o con las expectativas de quien va a leerlo.",
         "items": {
           "item-1": {
             "title": "Ensayos y tareas",
@@ -2375,7 +2375,7 @@
       "related": {
         "title": "Combínalo con otras herramientas de VeriIA",
         "subtitle": "Controla IA, plagio y claridad de tus textos en el mismo lugar.",
-        "description": "Después de humanizar, puedes pasar tu texto por nuestras otras herramientas para comprobar uso de IA, revisar originalidad y crear resúmenes claros en segundos.",
+        "description": "Después de usar el Humanizador de IA, puedes pasar tu texto por nuestras otras herramientas para comprobar uso de IA, revisar originalidad y crear resúmenes claros en segundos.",
         "tryNow": "Abrir herramienta",
         "tools": {
           "plagiarism": {
@@ -2397,7 +2397,7 @@
       },
       "faq": {
         "title": "Preguntas sobre el Humanizador de IA",
-        "subtitle": "Lo que suele preguntarse antes de usar un humanizador de texto con IA.",
+        "subtitle": "Lo que suele preguntarse antes de usar un Humanizador de IA para texto con IA.",
         "items": {
           "item-1": {
             "question": "¿En qué se diferencia el Humanizador de IA de VeriIA de un simple parafraseador?",
@@ -2417,7 +2417,7 @@
           },
           "item-5": {
             "question": "¿Para qué sirve realmente humanizar texto generado por IA?",
-            "answer": "Sirve sobre todo para:\n- Mejorar la experiencia de lectura: que el texto suene más cercano, variado y menos robótico.\n- Ajustar el texto a tu voz o a la de tu marca, en lugar de que todo parezca escrito por la misma IA.\n- Reducir algunos patrones que suelen mirar los detectores de IA, sin prometer resultados absolutos.\n\nLo ideal es usar el humanizador como punto de partida y luego hacer una revisión manual para que el texto sea realmente tuyo."
+            "answer": "Sirve sobre todo para:\n- Mejorar la experiencia de lectura: que el texto suene más cercano, variado y menos robótico.\n- Ajustar el texto a tu voz o a la de tu marca, en lugar de que todo parezca escrito por la misma IA.\n- Reducir algunos patrones que suelen mirar los detectores de IA, sin prometer resultados absolutos.\n\nLo ideal es usar el Humanizador de IA como punto de partida y luego hacer una revisión manual para que el texto sea realmente tuyo."
           },
           "item-6": {
             "question": "¿En qué se diferencia “humanizar texto” de “hacerlo indetectable”?",
@@ -2429,15 +2429,15 @@
           },
           "item-8": {
             "question": "¿Qué tipos de textos se benefician más de un humanizador de IA?",
-            "answer": "Funciona especialmente bien en:\n- Ensayos, tareas y trabajos que primero se han escrito con ayuda de IA como borrador.\n- Artículos de blog, contenido SEO y newsletters que suenan demasiado genéricos.\n- Correos profesionales, propuestas y documentos para clientes.\n- Textos de producto, páginas de venta y mensajes de soporte muy templados.\n\nEn textos muy cortos a veces es más rápido editar a mano; en textos muy largos suele ayudar dividir por secciones."
+            "answer": "Funciona especialmente bien en:\n- Ensayos, tareas y trabajos que primero se han escrito con ayuda de IA como borrador.\n- Artículos de blog, contenido SEO y newsletters que suenan demasiado genéricos.\n- Correos profesionales, propuestas y documentos para clientes.\n- Textos de producto, páginas de venta y mensajes de soporte muy templados.\n\nEn textos muy cortos a veces es más rápido editar a mano; en textos muy largos suele ayudar dividir por secciones antes de pasarlos por el humanizador de IA."
           },
           "item-9": {
             "question": "¿Cómo puedo usar un humanizador de forma responsable en entornos académicos?",
-            "answer": "Algunas pautas generales:\n- Úsalo para mejorar redacción y claridad, no para delegar todo el trabajo.\n- Revisa siempre el reglamento de tu universidad o instituto sobre uso de IA.\n- Si las normas piden transparencia, incluye una nota indicando que has usado herramientas de IA como apoyo.\n- Asegúrate de que las ideas, el enfoque y las conclusiones son realmente tuyos, y cita siempre las fuentes originales."
+            "answer": "Algunas pautas generales para usar un Humanizador de IA:\n- Úsalo para mejorar redacción y claridad, no para delegar todo el trabajo.\n- Revisa siempre el reglamento de tu universidad o instituto sobre uso de IA.\n- Si las normas piden transparencia, incluye una nota indicando que has usado herramientas de IA como apoyo.\n- Asegúrate de que las ideas, el enfoque y las conclusiones son realmente tuyos, y cita siempre las fuentes originales."
           },
           "item-10": {
             "question": "¿En qué idiomas puedo usar un humanizador de IA?",
-            "answer": "Puedes usar un humanizador con distintos idiomas siempre que el texto esté razonablemente bien escrito y tenga una estructura clara. En general, cuanto más cuidado pongas en la revisión final, mejores serán los resultados, sobre todo en textos técnicos o especializados.\n\nLa herramienta te ayuda con el tono y la fluidez, pero no reemplaza tu revisión: es buena idea leer siempre el resultado completo y ajustar lo que haga falta para que suene exactamente como tú quieres."
+            "answer": "Puedes usar un Humanizador de IA con distintos idiomas siempre que el texto esté razonablemente bien escrito y tenga una estructura clara. En general, cuanto más cuidado pongas en la revisión final, mejores serán los resultados, sobre todo en textos técnicos o especializados.\n\nLa herramienta te ayuda con el tono y la fluidez, pero no reemplaza tu revisión: es buena idea leer siempre el resultado completo y ajustar lo que haga falta para que suene exactamente como tú quieres."
           }
         }
       }
