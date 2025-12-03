@@ -54,17 +54,21 @@ export default function AiDetectorFeaturesSection({
   };
   const locale = useLocale();
 
+  const imageFolder = i18nNamespace.startsWith('HumanizerPage')
+    ? 'howitworks/ai-humanizer'
+    : 'steps';
+
   const stepImages: Record<StepKey, { src: string; alt: string }> = {
     'step-1': {
-      src: 'https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/steps/step1.webp',
+      src: `https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/${imageFolder}/step1.webp`,
       alt: t('steps.step-1.imageAlt'),
     },
     'step-2': {
-      src: 'https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/steps/step2.webp',
+      src: `https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/${imageFolder}/step2.webp`,
       alt: t('steps.step-2.imageAlt'),
     },
     'step-3': {
-      src: 'https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/steps/step3.webp',
+      src: `https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/${imageFolder}/step3.webp`,
       alt: t('steps.step-3.imageAlt'),
     },
   };
