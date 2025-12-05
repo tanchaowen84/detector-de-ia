@@ -46,6 +46,9 @@ const searchAPI = createI18nSearchAPI('advanced', {
 
     // Use the default English tokenizer for English content
     en: 'english',
+    'pt-br': 'portuguese',
+    pt: 'portuguese',
+    es: 'spanish',
   },
 
   // Global search configuration
