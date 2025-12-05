@@ -1166,7 +1166,7 @@
     },
     "sidebar": {
       "detector": {
-        "title": "Detector de IA"
+        "title": "Detector IA"
       },
       "plagiarism": {
         "title": "Plágio"
@@ -1175,16 +1175,16 @@
         "title": "Humanizador"
       },
       "summarizer": {
-        "title": "Resumidor de textos"
+        "title": "Resumidor"
       },
       "compare": {
         "title": "Comparar"
       },
       "counter": {
-        "title": "Contador de palavras"
+        "title": "Contador"
       },
       "apa": {
-        "title": "Referências ABNT"
+        "title": "ABNT"
       },
       "trigger": "Ferramentas",
       "hide": "Ocultar"
