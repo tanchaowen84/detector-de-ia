@@ -1712,23 +1712,23 @@
   },
   "CookieBanner": {
     "title": "Usamos cookies",
-    "description": "Utilizamos cookies necesarias para que el sitio funcione y analíticas (GA4, Clarity, Plausible) si nos das tu consentimiento.",
-    "acceptAll": "Aceptar todas",
-    "acceptNecessary": "Solo necesarias",
-    "manage": "Preferencias",
-    "manageTitle": "Gestiona tus preferencias",
-    "save": "Guardar selección",
+    "description": "Usamos cookies necessárias para o site funcionar e cookies de análise (GA4, Clarity, Plausible) apenas com o seu consentimento.",
+    "acceptAll": "Aceitar todas",
+    "acceptNecessary": "Só as necessárias",
+    "manage": "Preferências",
+    "manageTitle": "Gerencie suas preferências",
+    "save": "Salvar seleção",
     "sectionNecessary": {
-      "title": "Necesarias",
-      "desc": "Imprescindibles para sesión, idioma y seguridad."
+      "title": "Necessárias",
+      "desc": "Essenciais para sessão, idioma e segurança."
     },
     "sectionAnalytics": {
-      "title": "Analítica",
-      "desc": "Nos ayudan a entender el uso y mejorar (GA4, Clarity, Plausible)."
+      "title": "Análise",
+      "desc": "Ajudam a entender o uso e melhorar (GA4, Clarity, Plausible)."
     },
     "sectionMarketing": {
       "title": "Marketing",
-      "desc": "No instalamos hoy. Si activamos anuncios (p.ej. AdSense) pediremos tu consentimiento."
+      "desc": "Não instalamos hoje. Se ativarmos anúncios (ex.: AdSense), pediremos seu consentimento."
     }
   },
   "ApaGeneratorPage": {
