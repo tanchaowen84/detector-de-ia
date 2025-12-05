@@ -25,7 +25,7 @@ Compresses long content from text/URLs/files; length is controllable while key p
 Front-end only, real-time counts for words, characters, sentences, paragraphs; zero credits.
 
 ### [APA Citation Generator](https://detectordeia.pro/apa-generator)
-Produces ready-to-copy references and in-text citations for papers and reports.
+Produces ready-to-copy references and in-text citations; supports APA 7 and ABNT (pt-BR default), with books/journals/web pages, DOI/URL input, and author/edition/city handling.
 
 ## User Value
 - Compliance and trust: dual AI + plagiarism checks with visual highlights to justify decisions.
@@ -40,3 +40,6 @@ Natural rewrite mode to reduce machine tone for both text and file inputs.
 
 ### [AI Summarizer launched](https://detectordeia.pro/ai-summarizer)
 Multi-source summarization with adjustable length, keeping key insights for quick reading and decisions.
+
+### [ABNT support added](https://detectordeia.pro/apa-generator)
+Citation generator now outputs ABNT (Brazilian standard) alongside APA; pt-BR locale defaults to ABNT while other locales default to APA.

@@ -35,8 +35,8 @@ AI writing accelerates output but introduces authenticity and compliance concern
 - Helpful before detection or submission to respect length limits on any device.
 
 ### [APA Citation Generator](https://detectordeia.pro/apa-generator)
-- Handles books, journals, websites; formats authors, year, DOI/URL, and in-text citations.
-- One-click copy of references and in-text entries for academic and report compliance.
+- Handles books, journals, and websites; formats authors (with initials), year, subtitle, edition, city, DOI/URL, and in-text citations.
+- Supports APA 7 and ABNT; pt-BR locale defaults to ABNT, other locales default to APA; one-click copy of references and in-text entries.
 
 ## User Value
 - Compliance and trust: dual AI + plagiarism protection with sentence-level and source visualization for evidence-backed decisions.
@@ -52,3 +52,6 @@ New natural rewrite experience for text and file inputs to reduce machine tone b
 
 ### [AI Summarizer launched](https://detectordeia.pro/ai-summarizer)
 Multi-source summarization with adjustable length and source-language output to surface key points faster for decisions and pre-reading.
+
+### [ABNT citations enabled](https://detectordeia.pro/apa-generator)
+Brazilian ABNT format added to the citation generator with APA/ABNT toggle and locale-aware defaults.
