@@ -1,19 +1,20 @@
 "use client";
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { LocaleLink } from '@/i18n/navigation';
 import { Routes } from '@/routes';
 import { Loader2Icon } from 'lucide-react';
 import { useRef } from 'react';
 
 type SourceType = 'book' | 'journal' | 'website';
+type CitationStyle = 'apa' | 'abnt';
 
 type FieldKey =
   | 'authors'
@@ -119,9 +120,82 @@ function formatReference(type: SourceType, fields: Record<FieldKey, string>) {
   return `${authorsText}${yearText} ${sentenceCase(fields.title)}. ${site ? `${site}.` : ''}${accessText} ${url || ''}`.trim();
 }
 
+// ---------- ABNT helpers ----------
+type ParsedAuthor = { family: string; given: string };
+
+function parseAuthorsAbnt(input: string): ParsedAuthor[] {
+  if (!input.trim()) return [];
+  return input
+    .split(/\n|;/)
+    .map((a) => a.trim())
+    .filter(Boolean)
+    .map((raw) => {
+      if (raw.includes(',')) {
+        const [family, given = ''] = raw.split(',').map((s) => s.trim());
+        return { family: family.toUpperCase(), given: given };
+      }
+      const parts = raw.split(/\s+/);
+      if (parts.length === 1) return { family: raw.toUpperCase(), given: '' };
+      const family = parts.pop() ?? '';
+      const given = parts.join(' ');
+      return { family: family.toUpperCase(), given };
+    });
+}
+
+function formatAuthorsAbnt(authors: ParsedAuthor[]): string {
+  if (authors.length === 0) return '';
+  const list = authors.map((a) => (a.given ? `${a.family}, ${a.given}` : a.family));
+  if (authors.length > 3) {
+    const first = list[0];
+    return `${first} et al.`;
+  }
+  return list.join('; ');
+}
+
+function formatInTextAbnt(authors: ParsedAuthor[], year: string) {
+  const safeYear = year || 's.d.';
+  if (authors.length === 0) return `(TÍTULO, ${safeYear})`;
+  if (authors.length === 1) return `(${authors[0].family}, ${safeYear})`;
+  if (authors.length === 2) return `(${authors[0].family}; ${authors[1].family}, ${safeYear})`;
+  return `(${authors[0].family} et al., ${safeYear})`;
+}
+
+function formatReferenceAbnt(type: SourceType, fields: Record<FieldKey, string>) {
+  const authors = parseAuthorsAbnt(fields.authors || '');
+  const authorsText = authors.length ? `${formatAuthorsAbnt(authors)}. ` : '';
+  const yearText = fields.year?.trim() ? `${fields.year.trim()}.` : 's.d.';
+  const title = fields.title?.trim();
+
+  if (type === 'book') {
+    const publisher = fields.publisher?.trim();
+    return `${authorsText}${title ? `${title}. ` : ''}${publisher ? `${publisher}, ` : ''}${yearText}`.trim();
+  }
+
+  if (type === 'journal') {
+    const journal = fields.journal?.trim();
+    const vol = fields.volume?.trim();
+    const issue = fields.issue?.trim();
+    const pages = fields.pages?.trim();
+    const doi = fields.doi?.trim();
+    const volIssue = vol ? `v. ${vol}${issue ? `, n. ${issue}` : ''}` : '';
+    const pagesText = pages ? `, p. ${pages}` : '';
+    const doiText = doi ? `. DOI: ${doi.replace(/^https?:\/\//, '')}` : '';
+    return `${authorsText}${title ? `${title}. ` : ''}${journal ? `${journal}, ` : ''}${volIssue}${pagesText}, ${yearText}${doiText}`.trim();
+  }
+
+  // website
+  const site = fields.site?.trim();
+  const url = fields.url?.trim();
+  const access = fields.accessDate?.trim();
+  const accessText = access ? ` Acesso em: ${access}.` : '';
+  return `${authorsText}${title ? `${title}. ` : ''}${site ? `${site}, ` : ''}${yearText}${url ? ` Disponível em: ${url}.` : ''}${accessText}`.trim();
+}
+
 export function ApaGenerator() {
   const t = useTranslations('ApaGeneratorPage');
+  const locale = useLocale();
   const [sourceType, setSourceType] = useState<SourceType>('book');
+  const [style, setStyle] = useState<CitationStyle>(locale === 'pt-br' ? 'abnt' : 'apa');
   const [fields, setFields] = useState<Record<FieldKey, string>>({
     authors: '',
     year: '',
@@ -140,11 +214,22 @@ export function ApaGenerator() {
   const [isLookingUp, setIsLookingUp] = useState(false);
   const formRef = useRef<HTMLDivElement | null>(null);
 
-  const reference = useMemo(() => formatReference(sourceType, fields), [sourceType, fields]);
-  const inText = useMemo(
-    () => formatInText(parseAuthors(fields.authors || ''), fields.year?.trim() || ''),
-    [fields.authors, fields.year]
-  );
+  useEffect(() => {
+    // 如果用户切换了语言，重设默认格式
+    setStyle(locale === 'pt-br' ? 'abnt' : 'apa');
+  }, [locale]);
+
+  const reference = useMemo(() => {
+    return style === 'abnt'
+      ? formatReferenceAbnt(sourceType, fields)
+      : formatReference(sourceType, fields);
+  }, [style, sourceType, fields]);
+
+  const inText = useMemo(() => {
+    return style === 'abnt'
+      ? formatInTextAbnt(parseAuthorsAbnt(fields.authors || ''), fields.year?.trim() || '')
+      : formatInText(parseAuthors(fields.authors || ''), fields.year?.trim() || '');
+  }, [style, fields.authors, fields.year]);
 
   const handleChange = (key: FieldKey, value: string) => {
     setFields((prev) => ({ ...prev, [key]: value }));
@@ -233,7 +318,22 @@ export function ApaGenerator() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <div className="flex items-center gap-2 text-sm font-medium text-slate-700 whitespace-nowrap">
               <span>{t('hero.styleLabel')}</span>
-              <span className="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-slate-600">APA 7</span>
+              <div className="flex rounded-md border border-slate-200 bg-slate-50 p-0.5 text-xs">
+                <button
+                  type="button"
+                  onClick={() => setStyle('apa')}
+                  className={`px-2 py-1 rounded-sm ${style === 'apa' ? 'bg-white shadow border border-slate-200 text-slate-800' : 'text-slate-500'}`}
+                >
+                  {t('hero.styles.apa')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setStyle('abnt')}
+                  className={`px-2 py-1 rounded-sm ${style === 'abnt' ? 'bg-white shadow border border-slate-200 text-slate-800' : 'text-slate-500'}`}
+                >
+                  {t('hero.styles.abnt')}
+                </button>
+              </div>
             </div>
             <div className="hidden h-8 w-px bg-slate-200 sm:block" />
             <div className="flex-1">

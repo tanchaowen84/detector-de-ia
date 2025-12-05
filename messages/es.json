@@ -1743,6 +1743,10 @@
       "searchPlaceholder": "Pega DOI, ISBN o URL (autocompletamos si podemos)",
       "searchCta": "Citar",
       "styleLabel": "Estilo de cita",
+      "styles": {
+        "apa": "APA 7",
+        "abnt": "ABNT"
+      },
       "manualLink": "Citar manualmente",
       "manualLabel": "O cita manualmente"
     },

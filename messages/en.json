@@ -1786,6 +1786,10 @@
       "searchPlaceholder": "Paste DOI, ISBN or URL (we’ll auto-fill when we can)",
       "searchCta": "Cite",
       "styleLabel": "Citation style",
+      "styles": {
+        "apa": "APA 7",
+        "abnt": "ABNT"
+      },
       "manualLink": "Cite manually",
       "manualLabel": "Or fill in manually"
     },

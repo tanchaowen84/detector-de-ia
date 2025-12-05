@@ -1743,6 +1743,10 @@
       "searchPlaceholder": "Cole DOI, ISBN ou URL (preenchemos se possível)",
       "searchCta": "Citar",
       "styleLabel": "Estilo de citação",
+      "styles": {
+        "apa": "APA 7",
+        "abnt": "ABNT"
+      },
       "manualLink": "Citar manualmente",
       "manualLabel": "Ou citar manualmente"
     },
