@@ -184,6 +184,103 @@
             ]
           }
         }
+      },
+      "useCases": {
+        "title": "Quando usar o Detector de plágio",
+        "subtitle": "Situações em que o Detector de plágio protege seu trabalho e reputação.",
+        "description": "Use o Detector de plágio antes de entregar trabalhos importantes, publicar conteúdo ou enviar documentos sensíveis a clientes e responsáveis.",
+        "items": {
+          "item-1": {
+            "title": "Integridade acadêmica",
+            "description": "Passe teses, ensaios e tarefas no Detector de plágio antes de subir ao campus virtual e evite coincidências que levantem suspeitas."
+          },
+          "item-2": {
+            "title": "Redação e imprensa",
+            "description": "Valide citações, notas e reportagens longas com o Detector de plágio antes de publicar para não repetir parágrafos de agências, releases ou artigos anteriores."
+          },
+          "item-3": {
+            "title": "Marketing e SEO",
+            "description": "Garanta com o Detector de plágio que blogs, landings e fichas de produto trazem conteúdo original e não copiam textos de outras marcas ou veículos."
+          },
+          "item-4": {
+            "title": "Jurídico e compliance",
+            "description": "Passe contratos, políticas e avisos legais no Detector de plágio para achar trechos reciclados que precisem ser reescritos ou ajustados."
+          },
+          "item-5": {
+            "title": "Comunicações corporativas",
+            "description": "Revise discursos, apresentações e notas internas importantes para manter a mensagem coerente sem duplicar textos antigos palavra por palavra."
+          },
+          "item-6": {
+            "title": "Agências e editoras",
+            "description": "Entregue rascunhos a clientes, autores ou marcas com um controle prévio no Detector de plágio que reduz retrabalho e discussões depois."
+          }
+        }
+      },
+      "faq": {
+        "title": "FAQ do Detector de plágio",
+        "subtitle": "Perguntas frequentes sobre uso, resultados e confiabilidade.",
+        "items": {
+          "item-1": {
+            "question": "Como usar o Detector de plágio da VeriIA?",
+            "answer": "Cole o texto, envie um arquivo compatível ou insira uma URL, clique em “Detectar plágio” e em segundos verá o relatório com porcentagem, fontes detectadas e trechos para revisar."
+          },
+          "item-2": {
+            "question": "Quais tipos de arquivos e formatos posso analisar?",
+            "answer": "Aceitamos texto colado, arquivos .doc/.docx/.pdf/.txt e URLs públicas."
+          },
+          "item-3": {
+            "question": "Quantas palavras posso analisar e como funcionam os créditos?",
+            "answer": "Cada palavra analisada consome 2 créditos. O custo total depende do tamanho; confira seu saldo antes de iniciar a análise."
+          },
+          "item-4": {
+            "question": "O que acontece com meus documentos e dados?",
+            "answer": "Seus textos só são usados para gerar o relatório; não treinamos modelos com eles e você pode apagar o histórico quando quiser."
+          },
+          "item-5": {
+            "question": "O que é exatamente plágio?",
+            "answer": "Plágio é apresentar como próprio um conteúdo alheio sem citar claramente a fonte — copiar, traduzir ou parafrasear ideias e frases sem referência adequada."
+          },
+          "item-6": {
+            "question": "Uma porcentagem alta significa plágio garantido?",
+            "answer": "Nem sempre. Podem existir citações válidas, frases comuns ou definições padrão. Revise as coincidências e avalie caso a caso."
+          },
+          "item-7": {
+            "question": "Citações ou bibliografia aparecem como coincidências?",
+            "answer": "Sim. Detectores marcam coincidências textuais; citações, referências ou frases comuns surgem. Verifique se estão bem citadas ou precisam de reescrita."
+          },
+          "item-8": {
+            "question": "Paráfrase também pode ser marcada como plágio?",
+            "answer": "Sim. Se você mantém estrutura ou ideias sem citar, mesmo trocando palavras, pode ser considerado plágio."
+          },
+          "item-9": {
+            "question": "Posso plagiar a mim mesmo (autoplágio)?",
+            "answer": "Sim — reutilizar partes de trabalhos anteriores sem declarar pode ser visto como autoplágio em contextos acadêmicos ou editoriais."
+          },
+          "item-10": {
+            "question": "Como reduzir a porcentagem de coincidência?",
+            "answer": "Identifique os trechos marcados, adicione citações ou reescreva com suas próprias palavras e rode nova análise para confirmar a originalidade."
+          }
+        }
+      },
+      "related": {
+        "title": "Combine o Detector de plágio com estas ferramentas",
+        "subtitle": "Cubra todo o ciclo: da detecção de IA à revisão final antes de enviar.",
+        "description": "Monte seu fluxo ideal: detecte IA, compare versões e controle a extensão sem sair do ecossistema da VeriIA nem do Detector de plágio.",
+        "tryNow": "Experimentar agora",
+        "items": {
+          "detector": {
+            "title": "Detector de conteúdo IA",
+            "description": "Veja se um texto soa artificial antes ou depois do Detector de plágio e decida o que humanizar ou reescrever."
+          },
+          "compare": {
+            "title": "Comparador de textos",
+            "description": "Coloque duas versões lado a lado para ver o que mudou após o Detector de plágio e checar se as coincidências diminuíram."
+          },
+          "counter": {
+            "title": "Contador de palavras",
+            "description": "Controle palavras e caracteres para cumprir editais, briefs ou limites de plataformas enquanto mantém a originalidade validada pelo Detector de plágio."
+          }
+        }
       }
     }
   },
