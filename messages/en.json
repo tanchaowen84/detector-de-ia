@@ -1450,9 +1450,9 @@
       },
       "guestModal": {
         "title": "Get more power",
-        "subtitle": "Log in to unlock 4× credits, 4× text length, and enable file uploads.",
-        "google": "Continue with Google · 4× credits",
-        "github": "Continue with GitHub · 4× credits",
+        "subtitle": "Log in to unlock 2× credits, 4× text length, and enable file uploads.",
+        "google": "Continue with Google · 2× credits",
+        "github": "Continue with GitHub · 2× credits",
         "footer": "You can switch to Google or GitHub in one click."
       },
       "upgradeModal": {
@@ -2528,9 +2528,9 @@
     },
     "guestModal": {
       "title": "Get more power",
-      "subtitle": "Log in to unlock 4× credits, 4× text length and file uploads.",
-      "google": "Continue with Google · 4× credits",
-      "github": "Continue with GitHub · 4× credits",
+      "subtitle": "Log in to unlock 2× credits, 4× text length and file uploads.",
+      "google": "Continue with Google · 2× credits",
+      "github": "Continue with GitHub · 2× credits",
       "footer": "You can switch to Google or GitHub in one click."
     }
   }

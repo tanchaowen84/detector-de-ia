@@ -1450,9 +1450,9 @@
       },
       "guestModal": {
         "title": "Más poder al instante",
-        "subtitle": "Inicia sesión para desbloquear 4× créditos, 4× texto y activar la subida de archivos.",
-        "google": "Continuar con Google · 4× créditos",
-        "github": "Continuar con GitHub · 4× créditos",
+        "subtitle": "Inicia sesión para desbloquear 2× créditos, 4× texto y activar la subida de archivos.",
+        "google": "Continuar con Google · 2× créditos",
+        "github": "Continuar con GitHub · 2× créditos",
         "footer": "Puedes entrar con Google o GitHub en un clic."
       },
       "upgradeModal": {
@@ -2458,9 +2458,9 @@
     },
     "guestModal": {
       "title": "Obtén más poder",
-      "subtitle": "Inicia sesión para desbloquear 4× créditos, 4× texto y habilitar subidas.",
-      "google": "Continuar con Google · 4× créditos",
-      "github": "Continuar con GitHub · 4× créditos",
+      "subtitle": "Inicia sesión para desbloquear 2× créditos, 4× texto y habilitar subidas.",
+      "google": "Continuar con Google · 2× créditos",
+      "github": "Continuar con GitHub · 2× créditos",
       "footer": "Puedes cambiar a Google o GitHub en un clic."
     }
   }
