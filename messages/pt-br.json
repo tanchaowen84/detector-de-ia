@@ -1093,10 +1093,10 @@
         "title": "Humanizador de IA"
       },
       "textSummarizer": {
-        "title": "Resumidor de IA"
+        "title": "Resumidor de textos"
       },
       "apaGenerator": {
-        "title": "Gerador APA"
+        "title": "Gerador de referências ABNT"
       },
       "wordCounter": {
         "title": "Contador de palavras"
@@ -1175,16 +1175,16 @@
         "title": "Humanizador"
       },
       "summarizer": {
-        "title": "Resumidor"
+        "title": "Resumidor de textos"
       },
       "compare": {
         "title": "Comparar"
       },
       "counter": {
-        "title": "Contador"
+        "title": "Contador de palavras"
       },
       "apa": {
-        "title": "APA"
+        "title": "Referências ABNT"
       },
       "trigger": "Ferramentas",
       "hide": "Ocultar"
@@ -1196,8 +1196,8 @@
         "items": {
           "plagiarism": "Detector de plágio",
           "humanizer": "Humanizador de IA",
-          "textSummarizer": "Resumidor de IA",
-          "apaGenerator": "Gerador APA",
+          "textSummarizer": "Resumidor de textos",
+          "apaGenerator": "Gerador de referências ABNT",
           "textCompare": "Comparador de textos",
           "wordCounter": "Contador de palavras",
           "pricing": "",
