@@ -25,7 +25,7 @@ export type CreditCheckResult =
   | { ok: false; errorCode: 'INSUFFICIENT_CREDITS' | 'PLAN_GATE_BLOCKED'; message: string };
 
 const FIVE_CHARS_AVG_WORD = 5;
-const GUEST_DEFAULT_CREDITS = 400;
+const GUEST_DEFAULT_CREDITS = 200;
 const GUEST_RESET_DAYS = 30;
 
 export function countWords(text: string): number {

@@ -2272,7 +2272,7 @@
           },
           "item-9": {
             "question": "Is the AI Summarizer free? How do credits work?",
-            "answer": "You can use the AI Summarizer for free with a simple credit system: each input character consumes 0.001 credit. Without creating an account you have 200 credits, and when you sign up you get 800 additional credits. Under normal use this lets you create many summaries without paying or entering a card."
+            "answer": "You can use the AI Summarizer for free with a simple credit system: each input character consumes 0.001 credit. Without creating an account you have 200 credits, and when you sign up you get 400 additional credits. Under normal use this lets you create many summaries without paying or entering a card."
           },
           "item-10": {
             "question": "Which other VeriIA tools work well with the AI Summarizer?",

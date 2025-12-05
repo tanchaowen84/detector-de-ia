@@ -44,7 +44,7 @@ export const planPolicies: Record<string, PlanPolicy> = {
     allowFile: true,
     allowUrl: false,
     maxChars: 4000,
-    monthlyCredits: 800,
+    monthlyCredits: 400,
     resetIntervalDays: 30,
     saveHistory: true,
     creditsPerWordDetect: 1,
