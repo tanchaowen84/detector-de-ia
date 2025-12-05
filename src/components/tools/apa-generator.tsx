@@ -19,6 +19,10 @@ type CitationStyle = 'apa' | 'abnt';
 type FieldKey =
   | 'authors'
   | 'year'
+  | 'subtitle'
+  | 'edition'
+  | 'city'
+  | 'month'
   | 'title'
   | 'publisher'
   | 'journal'
@@ -31,9 +35,9 @@ type FieldKey =
   | 'accessDate';
 
 const defaultFields: Record<SourceType, FieldKey[]> = {
-  book: ['authors', 'year', 'title', 'publisher'],
-  journal: ['authors', 'year', 'title', 'journal', 'volume', 'issue', 'pages', 'doi'],
-  website: ['authors', 'year', 'title', 'site', 'url', 'accessDate'],
+  book: ['authors', 'year', 'title', 'subtitle', 'edition', 'city', 'publisher'],
+  journal: ['authors', 'year', 'title', 'subtitle', 'journal', 'volume', 'issue', 'month', 'pages', 'doi'],
+  website: ['authors', 'year', 'title', 'subtitle', 'site', 'url', 'accessDate'],
 };
 
 function parseAuthors(input: string): string[] {
@@ -95,9 +99,12 @@ function formatReference(type: SourceType, fields: Record<FieldKey, string>) {
   const authors = parseAuthors(fields.authors || '');
   const authorsText = authors.length ? `${formatAuthors(authors)} ` : '';
   const yearText = fields.year?.trim() ? `(${fields.year.trim()}).` : '(s.f.).';
+  const titleWithSubtitle = fields.subtitle?.trim()
+    ? `${sentenceCase(fields.title)}: ${fields.subtitle.trim()}`
+    : sentenceCase(fields.title);
 
   if (type === 'book') {
-    return `${authorsText}${yearText} ${sentenceCase(fields.title)}. ${fields.publisher?.trim() || ''}`.trim();
+    return `${authorsText}${yearText} ${titleWithSubtitle}. ${fields.publisher?.trim() || ''}`.trim();
   }
 
   if (type === 'journal') {
@@ -109,15 +116,15 @@ function formatReference(type: SourceType, fields: Record<FieldKey, string>) {
     const volIssue = vol ? `${vol}${issue ? `(${issue})` : ''}` : '';
     const pagesText = pages ? `, ${pages}` : '';
     const doiText = doi ? ` https://doi.org/${doi.replace(/^https?:\/\//, '')}` : '';
-    return `${authorsText}${yearText} ${sentenceCase(fields.title)}. ${journal ? `${journal}, ` : ''}${volIssue}${pagesText}.${doiText}`.trim();
+    return `${authorsText}${yearText} ${titleWithSubtitle}. ${journal ? `${journal}, ` : ''}${volIssue}${pagesText}.${doiText}`.trim();
   }
 
   // website
   const site = fields.site?.trim();
   const url = fields.url?.trim();
   const access = fields.accessDate?.trim();
-  const accessText = access ? ` Recuperado ${access} de` : '';
-  return `${authorsText}${yearText} ${sentenceCase(fields.title)}. ${site ? `${site}.` : ''}${accessText} ${url || ''}`.trim();
+  const accessText = access ? ` Retrieved ${access} from ` : '';
+  return `${authorsText}${yearText} ${titleWithSubtitle}. ${site ? `${site}.` : ''}${accessText}${url || ''}`.trim();
 }
 
 // ---------- ABNT helpers ----------
@@ -143,11 +150,20 @@ function parseAuthorsAbnt(input: string): ParsedAuthor[] {
 }
 
 function formatAuthorsAbnt(authors: ParsedAuthor[]): string {
+  const toInitials = (given: string) =>
+    given
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((p) => `${p.charAt(0).toUpperCase()}.`)
+      .join(' ');
+
   if (authors.length === 0) return '';
-  const list = authors.map((a) => (a.given ? `${a.family}, ${a.given}` : a.family));
+  const list = authors.map((a) => {
+    const initials = toInitials(a.given);
+    return initials ? `${a.family}, ${initials}` : a.family;
+  });
   if (authors.length > 3) {
-    const first = list[0];
-    return `${first} et al.`;
+    return `${list[0]} et al`;
   }
   return list.join('; ');
 }
@@ -165,22 +181,37 @@ function formatReferenceAbnt(type: SourceType, fields: Record<FieldKey, string>)
   const authorsText = authors.length ? `${formatAuthorsAbnt(authors)}. ` : '';
   const yearText = fields.year?.trim() ? `${fields.year.trim()}.` : 's.d.';
   const title = fields.title?.trim();
+  const subtitle = fields.subtitle?.trim();
+  const titleWithSubtitle = subtitle ? `${title ?? ''}: ${subtitle}` : title ?? '';
+  const edition = fields.edition?.trim();
+  const city = fields.city?.trim() || '[s.l.]';
+  const editionText =
+    edition && edition.trim().length > 0
+      ? `${edition.trim().replace(/\.*\s*$/, '')}. `
+      : '';
 
   if (type === 'book') {
-    const publisher = fields.publisher?.trim();
-    return `${authorsText}${title ? `${title}. ` : ''}${publisher ? `${publisher}, ` : ''}${yearText}`.trim();
+    const publisher = fields.publisher?.trim() || '[s.n.]';
+    const editionText = edition ? `${edition}. ` : '';
+    return `${authorsText}${titleWithSubtitle ? `${titleWithSubtitle}. ` : ''}${editionText}${city}: ${publisher}, ${yearText}`.trim();
   }
 
   if (type === 'journal') {
     const journal = fields.journal?.trim();
     const vol = fields.volume?.trim();
     const issue = fields.issue?.trim();
+    const month = fields.month?.trim();
     const pages = fields.pages?.trim();
     const doi = fields.doi?.trim();
     const volIssue = vol ? `v. ${vol}${issue ? `, n. ${issue}` : ''}` : '';
     const pagesText = pages ? `, p. ${pages}` : '';
-    const doiText = doi ? `. DOI: ${doi.replace(/^https?:\/\//, '')}` : '';
-    return `${authorsText}${title ? `${title}. ` : ''}${journal ? `${journal}, ` : ''}${volIssue}${pagesText}, ${yearText}${doiText}`.trim();
+    const monthText = month ? `, ${month}` : '';
+    const doiUrl = doi ? `https://doi.org/${doi.replace(/^https?:\/\//, '')}` : '';
+    const doiText = doi ? ` Disponível em: ${doiUrl}.` : '';
+    const accessText = fields.accessDate?.trim()
+      ? ` Acesso em: ${fields.accessDate.trim()}.`
+      : '';
+    return `${authorsText}${titleWithSubtitle ? `${titleWithSubtitle}. ` : ''}${journal ? `${journal}, ` : ''}${volIssue}${pagesText}${monthText}, ${yearText}${doiText}${accessText}`.trim();
   }
 
   // website
@@ -188,7 +219,7 @@ function formatReferenceAbnt(type: SourceType, fields: Record<FieldKey, string>)
   const url = fields.url?.trim();
   const access = fields.accessDate?.trim();
   const accessText = access ? ` Acesso em: ${access}.` : '';
-  return `${authorsText}${title ? `${title}. ` : ''}${site ? `${site}, ` : ''}${yearText}${url ? ` Disponível em: ${url}.` : ''}${accessText}`.trim();
+  return `${authorsText}${titleWithSubtitle ? `${titleWithSubtitle}. ` : ''}${site ? `${site}, ` : ''}${yearText}${url ? ` Disponível em: ${url}.` : ''}${accessText}`.trim();
 }
 
 export function ApaGenerator() {
@@ -199,6 +230,10 @@ export function ApaGenerator() {
   const [fields, setFields] = useState<Record<FieldKey, string>>({
     authors: '',
     year: '',
+    subtitle: '',
+    edition: '',
+    city: '',
+    month: '',
     title: '',
     publisher: '',
     journal: '',
@@ -275,6 +310,10 @@ export function ApaGenerator() {
         ...prev,
         authors: d.authors ?? prev.authors,
         year: d.year ?? prev.year,
+        subtitle: d.subtitle ?? prev.subtitle,
+        edition: d.edition ?? prev.edition,
+        city: d.city ?? prev.city,
+        month: d.month ?? prev.month,
         title: d.title ?? prev.title,
         publisher: d.publisher ?? prev.publisher,
         journal: d.journal ?? prev.journal,
@@ -468,6 +507,16 @@ export function ApaGenerator() {
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
+                {visibleFields.includes('subtitle') && (
+                  <div className="flex flex-col gap-2 sm:col-span-2">
+                    <label className="text-sm font-medium text-slate-700">{fieldLabel('subtitle')}</label>
+                    <Input
+                      value={fields.subtitle}
+                      onChange={(e) => handleChange('subtitle', e.target.value)}
+                      placeholder={fieldPlaceholder('subtitle')}
+                    />
+                  </div>
+                )}
                 <div className="flex flex-col gap-2 sm:col-span-2">
                   <label className="text-sm font-medium text-slate-700">{fieldLabel('title')}</label>
                   <Textarea
@@ -486,6 +535,36 @@ export function ApaGenerator() {
                       value={fields.doi}
                       onChange={(e) => handleChange('doi', e.target.value)}
                       placeholder={fieldPlaceholder('doi')}
+                    />
+                  </div>
+                )}
+                {visibleFields.includes('edition') && (
+                  <div className="flex flex-col gap-2">
+                    <label className="text-sm font-medium text-slate-700">{fieldLabel('edition')}</label>
+                    <Input
+                      value={fields.edition}
+                      onChange={(e) => handleChange('edition', e.target.value)}
+                      placeholder={fieldPlaceholder('edition')}
+                    />
+                  </div>
+                )}
+                {visibleFields.includes('city') && (
+                  <div className="flex flex-col gap-2">
+                    <label className="text-sm font-medium text-slate-700">{fieldLabel('city')}</label>
+                    <Input
+                      value={fields.city}
+                      onChange={(e) => handleChange('city', e.target.value)}
+                      placeholder={fieldPlaceholder('city')}
+                    />
+                  </div>
+                )}
+                {visibleFields.includes('month') && (
+                  <div className="flex flex-col gap-2">
+                    <label className="text-sm font-medium text-slate-700">{fieldLabel('month')}</label>
+                    <Input
+                      value={fields.month}
+                      onChange={(e) => handleChange('month', e.target.value)}
+                      placeholder={fieldPlaceholder('month')}
                     />
                   </div>
                 )}
@@ -529,6 +608,10 @@ export function ApaGenerator() {
                     setFields({
                       authors: '',
                       year: '',
+                      subtitle: '',
+                      edition: '',
+                      city: '',
+                      month: '',
                       title: '',
                       publisher: '',
                       journal: '',

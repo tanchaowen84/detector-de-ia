@@ -1762,6 +1762,10 @@
       "fields": {
         "authors": "Autores",
         "year": "Ano",
+        "subtitle": "Subtítulo",
+        "edition": "Edição",
+        "city": "Cidade",
+        "month": "Mês",
         "title": "Título",
         "publisher": "Editora",
         "journal": "Periódico",
@@ -1776,6 +1780,10 @@
       "placeholders": {
         "authors": "Sobrenome, Nome; Sobrenome, Nome",
         "year": "2024",
+        "subtitle": "fundamentos e prática",
+        "edition": "2. ed.",
+        "city": "São Paulo",
+        "month": "jan.",
         "title": "Título da obra",
         "publisher": "Editora",
         "journal": "Nome do periódico",

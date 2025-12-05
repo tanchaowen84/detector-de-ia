@@ -1805,6 +1805,10 @@
       "fields": {
         "authors": "Authors",
         "year": "Year",
+        "subtitle": "Subtitle",
+        "edition": "Edition",
+        "city": "City",
+        "month": "Month",
         "title": "Title",
         "publisher": "Publisher",
         "journal": "Journal",
@@ -1819,6 +1823,10 @@
       "placeholders": {
         "authors": "Last name, First name; Last name, First name",
         "year": "2024",
+        "subtitle": "Foundations and practice",
+        "edition": "2nd ed.",
+        "city": "New York",
+        "month": "Jan.",
         "title": "Title of the work",
         "publisher": "Publisher",
         "journal": "Journal name",
