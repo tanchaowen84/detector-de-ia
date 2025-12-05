@@ -39,5 +39,9 @@ export const getMessagesForLocale = async (
   }
   // Get default messages when needed instead of using a top-level await
   const defaultMessages = await getDefaultMessages();
-  return deepmerge(defaultMessages, localeMessages);
+  // Overwrite arrays instead of concatenating (deepmerge default) to avoid
+  // mixed-language lists like steps/FAQ when merging locales.
+  return deepmerge(defaultMessages, localeMessages, {
+    arrayMerge: (_destinationArray, sourceArray) => sourceArray,
+  }) as Messages;
 };
