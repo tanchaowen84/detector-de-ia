@@ -9,6 +9,8 @@ import {
   routesNotAllowedByLoggedInUsers,
 } from './routes';
 
+// Hreflang HTTP headers are disabled in routing config to avoid duplicates
+// because we already emit <link rel="alternate"> tags via page metadata.
 const intlMiddleware = createMiddleware(routing);
 
 /**

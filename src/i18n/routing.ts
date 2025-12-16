@@ -18,6 +18,8 @@ export const routing = defineRouting({
   locales: LOCALES,
   // Default locale when no locale matches
   defaultLocale: DEFAULT_LOCALE,
+  // Do not emit HTTP Link: rel="alternate" headers (we emit hreflang via HTML metadata)
+  alternateLinks: false,
   // Auto detect locale
   // https://next-intl.dev/docs/routing/middleware#locale-detection
   localeDetection: false,
