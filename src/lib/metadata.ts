@@ -29,6 +29,7 @@ function buildAlternateLanguages(canonicalUrl?: string): Metadata['alternates'] 
   routing.locales.forEach((locale) => {
     languages[locale] = buildUrl(locale);
   });
+  languages['x-default'] = buildUrl(routing.defaultLocale);
 
   return {
     canonical: canonicalUrl,
