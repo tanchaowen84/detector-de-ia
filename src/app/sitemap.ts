@@ -203,6 +203,12 @@ function getUrl(href: Href, locale: Locale) {
 /**
  * https://next-intl.dev/docs/environments/actions-metadata-route-handlers#sitemap
  * https://github.com/amannn/next-intl/blob/main/examples/example-app-router/src/app/sitemap.ts
+ *
+ * Note: x-default is intentionally omitted from hreflang alternates.
+ * With localePrefix: 'as-needed', the default locale (es) URLs have no prefix,
+ * which serves as the implicit x-default fallback for Google.
+ * Including an explicit x-default would cause duplication since it would
+ * point to the same URL as the default locale, triggering SEO warnings.
  */
 function getEntries(href: Href) {
   return routing.locales.map((locale) => ({
