@@ -4,12 +4,14 @@ import { routing } from './routing';
 
 import enMessages from '../../messages/en.json';
 import esMessages from '../../messages/es.json';
+import frMessages from '../../messages/fr.json';
 
 // Keep a tiny in-memory map so the default locale drives which language
 // we surface for manifest/OG fallbacks instead of hard-coding English.
 const messagesMap: Record<string, Messages> = {
   en: enMessages as Messages,
   es: esMessages as Messages,
+  fr: frMessages as Messages,
 };
 
 export const defaultMessages: Messages =

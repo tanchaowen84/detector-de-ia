@@ -1,0 +1,2537 @@
+{
+  "Metadata": {
+    "name": "VeriIA",
+    "title": "VeriIA | Détecteur d’IA pour les contenus professionnels",
+    "description": "Utilisez VeriIA pour savoir si un texte a été écrit par une IA. Des résultats clairs en quelques secondes, sans inscription."
+  },
+  "Common": {
+    "login": "Se connecter",
+    "logout": "Se déconnecter",
+    "signUp": "S’inscrire",
+    "language": "Changer de langue",
+    "mode": {
+      "label": "Basculer le mode",
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    },
+    "theme": {
+      "label": "Changer le thème",
+      "default": "Par défaut",
+      "blue": "Bleu",
+      "green": "Vert",
+      "amber": "Ambre",
+      "neutral": "Neutre"
+    },
+    "copy": "Copier",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "loading": "Chargement...",
+    "cancel": "Annuler",
+    "logoutFailed": "Échec de la déconnexion"
+  },
+  "PricingPage": {
+    "title": "Tarifs",
+    "description": "Choisissez l’offre qui vous convient le mieux",
+    "subtitle": "Choisissez l’offre qui vous convient le mieux",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "PricingCard": {
+      "freePrice": "0 $",
+      "perMonth": "/mois",
+      "perYear": "/an",
+      "popular": "Populaire",
+      "currentPlan": "Offre actuelle",
+      "yourCurrentPlan": "Votre offre actuelle",
+      "getStartedForFree": "Commencer gratuitement",
+      "getLifetimeAccess": "Obtenir l’accès à vie",
+      "getStarted": "Commencer",
+      "notAvailable": "Non disponible",
+      "daysTrial": "Essai gratuit de {days} jours"
+    },
+    "CheckoutButton": {
+      "loading": "Chargement...",
+      "checkoutFailed": "Impossible d’ouvrir la page de paiement"
+    }
+  },
+  "PlagiarismPage": {
+    "metadata": {
+      "title": "Détecteur de plagiat en ligne rapide et précis | VeriIA",
+      "description": "Détectez le plagiat avec le détecteur de plagiat VeriIA : analysez un texte, un fichier ou une URL, consultez les sources et un score de similarité clair pour soumettre en toute confiance."
+    },
+    "hero": {
+      "badge": "Originalité garantie",
+      "title": "Détecteur de plagiat pour des soumissions professionnelles",
+      "subtitle": "Protégez l’originalité de vos textes, fichiers ou URLs avec le détecteur de plagiat : pourcentage de correspondance clair, sources et alertes, afin de soumettre en toute confiance."
+    },
+    "input": {
+      "title": "Contenu à analyser",
+      "description": "Texte, fichier ou URL. Choisissez ce qui vous convient le mieux.",
+      "url": "Saisir une URL",
+      "file": "Téléverser un fichier",
+      "paste": "Coller le texte",
+      "placeholder": "Collez ici le texte que vous souhaitez analyser...",
+      "urlClear": "Effacer",
+      "urlApply": "Appliquer",
+      "count": "{value} caractères"
+    },
+    "controls": {
+      "detect": "Vérifier le plagiat",
+      "detecting": "Analyse en cours...",
+      "clear": "Tout effacer"
+    },
+    "errors": {
+      "noInput": "Ajoutez un texte, un fichier ou une URL à analyser",
+      "invalidUrl": "URL invalide",
+      "generic": "Nous n’avons pas pu terminer l’analyse. Veuillez réessayer.",
+      "clipboardEmpty": "Le presse-papiers est vide",
+      "clipboardFail": "Impossible de lire le presse-papiers"
+    },
+    "uploading": "Téléversement du fichier...",
+    "uploadSuccess": "Fichier prêt",
+    "uploadFail": "Échec du téléversement du fichier",
+    "urlReady": "URL prête",
+    "success": "Analyse terminée",
+    "upgrade": {
+      "title": "Crédits insuffisants",
+      "subtitle": "Passez à une offre supérieure pour continuer à utiliser le détecteur de plagiat sans interruption."
+    },
+    "guest": {
+      "title": "Créez un compte pour continuer",
+      "subtitle": "Inscrivez-vous gratuitement et recevez des crédits de départ pour utiliser le détecteur de plagiat.",
+      "login": "Se connecter",
+      "register": "S’inscrire"
+    },
+    "results": {
+      "title": "Résultats",
+      "subtitle": "Pourcentage de correspondance et sources détectées",
+      "scoreLabel": "% de correspondance",
+      "sources": "Sources détectées",
+      "count": "sources",
+      "untitled": "Source sans titre",
+      "matchWords": "{value} mots correspondants",
+      "identicalWords": "{value} mots identiques",
+      "similarWords": "{value} mots similaires",
+      "placeholder": "Lancez une analyse pour voir les correspondances",
+      "attack": "Obfuscation possible"
+    },
+    "summary": {
+      "sources": "{value} sources",
+      "words": "{value} mots correspondants",
+      "identical": "{value} mots identiques",
+      "similar": "{value} mots similaires"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Comment fonctionne le détecteur de plagiat",
+        "subtitle": "En trois étapes, passez d’un brouillon incertain à un document prêt à être soumis.",
+        "steps": {
+          "step-1": {
+            "label": "Étape 1 · Ajoutez votre contenu au détecteur de plagiat",
+            "imageAlt": "Téléversement d’un texte, d’un fichier ou d’une URL dans le détecteur de plagiat",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/plagiarism/step1.webp",
+            "items": [
+              {
+                "title": "Coller ou téléverser",
+                "description": "Choisissez de coller le texte, de téléverser un fichier .doc/.docx/.pdf, ou de coller une URL complète dans le détecteur de plagiat. Tout commence ici."
+              },
+              {
+                "title": "Détection automatique de la langue",
+                "description": "Le détecteur de plagiat détecte automatiquement la langue de votre texte : aucune configuration n’est nécessaire."
+              },
+              {
+                "title": "Vérifier la taille",
+                "description": "Utilisez le compteur pour vérifier que le fichier ou le texte respecte la limite recommandée (jusqu’à 10 Mo), afin que le détecteur de plagiat réponde rapidement."
+              }
+            ]
+          },
+          "step-2": {
+            "label": "Étape 2 · Lancez l’analyse avec le détecteur de plagiat",
+            "imageAlt": "Analyse du détecteur de plagiat en cours",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/plagiarism/step2.webp",
+            "items": [
+              {
+                "title": "Cliquez sur « Vérifier le plagiat »",
+                "description": "Cliquez sur « Vérifier le plagiat » et patientez quelques secondes pendant que le détecteur de plagiat génère le rapport complet."
+              },
+              {
+                "title": "Consultez le résumé",
+                "description": "Commencez par le pourcentage de correspondance global affiché par le détecteur de plagiat, pour évaluer rapidement si le texte nécessite de gros changements ou de simples retouches."
+              },
+              {
+                "title": "Explorer les correspondances",
+                "description": "Parcourez le rapport du détecteur de plagiat pour voir où le texte se répète, regroupé par source et par type de correspondance."
+              }
+            ]
+          },
+          "step-3": {
+            "label": "Étape 3 · Modifiez avec le rapport du détecteur de plagiat ouvert",
+            "imageAlt": "Consultation des sources détectées par le détecteur de plagiat",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/plagiarism/step3.webp",
+            "items": [
+              {
+                "title": "Décidez quoi modifier",
+                "description": "Repérez rapidement, grâce au détecteur de plagiat, quels paragraphes nécessitent des citations, une reformulation ou une suppression avant de soumettre."
+              },
+              {
+                "title": "Ouvrez les sources originales",
+                "description": "Cliquez sur les URLs listées par le détecteur de plagiat pour comparer votre texte à l’original, sans quitter votre flux de travail."
+              },
+              {
+                "title": "Mettez à jour et relancez l’analyse",
+                "description": "Corrigez le texte et relancez une analyse avec le détecteur de plagiat jusqu’à obtenir un résultat final satisfaisant."
+              }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Quand utiliser le détecteur de plagiat",
+        "subtitle": "Des situations où le détecteur de plagiat protège votre travail et votre réputation.",
+        "description": "Utilisez le détecteur de plagiat avant de soumettre un travail important, publier du contenu ou envoyer des documents sensibles à des clients et décideurs.",
+        "items": {
+          "item-1": {
+            "title": "Intégrité académique",
+            "description": "Passez vos thèses, essais et devoirs dans le détecteur de plagiat avant de les déposer sur votre plateforme universitaire, et évitez les similitudes qui pourraient soulever des questions sur l’originalité."
+          },
+          "item-2": {
+            "title": "Rédaction et salles de rédaction",
+            "description": "Validez citations, articles et longs formats avec le détecteur de plagiat avant publication, afin de ne pas reprendre des paragraphes d’agences, de communiqués de presse ou d’anciens articles."
+          },
+          "item-3": {
+            "title": "Marketing et SEO",
+            "description": "Utilisez le détecteur de plagiat pour vous assurer que vos articles de blog, pages de vente et textes produit apportent une valeur originale et ne reprennent pas les formulations d’autres marques ou médias."
+          },
+          "item-4": {
+            "title": "Juridique et conformité",
+            "description": "Analysez contrats, politiques et mentions légales avec le détecteur de plagiat pour repérer des clauses recyclées qui doivent être mises à jour, réécrites ou clarifiées."
+          },
+          "item-5": {
+            "title": "Communication d’entreprise",
+            "description": "Relisez discours, présentations et notes internes clés, afin de rester cohérent sans copier mot pour mot des textes plus anciens."
+          },
+          "item-6": {
+            "title": "Agences et éditeurs",
+            "description": "Envoyez des brouillons à des clients, auteurs ou marques après un passage au détecteur de plagiat, pour réduire les retours, la réécriture et les allers-retours sur l’originalité."
+          }
+        }
+      },
+      "faq": {
+        "title": "FAQ du détecteur de plagiat",
+        "subtitle": "Questions fréquentes sur l’utilisation, les résultats et la fiabilité.",
+        "items": {
+          "item-1": {
+            "question": "Comment utiliser le détecteur de plagiat VeriIA ?",
+            "answer": "Collez votre texte, téléversez un fichier pris en charge ou collez une URL, cliquez sur « Vérifier le plagiat » et, en quelques secondes, vous obtiendrez un rapport avec un pourcentage de correspondance, des sources détectées et des passages à examiner de plus près."
+          },
+          "item-2": {
+            "question": "Quels types de fichiers et formats puis-je analyser ?",
+            "answer": "Vous pouvez analyser du texte collé, des fichiers .doc/.docx/.pdf/.txt et des URLs publiques. Pour un rapport plus clair, gardez une mise en forme simple."
+          },
+          "item-3": {
+            "question": "Combien de mots puis-je analyser et comment fonctionnent les crédits ?",
+            "answer": "Chaque mot analysé avec le détecteur de plagiat coûte 2 crédits. Le coût total dépend de la longueur du texte ; pensez à vérifier votre solde avant de lancer une analyse volumineuse."
+          },
+          "item-4": {
+            "question": "Que deviennent mes documents et mes données ?",
+            "answer": "Vos textes servent uniquement à générer le rapport du détecteur de plagiat ; nous n’entraînons pas de modèles dessus, et vous pouvez supprimer votre historique d’analyse quand vous le souhaitez."
+          },
+          "item-5": {
+            "question": "Qu’est-ce qui est exactement considéré comme du plagiat ?",
+            "answer": "Le plagiat consiste à présenter le contenu d’une autre personne comme le vôtre sans citation claire — copier, traduire ou paraphraser des mots ou des idées sans crédit approprié."
+          },
+          "item-6": {
+            "question": "Un pourcentage élevé signifie-t-il que je plagie forcément ?",
+            "answer": "Pas toujours. Il peut s’agir de citations valides, d’expressions courantes ou de définitions standard. Examinez chaque correspondance et décidez si elle nécessite une citation ou une reformulation."
+          },
+          "item-7": {
+            "question": "Les citations ou la bibliographie apparaissent-elles comme des correspondances ?",
+            "answer": "Oui. Les détecteurs de plagiat signalent les chevauchements textuels — citations, références ou expressions communes apparaissent souvent ; il vous suffit de confirmer qu’elles sont correctement citées ou de les reformuler légèrement."
+          },
+          "item-8": {
+            "question": "La paraphrase peut-elle être marquée comme du plagiat ?",
+            "answer": "Oui. Si vous conservez la même structure ou les mêmes idées sans citer la source, même en changeant quelques mots, cela peut encore être considéré comme du plagiat."
+          },
+          "item-9": {
+            "question": "Puis-je me plagier moi-même (auto-plagiat) ?",
+            "answer": "Oui. Réutiliser une part substantielle de vos travaux précédents sans le déclarer peut être considéré comme de l’auto-plagiat dans un contexte académique ou éditorial."
+          },
+          "item-10": {
+            "question": "Comment réduire le pourcentage de correspondance ?",
+            "answer": "Identifiez les sections mises en évidence, ajoutez des citations quand c’est nécessaire, reformulez avec vos propres mots, puis relancez une analyse avec le détecteur de plagiat pour confirmer que le texte est suffisamment original."
+          }
+        }
+      },
+      "related": {
+        "title": "Associez le détecteur de plagiat à ces outils",
+        "subtitle": "Couvrez tout le cycle de relecture : de la détection d’IA aux vérifications finales avant envoi.",
+        "description": "Construisez votre flux de travail idéal : détectez l’IA, comparez des versions et contrôlez la longueur du texte sans quitter VeriIA ni votre parcours de détecteur de plagiat.",
+        "tryNow": "Essayer maintenant",
+        "items": {
+          "detector": {
+            "title": "Détecteur de contenu IA",
+            "description": "Vérifiez si un texte ressemble trop à de l’IA avant ou après l’analyse avec le détecteur de plagiat, puis décidez quelles parties humaniser ou réécrire."
+          },
+          "compare": {
+            "title": "Comparaison de textes",
+            "description": "Comparez deux versions côte à côte pour voir exactement ce qui a changé après vos modifications basées sur le rapport du détecteur de plagiat, et confirmer que les similitudes ont diminué."
+          },
+          "counter": {
+            "title": "Compteur de mots",
+            "description": "Suivez le nombre de mots et de caractères pour respecter les consignes, briefs ou limites de plateforme, tout en gardant la qualité et l’originalité validées par le détecteur de plagiat."
+          }
+        }
+      }
+    }
+  },
+  "WordCounterPage": {
+    "metadata": {
+      "title": "Compteur de mots en ligne rapide avec nombre de caractères | VeriIA",
+      "description": "Utilisez le compteur de mots VeriIA pour mesurer mots, caractères et temps de lecture en quelques secondes : collez votre texte, obtenez des chiffres clairs et adaptez votre message à n’importe quelle limite."
+    },
+    "hero": {
+      "badge": "Privé & local",
+      "title": "Compteur de mots et de caractères en ligne",
+      "subtitle": "Utilisez le compteur de mots pour coller votre texte et voir en temps réel le nombre de mots, de caractères et le temps de lecture.",
+      "placeholder": "Saisissez ou collez votre texte ici...",
+      "clear": "Effacer",
+      "copied": "Copié",
+      "copy": "Copier",
+      "copyError": "Impossible de copier"
+    },
+    "stats": {
+      "title": "Indicateurs",
+      "words": "Mots",
+      "characters": "Caractères (avec espaces)",
+      "charactersNoSpaces": "Caractères (sans espaces)",
+      "sentences": "Phrases",
+      "paragraphs": "Paragraphes",
+      "readingTime": "Temps de lecture approximatif",
+      "minutes": "≈ {value} min"
+    },
+    "footer": {
+      "privacy": "Votre texte n’est envoyé à aucun serveur : le compteur de mots fonctionne entièrement dans votre navigateur.",
+      "free": "Aucun crédit utilisé et aucun compte requis."
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Comment fonctionne le compteur de mots",
+        "subtitle": "Collez votre texte dans le compteur de mots, consultez les métriques instantanément, puis copiez quand vous avez terminé.",
+        "steps": {
+          "step-1": {
+            "label": "Étape 1 · Coller ou saisir",
+            "imageAlt": "Utilisateur collant du texte dans le compteur de mots",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step1.webp",
+            "items": [
+              {
+                "title": "Déposez votre texte",
+                "description": "Collez n’importe quel brouillon dans le compteur de mots et commencez immédiatement."
+              },
+              {
+                "title": "Restez dans le navigateur",
+                "description": "Tout le comptage se fait localement pour un maximum de confidentialité."
+              },
+              {
+                "title": "Compatible multi-langues",
+                "description": "Le compteur de mots fonctionne avec l’anglais, l’espagnol et les textes mixtes."
+              }
+            ]
+          },
+          "step-2": {
+            "label": "Étape 2 · Lire les métriques",
+            "imageAlt": "Carte de métriques affichant les nombres de mots et de caractères",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step2.webp",
+            "items": [
+              {
+                "title": "Mots et caractères",
+                "description": "Consultez les chiffres avec et sans espaces, ainsi que le nombre de phrases et de paragraphes."
+              },
+              {
+                "title": "Temps de lecture",
+                "description": "Vérifiez le nombre de minutes estimé sur la base d’environ 200 mots par minute."
+              },
+              {
+                "title": "Mise à jour en direct",
+                "description": "Le compteur de mots actualise les chiffres pendant que vous tapez — aucun bouton supplémentaire n’est nécessaire."
+              }
+            ]
+          },
+          "step-3": {
+            "label": "Étape 3 · Ajuster aux limites",
+            "imageAlt": "Utilisateur copiant le texte après avoir vérifié les limites de longueur",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/word-counter/step3.webp",
+            "items": [
+              {
+                "title": "Respectez les limites de chaque plateforme",
+                "description": "Idéal pour les titres, extraits, descriptions et publications sociales qui doivent respecter des limites strictes."
+              },
+              {
+                "title": "Ajustez rapidement",
+                "description": "Raccourcissez ou développez votre texte jusqu’à ce que le compteur de mots affiche le total visé."
+              },
+              {
+                "title": "Copiez et envoyez",
+                "description": "Copiez votre texte en un clic lorsque la longueur est exactement celle que vous voulez."
+              }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Quand utiliser le compteur de mots",
+        "subtitle": "Des situations du quotidien où le compteur de mots VeriIA fait la différence.",
+        "description": "Utilisez le compteur de mots VeriIA pour respecter des limites et garder des textes bien structurés avant de les soumettre ou de les publier.",
+        "items": {
+          "item-1": {
+            "title": "Résumés académiques",
+            "description": "Contrôlez la longueur des résumés, abstracts et essais en quelques secondes. Ajustez le texte jusqu’à ce que le compteur de mots corresponde exactement aux exigences de l’appel ou de la plateforme universitaire."
+          },
+          "item-2": {
+            "title": "Extraits SEO et méta-descriptions",
+            "description": "Affinez titres, méta-descriptions et extraits de recherche sans quitter le compteur de mots. Évitez les textes coupés dans Google ou trop courts pour générer des clics."
+          },
+          "item-3": {
+            "title": "Légendes et publications sur les réseaux sociaux",
+            "description": "Respectez les limites de caractères sur des plateformes comme X, Instagram ou LinkedIn sans deviner. Rédigez dans le compteur de mots et ajustez jusqu’à obtenir le bon ton."
+          },
+          "item-4": {
+            "title": "Textes produit et publicités",
+            "description": "Gardez des puces, bannières et textes d’annonces clairs et concis. Le compteur de mots VeriIA vous aide à éviter les créations surchargées et à ne pas oublier les infos essentielles."
+          },
+          "item-5": {
+            "title": "Objets d’e-mails et messages clés",
+            "description": "Rédigez des objets et introductions qui tiennent sur mobile. Mesurez avec le compteur de mots pour garder un message court, direct et facile à parcourir."
+          },
+          "item-6": {
+            "title": "Contrôle de longueur en traduction",
+            "description": "Vérifiez que la traduction reste proche de la longueur d’origine sans perdre de nuance. Le compteur de mots vous donne un repère rapide pour la QA de localisation et de doublage."
+          }
+        }
+      },
+      "faq": {
+        "title": "FAQ du compteur de mots",
+        "subtitle": "Comprenez comment fonctionne le compteur de mots et comment il traite votre texte.",
+        "items": {
+          "item-1": {
+            "question": "Le compteur de mots VeriIA est-il vraiment gratuit ?",
+            "answer": "Oui. Le compteur de mots VeriIA est un outil gratuit : vous pouvez coller votre texte et voir le nombre de mots, de caractères et le temps de lecture sans créer de compte ni dépenser de crédits."
+          },
+          "item-2": {
+            "question": "Mon texte est-il envoyé aux serveurs de VeriIA lorsque j’utilise le compteur de mots ?",
+            "answer": "Non. Le compteur de mots fonctionne directement dans votre navigateur : votre texte est traité localement et n’est ni stocké ni envoyé à nos serveurs."
+          },
+          "item-3": {
+            "question": "Que mesure le compteur de mots en plus du nombre de mots ?",
+            "answer": "En plus des mots, le compteur de mots VeriIA affiche le nombre de caractères avec et sans espaces, le nombre de phrases et de paragraphes, ainsi qu’un temps de lecture approximatif en minutes."
+          },
+          "item-4": {
+            "question": "Pourquoi le compteur de mots affiche-t-il un nombre différent de Word ou Google Docs ?",
+            "answer": "Parce que chaque outil applique des règles légèrement différentes pour définir un « mot ». Certains compteurs incluent les nombres, URLs ou certains éléments de mise en forme, et d’autres non : de petits écarts sont normaux."
+          },
+          "item-5": {
+            "question": "Qu’est-ce qui est considéré comme un « mot » dans un compteur de mots en ligne ?",
+            "answer": "En général, un mot est un groupe de caractères séparé par des espaces ou de la ponctuation. Les nombres, hashtags ou liens peuvent être comptés comme un seul mot selon le compteur de mots."
+          },
+          "item-6": {
+            "question": "Comment estimer le nombre de pages que représentent X mots ?",
+            "answer": "D’abord, utilisez le compteur de mots pour obtenir le total. À titre indicatif, 250–300 mots représentent environ une page en double interligne en 12 pt, et environ 500 mots une page en simple interligne."
+          },
+          "item-7": {
+            "question": "Comment le temps de lecture est-il calculé dans le compteur de mots ?",
+            "answer": "Le compteur de mots estime le temps de lecture en divisant le nombre total de mots par une vitesse moyenne, par exemple 200–250 mots par minute. Cela vous aide à voir si un article ou une newsletter est plus long que ce que votre audience attend."
+          },
+          "item-8": {
+            "question": "Le compteur de mots fonctionne-t-il bien avec toutes les langues ?",
+            "answer": "Il fonctionne mieux avec les langues qui séparent les mots par des espaces, comme l’anglais ou l’espagnol. Dans des textes avec beaucoup de symboles ou dans des langues sans espaces clairs, de petites variations peuvent apparaître."
+          },
+          "item-9": {
+            "question": "Y a-t-il une limite pratique pour utiliser le compteur de mots en ligne ?",
+            "answer": "En pratique, la limite dépend de votre navigateur et de la mémoire disponible. Pour des manuscrits très longs, il est souvent plus simple de découper le contenu en sections et de passer chaque partie dans le compteur de mots."
+          },
+          "item-10": {
+            "question": "Quand est-il pertinent d’utiliser un compteur de mots en ligne plutôt que Word ou Google Docs ?",
+            "answer": "Quand vous voulez une vérification rapide sans ouvrir de document, quand vous travaillez sur plusieurs formats, ou quand vous avez besoin de métriques supplémentaires comme le temps de lecture. C’est une couche de contrôle en plus de votre éditeur habituel."
+          }
+        }
+      },
+      "related": {
+        "title": "Associez le compteur de mots à d’autres outils VeriIA",
+        "subtitle": "Détectez l’IA, vérifiez l’originalité et comparez des brouillons en complément du compteur de mots.",
+        "description": "Construisez un flux de travail complet avec les outils VeriIA : utilisez le compteur de mots pour la longueur, le détecteur de plagiat pour l’originalité et le détecteur d’IA pour le style et le ton.",
+        "tryNow": "Essayer maintenant",
+        "items": {
+          "detector": {
+            "title": "Détecteur d’IA VeriIA",
+            "description": "Vérifiez si votre texte semble généré par une IA et mettez en évidence les phrases que vous voudrez peut-être réécrire avant d’envoyer."
+          },
+          "plagiarism": {
+            "title": "Détecteur de plagiat",
+            "description": "Vérifiez votre contenu sur le web et dans des sources académiques avant de publier ou de soumettre un document important."
+          },
+          "compare": {
+            "title": "Comparaison de textes",
+            "description": "Ouvrez deux versions d’un même texte et voyez exactement ce qui a changé entre les brouillons pour décider lequel conserver."
+          }
+        }
+      }
+    }
+  },
+  "TextComparePage": {
+    "metadata": {
+      "title": "Comparer deux textes en ligne rapidement et clairement | VeriIA",
+      "description": "Utilisez l’outil pour comparer deux textes : collez deux versions, voyez les différences surlignées, comptez les changements et choisissez le bon brouillon en quelques secondes."
+    },
+    "hero": {
+      "badge": "Privé & local",
+      "title": "Comparer deux textes en ligne instantanément",
+      "subtitle": "Collez les versions A et B pour comparer deux textes, cliquez sur comparer, et voyez les ajouts et suppressions surlignés.",
+      "loading": "Comparaison..."
+    },
+    "input": {
+      "original": "Texte original",
+      "changed": "Texte modifié",
+      "placeholderA": "Collez le texte original ici...",
+      "placeholderB": "Collez le texte modifié ici...",
+      "upload": "Téléverser un fichier"
+    },
+    "controls": {
+      "compare": "Comparer le texte",
+      "swap": "Inverser",
+      "clear": "Effacer"
+    },
+    "errors": {
+      "missing": "Ajoutez les deux textes à comparer",
+      "generic": "Nous n’avons pas pu comparer les textes. Veuillez réessayer.",
+      "fileNotSupported": "Seuls les fichiers texte (.txt, .md) sont pris en charge",
+      "fileRead": "Impossible de lire le fichier"
+    },
+    "success": "Comparaison prête",
+    "stats": {
+      "wordsA": "Texte A : {value} mots",
+      "wordsB": "Texte B : {value} mots"
+    },
+    "results": {
+      "title": "Différences",
+      "subtitle": "Nous mettons en évidence ce qui a été supprimé et ce qui a été ajouté",
+      "summary": "{additions} ajouts · {removals} suppressions",
+      "removals": "Suppressions",
+      "additions": "Ajouts",
+      "noRemovals": "Aucune suppression trouvée",
+      "noAdditions": "Aucun ajout trouvé",
+      "placeholder": "Appuyez sur \"Comparer le texte\" pour voir les différences"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Comment fonctionne l’outil pour comparer deux textes",
+        "subtitle": "Déposez les versions A et B pour comparer deux textes et visualiser les changements en trois étapes.",
+        "steps": {
+          "step-1": {
+            "label": "Étape 1 · Ajoutez les deux textes pour comparer deux textes",
+            "imageAlt": "Deux zones de texte prêtes à être comparées dans l’outil de comparaison",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step1.webp",
+            "items": [
+              {
+                "title": "Coller ou téléverser des fichiers",
+                "description": "Collez vos textes directement ou téléversez des fichiers .txt/.md dans l’outil pour comparer deux textes."
+              },
+              {
+                "title": "Gardez une mise en forme simple",
+                "description": "Le texte brut donne les surlignages les plus clairs et rend les différences plus faciles à lire."
+              },
+              {
+                "title": "Vérifiez la longueur",
+                "description": "Idéal jusqu’à quelques milliers de mots par côté, afin de comparer deux textes et obtenir un résultat instantané."
+              }
+            ]
+          },
+          "step-2": {
+            "label": "Étape 2 · Lancez la comparaison pour comparer deux textes",
+            "imageAlt": "Comparaison en cours dans l’outil pour comparer deux textes",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step2.webp",
+            "items": [
+              {
+                "title": "Cliquez sur « Comparer le texte »",
+                "description": "L’outil pour comparer deux textes calcule les ajouts et suppressions, puis les regroupe pour vous."
+              },
+              {
+                "title": "Voir les surlignages instantanément",
+                "description": "À gauche : suppressions. À droite : ajouts — codés par couleur pour comparer deux textes facilement."
+              },
+              {
+                "title": "Comptage au niveau des mots",
+                "description": "Les mots ajoutés et supprimés sont comptés pour comprendre rapidement l’ampleur des changements."
+              }
+            ]
+          },
+          "step-3": {
+            "label": "Étape 3 · Relire et partager après avoir comparé deux textes",
+            "imageAlt": "Résultats avec ajouts et suppressions surlignés dans l’outil de comparaison",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/text-compare/step3.webp",
+            "items": [
+              {
+                "title": "Parcourez les différences",
+                "description": "Allez directement aux sections où il y a le plus de changements dans l’affichage de comparaison."
+              },
+              {
+                "title": "Affinez vos brouillons",
+                "description": "Réécrivez, puis relancez la comparaison pour confirmer que les modifications correspondent à vos attentes."
+              },
+              {
+                "title": "Enregistrer et partager le contexte",
+                "description": "Utilisez les compteurs pour résumer ce qui a changé à des coéquipiers ou relecteurs après avoir comparé deux textes."
+              }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Quand comparer deux textes",
+        "subtitle": "Des scénarios où comparer deux textes avec VeriIA évite les erreurs et les malentendus.",
+        "description": "Utilisez l’outil VeriIA pour comparer deux textes et voir d’un coup d’œil ce qui a changé entre deux versions, documenter des révisions, et vous assurer que tout le monde travaille sur le même texte.",
+        "items": {
+          "item-1": {
+            "title": "Revue de version",
+            "description": "Vérifiez en quelques secondes ce qui a changé entre un brouillon et la version finale. Comparer deux textes met en évidence les ajouts et suppressions pour voir si les retouches sont légères ou s’il s’agit d’une réécriture complète."
+          },
+          "item-2": {
+            "title": "Révisions de contrats et documents juridiques",
+            "description": "Repérez des modifications subtiles dans des clauses, dates ou montants avant de signer. L’outil pour comparer deux textes montre ligne par ligne ce qui a été ajouté et supprimé, idéal pour les contrats, NDA et politiques."
+          },
+          "item-3": {
+            "title": "Textes produit et contenu marketing",
+            "description": "Comparez des textes in-app, notes de version, pages de destination et contenus SEO pour voir si les changements améliorent réellement le message. Comparer deux textes vous aide à confirmer que le nouveau texte respecte le ton, les promesses et les exigences légales."
+          },
+          "item-4": {
+            "title": "Corrections académiques et retouches de style",
+            "description": "Suivez les retours en comparant la nouvelle version à la précédente. En choisissant de comparer deux textes, vous voyez quels paragraphes ont été réécrits, quelles citations ont changé et si tous les commentaires ont été appliqués."
+          },
+          "item-5": {
+            "title": "QA de traduction et de localisation",
+            "description": "Vérifiez que la traduction conserve l’intention d’origine sans ajouter ni perdre d’information. Utilisez l’outil pour comparer deux textes dans une même langue et choisir la meilleure version."
+          },
+          "item-6": {
+            "title": "Politiques internes et conformité",
+            "description": "Assurez-vous que des textes sensibles — politique de confidentialité, mentions légales ou manuels internes — n’ont pas été modifiés sans approbation. Comparer deux textes montre exactement quelles lignes diffèrent d’une version à l’autre."
+          }
+        }
+      },
+      "faq": {
+        "title": "FAQ : comparer deux textes",
+        "subtitle": "Réponses rapides avant de comparer deux textes.",
+        "items": {
+          "item-1": {
+            "question": "L’outil VeriIA pour comparer deux textes est-il gratuit, et ai-je besoin d’un compte ?",
+            "answer": "Oui. L’outil VeriIA pour comparer deux textes est gratuit : vous pouvez coller deux versions, les comparer et voir les changements sans dépenser de crédits ni créer de compte."
+          },
+          "item-2": {
+            "question": "Quels formats sont pris en charge pour comparer deux textes ?",
+            "answer": "L’outil est optimisé pour le texte collé et les fichiers texte simples comme .txt ou .md. Nous recommandons une mise en forme simple afin que les surlignages restent propres et faciles à lire."
+          },
+          "item-3": {
+            "question": "Où mes textes sont-ils traités lorsque je veux comparer deux textes ?",
+            "answer": "La comparaison s’exécute dans votre navigateur : nous n’avons pas besoin de téléverser vos textes sur un serveur pour calculer les différences."
+          },
+          "item-4": {
+            "question": "Quels types de différences un outil pour comparer deux textes affiche-t-il ?",
+            "answer": "Un outil pour comparer deux textes montre généralement ce qui a été ajouté, supprimé et modifié entre deux versions, souvent au niveau des lignes, des mots ou des caractères."
+          },
+          "item-5": {
+            "question": "Pourquoi deux outils pour comparer deux textes peuvent-ils afficher des résultats différents pour les mêmes documents ?",
+            "answer": "Parce que chaque outil utilise des règles et des algorithmes différents. Certains comparent ligne par ligne, d’autres par mots ou par caractères, et certains peuvent ignorer les espaces ou la casse selon les réglages."
+          },
+          "item-6": {
+            "question": "Puis-je comparer deux textes pour du code aussi ?",
+            "answer": "Oui, beaucoup de personnes comparent deux textes pour du code. Cela aide à voir quelles lignes ont été ajoutées, supprimées ou modifiées entre deux versions d’un fichier, même si l’outil n’analyse pas la syntaxe."
+          },
+          "item-7": {
+            "question": "Y a-t-il une limite pratique pour comparer deux textes en ligne ?",
+            "answer": "Les outils en ligne fonctionnent mieux avec des documents de taille modérée. Pour des textes très longs, il est généralement préférable de les découper en sections et de comparer chaque partie séparément."
+          },
+          "item-8": {
+            "question": "Puis-je comparer deux textes pour détecter le plagiat ?",
+            "answer": "Comparer deux textes est parfait pour voir les différences entre deux versions connues, mais l’outil ne recherche pas sur tout le web. Pour vérifier le plagiat, il vaut mieux utiliser un détecteur de plagiat en complément."
+          },
+          "item-9": {
+            "question": "Est-ce sûr de comparer deux textes contenant des informations sensibles ?",
+            "answer": "Cela dépend de la façon dont chaque outil gère vos données. Un outil qui fonctionne entièrement dans le navigateur, comme celui de VeriIA, est plus sûr car votre texte ne quitte pas votre appareil."
+          },
+          "item-10": {
+            "question": "Quelles bonnes pratiques recommandez-vous pour comparer deux textes ?",
+            "answer": "Collez du texte brut, utilisez le même outil pour comparer deux textes sur un projet, activez des options comme ignorer les espaces si vous ne regardez que le contenu, et gardez des résumés simples des différences pour documenter ce qui a changé."
+          }
+        }
+      },
+      "related": {
+        "title": "Associez l’outil pour comparer deux textes à d’autres outils VeriIA",
+        "subtitle": "Finalisez votre relecture : comparez, détectez l’IA et vérifiez l’originalité.",
+        "description": "Créez un flux de relecture complet avec VeriIA : utilisez l’outil pour comparer deux textes afin de voir les changements entre versions, le détecteur de plagiat pour valider l’originalité, et le détecteur d’IA pour revoir style et ton.",
+        "tryNow": "Essayer maintenant",
+        "items": {
+          "detector": {
+            "title": "Détecteur d’IA VeriIA",
+            "description": "Vérifiez si un texte semble généré par une IA avant ou après avoir choisi de comparer deux textes, et mettez en évidence les phrases à retravailler."
+          },
+          "plagiarism": {
+            "title": "Détecteur de plagiat",
+            "description": "Après avoir choisi la version finale en comparant deux textes, passez-la dans le détecteur de plagiat pour repérer des similitudes sur le web et dans des sources académiques."
+          },
+          "counter": {
+            "title": "Compteur de mots",
+            "description": "Ajustez la longueur de titres, e-mails et documents une fois la comparaison terminée. Le compteur de mots VeriIA vous aide à respecter les limites de caractères tout en restant clair et direct."
+          }
+        }
+      }
+    }
+  },
+  "PricePlans": {
+    "trial": {
+      "name": "Essai",
+      "description": "Pass unique de 14 jours avec 30 000 crédits pour accéder à toutes les fonctionnalités.",
+      "features": {
+        "feature-1": "30 000 crédits (pool partagé)",
+        "feature-2": "Texte + téléversement de fichiers + analyse d’URL",
+        "feature-3": "Jusqu’à 30 000 caractères par détection",
+        "feature-4": "Surlignage des phrases détectées comme IA",
+        "feature-5": "Historique sauvegardé pendant l’essai"
+      },
+      "limits": {
+        "limit-1": "Expire dans 14 jours",
+        "limit-2": "Crédits supprimés à l’expiration"
+      }
+    },
+    "hobby": {
+      "name": "Hobby",
+      "description": "Offre mensuelle pour un usage personnel fréquent avec tous les détecteurs.",
+      "features": {
+        "feature-1": "100 000 crédits / mois",
+        "feature-2": "Texte + téléversement de fichiers + analyse d’URL",
+        "feature-3": "Jusqu’à 30 000 caractères par détection",
+        "feature-4": "Historique complet des détections",
+        "feature-5": "Support e-mail standard"
+      },
+      "limits": {
+        "limit-1": "Crédits réinitialisés chaque mois",
+        "limit-2": "Limites de débit (fair use) applicables"
+      }
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "Limites plus élevées et support prioritaire pour les équipes et les gros utilisateurs.",
+      "features": {
+        "feature-1": "200 000 crédits / mois",
+        "feature-2": "Texte + téléversement de fichiers + analyse d’URL",
+        "feature-3": "Jusqu’à 60 000 caractères par détection",
+        "feature-4": "Support prioritaire",
+        "feature-5": "Historique complet & partage"
+      },
+      "limits": {
+        "limit-1": "Crédits réinitialisés chaque mois",
+        "limit-2": "Délais de réponse prioritaires"
+      }
+    },
+    "free": {
+      "name": "Gratuit",
+      "description": "Offre gratuite pour des tests de base",
+      "features": {
+        "feature-1": "400 crédits tous les 30 jours",
+        "feature-2": "Texte uniquement, 1 500 caractères",
+        "feature-3": "Détection IA (basique)",
+        "feature-4": "Historique limité"
+      },
+      "limits": {
+        "limit-1": "Pas de téléversement de fichier/URL",
+        "limit-2": "Réinitialisation sur 30 jours par compte/IP",
+        "limit-3": "Support non inclus"
+      }
+    },
+    "lifetime": {
+      "name": "À vie",
+      "description": "Accès à vie historique (caché)",
+      "features": {
+        "feature-1": "-",
+        "feature-2": "-",
+        "feature-3": "-",
+        "feature-4": "-",
+        "feature-5": "-",
+        "feature-6": "-",
+        "feature-7": "-"
+      },
+      "limits": {
+        "limit-1": "-",
+        "limit-2": "-"
+      }
+    }
+  },
+  "Dashboard": {
+    "dashboard": {
+      "title": "Tableau de bord"
+    },
+    "history": {
+      "title": "Historique des détections",
+      "description": "Vous avez généré {total} analyses jusqu’à présent. Voici les plus récentes.",
+      "breadcrumbs": {
+        "history": "Historique des détections"
+      },
+      "clearAll": "Supprimer tout l’historique",
+      "retention": {
+        "label": "Période de conservation",
+        "option0": "Ne pas enregistrer l’historique",
+        "option30": "30 jours",
+        "option90": "90 jours",
+        "save": "Enregistrer"
+      },
+      "table": {
+        "columns": {
+          "input": "Contenu",
+          "source": "Source",
+          "score": "Score IA",
+          "language": "Langue",
+          "date": "Date"
+        },
+        "source": {
+          "text": "Texte",
+          "file": "Fichier",
+          "url": "URL"
+        },
+        "rawScore": "Score brut {value}",
+        "sentences": "phrases",
+        "unknownInput": "Aucun aperçu disponible",
+        "characters": "{value} caractères",
+        "charactersUnknown": "Nombre de caractères inconnu",
+        "delete": "Supprimer"
+      },
+      "empty": {
+        "title": "Aucune détection pour le moment",
+        "subtitle": "Lancez votre première analyse pour l’afficher ici.",
+        "cta": "Lancer une détection"
+      },
+      "detail": {
+        "title": "Détail de la détection",
+        "subtitle": "Scores, métadonnées et phrases",
+        "score": "Score IA",
+        "rawScore": "Score brut : {value}",
+        "metadata": "Métadonnées",
+        "length": "Longueur : {value}",
+        "sentences": "Phrases : {value}",
+        "language": "Langue : {value}",
+        "version": "Version : {value}",
+        "created": "Créé le : {value}",
+        "credits": "Crédits",
+        "creditsUsed": "Utilisés : {value}",
+        "creditsRemaining": "Restants : {value}",
+        "inputType": "Type d’entrée : {value}",
+        "noPreview": "Aucun aperçu",
+        "sentencesTitle": "Analyse par phrase",
+        "sentence": "Phrase",
+        "prob": "Probabilité IA {value}",
+        "noSentences": "Aucun détail par phrase disponible",
+        "unknown": "inconnu",
+        "back": "Retour à l’historique",
+        "inputPreview": "Texte original",
+        "plagiarismSources": "Sources correspondantes",
+        "plagiarismNoSources": "Aucune source enregistrée pour cette analyse",
+        "plagiarismSourceUntitled": "Source sans titre",
+        "plagiarismSourceWords": "{value} mots correspondants",
+        "plagiarismSourceIdentical": "{value} mots identiques",
+        "plagiarismSourceSimilar": "{value} mots similaires"
+      },
+      "deleteDialog": {
+        "title": "Supprimer la détection",
+        "description": "Cette action est irréversible. Voulez-vous supprimer cette détection ?",
+        "cancel": "Annuler",
+        "confirm": "Supprimer",
+        "success": "Supprimé",
+        "error": "Échec de la suppression"
+      }
+    },
+    "admin": {
+      "title": "Admin",
+      "users": {
+        "title": "Utilisateurs",
+        "fakeData": "Remarque : données fictives pour la démonstration, certaines fonctionnalités sont désactivées",
+        "error": "Impossible de récupérer les utilisateurs",
+        "search": "Rechercher des utilisateurs...",
+        "columns": {
+          "columns": "Colonnes",
+          "name": "Nom",
+          "email": "E-mail",
+          "role": "Rôle",
+          "createdAt": "Créé le",
+          "customerId": "ID client",
+          "status": "Statut",
+          "banReason": "Motif du bannissement",
+          "banExpires": "Fin du bannissement"
+        },
+        "noResults": "Aucun résultat",
+        "firstPage": "Première page",
+        "lastPage": "Dernière page",
+        "nextPage": "Page suivante",
+        "previousPage": "Page précédente",
+        "rowsPerPage": "Lignes par page",
+        "page": "Page",
+        "loading": "Chargement...",
+        "admin": "Admin",
+        "user": "Utilisateur",
+        "email": {
+          "verified": "E-mail vérifié",
+          "unverified": "E-mail non vérifié"
+        },
+        "emailCopied": "E-mail copié dans le presse-papiers",
+        "banned": "Banni",
+        "active": "Actif",
+        "joined": "Inscrit",
+        "updated": "Mis à jour",
+        "ban": {
+          "reason": "Motif du bannissement",
+          "reasonPlaceholder": "Saisissez le motif du bannissement de cet utilisateur",
+          "defaultReason": "Spam",
+          "never": "Jamais",
+          "expires": "Fin du bannissement",
+          "selectDate": "Sélectionner une date",
+          "button": "Bannir l’utilisateur",
+          "success": "L’utilisateur a été banni",
+          "error": "Échec du bannissement de l’utilisateur"
+        },
+        "unban": {
+          "button": "Débannir l’utilisateur",
+          "success": "L’utilisateur a été débanni",
+          "error": "Échec du débannissement de l’utilisateur"
+        },
+        "close": "Fermer"
+      }
+    },
+    "settings": {
+      "title": "Paramètres",
+      "profile": {
+        "title": "Profil",
+        "description": "Gérez les informations de votre compte",
+        "avatar": {
+          "title": "Avatar",
+          "description": "Cliquez sur le bouton de téléversement pour envoyer un avatar personnalisé",
+          "recommendation": "L’avatar est optionnel mais fortement recommandé",
+          "uploading": "Téléversement...",
+          "uploadAvatar": "Téléverser un avatar",
+          "success": "Avatar mis à jour avec succès",
+          "fail": "Échec de la mise à jour de l’avatar"
+        },
+        "name": {
+          "title": "Nom",
+          "description": "Veuillez saisir votre nom d’affichage",
+          "placeholder": "Saisissez votre nom",
+          "minLength": "Veuillez utiliser au minimum 3 caractères",
+          "maxLength": "Veuillez utiliser au maximum 30 caractères",
+          "hint": "Veuillez utiliser 3 à 30 caractères pour votre nom",
+          "success": "Nom mis à jour avec succès",
+          "fail": "Échec de la mise à jour du nom",
+          "saving": "Enregistrement...",
+          "save": "Enregistrer"
+        }
+      },
+      "billing": {
+        "title": "Facturation",
+        "description": "Gérez votre abonnement et vos informations de facturation",
+        "status": {
+          "active": "Actif",
+          "trial": "Essai",
+          "canceled": "Annulé",
+          "free": "Gratuit",
+          "lifetime": "À vie"
+        },
+        "interval": {
+          "month": "mois",
+          "year": "an",
+          "oneTime": "unique"
+        },
+        "currentPlan": {
+          "title": "Offre actuelle",
+          "description": "Détails de votre offre actuelle",
+          "noPlan": "Vous n’avez aucune offre active"
+        },
+        "CustomerPortalButton": {
+          "loading": "Chargement...",
+          "createCustomerPortalFailed": "Impossible d’ouvrir le portail client Stripe"
+        },
+        "price": "Prix :",
+        "nextBillingDate": "Prochaine date de facturation :",
+        "trialEnds": "Fin de l’essai :",
+        "serviceEnds": "Fin du service :",
+        "freePlanMessage": "Vous êtes actuellement sur l’offre gratuite avec des fonctionnalités limitées",
+        "lifetimeMessage": "Vous avez un accès à vie à toutes les fonctionnalités premium",
+        "manageSubscription": "Gérer l’abonnement et la facturation",
+        "manageBilling": "Gérer la facturation",
+        "upgradePlan": "Passer à une offre supérieure",
+        "retry": "Réessayer",
+        "errorMessage": "Impossible de récupérer les données"
+      },
+      "notification": {
+        "title": "Notifications",
+        "description": "Gérez vos préférences de notification",
+        "newsletter": {
+          "title": "Abonnement à la newsletter",
+          "description": "Gérez vos préférences d’abonnement à la newsletter",
+          "label": "S’abonner à la newsletter",
+          "hint": "Vous pouvez modifier vos préférences d’abonnement à tout moment",
+          "emailRequired": "L’e-mail est requis pour s’abonner à la newsletter",
+          "subscribeSuccess": "Abonnement à la newsletter réussi",
+          "subscribeFail": "Échec de l’abonnement à la newsletter",
+          "unsubscribeSuccess": "Désabonnement de la newsletter réussi",
+          "unsubscribeFail": "Échec du désabonnement de la newsletter",
+          "error": "Une erreur est survenue lors de la mise à jour de votre abonnement"
+        }
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Gérez vos paramètres de sécurité",
+        "updatePassword": {
+          "title": "Changer le mot de passe",
+          "description": "Saisissez votre mot de passe actuel et un nouveau mot de passe",
+          "currentPassword": "Mot de passe actuel",
+          "currentRequired": "Le mot de passe actuel est requis",
+          "newPassword": "Nouveau mot de passe",
+          "newMinLength": "Le mot de passe doit contenir au moins 8 caractères",
+          "hint": "Veuillez utiliser au moins 8 caractères pour le mot de passe",
+          "showPassword": "Afficher le mot de passe",
+          "hidePassword": "Masquer le mot de passe",
+          "success": "Mot de passe mis à jour avec succès",
+          "fail": "Échec de la mise à jour du mot de passe",
+          "saving": "Enregistrement...",
+          "save": "Enregistrer"
+        },
+        "resetPassword": {
+          "title": "Réinitialiser le mot de passe",
+          "description": "Réinitialisez le mot de passe pour activer la connexion par e-mail",
+          "info": "La réinitialisation de votre mot de passe vous permettra de vous connecter avec votre e-mail et votre mot de passe, en plus de vos méthodes de connexion via réseaux sociaux. Vous recevrez un e-mail avec des instructions pour réinitialiser votre mot de passe.",
+          "button": "Réinitialiser le mot de passe"
+        },
+        "deleteAccount": {
+          "title": "Supprimer le compte",
+          "description": "Supprime définitivement votre compte et tout son contenu",
+          "warning": "Cette action est irréversible, veuillez continuer avec prudence",
+          "button": "Supprimer le compte",
+          "confirmTitle": "Supprimer le compte",
+          "confirmDescription": "Êtes-vous sûr de vouloir supprimer votre compte ? Cette action ne peut pas être annulée.",
+          "confirm": "Supprimer",
+          "cancel": "Annuler",
+          "deleting": "Suppression...",
+          "success": "Compte supprimé avec succès",
+          "fail": "Échec de la suppression du compte"
+        }
+      }
+    },
+    "upgrade": {
+      "title": "Passer à l’offre supérieure",
+      "description": "Passez à Pro pour accéder à toutes les fonctionnalités",
+      "button": "Mettre à niveau"
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "Désolé, la page que vous recherchez n’existe pas.",
+    "backToHome": "Retour à l’accueil"
+  },
+  "ErrorPage": {
+    "title": "Oups ! Une erreur s’est produite !",
+    "tryAgain": "Réessayer",
+    "backToHome": "Retour à l’accueil"
+  },
+  "AboutPage": {
+    "title": "À propos",
+    "description": "Ceci est MkSaaS, un template SaaS IA construit avec des technologies modernes, pour vous aider à créer votre SaaS plus vite et mieux.",
+    "authorName": "MkSaaS",
+    "authorBio": "Boilerplate SaaS IA",
+    "introduction": "👋 Bonjour ! Voici MkSaaS, un template SaaS IA construit avec des technologies modernes, pour vous aider à créer votre SaaS plus vite et mieux. Si vous avez des questions, n’hésitez pas à me contacter.",
+    "talkWithMe": "Discuter avec moi",
+    "followMe": "Suivez-moi sur X"
+  },
+  "ChangelogPage": {
+    "title": "Journal des changements",
+    "description": "Restez à jour avec les dernières évolutions de notre produit",
+    "subtitle": "Restez à jour avec les dernières évolutions de notre produit"
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "description": "Nous vous aidons à trouver l’offre adaptée à votre activité",
+    "subtitle": "Nous vous aidons à trouver l’offre adaptée à votre activité",
+    "form": {
+      "title": "Nous contacter",
+      "description": "Si vous avez des questions ou des retours, contactez notre équipe",
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "submit": "Envoyer",
+      "submitting": "Envoi...",
+      "success": "Message envoyé avec succès",
+      "fail": "Échec de l’envoi du message",
+      "nameMinLength": "Le nom doit contenir au moins 3 caractères",
+      "nameMaxLength": "Le nom ne doit pas dépasser 30 caractères",
+      "emailValidation": "Veuillez saisir une adresse e-mail valide",
+      "messageMinLength": "Le message doit contenir au moins 10 caractères",
+      "messageMaxLength": "Le message ne doit pas dépasser 500 caractères"
+    }
+  },
+  "Newsletter": {
+    "title": "Newsletter",
+    "subtitle": "Rejoignez la communauté",
+    "description": "Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles et mises à jour",
+    "form": {
+      "email": "E-mail",
+      "subscribe": "S’abonner",
+      "subscribing": "Abonnement...",
+      "success": "Abonnement réussi",
+      "fail": "Échec de l’abonnement",
+      "emailValidation": "Veuillez saisir une adresse e-mail valide"
+    }
+  },
+  "AuthPage": {
+    "login": {
+      "title": "Connexion",
+      "welcomeBack": "Heureux de vous revoir",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "signIn": "Se connecter",
+      "signUpHint": "Vous n’avez pas de compte ?",
+      "forgotPassword": "Mot de passe oublié ?",
+      "signInWithGoogle": "Se connecter avec Google",
+      "signInWithGitHub": "Se connecter avec GitHub",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe",
+      "or": "Ou continuer avec",
+      "emailRequired": "Veuillez saisir votre e-mail",
+      "passwordRequired": "Veuillez saisir votre mot de passe",
+      "socialOnly": "La connexion par e-mail est temporairement indisponible. Veuillez utiliser la connexion via un réseau social."
+    },
+    "register": {
+      "title": "Inscription",
+      "createAccount": "Créer un compte",
+      "name": "Nom",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "signUp": "S’inscrire",
+      "signInHint": "Vous avez déjà un compte ?",
+      "checkEmail": "Veuillez vérifier votre boîte de réception",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe",
+      "nameRequired": "Veuillez saisir votre nom",
+      "emailRequired": "Veuillez saisir votre e-mail",
+      "passwordRequired": "Veuillez saisir votre mot de passe",
+      "socialOnly": "L’inscription par e-mail est temporairement indisponible. Veuillez continuer avec un compte social."
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "email": "E-mail",
+      "send": "Envoyer le lien de réinitialisation",
+      "backToLogin": "Retour à la connexion",
+      "checkEmail": "Veuillez vérifier votre boîte de réception",
+      "emailRequired": "Veuillez saisir votre e-mail"
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "password": "Mot de passe",
+      "reset": "Réinitialiser le mot de passe",
+      "backToLogin": "Retour à la connexion",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe",
+      "minLength": "Le mot de passe doit contenir au moins 8 caractères"
+    },
+    "error": {
+      "title": "Oups ! Une erreur s’est produite !",
+      "tryAgain": "Veuillez réessayer.",
+      "backToLogin": "Retour à la connexion",
+      "checkEmail": "Veuillez vérifier votre boîte de réception"
+    },
+    "common": {
+      "orContinue": "Ou continuer avec",
+      "signInWithGoogle": "Se connecter avec Google",
+      "signInWithGitHub": "Se connecter avec GitHub",
+      "dontHave": "Vous n’avez pas de compte ?",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter",
+      "signUp": "S’inscrire",
+      "byClickingContinue": "En cliquant sur continuer, vous acceptez nos",
+      "termsOfService": "Conditions d’utilisation",
+      "privacyPolicy": "Politique de confidentialité",
+      "and": "et"
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "description": "Dernières nouvelles et mises à jour de notre équipe",
+    "subtitle": "Dernières nouvelles et mises à jour de notre équipe",
+    "author": "Auteur",
+    "categories": "Catégories",
+    "tableOfContents": "Table des matières",
+    "readTime": "{minutes} min de lecture",
+    "all": "Tous",
+    "noPostsFound": "Aucun article trouvé",
+    "allPosts": "Tous les articles",
+    "morePosts": "Plus d’articles"
+  },
+  "DocsPage": {
+    "toc": "Table des matières",
+    "search": "Rechercher dans la documentation",
+    "lastUpdate": "Dernière mise à jour le",
+    "searchNoResult": "Aucun résultat",
+    "previousPage": "Précédent",
+    "nextPage": "Suivant",
+    "chooseLanguage": "Sélectionner la langue",
+    "title": "Documentation MkSaaS",
+    "homepage": "Page d’accueil",
+    "blog": "Blog"
+  },
+  "Marketing": {
+    "navbar": {
+      "features": {
+        "title": "Fonctionnalités"
+      },
+      "plagiarism": {
+        "title": "Détecteur de plagiat"
+      },
+      "humanizer": {
+        "title": "Humaniser un texte IA"
+      },
+      "textSummarizer": {
+        "title": "Résumer un texte"
+      },
+      "apaGenerator": {
+        "title": "Générateur de sources APA"
+      },
+      "wordCounter": {
+        "title": "Compteur de mots"
+      },
+      "textCompare": {
+        "title": "Comparer deux textes"
+      },
+      "pricing": {
+        "title": "Tarifs"
+      },
+      "blog": {
+        "title": "Blog"
+      },
+      "docs": {
+        "title": "Documentation"
+      },
+      "pages": {
+        "title": "Pages",
+        "items": {
+          "about": {
+            "title": "À propos",
+            "description": "En savoir plus sur notre entreprise et notre mission"
+          },
+          "contact": {
+            "title": "Contact",
+            "description": "Contactez notre équipe"
+          },
+          "changelog": {
+            "title": "Journal des changements",
+            "description": "Découvrez les nouveautés de nos dernières mises à jour"
+          },
+          "cookiePolicy": {
+            "title": "Politique de cookies",
+            "description": "En savoir plus sur l’utilisation des cookies et la confidentialité"
+          },
+          "privacyPolicy": {
+            "title": "Politique de confidentialité",
+            "description": "Consultez notre politique de confidentialité et la protection des données"
+          },
+          "termsOfService": {
+            "title": "Conditions d’utilisation",
+            "description": "Consultez nos conditions générales"
+          }
+        }
+      },
+      "ai": {
+        "title": "Outils IA",
+        "items": {
+          "text": {
+            "title": "Texte IA",
+            "description": "Découvrez comment utiliser l’IA pour écrire des textes de qualité"
+          },
+          "image": {
+            "title": "Image IA",
+            "description": "Découvrez comment utiliser l’IA pour générer de belles images"
+          },
+          "video": {
+            "title": "Vidéo IA",
+            "description": "Découvrez comment utiliser l’IA pour générer des vidéos impressionnantes"
+          },
+          "audio": {
+            "title": "Audio IA",
+            "description": "Découvrez comment utiliser l’IA pour générer de superbes audios"
+          }
+        }
+      }
+    },
+    "footer": {
+      "tagline": "Auditez vos textes avec notre détecteur d’IA professionnel : probabilités claires, surlignages précis, confiance immédiate",
+      "product": {
+        "title": "Produit",
+        "items": {
+          "plagiarism": "Détecteur de plagiat",
+          "humanizer": "Humaniser un texte IA",
+          "textSummarizer": "Résumer un texte",
+          "apaGenerator": "Générateur de sources APA",
+          "textCompare": "Comparer deux textes",
+          "wordCounter": "Compteur de mots",
+          "pricing": "",
+          "faq": ""
+        }
+      },
+      "resources": {
+        "title": "Ressources",
+        "items": {
+          "blog": "Blog",
+          "docs": "Documentation",
+          "changelog": "Journal des changements"
+        }
+      },
+      "company": {
+        "title": "Entreprise",
+        "items": {
+          "about": "À propos",
+          "contact": "Contact"
+        }
+      },
+      "legal": {
+        "title": "Juridique",
+        "items": {
+          "cookiePolicy": "Politique de cookies",
+          "privacyPolicy": "Politique de confidentialité",
+          "termsOfService": "Conditions d’utilisation",
+          "refundPolicy": "Politique de remboursement"
+        }
+      }
+    },
+    "avatar": {
+      "dashboard": "Tableau de bord",
+      "billing": "Facturation",
+      "settings": "Paramètres"
+    },
+    "sidebar": {
+      "detector": {
+        "title": "Détecteur d’IA"
+      },
+      "plagiarism": {
+        "title": "Détecteur de plagiat"
+      },
+      "humanizer": {
+        "title": "Humaniser un texte IA"
+      },
+      "summarizer": {
+        "title": "Résumer un texte"
+      },
+      "compare": {
+        "title": "Comparer deux textes"
+      },
+      "counter": {
+        "title": "Compteur de mots"
+      },
+      "apa": {
+        "title": "Générateur de sources APA"
+      },
+      "trigger": "Outils",
+      "hide": "Masquer"
+    }
+  },
+  "Mail": {
+    "common": {
+      "team": "Équipe {name}",
+      "copyright": "©️ {year} Tous droits réservés."
+    },
+    "verifyEmail": {
+      "title": "Bonjour, {name}.",
+      "body": "Veuillez cliquer sur le lien ci-dessous pour vérifier votre adresse e-mail.",
+      "confirmEmail": "Confirmer l’e-mail",
+      "subject": "Vérifiez votre e-mail"
+    },
+    "forgotPassword": {
+      "title": "Bonjour, {name}.",
+      "body": "Veuillez cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe.",
+      "resetPassword": "Réinitialiser le mot de passe",
+      "subject": "Réinitialisez votre mot de passe"
+    },
+    "subscribeNewsletter": {
+      "body": "Merci de vous être abonné à la newsletter. Nous vous tiendrons informé des dernières actualités et mises à jour.",
+      "subject": "Merci pour votre abonnement"
+    },
+    "contactMessage": {
+      "name": "Nom : {name}",
+      "email": "E-mail : {email}",
+      "message": "Message : {message}",
+      "subject": "Message de contact depuis le site"
+    }
+  },
+  "HomePage": {
+    "aiDetector": {
+      "badge": "Faites inspirer confiance à vos textes",
+      "title": "Détecteur d’IA pour des contenus professionnels",
+      "description": "Assurez-vous que chaque rapport, proposition ou message conserve la qualité, l’originalité et la transparence que vous attendez grâce au détecteur d’IA VeriIA — un détecteur d’IA pensé pour des contenus sérieux et professionnels.",
+      "uploadFile": "Téléverser un fichier",
+      "pasteUrl": "Coller une URL",
+      "trySamples": "Essayer des exemples",
+      "scanHistory": "Historique des analyses",
+      "placeholder": {
+        "title": "Glissez votre fichier ou collez le contenu ici",
+        "subtitle": "Nous acceptons .txt, .docx et le texte brut. Les couleurs apparaissent phrase par phrase.",
+        "textareaPlaceholder": "Collez votre essai ou votre article ici..."
+      },
+      "paste": "Coller",
+      "upload": "Téléverser",
+      "clear": "Effacer",
+      "detect": "Détecter maintenant",
+      "analyzing": "Analyse en cours...",
+      "samples": {
+        "iaEssay": "IA",
+        "humanArticle": "Humain",
+        "mixedEmail": "Humain + IA"
+      },
+      "sampleTexts": {
+        "iaEssay": "Cet essai a été généré avec un modèle d’IA et utilise des formulations passe-partout pour construire un récit convaincant mais légèrement répétitif. Il s’appuie sur les mêmes arguments, recycle des connecteurs comme \"d’un autre côté\" et évite les détails concrets, ce qui donne une structure agréable mais prévisible. Utilisez-le pour voir comment le détecteur d’IA réagit à un texte clairement synthétique et pour visualiser les surlignages au niveau des phrases.",
+        "humanArticle": "As Apple and Google transform their voice assistants into chatbots, OpenAI is transforming its chatbot into a voice assistant.\nOn Monday, the San Francisco artificial intelligence start-up unveiled a new version of its ChatGPT chatbot that can receive and respond to voice commands, images and videos.\n“We are looking at the future of the interaction between ourselves and machines,” said Mira Murati, the company’s chief technology officer.",
+        "mixedEmail": "AI content detection systems are crucial tools for online platforms and businesses to utilize as they allow for the automated identification and screening of harmful, illegal, sensitive or copyrighted material at large scales, helping to remove such content from circulation faster and prevent its spread. Specifically, AI detectors can help find child abuse images, terrorist propaganda, spam, private personal details, misinformation, graphic violence, harassment and illegally posted copyrighted content. This enforcement of community guidelines and legal standards through AI screening upholds safety, privacy, integrity and authenticity online while also respecting intellectual property – ultimately benefiting both users and organizations."
+      },
+      "report": {
+        "title": "Rapport d’originalité",
+        "subtitle": "Voyez la probabilité d’IA en un coup d’œil.",
+        "realTime": "En temps réel",
+        "confidence": "Confiance estimée",
+        "secureText": "Votre texte est sécurisé…",
+        "nextSteps": "Que voulez-vous faire ensuite ?",
+        "loginPrompt": "Connectez-vous pour conserver votre rapport et débloquer plus de crédits.",
+        "viewReport": "Voir le rapport détaillé",
+        "loginToView": "Se connecter pour voir le rapport",
+        "checkPlagiarism": "Vérifier le plagiat",
+        "trustIndicators": {
+          "encrypted": "Chiffré",
+          "notShared": "Jamais partagé",
+          "noTraining": "N’entraîne pas de modèles"
+        },
+        "terms": "En continuant, vous acceptez nos {terms} et notre {privacy}.",
+        "termsLink": "Conditions",
+        "privacyLink": "Politique de confidentialité",
+        "humanize": "Humaniser le texte",
+        "humanizeDescription": "Envoyez le résultat vers l’AI Humanizer pour le rendre plus naturel."
+      },
+      "evaluation": {
+        "aiLikely": "Plutôt IA",
+        "mixedContent": "Contenu mixte",
+        "humanLikely": "Plutôt humain",
+        "aiExplanation": "Le style est très répétitif et ressemble à un texte typiquement généré par IA.",
+        "mixedExplanation": "Les signaux sont partagés. Une vérification manuelle avec le rapport du détecteur d’IA est recommandée pour confirmer l’auteur.",
+        "humanExplanation": "La structure et la variété se rapprochent davantage d’un contenu rédigé par un humain."
+      },
+      "characterCount": "Vous avez saisi {count} caractères",
+      "limitUpgradePrompt": "Besoin d’analyser des textes plus longs ? Passez à une offre supérieure pour augmenter la capacité.",
+      "upgradeCta": "Voir les tarifs",
+      "uploadingFile": "Téléversement...",
+      "fileReady": "Fichier prêt à être analysé.",
+      "websiteReady": "URL prête à être analysée.",
+      "urlPlaceholder": "https://example.com/article",
+      "urlApply": "Utiliser l’URL",
+      "urlClear": "Effacer",
+      "clearSource": "Retirer la source",
+      "defaultConfidence": "--% de confiance que c’est de l’IA",
+      "gauge": {
+        "low": "Faible",
+        "high": "Élevé"
+      },
+      "errors": {
+        "clipboardNotSupported": "Votre navigateur n’autorise pas la lecture du presse-papiers.",
+        "clipboardEmpty": "Le presse-papiers est vide.",
+        "clipboardReadFailed": "Nous n’avons pas pu lire votre presse-papiers.",
+        "pasteSuccess": "Texte collé depuis le presse-papiers.",
+        "emptyText": "Veuillez coller un texte en espagnol ou en anglais.",
+        "addTextWarning": "Ajoutez du texte, un fichier ou une URL avant l’analyse avec le détecteur d’IA.",
+        "analysisFailed": "Nous n’avons pas pu analyser le texte.",
+        "analysisComplete": "Analyse terminée",
+        "unexpectedError": "Une erreur inattendue s’est produite.",
+        "uploadFailed": "Nous n’avons pas pu téléverser le fichier.",
+        "invalidUrl": "Saisissez une URL valide qui commence par https://",
+        "noInputSource": "Ajoutez du texte, un fichier ou une URL à analyser."
+      },
+      "guestModal": {
+        "title": "Plus de puissance",
+        "subtitle": "Connectez-vous pour débloquer 2× crédits, 4× longueur de texte et activer le téléversement de fichiers.",
+        "google": "Continuer avec Google · 2× crédits",
+        "github": "Continuer avec GitHub · 2× crédits",
+        "footer": "Vous pouvez passer de Google à GitHub en un clic."
+      },
+      "upgradeModal": {
+        "title": "Passez à une offre supérieure pour continuer la détection",
+        "description": "Choisissez l’offre qui vous convient : Essai pour un rechargement rapide, ou Hobby / Pro pour des limites plus élevées et le support fichier/URL dans le détecteur d’IA."
+      },
+      "limitLoginPrompt": "Besoin d’analyser des textes plus longs ? Connectez-vous pour obtenir 4× de capacité.",
+      "loginCta": "Se connecter"
+    },
+    "aiDetectorFeatures": {
+      "title": "Une technologie de détecteur d’IA puissante",
+      "subtitle": "Des signaux vraiment exploitables",
+      "description": "Le détecteur d’IA VeriIA se concentre sur des signaux clairs et pratiques pour que vous puissiez expliquer et agir sur chaque résultat.",
+      "features": {
+        "accuracy": {
+          "title": "Une précision utile et concrète",
+          "description": "Le détecteur d’IA estime dans quelle mesure votre texte ressemble à une écriture d’IA et le transforme en un signal clair et actionnable."
+        },
+        "models": {
+          "title": "Fonctionne avec les principaux modèles d’IA",
+          "description": "Le détecteur d’IA est calibré sur des exemples issus de modèles comme ChatGPT, GPT-4o, Gemini, Claude, DeepSeek et d’autres."
+        },
+        "highlights": {
+          "title": "Surlignage phrase par phrase",
+          "description": "Les surlignages colorés indiquent exactement quelles phrases le détecteur d’IA juge plus « IA », pour savoir où éditer en premier."
+        },
+        "realtime": {
+          "title": "Résultats rapides, directement dans le navigateur",
+          "description": "Obtenez des résultats du détecteur d’IA en quelques secondes grâce à une interface légère conçue pour des vérifications rapides avant soumission."
+        }
+      }
+    },
+    "useCases": {
+      "title": "Parfait pour tous les professionnels",
+      "subtitle": "Où le détecteur d’IA s’intègre à votre workflow",
+      "description": "Que vous soyez étudiant, enseignant, créateur de contenu ou spécialiste SEO, le détecteur d’IA VeriIA s’adapte à votre travail au quotidien.",
+      "cases": {
+        "students": {
+          "title": "Étudiants",
+          "description": "Utilisez le détecteur d’IA pour vérifier vos essais et devoirs avant de les rendre et protéger votre intégrité académique."
+        },
+        "teachers": {
+          "title": "Enseignants",
+          "description": "Repérez rapidement les passages probablement générés par IA dans les travaux d’élèves et appuyez-vous sur le rapport du détecteur d’IA pour guider retours et discussions."
+        },
+        "content": {
+          "title": "Créateurs de contenu",
+          "description": "Gardez des articles, newsletters et posts clairement humains en les passant dans le détecteur d’IA avant publication."
+        },
+        "seo": {
+          "title": "Spécialistes SEO",
+          "description": "Ajoutez le détecteur d’IA à votre checklist SEO pour maintenir une haute qualité et éviter de trop dépendre de textes IA générés en masse."
+        }
+      }
+    },
+    "detectionProcess": {
+      "title": "Un processus simple en 3 étapes",
+      "subtitle": "Des résultats de détecteur d’IA en quelques secondes",
+      "description": "Le détecteur d’IA est conçu pour être simple : collez, analysez, puis agissez à partir d’un rapport clair.",
+      "getStarted": "Essayer le détecteur d’IA maintenant",
+      "steps": {
+        "step-1": {
+          "title": "Collez votre texte",
+          "description": "Collez un texte en espagnol ou en anglais, ou téléversez un fichier pour lancer une analyse avec le détecteur d’IA."
+        },
+        "step-2": {
+          "title": "Analyse IA",
+          "description": "Le détecteur d’IA examine la structure, la répétition et le choix des mots, phrase par phrase."
+        },
+        "step-3": {
+          "title": "Obtenez des résultats détaillés",
+          "description": "Vous recevez une probabilité d’IA claire, une confiance estimée et des passages surlignés à relire et éditer."
+        }
+      }
+    },
+    "inlineCta": {
+      "primary": {
+        "title": "Votre première vérification avec le détecteur d’IA",
+        "description": "Démarrez en un clic avec le détecteur d’IA et consultez les surlignages en moins d’une minute.",
+        "primary": "Essayer le détecteur d’IA",
+        "secondary": "Voir les offres"
+      },
+      "secondary": {
+        "title": "Vérifiez avant de soumettre avec le détecteur d’IA",
+        "description": "Évitez les faux positifs, protégez votre ton et livrez avec confiance en utilisant le détecteur d’IA comme signal supplémentaire.",
+        "primary": "Vérifier mon texte",
+        "secondary": "Voir les offres"
+      }
+    },
+    "features3": {
+      "title": "Cas d’usage du détecteur d’IA",
+      "subtitle": "À qui s’adresse cet outil",
+      "description": "Découvrez des situations concrètes où le détecteur d’IA apporte de la clarté avant de publier ou de soumettre vos textes.",
+      "items": {
+        "item-1": {
+          "title": "Étudiants universitaires",
+          "description": "Vérifiez essais et articles de recherche avec le détecteur d’IA avant soumission afin que votre travail ait moins de chances de déclencher d’autres détecteurs ou contrôles de plagiat."
+        },
+        "item-2": {
+          "title": "Enseignants & éducateurs",
+          "description": "Utilisez le détecteur d’IA comme première passe sur les travaux d’étudiants pour voir où l’usage de l’IA semble important et où une revue manuelle est nécessaire."
+        },
+        "item-3": {
+          "title": "Créateurs de contenu",
+          "description": "Trouvez l’équilibre entre vitesse et authenticité en passant vos brouillons assistés par IA dans le détecteur d’IA, puis en éditant les sections trop synthétiques."
+        },
+        "item-4": {
+          "title": "Spécialistes SEO",
+          "description": "Utilisez le détecteur d’IA pour surveiller à quel point vos articles et pages de destination s’appuient sur des schémas IA avant de publier à grande échelle."
+        },
+        "item-5": {
+          "title": "Journalistes & éditeurs",
+          "description": "Vérifiez des sujets sensibles et tribunes avec le détecteur d’IA afin qu’ils soient clairement humains et conformes à vos standards éditoriaux."
+        },
+        "item-6": {
+          "title": "Équipes marketing & agences",
+          "description": "Passez vos campagnes et livrables clients dans le détecteur d’IA pour protéger le ton, la confiance et l’image de marque avant le lancement."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Tarifs du détecteur d’IA",
+      "subtitle": "Choisissez l’offre qui vous convient",
+      "description": "Des vérifications gratuites du détecteur d’IA aux options pour gros volumes et équipes, VeriIA a une offre adaptée à votre façon de travailler."
+    },
+    "calltoaction": {
+      "title": "Lancez votre détection d’IA maintenant",
+      "description": "Vérifiez l’originalité et le style de vos textes en quelques secondes avec le détecteur d’IA VeriIA, des rapports clairs et des surlignages précis.",
+      "primaryButton": "Essayer le détecteur d’IA",
+      "secondaryButton": "Explorer les cas d’usage"
+    },
+    "features": {
+      "title": "Fonctionnalités clés du détecteur d’IA",
+      "subtitle": "La clarté plutôt que le « black box »",
+      "description": "Découvrez des capacités du détecteur d’IA conçues pour vous donner des signaux que vous pouvez expliquer à des enseignants, clients ou équipes.",
+      "items": {
+        "item-1": {
+          "title": "Rapport clair, section par section",
+          "description": "Le détecteur d’IA vous donne une probabilité globale ainsi qu’un détail par phrases et paragraphes, pour savoir où concentrer vos efforts."
+        },
+        "item-2": {
+          "title": "Surlignage au niveau des phrases",
+          "description": "Les passages qui ressemblent à de l’IA sont codés par couleur, ce qui facilite l’identification des parties à réécrire, citer ou justifier."
+        },
+        "item-3": {
+          "title": "Traitement axé sur la confidentialité",
+          "description": "Les textes sont traités uniquement pour générer le rapport du détecteur d’IA ; ils ne servent pas à entraîner des modèles et vous contrôlez votre historique d’analyses."
+        },
+        "item-4": {
+          "title": "Confiance et contexte",
+          "description": "En plus d’une probabilité, le détecteur d’IA inclut une confiance estimée et des explications en langage clair pour appuyer vos décisions."
+        }
+      }
+    },
+    "features2": {
+      "title": "Fonctionnalités supplémentaires",
+      "subtitle": "Des fonctions pratiques au quotidien",
+      "description": "Découvrez des commodités qui rendent le détecteur d’IA VeriIA facile à intégrer à vos workflows existants.",
+      "feature-1": "Historique d’analyses pour voir comment un texte évolue au fil des éditions.",
+      "feature-2": "Limites simples par offre, pour que le détecteur d’IA s’adapte à votre fréquence d’utilisation.",
+      "feature-3": "Support du texte collé, des fichiers et des URL publiques dans une interface unique et épurée.",
+      "feature-4": "Expérience légère, dans le navigateur, sans installation ni configuration complexe."
+    },
+    "howItWorks": {
+      "title": "Comment fonctionne notre détecteur d’IA",
+      "subtitle": "Trois étapes suffisent pour obtenir un rapport clair et professionnel sur un usage possible de l’IA dans votre texte.",
+      "steps": {
+        "step-1": {
+          "label": "Étape 1 · Collez votre texte",
+          "imageAlt": "Interface du détecteur avec un texte collé",
+          "items": [
+            {
+              "title": "Ajoutez votre contenu",
+              "description": "Copiez-collez le texte que vous souhaitez analyser avec le détecteur d’IA, ou saisissez-le directement."
+            },
+            {
+              "title": "Langue détectée automatiquement",
+              "description": "Le détecteur d’IA est aujourd’hui optimisé pour l’espagnol et l’anglais et détecte la langue automatiquement, sans configuration."
+            },
+            {
+              "title": "Vérifiez la longueur",
+              "description": "Nous recommandons au moins 30 à 50 mots ; avec l’offre gratuite, vous pouvez analyser jusqu’à 1 500 caractères par vérification du détecteur d’IA."
+            }
+          ]
+        },
+        "step-2": {
+          "label": "Étape 2 · Lancer la détection",
+          "imageAlt": "Vue du rapport montrant le pourcentage d’IA",
+          "items": [
+            {
+              "title": "Cliquez sur « Détecter maintenant »",
+              "description": "Démarrez l’analyse et obtenez une probabilité d’IA globale pour votre texte."
+            },
+            {
+              "title": "Voir un pourcentage clair",
+              "description": "Le détecteur d’IA indique à quel point il est probable que l’ensemble du texte ait été écrit par une IA."
+            },
+            {
+              "title": "Relire les surlignages",
+              "description": "Les phrases qui ressemblent particulièrement à de l’IA sont surlignées afin que vous puissiez les examiner de plus près."
+            }
+          ]
+        },
+        "step-3": {
+          "label": "Étape 3 · Relire et affiner",
+          "imageAlt": "Utilisateur ajustant des phrases surlignées",
+          "items": [
+            {
+              "title": "Concentrez-vous sur les parties surlignées",
+              "description": "Commencez par les phrases ou paragraphes signalés par le détecteur d’IA comme plus susceptibles d’être générés par IA."
+            },
+            {
+              "title": "Ajustez si nécessaire",
+              "description": "Améliorez la clarté, la cohérence, les citations et le ton humain dans les sections clés."
+            },
+            {
+              "title": "Relancer une vérification si besoin",
+              "description": "Refaites une analyse avec le détecteur d’IA pour valider vos modifications ; votre historique est conservé jusqu’à 90 jours."
+            }
+          ]
+        }
+      }
+    },
+    "faqs": {
+      "title": "Questions fréquentes",
+      "subtitle": "Des réponses claires sur la détection d’IA",
+      "items": {
+        "item-1": {
+          "question": "Qu’est-ce que ce détecteur d’IA et que peut-il analyser ?",
+          "answer": "Le détecteur d’IA VeriIA estime la probabilité qu’un texte ait été écrit avec des modèles comme ChatGPT, Gemini, Claude, DeepSeek ou Kimi. Il fonctionne pour des articles de recherche, billets de blog, rapports professionnels, e-mails longs — tout type d’écriture professionnelle."
+        },
+        "item-2": {
+          "question": "Comment fonctionne le détecteur d’IA, en quelques mots ?",
+          "answer": "Le détecteur d’IA analyse la structure, le rythme, la répétition et le choix des mots, puis les compare à des exemples humains et IA. Il produit ensuite une probabilité globale et surligne les sections à relire. Il évalue le style, pas des mots isolés."
+        },
+        "item-3": {
+          "question": "Le détecteur d’IA est-il fiable ? Peut-il se tromper ?",
+          "answer": "C’est probabiliste, pas un verdict absolu. Dans la plupart des cas, le détecteur d’IA est un signal utile, mais des faux positifs et faux négatifs peuvent exister. Utilisez-le comme un indicateur parmi d’autres, pas comme seul arbitre."
+        },
+        "item-4": {
+          "question": "Comment interpréter le pourcentage et les surlignages ?",
+          "answer": "Le pourcentage indique dans quelle mesure l’ensemble du texte ressemble à une écriture d’IA. Cela ne veut pas dire que ce pourcentage exact du texte est de l’IA. Les surlignages pointent les phrases ou paragraphes au style plus « IA » pour une relecture plus attentive."
+        },
+        "item-5": {
+          "question": "Quelle est la longueur minimale et quels formats de fichiers sont pris en charge ?",
+          "answer": "Nous recommandons au moins 30 à 50 mots pour des résultats plus stables du détecteur d’IA. Vous pouvez coller du texte ou téléverser du .docx et des formats texte brut comme .txt. Les fragments très courts sont moins fiables pour n’importe quel détecteur."
+        },
+        "item-6": {
+          "question": "Quelles langues le détecteur d’IA prend-il en charge pour le moment ?",
+          "answer": "Le détecteur d’IA est actuellement optimisé pour l’espagnol et l’anglais. Nous ajouterons d’autres langues lorsque nous pourrons garantir une qualité de détection raisonnable."
+        },
+        "item-7": {
+          "question": "Existe-t-il une offre gratuite pour le détecteur d’IA ? Quelles sont les limites ?",
+          "answer": "Oui. Vous pouvez utiliser le détecteur d’IA gratuitement avec un nombre limité de vérifications. Pour analyser davantage de textes ou débloquer des fonctionnalités avancées, nos offres payantes augmentent les limites."
+        },
+        "item-8": {
+          "question": "Que deviennent mes textes ? Les stockez-vous ou entraînez-vous des modèles avec ?",
+          "answer": "Nous ne stockons pas vos textes de façon permanente et nous ne les utilisons pas pour entraîner nos modèles ni des modèles tiers. Nous traitons uniquement le contenu pour générer le rapport du détecteur d’IA, et nous ne le partageons pas avec d’autres outils."
+        },
+        "item-9": {
+          "question": "Le détecteur d’IA fonctionne-t-il avec des textes mixtes ou paraphrasés ?",
+          "answer": "Oui. Le détecteur d’IA peut analyser des textes contenant des parties humaines et IA, ou des brouillons paraphrasés. Le résultat reflète le style global : plus vous éditez et personnalisez, plus vous vous éloignez des schémas typiques de l’IA."
+        },
+        "item-10": {
+          "question": "Et si je suis certain que mon texte est original mais que le détecteur d’IA le signale comme IA ?",
+          "answer": "Rappelez-vous que le détecteur d’IA donne une estimation, pas un verdict juridique. Conservez brouillons, notes et historique d’édition comme preuve de votre processus. Utilisez le rapport comme point de départ pour échanger avec enseignants, clients ou relecteurs, pas comme substitut au jugement humain."
+        }
+      }
+    },
+    "relatedTools": {
+      "title": "Pas seulement un détecteur d’IA : d’autres outils pour vos textes",
+      "subtitle": "Combinez le détecteur d’IA avec le détecteur de plagiat, comparer deux textes et le compteur de mots.",
+      "description": "Découvrez la boîte à outils VeriIA conçue pour améliorer la qualité, la crédibilité et l’originalité autour de votre workflow de détecteur d’IA.",
+      "tools": {
+        "plagiarism": {
+          "title": "Détecteur de plagiat",
+          "description": "Analysez le web et des sources académiques afin que votre texte final soit original, avant ou après l’avoir passé dans le détecteur d’IA."
+        },
+        "summarizer": {
+          "title": "Comparer deux textes",
+          "description": "Ajoutez deux versions pour voir exactement ce qui a changé après vos modifications basées sur le rapport du détecteur d’IA."
+        },
+        "humanizer": {
+          "title": "Compteur de mots",
+          "description": "Comptez mots et caractères pour respecter des consignes, appels ou limites de plateforme une fois que le style et l’originalité vous conviennent."
+        }
+      },
+      "tryNow": "Essayer maintenant",
+      "exploreAll": "Explorer tous les outils"
+    },
+    "aiCapabilities": {
+      "title": "Capacités IA avancées",
+      "subtitle": "Propulsé par une IA de pointe",
+      "description": "Notre technologie utilise des algorithmes de pointe pour analyser et détecter les contenus générés par IA avec une précision solide et réellement utile.",
+      "capability-1": "Analyse sémantique approfondie",
+      "capability-2": "Traitement ultra-rapide",
+      "capability-3": "Apprentissage continu",
+      "capability-4": "Support multilingue"
+    }
+  },
+  "CookieBanner": {
+    "title": "Nous utilisons des cookies",
+    "description": "Nous utilisons des cookies essentiels pour faire fonctionner le site, et des cookies d’analyse (GA4, Clarity, Plausible) si vous y consentez.",
+    "acceptAll": "Tout accepter",
+    "acceptNecessary": "Essentiels uniquement",
+    "manage": "Préférences",
+    "manageTitle": "Gérer vos préférences",
+    "save": "Enregistrer la sélection",
+    "sectionNecessary": {
+      "title": "Essentiels",
+      "desc": "Nécessaires à la session, à la langue et à la sécurité."
+    },
+    "sectionAnalytics": {
+      "title": "Analyse",
+      "desc": "Nous aide à comprendre l’usage et à améliorer le service (GA4, Clarity, Plausible)."
+    },
+    "sectionMarketing": {
+      "title": "Marketing",
+      "desc": "Non utilisé pour le moment. Si nous ajoutons des publicités (ex. AdSense), nous demanderons d’abord votre consentement."
+    }
+  },
+  "ApaGeneratorPage": {
+    "metadata": {
+      "title": "Générateur de sources APA – Références APA 7 gratuites",
+      "description": "Utilisez ce générateur de sources APA gratuit pour créer des références APA 7 et des citations dans le texte en quelques secondes, sans inscription, sans limites, et sans stockage de données."
+    },
+    "hero": {
+      "badge": "Gratuit · APA 7e",
+      "title": "Générateur de sources APA – Outil APA 7 gratuit",
+      "subtitle": "Avec ce générateur de sources APA, collez un DOI/ISBN/URL ou saisissez les informations de la source, puis obtenez des références APA 7 et des citations dans le texte prêtes à copier-coller.",
+      "searchPlaceholder": "Collez un DOI, un ISBN ou une URL (remplissage auto quand possible)",
+      "searchCta": "Citer",
+      "styleLabel": "Style de citation",
+      "styles": {
+        "apa": "APA 7",
+        "abnt": "ABNT"
+      },
+      "manualLink": "Citer manuellement",
+      "manualLabel": "Ou remplir manuellement"
+    },
+    "form": {
+      "title": "Renseignez les informations de votre source",
+      "description": "Ce générateur de sources APA est gratuit et ne nécessite aucune inscription. Nous ne stockons pas votre contenu et nous n’utilisons aucun crédit.",
+      "sourceType": "Type de source",
+      "types": {
+        "book": "Livre",
+        "journal": "Article de revue",
+        "website": "Page web"
+      },
+      "fields": {
+        "authors": "Auteurs",
+        "year": "Année",
+        "subtitle": "Sous-titre",
+        "edition": "Édition",
+        "city": "Ville",
+        "month": "Mois",
+        "title": "Titre",
+        "publisher": "Éditeur",
+        "journal": "Revue",
+        "volume": "Volume",
+        "issue": "Numéro",
+        "pages": "Pages",
+        "doi": "DOI",
+        "url": "URL",
+        "site": "Site",
+        "accessDate": "Date d’accès"
+      },
+      "placeholders": {
+        "authors": "Nom, Prénom ; Nom, Prénom",
+        "year": "2024",
+        "subtitle": "Fondements et pratique",
+        "edition": "2e éd.",
+        "city": "New York",
+        "month": "Janv.",
+        "title": "Titre de l’ouvrage",
+        "publisher": "Éditeur",
+        "journal": "Nom de la revue",
+        "volume": "12",
+        "issue": "3",
+        "pages": "123–145",
+        "doi": "10.0000/abcd.1234",
+        "url": "https://example.com/article",
+        "site": "Nom du site",
+        "accessDate": "12 mars 2024"
+      },
+      "hints": {
+        "authors": "Séparez les auteurs par des retours à la ligne ou des points-virgules. Max. 20 avant et al."
+      },
+      "clear": "Effacer",
+      "generate": "Générer la citation",
+      "copied": "{target} copié",
+      "copyError": "Impossible de copier",
+      "emptyWarning": "Ajoutez au moins un titre ou un auteur pour générer.",
+      "generated": "Citation générée"
+    },
+    "result": {
+      "title": "Référence APA",
+      "subtitle": "Prête à coller dans votre liste de références",
+      "inText": "Citation dans le texte",
+      "copyReference": "Copier la référence",
+      "copyInText": "Copier la citation dans le texte",
+      "empty": "Votre référence APA apparaîtra ici"
+    },
+    "cta": {
+      "plagiarism": "Vérifier le plagiat",
+      "detector": "Détecter l’IA",
+      "compare": "Comparer des textes"
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Comment fonctionne le générateur de sources APA",
+        "subtitle": "Créez des références APA et des citations dans le texte avec le générateur de sources APA en trois étapes rapides.",
+        "steps": {
+          "step-1": {
+            "label": "Étape 1",
+            "title": "Choisissez le type de source",
+            "description": "Sélectionnez livre, article de revue ou page web pour que le générateur de sources APA affiche uniquement les champs nécessaires et se prépare à rechercher un DOI/ISBN/URL si vous en ajoutez un.",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/apa-generator/step1.webp",
+            "items": [
+              {
+                "title": "Livre / Article / Web",
+                "description": "Sélectionnez le type de source : le formulaire s’adapte et masque les champs non pertinents."
+              },
+              {
+                "title": "Champs minimum requis",
+                "description": "Nous indiquons les champs essentiels à remplir pour générer une citation APA valide."
+              },
+              {
+                "title": "Format APA 7",
+                "description": "Le générateur de sources APA construit la référence selon la 7e édition du style APA."
+              }
+            ],
+            "imageAlt": "Étape 1"
+          },
+          "step-2": {
+            "label": "Étape 2",
+            "title": "Complétez les informations",
+            "description": "Saisissez les auteurs, l’année et le titre, puis ajoutez les pages, la revue, l’éditeur, le DOI ou l’URL. Si vous collez un DOI, un ISBN ou une URL et que des données existent, le générateur de sources APA pré-remplit les champs : vous n’avez plus qu’à compléter ce qui manque.",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/apa-generator/step2.webp",
+            "items": [
+              {
+                "title": "Plusieurs auteurs et et al.",
+                "description": "Ajoutez plusieurs auteurs séparés par des retours à la ligne ou des points-virgules ; le générateur de sources APA applique et al. si nécessaire."
+              },
+              {
+                "title": "Année ou sans date",
+                "description": "Indiquez l’année de publication ou utilisez « s.d. » pour les sources sans date."
+              },
+              {
+                "title": "Titres en casse phrase",
+                "description": "Les titres sont formatés selon la casse phrase recommandée par l’APA 7 pour les livres, articles et pages web."
+              }
+            ],
+            "imageAlt": "Étape 2"
+          },
+          "step-3": {
+            "label": "Étape 3",
+            "title": "Générez et copiez",
+            "description": "Cliquez sur « Générer la citation » pour afficher la référence APA et la citation dans le texte. Copiez l’une ou l’autre en un clic en conservant la mise en forme APA 7.",
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/howitworks/apa-generator/step3.webp",
+            "items": [
+              {
+                "title": "Entrée pour la liste de références",
+                "description": "Affichez la référence APA complète, prête pour votre bibliographie ou liste de références."
+              },
+              {
+                "title": "Citation dans le texte",
+                "description": "Obtenez la citation dans le texte au format auteur–année à coller directement dans votre document."
+              },
+              {
+                "title": "Boutons de copie",
+                "description": "Utilisez les boutons de copie pour récupérer la référence ou la citation dans le texte sans perdre la mise en forme."
+              }
+            ],
+            "imageAlt": "Étape 3"
+          }
+        },
+        "description": "Le générateur de sources APA réunit saisie manuelle et recherche DOI/ISBN/URL au même endroit, pour ne plus vous soucier du format APA à chaque citation."
+      },
+      "useCases": {
+        "title": "Cas d’usage du générateur de sources APA",
+        "subtitle": "Conçu pour le vrai travail académique.",
+        "description": "Utilisez notre générateur de sources APA dès que vous avez besoin de citations et références APA 7 cohérentes dans vos écrits universitaires.",
+        "items": {
+          "item-1": {
+            "title": "Thèses, mémoires et projets de fin d’études",
+            "description": "Gérez de longues bibliographies avec des dizaines de sources et gardez un format APA cohérent d’un chapitre à l’autre grâce au générateur de sources APA."
+          },
+          "item-2": {
+            "title": "Articles et manuscrits scientifiques",
+            "description": "Créez des références APA pour des articles de revue avec volume, numéro, pages et DOI, prêtes à soumettre, directement depuis le générateur de sources APA."
+          },
+          "item-3": {
+            "title": "Essais et devoirs",
+            "description": "Ajoutez rapidement des citations APA dans le texte et des références à des rapports courts, essais et projets de cours sans mémoriser le guide de style."
+          },
+          "item-4": {
+            "title": "Enseignement et supports de cours",
+            "description": "En tant qu’enseignant ou tuteur, préparez des listes de lecture, polycopiés et diapositives avec des citations APA propres générées via le générateur de sources APA."
+          },
+          "item-5": {
+            "title": "Présentations et posters académiques",
+            "description": "Ajoutez des références APA claires à vos diapositives et posters : générez-les d’abord dans le générateur de sources APA, puis collez-les dans votre design."
+          },
+          "item-6": {
+            "title": "Travaux de groupe et listes de lecture partagées",
+            "description": "Coordonnez les projets de groupe ou de recherche pour que tout le monde utilise le même générateur de sources APA et suive un style APA cohérent."
+          }
+        }
+      },
+      "related": {
+        "items": {
+          "plagiarism": {
+            "title": "Détecteur de plagiat",
+            "description": "Analysez vos écrits académiques pour repérer les similarités avant de soumettre."
+          },
+          "detector": {
+            "title": "Détecteur de contenu IA",
+            "description": "Vérifiez si un texte contient probablement du contenu généré par IA et décidez s’il faut l’éditer."
+          },
+          "compare": {
+            "title": "Comparer deux textes",
+            "description": "Comparez deux versions d’un texte académique et voyez exactement ce qui a changé."
+          }
+        },
+        "title": "Plus d’outils académiques",
+        "subtitle": "Complétez votre workflow avec d’autres outils",
+        "description": "En plus du générateur de sources APA, ce site propose d’autres outils académiques : un détecteur de plagiat, un détecteur d’IA et un outil pour comparer deux textes afin de relire votre travail avant soumission.",
+        "tryNow": "Essayer maintenant",
+        "tools": {
+          "plagiarism": {
+            "title": "Détecteur de plagiat",
+            "description": "Vérifiez les similarités avant de soumettre."
+          },
+          "detector": {
+            "title": "Détecteur de contenu IA",
+            "description": "Estimez la probabilité d’IA en quelques secondes."
+          },
+          "compare": {
+            "title": "Comparer deux textes",
+            "description": "Repérez les différences entre versions."
+          }
+        }
+      },
+      "faq": {
+        "title": "Questions fréquentes sur le générateur de sources APA",
+        "subtitle": "APA 7 expliqué simplement.",
+        "items": {
+          "item-1": {
+            "question": "Qu’est-ce que ce générateur de sources APA et à quoi sert-il ?",
+            "answer": "Le générateur de sources APA est un outil qui vous aide à créer des références APA 7 et des citations dans le texte sans mémoriser les règles. Collez un DOI/ISBN/URL ou saisissez les informations de base, et le générateur de sources APA construit pour vous la référence complète et la citation dans le texte."
+          },
+          "item-2": {
+            "question": "Le générateur de sources APA est-il gratuit ? Ai-je besoin d’un compte ?",
+            "answer": "Oui. Ce générateur de sources APA est entièrement gratuit. Pas besoin de s’inscrire, de se connecter ni d’ajouter un moyen de paiement : ouvrez la page, saisissez vos sources et générez autant de citations APA que nécessaire."
+          },
+          "item-3": {
+            "question": "Quelle version du style APA l’outil utilise-t-il ?",
+            "answer": "Le générateur de sources APA utilise la 7e édition du manuel APA, qui est le standard actuel pour la plupart des universités et revues. Si votre établissement impose de petits ajustements, vous pouvez utiliser la citation générée comme base puis la modifier."
+          },
+          "item-4": {
+            "question": "Quels types de sources puis-je citer avec le générateur de sources APA ?",
+            "answer": "Pour le moment, vous pouvez citer des livres, des articles de revue et des pages web ou articles en ligne. Ce sont les types de sources dont la plupart des étudiants et chercheurs ont besoin, et le générateur de sources APA se concentre sur leur exactitude."
+          },
+          "item-5": {
+            "question": "Le générateur de sources APA crée-t-il à la fois les références et les citations dans le texte ?",
+            "answer": "Oui. Pour chaque source, le générateur de sources APA affiche une référence complète pour la bibliographie et une citation dans le texte au format auteur–année."
+          },
+          "item-6": {
+            "question": "Quelle est la précision des citations ? Dois-je quand même les vérifier ?",
+            "answer": "Le générateur de sources APA vise à suivre l’APA 7 au plus près, que vous saisissiez les sources à la main ou via DOI/ISBN/URL. Cela dit, il est toujours recommandé de vérifier les noms, dates et règles spécifiques exigées par votre département ou revue."
+          },
+          "item-7": {
+            "question": "Que se passe-t-il si je colle un DOI/ISBN/URL et qu’aucune donnée n’est trouvée ?",
+            "answer": "Si la recherche ne renvoie aucune donnée, vous pouvez passer en mode manuel et renseigner vous-même les champs essentiels. Le générateur de sources APA gérera toujours la mise en forme APA à partir de ce que vous avez saisi."
+          },
+          "item-8": {
+            "question": "Comment le générateur de sources APA gère-t-il l’absence d’auteur, l’absence de date ou un grand nombre d’auteurs ?",
+            "answer": "Le générateur de sources APA suit les règles APA 7 : s’il n’y a pas d’auteur, il utilise le titre à la place de l’auteur ; s’il n’y a pas de date, il utilise « s.d. » ; et pour de nombreux auteurs, il prend en charge jusqu’à 20 et applique et al. dans les citations quand nécessaire."
+          },
+          "item-9": {
+            "question": "Le générateur de sources APA stocke-t-il mes textes ou mes sources ?",
+            "answer": "Non. Le générateur de sources APA ne stocke ni le texte collé ni les sources saisies. Les données sont traitées uniquement pour générer la citation et ne sont pas conservées."
+          },
+          "item-10": {
+            "question": "Puis-je utiliser ce générateur de sources APA pour une thèse ou des travaux universitaires ?",
+            "answer": "Oui. Le générateur de sources APA est conçu pour le vrai travail académique : essais, rapports, thèses, mémoires et soumissions à des revues. Assurez-vous simplement que les informations de la source sont exactes et vérifiez si votre département impose des règles supplémentaires."
+          }
+        }
+      }
+    },
+    "lookup": {
+      "empty": "Saisissez un DOI, un ISBN ou une URL",
+      "notFound": "Aucune donnée trouvée pour cette entrée — remplissez les champs manuellement.",
+      "filled": "Nous avons trouvé des données pour votre source. Vérifiez les champs puis générez votre citation.",
+      "error": "Échec de la recherche. Veuillez réessayer.",
+      "normalized": "Les auteurs ont été normalisés en initiales et noms de famille"
+    }
+  },
+  "TextSummarizerPage": {
+    "metadata": {
+      "title": "Résumeur IA – Résumer un texte gratuitement en quelques secondes | VeriIA",
+      "description": "Résumeur IA pour articles, e-mails et documents longs. Collez un texte, importez un fichier ou ajoutez une URL et obtenez un résumé clair en quelques secondes."
+    },
+    "hero": {
+      "badge": "Nouveau",
+      "tagline": "Résumeur IA pour vos lectures quotidiennes",
+      "title": "Un résumeur IA rapide et clair",
+      "subtitle": "Collez votre contenu, ajustez la longueur et laissez notre résumeur IA produire un résumé propre, sans blabla ni jargon.",
+      "lengthLabel": "Longueur du résumé",
+      "lengthShort": "Court",
+      "lengthLong": "Long",
+      "cta": "Résumer un texte",
+      "loading": "Résumé en cours...",
+      "done": "Résumé prêt",
+      "sampleText": "L’éducation numérique change la façon dont les étudiants accèdent aux connaissances. Les plateformes adaptatives personnalisent l’apprentissage, tandis que l’analytique aide à détecter les lacunes et à fournir un soutien au bon moment. Cependant, des défis comme la fracture de connectivité et la formation des enseignants aux compétences numériques persistent.",
+      "sampleLoaded": "Texte d’exemple ajouté",
+      "pasted": "Collé depuis le presse-papiers",
+      "upload": "Importer un fichier",
+      "uploading": "Importation...",
+      "addUrl": "Ajouter une URL",
+      "paste": "Coller un texte",
+      "urlLabel": "Résumer une URL",
+      "urlPlaceholder": "https://example.com/article",
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "placeholder": "Commencez à taper ou collez votre contenu ici...",
+      "free": "Essayer gratuitement"
+    },
+    "input": {
+      "title": "Entrée",
+      "subtitle": "Collez un texte, ajoutez une URL ou importez un fichier texte pour résumer un texte avec le résumeur IA en quelques secondes.",
+      "sample": "Texte d’exemple",
+      "addUrl": "Ajouter une URL",
+      "paste": "Coller un texte",
+      "upload": "Importer un fichier",
+      "uploading": "Importation...",
+      "uploaded": "Fichier \"{name}\" prêt à être résumé",
+      "urlLabel": "URL",
+      "urlPlaceholder": "https://example.com/article",
+      "apply": "Appliquer",
+      "clear": "Effacer",
+      "placeholder": "Commencez à taper ou collez votre contenu ici...",
+      "stats": {
+        "words": "{value} mots",
+        "chars": "{value} caractères"
+      },
+      "free": "Gratuit pour commencer"
+    },
+    "output": {
+      "title": "Résumé",
+      "subtitle": "Un résumé concis généré par le résumeur IA à partir de votre texte.",
+      "empty": "Votre résumé apparaîtra ici une fois généré.",
+      "hint": "Faites défiler pour lire le résumé complet",
+      "copy": "Copier le résumé",
+      "stats": {
+        "sentences": "Phrases calculées automatiquement",
+        "words": "Nombre de mots après génération"
+      }
+    },
+    "errors": {
+      "missing": "Ajoutez un texte, une URL ou un fichier à résumer.",
+      "generic": "Le résumé n’a pas pu être généré. Veuillez réessayer.",
+      "upload": "L’importation a échoué. Essayez un autre fichier.",
+      "clipboard": "L’accès au presse-papiers a été bloqué.",
+      "emptyClipboard": "Le presse-papiers est vide."
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Comment fonctionne le résumeur IA",
+        "subtitle": "Collez votre contenu, réglez la longueur et laissez le résumeur IA produire un texte clair en quelques secondes.",
+        "steps": {
+          "step-1": {
+            "label": "Étape 1 · Ajoutez votre texte, fichier ou URL",
+            "imageAlt": "Utilisateur collant un texte ou une URL dans le résumeur IA",
+            "items": [
+              {
+                "title": "Texte, URL ou fichier",
+                "description": "Collez votre texte, ajoutez un lien ou importez un fichier texte. Le résumeur IA convertit tout en texte brut avant de résumer."
+              },
+              {
+                "title": "Vérification rapide",
+                "description": "Nous signalons immédiatement le contenu manquant ou les liens invalides pour que vous puissiez corriger sans perdre de temps."
+              },
+              {
+                "title": "Confidentialité",
+                "description": "Nous ne stockons pas vos textes ni vos résumés et nous n’en extrayons pas de données personnelles. Votre contenu est traité temporairement uniquement pour générer le résultat, puis il est supprimé."
+              }
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step1.webp"
+          },
+          "step-2": {
+            "label": "Étape 2 · Ajustez la longueur du résumé",
+            "imageAlt": "Curseur de longueur du résumeur IA",
+            "items": [
+              {
+                "title": "Curseur 0–100",
+                "description": "Choisissez un résumé plus court ou plus détaillé en déplaçant un seul contrôle visuel."
+              },
+              {
+                "title": "Détection automatique de la langue",
+                "description": "Nous détectons automatiquement la langue d’entrée et renvoyons le résumé dans la même langue, sans configuration."
+              },
+              {
+                "title": "Les idées clés d’abord",
+                "description": "Le résumeur IA se concentre sur les idées, arguments et points de données essentiels pour préserver le sens du texte original avec moins de mots."
+              }
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step2.webp"
+          },
+          "step-3": {
+            "label": "Étape 3 · Copiez et utilisez votre résumé",
+            "imageAlt": "Résumé généré avec bouton de copie",
+            "items": [
+              {
+                "title": "Bloc défilable",
+                "description": "Lisez le résumé complet dans un conteneur défilable lorsque le texte est long."
+              },
+              {
+                "title": "Copie en un clic",
+                "description": "Utilisez le bouton de copie pour coller le résumé partout : e-mails, notes, documents ou chats."
+              },
+              {
+                "title": "Ajustez et relancez",
+                "description": "Modifiez la longueur et relancez le résumeur IA autant de fois que nécessaire jusqu’à obtenir le format souhaité."
+              }
+            ],
+            "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step3.webp"
+          }
+        }
+      },
+      "useCases": {
+        "title": "Là où le résumeur IA aide le plus",
+        "subtitle": "Briefs, e-mails et articles : gardez l’essentiel en moins de temps.",
+        "description": "Utilisez le résumeur IA comme filtre rapide quand vous ne pouvez pas tout lire, mais devez comprendre l’important et le partager.",
+        "items": {
+          "item-1": {
+            "title": "Études, notes et résumés de cours",
+            "description": "Transformez des chapitres, des notes désordonnées ou des lectures obligatoires en résumés clairs pour réviser. Vous pouvez coller des extraits de livre, vos notes, ou du texte extrait d’un PDF, et obtenir un plan plus facile à relire avant un examen."
+          },
+          "item-2": {
+            "title": "Recherche, rapports et documents techniques",
+            "description": "Pour des rapports, études ou documentations longues, le résumeur IA vous aide à capter objectifs, méthodes et conclusions. Vous pouvez ensuite partager le résumé à votre équipe pour décider de ce qui mérite une lecture approfondie."
+          },
+          "item-3": {
+            "title": "Briefs, propositions et docs de projet",
+            "description": "Résumez des briefs créatifs, des propositions commerciales ou des documents de projet en quelques paragraphes actionnables. Idéal pour préparer une réunion, une présentation ou un message d’avancement sans coller le document complet."
+          },
+          "item-4": {
+            "title": "E-mails longs et fils de discussion",
+            "description": "Copiez un e-mail très long ou un fil complet et laissez le résumeur IA extraire décisions, dates et tâches convenues. Cela facilite une réponse claire ou l’enregistrement des essentiels dans votre gestionnaire de tâches."
+          },
+          "item-5": {
+            "title": "Support client et aide interne",
+            "description": "Condensez des tickets, messages clients ou transcriptions de chat en points clés : ce qui s’est passé, ce qui a été tenté, et la suite. Ce résumé réduit le temps de lecture et facilite le passage de relais entre agents sans perdre le contexte."
+          },
+          "item-6": {
+            "title": "Lecture quotidienne, newsletters et contenu web",
+            "description": "Collez des articles, newsletters ou longs posts et générez un TL;DR à conserver ou partager. Utile quand vous ne voulez pas perdre un contenu intéressant, même si vous n’avez pas le temps de tout lire en détail."
+          }
+        }
+      },
+      "related": {
+        "title": "Associez le résumeur IA à d’autres outils VeriIA",
+        "subtitle": "Couvrez tout votre workflow : résumer un texte + contrôles qualité.",
+        "tryNow": "Essayer maintenant",
+        "items": {
+          "detector": {
+            "title": "Détecteur d’IA",
+            "description": "Vérifiez si un texte semble généré par IA avant de l’envoyer à des clients, enseignants ou managers. Utilisez-le après avoir résumé un texte pour vérifier que le résultat reste naturel."
+          },
+          "plagiarism": {
+            "title": "Détecteur de plagiat",
+            "description": "Vérifiez l’originalité de devoirs, essais ou rapports après les avoir résumés. Idéal quand vous devez montrer que votre travail est le vôtre et non copié d’autres sources."
+          },
+          "counter": {
+            "title": "Générateur de sources APA",
+            "description": "Si vous résumez des articles académiques, créez instantanément des citations et références au format APA pour votre bibliographie ou devoir final."
+          }
+        }
+      },
+      "faq": {
+        "title": "Questions fréquentes sur le résumeur IA",
+        "subtitle": "Doutes courants avant de confier vos documents à un outil pour résumer un texte.",
+        "items": {
+          "item-1": {
+            "question": "Quels types de contenu puis-je résumer avec le résumeur IA ?",
+            "answer": "Vous pouvez coller du texte, ajouter une URL ou importer des fichiers texte (par exemple .txt, markdown ou JSON). Le résumeur IA convertit tout en texte brut avant de générer le résumé. Pour les PDF ou images, il faut d’abord extraire le texte ou utiliser une page web où le contenu est accessible."
+          },
+          "item-2": {
+            "question": "Quelle quantité de texte puis-je coller ou importer à la fois ?",
+            "answer": "Chaque résumé a une limite de caractères pour garder une bonne qualité et un temps de réponse rapide. Si vous collez un texte très long, le résumeur IA vous prévient avant de traiter pour que vous puissiez le raccourcir ou le découper. En général, la limite suffit pour des articles, de longs e-mails et des chapitres de taille raisonnable."
+          },
+          "item-3": {
+            "question": "Le résumeur IA conserve-t-il la langue et le ton d’origine ?",
+            "answer": "Oui. Nous détectons automatiquement la langue d’entrée et renvoyons le résumé dans cette même langue. Le résumeur IA vise à préserver le ton, l’intention et les nuances principales, tout en réduisant surtout la longueur et les répétitions."
+          },
+          "item-4": {
+            "question": "Le résumeur IA peut-il inventer ou modifier des informations ?",
+            "answer": "L’objectif du résumeur IA est de condenser ce qui est déjà présent, pas d’inventer de nouveaux faits. Cela dit, aucun modèle n’est parfait : il peut simplifier excessivement certaines idées ou manquer une nuance. Pour des textes sensibles (juridique, médical, contrats, etc.), nous recommandons de relire les passages clés de l’original avant de décider."
+          },
+          "item-5": {
+            "question": "Est-il sûr d’utiliser le résumeur IA avec des documents privés ou sensibles ?",
+            "answer": "Oui. Le résumeur IA traite votre contenu temporairement uniquement pour générer le résultat, puis le supprime. Nous ne stockons pas vos textes ou résumés, nous ne construisons pas d’historiques de lecture et nous n’utilisons pas vos documents pour entraîner nos modèles. Cela dit, si votre organisation a des règles strictes, vérifiez toujours ses politiques internes."
+          },
+          "item-6": {
+            "question": "Puis-je utiliser le résumeur IA pour un travail académique sans risque de plagiat ?",
+            "answer": "Un résumé repose toujours sur les idées de quelqu’un d’autre ; en contexte académique, vous devez citer la source originale. Le résumeur IA vous aide à comprendre et à condenser, mais ne remplace pas votre rédaction ni les règles de citation de votre établissement. Pour rester prudent, reformulez avec vos mots et ajoutez les références appropriées."
+          },
+          "item-7": {
+            "question": "Que se passe-t-il si j’essaie de résumer une URL derrière une connexion ou un paywall ?",
+            "answer": "Le résumeur IA doit pouvoir accéder au contenu de la page. Si l’URL est derrière une connexion, un paywall ou un environnement très restreint, l’outil ne pourra probablement pas la lire. Dans ce cas, l’option la plus fiable est de copier le texte manuellement et de le coller directement."
+          },
+          "item-8": {
+            "question": "Comment contrôler la longueur et le niveau de détail du résumé ?",
+            "answer": "Ajustez la longueur avec le curseur de court à long avant de lancer le résumeur IA. Si le résultat est trop superficiel ou trop dense, changez la position du curseur et résumez à nouveau jusqu’à obtenir le bon niveau de détail."
+          },
+          "item-9": {
+            "question": "Le résumeur IA est-il gratuit ? Comment fonctionnent les crédits ?",
+            "answer": "Vous pouvez utiliser le résumeur IA gratuitement via un système de crédits simple : chaque caractère d’entrée consomme 0,001 crédit. Sans compte, vous disposez de 200 crédits, et en créant un compte vous obtenez 400 crédits supplémentaires. En usage normal, cela permet de générer de nombreux résumés sans payer ni ajouter de carte."
+          },
+          "item-10": {
+            "question": "Quels autres outils VeriIA vont bien avec le résumeur IA ?",
+            "answer": "Après avoir résumé un texte, vous pouvez utiliser d’autres outils VeriIA selon votre cas : le Détecteur d’IA pour vérifier si un texte semble trop généré, le Détecteur de plagiat pour contrôler l’originalité de travaux longs, et le Générateur de sources APA pour créer des références lorsque vous résumez des articles académiques."
+          }
+        }
+      }
+    },
+    "sidebar": {
+      "detector": {
+        "title": "Détecteur d’IA"
+      },
+      "plagiarism": {
+        "title": "Plagiat"
+      },
+      "humanizer": {
+        "title": "Humaniser"
+      },
+      "summarizer": {
+        "title": "Résumer"
+      },
+      "compare": {
+        "title": "Comparer"
+      },
+      "counter": {
+        "title": "Compteur de mots"
+      },
+      "apa": {
+        "title": "APA"
+      },
+      "pricing": {
+        "title": "Tarifs"
+      },
+      "trigger": "Outils"
+    }
+  },
+  "HumanizerPage": {
+    "metadata": {
+      "title": "Humaniser un texte IA – Rendre un texte IA plus humain | VeriIA",
+      "description": "Utilisez notre outil pour humaniser un texte IA et réécrire un contenu généré par IA afin qu’il sonne naturel. Collez votre contenu ou importez un fichier et obtenez une version humanisée, prête à partager ou à vérifier avec des détecteurs."
+    },
+    "hero": {
+      "badge": "Outil VeriIA",
+      "title": "Humaniser un texte IA pour qu’il sonne humain",
+      "subtitle": "Transformez des brouillons générés par IA en un texte qui se lit comme écrit par une vraie personne : notre outil pour humaniser un texte IA conserve les idées, mais avec un ton naturel.",
+      "cta": "Humaniser un texte maintenant",
+      "secondaryCta": "Détecter l’IA dans mon texte",
+      "loading": "Humanisation de votre texte...",
+      "done": "Texte humanisé prêt",
+      "pasted": "Texte collé"
+    },
+    "input": {
+      "title": "Entrée",
+      "subtitle": "Collez votre texte ou importez un fichier pour humaniser un texte IA avec notre outil.",
+      "paste": "Coller",
+      "upload": "Importer un fichier",
+      "uploading": "Importation...",
+      "uploaded": "{name} prêt",
+      "placeholder": "Collez ou tapez votre texte ici...",
+      "stats": {
+        "words": "{value} mots",
+        "chars": "{value} caractères"
+      },
+      "hint": "L’outil pour humaniser un texte IA fonctionne mieux avec un texte clair et sans mise en forme trop étrange."
+    },
+    "output": {
+      "title": "Sortie humanisée",
+      "subtitle": "Votre texte humanisé apparaîtra ici.",
+      "empty": "Lancez l’outil pour humaniser un texte IA pour voir le résultat.",
+      "hint": "Vous pouvez copier le résultat.",
+      "copy": "Copier",
+      "copied": "Copié"
+    },
+    "errors": {
+      "clipboard": "Impossible de lire le presse-papiers.",
+      "upload": "Impossible d’importer le fichier.",
+      "missing": "Ajoutez un texte ou un fichier pour continuer avec l’outil pour humaniser un texte IA.",
+      "generic": "Nous n’avons pas pu humaniser votre texte. Veuillez réessayer."
+    },
+    "modals": {
+      "upgrade": {
+        "title": "Besoin de plus de crédits ?",
+        "subtitle": "Passez à une offre supérieure pour continuer à humaniser un texte IA et augmenter vos limites."
+      },
+      "guest": {
+        "title": "Créer un compte",
+        "subtitle": "Obtenez plus de crédits et débloquez l’import de fichiers pour humaniser un texte IA.",
+        "body": "Connectez-vous pour continuer à humaniser un texte IA et importer des fichiers avec l’outil.",
+        "cta": "Se connecter"
+      }
+    },
+    "blocks": {
+      "howItWorks": {
+        "title": "Comment humaniser un texte IA",
+        "subtitle": "Du collage du texte à la copie du résultat, en trois étapes simples pour humaniser un texte IA.",
+        "steps": {
+          "step-1": {
+            "label": "Étape 1 · Ajoutez votre contenu",
+            "imageAlt": "Personne collant du texte dans l’outil pour humaniser un texte IA",
+            "items": [
+              {
+                "title": "Collez votre texte ou importez un fichier",
+                "description": "Commencez par coller votre texte ou importer un fichier texte compatible. Le résultat est meilleur si le contenu est déjà propre et sans mise en forme étrange, pour que l’outil se concentre sur le ton."
+              },
+              {
+                "title": "Choisissez ce que vous voulez améliorer",
+                "description": "Vous pouvez humaniser un texte IA en entier, ou commencer par les passages qui sonnent le plus “IA”, puis affiner section par section."
+              },
+              {
+                "title": "Vérifiez que tout est correct",
+                "description": "Avant d’humaniser, assurez-vous qu’il n’y a pas d’informations sensibles que vous ne souhaitez pas traiter, et que la langue est bien celle attendue."
+              }
+            ]
+          },
+          "step-2": {
+            "label": "Étape 2 · Nous humanisons le texte",
+            "imageAlt": "Processus d’humanisation en cours",
+            "items": [
+              {
+                "title": "Nous ajustons le ton et le rythme",
+                "description": "Pour humaniser un texte IA, nous réécrivons les phrases afin que le texte s’enchaîne comme un texte humain, en évitant les blocs répétitifs et les tournures trop génériques."
+              },
+              {
+                "title": "Nous réduisons les schémas typiques de l’IA",
+                "description": "Nous atténuons les structures trop “IA”, tout en gardant vos idées, exemples et références, en changeant surtout la manière de les exprimer."
+              },
+              {
+                "title": "Aucun réglage complexe",
+                "description": "Pas besoin d’ajuster des paramètres avancés : cliquez simplement sur « Humaniser un texte maintenant » et attendez l’apparition de la nouvelle version."
+              }
+            ]
+          },
+          "step-3": {
+            "label": "Étape 3 · Relisez, copiez et continuez",
+            "imageAlt": "Résultat d’un texte humanisé",
+            "items": [
+              {
+                "title": "Vérifiez que cela sonne comme vous",
+                "description": "Le résultat est conçu pour se lire naturellement dans des blogs, e-mails ou rapports, sans signes évidents d’un texte entièrement écrit par IA."
+              },
+              {
+                "title": "Copiez la version humanisée",
+                "description": "Une fois satisfait, copiez le texte en un clic et collez-le dans votre éditeur, plateforme de travail ou gestionnaire de tâches. Vous pouvez aussi le repasser dans un détecteur d’IA si vous voulez une vérification supplémentaire."
+              },
+              {
+                "title": "Connectez-le à d’autres outils",
+                "description": "Après avoir humanisé un texte IA, vous pouvez l’utiliser comme vous voulez : le copier, le télécharger si vous travaillez avec des documents, ou l’envoyer directement vers un autre outil VeriIA."
+              }
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Quand humaniser un texte IA",
+        "subtitle": "Faites lire vos brouillons “trop IA” comme s’ils avaient été écrits par une personne, sans repartir de zéro.",
+        "description": "Humaniser un texte IA est utile quand vous avez déjà un brouillon créé avec l’IA et que vous voulez garder les idées, mais changer le ton pour qu’il corresponde à votre voix, votre contexte ou les attentes de vos lecteurs.",
+        "items": {
+          "item-1": {
+            "title": "Essais et devoirs",
+            "description": "Prenez des paragraphes rédigés avec l’IA et humanisez-les pour que votre enseignant lise un texte plus proche de votre style, et moins robotique. Utilisez l’outil pour humaniser un texte IA comme soutien à votre écriture, pas pour rendre un travail qui n’est pas vraiment le vôtre."
+          },
+          "item-2": {
+            "title": "Livrables clients",
+            "description": "Peaufinez des propositions, rapports, présentations ou e-mails commencés avec l’IA afin qu’ils soient plus clairs, plus directs et plus professionnels avant envoi."
+          },
+          "item-3": {
+            "title": "Brouillons de blog et SEO",
+            "description": "Humanisez des articles écrits par IA pour les rendre plus naturels et agréables à lire, tout en conservant les mots-clés importants, afin d’éviter un rendu “template IA” copier-coller."
+          },
+          "item-4": {
+            "title": "Macros support et réponses",
+            "description": "Humanisez des messages de support trop standardisés, en gardant les faits et politiques exacts mais avec un ton plus empathique et moins mécanique."
+          },
+          "item-5": {
+            "title": "Texte produit et marketing",
+            "description": "Réécrivez des textes de landing pages, e-mails ou descriptions de fonctionnalités pour qu’ils soient plus conversationnels et faciles à comprendre."
+          },
+          "item-6": {
+            "title": "Paraphrase académique",
+            "description": "Paraphrasez en conservant le sens et les références : utile pour expliquer des idées complexes avec vos propres mots et éviter de répéter les mêmes schémas de phrases."
+          }
+        }
+      },
+      "related": {
+        "title": "Combinez avec d’autres outils VeriIA",
+        "subtitle": "Gérez l’IA, le plagiat et la clarté de vos textes au même endroit.",
+        "description": "Après avoir humanisé un texte IA, vous pouvez l’envoyer vers nos autres outils pour vérifier l’usage de l’IA, contrôler l’originalité et créer des résumés rapides et clairs.",
+        "tryNow": "Ouvrir l’outil",
+        "tools": {
+          "plagiarism": {
+            "title": "Détecteur de plagiat",
+            "description": "Vérifiez l’originalité de longs documents après les avoir humanisés et détectez d’éventuels recoupements avec d’autres sources avant soumission.",
+            "cta": "Ouvrir le détecteur de plagiat"
+          },
+          "summarizer": {
+            "title": "Résumeur de texte IA",
+            "description": "Créez des versions plus courtes de votre texte humanisé pour des briefs, résumés exécutifs ou e-mails rapides, sans perdre l’idée principale ni le ton naturel obtenu.",
+            "cta": "Ouvrir le résumeur"
+          },
+          "humanizer": {
+            "title": "Détecteur d’IA",
+            "description": "Analysez le texte humanisé et consultez l’estimation d’usage de l’IA, avec des segments surlignés et une lecture rapide du risque. Utile pour des textes sensibles (académiques ou communications officielles).",
+            "cta": "Ouvrir le détecteur d’IA"
+          }
+        }
+      },
+      "faq": {
+        "title": "Questions sur l’outil pour humaniser un texte IA",
+        "subtitle": "Ce que les gens demandent souvent avant d’utiliser un outil pour humaniser un texte IA.",
+        "items": {
+          "item-1": {
+            "question": "En quoi l’outil pour humaniser un texte IA de VeriIA est-il différent d’un simple paraphraseur ?",
+            "answer": "Beaucoup de paraphraseurs se contentent de remplacer des mots ou de réordonner des phrases pour que le texte ne ressemble pas exactement à l’original. L’outil de VeriIA pour humaniser un texte IA vise autre chose : reprendre des brouillons générés par IA et les réécrire avec un ton plus naturel, en changeant le rythme et en évitant des schémas très typiques de l’IA, tout en essayant de conserver l’intention globale et la structure."
+          },
+          "item-2": {
+            "question": "Stockez-vous mes textes ou les utilisez-vous pour entraîner des modèles chez VeriIA ?",
+            "answer": "Les textes envoyés à l’outil pour humaniser un texte IA sont traités pour générer le résultat puis supprimés. Nous ne les utilisons pas pour entraîner nos modèles ni pour créer des profils. Par bonne pratique, évitez toutefois de coller des informations extrêmement sensibles dans n’importe quel outil d’IA, y compris le nôtre."
+          },
+          "item-3": {
+            "question": "Utiliser un outil pour humaniser un texte IA, est-ce tricher ou plagier ?",
+            "answer": "Cela dépend du contexte et des règles à respecter. Dans de nombreux contextes professionnels, utiliser l’IA pour améliorer la clarté et le ton est aussi acceptable qu’un correcteur. Dans des contextes académiques où l’IA est interdite ou doit être déclarée, essayer de cacher l’usage d’un outil pour humaniser un texte IA peut être considéré comme malhonnête. En cas de doute, l’option la plus sûre est de lire la politique de votre établissement et d’être transparent sur les outils utilisés."
+          },
+          "item-4": {
+            "question": "Un texte humanisé passera-t-il toujours les détecteurs d’IA ?",
+            "answer": "Non. Aucun outil sérieux pour humaniser un texte IA ne peut garantir de “passer” tous les détecteurs dans toutes les situations. Les détecteurs s’appuient sur des schémas statistiques et peuvent parfois signaler du texte humain, ou manquer du texte IA. Humaniser aide à réduire certains signaux (répétitions, ton plat, structures clonées), mais il reste toujours un risque."
+          },
+          "item-5": {
+            "question": "Quel est le vrai bénéfice d’un outil pour humaniser un texte IA ?",
+            "answer": "Il aide surtout à :\n- Améliorer l’expérience de lecture, pour un texte plus naturel, varié et moins robotique.\n- Mieux coller à votre voix personnelle ou à votre marque, au lieu de ressembler à une sortie IA générique.\n- Réduire certains motifs que les détecteurs d’IA recherchent, sans promettre un résultat parfait.\n\nLa meilleure approche est d’utiliser l’outil pour humaniser un texte IA comme point de départ, puis de faire une relecture manuelle pour que le texte final soit réellement le vôtre."
+          },
+          "item-6": {
+            "question": "Quelle différence entre “humaniser un texte IA” et “le rendre indétectable” ?",
+            "answer": "Humaniser un texte IA vise la qualité de lecture : clarté, ton, rythme et fluidité. Le but est que le texte se lise comme écrit par une personne.\n\n“Le rendre indétectable” décrit souvent des outils qui promettent de contourner tous les détecteurs. En pratique, personne ne peut le garantir à chaque fois, et écrire uniquement pour tromper des détecteurs peut franchir des lignes éthiques ou enfreindre des règles, surtout en éducation. Notre priorité est la lisibilité et un usage responsable, pas des garanties absolues."
+          },
+          "item-7": {
+            "question": "L’outil pour humaniser un texte IA va-t-il changer le sens de mon texte ?",
+            "answer": "L’objectif est de conserver les idées principales, la logique et les références clés, tout en modifiant surtout la formulation. Malgré tout, toute réécriture peut légèrement déplacer l’accent ou la nuance.\n\nC’est pourquoi nous recommandons :\n- De relire le résultat complet, surtout pour les textes juridiques, techniques ou académiques.\n- De corriger tout détail qui ne correspond plus exactement à ce que vous voulez dire."
+          },
+          "item-8": {
+            "question": "Quels types de textes bénéficient le plus d’un outil pour humaniser un texte IA ?",
+            "answer": "Humaniser un texte IA est particulièrement utile pour :\n- Essais, devoirs et rapports d’abord rédigés avec l’IA.\n- Articles de blog, contenus SEO et newsletters trop génériques.\n- E-mails professionnels, propositions et documents clients.\n- Texte produit, pages de vente et messages support très templatisés.\n\nPour des textes très courts, l’édition manuelle peut être plus rapide ; pour des textes très longs, il est souvent préférable de les découper en sections."
+          },
+          "item-9": {
+            "question": "Comment utiliser un outil pour humaniser un texte IA de façon responsable en contexte académique ?",
+            "answer": "Quelques lignes directrices générales :\n- Utilisez-le pour améliorer l’écriture et la clarté, pas pour externaliser tout le travail.\n- Lisez la politique de votre école ou université sur l’usage des outils IA.\n- Si les règles exigent de la transparence, ajoutez une note indiquant que vous avez utilisé des outils IA en soutien.\n- Assurez-vous que les idées, l’approche et les conclusions sont réellement les vôtres, et citez toujours vos sources."
+          },
+          "item-10": {
+            "question": "Dans quelles langues puis-je humaniser un texte IA ?",
+            "answer": "Vous pouvez humaniser un texte IA dans différentes langues tant que le texte est correctement rédigé et a une structure claire. En général, plus vous soignez la relecture finale, meilleurs seront les résultats, surtout pour les contenus techniques ou spécialisés.\n\nL’outil aide pour le ton et la fluidité, mais ne remplace pas votre jugement : relisez toujours le résultat complet et ajustez ce qui ne sonne pas exactement comme vous le souhaitez."
+          }
+        }
+      }
+    },
+    "guestModal": {
+      "title": "Obtenez plus de puissance",
+      "subtitle": "Connectez-vous pour débloquer 2× crédits, 4× longueur de texte et l’import de fichiers.",
+      "google": "Continuer avec Google · 2× crédits",
+      "github": "Continuer avec GitHub · 2× crédits",
+      "footer": "Vous pouvez passer de Google à GitHub en un clic."
+    }
+  }
+}

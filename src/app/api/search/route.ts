@@ -49,6 +49,7 @@ const searchAPI = createI18nSearchAPI('advanced', {
     'pt-br': 'portuguese',
     pt: 'portuguese',
     es: 'spanish',
+    fr: 'french',
   },
 
   // Global search configuration
