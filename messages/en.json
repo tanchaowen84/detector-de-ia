@@ -1630,7 +1630,7 @@
             },
             {
               "title": "Language detected automatically",
-              "description": "The AI detector is optimized today for Spanish and English and detects the language automatically, so you don’t need to configure it."
+              "description": "The AI detector auto-detects the language; it’s tuned for Spanish, English, French, and Portuguese (BR) for best accuracy."
             },
             {
               "title": "Check the length",
@@ -1702,7 +1702,7 @@
         },
         "item-6": {
           "question": "Which languages does the AI detector support right now?",
-          "answer": "The AI detector is currently optimized for Spanish and English. We will add more languages when we can guarantee reasonable detection quality."
+          "answer": "The detector auto-detects languages. It’s tuned for Spanish, English, French, and Portuguese (BR); other languages work, but accuracy may vary."
         },
         "item-7": {
           "question": "Is there a free plan for the AI detector? What are the limits?",

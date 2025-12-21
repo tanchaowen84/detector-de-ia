@@ -1630,7 +1630,7 @@
             },
             {
               "title": "Langue détectée automatiquement",
-              "description": "Le détecteur d’IA est aujourd’hui optimisé pour l’espagnol et l’anglais et détecte la langue automatiquement, sans configuration."
+              "description": "Le détecteur d’IA détecte automatiquement la langue ; il est optimisé pour l’espagnol, l’anglais, le français et le portugais (BR) pour plus de précision."
             },
             {
               "title": "Vérifiez la longueur",
@@ -1702,7 +1702,7 @@
         },
         "item-6": {
           "question": "Quelles langues le détecteur d’IA prend-il en charge pour le moment ?",
-          "answer": "Le détecteur d’IA est actuellement optimisé pour l’espagnol et l’anglais. Nous ajouterons d’autres langues lorsque nous pourrons garantir une qualité de détection raisonnable."
+          "answer": "Le détecteur auto‑détecte les langues. Il est optimisé pour l’espagnol, l’anglais, le français et le portugais (BR) ; les autres langues fonctionnent, mais la précision peut varier."
         },
         "item-7": {
           "question": "Existe-t-il une offre gratuite pour le détecteur d’IA ? Quelles sont les limites ?",

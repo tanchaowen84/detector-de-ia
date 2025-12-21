@@ -1476,7 +1476,7 @@
             },
             {
               "title": "Idioma detectado automaticamente",
-              "description": "O detector de IA da VeriIA detecta automaticamente o idioma do seu texto, então você não precisa configurar nada nem se preocupar com essa etapa."
+              "description": "Detecta automaticamente o idioma; está ajustado para português (BR), espanhol, francês e inglês para maior precisão."
             },
             {
               "title": "Revise o comprimento",
@@ -1689,7 +1689,7 @@
         },
         "item-6": {
           "question": "Quais idiomas o detector de IA suporta no momento?",
-          "answer": "Atualmente ele está otimizado para espanhol e inglês. Estamos ajustando o modelo para adicionar mais idiomas quando pudermos garantir uma qualidade de detecção razoável."
+          "answer": "O detector detecta idiomas automaticamente. Está ajustado para português (BR), espanhol, francês e inglês; outros idiomas funcionam, mas a precisão pode variar."
         },
         "item-7": {
           "question": "É grátis usar o detector de IA? Existem limites ou planos pagos?",
