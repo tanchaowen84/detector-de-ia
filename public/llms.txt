@@ -4,6 +4,7 @@
 
 ## Background
 AI writing boosts output but raises trust and compliance risks. VeriIA brings detection, comparison, rewriting, summarizing, counting, and citation tools into one experience so every submission can be verified, explained, and improved with minimal effort. We serve a global audience and keep expanding language support.
+Optimized languages: Spanish, English, French, and Portuguese (BR), with automatic detection for others.
 
 ## Content Categories
 ### [AI Content Detector](https://detectordeia.pro/)
@@ -43,3 +44,6 @@ Multi-source summarization with adjustable length, keeping key insights for quic
 
 ### [ABNT support added](https://detectordeia.pro/apa-generator)
 Citation generator now outputs ABNT (Brazilian standard) alongside APA; pt-BR locale defaults to ABNT while other locales default to APA.
+
+### Four-language tuning
+Detector, plagiarism, humanizer, and summarizer now tuned for Spanish, English, French, and Portuguese (BR); other languages are auto-detected with variable accuracy.

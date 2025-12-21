@@ -4,17 +4,20 @@
 
 ## Background
 AI writing accelerates output but introduces authenticity and compliance concerns. VeriIA was built so every submission can be verified, explained, and improved before delivery. By uniting detection, comparison, rewriting, summarizing, counting, and citation tools, we minimize back-and-forth edits and keep users in control of cost, privacy, and evidence. The platform is global-first and continually expands language support.
+Optimized languages: Spanish, English, French, and Portuguese (BR) with automatic language detection for other inputs (accuracy may vary).
 
 ## Content Categories
 ### [AI Content Detector](https://detectordeia.pro/)
 - Inputs: text, common documents, public URLs.
 - Outputs: overall AI probability plus sentence-level probability and highlights to isolate risky passages quickly.
 - Value: clear evidence for teaching, editing, and review; export or keep history when needed.
+- Language: tuned for ES / EN / FR / PT-BR; auto-detects others with variable accuracy.
 
 ### [Plagiarism Checker](https://detectordeia.pro/plagiarism-detector)
 - Delivers match percentage, source list, similar segments, and same/similar word counts.
 - Use cases: academic submissions, long-form journalism, brand or legal reviews; supports text/file/URL inputs.
 - Output: clickable sources for human verification and rewrite guidance.
+- Language: tuned for ES / EN / FR / PT-BR; auto-detects others with variable accuracy.
 
 ### [Text Compare](https://detectordeia.pro/text-compare)
 - Compares two versions, surfacing similarity, unique passages, and overlaps.
@@ -24,11 +27,13 @@ AI writing accelerates output but introduces authenticity and compliance concern
 - Rewrites while preserving meaning, making tone more natural and less machine-like.
 - Supports text and file inputs; results ready to copy into final submissions.
 - Value: lowers the chance of “machiney” style flags and boosts readability.
+- Language: tuned for ES / EN / FR / PT-BR; auto-detects others (quality may vary).
 
 ### [AI Summarizer](https://detectordeia.pro/ai-summarizer)
 - Works with text, URLs, and files; keeps output in the source language.
 - Length slider balances compression with information retention; ideal for quick briefings and decisions.
 - Includes usage hints for transparent credit management.
+- Language: tuned for ES / EN / FR / PT-BR; auto-detects others (quality may vary).
 
 ### [Word Counter](https://detectordeia.pro/word-counter)
 - Front-end only, zero cost: real-time counts of words, characters (with/without spaces), sentences, paragraphs.
@@ -47,6 +52,9 @@ AI writing accelerates output but introduces authenticity and compliance concern
 - Team ready: dashboard for history and retention settings; clear payments and quota management to roll out quickly across groups.
 
 ## Latest Updates
+### Four-language tuning (ES / EN / FR / PT-BR)
+Detector, plagiarism checker, humanizer, and summarizer are tuned for these languages; automatic language detection remains available for other inputs.
+
 ### [AI Humanizer released](https://detectordeia.pro/ai-humanizer)
 New natural rewrite experience for text and file inputs to reduce machine tone before submission.
 
