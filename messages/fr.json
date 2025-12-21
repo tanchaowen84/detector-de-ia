@@ -1308,25 +1308,25 @@
     },
     "sidebar": {
       "detector": {
-        "title": "Détecteur d’IA"
+        "title": "Détecteur IA"
       },
       "plagiarism": {
-        "title": "Détecteur de plagiat"
+        "title": "Plagiat"
       },
       "humanizer": {
-        "title": "Humaniser un texte IA"
+        "title": "Humaniser"
       },
       "summarizer": {
-        "title": "Résumer un texte"
+        "title": "Résumer"
       },
       "compare": {
-        "title": "Comparer deux textes"
+        "title": "Comparer"
       },
       "counter": {
-        "title": "Compteur de mots"
+        "title": "Compteur mots"
       },
       "apa": {
-        "title": "Générateur de sources APA"
+        "title": "Sources APA"
       },
       "trigger": "Outils",
       "hide": "Masquer"
@@ -2054,14 +2054,14 @@
   },
   "TextSummarizerPage": {
     "metadata": {
-      "title": "Résumeur IA – Résumer un texte gratuitement en quelques secondes | VeriIA",
-      "description": "Résumeur IA pour articles, e-mails et documents longs. Collez un texte, importez un fichier ou ajoutez une URL et obtenez un résumé clair en quelques secondes."
+      "title": "Résumer un texte avec l’IA – Résumé gratuit en quelques secondes | VeriIA",
+      "description": "Résumer un texte, un article, un e-mail ou un document long. Collez du contenu, importez un fichier ou ajoutez une URL, puis obtenez un résumé clair en quelques secondes."
     },
     "hero": {
       "badge": "Nouveau",
-      "tagline": "Résumeur IA pour vos lectures quotidiennes",
-      "title": "Un résumeur IA rapide et clair",
-      "subtitle": "Collez votre contenu, ajustez la longueur et laissez notre résumeur IA produire un résumé propre, sans blabla ni jargon.",
+      "tagline": "Résumer un texte pour vos lectures quotidiennes",
+      "title": "Résumer un texte, vite et clairement",
+      "subtitle": "Collez votre contenu, réglez la longueur, puis laissez notre IA résumer un texte en un résumé propre, sans blabla ni jargon.",
       "lengthLabel": "Longueur du résumé",
       "lengthShort": "Court",
       "lengthLong": "Long",
@@ -2084,7 +2084,7 @@
     },
     "input": {
       "title": "Entrée",
-      "subtitle": "Collez un texte, ajoutez une URL ou importez un fichier texte pour résumer un texte avec le résumeur IA en quelques secondes.",
+      "subtitle": "Pour résumer un texte, collez du contenu, ajoutez une URL ou importez un fichier texte. Obtenez un résumé en quelques secondes.",
       "sample": "Texte d’exemple",
       "addUrl": "Ajouter une URL",
       "paste": "Coller un texte",
@@ -2104,7 +2104,7 @@
     },
     "output": {
       "title": "Résumé",
-      "subtitle": "Un résumé concis généré par le résumeur IA à partir de votre texte.",
+      "subtitle": "Le résumé généré à partir de votre contenu pour résumer un texte de manière concise.",
       "empty": "Votre résumé apparaîtra ici une fois généré.",
       "hint": "Faites défiler pour lire le résumé complet",
       "copy": "Copier le résumé",
@@ -2114,7 +2114,7 @@
       }
     },
     "errors": {
-      "missing": "Ajoutez un texte, une URL ou un fichier à résumer.",
+      "missing": "Ajoutez un texte, une URL ou un fichier pour résumer un texte.",
       "generic": "Le résumé n’a pas pu être généré. Veuillez réessayer.",
       "upload": "L’importation a échoué. Essayez un autre fichier.",
       "clipboard": "L’accès au presse-papiers a été bloqué.",
@@ -2122,20 +2122,20 @@
     },
     "blocks": {
       "howItWorks": {
-        "title": "Comment fonctionne le résumeur IA",
-        "subtitle": "Collez votre contenu, réglez la longueur et laissez le résumeur IA produire un texte clair en quelques secondes.",
+        "title": "Comment résumer un texte avec l’IA",
+        "subtitle": "Collez votre contenu, réglez la longueur, puis laissez l’outil résumer un texte en un résumé clair en quelques secondes.",
         "steps": {
           "step-1": {
             "label": "Étape 1 · Ajoutez votre texte, fichier ou URL",
-            "imageAlt": "Utilisateur collant un texte ou une URL dans le résumeur IA",
+            "imageAlt": "Utilisateur collant un texte ou une URL pour résumer un texte",
             "items": [
               {
                 "title": "Texte, URL ou fichier",
-                "description": "Collez votre texte, ajoutez un lien ou importez un fichier texte. Le résumeur IA convertit tout en texte brut avant de résumer."
+                "description": "Collez votre texte, ajoutez un lien ou importez un fichier texte. L’outil convertit le contenu en texte brut avant de résumer un texte."
               },
               {
                 "title": "Vérification rapide",
-                "description": "Nous signalons immédiatement le contenu manquant ou les liens invalides pour que vous puissiez corriger sans perdre de temps."
+                "description": "Nous signalons immédiatement le contenu manquant ou les liens invalides, pour que vous puissiez corriger sans perdre de temps."
               },
               {
                 "title": "Confidentialité",
@@ -2146,11 +2146,11 @@
           },
           "step-2": {
             "label": "Étape 2 · Ajustez la longueur du résumé",
-            "imageAlt": "Curseur de longueur du résumeur IA",
+            "imageAlt": "Curseur de longueur pour résumer un texte",
             "items": [
               {
                 "title": "Curseur 0–100",
-                "description": "Choisissez un résumé plus court ou plus détaillé en déplaçant un seul contrôle visuel."
+                "description": "Choisissez un résumé très court ou plus détaillé en déplaçant un seul contrôle visuel."
               },
               {
                 "title": "Détection automatique de la langue",
@@ -2158,7 +2158,7 @@
               },
               {
                 "title": "Les idées clés d’abord",
-                "description": "Le résumeur IA se concentre sur les idées, arguments et points de données essentiels pour préserver le sens du texte original avec moins de mots."
+                "description": "L’outil se concentre sur les idées, arguments et données essentiels pour résumer un texte sans perdre le sens du contenu original."
               }
             ],
             "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step2.webp"
@@ -2173,11 +2173,11 @@
               },
               {
                 "title": "Copie en un clic",
-                "description": "Utilisez le bouton de copie pour coller le résumé partout : e-mails, notes, documents ou chats."
+                "description": "Copiez le résumé et collez-le partout : e-mails, notes, documents ou chats."
               },
               {
                 "title": "Ajustez et relancez",
-                "description": "Modifiez la longueur et relancez le résumeur IA autant de fois que nécessaire jusqu’à obtenir le format souhaité."
+                "description": "Modifiez la longueur et relancez autant de fois que nécessaire pour obtenir le format souhaité."
               }
             ],
             "imageSrc": "https://pub-a9525ed8fd554c05ba42ef72c86b7063.r2.dev/assets/howitworks/ai-summarizer/step3.webp"
@@ -2185,127 +2185,111 @@
         }
       },
       "useCases": {
-        "title": "Là où le résumeur IA aide le plus",
+        "title": "Quand résumer un texte fait gagner le plus de temps",
         "subtitle": "Briefs, e-mails et articles : gardez l’essentiel en moins de temps.",
-        "description": "Utilisez le résumeur IA comme filtre rapide quand vous ne pouvez pas tout lire, mais devez comprendre l’important et le partager.",
+        "description": "Utilisez l’outil pour résumer un texte comme un filtre rapide quand vous ne pouvez pas tout lire, mais devez comprendre l’important et le partager.",
         "items": {
           "item-1": {
             "title": "Études, notes et résumés de cours",
-            "description": "Transformez des chapitres, des notes désordonnées ou des lectures obligatoires en résumés clairs pour réviser. Vous pouvez coller des extraits de livre, vos notes, ou du texte extrait d’un PDF, et obtenir un plan plus facile à relire avant un examen."
+            "description": "Résumez des chapitres, des notes ou des lectures obligatoires en un plan clair pour réviser. Collez des extraits, du texte extrait d’un PDF ou vos notes, puis obtenez un résumé plus facile à relire avant un examen."
           },
           "item-2": {
             "title": "Recherche, rapports et documents techniques",
-            "description": "Pour des rapports, études ou documentations longues, le résumeur IA vous aide à capter objectifs, méthodes et conclusions. Vous pouvez ensuite partager le résumé à votre équipe pour décider de ce qui mérite une lecture approfondie."
+            "description": "Pour des rapports ou études longues, résumer un texte aide à capter objectifs, méthodes et conclusions. Partagez ensuite le résumé à votre équipe pour décider de ce qui mérite une lecture approfondie."
           },
           "item-3": {
             "title": "Briefs, propositions et docs de projet",
-            "description": "Résumez des briefs créatifs, des propositions commerciales ou des documents de projet en quelques paragraphes actionnables. Idéal pour préparer une réunion, une présentation ou un message d’avancement sans coller le document complet."
+            "description": "Résumez des briefs créatifs, des propositions commerciales ou des documents de projet en quelques paragraphes actionnables. Pratique avant une réunion, une présentation ou un message d’avancement."
           },
           "item-4": {
             "title": "E-mails longs et fils de discussion",
-            "description": "Copiez un e-mail très long ou un fil complet et laissez le résumeur IA extraire décisions, dates et tâches convenues. Cela facilite une réponse claire ou l’enregistrement des essentiels dans votre gestionnaire de tâches."
+            "description": "Collez un e-mail long ou un fil complet et obtenez les décisions, dates et tâches. Cela facilite une réponse claire ou l’ajout des essentiels dans votre gestionnaire de tâches."
           },
           "item-5": {
             "title": "Support client et aide interne",
-            "description": "Condensez des tickets, messages clients ou transcriptions de chat en points clés : ce qui s’est passé, ce qui a été tenté, et la suite. Ce résumé réduit le temps de lecture et facilite le passage de relais entre agents sans perdre le contexte."
+            "description": "Condensez des tickets, messages clients ou transcriptions de chat en points clés : contexte, actions déjà tentées, prochaine étape. Utile pour passer le relais sans perdre le fil."
           },
           "item-6": {
             "title": "Lecture quotidienne, newsletters et contenu web",
-            "description": "Collez des articles, newsletters ou longs posts et générez un TL;DR à conserver ou partager. Utile quand vous ne voulez pas perdre un contenu intéressant, même si vous n’avez pas le temps de tout lire en détail."
+            "description": "Collez des articles, newsletters ou posts et générez un TL;DR à conserver ou partager. Idéal quand vous voulez résumer un texte intéressant sans tout lire en détail."
           }
         }
       },
       "related": {
-        "title": "Associez le résumeur IA à d’autres outils VeriIA",
+        "title": "Associez “résumer un texte” à d’autres outils VeriIA",
         "subtitle": "Couvrez tout votre workflow : résumer un texte + contrôles qualité.",
         "tryNow": "Essayer maintenant",
         "items": {
           "detector": {
             "title": "Détecteur d’IA",
-            "description": "Vérifiez si un texte semble généré par IA avant de l’envoyer à des clients, enseignants ou managers. Utilisez-le après avoir résumé un texte pour vérifier que le résultat reste naturel."
+            "description": "Vérifiez si un texte semble généré par IA avant de l’envoyer. Après avoir résumé un texte, contrôlez que le résultat reste naturel."
           },
           "plagiarism": {
             "title": "Détecteur de plagiat",
-            "description": "Vérifiez l’originalité de devoirs, essais ou rapports après les avoir résumés. Idéal quand vous devez montrer que votre travail est le vôtre et non copié d’autres sources."
+            "description": "Vérifiez l’originalité de devoirs, essais ou rapports. Utile après avoir résumé un texte, quand vous devez prouver que votre travail est original."
           },
           "counter": {
             "title": "Générateur de sources APA",
-            "description": "Si vous résumez des articles académiques, créez instantanément des citations et références au format APA pour votre bibliographie ou devoir final."
+            "description": "Si vous résumez des articles académiques, créez des citations et références au format APA pour votre bibliographie."
           }
         }
       },
       "faq": {
-        "title": "Questions fréquentes sur le résumeur IA",
-        "subtitle": "Doutes courants avant de confier vos documents à un outil pour résumer un texte.",
+        "title": "Questions fréquentes sur “résumer un texte”",
+        "subtitle": "Doutes courants avant d’utiliser un outil pour résumer un texte à partir d’un document, d’un e-mail ou d’une URL.",
         "items": {
           "item-1": {
-            "question": "Quels types de contenu puis-je résumer avec le résumeur IA ?",
-            "answer": "Vous pouvez coller du texte, ajouter une URL ou importer des fichiers texte (par exemple .txt, markdown ou JSON). Le résumeur IA convertit tout en texte brut avant de générer le résumé. Pour les PDF ou images, il faut d’abord extraire le texte ou utiliser une page web où le contenu est accessible."
+            "question": "Quels types de contenu puis-je utiliser pour résumer un texte ?",
+            "answer": "Vous pouvez coller du texte, ajouter une URL ou importer des fichiers texte (par exemple .txt, markdown ou JSON). L’outil convertit le contenu en texte brut avant de générer le résumé. Pour les PDF ou images, il faut d’abord extraire le texte ou utiliser une page web où le contenu est accessible."
           },
           "item-2": {
-            "question": "Quelle quantité de texte puis-je coller ou importer à la fois ?",
-            "answer": "Chaque résumé a une limite de caractères pour garder une bonne qualité et un temps de réponse rapide. Si vous collez un texte très long, le résumeur IA vous prévient avant de traiter pour que vous puissiez le raccourcir ou le découper. En général, la limite suffit pour des articles, de longs e-mails et des chapitres de taille raisonnable."
+            "question": "Quelle quantité de contenu puis-je traiter à la fois ?",
+            "answer": "Chaque résumé a une limite de caractères pour garder une bonne qualité et un temps de réponse rapide. Si votre texte est très long, l’outil vous prévient afin que vous puissiez le raccourcir ou le découper en plusieurs parties."
           },
           "item-3": {
-            "question": "Le résumeur IA conserve-t-il la langue et le ton d’origine ?",
-            "answer": "Oui. Nous détectons automatiquement la langue d’entrée et renvoyons le résumé dans cette même langue. Le résumeur IA vise à préserver le ton, l’intention et les nuances principales, tout en réduisant surtout la longueur et les répétitions."
+            "question": "L’outil conserve-t-il la langue et le ton d’origine quand il résume un texte ?",
+            "answer": "Oui. Nous détectons automatiquement la langue d’entrée et renvoyons le résumé dans cette même langue. L’objectif est de préserver l’intention et les nuances principales, tout en réduisant la longueur et les répétitions."
           },
           "item-4": {
-            "question": "Le résumeur IA peut-il inventer ou modifier des informations ?",
-            "answer": "L’objectif du résumeur IA est de condenser ce qui est déjà présent, pas d’inventer de nouveaux faits. Cela dit, aucun modèle n’est parfait : il peut simplifier excessivement certaines idées ou manquer une nuance. Pour des textes sensibles (juridique, médical, contrats, etc.), nous recommandons de relire les passages clés de l’original avant de décider."
+            "question": "Un outil pour résumer un texte peut-il inventer ou modifier des informations ?",
+            "answer": "L’objectif est de condenser ce qui est déjà présent, pas d’inventer de nouveaux faits. Cela dit, aucun modèle n’est parfait : il peut simplifier trop fortement une idée ou manquer une nuance. Pour des textes sensibles (juridique, médical, contrats, etc.), relisez les passages clés de l’original."
           },
           "item-5": {
-            "question": "Est-il sûr d’utiliser le résumeur IA avec des documents privés ou sensibles ?",
-            "answer": "Oui. Le résumeur IA traite votre contenu temporairement uniquement pour générer le résultat, puis le supprime. Nous ne stockons pas vos textes ou résumés, nous ne construisons pas d’historiques de lecture et nous n’utilisons pas vos documents pour entraîner nos modèles. Cela dit, si votre organisation a des règles strictes, vérifiez toujours ses politiques internes."
+            "question": "Est-il sûr d’utiliser l’outil pour résumer un texte avec des documents privés ou sensibles ?",
+            "answer": "Oui. Le contenu est traité temporairement uniquement pour générer le résultat, puis supprimé. Nous ne stockons pas vos textes ou résumés, ne construisons pas d’historique de lecture et n’utilisons pas vos documents pour entraîner nos modèles. Si votre organisation a des règles strictes, vérifiez ses politiques internes."
           },
           "item-6": {
-            "question": "Puis-je utiliser le résumeur IA pour un travail académique sans risque de plagiat ?",
-            "answer": "Un résumé repose toujours sur les idées de quelqu’un d’autre ; en contexte académique, vous devez citer la source originale. Le résumeur IA vous aide à comprendre et à condenser, mais ne remplace pas votre rédaction ni les règles de citation de votre établissement. Pour rester prudent, reformulez avec vos mots et ajoutez les références appropriées."
+            "question": "Puis-je résumer un texte pour un travail académique sans risque de plagiat ?",
+            "answer": "Un résumé repose sur les idées d’une source ; en contexte académique, vous devez citer la source originale. L’outil vous aide à comprendre et condenser, mais ne remplace pas votre rédaction ni les règles de citation. Pour rester prudent, reformulez avec vos mots et ajoutez les références appropriées."
           },
           "item-7": {
             "question": "Que se passe-t-il si j’essaie de résumer une URL derrière une connexion ou un paywall ?",
-            "answer": "Le résumeur IA doit pouvoir accéder au contenu de la page. Si l’URL est derrière une connexion, un paywall ou un environnement très restreint, l’outil ne pourra probablement pas la lire. Dans ce cas, l’option la plus fiable est de copier le texte manuellement et de le coller directement."
+            "answer": "L’outil doit pouvoir accéder au contenu de la page. Si l’URL est derrière une connexion, un paywall ou un environnement restreint, il ne pourra probablement pas la lire. Dans ce cas, copiez le texte manuellement et collez-le directement."
           },
           "item-8": {
             "question": "Comment contrôler la longueur et le niveau de détail du résumé ?",
-            "answer": "Ajustez la longueur avec le curseur de court à long avant de lancer le résumeur IA. Si le résultat est trop superficiel ou trop dense, changez la position du curseur et résumez à nouveau jusqu’à obtenir le bon niveau de détail."
+            "answer": "Ajustez la longueur avec le curseur de court à long avant de lancer la génération. Si le résultat est trop superficiel ou trop dense, déplacez le curseur et résumez à nouveau."
           },
           "item-9": {
-            "question": "Le résumeur IA est-il gratuit ? Comment fonctionnent les crédits ?",
-            "answer": "Vous pouvez utiliser le résumeur IA gratuitement via un système de crédits simple : chaque caractère d’entrée consomme 0,001 crédit. Sans compte, vous disposez de 200 crédits, et en créant un compte vous obtenez 400 crédits supplémentaires. En usage normal, cela permet de générer de nombreux résumés sans payer ni ajouter de carte."
+            "question": "Est-ce gratuit ? Comment fonctionnent les crédits pour résumer un texte ?",
+            "answer": "Vous pouvez utiliser l’outil gratuitement via un système de crédits simple : chaque caractère d’entrée consomme 0,001 crédit. Sans compte, vous disposez de 200 crédits, et en créant un compte vous obtenez 400 crédits supplémentaires. Cela permet de résumer un texte de nombreuses fois sans payer ni ajouter de carte."
           },
           "item-10": {
-            "question": "Quels autres outils VeriIA vont bien avec le résumeur IA ?",
-            "answer": "Après avoir résumé un texte, vous pouvez utiliser d’autres outils VeriIA selon votre cas : le Détecteur d’IA pour vérifier si un texte semble trop généré, le Détecteur de plagiat pour contrôler l’originalité de travaux longs, et le Générateur de sources APA pour créer des références lorsque vous résumez des articles académiques."
+            "question": "Quels autres outils VeriIA vont bien avec “résumer un texte” ?",
+            "answer": "Après avoir résumé un texte, utilisez le Détecteur d’IA si vous devez vérifier que le style reste naturel, le Détecteur de plagiat pour contrôler l’originalité, et le Générateur de sources APA pour créer des références lors de résumés académiques."
           }
         }
       }
     },
     "sidebar": {
-      "detector": {
-        "title": "Détecteur d’IA"
-      },
-      "plagiarism": {
-        "title": "Plagiat"
-      },
-      "humanizer": {
-        "title": "Humaniser"
-      },
-      "summarizer": {
-        "title": "Résumer"
-      },
-      "compare": {
-        "title": "Comparer"
-      },
-      "counter": {
-        "title": "Compteur de mots"
-      },
-      "apa": {
-        "title": "APA"
-      },
-      "pricing": {
-        "title": "Tarifs"
-      },
+      "detector": { "title": "Détecteur IA" },
+      "plagiarism": { "title": "Plagiat" },
+      "humanizer": { "title": "Humaniser" },
+      "summarizer": { "title": "Résumer" },
+      "compare": { "title": "Comparer" },
+      "counter": { "title": "Compteur mots" },
+      "apa": { "title": "Sources APA" },
+      "pricing": { "title": "Tarifs" },
       "trigger": "Outils"
     }
   },
