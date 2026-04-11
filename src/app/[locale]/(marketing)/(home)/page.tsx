@@ -1,13 +1,15 @@
-import { AiDetectorSection } from '@/components/detector/ai-detector-section';
-import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
-import Features3Section from '@/components/blocks/features/features3';
+import CallToActionSection from '@/components/blocks/calltoaction/calltoaction';
 import DetectionProcessSection from '@/components/blocks/detection-process';
+import AiDetectorFeaturesSection from '@/components/blocks/detector-features';
+import FaqSection from '@/components/blocks/faqs/faqs';
+import Features3Section from '@/components/blocks/features/features3';
 import { InlineCtaSection } from '@/components/blocks/inline-cta';
 import PricingSection from '@/components/blocks/pricing/pricing';
-import FaqSection from '@/components/blocks/faqs/faqs';
-import CallToActionSection from '@/components/blocks/calltoaction/calltoaction';
+import { AiDetectorSection } from '@/components/detector/ai-detector-section';
+import { websiteConfig } from '@/config/website';
+import { defaultMessages } from '@/i18n/messages';
 import { constructMetadata } from '@/lib/metadata';
-import { getUrlWithLocale } from '@/lib/urls/urls';
+import { getImageUrl, getUrlWithLocale } from '@/lib/urls/urls';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -31,6 +33,39 @@ export async function generateMetadata({
   });
 }
 
+function buildHomeStructuredData(locale: Locale) {
+  const homeUrl = getUrlWithLocale('', locale);
+  const logoUrl = getImageUrl(
+    websiteConfig.metadata.images?.logoLight ?? '/logo.png'
+  );
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${homeUrl}#website`,
+        name: defaultMessages.Metadata.name,
+        url: homeUrl,
+        publisher: {
+          '@id': `${homeUrl}#organization`,
+        },
+      },
+      {
+        '@type': 'Organization',
+        '@id': `${homeUrl}#organization`,
+        name: defaultMessages.Metadata.name,
+        url: homeUrl,
+        logo: logoUrl,
+      },
+    ],
+  };
+}
+
+function serializeJsonLd(data: ReturnType<typeof buildHomeStructuredData>) {
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}
+
 interface HomePageProps {
   params: Promise<{ locale: Locale }>;
 }
@@ -38,10 +73,14 @@ interface HomePageProps {
 export default async function HomePage(props: HomePageProps) {
   const params = await props.params;
   const { locale } = params;
-  const t = await getTranslations('HomePage');
+  const homeStructuredData = buildHomeStructuredData(locale);
 
   return (
     <>
+      <script type="application/ld+json">
+        {serializeJsonLd(homeStructuredData)}
+      </script>
+
       {/* 整体页面背景 - 从上到下的自然渐变 */}
       <div className="fixed inset-0 bg-gradient-to-b from-purple-100 via-purple-50 to-amber-50" />
 
