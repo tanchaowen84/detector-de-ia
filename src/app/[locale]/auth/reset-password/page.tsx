@@ -22,6 +22,7 @@ export async function generateMetadata({
     description: t('description'),
     canonicalUrl: getUrlWithLocale('/auth/reset-password', locale),
     locale,
+    noIndex: true,
   });
 }
 

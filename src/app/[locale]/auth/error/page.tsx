@@ -19,6 +19,7 @@ export async function generateMetadata({
     description: t('description'),
     canonicalUrl: getUrlWithLocale('/auth/error', locale),
     locale,
+    noIndex: true,
   });
 }
 

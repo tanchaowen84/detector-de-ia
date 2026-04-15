@@ -21,6 +21,7 @@ export async function generateMetadata({
     description: t('description'),
     canonicalUrl: getUrlWithLocale('/auth/login', locale),
     locale,
+    noIndex: true,
   });
 }
 
