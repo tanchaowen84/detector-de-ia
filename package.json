@@ -6,6 +6,8 @@
     "dev": "concurrently \"content-collections watch\" \"next dev\"",
     "build": "content-collections build && next build",
     "start": "next start",
+    "indexnow:dry-run": "tsx scripts/submit-indexnow.ts --dry-run",
+    "indexnow:submit": "tsx scripts/submit-indexnow.ts --submit",
     "lint": "biome check --write .",
     "lint:fix": "biome check --fix --unsafe .",
     "format": "biome format --write .",
